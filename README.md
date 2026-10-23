@@ -2,7 +2,7 @@
 
 Interactive volumetric biosonar and scientific visualization prototype by Eliguli Han.
 
-**Public demo:** https://antiterrastrae-eliguli.eliguli712.chatgpt.site
+**Public demo:** https://eliguli712.github.io/Antiterrastrae/
 
 The simulation is a self-contained static HTML application. It runs in the browser without a ChatGPT account, an API key, a backend, or a build step.
 
