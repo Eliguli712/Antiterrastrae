@@ -10512,5 +10512,11 @@ String(e.stack||'').split('\n').slice(0,3).join('\n'));
     if(document.hidden&&window.Antiterrastrae) window.Antiterrastrae.sleep();
     else if(location.hash==='#antiterrastrae') { status.textContent='Tap Start'; start.textContent='Start simulation'; }
   });
+  // A CV navigation opens the visual demonstration immediately.
+  const cvDemoRequested=new URLSearchParams(location.search).get('demo')==='1';
+  if(cvDemoRequested && location.hash==='#antiterrastrae') requestAnimationFrame(run);
+  window.addEventListener('pageshow',function(event){
+    if(event.persisted && cvDemoRequested && location.hash==='#antiterrastrae') run();
+  });
 })();
 </script></body></html>
