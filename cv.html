@@ -1,0 +1,152 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Eliguli Han | Research CV</title><style>
+    :root { --ink:#1d2c30; --muted:#506267; --accent:#205c61; --line:#d8e1df; --paper:#fff; --canvas:#eaf0ef; }
+    * { box-sizing:border-box; }
+    html { background:var(--canvas); }
+    body { margin:0; color:var(--ink); font:14px/1.43 "Helvetica Neue",Arial,sans-serif; -webkit-font-smoothing:antialiased; }
+    a { color:var(--accent); text-decoration:none; text-underline-offset:3px; }
+    a:hover { text-decoration:underline; }
+    button,a { -webkit-tap-highlight-color:transparent; }
+    button:focus-visible,a:focus-visible { outline:3px solid #a56c39; outline-offset:4px; }
+    .toolbar { max-width:850px; margin:28px auto 18px; display:flex; align-items:center; justify-content:space-between; gap:18px; padding:0 5px; }
+    .toolbar-label { color:var(--muted); font-size:10px; font-weight:700; letter-spacing:1.8px; text-transform:uppercase; }
+    .toolbar-actions { display:flex; flex-wrap:wrap; gap:8px; }
+    .button { appearance:none; border:1px solid #bccdca; border-radius:6px; background:#fff; color:var(--accent); padding:10px 14px; font:600 12px/1.2 "Helvetica Neue",Arial,sans-serif; cursor:pointer; }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+    .button:hover { filter:brightness(.96); }
+    .sheet { width:min(850px,calc(100% - 40px)); margin:0 auto; background:var(--paper); padding:43px 49px 34px; border:1px solid #dbe4e1; box-shadow:0 12px 40px #173b3b0c; }
+    .masthead { border-bottom:2px solid var(--accent); padding-bottom:16px; }
+    .kicker { margin:0 0 8px; color:var(--accent); font-size:9px; font-weight:700; letter-spacing:2.15px; text-transform:uppercase; }
+    h1 { margin:0; font:normal 37px/.99 Georgia,"Times New Roman",serif; letter-spacing:1px; }
+    .discipline { margin:10px 0 8px; font-size:13px; color:var(--muted); }
+    .contact { display:flex; flex-wrap:wrap; gap:4px 17px; font-size:10.9px; }
+    .contact a { white-space:nowrap; }
+    .summary { margin:14px 0 0; font-size:12.5px; line-height:1.47; }
+    section { margin-top:17px; }
+    h2 { margin:0 0 9px; padding-bottom:5px; border-bottom:1px solid var(--line); color:var(--accent); font-size:9.4px; font-weight:800; line-height:1.25; letter-spacing:1.55px; text-transform:uppercase; }
+    .entry { margin-top:11px; break-inside:avoid; }
+    .entry:first-of-type { margin-top:0; }
+    .entry-head { display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+    h3 { margin:0; font-size:12.8px; font-weight:750; line-height:1.32; }
+    .date { font-size:10px; color:var(--muted); white-space:nowrap; }
+    .subline { margin:3px 0 5px; color:var(--muted); font-size:10.7px; }
+    p { margin:0; }
+    ul { margin:5px 0 0; padding-left:16px; }
+    li { padding-left:1px; margin:3px 0; font-size:11.6px; line-height:1.41; }
+    li::marker { color:var(--accent); font-size:.78em; }
+    .coursework { margin-top:6px; font-size:11.4px; line-height:1.42; }
+    .training { margin-top:6px; font-size:11.1px; }
+    .skill-row { display:grid; grid-template-columns:112px 1fr; gap:11px; margin-top:5px; font-size:11.1px; line-height:1.4; }
+    .skill-row strong { color:#293f43; font-weight:700; }
+    .math { font-family:Georgia,"Times New Roman",serif; white-space:nowrap; }
+    .availability { display:flex; justify-content:space-between; gap:15px; margin-top:17px; border-top:1px solid var(--line); padding-top:9px; color:var(--muted); font-size:10px; }
+    .screen-note { max-width:850px; padding:15px 8px 28px; margin:0 auto; color:var(--muted); text-align:center; font-size:11px; line-height:1.6; }
+    @media(max-width:600px) {
+      .toolbar { margin:17px 20px 13px; padding:0; align-items:flex-start; }
+      .toolbar-label { padding-top:9px; max-width:100px; line-height:1.6; font-size:8.5px; }
+      .toolbar-actions { justify-content:flex-end; gap:6px; }
+      .button { font-size:10px; padding:9px 10px; }
+      .sheet { width:calc(100% - 24px); padding:28px 24px 25px; }
+      h1 { font-size:31px; }
+      .discipline { font-size:11.8px; }
+      .contact { font-size:10px; column-gap:13px; }
+      .summary { font-size:12px; }
+      .entry-head { flex-wrap:wrap; gap:3px; }
+      h3 { font-size:12.5px; }
+      li { font-size:11.6px; }
+      .skill-row { grid-template-columns:1fr; gap:1px; margin-top:8px; }
+      .availability { flex-direction:column; gap:3px; }
+      .screen-note { padding-left:23px; padding-right:23px; }
+      dialog { width:calc(100vw - 12px); height:calc(100dvh - 12px); }
+    }
+    @page { size:Letter; margin:12mm 14mm; }
+    @media print {
+      html,body { margin:0; background:#fff; }
+      body { font-size:10.2pt; color:#14292d; print-color-adjust:exact; -webkit-print-color-adjust:exact; }
+      .toolbar,.screen-note,dialog { display:none!important; }
+      .sheet { width:auto; margin:0; padding:0; border:0; box-shadow:none; }
+      .masthead { padding-bottom:12px; }
+      .kicker { font-size:7pt; margin-bottom:7px; }
+      h1 { font-size:27pt; }
+      .discipline { font-size:9.4pt; margin:8px 0 7px; }
+      .contact { font-size:8.5pt; gap:3px 15px; }
+      .summary { margin-top:11px; font-size:9.4pt; line-height:1.4; }
+      section { margin-top:13px; }
+      h2 { font-size:7.4pt; margin-bottom:7px; padding-bottom:4px; }
+      h3 { font-size:10pt; }
+      .entry { margin-top:9px; }
+      .date { font-size:7.7pt; }
+      .subline { font-size:8pt; margin:3px 0 4px; }
+      li { font-size:9.3pt; line-height:1.37; margin:3px 0; }
+      .coursework,.training { font-size:9.2pt; }
+      .skill-row { font-size:9.1pt; margin-top:4px; grid-template-columns:105px 1fr; }
+      .availability { font-size:7.5pt; margin-top:12px; padding-top:7px; }
+      a { color:inherit; }
+      h2,h3 { break-after:avoid; }
+      p,li { orphans:2; widows:2; }
+    }
+  
+.button{display:inline-flex;align-items:center;text-decoration:none}.button:hover{text-decoration:none} </style></head><body>
+<nav class="toolbar" aria-label="CV actions"><span class="toolbar-label">Research CV · Summer 2027</span><div class="toolbar-actions">
+<a class="button" id="viewPrototype" href="index.html#antiterrastrae" target="_blank" rel="noopener noreferrer">View Antiterrastrae</a>
+<a class="button primary" href="cv.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a>
+</div></nav><main class="sheet" id="cv">
+<header class="masthead">
+<p class="kicker">Mathematics · Computation · Vertebrate Paleontology</p>
+<h1>ELIGULI HAN</h1>
+<p class="discipline">New York University · Mathematics &amp; Computer Science Undergraduate</p>
+<div class="contact">
+<span>New York, NY</span>
+<a href="mailto:hh3494@nyu.edu">hh3494@nyu.edu</a>
+<a href="https://github.com/Eliguli712" rel="noopener noreferrer" target="_blank">github.com/Eliguli712</a>
+<a href="https://www.linkedin.com/in/hans-frederic-wilhelm-53046a364/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+</div>
+</header>
+<p class="summary">Mathematics and computer science undergraduate developing computational approaches to animal anatomy, acoustics and environmental perception. Research interests include fossil cetacean cranial anatomy, temnospondyl biomechanics, and the connection between three-dimensional geometry and biological function.</p>
+<section aria-labelledby="education">
+<h2 id="education">Education &amp; Mathematical Training</h2>
+<div class="entry">
+<div class="entry-head"><h3>New York University · College of Arts &amp; Science</h3><span class="date">Degree in progress</span></div>
+<p class="subline">B.A. candidate, Mathematics &amp; Computer Science</p>
+<p class="coursework"><strong>Completed coursework:</strong> Numerical Analysis; Partial Differential Equations; Machine Learning; Natural Language Processing. <strong>Current coursework:</strong> Mathematical Statistics.</p>
+<p class="training"><strong>Awesome SummerCamp:</strong> Three consecutive participations in advanced mathematical enrichment covering geometry, algebra and number theory.</p>
+</div>
+</section>
+<section aria-labelledby="projects">
+<h2 id="projects">Selected Research &amp; Computational Projects</h2>
+<article class="entry">
+<div class="entry-head"><h3><a href="index.html#antiterrastrae" rel="noopener noreferrer" target="_blank">Antiterrastrae · Volumetric Biosonar &amp; Scientific Visualization</a></h3><span class="date">Ongoing</span></div>
+<p class="subline">Self-directed computational prototype · JavaScript, HTML/CSS, WebGL</p>
+<ul>
+<li>Developing an interactive aquatic simulation connecting three-dimensional animal surface geometry with acoustic propagation, echoes, and temperature-, salinity- and depth-dependent environmental structure.</li>
+<li>Implemented a tetrahedral finite-element module for scalar acoustic eigenmodes, <span class="math">Kp = λMp</span>, with stiffness and consistent mass matrices, Cholesky transformation and Jacobi eigenvalue iteration.</li>
+<li>Integrated WebGL echo rendering with a Canvas fallback, adjustable acoustic parameters, and VTK/OBJ export of surface and volumetric geometry for inspection and further analysis.</li>
+</ul>
+</article>
+<article class="entry">
+<div class="entry-head"><h3><i>Cynthiacetus peruvianus</i> · Digital Cranial Anatomy</h3><span class="date">Ongoing</span></div>
+<p class="subline">Independent project in development · MNHN holotype MNHN.F.PRU10</p>
+<ul>
+<li>Initiated data-access correspondence with Guillaume Billet at the Muséum national d’Histoire naturelle; availability of cranial and mandibular surface scans was confirmed, subject to a formal collections request and use conditions.</li>
+<li>Developing a staged research plan linking surface morphology to CT/μCT segmentation, virtual endocast reconstruction and exploratory cranial biomechanics, according to available data and documented anatomical assumptions.</li>
+</ul>
+</article>
+<article class="entry">
+<div class="entry-head"><h3><i>Coronodon</i> Dental Morphology · Primary-Literature Verification</h3><span class="date">2026</span></div>
+<p class="subline">Independent research-verification assessment submission</p>
+<ul>
+<li>Constructed a source-verifiable question on fossil whale dental measurements; cross-checked interpretations against primary literature and documented the evidence behind a reference answer and model-error diagnosis.</li>
+</ul>
+</article>
+</section>
+<section aria-labelledby="skills">
+<h2 id="skills">Technical Skills &amp; Research Direction</h2>
+<div class="skill-row"><strong>Programming</strong><span>Python, NumPy, pandas, scikit-learn; JavaScript, HTML/CSS; WebGL/Canvas; SQL; GitHub; AI-assisted development and debugging.</span></div>
+<div class="skill-row"><strong>Methods</strong><span>Numerical methods, differential equations, finite-element assembly, eigenvalue problems, three-dimensional mesh processing, scientific visualization and literature verification.</span></div>
+<div class="skill-row"><strong>Training sought</strong><span>Specimen-based CT/μCT segmentation, comparative cranial anatomy, geometric morphometrics and finite-element analysis of biological structures.</span></div>
+</section>
+<footer class="availability">
+<span>Seeking supervised undergraduate research · Summer 2027 · New York</span>
+<span>F-1 international student</span>
+</footer>
+</main>
+<p class="screen-note">Select View Antiterrastrae to open the interactive simulation in your browser.</p></body></html>
