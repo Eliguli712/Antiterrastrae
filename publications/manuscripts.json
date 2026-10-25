@@ -1,0 +1,41 @@
+[
+  {
+    "key": "massa-corporis",
+    "title": "Massa Corporis et Densitas Architecturae",
+    "subtitle": "Body mass in cetaceans and Mesozoic marine reptiles",
+    "category": "Comparative palaeobiology",
+    "status": "Working draft",
+    "date": "October 2026",
+    "description": "Comparative body-mass estimation in cetaceans and Mesozoic marine reptiles, with explicit scaling assumptions, alternative estimates and evidence tags.",
+    "pages": 17,
+    "bytes": 247190,
+    "sha256": "5e64608fb5053bb01e1730c0825118e7309e37cec36382fa9857944867ec67f3",
+    "pdf": "publications/massa-corporis.pdf"
+  },
+  {
+    "key": "song-before-civilisation",
+    "title": "The Song Before Civilisation",
+    "subtitle": "Das Lied vor der Zivilisation",
+    "category": "Theoretical ecology",
+    "status": "Theoretical manuscript",
+    "date": "July 2026",
+    "description": "An exploratory framework linking energetic constraints, cetacean cultural transmission and the persistence of information across generations.",
+    "pages": 7,
+    "bytes": 723479,
+    "sha256": "27e3bf7011a18340e47105f6bdd28fda260e1b8004ada4d72ae4d24a2048cb9f",
+    "pdf": "publications/song-before-civilisation.pdf"
+  },
+  {
+    "key": "kakeya-conditional-reduction",
+    "title": "Compact Limits and a Conditional Maximal-Function Reduction",
+    "subtitle": "For Kakeya-Type Carriers",
+    "category": "Geometric measure theory",
+    "status": "Conditional reduction note",
+    "date": "July 2026",
+    "description": "An axiomatic note separating compactness from the assumed maximal-function estimate and its Minkowski-dimension consequence. The maximal estimate remains an explicit hypothesis.",
+    "pages": 3,
+    "bytes": 125333,
+    "sha256": "7df9afda60c33ebe1078913876a5b0955015eb576ddcc69e02d25dd44ca85d28",
+    "pdf": "publications/kakeya-conditional-reduction.pdf"
+  }
+]

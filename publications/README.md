@@ -9,3 +9,15 @@ This public web copy contains all 26 pages of the author-supplied report. Images
 Source PDF SHA-256: `b7085c35e60b6a847f60e0eb9f636237c7bda47fb096cadd4f1cfa9f43240e5b`
 
 Web PDF SHA-256: `127bfd1396bd07dc43005723c68e576c2a412df27d601eb4fbc624cd84954d1b`
+
+## Additional manuscripts and mathematical notes
+
+| Document | Status | Pages | PDF |
+| --- | --- | ---: | --- |
+| Massa Corporis et Densitas Architecturae | Working draft, October 2026 | 17 | [Read](massa-corporis.pdf) |
+| The Song Before Civilisation / Das Lied vor der Zivilisation | Theoretical manuscript, July 2026 | 7 | [Read](song-before-civilisation.pdf) |
+| Compact Limits and a Conditional Maximal-Function Reduction for Kakeya-Type Carriers | Conditional reduction note, July 2026 | 3 | [Read](kakeya-conditional-reduction.pdf) |
+
+These PDFs are unchanged copies of the author's supplied manuscripts. The Kakeya note explicitly assumes the maximal-function estimate used in its conditional reduction.
+
+[Public portfolio mirror](https://eliguli-han.eliguli712.chatgpt.site)
