@@ -1,0 +1,24 @@
+[
+  {
+    "key": "internal32",
+    "filename": "Megalodon_FullCT_Internal_32M_18um.3mf",
+    "source_vertices": 16804493,
+    "source_faces": 31999434,
+    "source_bytes": 528058773,
+    "source_sha256": "88007a9df60462b646e8bec3018e73add3cbc7069929f69f2ff40f250301fd6e",
+    "embedded_colors": false,
+    "display_note": "Both browser levels are reduced displays. Original unmodified source is available for download.",
+    "color_note": "Original source is uncolored. Natural/paper colors are reference projections, with prior z spacing corrected from 16 to 18 \u00b5m."
+  },
+  {
+    "key": "native74",
+    "filename": "Megalodon_FullCT_Native_Internal_74M_18um.3mf",
+    "source_vertices": 37951699,
+    "source_faces": 74293846,
+    "source_bytes": 753276730,
+    "source_sha256": "69928fc1d776a0cb2cd3da389802e0b08d226395005bbf4a2094180e90622b73",
+    "embedded_colors": false,
+    "display_note": "Both browser levels are reduced displays. Original unmodified source is available for download.",
+    "color_note": "Original source is uncolored. Natural/paper colors are reference projections, with prior z spacing corrected from 16 to 18 \u00b5m."
+  }
+]

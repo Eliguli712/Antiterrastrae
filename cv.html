@@ -323,10 +323,12 @@ body.viewer-open{overflow:hidden}
 <a class="report-fulltext" href="publications/megalodon-durf-report.pdf" target="_blank" rel="noopener noreferrer">Read full technical report <span aria-hidden="true">↗</span><small>PDF · 26 pages · 2.5 MB</small></a>
 </article>
 <article class="entry project-visual" id="high-res-meg-teeth" style="padding:16px 18px">
-<div class="entry-head"><h3><a href="fea_research/high_res_meg_teeth/">Full-resolution μCT tooth · Interactive 3D archive</a></h3><span class="date">Megalodon FEA research</span></div>
-<p class="subline">32,687,264-triangle source CT model · Continuous surfaces &amp; scattered points</p>
-<p style="font-size:11.6px;line-height:1.55">Explore the numerical von Mises field, paper-referenced colors and natural fossil appearance. Includes the full CT figure plates, animation and downloadable static views. Browser geometry is reduced for interactive display.</p>
-<p style="margin-top:10px;font-size:12px;font-weight:600"><a href="fea_research/high_res_meg_teeth/">Open tooth viewer &amp; figure gallery <span aria-hidden="true">↗</span></a></p>
+<div class="entry-head"><h3><a href="fea_research/high_res_meg_teeth/">Megalodon μCT · Von Mises &amp; Table 9 Q</a></h3><span class="date">Full-resolution CT archive</span></div>
+<p class="subline">Side-by-side field and regional percentiles · separate display, appearance and resolution selectors</p>
+<p style="font-size:11.6px;line-height:1.55">Explore the self-checked revised Table 9 pressure experiment below. The complete saved calculation mesh and reduced display are selectable. Original 18 µm 32M / native 74M reconstructions and the lossless voxel mask are available in the full archive.</p>
+<iframe id="meg-science-frame" src="fea_research/high_res_meg_teeth/index.html?embed=1" title="Side-by-side von Mises and self-checked Table 9 Q visualizations" loading="lazy" style="width:100%;height:1180px;border:0;display:block;margin-top:14px" allow="fullscreen"></iframe>
+<p style="margin-top:10px;font-size:12px;font-weight:600"><a href="fea_research/high_res_meg_teeth/">Open side-by-side research viewer ↗</a> · <a href="fea_research/high_res_meg_teeth/selectable.html">Open selectable von Mises / Q version ↗</a></p>
+<p style="margin-top:7px;font-size:11.5px"><a href="fea_research/high_res_meg_teeth/assets/revised-table9-paper.pdf" target="_blank" rel="noopener">Revised paper with checked Table 9</a> · <a href="fea_research/high_res_meg_teeth/assets/table9-audit.pdf" target="_blank" rel="noopener">Calculation audit</a></p>
 </article>
 </section>
 <section aria-labelledby="projects">
@@ -442,5 +444,8 @@ body.viewer-open{overflow:hidden}
 })();
 </script>
 
-<p class="screen-note">Research CV &amp; personal art portfolio · Summer 2027 · Word, Markdown and PDF downloads contain the research CV.</p></body></html>
+<p class="screen-note">Research CV &amp; personal art portfolio · Summer 2027 · Word, Markdown and PDF downloads contain the research CV.</p><script>
+window.addEventListener('message',event=>{const frame=document.getElementById('meg-science-frame');if(frame&&event.origin===location.origin&&event.source===frame.contentWindow&&event.data?.type==='megalodon-viewer-height'){const height=Number(event.data.height);if(Number.isFinite(height))frame.style.height=Math.max(500,Math.min(3000,height))+'px';}});
+</script>
+</body></html>
 

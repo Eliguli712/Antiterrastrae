@@ -1,0 +1,186 @@
+{
+  "assertion_tested": "All 18 Q90/Q95/Q99 values for the six frozen masks reproduce from saved element stresses and match the revised Table 9 on page 16.",
+  "status": "verified finite dataset",
+  "rows": [
+    {
+      "region": "R0",
+      "elements": 1186,
+      "manual_type7_MPa": [
+        9.725484660260602,
+        11.052115202216353,
+        13.139970662130573
+      ],
+      "paper_table9_rounded_values_match": true,
+      "raw_csv_reproduces_values": true
+    },
+    {
+      "region": "RA",
+      "elements": 1606,
+      "manual_type7_MPa": [
+        20.183164509852475,
+        22.37296480875948,
+        30.604583987756175
+      ],
+      "paper_table9_rounded_values_match": true,
+      "raw_csv_reproduces_values": true
+    },
+    {
+      "region": "RB",
+      "elements": 1050,
+      "manual_type7_MPa": [
+        13.911100949559264,
+        16.80876500558797,
+        19.610197748386128
+      ],
+      "paper_table9_rounded_values_match": true,
+      "raw_csv_reproduces_values": true
+    },
+    {
+      "region": "Rtip",
+      "elements": 723,
+      "manual_type7_MPa": [
+        0.4093360206909965,
+        0.5399783024414999,
+        0.7794011607113649
+      ],
+      "paper_table9_rounded_values_match": true,
+      "raw_csv_reproduces_values": true
+    },
+    {
+      "region": "Rcr",
+      "elements": 21752,
+      "manual_type7_MPa": [
+        31.805784767186797,
+        39.213649651076274,
+        56.279926052655306
+      ],
+      "paper_table9_rounded_values_match": true,
+      "raw_csv_reproduces_values": true
+    },
+    {
+      "region": "Rroot",
+      "elements": 6801,
+      "manual_type7_MPa": [
+        134.8993706539847,
+        188.75613786472442,
+        237.62484000233044
+      ],
+      "paper_table9_rounded_values_match": true,
+      "raw_csv_reproduces_values": true
+    }
+  ],
+  "quantile": "Equal-element linear/type-7 empirical quantile; not volume weighted.",
+  "pressure_MPa": 1.0,
+  "non_claims": [
+    "Does not reproduce the original paper Table 9, whose masks and pressure export are unavailable.",
+    "No mesh convergence, physical validation, or fracture claim.",
+    "Q is a regional statistic, not a separate pointwise stress field."
+  ],
+  "bounded_run_status": "completed",
+  "input_hashes": [
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/calculation_config.json",
+      "sha256": "91b6c7eb66ef4f7acb0f874be3d06d3b75608e18f3030cc00fa371667bbd84a7"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/data/stress_exports/von_mises_data_rawtet.txt",
+      "sha256": "790348268348cc0bb67643621b3bf21363e9c6122cad86a746e444f45f9e2b48"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/data/stress_exports/von_mises_data_smoothed.txt",
+      "sha256": "5617ee4bea61d8e459a4d4ca912cb6b4d1c90d109cf0353eb44a320bfcc00ee6"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/data/stress_exports/von_mises_data_uncompressed.txt",
+      "sha256": "cbdd611620699c1814cddc256946eb0d5327ca75934ade5965a2649a18b14e51"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/data/tooth_surface_uncompressed_tetwild_entity_refined_tet_vol.msh",
+      "sha256": "18287f87f4abd076216206ea4cffe9b8c1ae01ec860f096b39f21a19b4ed0754"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/latex/main.pdf",
+      "sha256": "bd12eacb43add935aaf027f8e2e51d6397f1c0e6d48a9295aa3cc13fa81714fe"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/run/archived_field_quantiles.csv",
+      "sha256": "60acbcb193fdbb421c8b94f899d64acd4a42830b084b674da9a2abc54d46b23e"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/run/audit_results.json",
+      "sha256": "b853db2c190e0944c49a42ebad8880c69ecfaa238372b88511540787fe77959d"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/run/boundary_sensitivity.csv",
+      "sha256": "5015b4af2b10a72694087294961996f667b27a35ad6bb913e625f3ead056e5d4"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/run/fresh_element_stress.csv",
+      "sha256": "76cc8b54ebda94ad15be5d45406292540646d8ff731c7881971441b21ffbc166"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/run/kept_original_element_indices.npy",
+      "sha256": "f81af361f4d3887d8f3250fd9101bb728e894d18f828f15b9386a9775d0f65a3"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/run/manifest.json",
+      "sha256": "596d5c0650bb94e4ccae28a72e56b756d2bd33d61146ea6c775b3aea14d684c9"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/run/mask_sensitivity.csv",
+      "sha256": "fc52d71dd92a8b2c2ae69d201096623d0b79c2488cf3b9cbcaaacc9734a8f4d0"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/run/original_table9_audit.csv",
+      "sha256": "64846f4598fca94fbaf38a6f28cef3827fec10722d5fc06112d6aeffe6661bef"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/run/region_masks.npz",
+      "sha256": "d5d9a30c37cddd833620b341adfcf8b3b1ba4094b66bb3a222cb9a420f8a6296"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/run/solution.npz",
+      "sha256": "f816917260e5fd875134e266590120cbab9d2258546306f31b021f02c94ea27a"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/run/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/run/stdout.txt",
+      "sha256": "e93074af83399ad00d8e3a257c9393002f75967083e6f08460908eaaf402a94e"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/run/table9_region_quantiles.csv",
+      "sha256": "9f5b754f10654e2243f4ffd3ca36a3e0112dd0e1d56d4a75d4887743d8fb70bb"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/scripts/recalculate.py",
+      "sha256": "99e0f943771d5475127768d38987bfacfcb9134d8b5596417e81b9d2e02a0628"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/scripts/verify_results.py",
+      "sha256": "37338e1b6404e83bb82c729edfecb789c2955c3fc8d74cfd710a80732ba563af"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/source/AddVonMisesPointCloudToStaticDynamics.java",
+      "sha256": "8dfdfbe4d838a0c1984f53ceb8ebce54d5e3c9d31d134dd26687c36d5d4f93e3"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/source/build_frontal_von_mises.py",
+      "sha256": "6ca695023df7b4fb3a6155180988a06c1a0494620516fab819432c81fc68a1f5"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/source/geometry_units_metadata.json",
+      "sha256": "a73133cd4004baeb9316c8340e00b33124095b0f730deb8835670cc34484d3e7"
+    },
+    {
+      "path": "output/pdf/table9_recalculation_2026-10-24/source/original_manuscript.pdf",
+      "sha256": "b7085c35e60b6a847f60e0eb9f636237c7bda47fb096cadd4f1cfa9f43240e5b"
+    },
+    {
+      "path": "output/tooth_continuous_surfaces/check_table9_q.py",
+      "sha256": "1d57cfaaf23d9960459719dc0e840df28b2797791d4f0987c314d0e697c1dfee"
+    }
+  ]
+}

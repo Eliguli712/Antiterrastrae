@@ -88,6 +88,111 @@
     "stress_full_ct_views.png": {
       "bytes": 2537560,
       "sha256": "ffed5df25a35e37d5afdc138da3af19282ffd61a9165644d08b0e7ac6c928421"
+    },
+    "internal32_original.png": {
+      "bytes": 637969,
+      "sha256": "b944bf245b4c723bf75e995a9452308ef1840e0e5d8276b623341424fe4f8c45"
+    },
+    "table9-audit.pdf": {
+      "bytes": 734135,
+      "sha256": "e89254bc6004a5d9f8badba72f2e513e4ef447b07a19cccfa1eceafd13835f36"
+    },
+    "native74_original.png": {
+      "bytes": 594550,
+      "sha256": "13cb85b67ba5dbe716a1bd1beee15a186d643855e9668431b51b79b9fc18db80"
+    },
+    "revised-table9-paper.pdf": {
+      "bytes": 4726620,
+      "sha256": "bd12eacb43add935aaf027f8e2e51d6397f1c0e6d48a9295aa3cc13fa81714fe"
+    },
+    "table9_q_continuous.png": {
+      "bytes": 230988,
+      "sha256": "0c1f2ed105ec801a4b7cc9ce23013d0064ba527905069d1164f6f88c496f29ff"
+    },
+    "table9_vm_continuous.png": {
+      "bytes": 732349,
+      "sha256": "b3ddcab9a76fc68fb58b231ec020479392e8c7257b33d3172933a79c663ec630"
+    },
+    "specimen_mask_slices.png": {
+      "bytes": 94418,
+      "sha256": "47ce7d486535029d4054e13a7226e90166420d54e69350870599484c3aef4ba0"
     }
+  },
+  "views": {
+    "comparison": "index.html",
+    "selectable": "selectable.html",
+    "archived_comsol": "legacy-von-mises.html"
+  },
+  "table9": {
+    "status": "self-checked against full raw field, frozen masks, CSV and revised paper Table 9",
+    "record": "data/q-self-check.json",
+    "values": 18,
+    "regions": 6,
+    "quantile": "Equal-element linear/type-7",
+    "scope": "New 1 MPa pressure experiment, not reproduction of the old withdrawn table."
+  },
+  "original_18um_files": {
+    "tag": "megalodon-ct-18um",
+    "url": "https://github.com/Eliguli712/Antiterrastrae/releases/tag/megalodon-ct-18um",
+    "assets": [
+      {
+        "name": "Megalodon_FullCT_Internal_32M_18um.3mf",
+        "bytes": 528058773,
+        "sha256": "88007a9df60462b646e8bec3018e73add3cbc7069929f69f2ff40f250301fd6e",
+        "url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/Megalodon_FullCT_Internal_32M_18um.3mf"
+      },
+      {
+        "name": "Megalodon_FullCT_Native_Internal_74M_18um.3mf",
+        "bytes": 753276730,
+        "sha256": "69928fc1d776a0cb2cd3da389802e0b08d226395005bbf4a2094180e90622b73",
+        "url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/Megalodon_FullCT_Native_Internal_74M_18um.3mf"
+      },
+      {
+        "name": "Megalodon_FullCT_SpecimenMask_18um.mha",
+        "bytes": 31001630,
+        "sha256": "8a68259cc4c079eaef5ec604e60bea2de6bf8bf4ebb7d9499347651676e19bce",
+        "url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/Megalodon_FullCT_SpecimenMask_18um.mha"
+      }
+    ]
+  },
+  "reconstructed_models": [
+    {
+      "key": "internal32",
+      "filename": "Megalodon_FullCT_Internal_32M_18um.3mf",
+      "source_vertices": 16804493,
+      "source_faces": 31999434,
+      "source_bytes": 528058773,
+      "source_sha256": "88007a9df60462b646e8bec3018e73add3cbc7069929f69f2ff40f250301fd6e",
+      "embedded_colors": false,
+      "display_note": "Both browser levels are reduced displays. Original unmodified source is available for download.",
+      "color_note": "Original source is uncolored. Natural/paper colors are reference projections, with prior z spacing corrected from 16 to 18 \u00b5m."
+    },
+    {
+      "key": "native74",
+      "filename": "Megalodon_FullCT_Native_Internal_74M_18um.3mf",
+      "source_vertices": 37951699,
+      "source_faces": 74293846,
+      "source_bytes": 753276730,
+      "source_sha256": "69928fc1d776a0cb2cd3da389802e0b08d226395005bbf4a2094180e90622b73",
+      "embedded_colors": false,
+      "display_note": "Both browser levels are reduced displays. Original unmodified source is available for download.",
+      "color_note": "Original source is uncolored. Natural/paper colors are reference projections, with prior z spacing corrected from 16 to 18 \u00b5m."
+    }
+  ],
+  "mask": {
+    "filename": "Megalodon_FullCT_SpecimenMask_18um.mha",
+    "sha256": "8a68259cc4c079eaef5ec604e60bea2de6bf8bf4ebb7d9499347651676e19bce",
+    "shape_xyz": [
+      746,
+      1903,
+      2886
+    ],
+    "spacing_mm": [
+      0.018,
+      0.018,
+      0.018
+    ],
+    "complete_voxel_hash_verified": true,
+    "values": "0 = background/threshold void, 1 = selected specimen"
   }
 }

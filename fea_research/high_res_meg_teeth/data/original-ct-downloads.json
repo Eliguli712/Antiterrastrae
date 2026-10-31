@@ -1,0 +1,24 @@
+{
+  "tag": "megalodon-ct-18um",
+  "url": "https://github.com/Eliguli712/Antiterrastrae/releases/tag/megalodon-ct-18um",
+  "assets": [
+    {
+      "name": "Megalodon_FullCT_Internal_32M_18um.3mf",
+      "bytes": 528058773,
+      "sha256": "88007a9df60462b646e8bec3018e73add3cbc7069929f69f2ff40f250301fd6e",
+      "url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/Megalodon_FullCT_Internal_32M_18um.3mf"
+    },
+    {
+      "name": "Megalodon_FullCT_Native_Internal_74M_18um.3mf",
+      "bytes": 753276730,
+      "sha256": "69928fc1d776a0cb2cd3da389802e0b08d226395005bbf4a2094180e90622b73",
+      "url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/Megalodon_FullCT_Native_Internal_74M_18um.3mf"
+    },
+    {
+      "name": "Megalodon_FullCT_SpecimenMask_18um.mha",
+      "bytes": 31001630,
+      "sha256": "8a68259cc4c079eaef5ec604e60bea2de6bf8bf4ebb7d9499347651676e19bce",
+      "url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/Megalodon_FullCT_SpecimenMask_18um.mha"
+    }
+  ]
+}

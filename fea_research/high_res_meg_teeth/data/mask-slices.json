@@ -1,0 +1,16 @@
+{
+  "filename": "Megalodon_FullCT_SpecimenMask_18um.mha",
+  "sha256": "8a68259cc4c079eaef5ec604e60bea2de6bf8bf4ebb7d9499347651676e19bce",
+  "shape_xyz": [
+    746,
+    1903,
+    2886
+  ],
+  "spacing_mm": [
+    0.018,
+    0.018,
+    0.018
+  ],
+  "complete_voxel_hash_verified": true,
+  "values": "0 = background/threshold void, 1 = selected specimen"
+}
