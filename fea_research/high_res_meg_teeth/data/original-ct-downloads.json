@@ -19,6 +19,12 @@
       "bytes": 31001630,
       "sha256": "8a68259cc4c079eaef5ec604e60bea2de6bf8bf4ebb7d9499347651676e19bce",
       "url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/Megalodon_FullCT_SpecimenMask_18um.mha"
+    },
+    {
+      "name": "Megalodon_FullCT_NaturalColors_PBR.3mf",
+      "bytes": 347334694,
+      "sha256": "94cea43e98f914aef09c56504ff9c16c1b490f24124a6815c2e90a84288abeb7",
+      "url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/Megalodon_FullCT_NaturalColors_PBR.3mf"
     }
   ]
 }
