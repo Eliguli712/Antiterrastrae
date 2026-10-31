@@ -1,0 +1,93 @@
+{
+  "numerical_color_limits_pa": [
+    56766.44283690944,
+    326888.21709539363
+  ],
+  "comsol": {
+    "source_samples": 191031,
+    "mesh_triangles": 5554286,
+    "display": "Nearest exported COMSOL value at each mesh vertex; linear interpolation across connected faces."
+  },
+  "full_resolution_3mf": {
+    "stress": {
+      "filename": "Megalodon_FullCT_StressColors_PBR.3mf",
+      "sha256": "39ce24d78fbee473f2819296fe508e522abf8375fba49660e367bcd188668023",
+      "vertices": 16272624,
+      "triangles": 32687264
+    },
+    "natural": {
+      "filename": "Megalodon_FullCT_NaturalColors_PBR.3mf",
+      "sha256": "94cea43e98f914aef09c56504ff9c16c1b490f24124a6815c2e90a84288abeb7",
+      "vertices": 16272624,
+      "triangles": 32687264
+    }
+  },
+  "preview": {
+    "ct_render_triangles": 602652,
+    "ct_interactive_triangles": 35999,
+    "fe_interactive_triangles": 15999,
+    "method": "Connected display mesh reduction, never triangle subsampling. All original files unchanged.",
+    "ct_component": "Largest connected exterior only for the preview; internal cavity surfaces remain in the original 3MFs.",
+    "3mf_color_mapping": "Area-weighted original face palettes at original vertices, then nearest-source-vertex transfer to display mesh.",
+    "pbr_preview": "Approximate lighting; per-face specular/gloss material extension is not reproduced exactly."
+  },
+  "points": {
+    "fe": 60000,
+    "ct": 60000
+  },
+  "stress_3mf_values": "Paper-image color reference only; no raw numerical stress values.",
+  "assets": {
+    "von_mises_frontal_scattered.png": {
+      "bytes": 5108235,
+      "sha256": "7f1264ca5305a6313980b33bfab1f84c445988e28b887f592947e67963ee4812"
+    },
+    "von_mises_frontal_continuous.png": {
+      "bytes": 2242580,
+      "sha256": "bfa387e63ded9b3991ea7d98a6c6811f0ae04b19b455eb5d8f36d9c44004d654"
+    },
+    "natural_3mf_frontal_continuous.png": {
+      "bytes": 2088241,
+      "sha256": "8063f8f9f764aef090cbf9f7c98e77881902c95420b00b07da56a15d1bc432db"
+    },
+    "natural_full_ct_rotation.gif": {
+      "bytes": 2487378,
+      "sha256": "bf7922ef39187e519a77bade6cbf51ee97cd73c679f82c6631d9b33c0f39e2cd"
+    },
+    "stress_3mf_frontal_scattered.png": {
+      "bytes": 4682520,
+      "sha256": "45ebe8ee016a2585e84cb0bf74ec0dd94341fca74db75393c4c771c7435be748"
+    },
+    "natural_3mf_frontal_scattered.png": {
+      "bytes": 4316391,
+      "sha256": "75164499331c3d6d60a8936146cb22981ceac7499ca4c366ffa737207e922d5e"
+    },
+    "stress_3mf_frontal_continuous.png": {
+      "bytes": 3307302,
+      "sha256": "3970123aed6b1d2a20785184f307f7f908fdf337f6bc6a7cdc3f3b54e414f742"
+    },
+    "archived_von_mises_point_cloud.png": {
+      "bytes": 1688489,
+      "sha256": "cef236e1454346ab1bdf0b735c4970e4e3b70edc110f03756c45d9a2e21deda2"
+    },
+    "natural_full_ct_views.png": {
+      "bytes": 2234956,
+      "sha256": "95ef6c8bebca8afa1c67b3c5f3205929eccba0f6e77bfe80b8cffcf8ce90c8ce"
+    },
+    "archived_von_mises_surface.png": {
+      "bytes": 1445528,
+      "sha256": "7dfbe8099f5f0256bf9b1c4b6aa40d06403c921a44d0c018232d23719d69d09b"
+    },
+    "von_mises_oblique_continuous.png": {
+      "bytes": 2950523,
+      "sha256": "1c56cb8380f6c929640f00fa0f4777b655376c8312c77c59052de2884bfd594c"
+    },
+    "new_pressure_case.png": {
+      "bytes": 680688,
+      "sha256": "98ce93b74321375268052e1ae3d4e3224634a588d16813ce768c994fab8864a5"
+    },
+    "stress_full_ct_views.png": {
+      "bytes": 2537560,
+      "sha256": "ffed5df25a35e37d5afdc138da3af19282ffd61a9165644d08b0e7ac6c928421"
+    }
+  }
+}

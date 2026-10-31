@@ -29,3 +29,9 @@ Open [the research CV and portfolio](https://eliguli712.github.io/Antiterrastrae
 ## Visual and interactive portfolio
 
 The [portfolio wall](https://eliguli712.github.io/Antiterrastrae/cv.html#artworks) groups paleontological reconstruction, cetacean card design and interactive cartography. Category filters use native HTML radio controls and CSS. The image viewer stays within the selected group. The [Moling Atlas](https://eliguli712.github.io/moling-atlas-mobile/) preview is downsampled from the project's published Jiankang–Moling map export; the interactive application opens separately.
+
+## Full-resolution megalodon tooth archive
+
+Open [the tooth viewer and figure gallery](https://eliguli712.github.io/Antiterrastrae/fea_research/high_res_meg_teeth/), also linked beneath the megalodon research report on the CV. Top controls switch continuous/scattered rendering and numerical, paper-reference or natural appearance. The page includes source plates and the original supplied GIF.
+
+The full CT source models have 32,687,264 triangles; browser meshes and point clouds are reduced displays. Quantitative Pa values belong only to the saved COMSOL field. The colored 3MF paper appearance does not contain numerical stress values. See the archive’s `provenance.json` for geometry counts and source hashes. Full-resolution 3MF packages are preserved in the research source archive and are not copied into the web preview.
