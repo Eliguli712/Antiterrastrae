@@ -342,6 +342,25 @@ model-viewer{display:block;width:100%;height:min(61dvh,650px);min-height:280px;b
 .model-dialog-actions a:last-child{background:#514386;color:#fff;border-color:#514386}
 @media(max-width:600px){.specimen-collection{padding:18px 14px}.specimen-header h4{font-size:27px}.specimen-grid{grid-template-columns:1fr;gap:16px}.specimen-body{padding:17px}.specimen-card h5{font-size:25px}.specimen-download{font-size:12px;min-height:48px}.specimen-tools button,.specimen-tools a{font-size:11px}.specimen-footer{flex-direction:column;gap:16px}.specimen-edition{max-width:none}.specimen-bundle{font-size:11px}.model-dialog{width:calc(100vw - 12px);max-height:calc(100dvh - 12px)}.model-dialog-head{padding:14px}.model-dialog-head h4{font-size:20px}.model-dialog-footer{padding:14px}.model-dialog-actions{gap:6px}.model-dialog button,.model-dialog-actions a{font-size:10px;padding:9px 11px}model-viewer{height:47dvh}}
 @media print{.specimen-collection,.model-dialog{display:none!important}}
+
+/* Compact specimen disclosure beneath the cranial-anatomy research plan. */
+.specimen-disclosure{margin:17px 0 18px;border:1px solid #dcd5e5;border-radius:10px;background:#fbfafc;overflow:hidden}
+.specimen-disclosure>summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:76px;padding:17px 20px;cursor:pointer;color:#4e3f68}
+.specimen-disclosure>summary::-webkit-details-marker{display:none}
+.specimen-disclosure>summary::marker{content:""}
+.specimen-disclosure>summary strong{display:block;font:normal 21px/1.25 Georgia,serif}
+.specimen-disclosure-description{display:block;margin-top:6px;font-size:10px;line-height:1.6;color:#80708d}
+.specimen-disclosure-mark{display:flex;align-items:center;justify-content:center;flex:none;width:30px;height:30px;border:1px solid #d7cee1;border-radius:50%;font:20px/1 Arial,sans-serif;background:#fff}
+.specimen-disclosure-mark::after{content:"+"}
+.specimen-disclosure[open]>summary .specimen-disclosure-mark::after{content:"−"}
+.specimen-disclosure[open]>summary{border-bottom:1px solid #e1dbe8}
+.specimen-disclosure>summary:hover{background:#f5f1f9}
+.specimen-disclosure>summary:focus-visible{outline:3px solid #a56c39;outline-offset:-4px}
+.specimen-disclosure-body{padding:0 14px 14px}
+.specimen-disclosure .specimen-collection{margin:0;padding:23px 8px;border:0;background:transparent}
+.specimen-disclosure .project-visual{margin:3px 0 0}
+@media(max-width:600px){.specimen-disclosure>summary{padding:15px;gap:12px}.specimen-disclosure>summary strong{font-size:20px}.specimen-disclosure-description{font-size:9.5px}.specimen-disclosure-body{padding:0 8px 9px}.specimen-disclosure .specimen-collection{padding:20px 6px}}
+@media print{.specimen-disclosure{display:none!important}}
 </style></head><body>
 <nav class="toolbar" aria-label="CV and demonstration actions">
 <a class="button action launch" id="viewPrototype" href="https://eliguli712.github.io/Antiterrastrae/?demo=1#antiterrastrae">
@@ -406,6 +425,9 @@ model-viewer{display:block;width:100%;height:min(61dvh,650px);min-height:280px;b
 <li>Initiated data-access correspondence with Guillaume Billet at the Muséum national d’Histoire naturelle; availability of cranial and mandibular surface scans was confirmed, subject to a formal collections request and use conditions.</li>
 <li>Developing a staged research plan linking surface morphology to CT/μCT segmentation, virtual endocast reconstruction and exploratory cranial biomechanics, according to available data and documented anatomical assumptions.</li>
 </ul>
+<details class="specimen-disclosure" id="cynthiacetus-specimen">
+<summary><span><strong>Digital specimen</strong><span class="specimen-disclosure-description">1:10 Opal · Skull &amp; mandible · 3D views, downloads &amp; anatomy plates</span></span><span class="specimen-disclosure-mark" aria-hidden="true"></span></summary>
+<div class="specimen-disclosure-body">
 <section class="specimen-collection" id="cynthiacetus-downloads" aria-labelledby="specimen-title" data-image-gallery>
 <div class="specimen-header"><p class="plate-eyebrow">Cynthiacetus peruvianus / Digital specimen</p><h4 id="specimen-title">Explore the form.<br>Download each part.</h4><p>1:10 Opal edition, with the skull and mandible packaged separately. Each 3D view retains every source triangle and the original color texture.</p><div class="specimen-badges"><span>1:10 scale</span><span>Opal finish</span><span>No supports</span></div></div>
 <div class="specimen-grid"><article class="specimen-card">
@@ -443,6 +465,7 @@ model-viewer{display:block;width:100%;height:min(61dvh,650px);min-height:280px;b
 <figcaption><div><strong lang="de">Deutsch</strong><span>Original PNG · 1536 × 1162 · 485 KB</span></div><div class="plate-actions"><a href="assets/portfolio/cynthiacetus-de.png" target="_blank" rel="noopener">View original</a><a href="assets/portfolio/cynthiacetus-de.png" download="Cynthiacetus_Reinforcement_DE.png">Download image</a></div></figcaption>
 </figure>
 </div></fieldset></div>
+</div></details>
 </article>
 <article class="entry">
 <div class="entry-head"><h3><i>Coronodon</i> Dental Morphology · Primary-Literature Verification</h3><span class="date">2026</span></div>
@@ -552,6 +575,21 @@ model-viewer{display:block;width:100%;height:min(61dvh,650px);min-height:280px;b
 <model-viewer camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.25" exposure="1" interaction-prompt="none" camera-orbit="-10deg 75deg auto"></model-viewer>
 <div class="model-dialog-footer"><p id="model-status" role="status" aria-live="polite">Loading…</p><p class="model-instructions">Drag to rotate · Scroll or pinch to zoom · Shift-drag to pan</p><div class="model-dialog-actions"><button type="button" id="model-reset">Reset view</button><button type="button" id="model-retry" hidden>Try again</button><a id="model-original-image" target="_blank" rel="noopener">Full-size image</a><a id="model-download" download>Download .3mf</a></div></div>
 </dialog>
+
+<script>
+(()=>{
+ const disclosure=document.getElementById('cynthiacetus-specimen');
+ function revealHash(){
+  let id;
+  try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}
+  const target=document.getElementById(id);
+  if(target&&disclosure.contains(target))disclosure.open=true;
+ }
+ document.querySelectorAll('a[href="#cynthiacetus-downloads"],a[href="#project-plates"]').forEach(link=>link.addEventListener('click',()=>{disclosure.open=true;}));
+ addEventListener('hashchange',revealHash);
+ revealHash();
+})();
+</script>
 <script type="module" src="assets/cynthiacetus/viewer.js"></script>
 <p class="screen-note">Research CV &amp; personal art portfolio · Summer 2027 · Word, Markdown and PDF downloads contain the research CV.</p>
 </body></html>

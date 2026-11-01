@@ -5,5 +5,12 @@
   "installCommand": "",
   "outputDirectory": "dist",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/fea_research/high_res_meg_teeth",
+      "destination": "/fea_research/high_res_meg_teeth/archive",
+      "permanent": true
+    }
+  ]
 }

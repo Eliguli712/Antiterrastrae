@@ -14,6 +14,9 @@ const demo = readFileSync(join(root, 'index.html'), 'utf8');
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out);
 for (const name of required.slice(2)) cpSync(join(root, name), join(out, name), { recursive: true });
+// A named entry keeps relative archive assets in their directory after clean-URL redirects.
+const researchDirectory = 'fea_research/high_res_meg_teeth';
+writeFileSync(join(out, researchDirectory, 'archive.html'), readFileSync(join(root, researchDirectory, 'index.html')));
 writeFileSync(join(out, 'index.html'), cv);
 writeFileSync(join(out, 'cv.html'), cv);
 writeFileSync(join(out, 'antiterrastrae.html'), demo);
