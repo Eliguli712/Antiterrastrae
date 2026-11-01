@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:,">
+<title>Paper reader · Eliguli Han</title>
+<link rel="stylesheet" href="reader.css">
+</head>
+<body>
+<header class="reader-header">
+  <a id="return-cv" href="../cv.html#manuscripts" target="_top">← Return to CV</a>
+  <div class="reader-heading"><p>ELIGULI HAN / PAPERS &amp; NOTES</p><h1 id="paper-title">Paper reader</h1></div>
+  <a id="paper-download" hidden download>Download PDF ↓</a>
+</header>
+<nav class="reader-tools" aria-label="Paper controls">
+  <label>Page <input id="page-number" type="number" min="1" value="1" inputmode="numeric" aria-label="Go to page"></label>
+  <span id="page-total"></span>
+  <label>Scale <select id="page-scale"><option value="1">Fit width</option><option value="1.25">125%</option><option value="1.5">150%</option><option value="2">200%</option></select></label>
+  <span id="reader-status" role="status" aria-live="polite">Choose a paper from the CV to begin.</span>
+</nav>
+<main id="paper-pages" aria-label="Complete paper"></main>
+<noscript><p>Enable JavaScript to use the reader. <a href="../cv.html#manuscripts" target="_top">Return to the CV</a> for direct PDF downloads.</p></noscript>
+<script type="module" src="reader.js"></script>
+</body>
+</html>

@@ -1,2 +1,4 @@
 dist/
 .vercel/
+__pycache__/
+*.py[cod]

@@ -21,3 +21,20 @@ Web PDF SHA-256: `127bfd1396bd07dc43005723c68e576c2a412df27d601eb4fbc624cd84954d
 These PDFs are unchanged copies of the author's supplied manuscripts. The Kakeya note explicitly assumes the maximal-function estimate used in its conditional reduction.
 
 [Public portfolio mirror](https://eliguli-han.eliguli712.chatgpt.site)
+
+## Complete paper catalog
+
+The CV's [expandable reading list](../cv.html#manuscripts) includes all available representative papers, the mathematical notes and study material, and the earlier megalodon report editions. Every entry opens a complete, locally hosted PDF.js reader and provides the unchanged original PDF for download. A persistent **Return to CV** link returns to the corresponding host's CV; no GitHub hostname is hard-coded in the reader.
+
+The machine-readable [catalog](catalog.json) records the status, page count, size and SHA-256 of every PDF. Rebuild with `python3 scripts/build-publications.py` after adding a source file.
+
+Additional complete documents included in this revision:
+
+| Document | Status | Read |
+| --- | --- | --- |
+| Compiling Ancient Greek Semantic DAGs with Phoneme, Morpheme, and Lexeme Layers | Course-project manuscript | [Full paper](reader.html?paper=ancient-greek-semantic-dags) |
+| From Random Walks to Brownian Motion | Mathematical notes | [Full notes](reader.html?paper=brownian-motion-notes) |
+| Tennis PMFs, Pareto Tails, Fires, and Kullback–Leibler Divergence | Coursework report | [Full report](reader.html?paper=mathematical-probability-report) |
+| Mathematical Statistics: Midterm 1 Practice Set and Solutions | Study material | [Complete material](reader.html?paper=mathematical-statistics-practice) |
+
+The author-requested `K_class_9_copy_m_slot_markov_symmetry_report.pdf` has not been supplied in the selected repositories. The catalog builder reserves its final position when the real PDF is added. No substitute document or broken download link is published.

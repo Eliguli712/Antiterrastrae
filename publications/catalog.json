@@ -1,0 +1,136 @@
+{
+  "documents": [
+    {
+      "id": "megalodon-9page-report",
+      "file": "megalodon-9page-report.pdf",
+      "title": "Tooth-scale Stress Localisation in a µCT-derived Otodus megalodon Model",
+      "category": "Computational biomechanics",
+      "status": "Revised technical report",
+      "date": "31 October 2026",
+      "description": "Calibrated geometry, numerical verification and regional sensitivity. Current condensed edition with the complete report content.",
+      "pages": 9,
+      "bytes": 9819706,
+      "sha256": "2f0e465c25db57de7080e338ed655d10fe16f7fb9f5d84df2797b9714c33fe6c"
+    },
+    {
+      "id": "massa-corporis",
+      "file": "massa-corporis.pdf",
+      "title": "Massa Corporis et Densitas Architecturae",
+      "category": "Comparative palaeobiology",
+      "status": "Working draft",
+      "date": "October 2026",
+      "description": "Body-mass estimation in cetaceans and Mesozoic marine reptiles, with explicit scaling assumptions and alternative estimates.",
+      "pages": 17,
+      "bytes": 247190,
+      "sha256": "5e64608fb5053bb01e1730c0825118e7309e37cec36382fa9857944867ec67f3"
+    },
+    {
+      "id": "song-before-civilisation",
+      "file": "song-before-civilisation.pdf",
+      "title": "The Song Before Civilisation / Das Lied vor der Zivilisation",
+      "category": "Theoretical ecology",
+      "status": "Theoretical manuscript",
+      "date": "July 2026",
+      "description": "Energetic, cognitive and medium constraints on marine megafaunal intelligence, cultural transmission and information persistence.",
+      "pages": 7,
+      "bytes": 723479,
+      "sha256": "27e3bf7011a18340e47105f6bdd28fda260e1b8004ada4d72ae4d24a2048cb9f"
+    },
+    {
+      "id": "ancient-greek-semantic-dags",
+      "file": "ancient-greek-semantic-dags.pdf",
+      "title": "Compiling Ancient Greek Semantic DAGs with Phoneme, Morpheme, and Lexeme Layers",
+      "category": "Computational linguistics",
+      "status": "Course-project manuscript",
+      "date": "May 2026",
+      "description": "Inspectable semantic graphs compiled from Ancient Greek Universal Dependencies, with corpus evaluation and explicit intermediate layers.",
+      "pages": 11,
+      "bytes": 253921,
+      "sha256": "3889d991a9f2643b63778c73eca9108ce5964cd90ec623705bfa18b69f65fa10"
+    },
+    {
+      "id": "brownian-motion-notes",
+      "file": "brownian-motion-notes.pdf",
+      "title": "From Random Walks to Brownian Motion",
+      "category": "Probability theory",
+      "status": "Mathematical notes",
+      "date": "September 2026",
+      "description": "Martingales, Lévy continuity, Donsker scaling, Wiener measure, Itô calculus, Girsanov and PDE methods.",
+      "pages": 38,
+      "bytes": 4277648,
+      "sha256": "49dffa642a02987ff2650ecd68d1ee2b14d9a3f7ee33910e3916ae2052c6e928"
+    },
+    {
+      "id": "mathematical-probability-report",
+      "file": "mathematical-probability-report.pdf",
+      "title": "Tennis PMFs, Pareto Tails, Fires, and Kullback–Leibler Divergence",
+      "category": "Mathematical probability",
+      "status": "Coursework report",
+      "date": "2026",
+      "description": "Complete solutions, reproducible computational output, exact and Monte Carlo checks, and visual verification.",
+      "pages": 16,
+      "bytes": 1197707,
+      "sha256": "78a6d597e389ea577d82a58ffff1c242edb31f0a2c1b84cb66c4d26ab142d51a"
+    },
+    {
+      "id": "mathematical-statistics-practice",
+      "file": "mathematical-statistics-practice.pdf",
+      "title": "Mathematical Statistics: Midterm 1 Practice Set and Solutions",
+      "category": "Mathematical statistics",
+      "status": "Study material",
+      "date": "September 2026",
+      "description": "A mock exam, full solutions and correction audit. Included as mathematical study material, rather than a research manuscript.",
+      "pages": 15,
+      "bytes": 401296,
+      "sha256": "25fbd86731ed6b9e6d7d8bf3d5c72561e4d3b0cc2e6c1cf704ff00aadbe256c4"
+    },
+    {
+      "id": "kakeya-conditional-reduction",
+      "file": "kakeya-conditional-reduction.pdf",
+      "title": "Compact Limits and a Conditional Maximal-Function Reduction for Kakeya-Type Carriers",
+      "category": "Geometric measure theory",
+      "status": "Conditional reduction note",
+      "date": "July 2026",
+      "description": "Separates compactness from an explicitly assumed maximal-function estimate. The note does not claim a proof of the Kakeya conjecture.",
+      "pages": 3,
+      "bytes": 125333,
+      "sha256": "7df9afda60c33ebe1078913876a5b0955015eb576ddcc69e02d25dd44ca85d28"
+    },
+    {
+      "id": "megalodon-20page-revised",
+      "file": "megalodon-20page-revised.pdf",
+      "title": "Tooth-scale Stress Localisation: Expanded Revised Edition",
+      "category": "Research archive",
+      "status": "Expanded technical report",
+      "date": "31 October 2026",
+      "description": "Expanded edition of the revised megalodon tooth-scale report.",
+      "pages": 20,
+      "bytes": 17320316,
+      "sha256": "be932f214e424b8e36b140d0b6a45ec4bca8ace9207c2d08ce2ddcd170729fc4"
+    },
+    {
+      "id": "megalodon-26page-recalculated",
+      "file": "megalodon-26page-recalculated.pdf",
+      "title": "Tooth-Level Finite-Element Analysis: Recalculated Archive",
+      "category": "Research archive",
+      "status": "Earlier technical report",
+      "date": "July 2026",
+      "description": "Earlier recalculated report preserved separately from the current calibrated experiment.",
+      "pages": 26,
+      "bytes": 4726620,
+      "sha256": "bd12eacb43add935aaf027f8e2e51d6397f1c0e6d48a9295aa3cc13fa81714fe"
+    },
+    {
+      "id": "megalodon-durf-report",
+      "file": "megalodon-durf-report.pdf",
+      "title": "Tooth-Level Finite-Element Analysis: Original DURF Report",
+      "category": "Research archive",
+      "status": "Original technical report",
+      "date": "July 2026",
+      "description": "Original DURF report, preserved as an earlier edition with its original assumptions.",
+      "pages": 26,
+      "bytes": 2600932,
+      "sha256": "127bfd1396bd07dc43005723c68e576c2a412df27d601eb4fbc624cd84954d1b"
+    }
+  ]
+}
