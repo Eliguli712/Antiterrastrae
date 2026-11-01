@@ -1,0 +1,590 @@
+{
+  "source_file": "Megalodon_FullCT_Internal_32M_18um.3mf",
+  "source_sha256": "88007a9df60462b646e8bec3018e73add3cbc7069929f69f2ff40f250301fd6e",
+  "source_vertices": 16804493,
+  "source_triangles": 31999434,
+  "display_triangles": 31999434,
+  "face_decimation": false,
+  "geometry": "All source triangle indices; positions quantized only for browser transfer.",
+  "projection": "Nearest saved L2 element centroid in the same physical 18 \u00b5m scanner frame; no old 16/18 factor. Geometry is unchanged. Q_F values are fixed regional volume-weighted summaries.",
+  "q_definition": "The original frozen region labels and checked regional quantiles; unassigned regions are gray.",
+  "total_download_bytes": 326146129,
+  "interaction_preview": "data/full31m-interaction.json.gz",
+  "chunks": [
+    {
+      "vertices": 500522,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 0,
+      "url": "data/full31m/chunk-00.bin.gz",
+      "bytes": 8691967,
+      "sha256": "35bcbc168fe30a0f76966f92fd823e8d0a8e6745c5c93eab4489dc62a9cf607c",
+      "projection": {
+        "url": "data/qf-projection/field-00.bin.gz",
+        "sha256": "ce9157b2561021907c76d49e31e8c4fa5712f66133cdbf36a6e175cc4cd04d5d",
+        "bytes": 279438,
+        "vertices": 500522,
+        "distance_p99_mm": 0.5412166149261196
+      }
+    },
+    {
+      "vertices": 501445,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 1000000,
+      "url": "data/full31m/chunk-01.bin.gz",
+      "bytes": 8931324,
+      "sha256": "04ad2d2a3b0a52c664b3144a7e6e0c57b2fa7979911e9eb56d46f4bf5c00ed19",
+      "projection": {
+        "url": "data/qf-projection/field-01.bin.gz",
+        "sha256": "7a156da35d0a7be282d1b021995439c01e1e11fe2d8c5041d5d1cd31cebe5df5",
+        "bytes": 285433,
+        "vertices": 501445,
+        "distance_p99_mm": 0.6325280969333528
+      }
+    },
+    {
+      "vertices": 502057,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 2000000,
+      "url": "data/full31m/chunk-02.bin.gz",
+      "bytes": 9097905,
+      "sha256": "d45a3c629574e5f650f4c8a8962d2fea1fa30f244b6f1bdaeb78a31352df4316",
+      "projection": {
+        "url": "data/qf-projection/field-02.bin.gz",
+        "sha256": "1f289785feaab0cf0833918a08be03a55df2bf270025c5368ab15e54044bec3e",
+        "bytes": 306328,
+        "vertices": 502057,
+        "distance_p99_mm": 0.6268429059147115
+      }
+    },
+    {
+      "vertices": 503983,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 3000000,
+      "url": "data/full31m/chunk-03.bin.gz",
+      "bytes": 9221188,
+      "sha256": "d0f0df0ac81c32cf7f622e632b7cfc139742d421dda81552f3c26687a6b8e485",
+      "projection": {
+        "url": "data/qf-projection/field-03.bin.gz",
+        "sha256": "d9965c460723b7980dc81837a34bdcd93ad71487bfa7810a2a3ba1134593cf2b",
+        "bytes": 349629,
+        "vertices": 503983,
+        "distance_p99_mm": 0.5920864424566377
+      }
+    },
+    {
+      "vertices": 509079,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 4000000,
+      "url": "data/full31m/chunk-04.bin.gz",
+      "bytes": 9315147,
+      "sha256": "b69c9c123313ce81b8d695381fc207f0e1b977331113b26deb38a82f4738c3ad",
+      "projection": {
+        "url": "data/qf-projection/field-04.bin.gz",
+        "sha256": "4303bdfbd2b4d1b3ca99d94f75a1071f5bc31648e63b81f3a561786326b595c7",
+        "bytes": 411581,
+        "vertices": 509079,
+        "distance_p99_mm": 0.49350295232772406
+      }
+    },
+    {
+      "vertices": 511992,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 5000000,
+      "url": "data/full31m/chunk-05.bin.gz",
+      "bytes": 9364660,
+      "sha256": "f6357a2462a66ec0ec36bb2c22e211a56b009c7143718155e42091a09f54b921",
+      "projection": {
+        "url": "data/qf-projection/field-05.bin.gz",
+        "sha256": "fa92a0b7191556dcb2cb4b8bcf3e8028052a7b8f6042792b2e80f3e03680b4f0",
+        "bytes": 480291,
+        "vertices": 511992,
+        "distance_p99_mm": 0.4250727365658028
+      }
+    },
+    {
+      "vertices": 524995,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 6000000,
+      "url": "data/full31m/chunk-06.bin.gz",
+      "bytes": 9457546,
+      "sha256": "9f3a131bbdc0b575a8d4c13f63b19b91dcb55e01015a09fcd0d72661ba0ef7be",
+      "projection": {
+        "url": "data/qf-projection/field-06.bin.gz",
+        "sha256": "9ed047baaeed0971157bd87e4375bed4dec6fe6265b8ec895dcfc4a320035d6d",
+        "bytes": 517142,
+        "vertices": 524995,
+        "distance_p99_mm": 0.4047485175489809
+      }
+    },
+    {
+      "vertices": 532144,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 7000000,
+      "url": "data/full31m/chunk-07.bin.gz",
+      "bytes": 9549641,
+      "sha256": "d080e554edac0e0644f37678414c4d91c5f03e59272bf602adb065367bd3f8fb",
+      "projection": {
+        "url": "data/qf-projection/field-07.bin.gz",
+        "sha256": "1134cbb9902c35af2cc64eb979b4b83c1a8197f9b90369a24deace6886724f78",
+        "bytes": 617409,
+        "vertices": 532144,
+        "distance_p99_mm": 0.37902634275261904
+      }
+    },
+    {
+      "vertices": 526756,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 8000000,
+      "url": "data/full31m/chunk-08.bin.gz",
+      "bytes": 9509135,
+      "sha256": "bc6a2fdac1f7b593f98a749279adb92d22118afaaea59d863aba07303cf563d3",
+      "projection": {
+        "url": "data/qf-projection/field-08.bin.gz",
+        "sha256": "c86d7010fbd6ab7a24177f186a1d7010746556c7b4af24cb96e896de116697fc",
+        "bytes": 604546,
+        "vertices": 526756,
+        "distance_p99_mm": 0.3852912351873528
+      }
+    },
+    {
+      "vertices": 552565,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 9000000,
+      "url": "data/full31m/chunk-09.bin.gz",
+      "bytes": 9719234,
+      "sha256": "91a1f075eed0c42257079a84e5399d0d5efb7afa4b6f02a49ceacbfc25548740",
+      "projection": {
+        "url": "data/qf-projection/field-09.bin.gz",
+        "sha256": "da557440cf880755e6b4fb13a5b397f1065e56c8f262a3fb9e1257694cad9ed7",
+        "bytes": 660827,
+        "vertices": 552565,
+        "distance_p99_mm": 0.39558347353568524
+      }
+    },
+    {
+      "vertices": 562778,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 10000000,
+      "url": "data/full31m/chunk-10.bin.gz",
+      "bytes": 9786851,
+      "sha256": "5fe61e0870ab74d00a793ada3100d009f8f32d4ae8b24aa9a8c58c99d559567c",
+      "projection": {
+        "url": "data/qf-projection/field-10.bin.gz",
+        "sha256": "b043bbd1e2dccc5c6ee9393b758455ec22c68164a9c4a6bb6ff625f2a0c4d9d0",
+        "bytes": 676192,
+        "vertices": 562778,
+        "distance_p99_mm": 0.42680258411337624
+      }
+    },
+    {
+      "vertices": 567776,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 11000000,
+      "url": "data/full31m/chunk-11.bin.gz",
+      "bytes": 9872889,
+      "sha256": "afad3b5d6b3cc5af28d3b03c3f3b0e5e4c330da340fc312abb232b8ed8302799",
+      "projection": {
+        "url": "data/qf-projection/field-11.bin.gz",
+        "sha256": "d9c89a3374aa2827638b4c4c078420c3ea3b68456486b6dd1b4c410cf81a5d5c",
+        "bytes": 705768,
+        "vertices": 567776,
+        "distance_p99_mm": 0.3731400856881048
+      }
+    },
+    {
+      "vertices": 582519,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 12000000,
+      "url": "data/full31m/chunk-12.bin.gz",
+      "bytes": 10016200,
+      "sha256": "f7082612babc17d51de872d967e7075e47c362233f4c1605df6ca1a589aaf8c7",
+      "projection": {
+        "url": "data/qf-projection/field-12.bin.gz",
+        "sha256": "27e593d9a2a2e07084ad01b8fd4f6f6518cdcac4ec89c047c745629547feb8b2",
+        "bytes": 731338,
+        "vertices": 582519,
+        "distance_p99_mm": 0.3681070522884229
+      }
+    },
+    {
+      "vertices": 557758,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 13000000,
+      "url": "data/full31m/chunk-13.bin.gz",
+      "bytes": 9824193,
+      "sha256": "978a11b4b0b97df6d98a24f2e10bd2512c6814a9806945c3310d379fc9c9a844",
+      "projection": {
+        "url": "data/qf-projection/field-13.bin.gz",
+        "sha256": "01f38f762f15f554c4c3f354cdb074e01f15f5a7e2c3706153cbff43bb2319e4",
+        "bytes": 698294,
+        "vertices": 557758,
+        "distance_p99_mm": 0.34780279245554213
+      }
+    },
+    {
+      "vertices": 582624,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 14000000,
+      "url": "data/full31m/chunk-14.bin.gz",
+      "bytes": 10048408,
+      "sha256": "68871aedd71baba6b2298d7b2edba25128cf4bd4214f9d826819527522965a10",
+      "projection": {
+        "url": "data/qf-projection/field-14.bin.gz",
+        "sha256": "d8d61639c123ce92aa3d6cb9d44f407c7884e5746d05c4187a6b88058b71d6da",
+        "bytes": 775633,
+        "vertices": 582624,
+        "distance_p99_mm": 0.3398844242390841
+      }
+    },
+    {
+      "vertices": 572050,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 15000000,
+      "url": "data/full31m/chunk-15.bin.gz",
+      "bytes": 9903870,
+      "sha256": "ec61f249e3741eb8983f1c89c35226c57d5fd05039515d511bf263ffdb474351",
+      "projection": {
+        "url": "data/qf-projection/field-15.bin.gz",
+        "sha256": "a5dd6e14eeca75c5d6163a8ccbe0d36ec868887dbaae9ca3ec7a8d83d8e53569",
+        "bytes": 733211,
+        "vertices": 572050,
+        "distance_p99_mm": 0.30251963387724723
+      }
+    },
+    {
+      "vertices": 572239,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 16000000,
+      "url": "data/full31m/chunk-16.bin.gz",
+      "bytes": 10003171,
+      "sha256": "20a801027707daf07b759c6c64e0fd087165f378884d9daba72659fdf423af5e",
+      "projection": {
+        "url": "data/qf-projection/field-16.bin.gz",
+        "sha256": "187896bdab10d7df0ffd6a06ef88166d6bbb21419df03fe140747d08286c5cc3",
+        "bytes": 753944,
+        "vertices": 572239,
+        "distance_p99_mm": 0.3119530870293945
+      }
+    },
+    {
+      "vertices": 569209,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 17000000,
+      "url": "data/full31m/chunk-17.bin.gz",
+      "bytes": 9998269,
+      "sha256": "9635b00df3054abffbfe82bcd560df1574be545078e474bf82bb13365f022aef",
+      "projection": {
+        "url": "data/qf-projection/field-17.bin.gz",
+        "sha256": "274fbb48d235fc6ae150fbb3d2af3b4ba61bdf92bd375254906eb02cc69b251c",
+        "bytes": 761958,
+        "vertices": 569209,
+        "distance_p99_mm": 0.29586927190685564
+      }
+    },
+    {
+      "vertices": 573189,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 18000000,
+      "url": "data/full31m/chunk-18.bin.gz",
+      "bytes": 10058034,
+      "sha256": "14fbea9eb444bed578eafb38ecf52d7d1bd62fab15f02dbaea56114f77a9f0ca",
+      "projection": {
+        "url": "data/qf-projection/field-18.bin.gz",
+        "sha256": "d1d5e669cbbbdef191bede35110e20601f6f9e34a4ae6f14ff493488fb0b8b2b",
+        "bytes": 746976,
+        "vertices": 573189,
+        "distance_p99_mm": 0.2915552575027267
+      }
+    },
+    {
+      "vertices": 565866,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 19000000,
+      "url": "data/full31m/chunk-19.bin.gz",
+      "bytes": 9913343,
+      "sha256": "3a35748d8584a444efdf876a0ad703a6fd488da4e91d49b667da74df70c71a5f",
+      "projection": {
+        "url": "data/qf-projection/field-19.bin.gz",
+        "sha256": "95038084f41c0aa2922ebff12e1beda3c8e8b954738361a7302168a8ff6de09a",
+        "bytes": 720715,
+        "vertices": 565866,
+        "distance_p99_mm": 0.2858408220530703
+      }
+    },
+    {
+      "vertices": 550963,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 20000000,
+      "url": "data/full31m/chunk-20.bin.gz",
+      "bytes": 9862868,
+      "sha256": "1c6855997b4eaf0efe71c3015e08f8a09b5735adbc175a33199acb8d1f6140d9",
+      "projection": {
+        "url": "data/qf-projection/field-20.bin.gz",
+        "sha256": "9d2e360307308a2af725ee5e2867fbc9fa23e143f2faf8101e4427e02fa43693",
+        "bytes": 726891,
+        "vertices": 550963,
+        "distance_p99_mm": 0.27040771601015545
+      }
+    },
+    {
+      "vertices": 546146,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 21000000,
+      "url": "data/full31m/chunk-21.bin.gz",
+      "bytes": 9752107,
+      "sha256": "2a39f55bcc458493186207f630a2ea1f25b041433519fd8650a60ef2ed4f1d2d",
+      "projection": {
+        "url": "data/qf-projection/field-21.bin.gz",
+        "sha256": "792039d43a1ac13faf0f00005f953965152d323bb41d58e3e07fb1a04904f2e7",
+        "bytes": 726432,
+        "vertices": 546146,
+        "distance_p99_mm": 0.254053312925129
+      }
+    },
+    {
+      "vertices": 556313,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 22000000,
+      "url": "data/full31m/chunk-22.bin.gz",
+      "bytes": 9773837,
+      "sha256": "1a08aa0aada1889204bc60e3cd90325cb455c8c0ec86570d42f2860d904f26eb",
+      "projection": {
+        "url": "data/qf-projection/field-22.bin.gz",
+        "sha256": "7047ec932d17cc65a15e827bd49bc25b3a4d8b4063d11dd48d44d4a9cc89a6f8",
+        "bytes": 709134,
+        "vertices": 556313,
+        "distance_p99_mm": 0.2645341756871633
+      }
+    },
+    {
+      "vertices": 552664,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 23000000,
+      "url": "data/full31m/chunk-23.bin.gz",
+      "bytes": 9745246,
+      "sha256": "1fe5616ff085dee0bfa2602a69ff6ed1cc3bcc7eafa2a2b5cb552d0f79dd7c05",
+      "projection": {
+        "url": "data/qf-projection/field-23.bin.gz",
+        "sha256": "2991ecbbcf1c57f3c5f704f845f00879b7fcedccba5e8a3321ec6664ad360701",
+        "bytes": 704816,
+        "vertices": 552664,
+        "distance_p99_mm": 0.24191192540240658
+      }
+    },
+    {
+      "vertices": 547208,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 24000000,
+      "url": "data/full31m/chunk-24.bin.gz",
+      "bytes": 9760791,
+      "sha256": "baa59032eea9782dbf022fd87ad9a901f351b6db1a6715e96a50a85910a70232",
+      "projection": {
+        "url": "data/qf-projection/field-24.bin.gz",
+        "sha256": "5b2f6aade8d65742f9b8bb14b480734c78fa518699be64d643fbd6fd944abead",
+        "bytes": 724516,
+        "vertices": 547208,
+        "distance_p99_mm": 0.24277916716273362
+      }
+    },
+    {
+      "vertices": 542433,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 25000000,
+      "url": "data/full31m/chunk-25.bin.gz",
+      "bytes": 9678680,
+      "sha256": "79e07617c5cf993f897aefeafd0ef1f8cdd68c53d5e7ee60001dd0cfcba74592",
+      "projection": {
+        "url": "data/qf-projection/field-25.bin.gz",
+        "sha256": "cdd41dbc509a25678d22f02e12d74923bad9a065a8d5d3a1ef0def6acacd931f",
+        "bytes": 717683,
+        "vertices": 542433,
+        "distance_p99_mm": 0.23241959247101365
+      }
+    },
+    {
+      "vertices": 539154,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 26000000,
+      "url": "data/full31m/chunk-26.bin.gz",
+      "bytes": 9632736,
+      "sha256": "25e4bc8b3f6c03799515eef41836369c0eeca7aea7d2aff2be99379c0fc74bec",
+      "projection": {
+        "url": "data/qf-projection/field-26.bin.gz",
+        "sha256": "7913b48bbc589249bf069286491fd34a321278cd339081902949eb76df0b5020",
+        "bytes": 709565,
+        "vertices": 539154,
+        "distance_p99_mm": 0.22191864492036528
+      }
+    },
+    {
+      "vertices": 528834,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 27000000,
+      "url": "data/full31m/chunk-27.bin.gz",
+      "bytes": 9588620,
+      "sha256": "b5b5832aec0586686fb5e5eac66edbcba1274557f688c8dad0c34fc3bdf9f954",
+      "projection": {
+        "url": "data/qf-projection/field-27.bin.gz",
+        "sha256": "be65ddefdd9ca83cbf43b9530f5926182109387e7b9f205e300319949f41ec89",
+        "bytes": 719483,
+        "vertices": 528834,
+        "distance_p99_mm": 0.22506659541255528
+      }
+    },
+    {
+      "vertices": 503918,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 28000000,
+      "url": "data/full31m/chunk-28.bin.gz",
+      "bytes": 9304244,
+      "sha256": "3e1260594d9bb1e9d2cbd807dfe7e3e2504f4490df04b54566e18ace79141673",
+      "projection": {
+        "url": "data/qf-projection/field-28.bin.gz",
+        "sha256": "d42d213248358c30505fda6fa54fbd3cad80fd3111851c0f73b3cbebe5d8c5d7",
+        "bytes": 685283,
+        "vertices": 503918,
+        "distance_p99_mm": 0.20758300391043927
+      }
+    },
+    {
+      "vertices": 489464,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 29000000,
+      "url": "data/full31m/chunk-29.bin.gz",
+      "bytes": 9134506,
+      "sha256": "0e2a57692f72da39aa752333a9d5d47aad2df03d00c086240ef811626ad16dd1",
+      "projection": {
+        "url": "data/qf-projection/field-29.bin.gz",
+        "sha256": "b9a5157c58608f538706fdcfbe6705175b5304be325bca6e6424d1c4f694d127",
+        "bytes": 631730,
+        "vertices": 489464,
+        "distance_p99_mm": 0.2036024093081052
+      }
+    },
+    {
+      "vertices": 504785,
+      "triangles": 1000000,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 30000000,
+      "url": "data/full31m/chunk-30.bin.gz",
+      "bytes": 9214600,
+      "sha256": "78265f713b42764a6744d8a64653566af7cb270e35c5cd0cbb92038a732e534f",
+      "projection": {
+        "url": "data/qf-projection/field-30.bin.gz",
+        "sha256": "fd1104c8f75bab914c17cd71ad5cb31c03eb1638849f6943faad2ce3be4d5faa",
+        "bytes": 420222,
+        "vertices": 504785,
+        "distance_p99_mm": 0.23887907222600938
+      }
+    },
+    {
+      "vertices": 501068,
+      "triangles": 999434,
+      "scale": 25.48624898534898,
+      "fit_scale": 28.03487388388388,
+      "first_source_face": 31000000,
+      "url": "data/full31m/chunk-31.bin.gz",
+      "bytes": 8838495,
+      "sha256": "eb7dcabe1f9c1816edf4804488f2d3ac92b76a2ecd1f293aae793ea71c84612b",
+      "projection": {
+        "url": "data/qf-projection/field-31.bin.gz",
+        "sha256": "f6d1e5ad32b2b5186f82705461bb549e114306f3e53ee23ef6a9c631fc89ffe8",
+        "bytes": 284016,
+        "vertices": 501068,
+        "distance_p99_mm": 0.30440155158590215
+      }
+    }
+  ],
+  "orientation_basis": [
+    [
+      -0.20585048544941456,
+      -0.042429565872172496,
+      0.9776631882095894
+    ],
+    [
+      0.966273203290348,
+      -0.16678162404920963,
+      0.19621413425774875
+    ],
+    [
+      0.15473097376818304,
+      0.9850805153993285,
+      0.0753306308040945
+    ]
+  ],
+  "oriented_center_mm": [
+    20.705387906192325,
+    21.788989567157593,
+    18.455144832424526
+  ],
+  "position_units": "mm",
+  "position_quantization_step_mm": 0.0007779685282463058,
+  "field_case": "Recalibrated 18 \u00b5m L2 pressure experiment of the nine-page paper",
+  "projection_inputs": {
+    "solution_sha256": "78eec317bf22fc3c89cd6f79dfbf786e7a718958eea0982daf762e05f9161da6",
+    "region_masks_sha256": "217b9c961c586e7dd75cc0f232e916b3ae1b6e1d4016feaef436c53d4456d001"
+  },
+  "registered_z_factor_for_fe": 1,
+  "registered_z_factor_for_color": 0.8888888888888888
+}

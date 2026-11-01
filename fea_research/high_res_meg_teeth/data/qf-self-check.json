@@ -1,0 +1,117 @@
+{
+  "definition": "Q_F: volume-weighted inverse empirical cumulative distribution of constant element von Mises stresses; primary convention of the nine-page paper.",
+  "input_solution_sha256": "78eec317bf22fc3c89cd6f79dfbf786e7a718958eea0982daf762e05f9161da6",
+  "input_masks_sha256": "217b9c961c586e7dd75cc0f232e916b3ae1b6e1d4016feaef436c53d4456d001",
+  "source_elements": 963710,
+  "rows": [
+    {
+      "region": "R0",
+      "quantile": 0.9,
+      "MPa": 9.05665422021538,
+      "matches_table9": true
+    },
+    {
+      "region": "R0",
+      "quantile": 0.95,
+      "MPa": 10.555481732381502,
+      "matches_table9": true
+    },
+    {
+      "region": "R0",
+      "quantile": 0.99,
+      "MPa": 13.084370439348612,
+      "matches_table9": true
+    },
+    {
+      "region": "RA",
+      "quantile": 0.9,
+      "MPa": 24.407219064957204,
+      "matches_table9": true
+    },
+    {
+      "region": "RA",
+      "quantile": 0.95,
+      "MPa": 29.586830203937307,
+      "matches_table9": true
+    },
+    {
+      "region": "RA",
+      "quantile": 0.99,
+      "MPa": 48.051717413840784,
+      "matches_table9": true
+    },
+    {
+      "region": "RB",
+      "quantile": 0.9,
+      "MPa": 12.226958357095674,
+      "matches_table9": true
+    },
+    {
+      "region": "RB",
+      "quantile": 0.95,
+      "MPa": 14.572385588620437,
+      "matches_table9": true
+    },
+    {
+      "region": "RB",
+      "quantile": 0.99,
+      "MPa": 18.506531133346964,
+      "matches_table9": true
+    },
+    {
+      "region": "Rtip",
+      "quantile": 0.9,
+      "MPa": 0.4461125839847237,
+      "matches_table9": true
+    },
+    {
+      "region": "Rtip",
+      "quantile": 0.95,
+      "MPa": 0.5325075340948253,
+      "matches_table9": true
+    },
+    {
+      "region": "Rtip",
+      "quantile": 0.99,
+      "MPa": 0.7156887715837174,
+      "matches_table9": true
+    },
+    {
+      "region": "Rcr",
+      "quantile": 0.9,
+      "MPa": 44.70464817957626,
+      "matches_table9": true
+    },
+    {
+      "region": "Rcr",
+      "quantile": 0.95,
+      "MPa": 62.81113041936903,
+      "matches_table9": true
+    },
+    {
+      "region": "Rcr",
+      "quantile": 0.99,
+      "MPa": 112.6802629808244,
+      "matches_table9": true
+    },
+    {
+      "region": "Rroot",
+      "quantile": 0.9,
+      "MPa": 188.24540608177347,
+      "matches_table9": true
+    },
+    {
+      "region": "Rroot",
+      "quantile": 0.95,
+      "MPa": 261.9658559282629,
+      "matches_table9": true
+    },
+    {
+      "region": "Rroot",
+      "quantile": 0.99,
+      "MPa": 389.60530748867495,
+      "matches_table9": true
+    }
+  ],
+  "status": "18 values independently checked against saved L2 field and frozen masks; matched to current nine-page Table 9."
+}
