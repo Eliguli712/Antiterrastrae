@@ -131,6 +131,18 @@
       "pages": 26,
       "bytes": 2600932,
       "sha256": "127bfd1396bd07dc43005723c68e576c2a412df27d601eb4fbc624cd84954d1b"
+    },
+    {
+      "id": "K_class_q_copy_m_slot_markov_symmetry_report",
+      "file": "K_class_q_copy_m_slot_markov_symmetry_report.pdf",
+      "title": "(K, q, m) Draw-and-Eliminate Models: Markov Chains, Martingales and Symmetry",
+      "category": "Probability and algebra",
+      "status": "Unified revised mathematical report",
+      "date": "September 2026",
+      "description": "A unified report on transition matrices, sampling without replacement, absorbing Markov chains, martingales, finite-group equivariance and character decompositions. Includes exact computations and visualisations. Original Chinese text with German terminology.",
+      "pages": 18,
+      "bytes": 518043,
+      "sha256": "2f9b2f35024d0aa6d424786d5fce3c22fb5a7929e04205e09cb73ad541325774"
     }
   ]
 }

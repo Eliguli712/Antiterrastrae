@@ -43,7 +43,7 @@ DOCUMENTS = [
      'Research archive', 'Original technical report', 'July 2026',
      'Original DURF report, preserved as an earlier edition with its original assumptions.'),
 ]
-LAST_FILE = 'K_class_9_copy_m_slot_markov_symmetry_report.pdf'
+LAST_FILE = 'K_class_q_copy_m_slot_markov_symmetry_report.pdf'
 
 
 def describe(entry):
@@ -75,9 +75,9 @@ def main():
     # The requested Markov report must be the final document once supplied.
     # Do not fabricate or link an absent PDF.
     if (PUBLICATIONS / LAST_FILE).is_file():
-        document = describe((LAST_FILE[:-4], 'K-class 9: Copy-m Slot Markov Symmetry Report',
-                             'Mathematics', 'Author-supplied report', '',
-                             'Complete author-supplied mathematical report.'))
+        document = describe((LAST_FILE[:-4], '(K, q, m) Draw-and-Eliminate Models: Markov Chains, Martingales and Symmetry',
+                             'Probability and algebra', 'Unified revised mathematical report', 'September 2026',
+                             'A unified report on transition matrices, sampling without replacement, absorbing Markov chains, martingales, finite-group equivariance and character decompositions. Includes exact computations and visualisations. Original Chinese text with German terminology.'))
         documents.append(document)
     else:
         print('Still required from the author:', LAST_FILE)

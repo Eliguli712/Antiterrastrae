@@ -43,7 +43,7 @@ class CVBrowserTests(unittest.TestCase):
         cls.thread.join()
 
     def test_catalog_downloads_and_mirror_bytes(self):
-        self.assertGreaterEqual(len(self.catalog), 11)
+        self.assertGreaterEqual(len(self.catalog), 12)
         self.assertEqual(len({p['id'] for p in self.catalog}), len(self.catalog))
         self.assertEqual((ROOT / 'cv.html').read_bytes(), (ROOT / 'dist/cv.html').read_bytes())
         self.assertEqual((ROOT / 'cv.html').read_bytes(), (ROOT / 'dist/index.html').read_bytes())
@@ -53,9 +53,10 @@ class CVBrowserTests(unittest.TestCase):
                 self.assertTrue(source.startswith(b'%PDF-'))
                 self.assertEqual(sha256(source).hexdigest(), paper['sha256'])
                 self.assertEqual(source, (ROOT / 'dist/publications' / paper['file']).read_bytes())
-        requested = 'K_class_9_copy_m_slot_markov_symmetry_report.pdf'
-        if (ROOT / 'publications' / requested).exists():
-            self.assertEqual(self.catalog[-1]['file'], requested)
+        requested = 'K_class_q_copy_m_slot_markov_symmetry_report.pdf'
+        self.assertTrue((ROOT / 'publications' / requested).is_file())
+        self.assertEqual(self.catalog[-1]['file'], requested)
+        self.assertEqual(self.catalog[-1]['pages'], 18)
 
     def test_complete_papers_and_return_to_matching_cv(self):
         for suffix in ['', '/dist']:
@@ -145,6 +146,45 @@ class CVBrowserTests(unittest.TestCase):
                 self.assertFalse(page.locator('#model-dialog').is_visible())
                 self.assertEqual(errors, [])
                 page.close()
+
+    def test_print_project_support_toggle_and_camera(self):
+        manifest = json.loads((ROOT / 'assets/cynthiacetus/print-project-manifest.json').read_text())
+        source = (ROOT / manifest['source']).read_bytes()
+        self.assertEqual(sha256(source).hexdigest(), manifest['source_sha256'])
+        self.assertEqual(manifest['source_triangles'], 154472)
+        self.assertEqual(manifest['support_segments'], 120915)
+        self.assertEqual(manifest['printer_technology'], 'FFF')
+        for suffix in ['', '/dist']:
+            for width in [1100, 390]:
+                with self.subTest(host=suffix or 'GitHub', width=width):
+                    page = self.browser.new_page(viewport={'width': width, 'height': 850})
+                    errors = []
+                    page.on('pageerror', lambda error: errors.append(str(error)))
+                    page.goto(self.base + suffix + '/cv.html#cynthiacetus-print-project')
+                    page.locator('[data-explore-model="print-1-20"]').click()
+                    page.wait_for_function('document.querySelector("model-viewer").loaded && document.getElementById("model-status").textContent.includes("154,472")', timeout=90000)
+                    page.evaluate('''() => {
+                      const m=document.querySelector('model-viewer');
+                      m.cameraOrbit='0.2rad 0.9rad 0.4m';m.jumpCameraToGoal();
+                    }''')
+                    before = page.locator('model-viewer').evaluate('(m) => ({...m.getCameraOrbit()})')
+                    toggle = page.locator('#model-support')
+                    self.assertTrue(toggle.is_visible())
+                    toggle.click()
+                    page.wait_for_function('document.querySelector("model-viewer").loaded && document.getElementById("model-status").textContent.includes("Print supports visible")', timeout=120000)
+                    page.locator('model-viewer').evaluate('(m) => m.jumpCameraToGoal()')
+                    after = page.locator('model-viewer').evaluate('(m) => ({...m.getCameraOrbit()})')
+                    self.assertEqual(toggle.get_attribute('aria-pressed'), 'true')
+                    self.assertTrue(page.locator('model-viewer').get_attribute('src').endswith('-supports.glb'))
+                    for name in ['theta', 'phi', 'radius']:
+                        self.assertAlmostEqual(before[name], after[name], delta=0.001)
+                    self.assertTrue(page.locator('#model-support-download').get_attribute('href').endswith('Cynthiacetus_Skull_Supports_1-20.3mf'))
+                    toggle.click()
+                    page.wait_for_function('document.querySelector("model-viewer").loaded && document.getElementById("model-status").textContent.includes("Full geometry")', timeout=90000)
+                    self.assertEqual(toggle.get_attribute('aria-pressed'), 'false')
+                    self.assertTrue(page.locator('model-viewer').get_attribute('src').endswith('/print-project-1-20.glb'))
+                    self.assertEqual(errors, [])
+                    page.close()
 
 
 if __name__ == '__main__':

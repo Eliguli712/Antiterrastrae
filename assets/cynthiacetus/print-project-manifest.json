@@ -1,0 +1,32 @@
+{
+  "source_sha256": "567bc0cd06ecf6075811b826bb3e3d884fa693d0afff38f3836525739483cfd2",
+  "source_triangles": 154472,
+  "source_vertices": 77232,
+  "support_segments": 120915,
+  "support_triangles": 1450980,
+  "support_roles": {
+    "Support material": 118660,
+    "Support material interface": 2255
+  },
+  "slicer": "PrusaSlicer 2.7.4",
+  "gcode_sha256": "32e26ad8703c90c8ec9b9ffad5ebac08720c9369060a17cba169a2c102af8383",
+  "source_scale": "1:20",
+  "printer_technology": "FFF",
+  "simplified": false,
+  "anatomy_z_lift_mm": 0.675,
+  "display_center_mm": [
+    67.4503343188368,
+    20.85386048415135,
+    8.14536085
+  ],
+  "support_representation": "Original extruded support centerlines with recorded width/height ribbons; all support and raft segments retained. Not an SLA mesh.",
+  "geometry": "Full, unchanged source triangle connectivity. Neutral display materials; uploaded project contains no textures.",
+  "source": "downloads/cynthiacetus/Cynthiacetus_Skull_Supports_1-20.3mf",
+  "source_bytes": 2413016,
+  "anatomy_glb": "assets/cynthiacetus/print-project-1-20.glb",
+  "anatomy_glb_sha256": "462bf62b88cbd0cd3e7750e88dce5f3ec6a194542edf10d623d8d69d368835b6",
+  "supported_glb": "assets/cynthiacetus/print-project-1-20-supports.glb",
+  "supported_glb_sha256": "6852173fee0d0a92d01dff1784c07d0874caa7464cb77c90bb5c7d87d9424096",
+  "anatomy_glb_bytes": 3710092,
+  "supported_glb_bytes": 44338260
+}

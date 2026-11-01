@@ -16,7 +16,7 @@ let savedCamera;
 function restoreCamera() {
   const wide = model.clientWidth / Math.max(model.clientHeight, 1) > 1.5;
   const radius = current?.exploreModel === 'skull' ? (wide ? '55%' : '100%') : (wide ? '65%' : '100%');
-  model.setAttribute('camera-orbit', `-10deg 75deg ${radius}`);
+  model.setAttribute('camera-orbit', current?.cameraOrbit || `-10deg 75deg ${radius}`);
   model.setAttribute('camera-target', 'auto auto auto');
   model.setAttribute('field-of-view', '30deg');
 }
@@ -63,7 +63,7 @@ for (const button of document.querySelectorAll('[data-explore-model]')) {
     download.href = current.download;
     download.setAttribute('download', current.download.split('/').at(-1));
     document.getElementById('model-original-image').href = current.image;
-    model.setAttribute('alt', current.title + ', original Opal texture and complete source geometry');
+    model.setAttribute('alt', current.title + ', ' + (current.appearance || 'original Opal texture') + ', complete source geometry');
     dialog.showModal();
     document.body.classList.add('viewer-open');
     load();
@@ -83,9 +83,10 @@ model.addEventListener('load', () => {
       model.fieldOfView = savedCamera.fov;
       savedCamera = undefined;
     }
+    const appearance = current.appearance || 'Original Opal texture';
     status.textContent = showSupport
-      ? `${current.faces} anatomy triangles · Original Opal texture · Print supports visible`
-      : `${current.faces} triangles · Original Opal texture · Full geometry`;
+      ? `${current.faces} anatomy triangles · ${appearance} · Print supports visible`
+      : `${current.faces} triangles · ${appearance} · Full geometry`;
   }
 });
 model.addEventListener('error', () => {
@@ -108,7 +109,7 @@ support.addEventListener('click', () => {
   support.setAttribute('aria-pressed', String(showSupport));
   support.textContent = showSupport ? 'Hide support' : 'Display support';
   status.textContent = showSupport ? 'Loading print supports…' : 'Loading anatomy…';
-  model.src = showSupport ? current.supportSrc : current.src;
+  model.setAttribute('src', showSupport ? current.supportSrc : current.src);
 });
 document.getElementById('model-reset').addEventListener('click', restoreCamera);
 document.getElementById('model-close').addEventListener('click', () => dialog.close());

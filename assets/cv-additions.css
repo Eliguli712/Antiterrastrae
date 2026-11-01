@@ -21,6 +21,14 @@
 .viewer-image.flippable{cursor:pointer}.viewer-image.flippable:focus-visible{outline:3px solid #b7a1cb;outline-offset:5px}
 #viewer-side{display:block;font-size:10px;color:#bdb2c9;margin:5px 0 0}#viewer-flip{color:#fff;border-color:#8c7ca0;background:#544365}
 .model-dialog-actions [hidden]{display:none!important}
+.print-project{margin:5px 8px 25px;padding:21px;border:1px solid #d4dfe0;border-radius:8px;background:#f4f8f8;scroll-margin-top:24px}
+.print-project h4{font:normal 25px/1.25 Georgia,serif;margin:10px 0;color:#304e50}
+.print-project>p{font-size:11px;line-height:1.8;color:#5a7274}.print-project .specimen-tools{justify-content:flex-start;gap:20px}
+.print-project-image{display:block;margin:16px 0;border:1px solid #d5dfe0;border-radius:6px;background:#f7f6f2;overflow:hidden}
+.print-project-image img{width:100%;height:auto;display:block}
+.print-project-key{display:flex;flex-wrap:wrap;gap:15px;font-size:10px;margin:12px 0;color:#5c7172}.print-project-key span{display:inline-flex;align-items:center;gap:6px}.print-project-key i{width:10px;height:10px;border-radius:50%;background:#c6b898}.print-project-key .support-key{background:#167d87}
+.print-project .specimen-download{max-width:410px;font-size:11px}.print-project details{font-size:10px;line-height:1.7;margin-top:14px;color:#617879}.print-project details summary{cursor:pointer;min-height:30px}.print-project code{overflow-wrap:anywhere}
+@media(max-width:600px){.print-project{margin:4px 6px 20px;padding:17px 14px}.print-project h4{font-size:24px}}
 .viewer-body:has(.card-back:not([hidden])){align-items:flex-start;overflow:auto}
 @media(max-width:600px){.paper-entry>summary{padding:17px 15px;gap:12px}.paper-entry strong{font-size:20px}.paper-meta{font-size:9px}.paper-content{padding:16px 12px}.paper-actions a{font-size:10px}.card-back{padding:22px 20px;border-width:7px}.card-back p{font-size:13px}.card-back h3{font-size:25px}}
 @media print{.paper-catalog{display:block}.paper-entry{break-inside:avoid;margin:10px 0}.paper-entry>summary{padding:10px}.paper-content iframe,.paper-expand{display:none}.paper-entry strong{font-size:15px}}

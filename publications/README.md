@@ -37,4 +37,4 @@ Additional complete documents included in this revision:
 | Tennis PMFs, Pareto Tails, Fires, and Kullback–Leibler Divergence | Coursework report | [Full report](reader.html?paper=mathematical-probability-report) |
 | Mathematical Statistics: Midterm 1 Practice Set and Solutions | Study material | [Complete material](reader.html?paper=mathematical-statistics-practice) |
 
-The author-requested `K_class_9_copy_m_slot_markov_symmetry_report.pdf` has not been supplied in the selected repositories. The catalog builder reserves its final position when the real PDF is added. No substitute document or broken download link is published.
+The author-supplied **(K, q, m) Draw-and-Eliminate Models: Markov Chains, Martingales and Symmetry** is the final catalog entry. The complete 18-page revised report is published unchanged under its actual filename, `K_class_q_copy_m_slot_markov_symmetry_report.pdf` (letter `q`, rather than digit `9`). [Read the complete report](reader.html?paper=K_class_q_copy_m_slot_markov_symmetry_report) or [download the original PDF](K_class_q_copy_m_slot_markov_symmetry_report.pdf).

@@ -14,7 +14,7 @@ Deploy the same Git commit to both hosts. After deployment, compare SHA-256 hash
 
 ## Papers, readers and card backs
 
-`publications/catalog.json` records each complete PDF's original filename, byte count, page count and SHA-256. Run `python3 scripts/build-publications.py` after adding a document. The requested `K_class_9_copy_m_slot_markov_symmetry_report.pdf`, once supplied, is always appended last. Do not fabricate this report or publish a broken download link when the source is missing.
+`publications/catalog.json` records each complete PDF's original filename, byte count, page count and SHA-256. Run `python3 scripts/build-publications.py` after adding a document. The uploaded `K_class_q_copy_m_slot_markov_symmetry_report.pdf` is always appended last. Preserve its actual filename and original bytes.
 
 All paper reading links use `publications/reader.html?paper=<catalog-id>`. Its persistent `../cv.html#paper-<catalog-id>` return link stays on the current host, for both GitHub Pages' repository prefix and Vercel's root. PDF.js, fonts and workers are vendored locally, and complete PDFs are available for download. The inline readers are loaded only while an entry is expanded. Original report editions remain distinct.
 
@@ -22,4 +22,12 @@ Card back text is in `assets/portfolio/cards.json`; the supplied front JPEGs rem
 
 Before publishing, build the mirror and run `python3 -m unittest discover -s tests -v` with Python Playwright and `/usr/bin/chromium` installed. The checks render the first and last pages of every PDF in both layouts, verify same-layout CV return links and unchanged downloads, and exercise inline disclosures plus card fronts/backs at desktop and phone widths.
 
-The 3D viewer accepts `data-support-src` (a complete, original-texture model plus separate support geometry) and `data-support-download` (the actual PrusaSlicer project). Its Display support control preserves the camera when switching. These attributes must only be added after the real support project and aligned full-geometry preview are available and checked. Do not represent a support-enforcer painting or an anatomy-only mesh as generated print support.
+The 3D viewer accepts `data-support-src` (a complete source model with its available textures plus separate support geometry) and `data-support-download` (the actual PrusaSlicer project). Its Display support control preserves the camera when switching. These attributes must only be added after the real support project and aligned full-geometry preview are available and checked. Do not represent a support-enforcer painting or an anatomy-only mesh as generated print support.
+
+The author-supplied `Cynthiacetus_Skull_Supports_1-20.3mf` is now connected in a
+separate **1:20** view, with its original bytes preserved. Its embedded printer
+technology is FFF. Actual organic-support and raft extrusion paths were generated
+with PrusaSlicer 2.7.4 and exported alongside every source anatomy triangle. The
+untextured project uses a neutral display finish, identified through
+`data-appearance`; the existing 1:10 Opal models keep their original textures.
+See `downloads/cynthiacetus/README.md` for provenance and reproduction commands.
