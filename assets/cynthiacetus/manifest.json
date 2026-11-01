@@ -1,0 +1,76 @@
+{
+  "edition": "1:10 Opal / Original anatomy / No supports",
+  "source_files_unchanged": true,
+  "reinforcement_status": "Source anatomy preserved; these downloads are not the reinforced edition.",
+  "display": "Full triangle count, original embedded PNG textures; display orientation and units converted only.",
+  "models": {
+    "skull": {
+      "vertices": 49400,
+      "triangles": 98812,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "anatomical_bounds_mm": [
+        [
+          5.451060510145543e-05,
+          0.0,
+          44.72628710269929
+        ],
+        [
+          116.15456848144531,
+          47.86560211181641,
+          75.75260283826245
+        ]
+      ],
+      "build_transform_3mf": "1 0 0 0 1 0 0 0 1 -5.4510605101455431e-05 -0 -44.726287102699288",
+      "source_metadata": {
+        "Title": "Cynthiacetus 1:10 Opal diffusion; original teeth and jaws; no supports",
+        "Description": "Source anatomy preserved. Original submillimeter walls retained; not certified as global 1 mm wall model."
+      },
+      "texture_sha256": "3276e0667f8365f1ca7a74cc4e94b1a77b8e2a77019391945a7c3dc97df60cd1",
+      "file": "downloads/cynthiacetus/Opal_1-10_Skull_OriginalAnatomy_NoSupports.3mf",
+      "bytes": 7697987,
+      "sha256": "2ace6e4a005cf59fe423d48ee547229e359b952010b21f757bbaa4fa919c10d6",
+      "glb": "assets/cynthiacetus/skull.glb",
+      "glb_sha256": "9779c3497ddf1e35512817a252c9078b0ebc7bc8c4ea49b86f188555a7ddafeb",
+      "image": "assets/cynthiacetus/skull-full.png",
+      "image_pixels": [
+        3200,
+        2200
+      ]
+    },
+    "mandible": {
+      "vertices": 27832,
+      "triangles": 55660,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "anatomical_bounds_mm": [
+        [
+          13.228988647460938,
+          2.329820251464845,
+          6.000001525878915
+        ],
+        [
+          111.38528137207031,
+          44.36229400634765,
+          62.86479797363282
+        ]
+      ],
+      "build_transform_3mf": "0.90244506449720152 -0.075653796882231547 0.42411013732513414 0.083538990576402128 0.9965045092991176 -2.1480413892540508e-14 -0.42262766428396237 0.035429732765380313 0.90561061799100817 3.8670096613704708 -2.5382996337330983 -38.608952878087301",
+      "source_metadata": {
+        "Title": "Cynthiacetus 1:10 Opal diffusion; original teeth and jaws; no supports",
+        "Description": "Source anatomy preserved. Original submillimeter walls retained; not certified as global 1 mm wall model."
+      },
+      "texture_sha256": "6d615705fd412d38d11fe172f94c2ab806d2ddd1dcfd19253599113a34305d2f",
+      "file": "downloads/cynthiacetus/Opal_1-10_Mandible_OriginalAnatomy_NoSupports.3mf",
+      "bytes": 4343499,
+      "sha256": "385e163ebd009d8d8d9d1da1675f2544994ae342c992bae6193af3a605100a34",
+      "glb": "assets/cynthiacetus/mandible.glb",
+      "glb_sha256": "a9247c7c906d002a045dc999fbe13e60e6c5087b04d2729849389baed46f3496",
+      "image": "assets/cynthiacetus/mandible-full.png",
+      "image_pixels": [
+        3200,
+        2200
+      ]
+    }
+  }
+}

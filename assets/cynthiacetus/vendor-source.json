@@ -1,0 +1,8 @@
+{
+  "package": "@google/model-viewer",
+  "version": "4.1.0",
+  "source": "https://github.com/google/model-viewer",
+  "tarball": "https://registry.npmjs.org/@google/model-viewer/-/model-viewer-4.1.0.tgz",
+  "integrity": "sha512-7WB/jS6wfBfRl/tWhsUUvDMKFE1KlKME97coDLlZQfvJD0nCwjhES1lJ+k7wnmf7T3zMvCfn9mIjM/mgZapuig==",
+  "script_sha256": "8367184a607fbe07a78b650c0d359e5ebbd96f7e2b22f95f761f559b63430386"
+}
