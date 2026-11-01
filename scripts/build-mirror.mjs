@@ -8,14 +8,9 @@ const required = ['cv.html', 'index.html', 'assets', 'publications', 'cv.pdf', '
 for (const name of required) {
   if (!existsSync(join(root, name))) throw new Error('Missing source: ' + name);
 }
-const outputOnly = (html) => html
-  .replace(/<a\b[^>]*class=["'][^"']*\bmirror-entry\b[^"']*["'][^>]*>[\s\S]*?<\/a>/gi, '')
-  .replace(/https:\/\/eliguli712\.github\.io\/Antiterrastrae\/(?:index\.html)?\??demo=1#antiterrastrae/gi, 'antiterrastrae?demo=1#antiterrastrae')
-  .replace(/https:\/\/eliguli712\.github\.io\/Antiterrastrae\//gi, './');
-const cv = outputOnly(readFileSync(join(root, 'cv.html'), 'utf8'))
-  .replace(/<title>[\s\S]*?<\/title>/i, '<title>Eliguli</title>');
-const demo = outputOnly(readFileSync(join(root, 'index.html'), 'utf8'))
-  .replace(/<title>[\s\S]*?<\/title>/i, '<title>Antiterrastrae</title>');
+// Both hosts serve the same source bytes, including titles and download links.
+const cv = readFileSync(join(root, 'cv.html'), 'utf8');
+const demo = readFileSync(join(root, 'index.html'), 'utf8');
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out);
 for (const name of required.slice(2)) cpSync(join(root, name), join(out, name), { recursive: true });
