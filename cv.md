@@ -10,6 +10,18 @@ New York, NY · hh3494@nyu.edu · github.com/Eliguli712 · LinkedIn
 
 Mathematics and computer science undergraduate developing computational approaches to animal anatomy, acoustics and environmental perception. Research interests include fossil cetacean cranial anatomy, temnospondyl biomechanics, and the connection between three-dimensional geometry and biological function.
 
+## Research Publications
+
+**Work in progress — current projects and working manuscripts in development**
+
+- **Megalodon tooth-scale mechanics:** Calibrated CT geometry, numerical verification and regional stress sensitivity. Working technical report.
+- **Cynthiacetus digital cranial anatomy:** Cranial models, comparative anatomy and print-support visualisation. Project in development.
+- **Antiterrastrae biosonar simulation:** Interactive geometry, acoustic propagation and finite-element experiments. Prototype in development.
+- **Mathematics and computational models:** Probability, algebra, recurrences and geometric visualisation. Working manuscripts.
+- **Ancient Greek semantic graphs:** Inspectable analysis layers and corpus-based graph evaluation. Project in development.
+
+[Complete English works directory](https://eliguli712.github.io/Antiterrastrae/publications/research-index.html)
+
 ## Education & Mathematical Training
 
 ### New York University · College of Arts & Science
@@ -24,13 +36,11 @@ B.A. candidate, Mathematics & Computer Science
 
 ## Research Report
 
-**Han, E. (2026).** [Tooth-Level Finite-Element Analysis of Serration-Scale Stress Concentration in an Otodus megalodon Anterior Tooth. A μCT-to-Mesh Workflow with Bounded Functional Interpretation.](https://eliguli712.github.io/Antiterrastrae/publications/megalodon-durf-report.pdf)
+**Han, E. (2026).** [Tooth-scale Stress Localisation in a micro-CT-derived Otodus megalodon Model: Calibrated Geometry, Numerical Verification and Regional Sensitivity.](https://eliguli712.github.io/Antiterrastrae/publications/reader.html?paper=megalodon-9page-report)
 
-DURF Final Technical Report · Faculty advisor: Leslie Greengard
+Scientifically revised technical report · 9 pages · 31 October 2026
 
-Developed a μCT/DICOM-to-mesh workflow combining segmentation, topology repair, TetWild/Gmsh tetrahedral meshing, curvature checks and COMSOL finite-element analysis of tooth-scale stress localization under stated loading and material assumptions.
-
-[Read full technical report (PDF, 26 pages)](https://eliguli712.github.io/Antiterrastrae/publications/megalodon-durf-report.pdf)
+Calibrated CT geometry, controlled numerical stress experiments, numerical verification and regional sensitivity under stated modelling assumptions.
 
 ## Selected Research & Computational Projects
 

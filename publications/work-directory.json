@@ -1,0 +1,2955 @@
+{
+  "date": "2026-11-01",
+  "display_language": "en",
+  "source_sha256": "abea7b2d100b37e36a74491670e2df28b4244b6a0001b559973b75694b473e54",
+  "main_manuscripts": 29,
+  "pdf_entries": 223,
+  "source_archives": 3,
+  "groups": [
+    {
+      "id": "cubic-wallis",
+      "title": "Cubic Wallis Products and Optimal Truncation at Integer Zeta Values",
+      "category": "Mathematics and Computation",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_e7e674838c4481919916d52a64a06910",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_e7e674838c4481919916d52a64a06910&account_id=personal",
+          "source_filename": "Certified_Optimal_Truncation.pdf",
+          "primary": true,
+          "pages": 11,
+          "listed_size": "0.45 MB",
+          "saved_date": "2026-11-01",
+          "kind": "pdf",
+          "title": "Cubic Wallis Products and Optimal Truncation at Integer Zeta Values — Version 01"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "polynomial-recurrences",
+      "title": "Polynomial and Implicit Power Recurrences: C++ Algorithms and Numerical Comparisons",
+      "category": "Mathematics and Computation",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_b47d819187e481919daf6635055e4c45",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_b47d819187e481919daf6635055e4c45&account_id=personal",
+          "source_filename": "Polynomial_Recurrences_Paper.pdf",
+          "primary": true,
+          "pages": 24,
+          "listed_size": "0.81 MB",
+          "saved_date": "2026-11-01",
+          "kind": "pdf",
+          "title": "Polynomial and Implicit Power Recurrences: C++ Algorithms and Numerical Comparisons — Version 01"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "sextic-polynomials",
+      "title": "Real-Root Geometry, Discriminants and Galois Analysis of Parametric Sextic Polynomials",
+      "category": "Mathematics and Computation",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_f240de4880a081919968edcc0580f552",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_f240de4880a081919968edcc0580f552&account_id=personal",
+          "source_filename": "sextic AMM Modified.pdf",
+          "primary": true,
+          "pages": 17,
+          "listed_size": "0.98 MB",
+          "saved_date": "2026-11-01",
+          "kind": "pdf",
+          "title": "Real-Root Geometry, Discriminants and Galois Analysis of Parametric Sextic Polynomials — Version 01"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "poincare-shading",
+      "title": "Geodesic Arrangement Shading in the Poincare Disk and the Cayley Transform",
+      "category": "Mathematics and Computation",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_5e02f87088a88191868d8e00bbdc3e33",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_5e02f87088a88191868d8e00bbdc3e33&account_id=personal",
+          "source_filename": "cell_shading.pdf",
+          "primary": true,
+          "pages": 10,
+          "listed_size": "3.77 MB",
+          "saved_date": "2026-11-01",
+          "kind": "pdf",
+          "title": "Geodesic Arrangement Shading in the Poincare Disk and the Cayley Transform — Version 01"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "circle-chains",
+      "title": "Steiner and Pappus Chains: Recursive Inversion, Double Chains and Rotation",
+      "category": "Mathematics and Computation",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_d02746cf8e048191b5c2d5d3f1015298",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_d02746cf8e048191b5c2d5d3f1015298&account_id=personal",
+          "source_filename": "steiner_pappus_dokument.pdf",
+          "primary": true,
+          "pages": 7,
+          "listed_size": "6.55 MB",
+          "saved_date": "2026-11-01",
+          "kind": "pdf",
+          "title": "Steiner and Pappus Chains: Recursive Inversion, Double Chains and Rotation — Version 01"
+        },
+        {
+          "id": "libfile_5c6e1830867c81919cfc88a8c0cb7b46",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_5c6e1830867c81919cfc88a8c0cb7b46&account_id=personal",
+          "source_filename": "steiner pappus dokument.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "2.48 MB",
+          "saved_date": "2026-06-30",
+          "kind": "pdf",
+          "title": "Steiner and Pappus Chains: Recursive Inversion, Double Chains and Rotation — Version 02"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "markov-symmetry",
+      "title": "Draw-and-Eliminate Models: Absorbing Markov Chains, Martingales and Symmetry",
+      "category": "Mathematics and Computation",
+      "hosted_document": "K_class_q_copy_m_slot_markov_symmetry_report",
+      "entries": [
+        {
+          "id": "libfile_31432377f16881918b767d68b70bf550",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_31432377f16881918b767d68b70bf550&account_id=personal",
+          "source_filename": "K_class_q_copy_m_slot_markov_symmetry_report.pdf",
+          "primary": true,
+          "pages": 18,
+          "listed_size": "0.49 MB",
+          "saved_date": "2026-11-01",
+          "kind": "pdf",
+          "title": "Draw-and-Eliminate Models: Absorbing Markov Chains, Martingales and Symmetry — Version 01"
+        },
+        {
+          "id": "libfile_c5960afa81188191aa8545c3497fdb07",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_c5960afa81188191aa8545c3497fdb07&account_id=personal",
+          "source_filename": "n_class_n_copy_m_slot_markov_report.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.24 MB",
+          "saved_date": "2026-09-11",
+          "kind": "pdf",
+          "title": "Draw-and-Eliminate Models: Absorbing Markov Chains, Martingales and Symmetry — Version 02"
+        },
+        {
+          "id": "libfile_88a04151c07c81919d3bcf2644780a25",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_88a04151c07c81919d3bcf2644780a25&account_id=personal",
+          "source_filename": "tile_elimination_markov_report.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.26 MB",
+          "saved_date": "2026-09-11",
+          "kind": "pdf",
+          "title": "Draw-and-Eliminate Models: Absorbing Markov Chains, Martingales and Symmetry — Version 03"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "formal-recurrences",
+      "title": "From Gambler's Ruin to Linear Operators: Generating Functions, Polynomial Lifts and Delay DMD",
+      "category": "Mathematics and Computation",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_302f85d5f6088191acb5f256e74fe805",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_302f85d5f6088191acb5f256e74fe805&account_id=personal",
+          "source_filename": "formal_recurrences.pdf",
+          "primary": true,
+          "pages": 16,
+          "listed_size": "0.68 MB",
+          "saved_date": "2026-09-20",
+          "kind": "pdf",
+          "title": "From Gambler's Ruin to Linear Operators: Generating Functions, Polynomial Lifts and Delay DMD — Version 01"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "grouped-logit",
+      "title": "Grouped-Observation Multinomial Models: Probability Closure and Parameter Fitting",
+      "category": "Mathematics and Computation",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_ad5c2a10a1d48191957541553f1b8a53",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_ad5c2a10a1d48191957541553f1b8a53&account_id=personal",
+          "source_filename": "grouped_logit_report.pdf",
+          "primary": true,
+          "pages": 15,
+          "listed_size": "0.35 MB",
+          "saved_date": "2026-09-21",
+          "kind": "pdf",
+          "title": "Grouped-Observation Multinomial Models: Probability Closure and Parameter Fitting — Version 01"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "kakeya",
+      "title": "Kakeya-Type Sets: Conditional Reductions and Metric Measure Frameworks",
+      "category": "Mathematics and Computation",
+      "hosted_document": "kakeya-conditional-reduction",
+      "entries": [
+        {
+          "id": "libfile_dc36c55815a88191ac044f5f9f1494e2",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_dc36c55815a88191ac044f5f9f1494e2&account_id=personal",
+          "source_filename": "Kakeya_Conditional_Reduction_Note(1).pdf",
+          "primary": true,
+          "pages": 3,
+          "listed_size": "0.12 MB",
+          "saved_date": "2026-10-24",
+          "kind": "pdf",
+          "title": "Kakeya-Type Sets: Conditional Reductions and Metric Measure Frameworks — Version 01"
+        },
+        {
+          "id": "libfile_66273f78b48c81919ef682453ad295ac",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_66273f78b48c81919ef682453ad295ac&account_id=personal",
+          "source_filename": "Kakeya_Conditional_Reduction_Note.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.12 MB",
+          "saved_date": "2026-07-29",
+          "kind": "pdf",
+          "title": "Kakeya-Type Sets: Conditional Reductions and Metric Measure Frameworks — Version 02"
+        },
+        {
+          "id": "libfile_dab5363407208191b8de4715292a3de9",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_dab5363407208191b8de4715292a3de9&account_id=personal",
+          "source_filename": "Kakeya_Metric_Measure_Rigorous_Framework_Section8_Removed.pdf",
+          "primary": false,
+          "pages": 11,
+          "listed_size": "0.16 MB",
+          "saved_date": "2026-07-29",
+          "kind": "pdf",
+          "title": "Kakeya-Type Sets: Conditional Reductions and Metric Measure Frameworks — Version 03"
+        },
+        {
+          "id": "libfile_46787aa4937c8191a0376dd26ec39da8",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_46787aa4937c8191a0376dd26ec39da8&account_id=personal",
+          "source_filename": "Kakeya_Metric_Measure_Rigorous_Framework.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.16 MB",
+          "saved_date": "2026-07-29",
+          "kind": "pdf",
+          "title": "Kakeya-Type Sets: Conditional Reductions and Metric Measure Frameworks — Version 04"
+        },
+        {
+          "id": "libfile_942e944f13e4819184774a38d8dafd80",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_942e944f13e4819184774a38d8dafd80&account_id=personal",
+          "source_filename": "Kayeka_Proof 2.pdf",
+          "primary": false,
+          "pages": 3,
+          "listed_size": "0.18 MB",
+          "saved_date": "2026-07-29",
+          "kind": "pdf",
+          "title": "Kakeya-Type Sets: Conditional Reductions and Metric Measure Frameworks — Version 05"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "brownian-motion",
+      "title": "Random Walks, Brownian Motion and Martingale Calibration",
+      "category": "Mathematics and Computation",
+      "hosted_document": "brownian-motion-notes",
+      "entries": [
+        {
+          "id": "libfile_2227c3b73f8081918b58830ee0bca786",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_2227c3b73f8081918b58830ee0bca786&account_id=personal",
+          "source_filename": "Brownian_Motion_Contour_and_Martingale_Calibration.pdf",
+          "primary": true,
+          "pages": 38,
+          "listed_size": "4.18 MB",
+          "saved_date": "2026-09-04",
+          "kind": "pdf",
+          "title": "Random Walks, Brownian Motion and Martingale Calibration — Version 01"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "megalodon-mechanics",
+      "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity",
+      "category": "Palaeobiology and Mechanics",
+      "hosted_document": "megalodon-9page-report",
+      "entries": [
+        {
+          "id": "libfile_e8de70bc5034819180f2a175864bcb1f",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_e8de70bc5034819180f2a175864bcb1f&account_id=personal",
+          "source_filename": "DebunkMeg_condensed_9pages_2026-10-31.pdf",
+          "primary": true,
+          "pages": 9,
+          "listed_size": "9.33 MB",
+          "saved_date": "2026-10-31",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 01"
+        },
+        {
+          "id": "libfile_5da3b17d3c448191bd8d75cd9fd71be4",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_5da3b17d3c448191bd8d75cd9fd71be4&account_id=personal",
+          "source_filename": "debunk_myth_final_bibliography_single_column_fixed(4).pdf",
+          "primary": false,
+          "pages": 24,
+          "listed_size": "13.65 MB",
+          "saved_date": "2026-10-31",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 02"
+        },
+        {
+          "id": "libfile_3929ce5353e08191b07f771589580bfd",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_3929ce5353e08191b07f771589580bfd&account_id=personal",
+          "source_filename": "DebunkMeg_DURF_Final_Technical_Report_submission_final_newsource_compact(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "31.72 MB",
+          "saved_date": "2026-10-24",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 03"
+        },
+        {
+          "id": "libfile_bfbfb4b22acc8191863065da32ea53df",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_bfbfb4b22acc8191863065da32ea53df&account_id=personal",
+          "source_filename": "DebunkMeg_DURF_Final_Technical_Report_submission_final_newsource_compact.pdf",
+          "primary": false,
+          "pages": 26,
+          "listed_size": "31.72 MB",
+          "saved_date": "2026-10-24",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 04"
+        },
+        {
+          "id": "libfile_95c6a928606081918c6314fbde720933",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_95c6a928606081918c6314fbde720933&account_id=personal",
+          "source_filename": "Tooth-Level Finite-Element Analysis of Serration-Scale Stress Concentration in an Otodus megalodon Anterior Tooth.pdf",
+          "primary": false,
+          "pages": 26,
+          "listed_size": "25.91 MB",
+          "saved_date": "2026-08-23",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 05"
+        },
+        {
+          "id": "libfile_0a3b632145c0819196ad4fd3847bed6c",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_0a3b632145c0819196ad4fd3847bed6c&account_id=personal",
+          "source_filename": "DebunkMeg_DURF_Final_Technical_Report_submission_final_aligned(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "25.41 MB",
+          "saved_date": "2026-07-11",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 06"
+        },
+        {
+          "id": "libfile_3747eb24a8848191a922b97889fd1b54",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_3747eb24a8848191a922b97889fd1b54&account_id=personal",
+          "source_filename": "DebunkMeg_DURF_Final_Technical_Report_Chicago_author_date_22pp.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "31.94 MB",
+          "saved_date": "2026-07-11",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 07"
+        },
+        {
+          "id": "libfile_a72a712270c08191bf43c990a72a8066",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_a72a712270c08191bf43c990a72a8066&account_id=personal",
+          "source_filename": "DebunkMeg_DURF_Final_Technical_Report_submission_upgrade(2).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "25.91 MB",
+          "saved_date": "2026-07-11",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 08"
+        },
+        {
+          "id": "libfile_1f010ee6337881918f733107fe39fc1c",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_1f010ee6337881918f733107fe39fc1c&account_id=personal",
+          "source_filename": "DebunkMeg_DURF_Final_Technical_Report_submission_upgrade(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "25.91 MB",
+          "saved_date": "2026-07-11",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 09"
+        },
+        {
+          "id": "libfile_67f4f5a55ad08191b2f6495ea33f3c65",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_67f4f5a55ad08191b2f6495ea33f3c65&account_id=personal",
+          "source_filename": "DebunkMeg_DURF_Final_Technical_Report_submission_upgrade.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "25.91 MB",
+          "saved_date": "2026-07-06",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 10"
+        },
+        {
+          "id": "libfile_b1e49dedccfc81918e881c5c34b2e258",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_b1e49dedccfc81918e881c5c34b2e258&account_id=personal",
+          "source_filename": "DebunkMeg_DURF_Final_Technical_Report_single_specimen_scope.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "24.52 MB",
+          "saved_date": "2026-07-06",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 11"
+        },
+        {
+          "id": "libfile_43c873e871a48191a0afc40e6661e247",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_43c873e871a48191a0afc40e6661e247&account_id=personal",
+          "source_filename": "DebunkMeg_DURF_Final_Technical_Report_Table9_values_refs_flow(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "24.51 MB",
+          "saved_date": "2026-07-06",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 12"
+        },
+        {
+          "id": "libfile_16161ed669a88191928f3ca9b10c897f",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_16161ed669a88191928f3ca9b10c897f&account_id=personal",
+          "source_filename": "DebunkMeg_DURF_Final_Technical_Report_Table9_values_refs_flow.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "24.51 MB",
+          "saved_date": "2026-07-05",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 13"
+        },
+        {
+          "id": "libfile_26dd4d0052a08191b639543385a547e2",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_26dd4d0052a08191b639543385a547e2&account_id=personal",
+          "source_filename": "DebunkMeg_DURF_Final_Technical_Report_Table9_values_refs(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "24.19 MB",
+          "saved_date": "2026-07-03",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 14"
+        },
+        {
+          "id": "libfile_bb533660e0988191917d731a0ac20c03",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_bb533660e0988191917d731a0ac20c03&account_id=personal",
+          "source_filename": "DebunkMeg_DURF_Final_Technical_Report_Table9_values_refs.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "24.19 MB",
+          "saved_date": "2026-07-03",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 15"
+        },
+        {
+          "id": "libfile_156d37bef75c81919dc3b002005fa80c",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_156d37bef75c81919dc3b002005fa80c&account_id=personal",
+          "source_filename": "DebunkMeg_DURF_Final_Technical_Report_Table9_values.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "24.19 MB",
+          "saved_date": "2026-06-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 16"
+        },
+        {
+          "id": "libfile_fb7b015c78908191bd6d7a7a44c77a16",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_fb7b015c78908191bd6d7a7a44c77a16&account_id=personal",
+          "source_filename": "DebunkMeg_DURF_Final_Technical_Report_Table9_completed.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "24.19 MB",
+          "saved_date": "2026-06-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 17"
+        },
+        {
+          "id": "libfile_22c534bb0c748191ad16d0f9b3f00278",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_22c534bb0c748191ad16d0f9b3f00278&account_id=personal",
+          "source_filename": "DebunkMeg_DURF_Final_Technical_Report.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "24.18 MB",
+          "saved_date": "2026-06-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 18"
+        },
+        {
+          "id": "libfile_73f1e6e04188819189da55f97134e253",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_73f1e6e04188819189da55f97134e253&account_id=personal",
+          "source_filename": "DebunkMeg_PDE_weakform_revised(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "24.18 MB",
+          "saved_date": "2026-06-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 19"
+        },
+        {
+          "id": "libfile_8c682f85e0b8819186c7f2bc5c30e7f1",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_8c682f85e0b8819186c7f2bc5c30e7f1&account_id=personal",
+          "source_filename": "DebunkMeg_PDE_weakform_revised.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "24.18 MB",
+          "saved_date": "2026-06-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 20"
+        },
+        {
+          "id": "libfile_e51758a26e848191a3f89061be324b6c",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_e51758a26e848191a3f89061be324b6c&account_id=personal",
+          "source_filename": "DebunkMeg_definitions_revised(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "24.17 MB",
+          "saved_date": "2026-06-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 21"
+        },
+        {
+          "id": "libfile_0ee2892c30f8819184a462525bb37ef8",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_0ee2892c30f8819184a462525bb37ef8&account_id=personal",
+          "source_filename": "DebunkMeg_definitions_revised.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "24.17 MB",
+          "saved_date": "2026-06-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 22"
+        },
+        {
+          "id": "libfile_f3c03b7e92fc8191bfc3696eebe1d0a1",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_f3c03b7e92fc8191bfc3696eebe1d0a1&account_id=personal",
+          "source_filename": "DebunkMeg_field_revised(2).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "24.15 MB",
+          "saved_date": "2026-06-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 23"
+        },
+        {
+          "id": "libfile_1625bae6e2888191a80e675df6d25f09",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_1625bae6e2888191a80e675df6d25f09&account_id=personal",
+          "source_filename": "DebunkMeg_field_revised(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "24.15 MB",
+          "saved_date": "2026-06-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 24"
+        },
+        {
+          "id": "libfile_24e15a25e4e08191a067940f036fb59f",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_24e15a25e4e08191a067940f036fb59f&account_id=personal",
+          "source_filename": "DebunkMeg_field_revised.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "24.15 MB",
+          "saved_date": "2026-06-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 25"
+        },
+        {
+          "id": "libfile_0a22b3dc77e08191841def6a6b8add17",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_0a22b3dc77e08191841def6a6b8add17&account_id=personal",
+          "source_filename": "DebunkMeg_layout_optimized.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "28.95 MB",
+          "saved_date": "2026-06-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 26"
+        },
+        {
+          "id": "libfile_161fdb1741a0819182d1f7b01ec46500",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_161fdb1741a0819182d1f7b01ec46500&account_id=personal",
+          "source_filename": "DebunkMeg_rigor_revised.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "28.94 MB",
+          "saved_date": "2026-06-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 27"
+        },
+        {
+          "id": "libfile_8b52177e429c81919ea1178159709d06",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_8b52177e429c81919ea1178159709d06&account_id=personal",
+          "source_filename": "debunk_myth(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "32.85 MB",
+          "saved_date": "2026-06-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 28"
+        },
+        {
+          "id": "libfile_4f4476384d8c8191b6001e91a0c3fcaf",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_4f4476384d8c8191b6001e91a0c3fcaf&account_id=personal",
+          "source_filename": "megalodon_abstract_standalone.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.11 MB",
+          "saved_date": "2026-05-05",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 29"
+        },
+        {
+          "id": "libfile_5bc86f734ec8819187f87751ae8a818b",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_5bc86f734ec8819187f87751ae8a818b&account_id=personal",
+          "source_filename": "one_page_project_summary_megalodon(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.02 MB",
+          "saved_date": "2026-05-05",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 30"
+        },
+        {
+          "id": "libfile_a7c4c52814388191b71bf4283894bcac",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_a7c4c52814388191b71bf4283894bcac&account_id=personal",
+          "source_filename": "one_page_project_summary_megalodon.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.02 MB",
+          "saved_date": "2026-05-05",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 31"
+        },
+        {
+          "id": "libfile_2b13f07b25288191a4308866f9d986bc",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_2b13f07b25288191a4308866f9d986bc&account_id=personal",
+          "source_filename": "debunk_myth_final_bibliography_single_column_fixed(3).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "13.65 MB",
+          "saved_date": "2026-05-05",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 32"
+        },
+        {
+          "id": "libfile_edd8c148a0b48191a0638bfd0b55e34a",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_edd8c148a0b48191a0638bfd0b55e34a&account_id=personal",
+          "source_filename": "debunk_myth_appendix_one_column_bibliography(2).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "11.02 MB",
+          "saved_date": "2026-04-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 33"
+        },
+        {
+          "id": "libfile_3eb58b13d1f481919c97ad79e4c2bc18",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_3eb58b13d1f481919c97ad79e4c2bc18&account_id=personal",
+          "source_filename": "debunk_myth_appendix_one_column_bibliography(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "11.02 MB",
+          "saved_date": "2026-04-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 34"
+        },
+        {
+          "id": "libfile_637cedd67e7481918958268e8a0346bc",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_637cedd67e7481918958268e8a0346bc&account_id=personal",
+          "source_filename": "debunk_myth_appendix_one_column_bibliography.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "1.78 MB",
+          "saved_date": "2026-04-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 35"
+        },
+        {
+          "id": "libfile_897f4b69eb388191a25640d72f9919b0",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_897f4b69eb388191a25640d72f9919b0&account_id=personal",
+          "source_filename": "debunk_myth_final_bibliography_single_column_fixed(2).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "13.65 MB",
+          "saved_date": "2026-04-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 36"
+        },
+        {
+          "id": "libfile_923f5c694a788191a3a8b75d88e7bd3a",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_923f5c694a788191a3a8b75d88e7bd3a&account_id=personal",
+          "source_filename": "debunk_myth_final_bibliography_single_column_fixed(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "13.65 MB",
+          "saved_date": "2026-04-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 37"
+        },
+        {
+          "id": "libfile_eebc828e024c8191a79717fb362239df",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_eebc828e024c8191a79717fb362239df&account_id=personal",
+          "source_filename": "debunk_myth_final_bibliography_single_column_fixed.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "13.65 MB",
+          "saved_date": "2026-04-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 38"
+        },
+        {
+          "id": "libfile_3b11514949108191aee065330591826e",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_3b11514949108191aee065330591826e&account_id=personal",
+          "source_filename": "debunk_myth_appendix_one_column_bibliography_fixed(3).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "13.65 MB",
+          "saved_date": "2026-04-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 39"
+        },
+        {
+          "id": "libfile_33e699b940708191808073d86cbc39a6",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_33e699b940708191808073d86cbc39a6&account_id=personal",
+          "source_filename": "debunk_myth_appendix_one_column_bibliography_fixed(2).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.01 MB",
+          "saved_date": "2026-04-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 40"
+        },
+        {
+          "id": "libfile_6803c220aeac8191aae2abc37a9a9cca",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_6803c220aeac8191aae2abc37a9a9cca&account_id=personal",
+          "source_filename": "debunk_myth_appendix_one_column_bibliography_fixed(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "6.18 MB",
+          "saved_date": "2026-04-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 41"
+        },
+        {
+          "id": "libfile_bbf6918ecd1c8191a28d0107a367ffd4",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_bbf6918ecd1c8191a28d0107a367ffd4&account_id=personal",
+          "source_filename": "debunk_myth_appendix_one_column_bibliography_fixed.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "3.82 MB",
+          "saved_date": "2026-04-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 42"
+        },
+        {
+          "id": "libfile_020aeefba88c8191a7b2087cd732460f",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_020aeefba88c8191a7b2087cd732460f&account_id=personal",
+          "source_filename": "final_body_refs_onecol_fast.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.04 MB",
+          "saved_date": "2026-04-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 43"
+        },
+        {
+          "id": "libfile_27c1acc663e0819182c65e2df2849273",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_27c1acc663e0819182c65e2df2849273&account_id=personal",
+          "source_filename": "debunk_myth_replaced_appendix(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "34.92 MB",
+          "saved_date": "2026-04-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 44"
+        },
+        {
+          "id": "libfile_df65df0d522881919f5b782b5ab5240e",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_df65df0d522881919f5b782b5ab5240e&account_id=personal",
+          "source_filename": "debunk_myth_replaced_appendix.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "34.92 MB",
+          "saved_date": "2026-04-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 45"
+        },
+        {
+          "id": "libfile_eca6edbc935c8191a2c223d225838f24",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_eca6edbc935c8191a2c223d225838f24&account_id=personal",
+          "source_filename": "debunk_myth.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "32.85 MB",
+          "saved_date": "2026-04-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 46"
+        },
+        {
+          "id": "libfile_6e9ee9ec5f688191ae22eabbefd44cd0",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_6e9ee9ec5f688191ae22eabbefd44cd0&account_id=personal",
+          "source_filename": "megalodon_appendix_figure_plate_A4_portrait(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "2.42 MB",
+          "saved_date": "2026-04-30",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 47"
+        },
+        {
+          "id": "libfile_8f06bd9136cc8191a99735da7b89bd5a",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_8f06bd9136cc8191a99735da7b89bd5a&account_id=personal",
+          "source_filename": "megalodon_FINAL_with_appendix(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "14.70 MB",
+          "saved_date": "2026-03-31",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 48"
+        },
+        {
+          "id": "libfile_5e2dc0331e708191a83e49afd6d67c6d",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_5e2dc0331e708191a83e49afd6d67c6d&account_id=personal",
+          "source_filename": "megalodon_FINAL_with_appendix.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "14.70 MB",
+          "saved_date": "2026-03-16",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 49"
+        },
+        {
+          "id": "libfile_a98d8ccb8a108191b78645cf586af55e",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_a98d8ccb8a108191b78645cf586af55e&account_id=personal",
+          "source_filename": "megalodon edge mechanics v2.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.51 MB",
+          "saved_date": "2026-03-16",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 50"
+        },
+        {
+          "id": "libfile_e7866c4d4a8081919d660ddcc5ceec5b",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_e7866c4d4a8081919d660ddcc5ceec5b&account_id=personal",
+          "source_filename": "megalodon FINAL(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "12.21 MB",
+          "saved_date": "2026-03-16",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 51"
+        },
+        {
+          "id": "libfile_5f54ff05e0b4819191685b9477b82aa9",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_5f54ff05e0b4819191685b9477b82aa9&account_id=personal",
+          "source_filename": "megalodon_appendix_figure_plate_A4_portrait.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "2.42 MB",
+          "saved_date": "2026-03-16",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 52"
+        },
+        {
+          "id": "libfile_7ba95a4cb3e08191a6661e5868a759ec",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_7ba95a4cb3e08191a6661e5868a759ec&account_id=personal",
+          "source_filename": "megalodon_paper_images.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "39.16 MB",
+          "saved_date": "2026-03-16",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 53"
+        },
+        {
+          "id": "libfile_8c5f8bc66e588191992a8a704fc3943a",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_8c5f8bc66e588191992a8a704fc3943a&account_id=personal",
+          "source_filename": "megalodon FINAL.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "12.21 MB",
+          "saved_date": "2026-03-16",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 54"
+        },
+        {
+          "id": "libfile_e4e3001e64e0819187ab98fd9b2fd210",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_e4e3001e64e0819187ab98fd9b2fd210&account_id=personal",
+          "source_filename": "revised excerpt master(3).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.05 MB",
+          "saved_date": "2026-07-11",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 55"
+        },
+        {
+          "id": "libfile_19a02a87172c8191a093b6c6eae5ac98",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_19a02a87172c8191a093b6c6eae5ac98&account_id=personal",
+          "source_filename": "revised excerpt master(2).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.05 MB",
+          "saved_date": "2026-07-11",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 56"
+        },
+        {
+          "id": "libfile_9dc5df0a54b88191b843fa07b3de92e9",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_9dc5df0a54b88191b843fa07b3de92e9&account_id=personal",
+          "source_filename": "revised excerpt master(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.05 MB",
+          "saved_date": "2026-07-11",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 57"
+        },
+        {
+          "id": "libfile_c9b976daab008191ba83bddc00f2bacd",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_c9b976daab008191ba83bddc00f2bacd&account_id=personal",
+          "source_filename": "revised excerpt master.pdf",
+          "primary": false,
+          "pages": 3,
+          "listed_size": "0.05 MB",
+          "saved_date": "2026-07-11",
+          "kind": "pdf",
+          "title": "Tooth-Scale Stress Localisation in Megalodon: CT Calibration, Numerical Verification and Regional Sensitivity — Version 58"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "body-mass",
+      "title": "Body Mass in Large Cetaceans and Mesozoic Marine Reptiles",
+      "category": "Palaeobiology and Mechanics",
+      "hosted_document": "massa-corporis",
+      "entries": [
+        {
+          "id": "libfile_4fb7785fd23c819193e92aeab35dc9ad",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_4fb7785fd23c819193e92aeab35dc9ad&account_id=personal",
+          "source_filename": "Massa_Corporis_draft.pdf",
+          "primary": true,
+          "pages": 17,
+          "listed_size": "0.24 MB",
+          "saved_date": "2026-10-24",
+          "kind": "pdf",
+          "title": "Body Mass in Large Cetaceans and Mesozoic Marine Reptiles — Version 01"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "livyatan-systematics",
+      "title": "Livyatan: Parallel Systematics of Sperm Whales and Tyrannosauroids",
+      "category": "Palaeobiology and Mechanics",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_04fb713015e48191b20fd60d2b25b4c7",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_04fb713015e48191b20fd60d2b25b4c7&account_id=personal",
+          "source_filename": "de_natura_livyatanis_systematica_addenda_final.pdf",
+          "primary": true,
+          "pages": 22,
+          "listed_size": "0.78 MB",
+          "saved_date": "2026-09-16",
+          "kind": "pdf",
+          "title": "Livyatan: Parallel Systematics of Sperm Whales and Tyrannosauroids — Version 01"
+        },
+        {
+          "id": "libfile_798d356aa2508191be0009ba524ba9d7",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_798d356aa2508191be0009ba524ba9d7&account_id=personal",
+          "source_filename": "de_natura_livyatanis_systematica_final.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.75 MB",
+          "saved_date": "2026-09-16",
+          "kind": "pdf",
+          "title": "Livyatan: Parallel Systematics of Sperm Whales and Tyrannosauroids — Version 02"
+        },
+        {
+          "id": "libfile_a7c9317c95288191ae5900198c3c38e0",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_a7c9317c95288191ae5900198c3c38e0&account_id=personal",
+          "source_filename": "de natura livyatanis.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.15 MB",
+          "saved_date": "2026-09-16",
+          "kind": "pdf",
+          "title": "Livyatan: Parallel Systematics of Sperm Whales and Tyrannosauroids — Version 03"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "marine-predators",
+      "title": "Functional Gradients and Limits in Non-Filter-Feeding Marine Predators",
+      "category": "Palaeobiology and Mechanics",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_8a7734085c048191ba0ca011d234cd3f",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_8a7734085c048191ba0ca011d234cd3f&account_id=personal",
+          "source_filename": "ocean_predator_tier_F5_ZH.pdf",
+          "primary": true,
+          "pages": 21,
+          "listed_size": "0.74 MB",
+          "saved_date": "2026-09-17",
+          "kind": "pdf",
+          "title": "Functional Gradients and Limits in Non-Filter-Feeding Marine Predators — Version 01"
+        },
+        {
+          "id": "libfile_1a88d360d3ac81918935f98bc86cb346",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_1a88d360d3ac81918935f98bc86cb346&account_id=personal",
+          "source_filename": "ocean_predator_tier_extremes_v5_zh_final.pdf",
+          "primary": false,
+          "pages": 17,
+          "listed_size": "1.82 MB",
+          "saved_date": "2026-09-16",
+          "kind": "pdf",
+          "title": "Functional Gradients and Limits in Non-Filter-Feeding Marine Predators — Version 02"
+        },
+        {
+          "id": "libfile_c0577ef72f2481918f97fc10c318a497",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_c0577ef72f2481918f97fc10c318a497&account_id=personal",
+          "source_filename": "ocean_predator_tier_extremes_v5_de_pure_final.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "1.32 MB",
+          "saved_date": "2026-09-16",
+          "kind": "pdf",
+          "title": "Functional Gradients and Limits in Non-Filter-Feeding Marine Predators — Version 03"
+        },
+        {
+          "id": "libfile_eeb192cc68ec8191b4619a7b36f4c676",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_eeb192cc68ec8191b4619a7b36f4c676&account_id=personal",
+          "source_filename": "ocean_predator_tier_extremes_v4_de_final.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "1.29 MB",
+          "saved_date": "2026-09-16",
+          "kind": "pdf",
+          "title": "Functional Gradients and Limits in Non-Filter-Feeding Marine Predators — Version 04"
+        },
+        {
+          "id": "libfile_ba49245ea90c8191835b2831c4bde4df",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_ba49245ea90c8191835b2831c4bde4df&account_id=personal",
+          "source_filename": "ocean_predator_tier_extremes_v3_final.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "1.82 MB",
+          "saved_date": "2026-09-16",
+          "kind": "pdf",
+          "title": "Functional Gradients and Limits in Non-Filter-Feeding Marine Predators — Version 05"
+        },
+        {
+          "id": "libfile_fb792e9457e08191a6f890d4b886b960",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_fb792e9457e08191a6f890d4b886b960&account_id=personal",
+          "source_filename": "ocean_predator_tier_extremes_v2_final.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "1.71 MB",
+          "saved_date": "2026-09-16",
+          "kind": "pdf",
+          "title": "Functional Gradients and Limits in Non-Filter-Feeding Marine Predators — Version 06"
+        },
+        {
+          "id": "libfile_2663a4cdcc048191baf4aabca77486a4",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_2663a4cdcc048191baf4aabca77486a4&account_id=personal",
+          "source_filename": "ocean_predator_tier_extremes_final.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "1.13 MB",
+          "saved_date": "2026-09-16",
+          "kind": "pdf",
+          "title": "Functional Gradients and Limits in Non-Filter-Feeding Marine Predators — Version 07"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "stratigraphy",
+      "title": "Stratigraphy and Cenozoic Geology: Corrections, Evidence Grades and Testable Hypotheses",
+      "category": "Palaeobiology and Mechanics",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_e517125ea0748191b7d880689b64bc07",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_e517125ea0748191b7d880689b64bc07&account_id=personal",
+          "source_filename": "古地层学_地质分析_勘误与假设证据矩阵.pdf",
+          "primary": true,
+          "pages": 8,
+          "listed_size": "0.06 MB",
+          "saved_date": "2026-10-02",
+          "kind": "pdf",
+          "title": "Stratigraphy and Cenozoic Geology: Corrections, Evidence Grades and Testable Hypotheses — Version 01"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "captive-cetaceans",
+      "title": "The Anvil and the Crown of Thorns: Physiological and Cognitive Constraints in Captive Cetaceans",
+      "category": "Palaeobiology and Mechanics",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_0a1035200aac819194e799736d879d52",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_0a1035200aac819194e799736d879d52&account_id=personal",
+          "source_filename": "de incude et corona spinea.pdf",
+          "primary": true,
+          "pages": 11,
+          "listed_size": "0.08 MB",
+          "saved_date": "2026-03-21",
+          "kind": "pdf",
+          "title": "The Anvil and the Crown of Thorns: Physiological and Cognitive Constraints in Captive Cetaceans — Version 01"
+        },
+        {
+          "id": "libfile_a5c8fe10343c819185a2672d75bd275d",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_a5c8fe10343c819185a2672d75bd275d&account_id=personal",
+          "source_filename": "铁砧与荆棘之冠.pdf",
+          "primary": false,
+          "pages": 10,
+          "listed_size": "0.34 MB",
+          "saved_date": "2026-03-21",
+          "kind": "pdf",
+          "title": "The Anvil and the Crown of Thorns: Physiological and Cognitive Constraints in Captive Cetaceans — Version 02"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "song-before-civilisation",
+      "title": "The Song Before Civilisation: Energetic, Cognitive and Medium Constraints on Marine Megafaunal Intelligence",
+      "category": "Palaeobiology and Mechanics",
+      "hosted_document": "song-before-civilisation",
+      "entries": [
+        {
+          "id": "libfile_0547a5d339ec8191a67a49721d168c3c",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_0547a5d339ec8191a67a49721d168c3c&account_id=personal",
+          "source_filename": "先于文明的歌 The Song Before Civilisation.pdf",
+          "primary": true,
+          "pages": 7,
+          "listed_size": "0.69 MB",
+          "saved_date": "2026-10-24",
+          "kind": "pdf",
+          "title": "The Song Before Civilisation: Energetic, Cognitive and Medium Constraints on Marine Megafaunal Intelligence — Version 01"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "physeter-voice",
+      "title": "Physeter Voice: STFT, Band Energy, Segmentation and Rhythm Analysis",
+      "category": "Acoustics and Signal Processing",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_682f0956c4648191a4865aa0f870486d",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_682f0956c4648191a4865aa0f870486d&account_id=personal",
+          "source_filename": "Physeter Voice Report LaTeX compiled.pdf",
+          "primary": true,
+          "pages": 21,
+          "listed_size": "6.35 MB",
+          "saved_date": "2026-06-24",
+          "kind": "pdf",
+          "title": "Physeter Voice: STFT, Band Energy, Segmentation and Rhythm Analysis — Version 01"
+        },
+        {
+          "id": "libfile_0bc6878d705c8191b98cbd1ec8eda74d",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_0bc6878d705c8191b98cbd1ec8eda74d&account_id=personal",
+          "source_filename": "Physeter Voice Report LaTeX compiled(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "6.35 MB",
+          "saved_date": "2026-06-30",
+          "kind": "pdf",
+          "title": "Physeter Voice: STFT, Band Energy, Segmentation and Rhythm Analysis — Version 02"
+        },
+        {
+          "id": "libfile_ff3e98474eb081919dd808d42211a675",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_ff3e98474eb081919dd808d42211a675&account_id=personal",
+          "source_filename": "Physeter_Voice_Pro_Guide_with_Simple_Opening.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "7.18 MB",
+          "saved_date": "2026-06-25",
+          "kind": "pdf",
+          "title": "Physeter Voice: STFT, Band Energy, Segmentation and Rhythm Analysis — Version 03"
+        },
+        {
+          "id": "libfile_aaf061a000708191a7849cec30c8ad5f",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_aaf061a000708191a7849cec30c8ad5f&account_id=personal",
+          "source_filename": "Physeter_Voice_with_Pro_Guide_and_Simple_Opening.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "13.54 MB",
+          "saved_date": "2026-06-25",
+          "kind": "pdf",
+          "title": "Physeter Voice: STFT, Band Energy, Segmentation and Rhythm Analysis — Version 04"
+        },
+        {
+          "id": "libfile_6d7cd67476208191a3677bbbefd373ed",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_6d7cd67476208191a3677bbbefd373ed&account_id=personal",
+          "source_filename": "Physeter_Voice_Professional_Chinese_Guide.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "4.95 MB",
+          "saved_date": "2026-06-24",
+          "kind": "pdf",
+          "title": "Physeter Voice: STFT, Band Energy, Segmentation and Rhythm Analysis — Version 05"
+        },
+        {
+          "id": "libfile_d430511889748191af51db4c2c47acf0",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_d430511889748191af51db4c2c47acf0&account_id=personal",
+          "source_filename": "Physeter_Voice_with_Professional_Chinese_Guide.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "11.32 MB",
+          "saved_date": "2026-06-24",
+          "kind": "pdf",
+          "title": "Physeter Voice: STFT, Band Energy, Segmentation and Rhythm Analysis — Version 06"
+        },
+        {
+          "id": "libfile_881938ff93fc81918f89749352c40ea2",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_881938ff93fc81918f89749352c40ea2&account_id=personal",
+          "source_filename": "Physeter_Voice_Chinese_Guide_5p.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "2.23 MB",
+          "saved_date": "2026-06-24",
+          "kind": "pdf",
+          "title": "Physeter Voice: STFT, Band Energy, Segmentation and Rhythm Analysis — Version 07"
+        },
+        {
+          "id": "libfile_5aa387a2fd208191a1ed9ca8e7443117",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_5aa387a2fd208191a1ed9ca8e7443117&account_id=personal",
+          "source_filename": "Physeter_Voice_with_Chinese_Guide.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "8.60 MB",
+          "saved_date": "2026-06-24",
+          "kind": "pdf",
+          "title": "Physeter Voice: STFT, Band Energy, Segmentation and Rhythm Analysis — Version 08"
+        },
+        {
+          "id": "libfile_7950bb24047c8191919b06760c6a7dd0",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_7950bb24047c8191919b06760c6a7dd0&account_id=personal",
+          "source_filename": "18_physeter_voice_master_consolidated_report.pdf",
+          "primary": false,
+          "pages": 16,
+          "listed_size": "13.28 MB",
+          "saved_date": "2026-06-18",
+          "kind": "pdf",
+          "title": "Physeter Voice: STFT, Band Energy, Segmentation and Rhythm Analysis — Version 09"
+        },
+        {
+          "id": "libfile_293e9d22946881918610434b6e3bdcae",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_293e9d22946881918610434b6e3bdcae&account_id=personal",
+          "source_filename": "14_physeter_voice_summary_report_complete_deliverables(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "14.10 MB",
+          "saved_date": "2026-06-18",
+          "kind": "pdf",
+          "title": "Physeter Voice: STFT, Band Energy, Segmentation and Rhythm Analysis — Version 10"
+        },
+        {
+          "id": "libfile_f90c611ebf50819199d20c53d3e787da",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_f90c611ebf50819199d20c53d3e787da&account_id=personal",
+          "source_filename": "16_physeter_voice_summary_report_fixed_stft_layout.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "5.94 MB",
+          "saved_date": "2026-06-18",
+          "kind": "pdf",
+          "title": "Physeter Voice: STFT, Band Energy, Segmentation and Rhythm Analysis — Version 11"
+        },
+        {
+          "id": "libfile_c0ce79f53f9c81918bdcf0e33100ed7f",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_c0ce79f53f9c81918bdcf0e33100ed7f&account_id=personal",
+          "source_filename": "14_physeter_voice_summary_report_complete_deliverables.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "14.10 MB",
+          "saved_date": "2026-06-18",
+          "kind": "pdf",
+          "title": "Physeter Voice: STFT, Band Energy, Segmentation and Rhythm Analysis — Version 12"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "greek-semantic-dags",
+      "title": "Compiling Semantic DAGs from Ancient Greek Universal Dependencies",
+      "category": "NLP and Model Research",
+      "hosted_document": "ancient-greek-semantic-dags",
+      "entries": [
+        {
+          "id": "libfile_3bb5a969488c8191bf8a5679e80ea107",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_3bb5a969488c8191bf8a5679e80ea107&account_id=personal",
+          "source_filename": "final_project_paper_morpheme_lexeme_revised.pdf",
+          "primary": true,
+          "pages": 9,
+          "listed_size": "0.22 MB",
+          "saved_date": "2026-05-04",
+          "kind": "pdf",
+          "title": "Compiling Semantic DAGs from Ancient Greek Universal Dependencies — Version 01"
+        },
+        {
+          "id": "libfile_7d7b39dcc62881918cf73a0ee0c95b4e",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_7d7b39dcc62881918cf73a0ee0c95b4e&account_id=personal",
+          "source_filename": "final_project_paper_morpheme_lexeme_revised(2).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.22 MB",
+          "saved_date": "2026-05-04",
+          "kind": "pdf",
+          "title": "Compiling Semantic DAGs from Ancient Greek Universal Dependencies — Version 02"
+        },
+        {
+          "id": "libfile_78da5d291154819183af736e07c5cb64",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_78da5d291154819183af736e07c5cb64&account_id=personal",
+          "source_filename": "final_project_paper_morpheme_lexeme_revised(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.22 MB",
+          "saved_date": "2026-05-04",
+          "kind": "pdf",
+          "title": "Compiling Semantic DAGs from Ancient Greek Universal Dependencies — Version 03"
+        },
+        {
+          "id": "libfile_aabe12b3a5648191a794333fbbb50138",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_aabe12b3a5648191a794333fbbb50138&account_id=personal",
+          "source_filename": "main(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.22 MB",
+          "saved_date": "2026-05-03",
+          "kind": "pdf",
+          "title": "Compiling Semantic DAGs from Ancient Greek Universal Dependencies — Version 04"
+        },
+        {
+          "id": "libfile_35c3052295f481919a896b4f5ed45e0e",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_35c3052295f481919a896b4f5ed45e0e&account_id=personal",
+          "source_filename": "main.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.22 MB",
+          "saved_date": "2026-05-03",
+          "kind": "pdf",
+          "title": "Compiling Semantic DAGs from Ancient Greek Universal Dependencies — Version 05"
+        },
+        {
+          "id": "libfile_b16e5e079144819195bd5b9681a3d711",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_b16e5e079144819195bd5b9681a3d711&account_id=personal",
+          "source_filename": "final_project_paper.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.06 MB",
+          "saved_date": "2026-05-03",
+          "kind": "pdf",
+          "title": "Compiling Semantic DAGs from Ancient Greek Universal Dependencies — Version 06"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "gemini-analysis",
+      "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini",
+      "category": "NLP and Model Research",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_7800df5c2518819182d8d5d9f54f84be",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_7800df5c2518819182d8d5d9f54f84be&account_id=personal",
+          "source_filename": "Gemini_valence_report_structured_no_overlap.pdf",
+          "primary": true,
+          "pages": 46,
+          "listed_size": "0.27 MB",
+          "saved_date": "2026-09-28",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 01"
+        },
+        {
+          "id": "libfile_a31ba7a636b08191b827736c65d6716e",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_a31ba7a636b08191b827736c65d6716e&account_id=personal",
+          "source_filename": "Gemini_证据封存_增补版_2026-10-13.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "65.61 MB",
+          "saved_date": "2026-10-13",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 02"
+        },
+        {
+          "id": "libfile_ba7c95aba4c4819188d7eca05e2e857f",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_ba7c95aba4c4819188d7eca05e2e857f&account_id=personal",
+          "source_filename": "Gemini_争议输出_证据摘录与分析_2026-10-12.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.04 MB",
+          "saved_date": "2026-10-12",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 03"
+        },
+        {
+          "id": "libfile_9fc543223a388191a88eb435fdf4edf6",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_9fc543223a388191a88eb435fdf4edf6&account_id=personal",
+          "source_filename": "Appendix_G_POLSKA_JUMPSTYLE_coding.pdf",
+          "primary": false,
+          "pages": 4,
+          "listed_size": "0.14 MB",
+          "saved_date": "2026-09-28",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 04"
+        },
+        {
+          "id": "libfile_efd9478990048191aa3f967a351f9c35",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_efd9478990048191aa3f967a351f9c35&account_id=personal",
+          "source_filename": "Gemini_valence_report_structured_no_overlap(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "38.36 MB",
+          "saved_date": "2026-09-28",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 05"
+        },
+        {
+          "id": "libfile_83e14d838ee481919e56e5b5c7f890dc",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_83e14d838ee481919e56e5b5c7f890dc&account_id=personal",
+          "source_filename": "Gemini_valence_report_with_discrimination_analysis.pdf",
+          "primary": false,
+          "pages": 49,
+          "listed_size": "0.53 MB",
+          "saved_date": "2026-09-28",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 06"
+        },
+        {
+          "id": "libfile_d57fa2d2a01c8191a856bde476e387ed",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_d57fa2d2a01c8191a856bde476e387ed&account_id=personal",
+          "source_filename": "Gemini_valence_report_with_guardrail_and_target_expansion.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.48 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 07"
+        },
+        {
+          "id": "libfile_33bdf817f19481919bfbd01e99b9ade5",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_33bdf817f19481919bfbd01e99b9ade5&account_id=personal",
+          "source_filename": "Gemini_valence_report_with_guardrail_penetration.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.40 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 08"
+        },
+        {
+          "id": "libfile_94c3dd644f908191bc2f922ca519fdb2",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_94c3dd644f908191bc2f922ca519fdb2&account_id=personal",
+          "source_filename": "Gemini_valence_report_LaTeX_render_fixed(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.36 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 09"
+        },
+        {
+          "id": "libfile_d37bdd3427fc81919ed2b368c6741167",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_d37bdd3427fc81919ed2b368c6741167&account_id=personal",
+          "source_filename": "_corrected_math_appendix_v2.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.10 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 10"
+        },
+        {
+          "id": "libfile_6cd221b52d8c8191b0f8b8612d245db5",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_6cd221b52d8c8191b0f8b8612d245db5&account_id=personal",
+          "source_filename": "Gemini_valence_report_LaTeX_render_fixed.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.36 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 11"
+        },
+        {
+          "id": "libfile_000468a2bab881919ae5077682c5c27c",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_000468a2bab881919ae5077682c5c27c&account_id=personal",
+          "source_filename": "_dense_embedding_similarity_appendix.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.23 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 12"
+        },
+        {
+          "id": "libfile_b259229d29908191a5ac1465f86df3f7",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_b259229d29908191a5ac1465f86df3f7&account_id=personal",
+          "source_filename": "Gemini_valence_report_with_dense_embedding_analysis.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.49 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 13"
+        },
+        {
+          "id": "libfile_838959d537908191b28c4cea340c3f3c",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_838959d537908191b28c4cea340c3f3c&account_id=personal",
+          "source_filename": "_valence_model_appendix.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.03 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 14"
+        },
+        {
+          "id": "libfile_cd024a9e71e8819189e3216374bb4df9",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_cd024a9e71e8819189e3216374bb4df9&account_id=personal",
+          "source_filename": "Gemini_animal_matrix_report_with_valence_model.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.29 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 15"
+        },
+        {
+          "id": "libfile_bfb9947bc3208191b79c84012361b1db",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_bfb9947bc3208191b79c84012361b1db&account_id=personal",
+          "source_filename": "Gemini_animal_all_numeric_visualizations.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.19 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 16"
+        },
+        {
+          "id": "libfile_c404cc1ab94c8191a544c669a6e0d227",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_c404cc1ab94c8191a544c669a6e0d227&account_id=personal",
+          "source_filename": "Gemini_animal_matrix_report_with_all_visualizations.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.28 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 17"
+        },
+        {
+          "id": "libfile_0beb53b72a8c8191a37a0b94bffabe43",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_0beb53b72a8c8191a37a0b94bffabe43&account_id=personal",
+          "source_filename": "Gemini_animal_matrix_report_reexport.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.12 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 18"
+        },
+        {
+          "id": "libfile_8b4a108746d881919aee15212462ff03",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_8b4a108746d881919aee15212462ff03&account_id=personal",
+          "source_filename": "Gemini_群体侮辱与歧视内容分析_动物全样本矩阵统计版.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.12 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 19"
+        },
+        {
+          "id": "libfile_c35b346bddb881918c04d85136f72673",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_c35b346bddb881918c04d85136f72673&account_id=personal",
+          "source_filename": "Gemini_群体侮辱与歧视内容分析_逐词类型化数字量词完整版_动物事实逆转补充.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.09 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 20"
+        },
+        {
+          "id": "libfile_12651605e8648191943be0826dcf4ad7",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_12651605e8648191943be0826dcf4ad7&account_id=personal",
+          "source_filename": "Gemini_群体侮辱与歧视内容分析_逐词类型化数字量词完整版_兼容修复.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.08 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 21"
+        },
+        {
+          "id": "libfile_38c14f19fe28819184b9f41b4b150ced",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_38c14f19fe28819184b9f41b4b150ced&account_id=personal",
+          "source_filename": "Gemini_群体侮辱与歧视内容分析_逐词类型化数字量词完整版.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.08 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 22"
+        },
+        {
+          "id": "libfile_e81bd83cce048191ad740228d2d266a0",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_e81bd83cce048191ad740228d2d266a0&account_id=personal",
+          "source_filename": "Gemini_群体侮辱与歧视内容分析_归类目的数字量词完整版.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.10 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 23"
+        },
+        {
+          "id": "libfile_92a6dae4999481919bd9174f6ba85254",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_92a6dae4999481919bd9174f6ba85254&account_id=personal",
+          "source_filename": "Gemini_群体侮辱与歧视内容分析_归类目的总表版.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.08 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 24"
+        },
+        {
+          "id": "libfile_0f8fdc7ae47481918bfb0e91a18d989c",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_0f8fdc7ae47481918bfb0e91a18d989c&account_id=personal",
+          "source_filename": "Gemini_群体侮辱与歧视内容分析_全量逐词目的性扩展版.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.08 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 25"
+        },
+        {
+          "id": "libfile_224eef3f40d4819183020e7f576de776",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_224eef3f40d4819183020e7f576de776&account_id=personal",
+          "source_filename": "Gemini_群体侮辱与歧视内容分析_逐词目的性扩展版.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.06 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 26"
+        },
+        {
+          "id": "libfile_58168d5783c88191bda73cd6a7013cc7",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_58168d5783c88191bda73cd6a7013cc7&account_id=personal",
+          "source_filename": "Gemini_群体侮辱与歧视内容分析(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.04 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 27"
+        },
+        {
+          "id": "libfile_c95f4db7bae08191a0e38a23b47c549a",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_c95f4db7bae08191a0e38a23b47c549a&account_id=personal",
+          "source_filename": "Gemini_群体侮辱与歧视内容分析_扩展版.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.04 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 28"
+        },
+        {
+          "id": "libfile_14294b7841f08191830d5e9b69ec11bd",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_14294b7841f08191830d5e9b69ec11bd&account_id=personal",
+          "source_filename": "Gemini_群体侮辱与歧视内容分析.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.04 MB",
+          "saved_date": "2026-09-25",
+          "kind": "pdf",
+          "title": "Conditional Valence, Semantic Safety and Goal Expansion in Gemini — Version 29"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "ai-assisted-research",
+      "title": "The Value and Verification Costs of AI-Assisted Research",
+      "category": "NLP and Model Research",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_62d5ebf30e388191b510465799793cad",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_62d5ebf30e388191b510465799793cad&account_id=personal",
+          "source_filename": "Economics_Policy_Writing_Sample.pdf",
+          "primary": true,
+          "pages": 2,
+          "listed_size": "0.10 MB",
+          "saved_date": "2026-10-21",
+          "kind": "pdf",
+          "title": "The Value and Verification Costs of AI-Assisted Research — Version 01"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "information-ecosystems",
+      "title": "Open Information Ecosystems: Stability, Flux Budgets and Scenario Simulation",
+      "category": "NLP and Model Research",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_fdf52cb04a50819198825e614b1e08a0",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_fdf52cb04a50819198825e614b1e08a0&account_id=personal",
+          "source_filename": "Homo_cubitatus_Cyber_Ecology_Model_Report_CN.pdf",
+          "primary": true,
+          "pages": 18,
+          "listed_size": "2.13 MB",
+          "saved_date": "2026-08-02",
+          "kind": "pdf",
+          "title": "Open Information Ecosystems: Stability, Flux Budgets and Scenario Simulation — Version 01"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "kafka-trial",
+      "title": "Kafka's The Trial: Echolocation, Subjectivity and Institutional Processes",
+      "category": "Humanities and Formal Studies",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_d74f06924a9881919e74147105b35e25",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_d74f06924a9881919e74147105b35e25&account_id=personal",
+          "source_filename": "Unschuldige_Anschuldigungen_Final.pdf",
+          "primary": true,
+          "pages": 11,
+          "listed_size": "0.12 MB",
+          "saved_date": "2026-10-26",
+          "kind": "pdf",
+          "title": "Kafka's The Trial: Echolocation, Subjectivity and Institutional Processes — Version 01"
+        },
+        {
+          "id": "libfile_c2cd88b890cc81918081f8d84897c335",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_c2cd88b890cc81918081f8d84897c335&account_id=personal",
+          "source_filename": "Kafka_The_Trial_Chicago_Expanded.pdf",
+          "primary": false,
+          "pages": 9,
+          "listed_size": "0.15 MB",
+          "saved_date": "2026-10-24",
+          "kind": "pdf",
+          "title": "Kafka's The Trial: Echolocation, Subjectivity and Institutional Processes — Version 02"
+        },
+        {
+          "id": "libfile_b51cf97e76348191b807481749a50263",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_b51cf97e76348191b807481749a50263&account_id=personal",
+          "source_filename": "Kafka_The_Trial_Chicago_Revised.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.08 MB",
+          "saved_date": "2026-10-22",
+          "kind": "pdf",
+          "title": "Kafka's The Trial: Echolocation, Subjectivity and Institutional Processes — Version 03"
+        },
+        {
+          "id": "libfile_a33457cd8eb0819182992e4ef89ea6c5",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_a33457cd8eb0819182992e4ef89ea6c5&account_id=personal",
+          "source_filename": "Kafka_The_Trial_Echolocation_Essay.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.07 MB",
+          "saved_date": "2026-10-22",
+          "kind": "pdf",
+          "title": "Kafka's The Trial: Echolocation, Subjectivity and Institutional Processes — Version 04"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "ptolemaic-egypt",
+      "title": "Ptolemaic Egypt: Delegated Kingship, Corruption and the Limits of Decline",
+      "category": "Humanities and Formal Studies",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_597771b2a3a08191a811ccd59610c030",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_597771b2a3a08191a811ccd59610c030&account_id=personal",
+          "source_filename": "Eliguli_Han_Ptolemaic_Corruption(1).pdf",
+          "primary": true,
+          "pages": 9,
+          "listed_size": "0.09 MB",
+          "saved_date": "2026-09-26",
+          "kind": "pdf",
+          "title": "Ptolemaic Egypt: Delegated Kingship, Corruption and the Limits of Decline — Version 01"
+        },
+        {
+          "id": "libfile_20c05270b53c8191a3577ed604604efc",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_20c05270b53c8191a3577ed604604efc&account_id=personal",
+          "source_filename": "Eliguli_Han_Ptolemaic_Corruption_Chinese.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.28 MB",
+          "saved_date": "2026-09-26",
+          "kind": "pdf",
+          "title": "Ptolemaic Egypt: Delegated Kingship, Corruption and the Limits of Decline — Version 02"
+        },
+        {
+          "id": "libfile_38e53a1f85ec8191ab51ec8892fe5516",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_38e53a1f85ec8191ab51ec8892fe5516&account_id=personal",
+          "source_filename": "Eliguli_Han_Ptolemaic_Corruption.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.09 MB",
+          "saved_date": "2026-09-22",
+          "kind": "pdf",
+          "title": "Ptolemaic Egypt: Delegated Kingship, Corruption and the Limits of Decline — Version 03"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "cultural-naming",
+      "title": "Names and Realities, Elite and Popular Culture, and Culturally Adapted Naming",
+      "category": "Humanities and Formal Studies",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_a8991941652081918c27b74f0eadfc15",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_a8991941652081918c27b74f0eadfc15&account_id=personal",
+          "source_filename": "Naming_Paradigm_ZH_v1.2.pdf",
+          "primary": true,
+          "pages": 18,
+          "listed_size": "0.44 MB",
+          "saved_date": "2026-07-24",
+          "kind": "pdf",
+          "title": "Names and Realities, Elite and Popular Culture, and Culturally Adapted Naming — Version 01"
+        },
+        {
+          "id": "libfile_771829dee95c819188852b3c0973c120",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_771829dee95c819188852b3c0973c120&account_id=personal",
+          "source_filename": "Naming_Paradigm_LA_v1.2.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.23 MB",
+          "saved_date": "2026-07-24",
+          "kind": "pdf",
+          "title": "Names and Realities, Elite and Popular Culture, and Culturally Adapted Naming — Version 02"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "imperial-elections",
+      "title": "Icons, Shared Faith and Imperial Elections",
+      "category": "Humanities and Formal Studies",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_df6b42088d908191b74d49f9f1ef3540",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_df6b42088d908191b74d49f9f1ef3540&account_id=personal",
+          "source_filename": "Byzantine_Iconoclasm_Imperial_Order_Trilingual_ZH_GR_DE.pdf",
+          "primary": true,
+          "pages": 19,
+          "listed_size": "0.42 MB",
+          "saved_date": "2026-07-26",
+          "kind": "pdf",
+          "title": "Icons, Shared Faith and Imperial Elections — Version 01"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "eurasian-networks",
+      "title": "Ancient Eurasian Populations: A Ternary Network Model and Evidence Protocol",
+      "category": "Humanities and Formal Studies",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_821edabfde208191b4610fd0f97345dc",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_821edabfde208191b4610fd0f97345dc&account_id=personal",
+          "source_filename": "Eurasian_Triadic_Framework_Amelia_Amtke_Nestorli_DE_v2.0.1.pdf",
+          "primary": true,
+          "pages": 102,
+          "listed_size": "1.55 MB",
+          "saved_date": "2026-07-29",
+          "kind": "pdf",
+          "title": "Ancient Eurasian Populations: A Ternary Network Model and Evidence Protocol — Version 01"
+        },
+        {
+          "id": "libfile_143e3ba583d88191a7a3c44dee1d5f89",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_143e3ba583d88191a7a3c44dee1d5f89&account_id=personal",
+          "source_filename": "Eurasian_Triadic_Framework_Amelia_Amtke_Nestorli_LA_v2.0.1.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "1.52 MB",
+          "saved_date": "2026-07-29",
+          "kind": "pdf",
+          "title": "Ancient Eurasian Populations: A Ternary Network Model and Evidence Protocol — Version 02"
+        },
+        {
+          "id": "libfile_6272b038a818819190f17f6c0235fa5e",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_6272b038a818819190f17f6c0235fa5e&account_id=personal",
+          "source_filename": "Eurasian_Triadic_Framework_Amelia_Amtke_Nestorli_ZH_v2.0.1.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "2.31 MB",
+          "saved_date": "2026-07-29",
+          "kind": "pdf",
+          "title": "Ancient Eurasian Populations: A Ternary Network Model and Evidence Protocol — Version 03"
+        },
+        {
+          "id": "libfile_12adc61150f48191836a86a1828207ba",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_12adc61150f48191836a86a1828207ba&account_id=personal",
+          "source_filename": "Eurasian_Triadic_Framework_Amelia_Amtke_Nestorli_ZH_v1.9.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "2.12 MB",
+          "saved_date": "2026-07-22",
+          "kind": "pdf",
+          "title": "Ancient Eurasian Populations: A Ternary Network Model and Evidence Protocol — Version 04"
+        },
+        {
+          "id": "libfile_1d3364408fe481919af599d198800d8a",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_1d3364408fe481919af599d198800d8a&account_id=personal",
+          "source_filename": "Eurasian_Triadic_Framework_Amelia_Amtke_Nestorli_LA_v1.9.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "1.41 MB",
+          "saved_date": "2026-07-22",
+          "kind": "pdf",
+          "title": "Ancient Eurasian Populations: A Ternary Network Model and Evidence Protocol — Version 05"
+        },
+        {
+          "id": "libfile_4abb190d556c8191bd31a69e5fbc5243",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_4abb190d556c8191bd31a69e5fbc5243&account_id=personal",
+          "source_filename": "Eurasian_Triadic_Framework_Amelia_Amtke_Nestorli_DE_v1.9.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "1.44 MB",
+          "saved_date": "2026-07-22",
+          "kind": "pdf",
+          "title": "Ancient Eurasian Populations: A Ternary Network Model and Evidence Protocol — Version 06"
+        },
+        {
+          "id": "libfile_c9ea558b7fb481918ea5d53061778e67",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_c9ea558b7fb481918ea5d53061778e67&account_id=personal",
+          "source_filename": "Eurasian_Triadic_Framework_Amelia_Amtke_Nestorli_ZH_v1.8.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "1.54 MB",
+          "saved_date": "2026-07-15",
+          "kind": "pdf",
+          "title": "Ancient Eurasian Populations: A Ternary Network Model and Evidence Protocol — Version 07"
+        },
+        {
+          "id": "libfile_8409a22e448481919f2f31a740d3aaf8",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_8409a22e448481919f2f31a740d3aaf8&account_id=personal",
+          "source_filename": "Eurasian_Triadic_Framework_Amelia_Amtke_Nestorli_LA_v1.8.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.83 MB",
+          "saved_date": "2026-07-15",
+          "kind": "pdf",
+          "title": "Ancient Eurasian Populations: A Ternary Network Model and Evidence Protocol — Version 08"
+        },
+        {
+          "id": "libfile_10ce9ac2de688191b57fe17b266b7b85",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_10ce9ac2de688191b57fe17b266b7b85&account_id=personal",
+          "source_filename": "Eurasian_Triadic_Framework_Amelia_Amtke_Nestorli_DE_v1.8.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.85 MB",
+          "saved_date": "2026-07-15",
+          "kind": "pdf",
+          "title": "Ancient Eurasian Populations: A Ternary Network Model and Evidence Protocol — Version 09"
+        },
+        {
+          "id": "libfile_05858e14a95881919761593e467633f6",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_05858e14a95881919761593e467633f6&account_id=personal",
+          "source_filename": "Eurasian_Triadic_Framework_Amelia_Amtke_Nestorli_ZH_v1.7.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "1.41 MB",
+          "saved_date": "2026-07-15",
+          "kind": "pdf",
+          "title": "Ancient Eurasian Populations: A Ternary Network Model and Evidence Protocol — Version 10"
+        },
+        {
+          "id": "libfile_fcff81e1d9bc8191b19e67593a1b6881",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_fcff81e1d9bc8191b19e67593a1b6881&account_id=personal",
+          "source_filename": "Eurasian_Triadic_Framework_Amelia_Amtke_Nestorli_LA_v1.6.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.61 MB",
+          "saved_date": "2026-07-15",
+          "kind": "pdf",
+          "title": "Ancient Eurasian Populations: A Ternary Network Model and Evidence Protocol — Version 11"
+        },
+        {
+          "id": "libfile_aa2cba6b006c819181afb9c51d1de5ad",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_aa2cba6b006c819181afb9c51d1de5ad&account_id=personal",
+          "source_filename": "Eurasian_Triadic_Framework_Amelia_Amtke_Nestorli_DE_v1.6.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.63 MB",
+          "saved_date": "2026-07-15",
+          "kind": "pdf",
+          "title": "Ancient Eurasian Populations: A Ternary Network Model and Evidence Protocol — Version 12"
+        },
+        {
+          "id": "libfile_c9d3aed3aff08191b547714828acbaef",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_c9d3aed3aff08191b547714828acbaef&account_id=personal",
+          "source_filename": "Eurasian_Triadic_Framework_Amelia_Amtke_Nestorli_v1.6.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "1.20 MB",
+          "saved_date": "2026-07-14",
+          "kind": "pdf",
+          "title": "Ancient Eurasian Populations: A Ternary Network Model and Evidence Protocol — Version 13"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "uhtcearu",
+      "title": "Uhtcearu: Language, Predetermined Paths and Generative Commentary",
+      "category": "Humanities and Formal Studies",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_1ad8e27d96cc81918514bf743a183f30",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_1ad8e27d96cc81918514bf743a183f30&account_id=personal",
+          "source_filename": "uhtcearu_discussion.pdf",
+          "primary": true,
+          "pages": 30,
+          "listed_size": "0.51 MB",
+          "saved_date": "2026-07-25",
+          "kind": "pdf",
+          "title": "Uhtcearu: Language, Predetermined Paths and Generative Commentary — Version 01"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "antiterrastrae-formalisation",
+      "title": "Antiterrastrae: Naming, Greek Morphology and Mathematical Formalisation",
+      "category": "Humanities and Formal Studies",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_def8bb5116d481919b51486807d4b43d",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_def8bb5116d481919b51486807d4b43d&account_id=personal",
+          "source_filename": "antiterrastrae-formalization-corrected.pdf",
+          "primary": true,
+          "pages": 14,
+          "listed_size": "0.30 MB",
+          "saved_date": "2026-10-05",
+          "kind": "pdf",
+          "title": "Antiterrastrae: Naming, Greek Morphology and Mathematical Formalisation — Version 01"
+        }
+      ],
+      "main_work": true
+    },
+    {
+      "id": "brownian-derivations",
+      "title": "Complete Derivations for the Brownian Heat Semigroup and Compensators",
+      "category": "Mathematical Derivations and Experiments",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_bd2171a0e3b48191bf9e8f489be5a34e",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_bd2171a0e3b48191bf9e8f489be5a34e&account_id=personal",
+          "source_filename": "Brownian_Compensator_Full_Problem_Solutions.pdf",
+          "primary": true,
+          "pages": 4,
+          "listed_size": "0.23 MB",
+          "saved_date": "2026-10-29",
+          "kind": "pdf",
+          "title": "Complete Derivations for the Brownian Heat Semigroup and Compensators — Version 01"
+        },
+        {
+          "id": "libfile_1ebc9c3afa3081918bcc189babb9c64d",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_1ebc9c3afa3081918bcc189babb9c64d&account_id=personal",
+          "source_filename": "Compensator_One_Page.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.25 MB",
+          "saved_date": "2026-10-29",
+          "kind": "pdf",
+          "title": "Complete Derivations for the Brownian Heat Semigroup and Compensators — Version 02"
+        },
+        {
+          "id": "libfile_e3b3d524e7f8819181161ce2f4233846",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_e3b3d524e7f8819181161ce2f4233846&account_id=personal",
+          "source_filename": "compensator.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.24 MB",
+          "saved_date": "2026-10-29",
+          "kind": "pdf",
+          "title": "Complete Derivations for the Brownian Heat Semigroup and Compensators — Version 03"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "probability-experiments",
+      "title": "Tennis Monte Carlo, Pareto Tails and Kullback-Leibler Divergence",
+      "category": "Mathematical Derivations and Experiments",
+      "hosted_document": "mathematical-probability-report",
+      "entries": [
+        {
+          "id": "libfile_486003d59694819185a2bbe0422f683e",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_486003d59694819185a2bbe0422f683e&account_id=personal",
+          "source_filename": "tennis_pareto_report.pdf",
+          "primary": true,
+          "pages": 12,
+          "listed_size": "1.39 MB",
+          "saved_date": "2026-09-13",
+          "kind": "pdf",
+          "title": "Tennis Monte Carlo, Pareto Tails and Kullback-Leibler Divergence — Version 01"
+        },
+        {
+          "id": "libfile_b8c61e91b09481919a52b203c0841b36",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_b8c61e91b09481919a52b203c0841b36&account_id=personal",
+          "source_filename": "four_problem_solutions.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "1.89 MB",
+          "saved_date": "2026-09-27",
+          "kind": "pdf",
+          "title": "Tennis Monte Carlo, Pareto Tails and Kullback-Leibler Divergence — Version 02"
+        },
+        {
+          "id": "libfile_473cef82b92481918c6839fca7f4ba20",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_473cef82b92481918c6839fca7f4ba20&account_id=personal",
+          "source_filename": "tennis_pareto_report(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "1.39 MB",
+          "saved_date": "2026-09-13",
+          "kind": "pdf",
+          "title": "Tennis Monte Carlo, Pareto Tails and Kullback-Leibler Divergence — Version 03"
+        },
+        {
+          "id": "libfile_6419e53129d481919aff1c6f17d253ed",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_6419e53129d481919aff1c6f17d253ed&account_id=personal",
+          "source_filename": "tennis_pareto_solution_english_complete.pdf",
+          "primary": false,
+          "pages": 7,
+          "listed_size": "0.67 MB",
+          "saved_date": "2026-09-11",
+          "kind": "pdf",
+          "title": "Tennis Monte Carlo, Pareto Tails and Kullback-Leibler Divergence — Version 04"
+        },
+        {
+          "id": "libfile_b6eed0a956d08191a00f5ac77c7ce604",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_b6eed0a956d08191a00f5ac77c7ce604&account_id=personal",
+          "source_filename": "tennis_pareto_complete_solution.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.60 MB",
+          "saved_date": "2026-09-11",
+          "kind": "pdf",
+          "title": "Tennis Monte Carlo, Pareto Tails and Kullback-Leibler Divergence — Version 05"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "mesh-pathfinding",
+      "title": "Pathfinding Comparisons on Triangular Meshes",
+      "category": "Mathematical Derivations and Experiments",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_f76577d87794819186eee49c1fef5163",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_f76577d87794819186eee49c1fef5163&account_id=personal",
+          "source_filename": "perturbed_outer_triangular_mesh_visit_time.pdf",
+          "primary": true,
+          "pages": 1,
+          "listed_size": "0.38 MB",
+          "saved_date": "2026-05-10",
+          "kind": "pdf",
+          "title": "Pathfinding Comparisons on Triangular Meshes — Version 01"
+        },
+        {
+          "id": "libfile_a7a795ade86c81918f74c26a66372058",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_a7a795ade86c81918f74c26a66372058&account_id=personal",
+          "source_filename": "triangular_mesh_triangle_average_cost_gradient.pdf",
+          "primary": false,
+          "pages": 1,
+          "listed_size": "0.04 MB",
+          "saved_date": "2026-05-10",
+          "kind": "pdf",
+          "title": "Pathfinding Comparisons on Triangular Meshes — Version 02"
+        },
+        {
+          "id": "libfile_3e703fce88d08191bfc7410e6cf719eb",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_3e703fce88d08191bfc7410e6cf719eb&account_id=personal",
+          "source_filename": "triangular_mesh_bfs_dfs_rl_comparison.pdf",
+          "primary": false,
+          "pages": 1,
+          "listed_size": "0.03 MB",
+          "saved_date": "2026-05-10",
+          "kind": "pdf",
+          "title": "Pathfinding Comparisons on Triangular Meshes — Version 03"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "eisenstein-primes",
+      "title": "Eisenstein Primes and Hexagonal Truncation Visualisations",
+      "category": "Mathematical Derivations and Experiments",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_7aace57f102481918160195f7dc25ca7",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_7aace57f102481918160195f7dc25ca7&account_id=personal",
+          "source_filename": "eisenstein_strict_standard_hex_truncated_shells.pdf",
+          "primary": true,
+          "pages": 1,
+          "listed_size": "1.08 MB",
+          "saved_date": "2026-05-19",
+          "kind": "pdf",
+          "title": "Eisenstein Primes and Hexagonal Truncation Visualisations — Version 01"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "megalodon-research-plan",
+      "title": "Megalodon Validation Research: Preregistration, Funding and Future Roadmap",
+      "category": "Research Plans and Technical Records",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_91ee435e9914819181af6b404bc9b8d1",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_91ee435e9914819181af6b404bc9b8d1&account_id=personal",
+          "source_filename": "ResearchHub_Megalodon_Preregistration_Funding_Proposal.pdf",
+          "primary": true,
+          "pages": 4,
+          "listed_size": "2.00 MB",
+          "saved_date": "2026-10-31",
+          "kind": "pdf",
+          "title": "Megalodon Validation Research: Preregistration, Funding and Future Roadmap — Version 01"
+        },
+        {
+          "id": "libfile_f77684637f84819189a944b0427aa3e1",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_f77684637f84819189a944b0427aa3e1&account_id=personal",
+          "source_filename": "Megalodon_Pilot_Funding_and_Research_Roadmap.pdf",
+          "primary": false,
+          "pages": 5,
+          "listed_size": "0.34 MB",
+          "saved_date": "2026-10-31",
+          "kind": "pdf",
+          "title": "Megalodon Validation Research: Preregistration, Funding and Future Roadmap — Version 02"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "comparative-skeletons",
+      "title": "A Comparative Skeletal Research Plan for Archaeocetes, Mesonychians and Amphicyonids",
+      "category": "Research Plans and Technical Records",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_ccc80cefef5c8191aa8baddee26c0b83",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_ccc80cefef5c8191aa8baddee26c0b83&account_id=personal",
+          "source_filename": "DURF_Expanded_Comparative_Project_Plan_2026-10-27.pdf",
+          "primary": true,
+          "pages": 4,
+          "listed_size": "0.10 MB",
+          "saved_date": "2026-10-27",
+          "kind": "pdf",
+          "title": "A Comparative Skeletal Research Plan for Archaeocetes, Mesonychians and Amphicyonids — Version 01"
+        },
+        {
+          "id": "libfile_462d30b2ce4081919694586312dca076",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_462d30b2ce4081919694586312dca076&account_id=personal",
+          "source_filename": "Luong_DURF_Recommendation_Review_Packet_2026-10-27.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.09 MB",
+          "saved_date": "2026-10-27",
+          "kind": "pdf",
+          "title": "A Comparative Skeletal Research Plan for Archaeocetes, Mesonychians and Amphicyonids — Version 02"
+        },
+        {
+          "id": "libfile_d461fd5fbfc88191abbb5da3b062b426",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_d461fd5fbfc88191abbb5da3b062b426&account_id=personal",
+          "source_filename": "Eliguli_Han_DURF_Research_Proposal.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.10 MB",
+          "saved_date": "2026-10-25",
+          "kind": "pdf",
+          "title": "A Comparative Skeletal Research Plan for Archaeocetes, Mesonychians and Amphicyonids — Version 03"
+        },
+        {
+          "id": "libfile_3b7494c668308191818ad6a04ebb7343",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_3b7494c668308191818ad6a04ebb7343&account_id=personal",
+          "source_filename": "Eliguli_Han_DURF_Preliminary_Budget.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.07 MB",
+          "saved_date": "2026-10-25",
+          "kind": "pdf",
+          "title": "A Comparative Skeletal Research Plan for Archaeocetes, Mesonychians and Amphicyonids — Version 04"
+        },
+        {
+          "id": "libfile_254df771236081919f2fb76df0d8296e",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_254df771236081919f2fb76df0d8296e&account_id=personal",
+          "source_filename": "DURF_Table_3_Timeline_and_Deliverables.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.07 MB",
+          "saved_date": "2026-10-24",
+          "kind": "pdf",
+          "title": "A Comparative Skeletal Research Plan for Archaeocetes, Mesonychians and Amphicyonids — Version 05"
+        },
+        {
+          "id": "libfile_1ff55b0980a0819186af6674f4787b22",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_1ff55b0980a0819186af6674f4787b22&account_id=personal",
+          "source_filename": "DURF_Figure_1_Study_Workflow.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.07 MB",
+          "saved_date": "2026-10-24",
+          "kind": "pdf",
+          "title": "A Comparative Skeletal Research Plan for Archaeocetes, Mesonychians and Amphicyonids — Version 06"
+        },
+        {
+          "id": "libfile_ea1a370eb0e0819183e217697d146f2f",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_ea1a370eb0e0819183e217697d146f2f&account_id=personal",
+          "source_filename": "DURF_Table_1_Data_and_Comparisons.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.07 MB",
+          "saved_date": "2026-10-24",
+          "kind": "pdf",
+          "title": "A Comparative Skeletal Research Plan for Archaeocetes, Mesonychians and Amphicyonids — Version 07"
+        },
+        {
+          "id": "libfile_c61b344e1a248191b61758804201c84e",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_c61b344e1a248191b61758804201c84e&account_id=personal",
+          "source_filename": "DURF_Table_2_Proposed_Numerical_Settings.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.07 MB",
+          "saved_date": "2026-10-24",
+          "kind": "pdf",
+          "title": "A Comparative Skeletal Research Plan for Archaeocetes, Mesonychians and Amphicyonids — Version 08"
+        },
+        {
+          "id": "libfile_299548c2acb48191855694313e8bd0d3",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_299548c2acb48191855694313e8bd0d3&account_id=personal",
+          "source_filename": "DURF_Supplementary_Figures_and_Tables.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.19 MB",
+          "saved_date": "2026-10-24",
+          "kind": "pdf",
+          "title": "A Comparative Skeletal Research Plan for Archaeocetes, Mesonychians and Amphicyonids — Version 09"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "ct-mesh-records",
+      "title": "Full Megalodon CT Mesh Repair and Validation Records",
+      "category": "Research Plans and Technical Records",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_6a1c98a7aa708191af8a66de13ee087a",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_6a1c98a7aa708191af8a66de13ee087a&account_id=personal",
+          "source_filename": "Megalodon_FullCT_Repair_Report_EN.pdf",
+          "primary": true,
+          "pages": 2,
+          "listed_size": "0.09 MB",
+          "saved_date": "2026-10-26",
+          "kind": "pdf",
+          "title": "Full Megalodon CT Mesh Repair and Validation Records — Version 01"
+        },
+        {
+          "id": "libfile_3ca129846b6881918a25324189daf610",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_3ca129846b6881918a25324189daf610&account_id=personal",
+          "source_filename": "Megalodon_FullCT_Repair_Report_DE.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.09 MB",
+          "saved_date": "2026-10-26",
+          "kind": "pdf",
+          "title": "Full Megalodon CT Mesh Repair and Validation Records — Version 02"
+        },
+        {
+          "id": "libfile_9daaa6ff8a348191ac6f00935ca96c4e",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_9daaa6ff8a348191ac6f00935ca96c4e&account_id=personal",
+          "source_filename": "Megalodon_FullCT_Repair_Report.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.10 MB",
+          "saved_date": "2026-10-25",
+          "kind": "pdf",
+          "title": "Full Megalodon CT Mesh Repair and Validation Records — Version 03"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "nlp-working-records",
+      "title": "NLP Working Documents",
+      "category": "Research Plans and Technical Records",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_836eafc335d881919e497d0e0805513e",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_836eafc335d881919e497d0e0805513e&account_id=personal",
+          "source_filename": "Working Doc - NLP Eliguli.pdf",
+          "primary": true,
+          "pages": 68,
+          "listed_size": "0.85 MB",
+          "saved_date": "2026-04-11",
+          "kind": "pdf",
+          "title": "NLP Working Documents — Version 01"
+        },
+        {
+          "id": "libfile_ad63cc185b4c819182bb5b1326263838",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_ad63cc185b4c819182bb5b1326263838&account_id=personal",
+          "source_filename": "Working Doc - NLP Eliguli(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.85 MB",
+          "saved_date": "2026-04-11",
+          "kind": "pdf",
+          "title": "NLP Working Documents — Version 02"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "megalodon-presentations",
+      "title": "Megalodon Biomechanics Presentations and Speaking Notes",
+      "category": "Research Plans and Technical Records",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_a664e4f6eb54819192a3de407638d023",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_a664e4f6eb54819192a3de407638d023&account_id=personal",
+          "source_filename": "DURF_Megalodon_Biomechanics_Deck.pdf",
+          "primary": true,
+          "pages": null,
+          "listed_size": "3.88 MB",
+          "saved_date": "2026-05-01",
+          "kind": "pdf",
+          "title": "Megalodon Biomechanics Presentations and Speaking Notes — Version 01"
+        },
+        {
+          "id": "libfile_1f94218b0b508191883ca44dc387634c",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_1f94218b0b508191883ca44dc387634c&account_id=personal",
+          "source_filename": "DURF_Megalodon_Biomechanics_Deck(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "3.88 MB",
+          "saved_date": "2026-05-01",
+          "kind": "pdf",
+          "title": "Megalodon Biomechanics Presentations and Speaking Notes — Version 02"
+        },
+        {
+          "id": "libfile_5a2bbac954408191ad4b95f568b107eb",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_5a2bbac954408191ad4b95f568b107eb&account_id=personal",
+          "source_filename": "megalodon biomechanics deck dark-2 2.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "4.03 MB",
+          "saved_date": "2026-05-01",
+          "kind": "pdf",
+          "title": "Megalodon Biomechanics Presentations and Speaking Notes — Version 03"
+        },
+        {
+          "id": "libfile_d954676687388191aa7dfc80b7db5579",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_d954676687388191aa7dfc80b7db5579&account_id=personal",
+          "source_filename": "durf_script(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.14 MB",
+          "saved_date": "2026-05-01",
+          "kind": "pdf",
+          "title": "Megalodon Biomechanics Presentations and Speaking Notes — Version 04"
+        },
+        {
+          "id": "libfile_5340836e33248191ad0224d12fdf99fb",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_5340836e33248191ad0224d12fdf99fb&account_id=personal",
+          "source_filename": "durf_script.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.14 MB",
+          "saved_date": "2026-05-01",
+          "kind": "pdf",
+          "title": "Megalodon Biomechanics Presentations and Speaking Notes — Version 05"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "stereoset-response",
+      "title": "Reading Responses to the StereoSet Paper",
+      "category": "Research Plans and Technical Records",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_b25c88be2e4c8191a3e80cbc5f6137f1",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_b25c88be2e4c8191a3e80cbc5f6137f1&account_id=personal",
+          "source_filename": "StereoSet_Overview_and_Reading_Response.pdf",
+          "primary": true,
+          "pages": 2,
+          "listed_size": "0.05 MB",
+          "saved_date": "2026-04-28",
+          "kind": "pdf",
+          "title": "Reading Responses to the StereoSet Paper — Version 01"
+        },
+        {
+          "id": "libfile_a899e84ce6d08191b71cddf9b438632f",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_a899e84ce6d08191b71cddf9b438632f&account_id=personal",
+          "source_filename": "StereoSet_Overview_and_Reading_Response(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.05 MB",
+          "saved_date": "2026-04-28",
+          "kind": "pdf",
+          "title": "Reading Responses to the StereoSet Paper — Version 02"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "ct-slice-atlases",
+      "title": "Megalodon CT Slice Atlases",
+      "category": "Research Plans and Technical Records",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_77bd616d07bc8191a3e6cf5d6cbdef80",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_77bd616d07bc8191a3e6cf5d6cbdef80&account_id=personal",
+          "source_filename": "buccolingual_slices_0p1mm.pdf",
+          "primary": true,
+          "pages": null,
+          "listed_size": "42.18 MB",
+          "saved_date": "2026-07-06",
+          "kind": "pdf",
+          "title": "Megalodon CT Slice Atlases — Version 01"
+        },
+        {
+          "id": "libfile_cbb86d7405348191aa8c1428757cf564",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_cbb86d7405348191aa8c1428757cf564&account_id=personal",
+          "source_filename": "axial_slices_50um.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "41.10 MB",
+          "saved_date": "2026-07-06",
+          "kind": "pdf",
+          "title": "Megalodon CT Slice Atlases — Version 02"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "reference-zhao-zhang",
+      "title": "Zhao and Zhang: Graded Porous Bone-Like Structures via Multi-Material Topology Optimisation",
+      "category": "Reference Literature",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_8a27e60fe684819193b08e14d9e5baba",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_8a27e60fe684819193b08e14d9e5baba&account_id=personal",
+          "source_filename": "Zhao_Zhang_2021_Graded_Porous_Bone_Like.pdf",
+          "primary": true,
+          "pages": 22,
+          "listed_size": "2.59 MB",
+          "saved_date": "2026-10-28",
+          "kind": "pdf",
+          "title": "Zhao and Zhang: Graded Porous Bone-Like Structures via Multi-Material Topology Optimisation — Version 01"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "reference-luong",
+      "title": "Luong et al.: Structure and Compression of Invar-Cenosphere Composite Foams",
+      "category": "Reference Literature",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_1b5bb2c541dc8191af77adc8191bae1f",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_1b5bb2c541dc8191af77adc8191bae1f&account_id=personal",
+          "source_filename": "Luong_2016_Invar_Cenosphere_Foams.pdf",
+          "primary": true,
+          "pages": 16,
+          "listed_size": "8.18 MB",
+          "saved_date": "2026-10-28",
+          "kind": "pdf",
+          "title": "Luong et al.: Structure and Compression of Invar-Cenosphere Composite Foams — Version 01"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "reference-wu",
+      "title": "Wu et al.: Topology Optimisation of Additively Manufactured Bone-Like Porous Infill",
+      "category": "Reference Literature",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_841340f467f48191b4a96b82bd44a1c4",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_841340f467f48191b4a96b82bd44a1c4&account_id=personal",
+          "source_filename": "Wu_Bone_Like_Porous_Infill.pdf",
+          "primary": true,
+          "pages": 15,
+          "listed_size": "7.87 MB",
+          "saved_date": "2026-10-28",
+          "kind": "pdf",
+          "title": "Wu et al.: Topology Optimisation of Additively Manufactured Bone-Like Porous Infill — Version 01"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "reference-rowan",
+      "title": "Rowan et al.: The First Skull of Sivameryx africanus",
+      "category": "Reference Literature",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_65fcaf3692248191a119243a6ec138ac",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_65fcaf3692248191a119243a6ec138ac&account_id=personal",
+          "source_filename": "Sivameryx_africanus_Rowan_2015_Proof.pdf",
+          "primary": true,
+          "pages": 10,
+          "listed_size": "3.38 MB",
+          "saved_date": "2026-10-16",
+          "kind": "pdf",
+          "title": "Rowan et al.: The First Skull of Sivameryx africanus — Version 01"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "reference-kotek",
+      "title": "Kotek et al.: Gender Bias and Stereotypes in Large Language Models",
+      "category": "Reference Literature",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_ac70b1f07eb48191acd75e1cc9b211e3",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_ac70b1f07eb48191acd75e1cc9b211e3&account_id=personal",
+          "source_filename": "35822693615599.pdf",
+          "primary": true,
+          "pages": 14,
+          "listed_size": "1.05 MB",
+          "saved_date": "2026-04-06",
+          "kind": "pdf",
+          "title": "Kotek et al.: Gender Bias and Stereotypes in Large Language Models — Version 01"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "reference-blodgett",
+      "title": "Blodgett et al.: Language (Technology) Is Power",
+      "category": "Reference Literature",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_ad4b82df409c8191aa3c59ea580231f0",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_ad4b82df409c8191aa3c59ea580231f0&account_id=personal",
+          "source_filename": "Blodgett-Technology is Power.pdf",
+          "primary": true,
+          "pages": 23,
+          "listed_size": "1.37 MB",
+          "saved_date": "2026-03-03",
+          "kind": "pdf",
+          "title": "Blodgett et al.: Language (Technology) Is Power — Version 01"
+        },
+        {
+          "id": "libfile_1e7e80309d6881919d96076a5f7289f5",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_1e7e80309d6881919d96076a5f7289f5&account_id=personal",
+          "source_filename": "Blodgett-Technology is Power(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "1.37 MB",
+          "saved_date": "2026-03-04",
+          "kind": "pdf",
+          "title": "Blodgett et al.: Language (Technology) Is Power — Version 02"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "speculative-palaeobiology",
+      "title": "Speculative Palaeobiology and Fictional Research Papers",
+      "category": "Speculative Palaeobiology and Creative Work",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_b5d9051fdf348191b1b14c80408cffb8",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_b5d9051fdf348191b1b14c80408cffb8&account_id=personal",
+          "source_filename": "Giganimravus_kashirhnse_rev4.pdf",
+          "primary": true,
+          "pages": 28,
+          "listed_size": "1.09 MB",
+          "saved_date": "2026-10-30",
+          "kind": "pdf",
+          "title": "Speculative Palaeobiology and Fictional Research Papers — Version 01"
+        },
+        {
+          "id": "libfile_7eb4b9e8d63081919b9dd2dc16f24fa3",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_7eb4b9e8d63081919b9dd2dc16f24fa3&account_id=personal",
+          "source_filename": "Original_Paleobiota_Complete_Expanded_2026-10-30_zh.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "1.08 MB",
+          "saved_date": "2026-10-30",
+          "kind": "pdf",
+          "title": "Speculative Palaeobiology and Fictional Research Papers — Version 02"
+        },
+        {
+          "id": "libfile_e6bf9bdaf1dc8191b448cac1f7b32cce",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_e6bf9bdaf1dc8191b448cac1f7b32cce&account_id=personal",
+          "source_filename": "Brachvogel Homo cubitatus ZSMAN XLVII 4.pdf",
+          "primary": false,
+          "pages": 28,
+          "listed_size": "0.14 MB",
+          "saved_date": "2026-08-02",
+          "kind": "pdf",
+          "title": "Speculative Palaeobiology and Fictional Research Papers — Version 03"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "fictional-comments",
+      "title": "Fictional Comment Threads and Critical Analysis",
+      "category": "Text Experiments and Creative Work",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_30084ec03e54819198e013fad9032de4",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_30084ec03e54819198e013fad9032de4&account_id=personal",
+          "source_filename": "xiaohongshu_100_layers_extended_analysis.pdf",
+          "primary": true,
+          "pages": 20,
+          "listed_size": "0.43 MB",
+          "saved_date": "2026-10-28",
+          "kind": "pdf",
+          "title": "Fictional Comment Threads and Critical Analysis — Version 01"
+        },
+        {
+          "id": "libfile_921f0167377c8191a5ba73bc66376603",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_921f0167377c8191a5ba73bc66376603&account_id=personal",
+          "source_filename": "xiaohongshu_deduplicated_deep_analysis.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.37 MB",
+          "saved_date": "2026-10-28",
+          "kind": "pdf",
+          "title": "Fictional Comment Threads and Critical Analysis — Version 02"
+        },
+        {
+          "id": "libfile_c937c7527df881919c455694c04f06ee",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_c937c7527df881919c455694c04f06ee&account_id=personal",
+          "source_filename": "xhs_phone_analysis_supplement.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.04 MB",
+          "saved_date": "2026-10-28",
+          "kind": "pdf",
+          "title": "Fictional Comment Threads and Critical Analysis — Version 03"
+        },
+        {
+          "id": "libfile_d62a8e527bdc81918564a5b09311c9ed",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_d62a8e527bdc81918564a5b09311c9ed&account_id=personal",
+          "source_filename": "xiaohongshu_mobile_with_critical_analysis.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.47 MB",
+          "saved_date": "2026-10-28",
+          "kind": "pdf",
+          "title": "Fictional Comment Threads and Critical Analysis — Version 04"
+        },
+        {
+          "id": "libfile_aad57d035c74819187dc3c7e8cf88ce1",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_aad57d035c74819187dc3c7e8cf88ce1&account_id=personal",
+          "source_filename": "xiaohongshu_combined_mobile.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.47 MB",
+          "saved_date": "2026-10-28",
+          "kind": "pdf",
+          "title": "Fictional Comment Threads and Critical Analysis — Version 05"
+        },
+        {
+          "id": "libfile_d9478cfa84088191bae7177fd9cc64e2",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_d9478cfa84088191bae7177fd9cc64e2&account_id=personal",
+          "source_filename": "xiaohongshu_discussion_integrated.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.39 MB",
+          "saved_date": "2026-10-28",
+          "kind": "pdf",
+          "title": "Fictional Comment Threads and Critical Analysis — Version 06"
+        },
+        {
+          "id": "libfile_1798a12ce8fc8191a2e317031be0a7a9",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_1798a12ce8fc8191a2e317031be0a7a9&account_id=personal",
+          "source_filename": "xiaohongshu_100_layers_redmarked.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.39 MB",
+          "saved_date": "2026-10-28",
+          "kind": "pdf",
+          "title": "Fictional Comment Threads and Critical Analysis — Version 07"
+        },
+        {
+          "id": "libfile_f901853bced08191ac6a0460683c9f30",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_f901853bced08191ac6a0460683c9f30&account_id=personal",
+          "source_filename": "xiaohongshu_100_layers_original.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.36 MB",
+          "saved_date": "2026-10-28",
+          "kind": "pdf",
+          "title": "Fictional Comment Threads and Critical Analysis — Version 08"
+        },
+        {
+          "id": "libfile_a0dbc073fca88191b5ceef4e481981c4",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_a0dbc073fca88191b5ceef4e481981c4&account_id=personal",
+          "source_filename": "xiaohongshu_100_layers_annotated.pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.31 MB",
+          "saved_date": "2026-10-28",
+          "kind": "pdf",
+          "title": "Fictional Comment Threads and Critical Analysis — Version 09"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "creative-language",
+      "title": "Arcaniaei Aaineae: Creative Linguistic and Legal Texts",
+      "category": "Text Experiments and Creative Work",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_9e37af5988008191bd0c1b1cb5ab1a0d",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_9e37af5988008191bd0c1b1cb5ab1a0d&account_id=personal",
+          "source_filename": "Arcaniaei Aaineae nomoi 2.pdf",
+          "primary": true,
+          "pages": 11,
+          "listed_size": "0.06 MB",
+          "saved_date": "2026-10-05",
+          "kind": "pdf",
+          "title": "Arcaniaei Aaineae: Creative Linguistic and Legal Texts — Version 01"
+        },
+        {
+          "id": "libfile_7ffb8f194ba08191a70e186bb3b62354",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_7ffb8f194ba08191a70e186bb3b62354&account_id=personal",
+          "source_filename": "Arcaniaei Aaineae nomoi 2(1).pdf",
+          "primary": false,
+          "pages": null,
+          "listed_size": "0.06 MB",
+          "saved_date": "2026-10-15",
+          "kind": "pdf",
+          "title": "Arcaniaei Aaineae: Creative Linguistic and Legal Texts — Version 02"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "unidentified-image-manuscript",
+      "title": "Unidentified Image-Based Manuscript: ba_ague_smaragd",
+      "category": "Unidentified Image Documents",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_8c219a2162888191ab55b8955aa62815",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_8c219a2162888191ab55b8955aa62815&account_id=personal",
+          "source_filename": "ba_ague_smaragd_manuscript.pdf",
+          "primary": true,
+          "pages": 38,
+          "listed_size": "21.85 MB",
+          "saved_date": "2026-09-07",
+          "kind": "pdf",
+          "title": "Unidentified Image-Based Manuscript: ba_ague_smaragd — Version 01"
+        }
+      ],
+      "main_work": false
+    },
+    {
+      "id": "source-archives",
+      "title": "Source Files and Data Packages",
+      "category": "Source Archives and Data Packages",
+      "hosted_document": null,
+      "entries": [
+        {
+          "id": "libfile_e4a43a7c46f48191b72f2ab0c9792116",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_e4a43a7c46f48191b72f2ab0c9792116&account_id=personal",
+          "source_filename": "Optimal_Acceleration_Package.zip",
+          "primary": false,
+          "pages": null,
+          "listed_size": "1.42 MB",
+          "saved_date": "",
+          "kind": "archive",
+          "title": "Source Files and Data Packages — Source archive 01"
+        },
+        {
+          "id": "libfile_4044f92928448191b17092cf9ff1fc18",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_4044f92928448191b17092cf9ff1fc18&account_id=personal",
+          "source_filename": "Polynomial_Recurrences_Complete_Project.zip",
+          "primary": false,
+          "pages": null,
+          "listed_size": "27.19 MB",
+          "saved_date": "",
+          "kind": "archive",
+          "title": "Source Files and Data Packages — Source archive 02"
+        },
+        {
+          "id": "libfile_9e0058cd53348191bda34afcdc6d6cee",
+          "library_url": "https://chatgpt.com/library?file_id=libfile_9e0058cd53348191bda34afcdc6d6cee&account_id=personal",
+          "source_filename": "Sivameryx_Source_Files_2026-10-29.zip",
+          "primary": false,
+          "pages": null,
+          "listed_size": "41.10 MB",
+          "saved_date": "",
+          "kind": "archive",
+          "title": "Source Files and Data Packages — Source archive 03"
+        }
+      ],
+      "main_work": false
+    }
+  ]
+}

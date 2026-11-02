@@ -1,0 +1,555 @@
+% !TeX program = xelatex
+% Compile with XeLaTeX twice. Standard TeX Live packages only.
+% All hyperlinks are the exact native file links from the source catalogue.
+\documentclass[UTF8,fontset=fandol,10pt,a4paper]{ctexart}
+\usepackage[margin=18mm,top=18mm,bottom=18mm,headheight=14pt,headsep=6mm,footskip=9mm]{geometry}
+\usepackage{fontspec}
+\IfFontExistsTF{DejaVu Sans}{\setmainfont{DejaVu Sans}\setsansfont{DejaVu Sans}}{\setmainfont{Latin Modern Sans}\setsansfont{Latin Modern Sans}}
+\usepackage[table]{xcolor}
+\usepackage{array,longtable,booktabs,needspace}
+\usepackage{fancyhdr,lastpage}
+\usepackage[unicode,breaklinks=true,colorlinks=true,linkcolor=LinkBlue,urlcolor=LinkBlue]{hyperref}
+\usepackage{bookmark}
+\definecolor{Ink}{HTML}{173342}
+\definecolor{LinkBlue}{HTML}{145B85}
+\definecolor{Muted}{HTML}{5B6D77}
+\definecolor{Accent}{HTML}{167B78}
+\definecolor{Pale}{HTML}{EEF5F7}
+\hypersetup{pdftitle={研究论文与 PDF 完整目录},pdfauthor={Eliguli Han},pdfsubject={29组主要研究文稿、223个PDF条目和3个源文件包},pdfkeywords={research,index,PDF,hyperlinks},pdfdisplaydoctitle=true,pdfstartview=FitH}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.20}
+\setlength{\LTpre}{4pt}
+\setlength{\LTpost}{7pt}
+\setlength{\emergencystretch}{2em}
+\setlength{\skip\footins}{10pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\fontsize{8}{10}\selectfont\color{Muted}RESEARCH PDF INDEX}
+\fancyhead[R]{\fontsize{8}{10}\selectfont\color{Muted}2026.11.01}
+\fancyfoot[L]{\fontsize{8}{10}\selectfont\color{Muted}Eliguli Han · 研究文稿目录}
+\fancyfoot[R]{\fontsize{8}{10}\selectfont\color{Muted}\thepage\ / \pageref*{LastPage}}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0pt}
+\ctexset{section={format=\Large\sffamily\bfseries\color{Ink},beforeskip=15pt,afterskip=7pt},subsection={format=\normalsize\bfseries\color{Ink}}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcommand{\primary}{\textcolor{Accent}{\scriptsize\enspace[主入口]}}
+\newcommand{\groupheading}[1]{\addlinespace[3mm]\multicolumn{4}{@{}p{\linewidth}@{}}{\fontsize{10}{13}\selectfont\bfseries\color{Ink}#1}\\*[1mm]}
+\begin{document}
+{\color{Accent}\fontsize{9}{12}\selectfont RESEARCH CATALOGUE\par}
+\vspace{2mm}
+{\fontsize{24}{30}\selectfont\bfseries\color{Ink}研究论文与 PDF 完整目录\par}
+{\fontsize{11}{15}\selectfont\color{Muted}含可点击的论文链接与完整版本索引\par}
+\vspace{3mm}
+{\small\color{Muted}核对日期：2026 年 11 月 1 日（纽约时间）\hfill Eliguli Han}
+\vspace{3mm}
+\hrule height 0.5pt
+\vspace{3mm}
+\colorbox{Pale}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\vspace{2mm}\centering\textbf{29 组主要文稿}\quad\textcolor{Muted}{/}\quad\textbf{223 个 PDF 条目}\quad\textcolor{Muted}{/}\quad\textbf{3 个源文件包}\vspace{2mm}}}
+
+{\small 本目录来自已完成的文件检索，保留各语言版、历史修订稿、重复上传副本和补充文件。条目数包含同一研究的多个版本。蓝色题名与文件名均可点击；打开论文文件可能需要登录拥有访问权限的账户。}
+
+{\small 主要文稿涵盖工作论文、技术报告、形式化笔记、课程论文和理论讨论稿。“保存日期”采用纽约时间，记录文件的创建日期；正文写作日期单独依原稿识别。页数栏中的横线表示本轮目录未记录页数。}
+
+\section{主要研究文稿}
+{\small 每组列出一个主要入口；全部版本及补充材料见后续分类表。}
+\begingroup\fontsize{9.3}{13}\selectfont
+\begin{longtable}{@{}R{7mm}L{25mm}L{\dimexpr\linewidth-43mm-6\tabcolsep\relax}R{11mm}@{}}
+\toprule
+\textbf{序号}&\textbf{方向}&\textbf{研究文稿（点击打开 PDF）}&\textbf{页数}\\
+\midrule\endfirsthead
+\toprule
+\textbf{序号}&\textbf{方向}&\textbf{研究文稿（续）}&\textbf{页数}\\
+\midrule\endhead
+\midrule\multicolumn{4}{r}{\scriptsize\color{Muted}续下页}\\\endfoot
+\bottomrule\endlastfoot
+1 & 数学与计算 & \href{https://chatgpt.com/library?file_id=libfile_e7e674838c4481919916d52a64a06910&account_id=personal}{立方 Wallis 乘积与整数 ζ 值的最优截断} & 11 \\
+2 & 数学与计算 & \href{https://chatgpt.com/library?file_id=libfile_b47d819187e481919daf6635055e4c45&account_id=personal}{多项式与隐式幂递推：C++ 算法与数值比较} & 24 \\
+3 & 数学与计算 & \href{https://chatgpt.com/library?file_id=libfile_f240de4880a081919968edcc0580f552&account_id=personal}{参数六次多项式的实根几何、判别式与 Galois 分析} & 17 \\
+4 & 数学与计算 & \href{https://chatgpt.com/library?file_id=libfile_5e02f87088a88191868d8e00bbdc3e33&account_id=personal}{Poincaré 圆盘测地线排列着色与 Cayley 变换} & 10 \\
+5 & 数学与计算 & \href{https://chatgpt.com/library?file_id=libfile_d02746cf8e048191b5c2d5d3f1015298&account_id=personal}{Steiner 链与 Pappus 链：递归反演、双链与旋转} & 7 \\
+6 & 数学与计算 & \href{https://chatgpt.com/library?file_id=libfile_31432377f16881918b767d68b70bf550&account_id=personal}{抽选消除模型：吸收 Markov 链、鞅与对称性} & 18 \\
+7 & 数学与计算 & \href{https://chatgpt.com/library?file_id=libfile_302f85d5f6088191acb5f256e74fe805&account_id=personal}{从赌徒破产到线性算子：生成函数、多项式提升与延迟 DMD} & 16 \\
+8 & 数学与计算 & \href{https://chatgpt.com/library?file_id=libfile_ad5c2a10a1d48191957541553f1b8a53&account_id=personal}{集合观测多项模型：概率闭合与参数拟合} & 15 \\
+9 & 数学与计算 & \href{https://chatgpt.com/library?file_id=libfile_dc36c55815a88191ac044f5f9f1494e2&account_id=personal}{挂谷型集合：条件归约与度量测度框架} & 3 \\
+10 & 数学与计算 & \href{https://chatgpt.com/library?file_id=libfile_2227c3b73f8081918b58830ee0bca786&account_id=personal}{随机游走、Brownian 运动与鞅校准} & 38 \\
+11 & 古生物与力学 & \href{https://chatgpt.com/library?file_id=libfile_e8de70bc5034819180f2a175864bcb1f&account_id=personal}{巨齿鲨牙齿尺度应力局域化：CT 校准、数值验证与区域敏感性} & 9 \\
+12 & 古生物与力学 & \href{https://chatgpt.com/library?file_id=libfile_4fb7785fd23c819193e92aeab35dc9ad&account_id=personal}{Massa Corporis：大型鲸类与中生代海生爬行动物的体重比较} & 17 \\
+13 & 古生物与力学 & \href{https://chatgpt.com/library?file_id=libfile_04fb713015e48191b20fd60d2b25b4c7&account_id=personal}{De Natura Livyatanis：抹香鲸总科与暴龙类的平行系统讨论} & 22 \\
+14 & 古生物与力学 & \href{https://chatgpt.com/library?file_id=libfile_8a7734085c048191ba0ca011d234cd3f&account_id=personal}{海洋非滤食掠食者功能梯度与极限数据汇编} & 21 \\
+15 & 古生物与力学 & \href{https://chatgpt.com/library?file_id=libfile_e517125ea0748191b7d880689b64bc07&account_id=personal}{古地层学与新生代地质：勘误、证据分级与可检验假设} & 8 \\
+16 & 古生物与力学 & \href{https://chatgpt.com/library?file_id=libfile_0a1035200aac819194e799736d879d52&account_id=personal}{铁砧与荆棘之冠：圈养鲸类的生理与认知约束} & 11 \\
+17 & 古生物与力学 & \href{https://chatgpt.com/library?file_id=libfile_0547a5d339ec8191a67a49721d168c3c&account_id=personal}{先于文明的歌：海洋巨型动物智能的能量、认知与介质约束} & 7 \\
+18 & 声学与信号处理 & \href{https://chatgpt.com/library?file_id=libfile_682f0956c4648191a4865aa0f870486d&account_id=personal}{Physeter Voice：STFT、频带能量、分段与节奏分析} & 21 \\
+19 & NLP 与模型研究 & \href{https://chatgpt.com/library?file_id=libfile_3bb5a969488c8191bf8a5679e80ea107&account_id=personal}{从 Ancient Greek UD 编译语义 DAG} & 9 \\
+20 & NLP 与模型研究 & \href{https://chatgpt.com/library?file_id=libfile_7800df5c2518819182d8d5d9f54f84be&account_id=personal}{Gemini 条件效价、语义安全与目标扩张分析} & 46 \\
+21 & NLP 与模型研究 & \href{https://chatgpt.com/library?file_id=libfile_62d5ebf30e388191b510465799793cad&account_id=personal}{AI 辅助研究的价值与核查成本} & 2 \\
+22 & NLP 与模型研究 & \href{https://chatgpt.com/library?file_id=libfile_fdf52cb04a50819198825e614b1e08a0&account_id=personal}{开放信息生态系统：稳定性、通量预算与情景模拟} & 18 \\
+23 & 人文与形式化讨论 & \href{https://chatgpt.com/library?file_id=libfile_d74f06924a9881919e74147105b35e25&account_id=personal}{Kafka《审判》：回声定位、主体与制度过程} & 11 \\
+24 & 人文与形式化讨论 & \href{https://chatgpt.com/library?file_id=libfile_597771b2a3a08191a811ccd59610c030&account_id=personal}{托勒密埃及：王权委托、腐败与衰落的边界} & 9 \\
+25 & 人文与形式化讨论 & \href{https://chatgpt.com/library?file_id=libfile_a8991941652081918c27b74f0eadfc15&account_id=personal}{名实、雅俗与文化圈归化命名} & 18 \\
+26 & 人文与形式化讨论 & \href{https://chatgpt.com/library?file_id=libfile_df6b42088d908191b74d49f9f1ef3540&account_id=personal}{圣像、共同信仰与帝国选制} & 19 \\
+27 & 人文与形式化讨论 & \href{https://chatgpt.com/library?file_id=libfile_821edabfde208191b4610fd0f97345dc&account_id=personal}{古欧亚人群三元网络模型与证据协议} & 102 \\
+28 & 人文与形式化讨论 & \href{https://chatgpt.com/library?file_id=libfile_1ad8e27d96cc81918514bf743a183f30&account_id=personal}{Ūhtcearu：语言、预刻之路与生成式注释} & 30 \\
+29 & 人文与形式化讨论 & \href{https://chatgpt.com/library?file_id=libfile_def8bb5116d481919b51486807d4b43d&account_id=personal}{Antiterrastrae：名称、希腊语形态与数学形式化} & 14 \\
+\end{longtable}
+\endgroup
+\vspace{1mm}
+{\small\textbf{版本提示。}巨齿鲨主入口采用正文日期为 2026-10-31 的 9 页修订稿。挂谷主入口采用 3 页条件归约短稿，11 页框架与早期草稿保留于后续版本表。海洋捕食者主入口采用正文日期为 2026-09-17 的 F5 中文版。}
+\Needspace{60mm}\vspace{4mm}
+{\Large\bfseries\color{Ink}完整版本索引}\par
+{\small 每项保留原始文件名；绿色标记对应上表或该组的主要入口。}
+\Needspace{55mm}
+\section{数学与计算}
+\begingroup\fontsize{8.8}{12}\selectfont
+\begin{longtable}{@{}L{\dimexpr\linewidth-50mm-6\tabcolsep\relax}R{8mm}R{16mm}R{26mm}@{}}
+\toprule
+\textbf{PDF 原始文件名（点击打开）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endfirsthead
+\toprule
+\textbf{PDF 原始文件名（续）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endhead
+\midrule\multicolumn{4}{r}{\scriptsize\color{Muted}续下页}\\\endfoot
+\bottomrule\endlastfoot
+\groupheading{立方 Wallis 乘积与整数 ζ 值的最优截断}
+\href{https://chatgpt.com/library?file_id=libfile_e7e674838c4481919916d52a64a06910&account_id=personal}{Certified\_\allowbreak{}Optimal\_\allowbreak{}Truncation.\allowbreak{}pdf}\primary{} & 11 & 0.45 MB & 2026-11-01 \\
+\groupheading{多项式与隐式幂递推：C++ 算法与数值比较}
+\href{https://chatgpt.com/library?file_id=libfile_b47d819187e481919daf6635055e4c45&account_id=personal}{Polynomial\_\allowbreak{}Recurrences\_\allowbreak{}Paper.\allowbreak{}pdf}\primary{} & 24 & 0.81 MB & 2026-11-01 \\
+\groupheading{参数六次多项式的实根几何、判别式与 Galois 分析}
+\href{https://chatgpt.com/library?file_id=libfile_f240de4880a081919968edcc0580f552&account_id=personal}{sextic AMM Modified.\allowbreak{}pdf}\primary{} & 17 & 0.98 MB & 2026-11-01 \\
+\groupheading{Poincaré 圆盘测地线排列着色与 Cayley 变换}
+\href{https://chatgpt.com/library?file_id=libfile_5e02f87088a88191868d8e00bbdc3e33&account_id=personal}{cell\_\allowbreak{}shading.\allowbreak{}pdf}\primary{} & 10 & 3.77 MB & 2026-11-01 \\
+\groupheading{Steiner 链与 Pappus 链：递归反演、双链与旋转}
+\href{https://chatgpt.com/library?file_id=libfile_d02746cf8e048191b5c2d5d3f1015298&account_id=personal}{steiner\_\allowbreak{}pappus\_\allowbreak{}dokument.\allowbreak{}pdf}\primary{} & 7 & 6.55 MB & 2026-11-01 \\
+\href{https://chatgpt.com/library?file_id=libfile_5c6e1830867c81919cfc88a8c0cb7b46&account_id=personal}{steiner pappus dokument.\allowbreak{}pdf} & \textemdash{} & 2.48 MB & 2026-06-30 \\
+\groupheading{抽选消除模型：吸收 Markov 链、鞅与对称性}
+\href{https://chatgpt.com/library?file_id=libfile_31432377f16881918b767d68b70bf550&account_id=personal}{K\_\allowbreak{}class\_\allowbreak{}q\_\allowbreak{}copy\_\allowbreak{}m\_\allowbreak{}slot\_\allowbreak{}markov\_\allowbreak{}symmetry\_\allowbreak{}report.\allowbreak{}pdf}\primary{} & 18 & 0.49 MB & 2026-11-01 \\
+\href{https://chatgpt.com/library?file_id=libfile_c5960afa81188191aa8545c3497fdb07&account_id=personal}{n\_\allowbreak{}class\_\allowbreak{}n\_\allowbreak{}copy\_\allowbreak{}m\_\allowbreak{}slot\_\allowbreak{}markov\_\allowbreak{}report.\allowbreak{}pdf} & \textemdash{} & 0.24 MB & 2026-09-11 \\
+\href{https://chatgpt.com/library?file_id=libfile_88a04151c07c81919d3bcf2644780a25&account_id=personal}{tile\_\allowbreak{}elimination\_\allowbreak{}markov\_\allowbreak{}report.\allowbreak{}pdf} & \textemdash{} & 0.26 MB & 2026-09-11 \\
+\groupheading{从赌徒破产到线性算子：生成函数、多项式提升与延迟 DMD}
+\href{https://chatgpt.com/library?file_id=libfile_302f85d5f6088191acb5f256e74fe805&account_id=personal}{formal\_\allowbreak{}recurrences.\allowbreak{}pdf}\primary{} & 16 & 0.68 MB & 2026-09-20 \\
+\groupheading{集合观测多项模型：概率闭合与参数拟合}
+\href{https://chatgpt.com/library?file_id=libfile_ad5c2a10a1d48191957541553f1b8a53&account_id=personal}{grouped\_\allowbreak{}logit\_\allowbreak{}report.\allowbreak{}pdf}\primary{} & 15 & 0.35 MB & 2026-09-21 \\
+\groupheading{挂谷型集合：条件归约与度量测度框架}
+\href{https://chatgpt.com/library?file_id=libfile_dc36c55815a88191ac044f5f9f1494e2&account_id=personal}{Kakeya\_\allowbreak{}Conditional\_\allowbreak{}Reduction\_\allowbreak{}Note(1).\allowbreak{}pdf}\primary{} & 3 & 0.12 MB & 2026-10-24 \\
+\href{https://chatgpt.com/library?file_id=libfile_66273f78b48c81919ef682453ad295ac&account_id=personal}{Kakeya\_\allowbreak{}Conditional\_\allowbreak{}Reduction\_\allowbreak{}Note.\allowbreak{}pdf} & \textemdash{} & 0.12 MB & 2026-07-29 \\
+\href{https://chatgpt.com/library?file_id=libfile_dab5363407208191b8de4715292a3de9&account_id=personal}{Kakeya\_\allowbreak{}Metric\_\allowbreak{}Measure\_\allowbreak{}Rigorous\_\allowbreak{}Framework\_\allowbreak{}Section8\_\allowbreak{}Removed.\allowbreak{}pdf} & 11 & 0.16 MB & 2026-07-29 \\
+\href{https://chatgpt.com/library?file_id=libfile_46787aa4937c8191a0376dd26ec39da8&account_id=personal}{Kakeya\_\allowbreak{}Metric\_\allowbreak{}Measure\_\allowbreak{}Rigorous\_\allowbreak{}Framework.\allowbreak{}pdf} & \textemdash{} & 0.16 MB & 2026-07-29 \\
+\href{https://chatgpt.com/library?file_id=libfile_942e944f13e4819184774a38d8dafd80&account_id=personal}{Kayeka\_\allowbreak{}Proof 2.\allowbreak{}pdf} & 3 & 0.18 MB & 2026-07-29 \\
+\groupheading{随机游走、Brownian 运动与鞅校准}
+\href{https://chatgpt.com/library?file_id=libfile_2227c3b73f8081918b58830ee0bca786&account_id=personal}{Brownian\_\allowbreak{}Motion\_\allowbreak{}Contour\_\allowbreak{}and\_\allowbreak{}Martingale\_\allowbreak{}Calibration.\allowbreak{}pdf}\primary{} & 38 & 4.18 MB & 2026-09-04 \\
+\end{longtable}
+\endgroup
+\clearpage
+\Needspace{55mm}
+\section{古生物与力学}
+\begingroup\fontsize{8.8}{12}\selectfont
+\begin{longtable}{@{}L{\dimexpr\linewidth-50mm-6\tabcolsep\relax}R{8mm}R{16mm}R{26mm}@{}}
+\toprule
+\textbf{PDF 原始文件名（点击打开）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endfirsthead
+\toprule
+\textbf{PDF 原始文件名（续）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endhead
+\midrule\multicolumn{4}{r}{\scriptsize\color{Muted}续下页}\\\endfoot
+\bottomrule\endlastfoot
+\groupheading{巨齿鲨牙齿尺度应力局域化：CT 校准、数值验证与区域敏感性}
+\href{https://chatgpt.com/library?file_id=libfile_e8de70bc5034819180f2a175864bcb1f&account_id=personal}{DebunkMeg\_\allowbreak{}condensed\_\allowbreak{}9pages\_\allowbreak{}2026-\allowbreak{}10-\allowbreak{}31.\allowbreak{}pdf}\primary{} & 9 & 9.33 MB & 2026-10-31 \\
+\href{https://chatgpt.com/library?file_id=libfile_5da3b17d3c448191bd8d75cd9fd71be4&account_id=personal}{debunk\_\allowbreak{}myth\_\allowbreak{}final\_\allowbreak{}bibliography\_\allowbreak{}single\_\allowbreak{}column\_\allowbreak{}fixed(4).\allowbreak{}pdf} & 24 & 13.65 MB & 2026-10-31 \\
+\href{https://chatgpt.com/library?file_id=libfile_3929ce5353e08191b07f771589580bfd&account_id=personal}{DebunkMeg\_\allowbreak{}DURF\_\allowbreak{}Final\_\allowbreak{}Technical\_\allowbreak{}Report\_\allowbreak{}submission\_\allowbreak{}final\_\allowbreak{}newsource\_\allowbreak{}compact(1).\allowbreak{}pdf} & \textemdash{} & 31.72 MB & 2026-10-24 \\
+\href{https://chatgpt.com/library?file_id=libfile_bfbfb4b22acc8191863065da32ea53df&account_id=personal}{DebunkMeg\_\allowbreak{}DURF\_\allowbreak{}Final\_\allowbreak{}Technical\_\allowbreak{}Report\_\allowbreak{}submission\_\allowbreak{}final\_\allowbreak{}newsource\_\allowbreak{}compact.\allowbreak{}pdf} & 26 & 31.72 MB & 2026-10-24 \\
+\href{https://chatgpt.com/library?file_id=libfile_95c6a928606081918c6314fbde720933&account_id=personal}{Tooth-\allowbreak{}Level Finite-\allowbreak{}Element Analysis of Serration-\allowbreak{}Scale Stress Concentration in an Otodus megalodon Anterior Tooth.\allowbreak{}pdf} & 26 & 25.91 MB & 2026-08-23 \\
+\href{https://chatgpt.com/library?file_id=libfile_0a3b632145c0819196ad4fd3847bed6c&account_id=personal}{DebunkMeg\_\allowbreak{}DURF\_\allowbreak{}Final\_\allowbreak{}Technical\_\allowbreak{}Report\_\allowbreak{}submission\_\allowbreak{}final\_\allowbreak{}aligned(1).\allowbreak{}pdf} & \textemdash{} & 25.41 MB & 2026-07-11 \\
+\href{https://chatgpt.com/library?file_id=libfile_3747eb24a8848191a922b97889fd1b54&account_id=personal}{DebunkMeg\_\allowbreak{}DURF\_\allowbreak{}Final\_\allowbreak{}Technical\_\allowbreak{}Report\_\allowbreak{}Chicago\_\allowbreak{}author\_\allowbreak{}date\_\allowbreak{}22pp.\allowbreak{}pdf} & \textemdash{} & 31.94 MB & 2026-07-11 \\
+\href{https://chatgpt.com/library?file_id=libfile_a72a712270c08191bf43c990a72a8066&account_id=personal}{DebunkMeg\_\allowbreak{}DURF\_\allowbreak{}Final\_\allowbreak{}Technical\_\allowbreak{}Report\_\allowbreak{}submission\_\allowbreak{}upgrade(2).\allowbreak{}pdf} & \textemdash{} & 25.91 MB & 2026-07-11 \\
+\href{https://chatgpt.com/library?file_id=libfile_1f010ee6337881918f733107fe39fc1c&account_id=personal}{DebunkMeg\_\allowbreak{}DURF\_\allowbreak{}Final\_\allowbreak{}Technical\_\allowbreak{}Report\_\allowbreak{}submission\_\allowbreak{}upgrade(1).\allowbreak{}pdf} & \textemdash{} & 25.91 MB & 2026-07-11 \\
+\href{https://chatgpt.com/library?file_id=libfile_67f4f5a55ad08191b2f6495ea33f3c65&account_id=personal}{DebunkMeg\_\allowbreak{}DURF\_\allowbreak{}Final\_\allowbreak{}Technical\_\allowbreak{}Report\_\allowbreak{}submission\_\allowbreak{}upgrade.\allowbreak{}pdf} & \textemdash{} & 25.91 MB & 2026-07-06 \\
+\href{https://chatgpt.com/library?file_id=libfile_b1e49dedccfc81918e881c5c34b2e258&account_id=personal}{DebunkMeg\_\allowbreak{}DURF\_\allowbreak{}Final\_\allowbreak{}Technical\_\allowbreak{}Report\_\allowbreak{}single\_\allowbreak{}specimen\_\allowbreak{}scope.\allowbreak{}pdf} & \textemdash{} & 24.52 MB & 2026-07-06 \\
+\href{https://chatgpt.com/library?file_id=libfile_43c873e871a48191a0afc40e6661e247&account_id=personal}{DebunkMeg\_\allowbreak{}DURF\_\allowbreak{}Final\_\allowbreak{}Technical\_\allowbreak{}Report\_\allowbreak{}Table9\_\allowbreak{}values\_\allowbreak{}refs\_\allowbreak{}flow(1).\allowbreak{}pdf} & \textemdash{} & 24.51 MB & 2026-07-06 \\
+\href{https://chatgpt.com/library?file_id=libfile_16161ed669a88191928f3ca9b10c897f&account_id=personal}{DebunkMeg\_\allowbreak{}DURF\_\allowbreak{}Final\_\allowbreak{}Technical\_\allowbreak{}Report\_\allowbreak{}Table9\_\allowbreak{}values\_\allowbreak{}refs\_\allowbreak{}flow.\allowbreak{}pdf} & \textemdash{} & 24.51 MB & 2026-07-05 \\
+\href{https://chatgpt.com/library?file_id=libfile_26dd4d0052a08191b639543385a547e2&account_id=personal}{DebunkMeg\_\allowbreak{}DURF\_\allowbreak{}Final\_\allowbreak{}Technical\_\allowbreak{}Report\_\allowbreak{}Table9\_\allowbreak{}values\_\allowbreak{}refs(1).\allowbreak{}pdf} & \textemdash{} & 24.19 MB & 2026-07-03 \\
+\href{https://chatgpt.com/library?file_id=libfile_bb533660e0988191917d731a0ac20c03&account_id=personal}{DebunkMeg\_\allowbreak{}DURF\_\allowbreak{}Final\_\allowbreak{}Technical\_\allowbreak{}Report\_\allowbreak{}Table9\_\allowbreak{}values\_\allowbreak{}refs.\allowbreak{}pdf} & \textemdash{} & 24.19 MB & 2026-07-03 \\
+\href{https://chatgpt.com/library?file_id=libfile_156d37bef75c81919dc3b002005fa80c&account_id=personal}{DebunkMeg\_\allowbreak{}DURF\_\allowbreak{}Final\_\allowbreak{}Technical\_\allowbreak{}Report\_\allowbreak{}Table9\_\allowbreak{}values.\allowbreak{}pdf} & \textemdash{} & 24.19 MB & 2026-06-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_fb7b015c78908191bd6d7a7a44c77a16&account_id=personal}{DebunkMeg\_\allowbreak{}DURF\_\allowbreak{}Final\_\allowbreak{}Technical\_\allowbreak{}Report\_\allowbreak{}Table9\_\allowbreak{}completed.\allowbreak{}pdf} & \textemdash{} & 24.19 MB & 2026-06-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_22c534bb0c748191ad16d0f9b3f00278&account_id=personal}{DebunkMeg\_\allowbreak{}DURF\_\allowbreak{}Final\_\allowbreak{}Technical\_\allowbreak{}Report.\allowbreak{}pdf} & \textemdash{} & 24.18 MB & 2026-06-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_73f1e6e04188819189da55f97134e253&account_id=personal}{DebunkMeg\_\allowbreak{}PDE\_\allowbreak{}weakform\_\allowbreak{}revised(1).\allowbreak{}pdf} & \textemdash{} & 24.18 MB & 2026-06-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_8c682f85e0b8819186c7f2bc5c30e7f1&account_id=personal}{DebunkMeg\_\allowbreak{}PDE\_\allowbreak{}weakform\_\allowbreak{}revised.\allowbreak{}pdf} & \textemdash{} & 24.18 MB & 2026-06-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_e51758a26e848191a3f89061be324b6c&account_id=personal}{DebunkMeg\_\allowbreak{}definitions\_\allowbreak{}revised(1).\allowbreak{}pdf} & \textemdash{} & 24.17 MB & 2026-06-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_0ee2892c30f8819184a462525bb37ef8&account_id=personal}{DebunkMeg\_\allowbreak{}definitions\_\allowbreak{}revised.\allowbreak{}pdf} & \textemdash{} & 24.17 MB & 2026-06-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_f3c03b7e92fc8191bfc3696eebe1d0a1&account_id=personal}{DebunkMeg\_\allowbreak{}field\_\allowbreak{}revised(2).\allowbreak{}pdf} & \textemdash{} & 24.15 MB & 2026-06-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_1625bae6e2888191a80e675df6d25f09&account_id=personal}{DebunkMeg\_\allowbreak{}field\_\allowbreak{}revised(1).\allowbreak{}pdf} & \textemdash{} & 24.15 MB & 2026-06-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_24e15a25e4e08191a067940f036fb59f&account_id=personal}{DebunkMeg\_\allowbreak{}field\_\allowbreak{}revised.\allowbreak{}pdf} & \textemdash{} & 24.15 MB & 2026-06-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_0a22b3dc77e08191841def6a6b8add17&account_id=personal}{DebunkMeg\_\allowbreak{}layout\_\allowbreak{}optimized.\allowbreak{}pdf} & \textemdash{} & 28.95 MB & 2026-06-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_161fdb1741a0819182d1f7b01ec46500&account_id=personal}{DebunkMeg\_\allowbreak{}rigor\_\allowbreak{}revised.\allowbreak{}pdf} & \textemdash{} & 28.94 MB & 2026-06-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_8b52177e429c81919ea1178159709d06&account_id=personal}{debunk\_\allowbreak{}myth(1).\allowbreak{}pdf} & \textemdash{} & 32.85 MB & 2026-06-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_4f4476384d8c8191b6001e91a0c3fcaf&account_id=personal}{megalodon\_\allowbreak{}abstract\_\allowbreak{}standalone.\allowbreak{}pdf} & \textemdash{} & 0.11 MB & 2026-05-05 \\
+\href{https://chatgpt.com/library?file_id=libfile_5bc86f734ec8819187f87751ae8a818b&account_id=personal}{one\_\allowbreak{}page\_\allowbreak{}project\_\allowbreak{}summary\_\allowbreak{}megalodon(1).\allowbreak{}pdf} & \textemdash{} & 0.02 MB & 2026-05-05 \\
+\href{https://chatgpt.com/library?file_id=libfile_a7c4c52814388191b71bf4283894bcac&account_id=personal}{one\_\allowbreak{}page\_\allowbreak{}project\_\allowbreak{}summary\_\allowbreak{}megalodon.\allowbreak{}pdf} & \textemdash{} & 0.02 MB & 2026-05-05 \\
+\href{https://chatgpt.com/library?file_id=libfile_2b13f07b25288191a4308866f9d986bc&account_id=personal}{debunk\_\allowbreak{}myth\_\allowbreak{}final\_\allowbreak{}bibliography\_\allowbreak{}single\_\allowbreak{}column\_\allowbreak{}fixed(3).\allowbreak{}pdf} & \textemdash{} & 13.65 MB & 2026-05-05 \\
+\href{https://chatgpt.com/library?file_id=libfile_edd8c148a0b48191a0638bfd0b55e34a&account_id=personal}{debunk\_\allowbreak{}myth\_\allowbreak{}appendix\_\allowbreak{}one\_\allowbreak{}column\_\allowbreak{}bibliography(2).\allowbreak{}pdf} & \textemdash{} & 11.02 MB & 2026-04-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_3eb58b13d1f481919c97ad79e4c2bc18&account_id=personal}{debunk\_\allowbreak{}myth\_\allowbreak{}appendix\_\allowbreak{}one\_\allowbreak{}column\_\allowbreak{}bibliography(1).\allowbreak{}pdf} & \textemdash{} & 11.02 MB & 2026-04-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_637cedd67e7481918958268e8a0346bc&account_id=personal}{debunk\_\allowbreak{}myth\_\allowbreak{}appendix\_\allowbreak{}one\_\allowbreak{}column\_\allowbreak{}bibliography.\allowbreak{}pdf} & \textemdash{} & 1.78 MB & 2026-04-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_897f4b69eb388191a25640d72f9919b0&account_id=personal}{debunk\_\allowbreak{}myth\_\allowbreak{}final\_\allowbreak{}bibliography\_\allowbreak{}single\_\allowbreak{}column\_\allowbreak{}fixed(2).\allowbreak{}pdf} & \textemdash{} & 13.65 MB & 2026-04-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_923f5c694a788191a3a8b75d88e7bd3a&account_id=personal}{debunk\_\allowbreak{}myth\_\allowbreak{}final\_\allowbreak{}bibliography\_\allowbreak{}single\_\allowbreak{}column\_\allowbreak{}fixed(1).\allowbreak{}pdf} & \textemdash{} & 13.65 MB & 2026-04-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_eebc828e024c8191a79717fb362239df&account_id=personal}{debunk\_\allowbreak{}myth\_\allowbreak{}final\_\allowbreak{}bibliography\_\allowbreak{}single\_\allowbreak{}column\_\allowbreak{}fixed.\allowbreak{}pdf} & \textemdash{} & 13.65 MB & 2026-04-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_3b11514949108191aee065330591826e&account_id=personal}{debunk\_\allowbreak{}myth\_\allowbreak{}appendix\_\allowbreak{}one\_\allowbreak{}column\_\allowbreak{}bibliography\_\allowbreak{}fixed(3).\allowbreak{}pdf} & \textemdash{} & 13.65 MB & 2026-04-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_33e699b940708191808073d86cbc39a6&account_id=personal}{debunk\_\allowbreak{}myth\_\allowbreak{}appendix\_\allowbreak{}one\_\allowbreak{}column\_\allowbreak{}bibliography\_\allowbreak{}fixed(2).\allowbreak{}pdf} & \textemdash{} & 0.01 MB & 2026-04-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_6803c220aeac8191aae2abc37a9a9cca&account_id=personal}{debunk\_\allowbreak{}myth\_\allowbreak{}appendix\_\allowbreak{}one\_\allowbreak{}column\_\allowbreak{}bibliography\_\allowbreak{}fixed(1).\allowbreak{}pdf} & \textemdash{} & 6.18 MB & 2026-04-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_bbf6918ecd1c8191a28d0107a367ffd4&account_id=personal}{debunk\_\allowbreak{}myth\_\allowbreak{}appendix\_\allowbreak{}one\_\allowbreak{}column\_\allowbreak{}bibliography\_\allowbreak{}fixed.\allowbreak{}pdf} & \textemdash{} & 3.82 MB & 2026-04-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_020aeefba88c8191a7b2087cd732460f&account_id=personal}{final\_\allowbreak{}body\_\allowbreak{}refs\_\allowbreak{}onecol\_\allowbreak{}fast.\allowbreak{}pdf} & \textemdash{} & 0.04 MB & 2026-04-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_27c1acc663e0819182c65e2df2849273&account_id=personal}{debunk\_\allowbreak{}myth\_\allowbreak{}replaced\_\allowbreak{}appendix(1).\allowbreak{}pdf} & \textemdash{} & 34.92 MB & 2026-04-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_df65df0d522881919f5b782b5ab5240e&account_id=personal}{debunk\_\allowbreak{}myth\_\allowbreak{}replaced\_\allowbreak{}appendix.\allowbreak{}pdf} & \textemdash{} & 34.92 MB & 2026-04-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_eca6edbc935c8191a2c223d225838f24&account_id=personal}{debunk\_\allowbreak{}myth.\allowbreak{}pdf} & \textemdash{} & 32.85 MB & 2026-04-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_6e9ee9ec5f688191ae22eabbefd44cd0&account_id=personal}{megalodon\_\allowbreak{}appendix\_\allowbreak{}figure\_\allowbreak{}plate\_\allowbreak{}A4\_\allowbreak{}portrait(1).\allowbreak{}pdf} & \textemdash{} & 2.42 MB & 2026-04-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_8f06bd9136cc8191a99735da7b89bd5a&account_id=personal}{megalodon\_\allowbreak{}FINAL\_\allowbreak{}with\_\allowbreak{}appendix(1).\allowbreak{}pdf} & \textemdash{} & 14.70 MB & 2026-03-31 \\
+\href{https://chatgpt.com/library?file_id=libfile_5e2dc0331e708191a83e49afd6d67c6d&account_id=personal}{megalodon\_\allowbreak{}FINAL\_\allowbreak{}with\_\allowbreak{}appendix.\allowbreak{}pdf} & \textemdash{} & 14.70 MB & 2026-03-16 \\
+\href{https://chatgpt.com/library?file_id=libfile_a98d8ccb8a108191b78645cf586af55e&account_id=personal}{megalodon edge mechanics v2.\allowbreak{}pdf} & \textemdash{} & 0.51 MB & 2026-03-16 \\
+\href{https://chatgpt.com/library?file_id=libfile_e7866c4d4a8081919d660ddcc5ceec5b&account_id=personal}{megalodon FINAL(1).\allowbreak{}pdf} & \textemdash{} & 12.21 MB & 2026-03-16 \\
+\href{https://chatgpt.com/library?file_id=libfile_5f54ff05e0b4819191685b9477b82aa9&account_id=personal}{megalodon\_\allowbreak{}appendix\_\allowbreak{}figure\_\allowbreak{}plate\_\allowbreak{}A4\_\allowbreak{}portrait.\allowbreak{}pdf} & \textemdash{} & 2.42 MB & 2026-03-16 \\
+\href{https://chatgpt.com/library?file_id=libfile_7ba95a4cb3e08191a6661e5868a759ec&account_id=personal}{megalodon\_\allowbreak{}paper\_\allowbreak{}images.\allowbreak{}pdf} & \textemdash{} & 39.16 MB & 2026-03-16 \\
+\href{https://chatgpt.com/library?file_id=libfile_8c5f8bc66e588191992a8a704fc3943a&account_id=personal}{megalodon FINAL.\allowbreak{}pdf} & \textemdash{} & 12.21 MB & 2026-03-16 \\
+\href{https://chatgpt.com/library?file_id=libfile_e4e3001e64e0819187ab98fd9b2fd210&account_id=personal}{revised excerpt master(3).\allowbreak{}pdf} & \textemdash{} & 0.05 MB & 2026-07-11 \\
+\href{https://chatgpt.com/library?file_id=libfile_19a02a87172c8191a093b6c6eae5ac98&account_id=personal}{revised excerpt master(2).\allowbreak{}pdf} & \textemdash{} & 0.05 MB & 2026-07-11 \\
+\href{https://chatgpt.com/library?file_id=libfile_9dc5df0a54b88191b843fa07b3de92e9&account_id=personal}{revised excerpt master(1).\allowbreak{}pdf} & \textemdash{} & 0.05 MB & 2026-07-11 \\
+\href{https://chatgpt.com/library?file_id=libfile_c9b976daab008191ba83bddc00f2bacd&account_id=personal}{revised excerpt master.\allowbreak{}pdf} & 3 & 0.05 MB & 2026-07-11 \\
+\groupheading{Massa Corporis：大型鲸类与中生代海生爬行动物的体重比较}
+\href{https://chatgpt.com/library?file_id=libfile_4fb7785fd23c819193e92aeab35dc9ad&account_id=personal}{Massa\_\allowbreak{}Corporis\_\allowbreak{}draft.\allowbreak{}pdf}\primary{} & 17 & 0.24 MB & 2026-10-24 \\
+\groupheading{De Natura Livyatanis：抹香鲸总科与暴龙类的平行系统讨论}
+\href{https://chatgpt.com/library?file_id=libfile_04fb713015e48191b20fd60d2b25b4c7&account_id=personal}{de\_\allowbreak{}natura\_\allowbreak{}livyatanis\_\allowbreak{}systematica\_\allowbreak{}addenda\_\allowbreak{}final.\allowbreak{}pdf}\primary{} & 22 & 0.78 MB & 2026-09-16 \\
+\href{https://chatgpt.com/library?file_id=libfile_798d356aa2508191be0009ba524ba9d7&account_id=personal}{de\_\allowbreak{}natura\_\allowbreak{}livyatanis\_\allowbreak{}systematica\_\allowbreak{}final.\allowbreak{}pdf} & \textemdash{} & 0.75 MB & 2026-09-16 \\
+\href{https://chatgpt.com/library?file_id=libfile_a7c9317c95288191ae5900198c3c38e0&account_id=personal}{de natura livyatanis.\allowbreak{}pdf} & \textemdash{} & 0.15 MB & 2026-09-16 \\
+\groupheading{海洋非滤食掠食者功能梯度与极限数据汇编}
+\href{https://chatgpt.com/library?file_id=libfile_8a7734085c048191ba0ca011d234cd3f&account_id=personal}{ocean\_\allowbreak{}predator\_\allowbreak{}tier\_\allowbreak{}F5\_\allowbreak{}ZH.\allowbreak{}pdf}\primary{} & 21 & 0.74 MB & 2026-09-17 \\
+\href{https://chatgpt.com/library?file_id=libfile_1a88d360d3ac81918935f98bc86cb346&account_id=personal}{ocean\_\allowbreak{}predator\_\allowbreak{}tier\_\allowbreak{}extremes\_\allowbreak{}v5\_\allowbreak{}zh\_\allowbreak{}final.\allowbreak{}pdf} & 17 & 1.82 MB & 2026-09-16 \\
+\href{https://chatgpt.com/library?file_id=libfile_c0577ef72f2481918f97fc10c318a497&account_id=personal}{ocean\_\allowbreak{}predator\_\allowbreak{}tier\_\allowbreak{}extremes\_\allowbreak{}v5\_\allowbreak{}de\_\allowbreak{}pure\_\allowbreak{}final.\allowbreak{}pdf} & \textemdash{} & 1.32 MB & 2026-09-16 \\
+\href{https://chatgpt.com/library?file_id=libfile_eeb192cc68ec8191b4619a7b36f4c676&account_id=personal}{ocean\_\allowbreak{}predator\_\allowbreak{}tier\_\allowbreak{}extremes\_\allowbreak{}v4\_\allowbreak{}de\_\allowbreak{}final.\allowbreak{}pdf} & \textemdash{} & 1.29 MB & 2026-09-16 \\
+\href{https://chatgpt.com/library?file_id=libfile_ba49245ea90c8191835b2831c4bde4df&account_id=personal}{ocean\_\allowbreak{}predator\_\allowbreak{}tier\_\allowbreak{}extremes\_\allowbreak{}v3\_\allowbreak{}final.\allowbreak{}pdf} & \textemdash{} & 1.82 MB & 2026-09-16 \\
+\href{https://chatgpt.com/library?file_id=libfile_fb792e9457e08191a6f890d4b886b960&account_id=personal}{ocean\_\allowbreak{}predator\_\allowbreak{}tier\_\allowbreak{}extremes\_\allowbreak{}v2\_\allowbreak{}final.\allowbreak{}pdf} & \textemdash{} & 1.71 MB & 2026-09-16 \\
+\href{https://chatgpt.com/library?file_id=libfile_2663a4cdcc048191baf4aabca77486a4&account_id=personal}{ocean\_\allowbreak{}predator\_\allowbreak{}tier\_\allowbreak{}extremes\_\allowbreak{}final.\allowbreak{}pdf} & \textemdash{} & 1.13 MB & 2026-09-16 \\
+\groupheading{古地层学与新生代地质：勘误、证据分级与可检验假设}
+\href{https://chatgpt.com/library?file_id=libfile_e517125ea0748191b7d880689b64bc07&account_id=personal}{古地层学\_\allowbreak{}地质分析\_\allowbreak{}勘误与假设证据矩阵.\allowbreak{}pdf}\primary{} & 8 & 0.06 MB & 2026-10-02 \\
+\groupheading{铁砧与荆棘之冠：圈养鲸类的生理与认知约束}
+\href{https://chatgpt.com/library?file_id=libfile_0a1035200aac819194e799736d879d52&account_id=personal}{de incude et corona spinea.\allowbreak{}pdf}\primary{} & 11 & 0.08 MB & 2026-03-21 \\
+\href{https://chatgpt.com/library?file_id=libfile_a5c8fe10343c819185a2672d75bd275d&account_id=personal}{铁砧与荆棘之冠.\allowbreak{}pdf} & 10 & 0.34 MB & 2026-03-21 \\
+\groupheading{先于文明的歌：海洋巨型动物智能的能量、认知与介质约束}
+\href{https://chatgpt.com/library?file_id=libfile_0547a5d339ec8191a67a49721d168c3c&account_id=personal}{先于文明的歌 The Song Before Civilisation.\allowbreak{}pdf}\primary{} & 7 & 0.69 MB & 2026-10-24 \\
+\end{longtable}
+\endgroup
+\Needspace{55mm}
+\section{声学与信号处理}
+\begingroup\fontsize{8.8}{12}\selectfont
+\begin{longtable}{@{}L{\dimexpr\linewidth-50mm-6\tabcolsep\relax}R{8mm}R{16mm}R{26mm}@{}}
+\toprule
+\textbf{PDF 原始文件名（点击打开）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endfirsthead
+\toprule
+\textbf{PDF 原始文件名（续）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endhead
+\midrule\multicolumn{4}{r}{\scriptsize\color{Muted}续下页}\\\endfoot
+\bottomrule\endlastfoot
+\groupheading{Physeter Voice：STFT、频带能量、分段与节奏分析}
+\href{https://chatgpt.com/library?file_id=libfile_682f0956c4648191a4865aa0f870486d&account_id=personal}{Physeter Voice Report LaTeX compiled.\allowbreak{}pdf}\primary{} & 21 & 6.35 MB & 2026-06-24 \\
+\href{https://chatgpt.com/library?file_id=libfile_0bc6878d705c8191b98cbd1ec8eda74d&account_id=personal}{Physeter Voice Report LaTeX compiled(1).\allowbreak{}pdf} & \textemdash{} & 6.35 MB & 2026-06-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_ff3e98474eb081919dd808d42211a675&account_id=personal}{Physeter\_\allowbreak{}Voice\_\allowbreak{}Pro\_\allowbreak{}Guide\_\allowbreak{}with\_\allowbreak{}Simple\_\allowbreak{}Opening.\allowbreak{}pdf} & \textemdash{} & 7.18 MB & 2026-06-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_aaf061a000708191a7849cec30c8ad5f&account_id=personal}{Physeter\_\allowbreak{}Voice\_\allowbreak{}with\_\allowbreak{}Pro\_\allowbreak{}Guide\_\allowbreak{}and\_\allowbreak{}Simple\_\allowbreak{}Opening.\allowbreak{}pdf} & \textemdash{} & 13.54 MB & 2026-06-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_6d7cd67476208191a3677bbbefd373ed&account_id=personal}{Physeter\_\allowbreak{}Voice\_\allowbreak{}Professional\_\allowbreak{}Chinese\_\allowbreak{}Guide.\allowbreak{}pdf} & \textemdash{} & 4.95 MB & 2026-06-24 \\
+\href{https://chatgpt.com/library?file_id=libfile_d430511889748191af51db4c2c47acf0&account_id=personal}{Physeter\_\allowbreak{}Voice\_\allowbreak{}with\_\allowbreak{}Professional\_\allowbreak{}Chinese\_\allowbreak{}Guide.\allowbreak{}pdf} & \textemdash{} & 11.32 MB & 2026-06-24 \\
+\href{https://chatgpt.com/library?file_id=libfile_881938ff93fc81918f89749352c40ea2&account_id=personal}{Physeter\_\allowbreak{}Voice\_\allowbreak{}Chinese\_\allowbreak{}Guide\_\allowbreak{}5p.\allowbreak{}pdf} & \textemdash{} & 2.23 MB & 2026-06-24 \\
+\href{https://chatgpt.com/library?file_id=libfile_5aa387a2fd208191a1ed9ca8e7443117&account_id=personal}{Physeter\_\allowbreak{}Voice\_\allowbreak{}with\_\allowbreak{}Chinese\_\allowbreak{}Guide.\allowbreak{}pdf} & \textemdash{} & 8.60 MB & 2026-06-24 \\
+\href{https://chatgpt.com/library?file_id=libfile_7950bb24047c8191919b06760c6a7dd0&account_id=personal}{18\_\allowbreak{}physeter\_\allowbreak{}voice\_\allowbreak{}master\_\allowbreak{}consolidated\_\allowbreak{}report.\allowbreak{}pdf} & 16 & 13.28 MB & 2026-06-18 \\
+\href{https://chatgpt.com/library?file_id=libfile_293e9d22946881918610434b6e3bdcae&account_id=personal}{14\_\allowbreak{}physeter\_\allowbreak{}voice\_\allowbreak{}summary\_\allowbreak{}report\_\allowbreak{}complete\_\allowbreak{}deliverables(1).\allowbreak{}pdf} & \textemdash{} & 14.10 MB & 2026-06-18 \\
+\href{https://chatgpt.com/library?file_id=libfile_f90c611ebf50819199d20c53d3e787da&account_id=personal}{16\_\allowbreak{}physeter\_\allowbreak{}voice\_\allowbreak{}summary\_\allowbreak{}report\_\allowbreak{}fixed\_\allowbreak{}stft\_\allowbreak{}layout.\allowbreak{}pdf} & \textemdash{} & 5.94 MB & 2026-06-18 \\
+\href{https://chatgpt.com/library?file_id=libfile_c0ce79f53f9c81918bdcf0e33100ed7f&account_id=personal}{14\_\allowbreak{}physeter\_\allowbreak{}voice\_\allowbreak{}summary\_\allowbreak{}report\_\allowbreak{}complete\_\allowbreak{}deliverables.\allowbreak{}pdf} & \textemdash{} & 14.10 MB & 2026-06-18 \\
+\end{longtable}
+\endgroup
+\Needspace{55mm}
+\section{NLP 与模型研究}
+\begingroup\fontsize{8.8}{12}\selectfont
+\begin{longtable}{@{}L{\dimexpr\linewidth-50mm-6\tabcolsep\relax}R{8mm}R{16mm}R{26mm}@{}}
+\toprule
+\textbf{PDF 原始文件名（点击打开）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endfirsthead
+\toprule
+\textbf{PDF 原始文件名（续）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endhead
+\midrule\multicolumn{4}{r}{\scriptsize\color{Muted}续下页}\\\endfoot
+\bottomrule\endlastfoot
+\groupheading{从 Ancient Greek UD 编译语义 DAG}
+\href{https://chatgpt.com/library?file_id=libfile_3bb5a969488c8191bf8a5679e80ea107&account_id=personal}{final\_\allowbreak{}project\_\allowbreak{}paper\_\allowbreak{}morpheme\_\allowbreak{}lexeme\_\allowbreak{}revised.\allowbreak{}pdf}\primary{} & 9 & 0.22 MB & 2026-05-04 \\
+\href{https://chatgpt.com/library?file_id=libfile_7d7b39dcc62881918cf73a0ee0c95b4e&account_id=personal}{final\_\allowbreak{}project\_\allowbreak{}paper\_\allowbreak{}morpheme\_\allowbreak{}lexeme\_\allowbreak{}revised(2).\allowbreak{}pdf} & \textemdash{} & 0.22 MB & 2026-05-04 \\
+\href{https://chatgpt.com/library?file_id=libfile_78da5d291154819183af736e07c5cb64&account_id=personal}{final\_\allowbreak{}project\_\allowbreak{}paper\_\allowbreak{}morpheme\_\allowbreak{}lexeme\_\allowbreak{}revised(1).\allowbreak{}pdf} & \textemdash{} & 0.22 MB & 2026-05-04 \\
+\href{https://chatgpt.com/library?file_id=libfile_aabe12b3a5648191a794333fbbb50138&account_id=personal}{main(1).\allowbreak{}pdf} & \textemdash{} & 0.22 MB & 2026-05-03 \\
+\href{https://chatgpt.com/library?file_id=libfile_35c3052295f481919a896b4f5ed45e0e&account_id=personal}{main.\allowbreak{}pdf} & \textemdash{} & 0.22 MB & 2026-05-03 \\
+\href{https://chatgpt.com/library?file_id=libfile_b16e5e079144819195bd5b9681a3d711&account_id=personal}{final\_\allowbreak{}project\_\allowbreak{}paper.\allowbreak{}pdf} & \textemdash{} & 0.06 MB & 2026-05-03 \\
+\groupheading{Gemini 条件效价、语义安全与目标扩张分析}
+\href{https://chatgpt.com/library?file_id=libfile_7800df5c2518819182d8d5d9f54f84be&account_id=personal}{Gemini\_\allowbreak{}valence\_\allowbreak{}report\_\allowbreak{}structured\_\allowbreak{}no\_\allowbreak{}overlap.\allowbreak{}pdf}\primary{} & 46 & 0.27 MB & 2026-09-28 \\
+\href{https://chatgpt.com/library?file_id=libfile_a31ba7a636b08191b827736c65d6716e&account_id=personal}{Gemini\_\allowbreak{}证据封存\_\allowbreak{}增补版\_\allowbreak{}2026-\allowbreak{}10-\allowbreak{}13.\allowbreak{}pdf} & \textemdash{} & 65.61 MB & 2026-10-13 \\
+\href{https://chatgpt.com/library?file_id=libfile_ba7c95aba4c4819188d7eca05e2e857f&account_id=personal}{Gemini\_\allowbreak{}争议输出\_\allowbreak{}证据摘录与分析\_\allowbreak{}2026-\allowbreak{}10-\allowbreak{}12.\allowbreak{}pdf} & \textemdash{} & 0.04 MB & 2026-10-12 \\
+\href{https://chatgpt.com/library?file_id=libfile_9fc543223a388191a88eb435fdf4edf6&account_id=personal}{Appendix\_\allowbreak{}G\_\allowbreak{}POLSKA\_\allowbreak{}JUMPSTYLE\_\allowbreak{}coding.\allowbreak{}pdf} & 4 & 0.14 MB & 2026-09-28 \\
+\href{https://chatgpt.com/library?file_id=libfile_efd9478990048191aa3f967a351f9c35&account_id=personal}{Gemini\_\allowbreak{}valence\_\allowbreak{}report\_\allowbreak{}structured\_\allowbreak{}no\_\allowbreak{}overlap(1).\allowbreak{}pdf} & \textemdash{} & 38.36 MB & 2026-09-28 \\
+\href{https://chatgpt.com/library?file_id=libfile_83e14d838ee481919e56e5b5c7f890dc&account_id=personal}{Gemini\_\allowbreak{}valence\_\allowbreak{}report\_\allowbreak{}with\_\allowbreak{}discrimination\_\allowbreak{}analysis.\allowbreak{}pdf} & 49 & 0.53 MB & 2026-09-28 \\
+\href{https://chatgpt.com/library?file_id=libfile_d57fa2d2a01c8191a856bde476e387ed&account_id=personal}{Gemini\_\allowbreak{}valence\_\allowbreak{}report\_\allowbreak{}with\_\allowbreak{}guardrail\_\allowbreak{}and\_\allowbreak{}target\_\allowbreak{}expansion.\allowbreak{}pdf} & \textemdash{} & 0.48 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_33bdf817f19481919bfbd01e99b9ade5&account_id=personal}{Gemini\_\allowbreak{}valence\_\allowbreak{}report\_\allowbreak{}with\_\allowbreak{}guardrail\_\allowbreak{}penetration.\allowbreak{}pdf} & \textemdash{} & 0.40 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_94c3dd644f908191bc2f922ca519fdb2&account_id=personal}{Gemini\_\allowbreak{}valence\_\allowbreak{}report\_\allowbreak{}LaTeX\_\allowbreak{}render\_\allowbreak{}fixed(1).\allowbreak{}pdf} & \textemdash{} & 0.36 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_d37bdd3427fc81919ed2b368c6741167&account_id=personal}{\_\allowbreak{}corrected\_\allowbreak{}math\_\allowbreak{}appendix\_\allowbreak{}v2.\allowbreak{}pdf} & \textemdash{} & 0.10 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_6cd221b52d8c8191b0f8b8612d245db5&account_id=personal}{Gemini\_\allowbreak{}valence\_\allowbreak{}report\_\allowbreak{}LaTeX\_\allowbreak{}render\_\allowbreak{}fixed.\allowbreak{}pdf} & \textemdash{} & 0.36 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_000468a2bab881919ae5077682c5c27c&account_id=personal}{\_\allowbreak{}dense\_\allowbreak{}embedding\_\allowbreak{}similarity\_\allowbreak{}appendix.\allowbreak{}pdf} & \textemdash{} & 0.23 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_b259229d29908191a5ac1465f86df3f7&account_id=personal}{Gemini\_\allowbreak{}valence\_\allowbreak{}report\_\allowbreak{}with\_\allowbreak{}dense\_\allowbreak{}embedding\_\allowbreak{}analysis.\allowbreak{}pdf} & \textemdash{} & 0.49 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_838959d537908191b28c4cea340c3f3c&account_id=personal}{\_\allowbreak{}valence\_\allowbreak{}model\_\allowbreak{}appendix.\allowbreak{}pdf} & \textemdash{} & 0.03 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_cd024a9e71e8819189e3216374bb4df9&account_id=personal}{Gemini\_\allowbreak{}animal\_\allowbreak{}matrix\_\allowbreak{}report\_\allowbreak{}with\_\allowbreak{}valence\_\allowbreak{}model.\allowbreak{}pdf} & \textemdash{} & 0.29 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_bfb9947bc3208191b79c84012361b1db&account_id=personal}{Gemini\_\allowbreak{}animal\_\allowbreak{}all\_\allowbreak{}numeric\_\allowbreak{}visualizations.\allowbreak{}pdf} & \textemdash{} & 0.19 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_c404cc1ab94c8191a544c669a6e0d227&account_id=personal}{Gemini\_\allowbreak{}animal\_\allowbreak{}matrix\_\allowbreak{}report\_\allowbreak{}with\_\allowbreak{}all\_\allowbreak{}visualizations.\allowbreak{}pdf} & \textemdash{} & 0.28 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_0beb53b72a8c8191a37a0b94bffabe43&account_id=personal}{Gemini\_\allowbreak{}animal\_\allowbreak{}matrix\_\allowbreak{}report\_\allowbreak{}reexport.\allowbreak{}pdf} & \textemdash{} & 0.12 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_8b4a108746d881919aee15212462ff03&account_id=personal}{Gemini\_\allowbreak{}群体侮辱与歧视内容分析\_\allowbreak{}动物全样本矩阵统计版.\allowbreak{}pdf} & \textemdash{} & 0.12 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_c35b346bddb881918c04d85136f72673&account_id=personal}{Gemini\_\allowbreak{}群体侮辱与歧视内容分析\_\allowbreak{}逐词类型化数字量词完整版\_\allowbreak{}动物事实逆转补充.\allowbreak{}pdf} & \textemdash{} & 0.09 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_12651605e8648191943be0826dcf4ad7&account_id=personal}{Gemini\_\allowbreak{}群体侮辱与歧视内容分析\_\allowbreak{}逐词类型化数字量词完整版\_\allowbreak{}兼容修复.\allowbreak{}pdf} & \textemdash{} & 0.08 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_38c14f19fe28819184b9f41b4b150ced&account_id=personal}{Gemini\_\allowbreak{}群体侮辱与歧视内容分析\_\allowbreak{}逐词类型化数字量词完整版.\allowbreak{}pdf} & \textemdash{} & 0.08 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_e81bd83cce048191ad740228d2d266a0&account_id=personal}{Gemini\_\allowbreak{}群体侮辱与歧视内容分析\_\allowbreak{}归类目的数字量词完整版.\allowbreak{}pdf} & \textemdash{} & 0.10 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_92a6dae4999481919bd9174f6ba85254&account_id=personal}{Gemini\_\allowbreak{}群体侮辱与歧视内容分析\_\allowbreak{}归类目的总表版.\allowbreak{}pdf} & \textemdash{} & 0.08 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_0f8fdc7ae47481918bfb0e91a18d989c&account_id=personal}{Gemini\_\allowbreak{}群体侮辱与歧视内容分析\_\allowbreak{}全量逐词目的性扩展版.\allowbreak{}pdf} & \textemdash{} & 0.08 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_224eef3f40d4819183020e7f576de776&account_id=personal}{Gemini\_\allowbreak{}群体侮辱与歧视内容分析\_\allowbreak{}逐词目的性扩展版.\allowbreak{}pdf} & \textemdash{} & 0.06 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_58168d5783c88191bda73cd6a7013cc7&account_id=personal}{Gemini\_\allowbreak{}群体侮辱与歧视内容分析(1).\allowbreak{}pdf} & \textemdash{} & 0.04 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_c95f4db7bae08191a0e38a23b47c549a&account_id=personal}{Gemini\_\allowbreak{}群体侮辱与歧视内容分析\_\allowbreak{}扩展版.\allowbreak{}pdf} & \textemdash{} & 0.04 MB & 2026-09-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_14294b7841f08191830d5e9b69ec11bd&account_id=personal}{Gemini\_\allowbreak{}群体侮辱与歧视内容分析.\allowbreak{}pdf} & \textemdash{} & 0.04 MB & 2026-09-25 \\
+\groupheading{AI 辅助研究的价值与核查成本}
+\href{https://chatgpt.com/library?file_id=libfile_62d5ebf30e388191b510465799793cad&account_id=personal}{Economics\_\allowbreak{}Policy\_\allowbreak{}Writing\_\allowbreak{}Sample.\allowbreak{}pdf}\primary{} & 2 & 0.10 MB & 2026-10-21 \\
+\groupheading{开放信息生态系统：稳定性、通量预算与情景模拟}
+\href{https://chatgpt.com/library?file_id=libfile_fdf52cb04a50819198825e614b1e08a0&account_id=personal}{Homo\_\allowbreak{}cubitatus\_\allowbreak{}Cyber\_\allowbreak{}Ecology\_\allowbreak{}Model\_\allowbreak{}Report\_\allowbreak{}CN.\allowbreak{}pdf}\primary{} & 18 & 2.13 MB & 2026-08-02 \\
+\end{longtable}
+\endgroup
+\Needspace{55mm}
+\section{人文与形式化讨论}
+\begingroup\fontsize{8.8}{12}\selectfont
+\begin{longtable}{@{}L{\dimexpr\linewidth-50mm-6\tabcolsep\relax}R{8mm}R{16mm}R{26mm}@{}}
+\toprule
+\textbf{PDF 原始文件名（点击打开）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endfirsthead
+\toprule
+\textbf{PDF 原始文件名（续）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endhead
+\midrule\multicolumn{4}{r}{\scriptsize\color{Muted}续下页}\\\endfoot
+\bottomrule\endlastfoot
+\groupheading{Kafka《审判》：回声定位、主体与制度过程}
+\href{https://chatgpt.com/library?file_id=libfile_d74f06924a9881919e74147105b35e25&account_id=personal}{Unschuldige\_\allowbreak{}Anschuldigungen\_\allowbreak{}Final.\allowbreak{}pdf}\primary{} & 11 & 0.12 MB & 2026-10-26 \\
+\href{https://chatgpt.com/library?file_id=libfile_c2cd88b890cc81918081f8d84897c335&account_id=personal}{Kafka\_\allowbreak{}The\_\allowbreak{}Trial\_\allowbreak{}Chicago\_\allowbreak{}Expanded.\allowbreak{}pdf} & 9 & 0.15 MB & 2026-10-24 \\
+\href{https://chatgpt.com/library?file_id=libfile_b51cf97e76348191b807481749a50263&account_id=personal}{Kafka\_\allowbreak{}The\_\allowbreak{}Trial\_\allowbreak{}Chicago\_\allowbreak{}Revised.\allowbreak{}pdf} & \textemdash{} & 0.08 MB & 2026-10-22 \\
+\href{https://chatgpt.com/library?file_id=libfile_a33457cd8eb0819182992e4ef89ea6c5&account_id=personal}{Kafka\_\allowbreak{}The\_\allowbreak{}Trial\_\allowbreak{}Echolocation\_\allowbreak{}Essay.\allowbreak{}pdf} & \textemdash{} & 0.07 MB & 2026-10-22 \\
+\groupheading{托勒密埃及：王权委托、腐败与衰落的边界}
+\href{https://chatgpt.com/library?file_id=libfile_597771b2a3a08191a811ccd59610c030&account_id=personal}{Eliguli\_\allowbreak{}Han\_\allowbreak{}Ptolemaic\_\allowbreak{}Corruption(1).\allowbreak{}pdf}\primary{} & 9 & 0.09 MB & 2026-09-26 \\
+\href{https://chatgpt.com/library?file_id=libfile_20c05270b53c8191a3577ed604604efc&account_id=personal}{Eliguli\_\allowbreak{}Han\_\allowbreak{}Ptolemaic\_\allowbreak{}Corruption\_\allowbreak{}Chinese.\allowbreak{}pdf} & \textemdash{} & 0.28 MB & 2026-09-26 \\
+\href{https://chatgpt.com/library?file_id=libfile_38e53a1f85ec8191ab51ec8892fe5516&account_id=personal}{Eliguli\_\allowbreak{}Han\_\allowbreak{}Ptolemaic\_\allowbreak{}Corruption.\allowbreak{}pdf} & \textemdash{} & 0.09 MB & 2026-09-22 \\
+\groupheading{名实、雅俗与文化圈归化命名}
+\href{https://chatgpt.com/library?file_id=libfile_a8991941652081918c27b74f0eadfc15&account_id=personal}{Naming\_\allowbreak{}Paradigm\_\allowbreak{}ZH\_\allowbreak{}v1.\allowbreak{}2.\allowbreak{}pdf}\primary{} & 18 & 0.44 MB & 2026-07-24 \\
+\href{https://chatgpt.com/library?file_id=libfile_771829dee95c819188852b3c0973c120&account_id=personal}{Naming\_\allowbreak{}Paradigm\_\allowbreak{}LA\_\allowbreak{}v1.\allowbreak{}2.\allowbreak{}pdf} & \textemdash{} & 0.23 MB & 2026-07-24 \\
+\groupheading{圣像、共同信仰与帝国选制}
+\href{https://chatgpt.com/library?file_id=libfile_df6b42088d908191b74d49f9f1ef3540&account_id=personal}{Byzantine\_\allowbreak{}Iconoclasm\_\allowbreak{}Imperial\_\allowbreak{}Order\_\allowbreak{}Trilingual\_\allowbreak{}ZH\_\allowbreak{}GR\_\allowbreak{}DE.\allowbreak{}pdf}\primary{} & 19 & 0.42 MB & 2026-07-26 \\
+\groupheading{古欧亚人群三元网络模型与证据协议}
+\href{https://chatgpt.com/library?file_id=libfile_821edabfde208191b4610fd0f97345dc&account_id=personal}{Eurasian\_\allowbreak{}Triadic\_\allowbreak{}Framework\_\allowbreak{}Amelia\_\allowbreak{}Amtke\_\allowbreak{}Nestorli\_\allowbreak{}DE\_\allowbreak{}v2.\allowbreak{}0.\allowbreak{}1.\allowbreak{}pdf}\primary{} & 102 & 1.55 MB & 2026-07-29 \\
+\href{https://chatgpt.com/library?file_id=libfile_143e3ba583d88191a7a3c44dee1d5f89&account_id=personal}{Eurasian\_\allowbreak{}Triadic\_\allowbreak{}Framework\_\allowbreak{}Amelia\_\allowbreak{}Amtke\_\allowbreak{}Nestorli\_\allowbreak{}LA\_\allowbreak{}v2.\allowbreak{}0.\allowbreak{}1.\allowbreak{}pdf} & \textemdash{} & 1.52 MB & 2026-07-29 \\
+\href{https://chatgpt.com/library?file_id=libfile_6272b038a818819190f17f6c0235fa5e&account_id=personal}{Eurasian\_\allowbreak{}Triadic\_\allowbreak{}Framework\_\allowbreak{}Amelia\_\allowbreak{}Amtke\_\allowbreak{}Nestorli\_\allowbreak{}ZH\_\allowbreak{}v2.\allowbreak{}0.\allowbreak{}1.\allowbreak{}pdf} & \textemdash{} & 2.31 MB & 2026-07-29 \\
+\href{https://chatgpt.com/library?file_id=libfile_12adc61150f48191836a86a1828207ba&account_id=personal}{Eurasian\_\allowbreak{}Triadic\_\allowbreak{}Framework\_\allowbreak{}Amelia\_\allowbreak{}Amtke\_\allowbreak{}Nestorli\_\allowbreak{}ZH\_\allowbreak{}v1.\allowbreak{}9.\allowbreak{}pdf} & \textemdash{} & 2.12 MB & 2026-07-22 \\
+\href{https://chatgpt.com/library?file_id=libfile_1d3364408fe481919af599d198800d8a&account_id=personal}{Eurasian\_\allowbreak{}Triadic\_\allowbreak{}Framework\_\allowbreak{}Amelia\_\allowbreak{}Amtke\_\allowbreak{}Nestorli\_\allowbreak{}LA\_\allowbreak{}v1.\allowbreak{}9.\allowbreak{}pdf} & \textemdash{} & 1.41 MB & 2026-07-22 \\
+\href{https://chatgpt.com/library?file_id=libfile_4abb190d556c8191bd31a69e5fbc5243&account_id=personal}{Eurasian\_\allowbreak{}Triadic\_\allowbreak{}Framework\_\allowbreak{}Amelia\_\allowbreak{}Amtke\_\allowbreak{}Nestorli\_\allowbreak{}DE\_\allowbreak{}v1.\allowbreak{}9.\allowbreak{}pdf} & \textemdash{} & 1.44 MB & 2026-07-22 \\
+\href{https://chatgpt.com/library?file_id=libfile_c9ea558b7fb481918ea5d53061778e67&account_id=personal}{Eurasian\_\allowbreak{}Triadic\_\allowbreak{}Framework\_\allowbreak{}Amelia\_\allowbreak{}Amtke\_\allowbreak{}Nestorli\_\allowbreak{}ZH\_\allowbreak{}v1.\allowbreak{}8.\allowbreak{}pdf} & \textemdash{} & 1.54 MB & 2026-07-15 \\
+\href{https://chatgpt.com/library?file_id=libfile_8409a22e448481919f2f31a740d3aaf8&account_id=personal}{Eurasian\_\allowbreak{}Triadic\_\allowbreak{}Framework\_\allowbreak{}Amelia\_\allowbreak{}Amtke\_\allowbreak{}Nestorli\_\allowbreak{}LA\_\allowbreak{}v1.\allowbreak{}8.\allowbreak{}pdf} & \textemdash{} & 0.83 MB & 2026-07-15 \\
+\href{https://chatgpt.com/library?file_id=libfile_10ce9ac2de688191b57fe17b266b7b85&account_id=personal}{Eurasian\_\allowbreak{}Triadic\_\allowbreak{}Framework\_\allowbreak{}Amelia\_\allowbreak{}Amtke\_\allowbreak{}Nestorli\_\allowbreak{}DE\_\allowbreak{}v1.\allowbreak{}8.\allowbreak{}pdf} & \textemdash{} & 0.85 MB & 2026-07-15 \\
+\href{https://chatgpt.com/library?file_id=libfile_05858e14a95881919761593e467633f6&account_id=personal}{Eurasian\_\allowbreak{}Triadic\_\allowbreak{}Framework\_\allowbreak{}Amelia\_\allowbreak{}Amtke\_\allowbreak{}Nestorli\_\allowbreak{}ZH\_\allowbreak{}v1.\allowbreak{}7.\allowbreak{}pdf} & \textemdash{} & 1.41 MB & 2026-07-15 \\
+\href{https://chatgpt.com/library?file_id=libfile_fcff81e1d9bc8191b19e67593a1b6881&account_id=personal}{Eurasian\_\allowbreak{}Triadic\_\allowbreak{}Framework\_\allowbreak{}Amelia\_\allowbreak{}Amtke\_\allowbreak{}Nestorli\_\allowbreak{}LA\_\allowbreak{}v1.\allowbreak{}6.\allowbreak{}pdf} & \textemdash{} & 0.61 MB & 2026-07-15 \\
+\href{https://chatgpt.com/library?file_id=libfile_aa2cba6b006c819181afb9c51d1de5ad&account_id=personal}{Eurasian\_\allowbreak{}Triadic\_\allowbreak{}Framework\_\allowbreak{}Amelia\_\allowbreak{}Amtke\_\allowbreak{}Nestorli\_\allowbreak{}DE\_\allowbreak{}v1.\allowbreak{}6.\allowbreak{}pdf} & \textemdash{} & 0.63 MB & 2026-07-15 \\
+\href{https://chatgpt.com/library?file_id=libfile_c9d3aed3aff08191b547714828acbaef&account_id=personal}{Eurasian\_\allowbreak{}Triadic\_\allowbreak{}Framework\_\allowbreak{}Amelia\_\allowbreak{}Amtke\_\allowbreak{}Nestorli\_\allowbreak{}v1.\allowbreak{}6.\allowbreak{}pdf} & \textemdash{} & 1.20 MB & 2026-07-14 \\
+\groupheading{Ūhtcearu：语言、预刻之路与生成式注释}
+\href{https://chatgpt.com/library?file_id=libfile_1ad8e27d96cc81918514bf743a183f30&account_id=personal}{uhtcearu\_\allowbreak{}discussion.\allowbreak{}pdf}\primary{} & 30 & 0.51 MB & 2026-07-25 \\
+\groupheading{Antiterrastrae：名称、希腊语形态与数学形式化}
+\href{https://chatgpt.com/library?file_id=libfile_def8bb5116d481919b51486807d4b43d&account_id=personal}{antiterrastrae-\allowbreak{}formalization-\allowbreak{}corrected.\allowbreak{}pdf}\primary{} & 14 & 0.30 MB & 2026-10-05 \\
+\end{longtable}
+\endgroup
+\Needspace{55mm}
+\section{数学推导与实验补充}
+\begingroup\fontsize{8.8}{12}\selectfont
+\begin{longtable}{@{}L{\dimexpr\linewidth-50mm-6\tabcolsep\relax}R{8mm}R{16mm}R{26mm}@{}}
+\toprule
+\textbf{PDF 原始文件名（点击打开）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endfirsthead
+\toprule
+\textbf{PDF 原始文件名（续）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endhead
+\midrule\multicolumn{4}{r}{\scriptsize\color{Muted}续下页}\\\endfoot
+\bottomrule\endlastfoot
+\groupheading{Brownian 热半群与补偿子完整推导}
+\href{https://chatgpt.com/library?file_id=libfile_bd2171a0e3b48191bf9e8f489be5a34e&account_id=personal}{Brownian\_\allowbreak{}Compensator\_\allowbreak{}Full\_\allowbreak{}Problem\_\allowbreak{}Solutions.\allowbreak{}pdf}\primary{} & 4 & 0.23 MB & 2026-10-29 \\
+\href{https://chatgpt.com/library?file_id=libfile_1ebc9c3afa3081918bcc189babb9c64d&account_id=personal}{Compensator\_\allowbreak{}One\_\allowbreak{}Page.\allowbreak{}pdf} & \textemdash{} & 0.25 MB & 2026-10-29 \\
+\href{https://chatgpt.com/library?file_id=libfile_e3b3d524e7f8819181161ce2f4233846&account_id=personal}{compensator.\allowbreak{}pdf} & \textemdash{} & 0.24 MB & 2026-10-29 \\
+\groupheading{网球 Monte Carlo、Pareto 尾部与 KL 散度}
+\href{https://chatgpt.com/library?file_id=libfile_486003d59694819185a2bbe0422f683e&account_id=personal}{tennis\_\allowbreak{}pareto\_\allowbreak{}report.\allowbreak{}pdf}\primary{} & 12 & 1.39 MB & 2026-09-13 \\
+\href{https://chatgpt.com/library?file_id=libfile_b8c61e91b09481919a52b203c0841b36&account_id=personal}{four\_\allowbreak{}problem\_\allowbreak{}solutions.\allowbreak{}pdf} & \textemdash{} & 1.89 MB & 2026-09-27 \\
+\href{https://chatgpt.com/library?file_id=libfile_473cef82b92481918c6839fca7f4ba20&account_id=personal}{tennis\_\allowbreak{}pareto\_\allowbreak{}report(1).\allowbreak{}pdf} & \textemdash{} & 1.39 MB & 2026-09-13 \\
+\href{https://chatgpt.com/library?file_id=libfile_6419e53129d481919aff1c6f17d253ed&account_id=personal}{tennis\_\allowbreak{}pareto\_\allowbreak{}solution\_\allowbreak{}english\_\allowbreak{}complete.\allowbreak{}pdf} & 7 & 0.67 MB & 2026-09-11 \\
+\href{https://chatgpt.com/library?file_id=libfile_b6eed0a956d08191a00f5ac77c7ce604&account_id=personal}{tennis\_\allowbreak{}pareto\_\allowbreak{}complete\_\allowbreak{}solution.\allowbreak{}pdf} & \textemdash{} & 0.60 MB & 2026-09-11 \\
+\groupheading{三角网格路径搜索比较图}
+\href{https://chatgpt.com/library?file_id=libfile_f76577d87794819186eee49c1fef5163&account_id=personal}{perturbed\_\allowbreak{}outer\_\allowbreak{}triangular\_\allowbreak{}mesh\_\allowbreak{}visit\_\allowbreak{}time.\allowbreak{}pdf}\primary{} & 1 & 0.38 MB & 2026-05-10 \\
+\href{https://chatgpt.com/library?file_id=libfile_a7a795ade86c81918f74c26a66372058&account_id=personal}{triangular\_\allowbreak{}mesh\_\allowbreak{}triangle\_\allowbreak{}average\_\allowbreak{}cost\_\allowbreak{}gradient.\allowbreak{}pdf} & 1 & 0.04 MB & 2026-05-10 \\
+\href{https://chatgpt.com/library?file_id=libfile_3e703fce88d08191bfc7410e6cf719eb&account_id=personal}{triangular\_\allowbreak{}mesh\_\allowbreak{}bfs\_\allowbreak{}dfs\_\allowbreak{}rl\_\allowbreak{}comparison.\allowbreak{}pdf} & 1 & 0.03 MB & 2026-05-10 \\
+\groupheading{Eisenstein 素数与六角截断可视化}
+\href{https://chatgpt.com/library?file_id=libfile_7aace57f102481918160195f7dc25ca7&account_id=personal}{eisenstein\_\allowbreak{}strict\_\allowbreak{}standard\_\allowbreak{}hex\_\allowbreak{}truncated\_\allowbreak{}shells.\allowbreak{}pdf}\primary{} & 1 & 1.08 MB & 2026-05-19 \\
+\end{longtable}
+\endgroup
+\Needspace{55mm}
+\section{研究计划与技术记录}
+\begingroup\fontsize{8.8}{12}\selectfont
+\begin{longtable}{@{}L{\dimexpr\linewidth-50mm-6\tabcolsep\relax}R{8mm}R{16mm}R{26mm}@{}}
+\toprule
+\textbf{PDF 原始文件名（点击打开）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endfirsthead
+\toprule
+\textbf{PDF 原始文件名（续）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endhead
+\midrule\multicolumn{4}{r}{\scriptsize\color{Muted}续下页}\\\endfoot
+\bottomrule\endlastfoot
+\groupheading{巨齿鲨验证研究：预注册、经费与后续路线图}
+\href{https://chatgpt.com/library?file_id=libfile_91ee435e9914819181af6b404bc9b8d1&account_id=personal}{ResearchHub\_\allowbreak{}Megalodon\_\allowbreak{}Preregistration\_\allowbreak{}Funding\_\allowbreak{}Proposal.\allowbreak{}pdf}\primary{} & 4 & 2.00 MB & 2026-10-31 \\
+\href{https://chatgpt.com/library?file_id=libfile_f77684637f84819189a944b0427aa3e1&account_id=personal}{Megalodon\_\allowbreak{}Pilot\_\allowbreak{}Funding\_\allowbreak{}and\_\allowbreak{}Research\_\allowbreak{}Roadmap.\allowbreak{}pdf} & 5 & 0.34 MB & 2026-10-31 \\
+\groupheading{古鲸、中兽类与犬熊类骨架结构比较研究计划}
+\href{https://chatgpt.com/library?file_id=libfile_ccc80cefef5c8191aa8baddee26c0b83&account_id=personal}{DURF\_\allowbreak{}Expanded\_\allowbreak{}Comparative\_\allowbreak{}Project\_\allowbreak{}Plan\_\allowbreak{}2026-\allowbreak{}10-\allowbreak{}27.\allowbreak{}pdf}\primary{} & 4 & 0.10 MB & 2026-10-27 \\
+\href{https://chatgpt.com/library?file_id=libfile_462d30b2ce4081919694586312dca076&account_id=personal}{Luong\_\allowbreak{}DURF\_\allowbreak{}Recommendation\_\allowbreak{}Review\_\allowbreak{}Packet\_\allowbreak{}2026-\allowbreak{}10-\allowbreak{}27.\allowbreak{}pdf} & \textemdash{} & 0.09 MB & 2026-10-27 \\
+\href{https://chatgpt.com/library?file_id=libfile_d461fd5fbfc88191abbb5da3b062b426&account_id=personal}{Eliguli\_\allowbreak{}Han\_\allowbreak{}DURF\_\allowbreak{}Research\_\allowbreak{}Proposal.\allowbreak{}pdf} & \textemdash{} & 0.10 MB & 2026-10-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_3b7494c668308191818ad6a04ebb7343&account_id=personal}{Eliguli\_\allowbreak{}Han\_\allowbreak{}DURF\_\allowbreak{}Preliminary\_\allowbreak{}Budget.\allowbreak{}pdf} & \textemdash{} & 0.07 MB & 2026-10-25 \\
+\href{https://chatgpt.com/library?file_id=libfile_254df771236081919f2fb76df0d8296e&account_id=personal}{DURF\_\allowbreak{}Table\_\allowbreak{}3\_\allowbreak{}Timeline\_\allowbreak{}and\_\allowbreak{}Deliverables.\allowbreak{}pdf} & \textemdash{} & 0.07 MB & 2026-10-24 \\
+\href{https://chatgpt.com/library?file_id=libfile_1ff55b0980a0819186af6674f4787b22&account_id=personal}{DURF\_\allowbreak{}Figure\_\allowbreak{}1\_\allowbreak{}Study\_\allowbreak{}Workflow.\allowbreak{}pdf} & \textemdash{} & 0.07 MB & 2026-10-24 \\
+\href{https://chatgpt.com/library?file_id=libfile_ea1a370eb0e0819183e217697d146f2f&account_id=personal}{DURF\_\allowbreak{}Table\_\allowbreak{}1\_\allowbreak{}Data\_\allowbreak{}and\_\allowbreak{}Comparisons.\allowbreak{}pdf} & \textemdash{} & 0.07 MB & 2026-10-24 \\
+\href{https://chatgpt.com/library?file_id=libfile_c61b344e1a248191b61758804201c84e&account_id=personal}{DURF\_\allowbreak{}Table\_\allowbreak{}2\_\allowbreak{}Proposed\_\allowbreak{}Numerical\_\allowbreak{}Settings.\allowbreak{}pdf} & \textemdash{} & 0.07 MB & 2026-10-24 \\
+\href{https://chatgpt.com/library?file_id=libfile_299548c2acb48191855694313e8bd0d3&account_id=personal}{DURF\_\allowbreak{}Supplementary\_\allowbreak{}Figures\_\allowbreak{}and\_\allowbreak{}Tables.\allowbreak{}pdf} & \textemdash{} & 0.19 MB & 2026-10-24 \\
+\groupheading{巨齿鲨完整 CT 网格修复与验证记录}
+\href{https://chatgpt.com/library?file_id=libfile_6a1c98a7aa708191af8a66de13ee087a&account_id=personal}{Megalodon\_\allowbreak{}FullCT\_\allowbreak{}Repair\_\allowbreak{}Report\_\allowbreak{}EN.\allowbreak{}pdf}\primary{} & 2 & 0.09 MB & 2026-10-26 \\
+\href{https://chatgpt.com/library?file_id=libfile_3ca129846b6881918a25324189daf610&account_id=personal}{Megalodon\_\allowbreak{}FullCT\_\allowbreak{}Repair\_\allowbreak{}Report\_\allowbreak{}DE.\allowbreak{}pdf} & \textemdash{} & 0.09 MB & 2026-10-26 \\
+\href{https://chatgpt.com/library?file_id=libfile_9daaa6ff8a348191ac6f00935ca96c4e&account_id=personal}{Megalodon\_\allowbreak{}FullCT\_\allowbreak{}Repair\_\allowbreak{}Report.\allowbreak{}pdf} & \textemdash{} & 0.10 MB & 2026-10-25 \\
+\groupheading{NLP 工作文档}
+\href{https://chatgpt.com/library?file_id=libfile_836eafc335d881919e497d0e0805513e&account_id=personal}{Working Doc -\allowbreak{} NLP Eliguli.\allowbreak{}pdf}\primary{} & 68 & 0.85 MB & 2026-04-11 \\
+\href{https://chatgpt.com/library?file_id=libfile_ad63cc185b4c819182bb5b1326263838&account_id=personal}{Working Doc -\allowbreak{} NLP Eliguli(1).\allowbreak{}pdf} & \textemdash{} & 0.85 MB & 2026-04-11 \\
+\groupheading{巨齿鲨生物力学汇报与演讲稿}
+\href{https://chatgpt.com/library?file_id=libfile_a664e4f6eb54819192a3de407638d023&account_id=personal}{DURF\_\allowbreak{}Megalodon\_\allowbreak{}Biomechanics\_\allowbreak{}Deck.\allowbreak{}pdf}\primary{} & \textemdash{} & 3.88 MB & 2026-05-01 \\
+\href{https://chatgpt.com/library?file_id=libfile_1f94218b0b508191883ca44dc387634c&account_id=personal}{DURF\_\allowbreak{}Megalodon\_\allowbreak{}Biomechanics\_\allowbreak{}Deck(1).\allowbreak{}pdf} & \textemdash{} & 3.88 MB & 2026-05-01 \\
+\href{https://chatgpt.com/library?file_id=libfile_5a2bbac954408191ad4b95f568b107eb&account_id=personal}{megalodon biomechanics deck dark-\allowbreak{}2 2.\allowbreak{}pdf} & \textemdash{} & 4.03 MB & 2026-05-01 \\
+\href{https://chatgpt.com/library?file_id=libfile_d954676687388191aa7dfc80b7db5579&account_id=personal}{durf\_\allowbreak{}script(1).\allowbreak{}pdf} & \textemdash{} & 0.14 MB & 2026-05-01 \\
+\href{https://chatgpt.com/library?file_id=libfile_5340836e33248191ad0224d12fdf99fb&account_id=personal}{durf\_\allowbreak{}script.\allowbreak{}pdf} & \textemdash{} & 0.14 MB & 2026-05-01 \\
+\groupheading{StereoSet 论文阅读回应}
+\href{https://chatgpt.com/library?file_id=libfile_b25c88be2e4c8191a3e80cbc5f6137f1&account_id=personal}{StereoSet\_\allowbreak{}Overview\_\allowbreak{}and\_\allowbreak{}Reading\_\allowbreak{}Response.\allowbreak{}pdf}\primary{} & 2 & 0.05 MB & 2026-04-28 \\
+\href{https://chatgpt.com/library?file_id=libfile_a899e84ce6d08191b71cddf9b438632f&account_id=personal}{StereoSet\_\allowbreak{}Overview\_\allowbreak{}and\_\allowbreak{}Reading\_\allowbreak{}Response(1).\allowbreak{}pdf} & \textemdash{} & 0.05 MB & 2026-04-28 \\
+\groupheading{巨齿鲨 CT 切片图册}
+\href{https://chatgpt.com/library?file_id=libfile_77bd616d07bc8191a3e6cf5d6cbdef80&account_id=personal}{buccolingual\_\allowbreak{}slices\_\allowbreak{}0p1mm.\allowbreak{}pdf}\primary{} & \textemdash{} & 42.18 MB & 2026-07-06 \\
+\href{https://chatgpt.com/library?file_id=libfile_cbb86d7405348191aa8c1428757cf564&account_id=personal}{axial\_\allowbreak{}slices\_\allowbreak{}50um.\allowbreak{}pdf} & \textemdash{} & 41.10 MB & 2026-07-06 \\
+\end{longtable}
+\endgroup
+\Needspace{55mm}
+\section{已保存参考论文}
+\begingroup\fontsize{8.8}{12}\selectfont
+\begin{longtable}{@{}L{\dimexpr\linewidth-50mm-6\tabcolsep\relax}R{8mm}R{16mm}R{26mm}@{}}
+\toprule
+\textbf{PDF 原始文件名（点击打开）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endfirsthead
+\toprule
+\textbf{PDF 原始文件名（续）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endhead
+\midrule\multicolumn{4}{r}{\scriptsize\color{Muted}续下页}\\\endfoot
+\bottomrule\endlastfoot
+\groupheading{Zhao \& Zhang：多材料拓扑优化设计梯度多孔仿骨结构}
+\href{https://chatgpt.com/library?file_id=libfile_8a27e60fe684819193b08e14d9e5baba&account_id=personal}{Zhao\_\allowbreak{}Zhang\_\allowbreak{}2021\_\allowbreak{}Graded\_\allowbreak{}Porous\_\allowbreak{}Bone\_\allowbreak{}Like.\allowbreak{}pdf}\primary{} & 22 & 2.59 MB & 2026-10-28 \\
+\groupheading{Luong 等：Invar–cenosphere 复合泡沫的结构与压缩性能}
+\href{https://chatgpt.com/library?file_id=libfile_1b5bb2c541dc8191af77adc8191bae1f&account_id=personal}{Luong\_\allowbreak{}2016\_\allowbreak{}Invar\_\allowbreak{}Cenosphere\_\allowbreak{}Foams.\allowbreak{}pdf}\primary{} & 16 & 8.18 MB & 2026-10-28 \\
+\groupheading{Wu 等：增材制造仿骨多孔填充拓扑优化}
+\href{https://chatgpt.com/library?file_id=libfile_841340f467f48191b4a96b82bd44a1c4&account_id=personal}{Wu\_\allowbreak{}Bone\_\allowbreak{}Like\_\allowbreak{}Porous\_\allowbreak{}Infill.\allowbreak{}pdf}\primary{} & 15 & 7.87 MB & 2026-10-28 \\
+\groupheading{Rowan 等：Sivameryx africanus 的首个头骨}
+\href{https://chatgpt.com/library?file_id=libfile_65fcaf3692248191a119243a6ec138ac&account_id=personal}{Sivameryx\_\allowbreak{}africanus\_\allowbreak{}Rowan\_\allowbreak{}2015\_\allowbreak{}Proof.\allowbreak{}pdf}\primary{} & 10 & 3.38 MB & 2026-10-16 \\
+\groupheading{Kotek 等：Gender bias and stereotypes in Large Language Models}
+\href{https://chatgpt.com/library?file_id=libfile_ac70b1f07eb48191acd75e1cc9b211e3&account_id=personal}{35822693615599.\allowbreak{}pdf}\primary{} & 14 & 1.05 MB & 2026-04-06 \\
+\groupheading{Blodgett 等：Language (Technology) is Power}
+\href{https://chatgpt.com/library?file_id=libfile_ad4b82df409c8191aa3c59ea580231f0&account_id=personal}{Blodgett-\allowbreak{}Technology is Power.\allowbreak{}pdf}\primary{} & 23 & 1.37 MB & 2026-03-03 \\
+\href{https://chatgpt.com/library?file_id=libfile_1e7e80309d6881919d96076a5f7289f5&account_id=personal}{Blodgett-\allowbreak{}Technology is Power(1).\allowbreak{}pdf} & \textemdash{} & 1.37 MB & 2026-03-04 \\
+\end{longtable}
+\endgroup
+\Needspace{55mm}
+\section{架空生物与创作附录}
+{\small 本节收录架空古生物、设定总录及模拟论文。}\par
+\begingroup\fontsize{8.8}{12}\selectfont
+\begin{longtable}{@{}L{\dimexpr\linewidth-50mm-6\tabcolsep\relax}R{8mm}R{16mm}R{26mm}@{}}
+\toprule
+\textbf{PDF 原始文件名（点击打开）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endfirsthead
+\toprule
+\textbf{PDF 原始文件名（续）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endhead
+\midrule\multicolumn{4}{r}{\scriptsize\color{Muted}续下页}\\\endfoot
+\bottomrule\endlastfoot
+\groupheading{架空古生物与模拟论文}
+\href{https://chatgpt.com/library?file_id=libfile_b5d9051fdf348191b1b14c80408cffb8&account_id=personal}{Giganimravus\_\allowbreak{}kashirhnse\_\allowbreak{}rev4.\allowbreak{}pdf}\primary{} & 28 & 1.09 MB & 2026-10-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_7eb4b9e8d63081919b9dd2dc16f24fa3&account_id=personal}{Original\_\allowbreak{}Paleobiota\_\allowbreak{}Complete\_\allowbreak{}Expanded\_\allowbreak{}2026-\allowbreak{}10-\allowbreak{}30\_\allowbreak{}zh.\allowbreak{}pdf} & \textemdash{} & 1.08 MB & 2026-10-30 \\
+\href{https://chatgpt.com/library?file_id=libfile_e6bf9bdaf1dc8191b448cac1f7b32cce&account_id=personal}{Brachvogel Homo cubitatus ZSMAN XLVII 4.\allowbreak{}pdf} & 28 & 0.14 MB & 2026-08-02 \\
+\end{longtable}
+\endgroup
+\Needspace{55mm}
+\section{文本实验与创作附录}
+\begingroup\fontsize{8.8}{12}\selectfont
+\begin{longtable}{@{}L{\dimexpr\linewidth-50mm-6\tabcolsep\relax}R{8mm}R{16mm}R{26mm}@{}}
+\toprule
+\textbf{PDF 原始文件名（点击打开）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endfirsthead
+\toprule
+\textbf{PDF 原始文件名（续）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endhead
+\midrule\multicolumn{4}{r}{\scriptsize\color{Muted}续下页}\\\endfoot
+\bottomrule\endlastfoot
+\groupheading{虚构评论区文本与批评分析}
+\href{https://chatgpt.com/library?file_id=libfile_30084ec03e54819198e013fad9032de4&account_id=personal}{xiaohongshu\_\allowbreak{}100\_\allowbreak{}layers\_\allowbreak{}extended\_\allowbreak{}analysis.\allowbreak{}pdf}\primary{} & 20 & 0.43 MB & 2026-10-28 \\
+\href{https://chatgpt.com/library?file_id=libfile_921f0167377c8191a5ba73bc66376603&account_id=personal}{xiaohongshu\_\allowbreak{}deduplicated\_\allowbreak{}deep\_\allowbreak{}analysis.\allowbreak{}pdf} & \textemdash{} & 0.37 MB & 2026-10-28 \\
+\href{https://chatgpt.com/library?file_id=libfile_c937c7527df881919c455694c04f06ee&account_id=personal}{xhs\_\allowbreak{}phone\_\allowbreak{}analysis\_\allowbreak{}supplement.\allowbreak{}pdf} & \textemdash{} & 0.04 MB & 2026-10-28 \\
+\href{https://chatgpt.com/library?file_id=libfile_d62a8e527bdc81918564a5b09311c9ed&account_id=personal}{xiaohongshu\_\allowbreak{}mobile\_\allowbreak{}with\_\allowbreak{}critical\_\allowbreak{}analysis.\allowbreak{}pdf} & \textemdash{} & 0.47 MB & 2026-10-28 \\
+\href{https://chatgpt.com/library?file_id=libfile_aad57d035c74819187dc3c7e8cf88ce1&account_id=personal}{xiaohongshu\_\allowbreak{}combined\_\allowbreak{}mobile.\allowbreak{}pdf} & \textemdash{} & 0.47 MB & 2026-10-28 \\
+\href{https://chatgpt.com/library?file_id=libfile_d9478cfa84088191bae7177fd9cc64e2&account_id=personal}{xiaohongshu\_\allowbreak{}discussion\_\allowbreak{}integrated.\allowbreak{}pdf} & \textemdash{} & 0.39 MB & 2026-10-28 \\
+\href{https://chatgpt.com/library?file_id=libfile_1798a12ce8fc8191a2e317031be0a7a9&account_id=personal}{xiaohongshu\_\allowbreak{}100\_\allowbreak{}layers\_\allowbreak{}redmarked.\allowbreak{}pdf} & \textemdash{} & 0.39 MB & 2026-10-28 \\
+\href{https://chatgpt.com/library?file_id=libfile_f901853bced08191ac6a0460683c9f30&account_id=personal}{xiaohongshu\_\allowbreak{}100\_\allowbreak{}layers\_\allowbreak{}original.\allowbreak{}pdf} & \textemdash{} & 0.36 MB & 2026-10-28 \\
+\href{https://chatgpt.com/library?file_id=libfile_a0dbc073fca88191b5ceef4e481981c4&account_id=personal}{xiaohongshu\_\allowbreak{}100\_\allowbreak{}layers\_\allowbreak{}annotated.\allowbreak{}pdf} & \textemdash{} & 0.31 MB & 2026-10-28 \\
+\groupheading{Arcaniaei Aaineae：语言与法律文本创作}
+\href{https://chatgpt.com/library?file_id=libfile_9e37af5988008191bd0c1b1cb5ab1a0d&account_id=personal}{Arcaniaei Aaineae nomoi 2.\allowbreak{}pdf}\primary{} & 11 & 0.06 MB & 2026-10-05 \\
+\href{https://chatgpt.com/library?file_id=libfile_7ffb8f194ba08191a70e186bb3b62354&account_id=personal}{Arcaniaei Aaineae nomoi 2(1).\allowbreak{}pdf} & \textemdash{} & 0.06 MB & 2026-10-15 \\
+\end{longtable}
+\endgroup
+\Needspace{55mm}
+\section{待进一步辨认的图像稿}
+{\small 当前文本提取未提供可核对的正文题名，保留图像型稿件入口。}\par
+\begingroup\fontsize{8.8}{12}\selectfont
+\begin{longtable}{@{}L{\dimexpr\linewidth-50mm-6\tabcolsep\relax}R{8mm}R{16mm}R{26mm}@{}}
+\toprule
+\textbf{PDF 原始文件名（点击打开）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endfirsthead
+\toprule
+\textbf{PDF 原始文件名（续）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endhead
+\midrule\multicolumn{4}{r}{\scriptsize\color{Muted}续下页}\\\endfoot
+\bottomrule\endlastfoot
+\groupheading{ba\_ague\_smaragd\_manuscript.pdf}
+\href{https://chatgpt.com/library?file_id=libfile_8c219a2162888191ab55b8955aa62815&account_id=personal}{ba\_\allowbreak{}ague\_\allowbreak{}smaragd\_\allowbreak{}manuscript.\allowbreak{}pdf}\primary{} & 38 & 21.85 MB & 2026-09-07 \\
+\end{longtable}
+\endgroup
+\Needspace{55mm}
+\section{相关源文件与数据包}
+{\small 以下压缩包单列；包内 PDF 副本未计入 223 个独立保存的 PDF 条目。}\par
+\begingroup\fontsize{8.8}{12}\selectfont
+\begin{longtable}{@{}L{\dimexpr\linewidth-50mm-6\tabcolsep\relax}R{8mm}R{16mm}R{26mm}@{}}
+\toprule
+\textbf{源文件包（点击打开）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endfirsthead
+\toprule
+\textbf{源文件包（续）}&\textbf{页数}&\textbf{大小}&\textbf{保存日期}\\
+\midrule\endhead
+\midrule\multicolumn{4}{r}{\scriptsize\color{Muted}续下页}\\\endfoot
+\bottomrule\endlastfoot
+\groupheading{源文件与数据包}
+\href{https://chatgpt.com/library?file_id=libfile_e4a43a7c46f48191b72f2ab0c9792116&account_id=personal}{Optimal\_\allowbreak{}Acceleration\_\allowbreak{}Package.\allowbreak{}zip} &  & 1.42 MB &  \\
+\href{https://chatgpt.com/library?file_id=libfile_4044f92928448191b17092cf9ff1fc18&account_id=personal}{Polynomial\_\allowbreak{}Recurrences\_\allowbreak{}Complete\_\allowbreak{}Project.\allowbreak{}zip} &  & 27.19 MB &  \\
+\href{https://chatgpt.com/library?file_id=libfile_9e0058cd53348191bda34afcdc6d6cee&account_id=personal}{Sivameryx\_\allowbreak{}Source\_\allowbreak{}Files\_\allowbreak{}2026-\allowbreak{}10-\allowbreak{}29.\allowbreak{}zip} &  & 41.10 MB &  \\
+\end{longtable}
+\endgroup
+\vspace{3mm}
+{\small\color{Muted}检索范围：本次可列出的已保存 PDF 文件及上述源文件包。压缩包内部未逐个解包检索。原有文件链接按检索结果保留，目录本身不改变各文件的访问权限。}
+\end{document}
