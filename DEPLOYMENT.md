@@ -31,3 +31,50 @@ with PrusaSlicer 2.7.4 and exported alongside every source anatomy triangle. The
 untextured project uses a neutral display finish, identified through
 `data-appearance`; the existing 1:10 Opal models keep their original textures.
 See `downloads/cynthiacetus/README.md` for provenance and reproduction commands.
+
+## Publishing and checking the actual sites
+
+`.github/workflows/verify-sites.yml` runs on `main` pushes and manual dispatches.
+It uses a GitHub-hosted runner's standard HTTPS networking, builds the mirror,
+and runs the local browser/geometry checks. It then checks the actual URLs:
+
+- `https://eliguli712.github.io/Antiterrastrae/`
+- `https://eliguli.vercel.app/`
+
+For each site, the live checker compares the public CV, complete paper catalog,
+all paper PDFs, uploaded print project, scripts and support parts against the
+selected source commit. It also opens the actual deployed application in a
+phone-width Chromium browser, renders the first and last pages of the uploaded
+18-page report, follows its same-site CV return link, flips both cards, and
+shows/hides the complete support model. HTTP 200 with stale content fails.
+
+GitHub Pages continues using its existing branch publishing configuration.
+If the repository's Actions secret `VERCEL_TOKEN` is available, the workflow
+looks up and links the existing `eliguli` project and runs the official pinned
+Vercel CLI production build/deploy flow. It never creates a replacement project.
+For a scoped team project, supply `VERCEL_ORG_ID` as an Actions secret or variable.
+Enter credentials only in secure repository settings. If no token is present,
+the Vercel deployment step is skipped and the checker still verifies whether an
+existing Git integration has published the correct content.
+
+The current cloud worker's saved configuration draft and its live proxy policy
+are separate from this workflow. Saving a domain or secret requirement does not
+apply it to the cloud machine or populate repository Actions secrets.
+
+The result is retained as a workflow artifact and as `verification.json` on the
+separate `deployment-verification` branch. It includes the source commit, actual
+file hashes, browser outcomes, run URL and token-presence status; no token values
+are recorded. A failed check stays failed. Do not call either site verified
+until the matching commit's report records success for both sites.
+
+To inspect the evidence using the existing Git connection:
+
+```bash
+git fetch origin deployment-verification
+git show FETCH_HEAD:verification.json
+```
+
+Install test tools with `python3 -m pip install -r requirements-dev.txt` and
+`python3 -m playwright install chromium`. The tests use system Chromium when
+available, Playwright's installed browser otherwise, or the explicit
+`CV_CHROMIUM_EXECUTABLE` selector.

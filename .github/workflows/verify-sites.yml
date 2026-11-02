@@ -1,0 +1,121 @@
+name: Publish and verify both CV sites
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: public-cv-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      VERCEL_TOKEN_AVAILABLE: ${{ secrets.VERCEL_TOKEN != '' }}
+      VERIFICATION_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - name: Install pinned browser test tools
+        run: |
+          python -m pip install -r requirements-dev.txt
+          python -m playwright install --with-deps chromium
+      - name: Build identical Vercel mirror
+        id: build
+        run: node scripts/build-mirror.mjs
+      - name: Check source, complete papers, cards and split support models
+        id: tests
+        run: python -m unittest discover -s tests -v
+      - name: Deploy the existing Vercel project when authorized
+        id: deploy
+        if: env.VERCEL_TOKEN_AVAILABLE == 'true'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID || vars.VERCEL_ORG_ID }}
+        run: |
+          python scripts/ci_vercel_project.py
+          npm install --prefix "$RUNNER_TEMP/vercel-cli" --no-audit --no-fund vercel@65.9.0
+          "$RUNNER_TEMP/vercel-cli/node_modules/.bin/vercel" pull --yes --environment=production --token "$VERCEL_TOKEN"
+          "$RUNNER_TEMP/vercel-cli/node_modules/.bin/vercel" build --prod --token "$VERCEL_TOKEN"
+          "$RUNNER_TEMP/vercel-cli/node_modules/.bin/vercel" deploy --prebuilt --prod --token "$VERCEL_TOKEN"
+      - name: Verify the actual GitHub Pages and Vercel endpoints
+        id: live
+        if: always()
+        continue-on-error: true
+        run: python scripts/verify_live.py --browser --output "$RUNNER_TEMP/site-verification/verification.json"
+      - name: Record execution provenance
+        if: always()
+        env:
+          BUILD_OUTCOME: ${{ steps.build.outcome }}
+          TEST_OUTCOME: ${{ steps.tests.outcome }}
+          DEPLOY_OUTCOME: ${{ steps.deploy.outcome }}
+          LIVE_OUTCOME: ${{ steps.live.outcome }}
+        run: |
+          python - <<'PY'
+          from datetime import datetime, timezone
+          import json, os
+          from pathlib import Path
+          path = Path(os.environ['RUNNER_TEMP']) / 'site-verification/verification.json'
+          path.parent.mkdir(exist_ok=True)
+          if path.exists():
+              report = json.loads(path.read_text())
+          else:
+              report = {'source_commit': os.environ['GITHUB_SHA'], 'outcome': 'failed',
+                        'error': 'Live checker did not produce a report; inspect the workflow step.',
+                        'verified_at': datetime.now(timezone.utc).isoformat(),
+                        'run_url': os.environ['VERIFICATION_RUN_URL'], 'sites': {}}
+          report['pipeline'] = {name: os.environ[key] for name, key in
+                                [('build', 'BUILD_OUTCOME'), ('tests', 'TEST_OUTCOME'),
+                                 ('vercel_deploy', 'DEPLOY_OUTCOME'), ('live', 'LIVE_OUTCOME')]}
+          report['vercel_token_available'] = os.environ.get('VERCEL_TOKEN_AVAILABLE') == 'true'
+          if any(report['pipeline'][key] != 'success' for key in ['build', 'tests', 'live']):
+              report['outcome'] = 'failed'
+          if report['pipeline']['vercel_deploy'] in ['failure', 'cancelled']:
+              report['outcome'] = 'failed'
+          path.write_text(json.dumps(report, indent=2) + '\n')
+          print(json.dumps({'source_commit': report['source_commit'], 'outcome': report['outcome'],
+                            'pipeline': report['pipeline'], 'vercel_token_available': report['vercel_token_available']}))
+          PY
+      - name: Retain verification artifact
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: site-verification-${{ github.sha }}
+          path: ${{ runner.temp }}/site-verification/verification.json
+      - name: Publish the machine-readable report on its separate evidence branch
+        if: always()
+        run: |
+          report="$RUNNER_TEMP/site-verification/verification.json"
+          test -f "$report"
+          if git ls-remote --exit-code --heads origin deployment-verification > "$RUNNER_TEMP/evidence-ref"; then
+            git fetch origin deployment-verification
+            git switch --detach FETCH_HEAD
+          else
+            result=$?
+            test "$result" -eq 2
+            git switch --orphan deployment-verification
+          fi
+          cp "$report" verification.json
+          git add -- verification.json
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit --quiet -m "Record live verification for $GITHUB_SHA"
+          git push origin HEAD:refs/heads/deployment-verification
+      - name: Require both live sites and source checks to pass
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          report = json.loads((Path(os.environ['RUNNER_TEMP']) / 'site-verification/verification.json').read_text())
+          raise SystemExit(0 if report['outcome'] == 'passed' else 1)
+          PY
