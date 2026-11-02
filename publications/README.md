@@ -38,3 +38,9 @@ Additional complete documents included in this revision:
 | Mathematical Statistics: Midterm 1 Practice Set and Solutions | Study material | [Complete material](reader.html?paper=mathematical-statistics-practice) |
 
 The author-supplied **(K, q, m) Draw-and-Eliminate Models: Markov Chains, Martingales and Symmetry** is the final catalog entry. The complete 18-page revised report is published unchanged under its actual filename, `K_class_q_copy_m_slot_markov_symmetry_report.pdf` (letter `q`, rather than digit `9`). [Read the complete report](reader.html?paper=K_class_q_copy_m_slot_markov_symmetry_report) or [download the original PDF](K_class_q_copy_m_slot_markov_symmetry_report.pdf).
+
+## Complete English works directory
+
+[Browse all indexed works](research-index.html). The author's supplied `index-source/Research_PDF_Index_2026-11-01.tex` is parsed as data by `scripts/build-work-directory.py`; TeX commands and library documents are not executed. All 226 distinct file identities and original access links are preserved in `work-directory.json`: 223 PDFs and 3 source archives, grouped under 51 English titles and categories. The 29 main manuscripts, reference literature, research records and creative appendices retain their separate classifications. Original filenames remain in the JSON for provenance; all visible directory titles and controls are English. Source documents retain their original languages.
+
+Eight groups also link to an available hosted edition. The remaining version entries open a local, same-host metadata page with a persistent return to the CV, then the original ChatGPT Library link in a new tab. Those links may require the account that owns the file; their presence is not evidence that the underlying PDFs are publicly hosted.

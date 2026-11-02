@@ -206,6 +206,47 @@ class CVBrowserTests(unittest.TestCase):
         self.assertTrue(page.locator('model-viewer').get_attribute('src').startswith('blob:'))
         page.close()
 
+    def test_english_directory_and_full_size_card_reader(self):
+        for suffix in ['', '/dist']:
+            with self.subTest(host=suffix or 'GitHub'):
+                page = self.browser.new_page(viewport={'width': 390, 'height': 844})
+                page.goto(self.base + suffix + '/cv.html')
+                self.assertIn('Work in progress', page.locator('#research-publications').inner_text())
+                self.assertEqual(page.locator('.section-nav a').first.inner_text(), 'Research Pub.')
+                page.locator('.directory-launch').click()
+                self.assertEqual(page.locator('.work-group').count(), 51)
+                self.assertEqual(page.locator('[data-entry]').count(), 226)
+                self.assertNotRegex(page.locator('body').inner_text(), r'[\u3400-\u9fff]')
+                page.locator('#work-search').fill('Wallis')
+                self.assertEqual(page.locator('.work-group:not([hidden])').count(), 1)
+                page.locator('#expand-all').click()
+                page.locator('.work-group:not([hidden]) [data-entry] a').first.click()
+                page.wait_for_selector('#library-open:not([hidden])')
+                self.assertIn('Cubic Wallis', page.locator('#library-title').inner_text())
+                self.assertTrue(page.locator('#library-open').get_attribute('href').startswith('https://chatgpt.com/library?'))
+                self.assertEqual(page.locator('.directory-header>a').evaluate('(a)=>a.href'), self.base + suffix + '/cv.html#manuscripts')
+                page.goto(self.base + suffix + '/cv.html#artworks')
+                page.locator('[data-card="coronodon"]').click()
+                page.wait_for_selector('#viewer-flip:not([hidden])')
+                page.locator('#viewer-flip').click()
+                page.wait_for_function('document.querySelector("#viewer-card-back img").naturalWidth===1000')
+                page.locator('#viewer-card-back .card-notes summary').click()
+                self.assertTrue(page.locator('#viewer-card-back').is_visible())
+                with page.expect_popup() as opened:
+                    page.locator('#viewer-original').click()
+                card = opened.value
+                card.wait_for_function('document.getElementById("reader-front").naturalWidth===1000')
+                card.locator('#reader-card').click()
+                card.wait_for_function('!document.getElementById("reader-back").hidden && document.getElementById("reader-back").naturalWidth===1000')
+                self.assertEqual(card.locator('#flip-card').get_attribute('aria-pressed'), 'true')
+                card.locator('#reader-notes summary').click()
+                self.assertIn('A Crown of Teeth', card.locator('#reader-transcript').inner_text())
+                card.locator('#flip-card').click()
+                self.assertTrue(card.locator('#reader-front').is_visible())
+                self.assertEqual(card.locator('header>a').evaluate('(a)=>a.href'), self.base + suffix + '/cv.html#artworks')
+                self.assertLessEqual(page.evaluate('document.documentElement.scrollWidth'), 391)
+                card.close(); page.close()
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

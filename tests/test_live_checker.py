@@ -25,6 +25,10 @@ class LiveCheckerTests(unittest.TestCase):
             self.assertGreater(len(checks), 20)
             self.assertTrue(all(item['matches'] for item in checks))
             self.assertTrue(any(item['path'].endswith('.part-003.bin') for item in checks))
+            for name in ['publications/research-index.html', 'publications/work-directory.json',
+                         'publications/card.html', 'assets/portfolio/card-backs/coronodon-back.png',
+                         'assets/portfolio/card-backs/zygophyseter-back.png', 'cv.pdf']:
+                self.assertTrue(any(item['path'] == name for item in checks), name)
         finally:
             server.shutdown(); server.server_close(); thread.join()
 

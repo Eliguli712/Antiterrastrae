@@ -47,7 +47,14 @@ def check_http(base, root, commit):
     documents = json.loads(catalog_bytes)['documents']
     if documents[-1]['file'] != 'K_class_q_copy_m_slot_markov_symmetry_report.pdf' or documents[-1]['pages'] != 18:
         raise ValueError('The uploaded 18-page report is not the final entry')
-    files = ['assets/publications.js', 'assets/portfolio/gallery.js', 'assets/portfolio/cards.json',
+    files = ['cv.pdf', 'cv.docx', 'cv.md', 'assets/cv-additions.css',
+             'assets/publications.js', 'assets/portfolio/gallery.js', 'assets/portfolio/cards.json',
+             'assets/portfolio/card-backs/CardBack.pdf', 'assets/portfolio/card-backs/provenance.json',
+             'assets/portfolio/card-backs/coronodon-back.png', 'assets/portfolio/card-backs/zygophyseter-back.png',
+             'publications/research-index.html', 'publications/work-directory.json',
+             'publications/library-entry.html', 'assets/library-entry.js',
+             'assets/work-directory.css', 'assets/work-directory.js',
+             'publications/card.html', 'assets/card-reader.css', 'assets/card-reader.js',
              'assets/cynthiacetus/viewer.js', 'assets/cynthiacetus/chunked-model.js',
              'publications/reader.html', 'publications/reader.js', 'publications/reader.css',
              'downloads/cynthiacetus/Cynthiacetus_Skull_Supports_1-20.3mf',
@@ -55,6 +62,10 @@ def check_http(base, root, commit):
              'assets/cynthiacetus/print-project-1-20-supports.parts.json']
     for name in files:
         check_file(base, name, (root / name).read_bytes(), commit, checked)
+    directory = json.loads((root / 'publications/work-directory.json').read_text())
+    if (len(directory['groups']) != 51 or directory['main_manuscripts'] != 29 or
+            directory['pdf_entries'] != 223 or directory['source_archives'] != 3):
+        raise ValueError('The complete supplied works index is missing entries')
     for paper in documents:
         name = 'publications/' + paper['file']
         check_file(base, name, (root / name).read_bytes(), commit, checked)
@@ -81,13 +92,41 @@ def check_browser(base, chromium):
         response = page.goto(urljoin(base, 'cv.html'), wait_until='load', timeout=60000)
         if response.status != 200:
             raise ValueError('Live CV did not return HTTP 200')
+        if 'Work in progress' not in page.locator('#research-publications').inner_text():
+            raise ValueError('The current research projects section is missing')
         for card in ['coronodon', 'zygophyseter']:
             page.locator(f'[data-card="{card}"]').click()
             page.wait_for_selector('#viewer-flip:not([hidden])')
             page.locator('#viewer-flip').click()
             if not page.locator('#viewer-card-back').is_visible():
                 raise ValueError('Live card did not flip')
+            page.wait_for_function('document.querySelector("#viewer-card-back img").naturalWidth===1000')
+            if 'publications/card' not in page.locator('#viewer-original').get_attribute('href'):
+                raise ValueError('The original-image link does not open the full-size flip view')
             page.keyboard.press('Escape')
+        page.goto(urljoin(base, 'publications/research-index.html'), wait_until='load', timeout=60000)
+        if page.locator('.work-group').count() != 51 or page.locator('[data-entry]').count() != 226:
+            raise ValueError('The live works directory is incomplete')
+        if any('\u3400' <= char <= '\u9fff' for char in page.locator('body').inner_text()):
+            raise ValueError('The live directory contains untranslated visible text')
+        page.locator('#work-search').fill('Wallis')
+        if page.locator('.work-group:not([hidden])').count() != 1:
+            raise ValueError('The live English directory search failed')
+        page.locator('#expand-all').click()
+        page.locator('.work-group:not([hidden]) [data-entry] a').first.click()
+        page.wait_for_selector('#library-open:not([hidden])')
+        if page.locator('.directory-header>a').evaluate('(a)=>a.href') != urljoin(base, 'cv.html#manuscripts'):
+            raise ValueError('The library entry does not return to the matching CV')
+        for card in ['coronodon', 'zygophyseter']:
+            page.goto(urljoin(base, 'publications/card.html?card=' + card), wait_until='load', timeout=60000)
+            page.wait_for_function('document.getElementById("reader-front").naturalWidth===1000')
+            page.locator('#reader-card').click()
+            page.wait_for_function('!document.getElementById("reader-back").hidden && document.getElementById("reader-back").naturalWidth===1000')
+            if page.locator('header>a').evaluate('(a)=>a.href') != urljoin(base, 'cv.html#artworks'):
+                raise ValueError('The full-size card does not return to the matching CV')
+            page.locator('#flip-card').click()
+            if not page.locator('#reader-front').is_visible():
+                raise ValueError('The full-size card did not flip back to its original front')
         reader = urljoin(base, 'publications/reader.html?paper=K_class_q_copy_m_slot_markov_symmetry_report')
         page.goto(reader, wait_until='load', timeout=60000)
         page.wait_for_selector('#page-1 canvas', timeout=60000)
@@ -113,7 +152,9 @@ def check_browser(base, chromium):
         page.wait_for_function('document.querySelector("model-viewer").loaded && document.getElementById("model-status").textContent.includes("Full geometry")', timeout=60000)
         if errors:
             raise ValueError('Live page errors: ' + '; '.join(errors))
-        return {'viewport_width': 390, 'card_backs': 2, 'report_pages': 18,
+        return {'viewport_width': 390, 'card_backs': 2, 'full_size_card_flips': 2,
+                'research_projects': 'passed', 'directory_groups': 51, 'directory_entries': 226,
+                'english_directory_search': 'passed', 'report_pages': 18,
                 'same_host_cv_return': 'passed', 'support_toggle': 'passed', 'page_errors': []}
     finally:
         page.close()
