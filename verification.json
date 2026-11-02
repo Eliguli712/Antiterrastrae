@@ -1,8 +1,8 @@
 {
-  "source_commit": "c19fc7653796d1de16d63e5bc5871e899b00f815",
-  "verified_at": "2026-11-02T00:08:41.289421+00:00",
+  "source_commit": "f252dc283ab05f200a66d72f89b4f35ef000163d",
+  "verified_at": "2026-11-02T03:38:42.446077+00:00",
   "execution": "GitHub Actions",
-  "run_url": "https://github.com/Eliguli712/Antiterrastrae/actions/runs/41365282389",
+  "run_url": "https://github.com/Eliguli712/Antiterrastrae/actions/runs/41383961308",
   "sites": {
     "github_pages": {
       "url": "https://eliguli712.github.io/Antiterrastrae/",
@@ -10,14 +10,38 @@
       "checked_files": [
         {
           "path": "cv.html",
-          "bytes": 315082,
-          "sha256": "1fbbb9b4b544bf747ae3b220903be157d9c646c268e93879dc32421413bea1b3",
+          "bytes": 414450,
+          "sha256": "d954299585f3939b3bde0824b9d75ccdbcc264520641557262ec1fff9999cb01",
           "matches": true
         },
         {
           "path": "publications/catalog.json",
           "bytes": 6904,
           "sha256": "9cab00f67d405d5364568ae5490efd617db11f6920084be679332b35c154aff7",
+          "matches": true
+        },
+        {
+          "path": "cv.pdf",
+          "bytes": 220195,
+          "sha256": "6d2120c36c4733da81388bf6f41186647606f2463fa2156131225d9d93c7f7e4",
+          "matches": true
+        },
+        {
+          "path": "cv.docx",
+          "bytes": 25818,
+          "sha256": "727a4a108da094986b0085b3c3ad4f57dd245a86d757b3309c7274dcbb103bad",
+          "matches": true
+        },
+        {
+          "path": "cv.md",
+          "bytes": 4926,
+          "sha256": "b45c33e0540393394448cc91f88193d4709dcdf030cef9b7e98ba90a8d56f9f9",
+          "matches": true
+        },
+        {
+          "path": "assets/cv-additions.css",
+          "bytes": 7693,
+          "sha256": "69ff56a3897cd16b3ff0f0715128c9ed705874b9bde3aec6d9994be59999c35a",
           "matches": true
         },
         {
@@ -28,14 +52,92 @@
         },
         {
           "path": "assets/portfolio/gallery.js",
-          "bytes": 4963,
-          "sha256": "03bdbc5a2b83e11e78623bb033cdaf8c930a53f5f382e25b017e4529c9461ace",
+          "bytes": 6231,
+          "sha256": "fc2bf37b1d76e2e751e174129dfaf70d705d0a4b7d04371ac3f125244ba26d8e",
           "matches": true
         },
         {
           "path": "assets/portfolio/cards.json",
-          "bytes": 2394,
-          "sha256": "b833d238b465462a87d96021008bef6d3bf571b3508743229112a6ad6eab2345",
+          "bytes": 2497,
+          "sha256": "e8ed556e83ae5d46774080984d14f2ab395e478d40475b935738ba3c8e85cea9",
+          "matches": true
+        },
+        {
+          "path": "assets/portfolio/card-backs/CardBack.pdf",
+          "bytes": 4013134,
+          "sha256": "c997b93a1a4bc9a32420e97d0ad4d80d7f466c71cd8d7166b341d8b660601c31",
+          "matches": true
+        },
+        {
+          "path": "assets/portfolio/card-backs/provenance.json",
+          "bytes": 668,
+          "sha256": "8c4aeb2d480b59da327f9ccaca89bacc3397eec4148264ec6c3c79e5bac0b80d",
+          "matches": true
+        },
+        {
+          "path": "assets/portfolio/card-backs/coronodon-back.png",
+          "bytes": 1193401,
+          "sha256": "b3ff6b83c7966c01ff26fc0532f7f07782e3240710436a7e8f7ce4b48f3b1413",
+          "matches": true
+        },
+        {
+          "path": "assets/portfolio/card-backs/zygophyseter-back.png",
+          "bytes": 1229860,
+          "sha256": "37a826dfb7e5075cbcc2680c78ef52d77fee9fb8676a34277de3d98d3357b296",
+          "matches": true
+        },
+        {
+          "path": "publications/research-index.html",
+          "bytes": 98215,
+          "sha256": "d3b361390e7294c848e59ac84d394a9139eb593ccd472aa9ad17fe8867369bd0",
+          "matches": true
+        },
+        {
+          "path": "publications/work-directory.json",
+          "bytes": 137618,
+          "sha256": "9b139b4c95518e8ffdcf1d7b66ce74555d95f071ef8e5ce10fa1c5104925f48a",
+          "matches": true
+        },
+        {
+          "path": "publications/library-entry.html",
+          "bytes": 1215,
+          "sha256": "df570057434e690135fa3538e61db4ecf3d90351ecd0f809360f7a5bad63a411",
+          "matches": true
+        },
+        {
+          "path": "assets/library-entry.js",
+          "bytes": 1810,
+          "sha256": "5035724738f026c35a31d4cda160f74a0499c79040ba2c6b3bddea4dfa6a13fe",
+          "matches": true
+        },
+        {
+          "path": "assets/work-directory.css",
+          "bytes": 3567,
+          "sha256": "1edff31c4f9c85e135c498b6984cd7a7ae14e8f9a23da198d8ca54ee28504560",
+          "matches": true
+        },
+        {
+          "path": "assets/work-directory.js",
+          "bytes": 1365,
+          "sha256": "fb216d4332ac29fe92bb5e776c414febbe83f8b5efe2a8e2b547b28973d46acd",
+          "matches": true
+        },
+        {
+          "path": "publications/card.html",
+          "bytes": 1320,
+          "sha256": "43e7f2007219819a8c4cd8a6663e1fcbc3c7328e17eb6ad77752f49025e58577",
+          "matches": true
+        },
+        {
+          "path": "assets/card-reader.css",
+          "bytes": 1347,
+          "sha256": "e4d4b7e653f99ab23b15561c658eed7d75397e0b3be80682d572d090e04b5182",
+          "matches": true
+        },
+        {
+          "path": "assets/card-reader.js",
+          "bytes": 2417,
+          "sha256": "5f479561ff5d113affdf6661f9b5e91311d8217c146c62478ff818a4f56c4cf5",
           "matches": true
         },
         {
@@ -181,6 +283,11 @@
         "outcome": "passed",
         "viewport_width": 390,
         "card_backs": 2,
+        "full_size_card_flips": 2,
+        "research_projects": "passed",
+        "directory_groups": 51,
+        "directory_entries": 226,
+        "english_directory_search": "passed",
         "report_pages": 18,
         "same_host_cv_return": "passed",
         "support_toggle": "passed",
@@ -190,7 +297,7 @@
     "vercel": {
       "url": "https://eliguli.vercel.app/",
       "http": "failed",
-      "error": "Published file differs: cv.html; expected SHA-256 1fbbb9b4b544bf747ae3b220903be157d9c646c268e93879dc32421413bea1b3, observed 218767cc4398fed3eabe4b2e0b76b46df5d3346b926e7c9d955e999d54c5670b",
+      "error": "Published file differs: cv.html; expected SHA-256 d954299585f3939b3bde0824b9d75ccdbcc264520641557262ec1fff9999cb01, observed 218767cc4398fed3eabe4b2e0b76b46df5d3346b926e7c9d955e999d54c5670b",
       "attempts": 4
     }
   },
