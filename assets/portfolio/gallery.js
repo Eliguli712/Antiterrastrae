@@ -39,8 +39,8 @@ async function render() {
   document.getElementById('viewer-title').textContent = link.dataset.artTitle;
   document.getElementById('viewer-count').textContent = `${selected + 1} / ${current.length}`;
   const original = document.getElementById('viewer-original');
-  original.href = link.href;
-  original.textContent = link.dataset.card ? 'Open original front image' : 'Open original image';
+  original.href = link.dataset.card ? new URL(`../../publications/card.html?card=${encodeURIComponent(link.dataset.card)}`, import.meta.url).href : link.href;
+  original.textContent = link.dataset.card ? 'Open full-size flip view' : 'Open original image';
   for (const name of ['prev', 'next']) document.getElementById(`viewer-${name}`).hidden = current.length < 2;
   setSide(false);
   if (!link.dataset.card) return;
@@ -53,12 +53,26 @@ async function render() {
     if (id !== generation) return;
     card = data[link.dataset.card];
     if (!card) return;
+    back.classList.toggle('card-back-source', !!card.backImage);
+    let notes = back;
+    if (card.backImage) {
+      const image = document.createElement('img');
+      image.className = 'card-back-image'; image.src = new URL(card.backImage, import.meta.url).href;
+      image.width = 1000; image.height = 1400; image.alt = `${card.name} · Supplied card back`;
+      image.tabIndex = 0; image.setAttribute('role', 'button'); image.setAttribute('aria-label', `Flip ${card.name} to the front`);
+      image.addEventListener('keydown', event => { if (['Enter', ' '].includes(event.key)) { event.preventDefault(); toggle(); } });
+      back.append(image);
+      notes = document.createElement('details'); notes.className = 'card-notes';
+      const summary = document.createElement('summary'); summary.textContent = 'Read complete card notes'; notes.append(summary); back.append(notes);
+      original.href = new URL(`../../publications/card.html?card=${encodeURIComponent(link.dataset.card)}`, import.meta.url).href;
+      original.textContent = 'Open full-size flip view';
+    }
     const code = document.createElement('p');
     code.className = 'card-back-code'; code.textContent = `PALÆONTOLOGY / ${card.code}`;
     const title = document.createElement('h3'); title.textContent = card.heading || card.name;
-    back.append(code, title);
+    notes.append(code, title);
     for (const paragraph of card.body.split('\n\n')) {
-      const p = document.createElement('p'); p.textContent = paragraph; back.append(p);
+      const p = document.createElement('p'); p.textContent = paragraph; notes.append(p);
     }
     flip.hidden = false;
     setSide(false);
@@ -80,7 +94,7 @@ photo.addEventListener('click', toggle);
 photo.addEventListener('keydown', event => {
   if (card && ['Enter', ' '].includes(event.key)) { event.preventDefault(); toggle(); }
 });
-back.addEventListener('click', toggle);
+back.addEventListener('click', event => { if (!event.target.closest('.card-notes')) toggle(); });
 flip.addEventListener('click', () => setSide(!reversed));
 document.getElementById('viewer-scale').addEventListener('click', () => {
   const actual = viewer.classList.toggle('actual-size');

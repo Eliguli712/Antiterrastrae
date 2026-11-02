@@ -1,0 +1,25 @@
+{
+  "source": "CardBack.pdf",
+  "source_sha256": "c997b93a1a4bc9a32420e97d0ad4d80d7f466c71cd8d7166b341d8b660601c31",
+  "conversion": "Unedited PDF page render at 72 dpi; full 1000 x 1400 source page retained",
+  "pages": {
+    "coronodon": {
+      "page": 1,
+      "image": "coronodon-back.png",
+      "sha256": "b3ff6b83c7966c01ff26fc0532f7f07782e3240710436a7e8f7ce4b48f3b1413",
+      "pixels": [
+        1000,
+        1400
+      ]
+    },
+    "zygophyseter": {
+      "page": 2,
+      "image": "zygophyseter-back.png",
+      "sha256": "37a826dfb7e5075cbcc2680c78ef52d77fee9fb8676a34277de3d98d3357b296",
+      "pixels": [
+        1000,
+        1400
+      ]
+    }
+  }
+}
