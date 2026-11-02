@@ -54,3 +54,31 @@ conversion are recorded in `assets/cynthiacetus/print-project-manifest.json`.
 Browser checks cover support toggling and camera preservation on both site
 layouts and phone widths; geometry checks compare every source triangle and
 exported vertex.
+
+## Split downloads and the larger SLA archive
+
+The 44,338,260-byte support display is now stored as three parts smaller than
+32 MiB each. `print-project-1-20-supports.parts.json` records every part's size and
+SHA-256, plus the complete original file's checksum. The browser verifies each
+part and the complete GLB before displaying it. Failed integrity checks expose
+the retry control. Geometry and source triangle counts remain unchanged.
+
+The separately uploaded `Cynthiacetus_Separated_SLA_All.zip` has not reached the
+execution workspace: the attachment downloader rejects files above 32 MiB and
+has no range/remote-split operation. It cannot be split here until its bytes are
+available. Split the original wherever it is stored using the provided helper:
+
+```bash
+python3 scripts/chunk_file.py split Cynthiacetus_Separated_SLA_All.zip --output sla-parts
+```
+
+Supply the resulting `.parts.json` and `.bin` parts, or a readable download URL.
+Reassembly preserves every original ZIP byte and checks each part first:
+
+```bash
+python3 scripts/chunk_file.py join sla-parts/Cynthiacetus_Separated_SLA_All.parts.json \
+  --output Cynthiacetus_Separated_SLA_All.zip
+```
+
+The existing FFF reference project and its support preview do not stand in for
+the unavailable SLA archive.

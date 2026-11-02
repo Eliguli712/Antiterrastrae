@@ -7,12 +7,13 @@ import struct
 import unittest
 
 import numpy as np
+from scripts.chunk_file import read_verified
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def read_glb(path):
-    data = path.read_bytes()
+    data = read_verified(path) if path.name.endswith('.parts.json') else path.read_bytes()
     magic, version, length = struct.unpack_from('<III', data)
     assert magic == 0x46546C67 and version == 2 and length == len(data)
     size, kind = struct.unpack_from('<II', data, 12)
@@ -61,4 +62,6 @@ class PrintGeometryTests(unittest.TestCase):
         self.assertEqual(support['material'], 1)
         self.assertFalse(supported['extras']['simplified'])
         for key, digest in [('anatomy_glb', 'anatomy_glb_sha256'), ('supported_glb', 'supported_glb_sha256')]:
-            self.assertEqual(sha256((ROOT / manifest[key]).read_bytes()).hexdigest(), manifest[digest])
+            path = ROOT / manifest[key]
+            data = read_verified(path) if path.name.endswith('.parts.json') else path.read_bytes()
+            self.assertEqual(sha256(data).hexdigest(), manifest[digest])

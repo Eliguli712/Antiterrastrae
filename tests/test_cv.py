@@ -3,6 +3,7 @@ from hashlib import sha256
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import json
 from pathlib import Path
+import os
 import threading
 import unittest
 from urllib.parse import urlsplit
@@ -31,8 +32,11 @@ class CVBrowserTests(unittest.TestCase):
         cls.thread.start()
         cls.base = f'http://127.0.0.1:{cls.server.server_port}/{ROOT.name}'
         cls.playwright = sync_playwright().start()
-        cls.browser = cls.playwright.chromium.launch(executable_path='/usr/bin/chromium', headless=True,
-            args=['--no-sandbox', '--disable-dev-shm-usage', '--enable-unsafe-swiftshader'])
+        options = {'headless': True, 'args': ['--no-sandbox', '--disable-dev-shm-usage', '--enable-unsafe-swiftshader']}
+        executable = os.environ.get('CV_CHROMIUM_EXECUTABLE')
+        if executable or Path('/usr/bin/chromium').is_file():
+            options['executable_path'] = executable or '/usr/bin/chromium'
+        cls.browser = cls.playwright.chromium.launch(**options)
 
     @classmethod
     def tearDownClass(cls):
@@ -175,7 +179,7 @@ class CVBrowserTests(unittest.TestCase):
                     page.locator('model-viewer').evaluate('(m) => m.jumpCameraToGoal()')
                     after = page.locator('model-viewer').evaluate('(m) => ({...m.getCameraOrbit()})')
                     self.assertEqual(toggle.get_attribute('aria-pressed'), 'true')
-                    self.assertTrue(page.locator('model-viewer').get_attribute('src').endswith('-supports.glb'))
+                    self.assertTrue(page.locator('model-viewer').get_attribute('src').startswith('blob:'))
                     for name in ['theta', 'phi', 'radius']:
                         self.assertAlmostEqual(before[name], after[name], delta=0.001)
                     self.assertTrue(page.locator('#model-support-download').get_attribute('href').endswith('Cynthiacetus_Skull_Supports_1-20.3mf'))
@@ -185,6 +189,22 @@ class CVBrowserTests(unittest.TestCase):
                     self.assertTrue(page.locator('model-viewer').get_attribute('src').endswith('/print-project-1-20.glb'))
                     self.assertEqual(errors, [])
                     page.close()
+
+    def test_corrupted_model_part_can_retry(self):
+        page = self.browser.new_page(viewport={'width': 1100, 'height': 850})
+        page.goto(self.base + '/cv.html#cynthiacetus-print-project')
+        page.locator('[data-explore-model="print-1-20"]').click()
+        page.wait_for_function('document.querySelector("model-viewer").loaded && document.getElementById("model-status").textContent.includes("154,472")', timeout=90000)
+        pattern = '**/print-project-1-20-supports.part-001.bin'
+        page.route(pattern, lambda route: route.fulfill(status=200, body=b'corrupted'))
+        page.locator('#model-support').click()
+        page.wait_for_selector('#model-retry:not([hidden])', timeout=30000)
+        self.assertIn('could not load', page.locator('#model-status').inner_text())
+        page.unroute(pattern)
+        page.locator('#model-retry').click()
+        page.wait_for_function('document.querySelector("model-viewer").loaded && document.getElementById("model-status").textContent.includes("Print supports visible")', timeout=120000)
+        self.assertTrue(page.locator('model-viewer').get_attribute('src').startswith('blob:'))
+        page.close()
 
 
 if __name__ == '__main__':

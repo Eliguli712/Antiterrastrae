@@ -25,7 +25,7 @@
   "source_bytes": 2413016,
   "anatomy_glb": "assets/cynthiacetus/print-project-1-20.glb",
   "anatomy_glb_sha256": "462bf62b88cbd0cd3e7750e88dce5f3ec6a194542edf10d623d8d69d368835b6",
-  "supported_glb": "assets/cynthiacetus/print-project-1-20-supports.glb",
+  "supported_glb": "assets/cynthiacetus/print-project-1-20-supports.parts.json",
   "supported_glb_sha256": "6852173fee0d0a92d01dff1784c07d0874caa7464cb77c90bb5c7d87d9424096",
   "anatomy_glb_bytes": 3710092,
   "supported_glb_bytes": 44338260

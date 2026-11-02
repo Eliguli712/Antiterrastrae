@@ -11,6 +11,8 @@ import json
 from pathlib import Path
 import re
 import struct
+import shutil
+import tempfile
 import xml.etree.ElementTree as ET
 import zipfile
 
@@ -176,6 +178,7 @@ def write_glb(path, meshes, center, extra):
 
 
 def main():
+    from chunk_file import split_file
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--gcode', type=Path, required=True)
     args = parser.parse_args()
@@ -204,11 +207,20 @@ def main():
     base_hash = write_glb(OUT / 'print-project-1-20.glb', base, center, meta)
     support_hash = write_glb(OUT / 'print-project-1-20-supports.glb',
                             base + [(support_vertices, support_faces, 1)], center, meta)
+    supported_bytes = (OUT / 'print-project-1-20-supports.glb').stat().st_size
+    with tempfile.TemporaryDirectory() as directory:
+        staged = split_file(OUT / 'print-project-1-20-supports.glb', Path(directory))
+        listing = json.loads(staged.read_text())
+        for item in listing['parts']:
+            shutil.copy2(Path(directory) / item['path'], OUT / item['path'])
+        parts = OUT / staged.name
+        shutil.copy2(staged, parts)
+    (OUT / 'print-project-1-20-supports.glb').unlink()
     meta.update(source=str(SOURCE.relative_to(ROOT)), source_bytes=SOURCE.stat().st_size,
                 anatomy_glb='assets/cynthiacetus/print-project-1-20.glb', anatomy_glb_sha256=base_hash,
                 anatomy_glb_bytes=(OUT / 'print-project-1-20.glb').stat().st_size,
-                supported_glb='assets/cynthiacetus/print-project-1-20-supports.glb', supported_glb_sha256=support_hash,
-                supported_glb_bytes=(OUT / 'print-project-1-20-supports.glb').stat().st_size)
+                supported_glb=str(parts.relative_to(ROOT)), supported_glb_sha256=support_hash,
+                supported_glb_bytes=supported_bytes)
     (OUT / 'print-project-manifest.json').write_text(json.dumps(meta, indent=2) + '\n')
     print(json.dumps(meta, indent=2))
 

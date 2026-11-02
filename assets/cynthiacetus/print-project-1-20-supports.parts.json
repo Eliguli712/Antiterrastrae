@@ -1,0 +1,23 @@
+{
+  "format": "chunked-file-v1",
+  "filename": "print-project-1-20-supports.glb",
+  "bytes": 44338260,
+  "sha256": "6852173fee0d0a92d01dff1784c07d0874caa7464cb77c90bb5c7d87d9424096",
+  "parts": [
+    {
+      "path": "print-project-1-20-supports.part-001.bin",
+      "bytes": 16777216,
+      "sha256": "712b91b62ed6af03e9a9adad35674297cf2cb17c9bb472feb039213421485661"
+    },
+    {
+      "path": "print-project-1-20-supports.part-002.bin",
+      "bytes": 16777216,
+      "sha256": "26487c8f8e97d0bee2db55a90e06968bb489bc17627d1eec0377b73792991d11"
+    },
+    {
+      "path": "print-project-1-20-supports.part-003.bin",
+      "bytes": 10783828,
+      "sha256": "f9586c6cc67c0adc7cd9c9907a88c2c5f60f6c37aa982aee9de409328fec2785"
+    }
+  ]
+}

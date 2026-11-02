@@ -1,3 +1,5 @@
+import {loadChunkedModel} from './chunked-model.js';
+
 const dialog = document.getElementById('model-dialog');
 const model = dialog.querySelector('model-viewer');
 const title = document.getElementById('model-dialog-title');
@@ -12,6 +14,10 @@ let current;
 let request = 0;
 let showSupport = false;
 let savedCamera;
+let controller;
+let preparing = false;
+let displayedSupport = false;
+const modelBlobs = new Map();
 
 function restoreCamera() {
   const wide = model.clientWidth / Math.max(model.clientHeight, 1) > 1.5;
@@ -21,12 +27,18 @@ function restoreCamera() {
   model.setAttribute('field-of-view', '30deg');
 }
 
-async function load() {
+async function load({resetCamera = true} = {}) {
   const id = ++request;
+  controller?.abort();
+  controller = new AbortController();
+  const signal = controller.signal;
+  const withSupport = showSupport;
+  preparing = true;
+  support.disabled = true;
   status.textContent = showSupport ? 'Loading the complete model and print supports…' : 'Loading the complete textured model…';
   retry.hidden = true;
   model.setAttribute('poster', current.poster);
-  restoreCamera();
+  if (resetCamera) restoreCamera();
   try {
     library ??= import('./model-viewer-4.1.0.min.js').catch(error => {
       library = undefined;
@@ -34,9 +46,29 @@ async function load() {
     });
     await library;
     if (id !== request || !dialog.open) return;
-    model.setAttribute('src', showSupport ? current.supportSrc : current.src);
-  } catch {
-    if (id === request && dialog.open) showError();
+    const source = withSupport ? current.supportSrc : current.src;
+    let resource = source;
+    if (source.endsWith('.parts.json')) {
+      resource = modelBlobs.get(source);
+      if (!resource) {
+        resource = await loadChunkedModel(source, {signal, onProgress(received, total) {
+          if (id === request) status.textContent = `Loading and checking print supports… ${Math.round(received / total * 100)}%`;
+        }});
+        if (id !== request || !dialog.open) { URL.revokeObjectURL(resource); return; }
+        modelBlobs.set(source, resource);
+      }
+    }
+    if (id !== request || !dialog.open) return;
+    preparing = false;
+    displayedSupport = withSupport;
+    if (model.loaded && model.getAttribute('src') === resource) finishLoad();
+    else model.setAttribute('src', resource);
+  } catch (error) {
+    if (id === request && dialog.open && error.name !== 'AbortError') {
+      preparing = false;
+      support.disabled = false;
+      showError();
+    }
   }
 }
 
@@ -71,12 +103,13 @@ for (const button of document.querySelectorAll('[data-explore-model]')) {
 }
 
 model.addEventListener('progress', event => {
-  if (!dialog.open || !current) return;
+  if (!dialog.open || !current || preparing) return;
   const progress = Math.round(event.detail.totalProgress * 100);
   if (progress < 100) status.textContent = `Loading the complete textured model… ${progress}%`;
 });
-model.addEventListener('load', () => {
-  if (dialog.open && current) {
+function finishLoad() {
+  if (dialog.open && current && !preparing) {
+    support.disabled = false;
     if (savedCamera) {
       model.cameraOrbit = savedCamera.orbit;
       model.cameraTarget = savedCamera.target;
@@ -84,13 +117,14 @@ model.addEventListener('load', () => {
       savedCamera = undefined;
     }
     const appearance = current.appearance || 'Original Opal texture';
-    status.textContent = showSupport
+    status.textContent = displayedSupport
       ? `${current.faces} anatomy triangles · ${appearance} · Print supports visible`
       : `${current.faces} triangles · ${appearance} · Full geometry`;
   }
-});
+}
+model.addEventListener('load', finishLoad);
 model.addEventListener('error', () => {
-  if (dialog.open) showError();
+  if (dialog.open && !preparing) { support.disabled = false; showError(); }
 });
 retry.addEventListener('click', () => {
   model.removeAttribute('src');
@@ -109,13 +143,17 @@ support.addEventListener('click', () => {
   support.setAttribute('aria-pressed', String(showSupport));
   support.textContent = showSupport ? 'Hide support' : 'Display support';
   status.textContent = showSupport ? 'Loading print supports…' : 'Loading anatomy…';
-  model.setAttribute('src', showSupport ? current.supportSrc : current.src);
+  load({resetCamera: false});
 });
 document.getElementById('model-reset').addEventListener('click', restoreCamera);
 document.getElementById('model-close').addEventListener('click', () => dialog.close());
 dialog.addEventListener('close', () => {
   ++request;
+  controller?.abort();
+  preparing = false;
   model.removeAttribute('src');
+  for (const url of modelBlobs.values()) URL.revokeObjectURL(url);
+  modelBlobs.clear();
   document.body.classList.remove('viewer-open');
   opener?.focus();
 });
