@@ -1,0 +1,205 @@
+{
+  "source_commit": "c19fc7653796d1de16d63e5bc5871e899b00f815",
+  "verified_at": "2026-11-02T00:08:41.289421+00:00",
+  "execution": "GitHub Actions",
+  "run_url": "https://github.com/Eliguli712/Antiterrastrae/actions/runs/41365282389",
+  "sites": {
+    "github_pages": {
+      "url": "https://eliguli712.github.io/Antiterrastrae/",
+      "http": "passed",
+      "checked_files": [
+        {
+          "path": "cv.html",
+          "bytes": 315082,
+          "sha256": "1fbbb9b4b544bf747ae3b220903be157d9c646c268e93879dc32421413bea1b3",
+          "matches": true
+        },
+        {
+          "path": "publications/catalog.json",
+          "bytes": 6904,
+          "sha256": "9cab00f67d405d5364568ae5490efd617db11f6920084be679332b35c154aff7",
+          "matches": true
+        },
+        {
+          "path": "assets/publications.js",
+          "bytes": 591,
+          "sha256": "bee55682296feb53b269407945832802d6cca263683da7bec4c69646c64bbb76",
+          "matches": true
+        },
+        {
+          "path": "assets/portfolio/gallery.js",
+          "bytes": 4963,
+          "sha256": "03bdbc5a2b83e11e78623bb033cdaf8c930a53f5f382e25b017e4529c9461ace",
+          "matches": true
+        },
+        {
+          "path": "assets/portfolio/cards.json",
+          "bytes": 2394,
+          "sha256": "b833d238b465462a87d96021008bef6d3bf571b3508743229112a6ad6eab2345",
+          "matches": true
+        },
+        {
+          "path": "assets/cynthiacetus/viewer.js",
+          "bytes": 6229,
+          "sha256": "1e3216df27f1f3d1d2b798bbe6eb4ba44a31e745c02c92adc539b2cfb7c3d586",
+          "matches": true
+        },
+        {
+          "path": "assets/cynthiacetus/chunked-model.js",
+          "bytes": 2002,
+          "sha256": "ed99b93be16d3d97787854b80a483a82fcd54362f8d7958159139ff110de0a7b",
+          "matches": true
+        },
+        {
+          "path": "publications/reader.html",
+          "bytes": 1402,
+          "sha256": "c3b59aa54343b1688b366dcc1d1909ddcc75a8f0eeb5c05623c744903d040e0c",
+          "matches": true
+        },
+        {
+          "path": "publications/reader.js",
+          "bytes": 6969,
+          "sha256": "eb6ba5ea0820ea85ba79f3a5cef9a37f4ed6ca04aa5dbe1818331752ba9bac2c",
+          "matches": true
+        },
+        {
+          "path": "publications/reader.css",
+          "bytes": 2320,
+          "sha256": "5df65dcba5699948a565636b168f80c089d9b0da246071954c4917b26b9762b6",
+          "matches": true
+        },
+        {
+          "path": "downloads/cynthiacetus/Cynthiacetus_Skull_Supports_1-20.3mf",
+          "bytes": 2413016,
+          "sha256": "567bc0cd06ecf6075811b826bb3e3d884fa693d0afff38f3836525739483cfd2",
+          "matches": true
+        },
+        {
+          "path": "assets/cynthiacetus/print-project-manifest.json",
+          "bytes": 1416,
+          "sha256": "0b59642b2e926c9ab3396929ac559ca020de1c4513f13dadc2490543a043fcac",
+          "matches": true
+        },
+        {
+          "path": "assets/cynthiacetus/print-project-1-20-supports.parts.json",
+          "bytes": 738,
+          "sha256": "f67f7a292ad6705bb9e123bea3ff6cec5d6d62f479b2409cb448de4036a973b6",
+          "matches": true
+        },
+        {
+          "path": "publications/megalodon-9page-report.pdf",
+          "bytes": 9819706,
+          "sha256": "2f0e465c25db57de7080e338ed655d10fe16f7fb9f5d84df2797b9714c33fe6c",
+          "matches": true
+        },
+        {
+          "path": "publications/massa-corporis.pdf",
+          "bytes": 247190,
+          "sha256": "5e64608fb5053bb01e1730c0825118e7309e37cec36382fa9857944867ec67f3",
+          "matches": true
+        },
+        {
+          "path": "publications/song-before-civilisation.pdf",
+          "bytes": 723479,
+          "sha256": "27e3bf7011a18340e47105f6bdd28fda260e1b8004ada4d72ae4d24a2048cb9f",
+          "matches": true
+        },
+        {
+          "path": "publications/ancient-greek-semantic-dags.pdf",
+          "bytes": 253921,
+          "sha256": "3889d991a9f2643b63778c73eca9108ce5964cd90ec623705bfa18b69f65fa10",
+          "matches": true
+        },
+        {
+          "path": "publications/brownian-motion-notes.pdf",
+          "bytes": 4277648,
+          "sha256": "49dffa642a02987ff2650ecd68d1ee2b14d9a3f7ee33910e3916ae2052c6e928",
+          "matches": true
+        },
+        {
+          "path": "publications/mathematical-probability-report.pdf",
+          "bytes": 1197707,
+          "sha256": "78a6d597e389ea577d82a58ffff1c242edb31f0a2c1b84cb66c4d26ab142d51a",
+          "matches": true
+        },
+        {
+          "path": "publications/mathematical-statistics-practice.pdf",
+          "bytes": 401296,
+          "sha256": "25fbd86731ed6b9e6d7d8bf3d5c72561e4d3b0cc2e6c1cf704ff00aadbe256c4",
+          "matches": true
+        },
+        {
+          "path": "publications/kakeya-conditional-reduction.pdf",
+          "bytes": 125333,
+          "sha256": "7df9afda60c33ebe1078913876a5b0955015eb576ddcc69e02d25dd44ca85d28",
+          "matches": true
+        },
+        {
+          "path": "publications/megalodon-20page-revised.pdf",
+          "bytes": 17320316,
+          "sha256": "be932f214e424b8e36b140d0b6a45ec4bca8ace9207c2d08ce2ddcd170729fc4",
+          "matches": true
+        },
+        {
+          "path": "publications/megalodon-26page-recalculated.pdf",
+          "bytes": 4726620,
+          "sha256": "bd12eacb43add935aaf027f8e2e51d6397f1c0e6d48a9295aa3cc13fa81714fe",
+          "matches": true
+        },
+        {
+          "path": "publications/megalodon-durf-report.pdf",
+          "bytes": 2600932,
+          "sha256": "127bfd1396bd07dc43005723c68e576c2a412df27d601eb4fbc624cd84954d1b",
+          "matches": true
+        },
+        {
+          "path": "publications/K_class_q_copy_m_slot_markov_symmetry_report.pdf",
+          "bytes": 518043,
+          "sha256": "2f9b2f35024d0aa6d424786d5fce3c22fb5a7929e04205e09cb73ad541325774",
+          "matches": true
+        },
+        {
+          "path": "assets/cynthiacetus/print-project-1-20-supports.part-001.bin",
+          "bytes": 16777216,
+          "sha256": "712b91b62ed6af03e9a9adad35674297cf2cb17c9bb472feb039213421485661",
+          "matches": true
+        },
+        {
+          "path": "assets/cynthiacetus/print-project-1-20-supports.part-002.bin",
+          "bytes": 16777216,
+          "sha256": "26487c8f8e97d0bee2db55a90e06968bb489bc17627d1eec0377b73792991d11",
+          "matches": true
+        },
+        {
+          "path": "assets/cynthiacetus/print-project-1-20-supports.part-003.bin",
+          "bytes": 10783828,
+          "sha256": "f9586c6cc67c0adc7cd9c9907a88c2c5f60f6c37aa982aee9de409328fec2785",
+          "matches": true
+        }
+      ],
+      "browser": {
+        "outcome": "passed",
+        "viewport_width": 390,
+        "card_backs": 2,
+        "report_pages": 18,
+        "same_host_cv_return": "passed",
+        "support_toggle": "passed",
+        "page_errors": []
+      }
+    },
+    "vercel": {
+      "url": "https://eliguli.vercel.app/",
+      "http": "failed",
+      "error": "Published file differs: cv.html; expected SHA-256 1fbbb9b4b544bf747ae3b220903be157d9c646c268e93879dc32421413bea1b3, observed 218767cc4398fed3eabe4b2e0b76b46df5d3346b926e7c9d955e999d54c5670b",
+      "attempts": 4
+    }
+  },
+  "outcome": "failed",
+  "pipeline": {
+    "build": "success",
+    "tests": "success",
+    "vercel_deploy": "skipped",
+    "live": "failure"
+  },
+  "vercel_token_available": false
+}
