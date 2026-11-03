@@ -1,8 +1,8 @@
 {
-  "source_commit": "f252dc283ab05f200a66d72f89b4f35ef000163d",
-  "verified_at": "2026-11-02T14:53:01.578684+00:00",
+  "source_commit": "dc1e2a58b3db9806131328b769cc08915f264790",
+  "verified_at": "2026-11-03T00:01:36.684165+00:00",
   "execution": "GitHub Actions",
-  "run_url": "https://github.com/Eliguli712/Antiterrastrae/actions/runs/41383961308",
+  "run_url": "https://github.com/Eliguli712/Antiterrastrae/actions/runs/41549388727",
   "sites": {
     "github_pages": {
       "url": "https://eliguli712.github.io/Antiterrastrae/",
@@ -10,8 +10,8 @@
       "checked_files": [
         {
           "path": "cv.html",
-          "bytes": 414450,
-          "sha256": "d954299585f3939b3bde0824b9d75ccdbcc264520641557262ec1fff9999cb01",
+          "bytes": 414715,
+          "sha256": "af010757b0b601efb607438f7533d189e4faf36da52158730ee69d970d256f9c",
           "matches": true
         },
         {
@@ -300,14 +300,14 @@
       "checked_files": [
         {
           "path": "cv.html",
-          "bytes": 414450,
-          "sha256": "d954299585f3939b3bde0824b9d75ccdbcc264520641557262ec1fff9999cb01",
+          "bytes": 414715,
+          "sha256": "af010757b0b601efb607438f7533d189e4faf36da52158730ee69d970d256f9c",
           "matches": true
         },
         {
           "path": "",
-          "bytes": 414450,
-          "sha256": "d954299585f3939b3bde0824b9d75ccdbcc264520641557262ec1fff9999cb01",
+          "bytes": 414715,
+          "sha256": "af010757b0b601efb607438f7533d189e4faf36da52158730ee69d970d256f9c",
           "matches": true
         },
         {
