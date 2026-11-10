@@ -1,8 +1,8 @@
 {
-  "source_commit": "5973575fd8238b7b0e81304f66327215cc705eec",
-  "verified_at": "2026-11-10T22:00:35.623494+00:00",
+  "source_commit": "faae65cff23cbf169e6c510726f11ae133303b05",
+  "verified_at": "2026-11-10T22:09:18.690147+00:00",
   "execution": "GitHub Actions",
-  "run_url": "https://github.com/Eliguli712/Antiterrastrae/actions/runs/42910109462",
+  "run_url": "https://github.com/Eliguli712/Antiterrastrae/actions/runs/42911324434",
   "sites": {
     "github_pages": {
       "url": "https://eliguli712.github.io/Antiterrastrae/",
@@ -11,7 +11,7 @@
         {
           "path": "cv.html",
           "bytes": 414782,
-          "sha256": "2a1c4750bbed3bcd93b3c4980db001ebcf7b9c3978670345d532a66b572eabbc",
+          "sha256": "a849c88ebfdb8a51f3db2eea0f37dd7592009136607fc09774acd737ec0ef6f6",
           "matches": true
         },
         {
@@ -296,17 +296,307 @@
     },
     "vercel": {
       "url": "https://eliguli.vercel.app/",
-      "http": "failed",
-      "error": "Published file differs: cv.html; expected SHA-256 2a1c4750bbed3bcd93b3c4980db001ebcf7b9c3978670345d532a66b572eabbc, observed bc2f3b27a06f318cd2e1b7285fdaacd135e870db3246f1db0864e33a15e34ece",
-      "attempts": 4
+      "http": "passed",
+      "checked_files": [
+        {
+          "path": "cv.html",
+          "bytes": 414782,
+          "sha256": "a849c88ebfdb8a51f3db2eea0f37dd7592009136607fc09774acd737ec0ef6f6",
+          "matches": true
+        },
+        {
+          "path": "",
+          "bytes": 414782,
+          "sha256": "a849c88ebfdb8a51f3db2eea0f37dd7592009136607fc09774acd737ec0ef6f6",
+          "matches": true
+        },
+        {
+          "path": "publications/catalog.json",
+          "bytes": 6904,
+          "sha256": "9cab00f67d405d5364568ae5490efd617db11f6920084be679332b35c154aff7",
+          "matches": true
+        },
+        {
+          "path": "cv.pdf",
+          "bytes": 220195,
+          "sha256": "6d2120c36c4733da81388bf6f41186647606f2463fa2156131225d9d93c7f7e4",
+          "matches": true
+        },
+        {
+          "path": "cv.docx",
+          "bytes": 25818,
+          "sha256": "727a4a108da094986b0085b3c3ad4f57dd245a86d757b3309c7274dcbb103bad",
+          "matches": true
+        },
+        {
+          "path": "cv.md",
+          "bytes": 4926,
+          "sha256": "b45c33e0540393394448cc91f88193d4709dcdf030cef9b7e98ba90a8d56f9f9",
+          "matches": true
+        },
+        {
+          "path": "assets/cv-additions.css",
+          "bytes": 7693,
+          "sha256": "69ff56a3897cd16b3ff0f0715128c9ed705874b9bde3aec6d9994be59999c35a",
+          "matches": true
+        },
+        {
+          "path": "assets/publications.js",
+          "bytes": 591,
+          "sha256": "bee55682296feb53b269407945832802d6cca263683da7bec4c69646c64bbb76",
+          "matches": true
+        },
+        {
+          "path": "assets/portfolio/gallery.js",
+          "bytes": 6231,
+          "sha256": "fc2bf37b1d76e2e751e174129dfaf70d705d0a4b7d04371ac3f125244ba26d8e",
+          "matches": true
+        },
+        {
+          "path": "assets/portfolio/cards.json",
+          "bytes": 2497,
+          "sha256": "e8ed556e83ae5d46774080984d14f2ab395e478d40475b935738ba3c8e85cea9",
+          "matches": true
+        },
+        {
+          "path": "assets/portfolio/card-backs/CardBack.pdf",
+          "bytes": 4013134,
+          "sha256": "c997b93a1a4bc9a32420e97d0ad4d80d7f466c71cd8d7166b341d8b660601c31",
+          "matches": true
+        },
+        {
+          "path": "assets/portfolio/card-backs/provenance.json",
+          "bytes": 668,
+          "sha256": "8c4aeb2d480b59da327f9ccaca89bacc3397eec4148264ec6c3c79e5bac0b80d",
+          "matches": true
+        },
+        {
+          "path": "assets/portfolio/card-backs/coronodon-back.png",
+          "bytes": 1193401,
+          "sha256": "b3ff6b83c7966c01ff26fc0532f7f07782e3240710436a7e8f7ce4b48f3b1413",
+          "matches": true
+        },
+        {
+          "path": "assets/portfolio/card-backs/zygophyseter-back.png",
+          "bytes": 1229860,
+          "sha256": "37a826dfb7e5075cbcc2680c78ef52d77fee9fb8676a34277de3d98d3357b296",
+          "matches": true
+        },
+        {
+          "path": "publications/research-index.html",
+          "bytes": 98215,
+          "sha256": "d3b361390e7294c848e59ac84d394a9139eb593ccd472aa9ad17fe8867369bd0",
+          "matches": true
+        },
+        {
+          "path": "publications/work-directory.json",
+          "bytes": 137618,
+          "sha256": "9b139b4c95518e8ffdcf1d7b66ce74555d95f071ef8e5ce10fa1c5104925f48a",
+          "matches": true
+        },
+        {
+          "path": "publications/library-entry.html",
+          "bytes": 1215,
+          "sha256": "df570057434e690135fa3538e61db4ecf3d90351ecd0f809360f7a5bad63a411",
+          "matches": true
+        },
+        {
+          "path": "assets/library-entry.js",
+          "bytes": 1810,
+          "sha256": "5035724738f026c35a31d4cda160f74a0499c79040ba2c6b3bddea4dfa6a13fe",
+          "matches": true
+        },
+        {
+          "path": "assets/work-directory.css",
+          "bytes": 3567,
+          "sha256": "1edff31c4f9c85e135c498b6984cd7a7ae14e8f9a23da198d8ca54ee28504560",
+          "matches": true
+        },
+        {
+          "path": "assets/work-directory.js",
+          "bytes": 1365,
+          "sha256": "fb216d4332ac29fe92bb5e776c414febbe83f8b5efe2a8e2b547b28973d46acd",
+          "matches": true
+        },
+        {
+          "path": "publications/card.html",
+          "bytes": 1320,
+          "sha256": "43e7f2007219819a8c4cd8a6663e1fcbc3c7328e17eb6ad77752f49025e58577",
+          "matches": true
+        },
+        {
+          "path": "assets/card-reader.css",
+          "bytes": 1347,
+          "sha256": "e4d4b7e653f99ab23b15561c658eed7d75397e0b3be80682d572d090e04b5182",
+          "matches": true
+        },
+        {
+          "path": "assets/card-reader.js",
+          "bytes": 2417,
+          "sha256": "5f479561ff5d113affdf6661f9b5e91311d8217c146c62478ff818a4f56c4cf5",
+          "matches": true
+        },
+        {
+          "path": "assets/cynthiacetus/viewer.js",
+          "bytes": 6229,
+          "sha256": "1e3216df27f1f3d1d2b798bbe6eb4ba44a31e745c02c92adc539b2cfb7c3d586",
+          "matches": true
+        },
+        {
+          "path": "assets/cynthiacetus/chunked-model.js",
+          "bytes": 2002,
+          "sha256": "ed99b93be16d3d97787854b80a483a82fcd54362f8d7958159139ff110de0a7b",
+          "matches": true
+        },
+        {
+          "path": "publications/reader.html",
+          "bytes": 1402,
+          "sha256": "c3b59aa54343b1688b366dcc1d1909ddcc75a8f0eeb5c05623c744903d040e0c",
+          "matches": true
+        },
+        {
+          "path": "publications/reader.js",
+          "bytes": 6969,
+          "sha256": "eb6ba5ea0820ea85ba79f3a5cef9a37f4ed6ca04aa5dbe1818331752ba9bac2c",
+          "matches": true
+        },
+        {
+          "path": "publications/reader.css",
+          "bytes": 2320,
+          "sha256": "5df65dcba5699948a565636b168f80c089d9b0da246071954c4917b26b9762b6",
+          "matches": true
+        },
+        {
+          "path": "downloads/cynthiacetus/Cynthiacetus_Skull_Supports_1-20.3mf",
+          "bytes": 2413016,
+          "sha256": "567bc0cd06ecf6075811b826bb3e3d884fa693d0afff38f3836525739483cfd2",
+          "matches": true
+        },
+        {
+          "path": "assets/cynthiacetus/print-project-manifest.json",
+          "bytes": 1416,
+          "sha256": "0b59642b2e926c9ab3396929ac559ca020de1c4513f13dadc2490543a043fcac",
+          "matches": true
+        },
+        {
+          "path": "assets/cynthiacetus/print-project-1-20-supports.parts.json",
+          "bytes": 738,
+          "sha256": "f67f7a292ad6705bb9e123bea3ff6cec5d6d62f479b2409cb448de4036a973b6",
+          "matches": true
+        },
+        {
+          "path": "publications/megalodon-9page-report.pdf",
+          "bytes": 9819706,
+          "sha256": "2f0e465c25db57de7080e338ed655d10fe16f7fb9f5d84df2797b9714c33fe6c",
+          "matches": true
+        },
+        {
+          "path": "publications/massa-corporis.pdf",
+          "bytes": 247190,
+          "sha256": "5e64608fb5053bb01e1730c0825118e7309e37cec36382fa9857944867ec67f3",
+          "matches": true
+        },
+        {
+          "path": "publications/song-before-civilisation.pdf",
+          "bytes": 723479,
+          "sha256": "27e3bf7011a18340e47105f6bdd28fda260e1b8004ada4d72ae4d24a2048cb9f",
+          "matches": true
+        },
+        {
+          "path": "publications/ancient-greek-semantic-dags.pdf",
+          "bytes": 253921,
+          "sha256": "3889d991a9f2643b63778c73eca9108ce5964cd90ec623705bfa18b69f65fa10",
+          "matches": true
+        },
+        {
+          "path": "publications/brownian-motion-notes.pdf",
+          "bytes": 4277648,
+          "sha256": "49dffa642a02987ff2650ecd68d1ee2b14d9a3f7ee33910e3916ae2052c6e928",
+          "matches": true
+        },
+        {
+          "path": "publications/mathematical-probability-report.pdf",
+          "bytes": 1197707,
+          "sha256": "78a6d597e389ea577d82a58ffff1c242edb31f0a2c1b84cb66c4d26ab142d51a",
+          "matches": true
+        },
+        {
+          "path": "publications/mathematical-statistics-practice.pdf",
+          "bytes": 401296,
+          "sha256": "25fbd86731ed6b9e6d7d8bf3d5c72561e4d3b0cc2e6c1cf704ff00aadbe256c4",
+          "matches": true
+        },
+        {
+          "path": "publications/kakeya-conditional-reduction.pdf",
+          "bytes": 125333,
+          "sha256": "7df9afda60c33ebe1078913876a5b0955015eb576ddcc69e02d25dd44ca85d28",
+          "matches": true
+        },
+        {
+          "path": "publications/megalodon-20page-revised.pdf",
+          "bytes": 17320316,
+          "sha256": "be932f214e424b8e36b140d0b6a45ec4bca8ace9207c2d08ce2ddcd170729fc4",
+          "matches": true
+        },
+        {
+          "path": "publications/megalodon-26page-recalculated.pdf",
+          "bytes": 4726620,
+          "sha256": "bd12eacb43add935aaf027f8e2e51d6397f1c0e6d48a9295aa3cc13fa81714fe",
+          "matches": true
+        },
+        {
+          "path": "publications/megalodon-durf-report.pdf",
+          "bytes": 2600932,
+          "sha256": "127bfd1396bd07dc43005723c68e576c2a412df27d601eb4fbc624cd84954d1b",
+          "matches": true
+        },
+        {
+          "path": "publications/K_class_q_copy_m_slot_markov_symmetry_report.pdf",
+          "bytes": 518043,
+          "sha256": "2f9b2f35024d0aa6d424786d5fce3c22fb5a7929e04205e09cb73ad541325774",
+          "matches": true
+        },
+        {
+          "path": "assets/cynthiacetus/print-project-1-20-supports.part-001.bin",
+          "bytes": 16777216,
+          "sha256": "712b91b62ed6af03e9a9adad35674297cf2cb17c9bb472feb039213421485661",
+          "matches": true
+        },
+        {
+          "path": "assets/cynthiacetus/print-project-1-20-supports.part-002.bin",
+          "bytes": 16777216,
+          "sha256": "26487c8f8e97d0bee2db55a90e06968bb489bc17627d1eec0377b73792991d11",
+          "matches": true
+        },
+        {
+          "path": "assets/cynthiacetus/print-project-1-20-supports.part-003.bin",
+          "bytes": 10783828,
+          "sha256": "f9586c6cc67c0adc7cd9c9907a88c2c5f60f6c37aa982aee9de409328fec2785",
+          "matches": true
+        }
+      ],
+      "browser": {
+        "outcome": "passed",
+        "viewport_width": 390,
+        "card_backs": 2,
+        "full_size_card_flips": 2,
+        "research_projects": "passed",
+        "directory_groups": 51,
+        "directory_entries": 226,
+        "english_directory_search": "passed",
+        "report_pages": 18,
+        "same_host_cv_return": "passed",
+        "support_toggle": "passed",
+        "page_errors": []
+      }
     }
   },
-  "outcome": "failed",
+  "outcome": "passed",
   "pipeline": {
     "build": "success",
-    "tests": "failure",
+    "tests": "success",
     "vercel_deploy": "skipped",
-    "live": "failure"
+    "live": "success"
   },
   "vercel_token_available": false
 }
