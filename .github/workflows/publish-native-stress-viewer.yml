@@ -29,7 +29,7 @@ jobs:
           out=Path(os.environ['OUT']);audit=json.loads((out/'native-stress-audit.json').read_text());manifest=json.loads((out/'release-manifest.json').read_text())
           assert audit['all_vertices_literal_identical'] and audit['all_triangle_indices_and_order_identical'] and audit['zip_crc_passed']
           assert audit['vertices_checked']==37951699 and audit['triangles_checked']==74293846
-          for name in ['tooth-von-mises.bin','tooth-soft-von-mises.bin','High_Stress_Calculations.png']:
+          for name in ['tooth-von-mises.bin','tooth-soft-von-mises.bin']:
               req=urllib.request.Request('https://megalodon-native-stress-eliguli.eliguli712.chatgpt.site/assets/'+name,headers={'User-Agent':'Vrontiki-native-stress/3'})
               data=urllib.request.urlopen(req,timeout=60).read()
               assert hashlib.sha256(data).hexdigest()==manifest[name]['sha256'],name
@@ -38,7 +38,7 @@ jobs:
               assert hashlib.sha256((out/name).read_bytes()).hexdigest()==manifest[name]['sha256'],name
           print('Full geometry audit and every transferred viewer hash verified.')
           PY
-          gh release upload megalodon-native-stress-r3 --repo "$GITHUB_REPOSITORY" --clobber "$OUT/tooth-von-mises.bin" "$OUT/tooth-soft-von-mises.bin" "$OUT/High_Stress_Calculations.png"
+          gh release upload megalodon-native-stress-r3 --repo "$GITHUB_REPOSITORY" --clobber "$OUT/tooth-von-mises.bin" "$OUT/tooth-soft-von-mises.bin"
       - name: Publish dedicated data branch
         env:
           OUT: ${{ runner.temp }}/native-viewer-output
