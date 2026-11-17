@@ -1,0 +1,66 @@
+{
+  "native-stress-audit.json": {
+    "bytes": 714,
+    "sha256": "c5fd713861c0ee88c2b25cf4b77909d62de1809969e0883e97c7fe97cf2930d5"
+  },
+  "colour-palette.json": {
+    "bytes": 22719,
+    "sha256": "a78f3fe9fb9d8b0b4a1034ac76c9d447bd760770bd87b6f21ff49305203bb0ec"
+  },
+  "model.json": {
+    "bytes": 4966,
+    "sha256": "75cba52a4524595cf03b44b3d2136b6195f89980731b15a951f4f1a3fcad8c7b"
+  },
+  "High_Stress_Calculations.png": {
+    "bytes": 141825,
+    "sha256": "a928c29c71f7bb36daf96f16cfed964613d0ca7cf9010275d677487a9a645663"
+  },
+  "tooth-von-mises.bin": {
+    "bytes": 82352,
+    "sha256": "bd2879b1f35569be5d28cb7a957142159a774565fded2616288691a218c1a29f"
+  },
+  "High_Stress_Design_Preview.png": {
+    "bytes": 337565,
+    "sha256": "394fe684aaef178d3e62e600ddab8a666dcf6d3e3af584507e3061fb39ea40cb"
+  },
+  "cap-soft.bin": {
+    "bytes": 32168,
+    "sha256": "240f051fad75d1948608c9a9d21e21e32db68de319e85caddd2947aaed7034c6"
+  },
+  "tooth-soft-von-mises.bin": {
+    "bytes": 31788,
+    "sha256": "d3fd0c6e00d964ca0bb04ccdf99917f2f2e633c36f0f49d0feb54985712d573a"
+  },
+  "native-stress-provenance.json": {
+    "bytes": 32652,
+    "sha256": "5b9b5ed0c4a1fd2005e30b84a24386d2a723334a43849306f58ff0bae6b91a85"
+  },
+  "main-soft.bin": {
+    "bytes": 177320,
+    "sha256": "07b099f2d8d2909e773849f74c85fb12647cd3dda8a87ff25de0bc6d9d28b42c"
+  },
+  "Megalodon_Native74_VonMises_Field_and_Authoring.zip": {
+    "bytes": 164657168,
+    "sha256": "051bf89a06a2743a0a2747e04a36278f4e2b7f726b443bea4aeb9849a9bf2087"
+  },
+  "tooth-soft.bin": {
+    "bytes": 382736,
+    "sha256": "45293badc06165788ea5e2962d6299a23957769a22a7c5cf535198e13e3eaf00"
+  },
+  "Megalodon_Native74_High_Stress_100mm.3mf": {
+    "bytes": 1108484037,
+    "sha256": "5ec72960297a28a544340588061da128fce6df364ed586bc3527b8830f263d74"
+  },
+  "High_Stress_Design_EN_DE_EL.pdf": {
+    "bytes": 637281,
+    "sha256": "7493cf4dc684ff32e628f251ed07590d80540ec0e7028b2d1576427e9d2c98dc"
+  },
+  "tooth.bin": {
+    "bytes": 988280,
+    "sha256": "93b1ebe99e66396a4ca769452fcd236121ed84dc98aba6005a27ce38e96e1c6f"
+  },
+  "baseline-results.json": {
+    "bytes": 20593,
+    "sha256": "ed9dfd0e27521c96035f8bf615abbf897dac73f4fe8c387fa9eff81dde259f99"
+  }
+}

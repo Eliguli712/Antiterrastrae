@@ -1,0 +1,23 @@
+{
+  "source_sha256_passed": true,
+  "all_66_chunk_sha256_passed": true,
+  "mask": {
+    "total_voxels": 4097075268,
+    "material_voxels": 967429317,
+    "decompressed_uint8_sha256": "d8b630b35c365f861ccc46d625a28cad21395055271f9cc937d9a9211c02a543",
+    "spacing_mm": [
+      0.018,
+      0.018,
+      0.018
+    ],
+    "verification": "All original mask voxels decoded and counted; no resampling or void fill."
+  },
+  "random_seed": 20261117,
+  "independently_recomputed_vertices": 1024,
+  "scalar_max_absolute_error_pa": 0.0,
+  "all_vertices_literal_identical": true,
+  "all_triangle_indices_and_order_identical": true,
+  "vertices_checked": 37951699,
+  "triangles_checked": 74293846,
+  "zip_crc_passed": true
+}
