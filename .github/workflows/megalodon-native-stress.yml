@@ -1,0 +1,71 @@
+name: Build native CT high-stress design
+on:
+  push:
+    branches: [main]
+    paths:
+      - design/native-stress/**
+      - .github/workflows/megalodon-native-stress.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: megalodon-native-stress-r3
+  cancel-in-progress: false
+jobs:
+  native-design:
+    runs-on: ubuntu-latest
+    timeout-minutes: 110
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: design/native-stress
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical and document tools
+        run: python -m pip install numpy scipy matplotlib reportlab
+      - name: Reconstruct numerical colour edition and audit every source face
+        run: >-
+          python design/native-stress/build_native_stress.py
+          --work "$RUNNER_TEMP/native-ct-cache"
+          --output "$RUNNER_TEMP/native-stress-output"
+          --site https://megalodon-native-stress-eliguli.eliguli712.chatgpt.site
+      - name: Publish complete native model and numerical archive
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OUT: ${{ runner.temp }}/native-stress-output
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag=megalodon-native-stress-r3
+          if ! gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release create "$tag" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "Otodus megalodon - Native high-stress design R3" --notes-file "$OUT/README_EN_DE_EL.txt"
+          fi
+          gh release upload "$tag" --repo "$GITHUB_REPOSITORY" --clobber "$OUT/Megalodon_Native74_High_Stress_100mm.3mf" "$OUT/Megalodon_Native74_VonMises_Field_and_Authoring.zip" "$OUT/High_Stress_Design_EN_DE_EL.pdf" "$OUT/native-stress-provenance.json" "$OUT/native-stress-audit.json" "$OUT/release-manifest.json" "$OUT/High_Stress_Design_Preview.png"
+      - name: Publish lightweight viewer data on dedicated branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OUT: ${{ runner.temp }}/native-stress-output
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch --orphan native-stress-r3-data
+          git rm -rf . >/dev/null 2>&1 || true
+          mkdir -p assets
+          for name in native-stress-provenance.json native-stress-audit.json release-manifest.json tooth-von-mises.bin tooth-soft-von-mises.bin High_Stress_Design_EN_DE_EL.pdf High_Stress_Design_Preview.png High_Stress_Calculations.png; do
+            cp "$OUT/$name" "assets/$name"
+          done
+          git add assets
+          git commit -m "Publish audited native CT stress viewer data"
+          git push origin HEAD:refs/heads/native-stress-r3-data --force
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: native-stress-audit-and-pdf
+          path: |
+            ${{ runner.temp }}/native-stress-output/native-stress-audit.json
+            ${{ runner.temp }}/native-stress-output/native-stress-provenance.json
+            ${{ runner.temp }}/native-stress-output/High_Stress_Design_EN_DE_EL.pdf
+          if-no-files-found: ignore
