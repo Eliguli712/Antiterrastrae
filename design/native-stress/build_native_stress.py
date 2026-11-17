@@ -191,7 +191,7 @@ def preview_fields(out,tree,values,site):
   native=(pos-T0-[0,0,ROOT_Z])@np.linalg.inv(R0).T+OFFSET
   s,d=project(tree,values,native);s.astype('<f4').tofile(out/(name+'-von-mises.bin'))
   info[name]={'vertices':n,'triangles':nf,'mapped_vertices':int(np.isfinite(s).sum()),'geometry_scope':'R2.1 simplified CT envelope preview only; complete native geometry is in the production 3MF.'}
- for name in ['model.json','baseline-results.json']:
+ for name in ['model.json','baseline-results.json','main-soft.bin','cap-soft.bin']:
   get(site+'/assets/'+name,out/name)
  return info
 def figures_and_pdf(out,info):
@@ -209,10 +209,13 @@ def figures_and_pdf(out,info):
  plt.rcParams.update({'font.family':'DejaVu Sans','text.color':'#213b50','axes.labelcolor':'#213b50'})
  fig=plt.figure(figsize=(10,7),facecolor='#0e1e2a');ax=fig.add_subplot(111,projection='3d',facecolor='#0e1e2a')
  mesh=Poly3DCollection(v[f],facecolors=rgb[f].mean(axis=1),edgecolors='none',rasterized=True);ax.add_collection3d(mesh)
- for a,b in model['edges']:
-  q=np.array([model['nodes'][a],model['nodes'][b]]);ax.plot(q[:,0],q[:,1],q[:,2],color='#b7e7f4',alpha=.28,lw=4)
- for n,p in model['nodes'].items():
-  ax.scatter(*p,s=60 if n in model['feet'] else 22,c='#c0ebf2',alpha=.5,edgecolors='none')
+ # Render the actual resin frame and cap, including the root socket and arms.
+ for part in ['main-soft','cap-soft']:
+  path=out/(part+'.bin')
+  if not path.exists():raise FileNotFoundError('Missing assembly preview '+str(path))
+  raw=path.read_bytes();nn,ff=struct.unpack_from('<II',raw);aa=np.frombuffer(raw,dtype='<f4',offset=8,count=nn*6).reshape(-1,6);ii=np.frombuffer(raw,dtype='<u4',offset=8+nn*24).reshape(-1,3);pp=aa[:,:3][ii]
+  normal=np.cross(pp[:,1]-pp[:,0],pp[:,2]-pp[:,0]);normal/=np.maximum(np.linalg.norm(normal,axis=1),1e-12)[:,None];light=np.maximum(normal@np.array([-.35,-.45,.82]),0);rgba=np.tile([.69,.88,.95,.23],(len(pp),1));rgba[:,:3]*=(.6+.4*light)[:,None]
+  ax.add_collection3d(Poly3DCollection(pp,facecolors=rgba,edgecolors='none',rasterized=True,zsort='average'))
  ax.set(xlim=(-48,48),ylim=(-48,48),zlim=(0,200));ax.set_box_aspect((96,96,200));ax.view_init(17,-70);ax.set_axis_off();fig.subplots_adjust(0,0,1,1)
  fig.savefig(out/'High_Stress_Design_Preview.png',dpi=160,facecolor=fig.get_facecolor());plt.close(fig)
  fig,axs=plt.subplots(2,2,figsize=(10,6.5),layout='constrained');feet=np.array([model['nodes'][n] for n in model['feet']]);order=np.argsort(np.arctan2(feet[:,1],feet[:,0]));p=feet[order,:2];p=np.vstack([p,p[0]]);axs[0,0].plot(*p.T,color='#368886');axs[0,0].scatter(*np.asarray(result['centerOfMass'])[:2],color='#b08748');axs[0,0].set(title='Support polygon / centre of mass',xlabel='x [mm]',ylabel='y [mm]',aspect='equal');axs[0,1].bar(['A1','A2','B1','B2'],[r['Fz'] for r in result['footReactions']],color='#579eab');axs[0,1].set(title='Vertical reactions',ylabel='N')
