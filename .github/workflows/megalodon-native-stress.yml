@@ -10,7 +10,7 @@ permissions:
   contents: write
 concurrency:
   group: megalodon-native-stress-r3
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   native-design:
     runs-on: ubuntu-latest

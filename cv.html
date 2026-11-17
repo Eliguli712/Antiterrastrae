@@ -361,6 +361,19 @@ model-viewer{display:block;width:100%;height:min(61dvh,650px);min-height:280px;b
 .specimen-disclosure .project-visual{margin:3px 0 0}
 @media(max-width:600px){.specimen-disclosure>summary{padding:15px;gap:12px}.specimen-disclosure>summary strong{font-size:20px}.specimen-disclosure-description{font-size:9.5px}.specimen-disclosure-body{padding:0 8px 9px}.specimen-disclosure .specimen-collection{padding:20px 6px}}
 @media print{.specimen-disclosure{display:none!important}}
+
+.wall-stress{grid-column:span 12;display:grid;grid-template-columns:1.35fr 1fr;background:#f9fbfc;scroll-margin-top:24px}
+.wall-stress-image{position:relative;display:flex;align-items:center;justify-content:center;min-width:0;background:#0e1e2a;overflow:hidden}
+.wall-stress-image img{width:100%;height:auto;display:block;object-fit:contain}
+.wall-stress h3{font-size:31px}.wall-stress .wall-index{color:#537b8c}
+.wall-stress .wall-tags span{background:#eaf2f4;border-color:#d0e2e7;color:#3d6573}
+.wall-design-languages{display:flex;gap:9px;flex-wrap:wrap;margin-top:21px}
+.wall-design-languages a{display:inline-flex;align-items:center;min-height:38px;padding:7px 13px;border:1px solid #bdd0d8;border-radius:3px;color:#264f63;font-size:11px;text-decoration:none;background:#fff}
+.wall-design-languages a:hover{background:#e7f1f4}
+#wall-design:checked~.wall-grid .wall-item:not([data-category="design"]){display:none}
+@media(max-width:760px){.wall-stress{grid-template-columns:1fr}.wall-stress h3{font-size:29px}}
+@media print{.wall-stress{break-inside:avoid}.wall-design-languages{display:none}}
+
 </style><link rel="stylesheet" href="assets/cv-additions.css"></head><body>
 <nav class="toolbar" aria-label="CV and demonstration actions">
 <a class="button action launch" id="viewPrototype" href="https://eliguli712.github.io/Antiterrastrae/?demo=1#antiterrastrae">
@@ -552,12 +565,13 @@ model-viewer{display:block;width:100%;height:min(61dvh,650px);min-height:280px;b
 </details></li></ol>
 </section>
 <section class="artworks gallery-wall" id="artworks" aria-labelledby="artworks-title">
-<header class="wall-heading"><div><p class="wall-eyebrow">ELIGULI HAN / SELECTED WORKS</p><h2 id="artworks-title">Life, form &amp; visual systems.</h2><p class="wall-intro">Paleontological reconstruction, cetacean card design and interactive cartography.</p></div><a class="wall-back" href="#cv">Research CV ↑</a></header>
+<header class="wall-heading"><div><p class="wall-eyebrow">ELIGULI HAN / SELECTED WORKS</p><h2 id="artworks-title">Life, form &amp; visual systems.</h2><p class="wall-intro">Paleontological reconstruction, scientific sculpture, cetacean card design and interactive cartography.</p></div><a class="wall-back" href="#cv">Research CV ↑</a></header>
 <fieldset class="wall-filter"><legend class="wall-sr">Filter selected works</legend>
-<input type="radio" name="work-category" id="wall-all" checked><label for="wall-all">All works <span>04</span></label>
+<input type="radio" name="work-category" id="wall-all" checked><label for="wall-all">All works <span>05</span></label>
 <input type="radio" name="work-category" id="wall-reconstruction"><label for="wall-reconstruction">Reconstruction <span>01</span></label>
 <input type="radio" name="work-category" id="wall-cards"><label for="wall-cards">Card design <span>02</span></label>
 <input type="radio" name="work-category" id="wall-interactive"><label for="wall-interactive">Interactive systems <span>01</span></label>
+<input type="radio" name="work-category" id="wall-design"><label for="wall-design">Scientific design <span>01</span></label>
 <div class="wall-grid">
 <figure class="wall-item wall-hero" data-category="reconstruction">
 <div class="wall-image"><a class="zoom-art" href="assets/portfolio/yi-qi-reconstruction.jpg" target="_blank" rel="noopener" data-art-title="Yi qi（奇翼龙）复原 · Reconstruction"><img src="assets/portfolio/yi-qi-reconstruction.jpg" alt="Yi qi（奇翼龙）复原" width="1448" height="1086" loading="lazy" decoding="async"><span class="wall-view">View full image </span></a></div>
@@ -574,6 +588,10 @@ model-viewer{display:block;width:100%;height:min(61dvh,650px);min-height:280px;b
 <article class="wall-item wall-atlas" data-category="interactive" id="moling-project">
 <a class="wall-map-image" href="https://eliguli712.github.io/moling-atlas-mobile/" target="_blank" rel="noopener" aria-label="Open Moling Atlas interactive project"><img src="assets/portfolio/moling-atlas-preview-v27.svg" alt="Jiankang metro topology generated from actual line sequences and shared interchange nodes" width="1200" height="850" loading="lazy" decoding="async"><span class="wall-view">Explore the atlas </span></a>
 <div class="wall-caption"><p class="wall-index">04 / INTERACTIVE CARTOGRAPHY</p><h3>Moling Atlas<span lang="zh">秣陵互动地图</span></h3><p class="wall-description">A browser-based cartographic system for historically inspired worldbuilding and transport-network design. Open the globe, compare three levels of territory, inspect source-backed historical coastlines, and explore terrain-aware transport networks.</p><div class="wall-tags"><span>Spatial visualization</span><span>Interaction design</span><span>Offline export</span></div><a class="wall-cta" href="https://eliguli712.github.io/moling-atlas-mobile/" target="_blank" rel="noopener">Open interactive project</a><p class="wall-footnote"><a href="publications/moling-transit-topology.html">Explore the actual network topology</a> · <a href="downloads/moling-atlas/Jiankang_Metro_Topology_v27.svg" download>Download topology SVG</a><br>Preview generated from shared station nodes and adjacent stops, with rivers and lakes · v28.</p></div>
+</article>
+<article class="wall-item wall-stress" data-category="design" id="megalodon-stress">
+<a class="wall-stress-image" href="https://megalodon-native-stress-eliguli.eliguli712.chatgpt.site/?lang=en" target="_blank" rel="noopener" aria-label="Explore Otodus megalodon native stress design"><img src="https://megalodon-native-stress-eliguli.eliguli712.chatgpt.site/assets/High_Stress_Design_Preview.png" alt="Otodus megalodon numerical stress colour edition held in a transparent dual-cube resin frame with four spherical feet" width="1600" height="1120" loading="lazy" decoding="async"><span class="wall-view">Explore the stress design ↗</span></a>
+<div class="wall-caption"><p class="wall-index">05 / SCIENTIFIC SCULPTURE &amp; STRUCTURAL DESIGN</p><h3><i>Otodus megalodon</i><span>High-stress edition</span></h3><p class="wall-description">Native CT geometry, archived numerical von Mises stress and a transparent dual-cube resin frame. Rotate the design, select a colour threshold and explore live shear, bending and equilibrium calculations.</p><div class="wall-tags"><span>Native CT geometry</span><span>Numerical stress</span><span>Resin support</span></div><div class="wall-design-languages"><a href="https://megalodon-native-stress-eliguli.eliguli712.chatgpt.site/?lang=en" target="_blank" rel="noopener" lang="en">English ↗</a><a href="https://megalodon-native-stress-eliguli.eliguli712.chatgpt.site/?lang=de" target="_blank" rel="noopener" lang="de">Deutsch ↗</a><a href="https://megalodon-native-stress-eliguli.eliguli712.chatgpt.site/?lang=el" target="_blank" rel="noopener" lang="el">Ελληνικά ↗</a></div><p class="wall-footnote"><a href="https://megalodon-native-stress-eliguli.eliguli712.chatgpt.site/assets/High_Stress_Design_EN_DE_EL.pdf" target="_blank" rel="noopener">Design PDF · EN / DE / EL</a> · <a href="https://github.com/Eliguli712/Antiterrastrae/releases/tag/megalodon-native-stress-r3" target="_blank" rel="noopener">Complete native model &amp; numerical archive</a></p></div>
 </article>
 </div></fieldset>
 <footer class="wall-footer"><span>Selected visual &amp; interactive works</span><span>Eliguli Han · Mathematics, anatomy &amp; visualization</span></footer>
