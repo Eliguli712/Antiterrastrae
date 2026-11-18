@@ -73,7 +73,7 @@ Independent research-verification assessment submission
 
 ## Technical Skills & Research Direction
 
-**Programming:** Python, NumPy, pandas, scikit-learn; JavaScript, HTML/CSS; WebGL/Canvas; SQL; GitHub; AI-assisted development and debugging.
+**Programming:** Python, NumPy, pandas, scikit-learn; JavaScript, HTML/CSS; WebGL/Canvas; SQL; GitHub.
 
 **Methods:** Numerical methods, differential equations, finite-element assembly, eigenvalue problems, three-dimensional mesh processing, scientific visualization and literature verification.
 
