@@ -5,6 +5,7 @@ on:
     paths:
       - .github/workflows/publish-megalodon-gallery.yml
       - .github/import-gallery.py
+      - .github/clean-cv-wording.py
       - .github/gallery-transfer.json
   workflow_dispatch:
 permissions:
@@ -29,9 +30,11 @@ jobs:
         run: python -m pip install --quiet pymupdf==1.26.4
       - name: Import and verify the unchanged gallery data
         run: python .github/import-gallery.py
+      - name: Synchronize wording in the CV downloads
+        run: python .github/clean-cv-wording.py
       - name: Save the independent gallery assets
         run: |
-          git add --sparse -- design/megalodon
+          git add --sparse -- design/megalodon cv.html cv.md cv.docx cv.pdf
           if ! git diff --cached --quiet; then
             git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m "Publish verified sculpture gallery under the personal website"
             git push origin HEAD:main
