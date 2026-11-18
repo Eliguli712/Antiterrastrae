@@ -1,0 +1,300 @@
+{
+  "source": "https://megalodon-native-stress-eliguli.eliguli712.chatgpt.site/",
+  "files": [
+    {
+      "path": "app.js",
+      "sha256": "5d5276d76dc748eca7e47c4a7f2f6adece8f8696fc72e60a8961436baefbbc11",
+      "bytes": 11631
+    },
+    {
+      "path": "assets/Design_Review.jpg",
+      "sha256": "cf1c30f872f6f34da8302f40094bab6804941315c742a69befd3265d4f500301",
+      "bytes": 74557
+    },
+    {
+      "path": "assets/Gallery_Review.jpg",
+      "sha256": "e783fb68daf0be20080ead93f25b949205ba35eed6da207c6218e3ef0b9630db",
+      "bytes": 55578
+    },
+    {
+      "path": "assets/High_Stress_Calculations.png",
+      "sha256": "5cfb1c4eae30dcc3407caa6fa11ed8cad4d387a0466348b7a84ff9db0cf8b214",
+      "bytes": 143174
+    },
+    {
+      "path": "assets/High_Stress_Design_EN_DE_EL.pdf",
+      "sha256": "7493cf4dc684ff32e628f251ed07590d80540ec0e7028b2d1576427e9d2c98dc",
+      "bytes": 637281
+    },
+    {
+      "path": "assets/High_Stress_Design_Preview.png",
+      "sha256": "394fe684aaef178d3e62e600ddab8a666dcf6d3e3af584507e3061fb39ea40cb",
+      "bytes": 337565
+    },
+    {
+      "path": "assets/Megalodon_R2_1_Resin_Print_Kit.zip",
+      "sha256": "4766bf8e0fd18081dc7ca4eb37b7c61492c6384ecf7f96900b351ba5f10c7919",
+      "bytes": 5189553
+    },
+    {
+      "path": "assets/Megalodon_Stand_Calculation_CN.pdf",
+      "sha256": "0ddc6ff6e7e905da9e7af1cd9c5e400af9214447246bee1722b517ee70183ab0",
+      "bytes": 1103103
+    },
+    {
+      "path": "assets/Print_Readme_CN.txt",
+      "sha256": "572698a25154a17d41a592250810ac5b8c66dca447ceb16c8cbea37c6f6972bd",
+      "bytes": 1711
+    },
+    {
+      "path": "assets/baseline-results.json",
+      "sha256": "ed9dfd0e27521c96035f8bf615abbf897dac73f4fe8c387fa9eff81dde259f99",
+      "bytes": 20593
+    },
+    {
+      "path": "assets/calculation-charts.png",
+      "sha256": "130536353644d71992dc74edc059cab24391b55f4f4de23a2e81b06db7bf9695",
+      "bytes": 132124
+    },
+    {
+      "path": "assets/cap-soft.bin",
+      "sha256": "240f051fad75d1948608c9a9d21e21e32db68de319e85caddd2947aaed7034c6",
+      "bytes": 32168
+    },
+    {
+      "path": "assets/cap.bin",
+      "sha256": "ff3637cceeb66930b9584cbb0f74244262bb9dd68f200772b6dbc15bf8d478f5",
+      "bytes": 210248
+    },
+    {
+      "path": "assets/fit/RootLeaf_Fit_C030_front.stl",
+      "sha256": "972dae6f5afbbf28cc8eeaa462c14e11a0040bc4c845f96e315be684f49fc9ac",
+      "bytes": 529084
+    },
+    {
+      "path": "assets/fit/RootLeaf_Fit_C030_rear.stl",
+      "sha256": "0b284b4f7cb20c892c0c0a17676a39f1379d5d72536b96a1cdc34fcb08d317b5",
+      "bytes": 718484
+    },
+    {
+      "path": "assets/fit/RootLeaf_Fit_C045_front.stl",
+      "sha256": "1adf82a7b512dd5689bb605764792b6613886ad4d5c8af7aab2e759bef734633",
+      "bytes": 495084
+    },
+    {
+      "path": "assets/fit/RootLeaf_Fit_C045_rear.stl",
+      "sha256": "5be4cb9b033e66ae5f1d659491c5ef5962265f7cb9f0e286ca4cbaf6fc1d3f1a",
+      "bytes": 621584
+    },
+    {
+      "path": "assets/fit/RootLeaf_Fit_C060_front.stl",
+      "sha256": "6e9b6731965d4eb91a630eb9a66af972cd74c6837d2c248b622bc9e68257118f",
+      "bytes": 460784
+    },
+    {
+      "path": "assets/fit/RootLeaf_Fit_C060_rear.stl",
+      "sha256": "a5e7e37b4dd1e3dec2f0e6c65fd896f7c5896e2b2b044bb10b29ca9de3a35793",
+      "bytes": 557084
+    },
+    {
+      "path": "assets/geometry.png",
+      "sha256": "006a4b1c9e30af06b2269fc45de9817a46d0999b144a2e7ffee7ed9989f99130",
+      "bytes": 341348
+    },
+    {
+      "path": "assets/main-soft.bin",
+      "sha256": "07b099f2d8d2909e773849f74c85fb12647cd3dda8a87ff25de0bc6d9d28b42c",
+      "bytes": 177320
+    },
+    {
+      "path": "assets/main.bin",
+      "sha256": "821236285003895e4ef0fd538c89cc7fa3a64ac96beed0e80162e3614e5fa739",
+      "bytes": 580568
+    },
+    {
+      "path": "assets/manufacturing.json",
+      "sha256": "8e6bf908350a10c4a47a05516e739c06846c8f609532ecf1694cd188fabcb62a",
+      "bytes": 7869
+    },
+    {
+      "path": "assets/model.json",
+      "sha256": "75cba52a4524595cf03b44b3d2136b6195f89980731b15a951f4f1a3fcad8c7b",
+      "bytes": 4966
+    },
+    {
+      "path": "assets/native-stress-audit.json",
+      "sha256": "c5fd713861c0ee88c2b25cf4b77909d62de1809969e0883e97c7fe97cf2930d5",
+      "bytes": 714
+    },
+    {
+      "path": "assets/native-stress-provenance.json",
+      "sha256": "5b9b5ed0c4a1fd2005e30b84a24386d2a723334a43849306f58ff0bae6b91a85",
+      "bytes": 32652
+    },
+    {
+      "path": "assets/negative-soft.bin",
+      "sha256": "7a39b3056b7c3be82493773384ea3ecc4228a01770e560c1880ddf968faa628c",
+      "bytes": 36968
+    },
+    {
+      "path": "assets/negative.bin",
+      "sha256": "98f81e49d7bbc427a766971c776d8f0fe04a9861fe3cfdfecefb174634ba37e6",
+      "bytes": 762248
+    },
+    {
+      "path": "assets/print/Front_Lock_Cap_C045.stl",
+      "sha256": "484b753a5aed6d7841a4a3c554f4f69a6433ea64292deea6732ab7b0f23c0de1",
+      "bytes": 2231384
+    },
+    {
+      "path": "assets/print/Main_Frame_RearSocket_C045.stl",
+      "sha256": "cb510f46e2edfbf31dab228431378ad4675766d052901db554c552e7a4242d07",
+      "bytes": 4577484
+    },
+    {
+      "path": "assets/print-manifest.json",
+      "sha256": "3a16294a0f82efd1db674ae550a179b096718ea066701489e0268464c3be5734",
+      "bytes": 6689
+    },
+    {
+      "path": "assets/references/natural-fossil.jpg",
+      "sha256": "5c5606a1bfed9d1069a0fabdc99bdeedbe1c3e5cbb384db4b8a98cba9bde7ea0",
+      "bytes": 247522
+    },
+    {
+      "path": "assets/references/paper-colour.jpg",
+      "sha256": "21e9b704e7744b523188c387a886c1f49688df09bcfaba22d9e50bfca50db17f",
+      "bytes": 260277
+    },
+    {
+      "path": "assets/references/von-mises-frontal.jpg",
+      "sha256": "e862e134952162a293498a46f91d741cee3ccd8acfbccd3b595a3d8928650d6f",
+      "bytes": 635988
+    },
+    {
+      "path": "assets/release-manifest.json",
+      "sha256": "6a44464fb044075106d3453bf614f299954c26b866a9b8659814e44597d0158a",
+      "bytes": 2213
+    },
+    {
+      "path": "assets/root-exploded.png",
+      "sha256": "0966dc093c619f0c4df488719730dceb8e70980777a23d8b8d2e72776b3226e0",
+      "bytes": 482105
+    },
+    {
+      "path": "assets/source-provenance.json",
+      "sha256": "f9a3d0a43d54afdbbc4ce1083ea430493df13db59b0aac28f5898dd385b15d68",
+      "bytes": 1757
+    },
+    {
+      "path": "assets/tooth-soft-von-mises.bin",
+      "sha256": "d3fd0c6e00d964ca0bb04ccdf99917f2f2e633c36f0f49d0feb54985712d573a",
+      "bytes": 31788
+    },
+    {
+      "path": "assets/tooth-soft.bin",
+      "sha256": "45293badc06165788ea5e2962d6299a23957769a22a7c5cf535198e13e3eaf00",
+      "bytes": 382736
+    },
+    {
+      "path": "assets/tooth-von-mises.bin",
+      "sha256": "bd2879b1f35569be5d28cb7a957142159a774565fded2616288691a218c1a29f",
+      "bytes": 82352
+    },
+    {
+      "path": "assets/tooth.bin",
+      "sha256": "93b1ebe99e66396a4ca769452fcd236121ed84dc98aba6005a27ce38e96e1c6f",
+      "bytes": 988280
+    },
+    {
+      "path": "assets/verification.json",
+      "sha256": "f57f050ad7816e2adfa2ce5c168eda5ec694590c08ed04bfac972d3c3dc11119",
+      "bytes": 1188
+    },
+    {
+      "path": "assets/web-preview.jpg",
+      "sha256": "fc009b098cf767630d0d55bd71fa176421f77e84704ac12da880d69a0360e1bf",
+      "bytes": 87147
+    },
+    {
+      "path": "calculation.js",
+      "sha256": "5293e588532502499c3164afeda888c7b35a0bdaa9fccce2ca8f85c7127cd6b8",
+      "bytes": 5596
+    },
+    {
+      "path": "downloads.js",
+      "sha256": "053b0991ec061db8d3f36b96c6c0f18e740dc6ea9e3cb6e1cbbce4d3f240b96c",
+      "bytes": 2001
+    },
+    {
+      "path": "gallery.css",
+      "sha256": "d56a0fef9d0c0faf28be715cc13b7883790404c9ee0a296a86d10f99ab71bd20",
+      "bytes": 15149
+    },
+    {
+      "path": "gallery.js",
+      "sha256": "6e1a3b0b78742677d35d76f1efba0c779246388b0ee1c3c0bc5a85d71fdbe7f0",
+      "bytes": 2030
+    },
+    {
+      "path": "i18n.js",
+      "sha256": "8807edb60cb44f613471039114695109a8efd3e1064204aabb457666652e5a4a",
+      "bytes": 54071
+    },
+    {
+      "path": "software-raster.js",
+      "sha256": "e408754021c7ff44e58337e24f762a5202e60f25eac1d38326c1db53dda32805",
+      "bytes": 1067
+    },
+    {
+      "path": "software-viewer.js",
+      "sha256": "63ec0da94e08cf3d3184da99acef7915aab3cd0d2833f0c883bb5a0ee86bb097",
+      "bytes": 7640
+    },
+    {
+      "path": "stress-edition.js",
+      "sha256": "93bf8a4e41a9ffecc9f60cfb94d0bec51382e3da2399687015f5a9b0e8b2e4ce",
+      "bytes": 8907
+    },
+    {
+      "path": "stress-palette.js",
+      "sha256": "13e77acf4fd76a2423427aa5a6645aa4184594d79537e62c4b2649a249cb49e2",
+      "bytes": 4146
+    },
+    {
+      "path": "styles.css",
+      "sha256": "692c1cce05e447c8e5017271918ef38c0b100c85b7d4b10971df6bdb25b6d3ee",
+      "bytes": 26821
+    },
+    {
+      "path": "touch-navigation.js",
+      "sha256": "f9b604a2e810912a5ca0bba2a5bbdd339b8fbc7b8e09fe1ad9b7059f7a148290",
+      "bytes": 2254
+    },
+    {
+      "path": "vendor/OrbitControls.js",
+      "sha256": "80efaadea4f8a636a65fb0bd08bfef62f3d93a0bb94e2e7500f23176c5c07f4e",
+      "bytes": 32134
+    },
+    {
+      "path": "vendor/RoomEnvironment.js",
+      "sha256": "85869bdd22f7cf0b22e68dcefe6cb710480af0f5c901a76f7a7764fd07fc8014",
+      "bytes": 3606
+    },
+    {
+      "path": "vendor/THREE_LICENSE.txt",
+      "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
+      "bytes": 1081
+    },
+    {
+      "path": "vendor/three.module.js",
+      "sha256": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb",
+      "bytes": 1314681
+    },
+    {
+      "path": "viewer.js",
+      "sha256": "132d42566f89a3ab9f99f838011b36c7a1d335395c7aabd07ee71a9a36519ea3",
+      "bytes": 12533
+    }
+  ]
+}
