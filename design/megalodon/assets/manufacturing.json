@@ -1,0 +1,291 @@
+{
+  "revision": "R2.1",
+  "unit": "mm",
+  "status": "digital-fit-candidate",
+  "parts": [
+    {
+      "file": "print/Main_Frame_RearSocket_C045.stl",
+      "bytes": 4577484,
+      "sha256": "cb510f46e2edfbf31dab228431378ad4675766d052901db554c552e7a4242d07",
+      "triangles": 91548,
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 65417.50834593188,
+      "center_of_mass_mm": [
+        0.10221053246893655,
+        1.6860371314012752,
+        59.36189166066825
+      ],
+      "bounds_mm": [
+        [
+          -43.722930908203125,
+          -42.46955108642578,
+          0.0
+        ],
+        [
+          42.46955108642578,
+          42.46955108642578,
+          127.839111328125
+        ]
+      ],
+      "stl_cleanup_tolerance_mm": 0.02,
+      "relative_volume_change": 5.658721035299639e-06
+    },
+    {
+      "file": "print/Front_Lock_Cap_C045.stl",
+      "bytes": 2231384,
+      "sha256": "484b753a5aed6d7841a4a3c554f4f69a6433ea64292deea6732ab7b0f23c0de1",
+      "triangles": 44626,
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 10417.576859328983,
+      "center_of_mass_mm": [
+        -0.4338355905100969,
+        -6.845696805135049,
+        114.22689465035235
+      ],
+      "bounds_mm": [
+        [
+          -43.722930908203125,
+          -15.759870529174805,
+          88.25910186767578
+        ],
+        [
+          40.82754135131836,
+          1.70744788646698,
+          127.839111328125
+        ]
+      ],
+      "stl_cleanup_tolerance_mm": 0.06,
+      "relative_volume_change": 0.00016416912870194743
+    }
+  ],
+  "fit_coupons": [
+    {
+      "file": "fit/RootLeaf_Fit_C030_front.stl",
+      "bytes": 529084,
+      "sha256": "972dae6f5afbbf28cc8eeaa462c14e11a0040bc4c845f96e315be684f49fc9ac",
+      "triangles": 10580,
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 1234.1226072449429,
+      "center_of_mass_mm": [
+        -22.037721501918572,
+        -6.5928435778775585,
+        116.48497498623243
+      ],
+      "bounds_mm": [
+        [
+          -29.0,
+          -13.68815803527832,
+          100.89556884765625
+        ],
+        [
+          -15.0,
+          -1.5675525665283203,
+          127.839111328125
+        ]
+      ],
+      "stl_cleanup_tolerance_mm": 0.02,
+      "relative_volume_change": 0.00026121032659668026,
+      "clearance_mm": 0.3
+    },
+    {
+      "file": "fit/RootLeaf_Fit_C030_rear.stl",
+      "bytes": 718484,
+      "sha256": "0b284b4f7cb20c892c0c0a17676a39f1379d5d72536b96a1cdc34fcb08d317b5",
+      "triangles": 14368,
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 1536.1094266514635,
+      "center_of_mass_mm": [
+        -22.276873040554868,
+        7.188558477611318,
+        113.29083838324564
+      ],
+      "bounds_mm": [
+        [
+          -29.0,
+          -1.417551040649414,
+          99.12269592285156
+        ],
+        [
+          -15.0,
+          11.730154037475586,
+          127.839111328125
+        ]
+      ],
+      "stl_cleanup_tolerance_mm": 0.02,
+      "relative_volume_change": 0.00013661894557757848,
+      "clearance_mm": 0.3
+    },
+    {
+      "file": "fit/RootLeaf_Fit_C045_front.stl",
+      "bytes": 495084,
+      "sha256": "1adf82a7b512dd5689bb605764792b6613886ad4d5c8af7aab2e759bef734633",
+      "triangles": 9900,
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 1245.7877931139242,
+      "center_of_mass_mm": [
+        -22.057200016870414,
+        -6.699528656042124,
+        116.33538074598646
+      ],
+      "bounds_mm": [
+        [
+          -29.0,
+          -13.847650527954102,
+          100.67731475830078
+        ],
+        [
+          -15.0,
+          -1.5675525665283203,
+          127.839111328125
+        ]
+      ],
+      "stl_cleanup_tolerance_mm": 0.02,
+      "relative_volume_change": 0.00010458648923328812,
+      "clearance_mm": 0.45
+    },
+    {
+      "file": "fit/RootLeaf_Fit_C045_rear.stl",
+      "bytes": 621584,
+      "sha256": "5be4cb9b033e66ae5f1d659491c5ef5962265f7cb9f0e286ca4cbaf6fc1d3f1a",
+      "triangles": 12430,
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 1542.1525074337585,
+      "center_of_mass_mm": [
+        -22.275051694490067,
+        7.294988111222512,
+        113.16389250176603
+      ],
+      "bounds_mm": [
+        [
+          -29.0,
+          -1.417551040649414,
+          98.9602279663086
+        ],
+        [
+          -15.0,
+          11.880359649658203,
+          127.839111328125
+        ]
+      ],
+      "stl_cleanup_tolerance_mm": 0.02,
+      "relative_volume_change": 0.00019427006954752363,
+      "clearance_mm": 0.45
+    },
+    {
+      "file": "fit/RootLeaf_Fit_C060_front.stl",
+      "bytes": 460784,
+      "sha256": "6e9b6731965d4eb91a630eb9a66af972cd74c6837d2c248b622bc9e68257118f",
+      "triangles": 9214,
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 1256.836245550652,
+      "center_of_mass_mm": [
+        -22.068152698456483,
+        -6.808585365429099,
+        116.19347911308641
+      ],
+      "bounds_mm": [
+        [
+          -29.0,
+          -13.999134063720703,
+          100.48308563232422
+        ],
+        [
+          -15.0,
+          -1.5675525665283203,
+          127.839111328125
+        ]
+      ],
+      "stl_cleanup_tolerance_mm": 0.02,
+      "relative_volume_change": 0.00017956786005401422,
+      "clearance_mm": 0.6
+    },
+    {
+      "file": "fit/RootLeaf_Fit_C060_rear.stl",
+      "bytes": 557084,
+      "sha256": "a5e7e37b4dd1e3dec2f0e6c65fd896f7c5896e2b2b044bb10b29ca9de3a35793",
+      "triangles": 11140,
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 1,
+      "volume_mm3": 1549.6576522558178,
+      "center_of_mass_mm": [
+        -22.275890793133108,
+        7.40544678976855,
+        113.04319624027431
+      ],
+      "bounds_mm": [
+        [
+          -29.0,
+          -1.417551040649414,
+          98.79931640625
+        ],
+        [
+          -15.0,
+          12.025358200073242,
+          127.839111328125
+        ]
+      ],
+      "stl_cleanup_tolerance_mm": 0.02,
+      "relative_volume_change": 0.00015170594099208305,
+      "clearance_mm": 0.6
+    }
+  ],
+  "assembly_intersection_mm3": {
+    "closed_main_tooth_mm3": 0.0,
+    "closed_cap_tooth_mm3": 0.0,
+    "closed_main_cap_mm3": 0.0,
+    "cap_to_tooth_at_0.5mm": 0.0,
+    "cap_to_main_at_0.5mm": 0.0,
+    "cap_to_tooth_at_1mm": 0.0,
+    "cap_to_main_at_1mm": 0.0,
+    "cap_to_tooth_at_2mm": 0.0,
+    "cap_to_main_at_2mm": 0.0,
+    "cap_to_tooth_at_3mm": 0.0,
+    "cap_to_main_at_3mm": 0.0,
+    "cap_to_tooth_at_5mm": 0.0,
+    "cap_to_main_at_5mm": 0.0,
+    "cap_to_tooth_at_10mm": 0.0,
+    "cap_to_main_at_10mm": 0.0,
+    "cap_to_tooth_at_20mm": 0.0,
+    "cap_to_main_at_20mm": 0.0,
+    "cap_to_tooth_at_40mm": 0.0,
+    "cap_to_main_at_40mm": 0.0,
+    "tooth_install_at_0.5mm": 0.0,
+    "tooth_install_at_1mm": 0.0,
+    "tooth_install_at_2mm": 0.0,
+    "tooth_install_at_5mm": 0.0,
+    "tooth_install_at_10mm": 0.0,
+    "tooth_install_at_25mm": 0.0,
+    "tooth_install_at_40mm": 0.0,
+    "tooth_install_at_60mm": 0.0
+  },
+  "upward_stop_intersection_mm3": {
+    "0.5": 0.2577416472951677,
+    "1": 15.632719579398858,
+    "2": 81.84599786481071,
+    "5": 299.6112485148295
+  },
+  "digital_assembly_passed": true,
+  "display_mesh_tolerance_mm": 0.12,
+  "extra_reinforcement_relief_mm": 0.02,
+  "notes": [
+    "Print STLs precede the 0.12 mm display simplification.",
+    "Discrete collision checks do not certify pull-out force or impact resistance.",
+    "Physical print, cure shrinkage, paint fit, creep and load capacity are not tested.",
+    "Two M2.5x20 screws and two M2.5 nuts; guide pins are integrated."
+  ]
+}

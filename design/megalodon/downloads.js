@@ -1,0 +1,10 @@
+import {t,locale} from './i18n.js';
+const $=id=>document.getElementById(id);let report,manifest;
+const number=(n,decimals=0)=>n.toLocaleString(locale(),{minimumFractionDigits:decimals,maximumFractionDigits:decimals,useGrouping:decimals===0});
+function render(){if(!report||!manifest)return;const [main,cap]=report.parts;
+ for(const [key,part]of [['main',main],['cap',cap]]){$(key+'MeshStatus').textContent=t(part.watertight&&part.winding_consistent&&part.components===1?'watertight':'needsReview');$(key+'MeshInfo').textContent=t('meshInfo',{faces:number(part.triangles),size:number(part.bytes/1024/1024,2)});}
+ const all=Object.entries(report.assembly_intersection_mm3),capPath=all.filter(([k])=>k.startsWith('cap_to_')),installPath=all.filter(([k])=>k.startsWith('tooth_install_'));
+ $('capCheckValue').textContent=number(Math.max(...capPath.map(([,v])=>v)),3)+' mm³';$('installCheckValue').textContent=number(Math.max(...installPath.map(([,v])=>v)),3)+' mm³';$('retentionValue').textContent=number(report.upward_stop_intersection_mm3['2'],3)+' mm³';
+ $('capCheckSub').textContent=t('capPathSub');$('installCheckSub').textContent=t('installPathSub');$('meshPrecision').textContent=t('meshPrecision',{main:number(main.stl_cleanup_tolerance_mm,2),cap:number(cap.stl_cleanup_tolerance_mm,2)});$('kitSize').textContent=t('kitSize',{size:number(manifest.archive.bytes/1024/1024,2)});$('downloadReady').textContent=t(report.digital_assembly_passed?'assemblyPassed':'assemblyReview');}
+try{const responses=await Promise.all(['manufacturing.json','print-manifest.json'].map(name=>fetch('assets/'+name)));if(responses.some(r=>!r.ok))throw Error('Print records unavailable');[report,manifest]=await Promise.all(responses.map(r=>r.json()));render();window.__manufacturingReady=true;}catch(error){$('downloadReady').textContent=t('printRecordError');console.error(error);}
+window.addEventListener('design-language-changed',()=>{if(report)render();else $('downloadReady').textContent=t('printRecordError')});

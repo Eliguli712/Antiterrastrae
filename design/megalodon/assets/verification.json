@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "assertion_groups": 168,
+  "closed_form_relative_errors": {
+    "axial": 0,
+    "bending_y_plus_shear": 4.315382565576131e-16,
+    "bending_z_plus_shear": 4.315382565576131e-16,
+    "torsion": 0
+  },
+  "baseline": {
+    "G_reference_mpa": 996.376811594203,
+    "G_effective_mpa": 498.1884057971015,
+    "P_displacement_mm": 0.1928402033432747,
+    "max_member_screen_stress_mpa": 3.0923147056531772,
+    "rear_arm_deflection_mm": 0.47906221909327673,
+    "support_margin_mm": 18.306475551719004,
+    "tilt_angle_deg": 8.76564862701133,
+    "reactions_N": [
+      2.43168182163107,
+      2.431554068045441,
+      2.4397323576072023,
+      2.4235035320692786
+    ],
+    "relative_equilibrium_residual": 1.401676995174405e-14
+  },
+  "geometry_checks": {
+    "main_tooth_intersection_mm3": 0,
+    "cap_tooth_intersection_mm3": 0,
+    "main_cap_intersection_mm3": 0,
+    "feet_z_range_mm": 7.105427357601002e-15
+  },
+  "notes": [
+    "mathematical checks only; no physical print or contact/creep/impact validation",
+    "The online edition regenerates display meshes from the original CT mask.",
+    "WebGL path plus a rotatable Canvas 2D 3D fallback are supplied."
+  ]
+}

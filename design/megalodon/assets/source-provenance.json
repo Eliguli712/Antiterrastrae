@@ -1,0 +1,50 @@
+{
+  "source_url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/Megalodon_FullCT_SpecimenMask_18um.mha",
+  "source_sha256": "8a68259cc4c079eaef5ec604e60bea2de6bf8bf4ebb7d9499347651676e19bce",
+  "source_header": {
+    "ObjectType": "Image",
+    "NDims": "3",
+    "BinaryData": "True",
+    "BinaryDataByteOrderMSB": "False",
+    "CompressedData": "True",
+    "CompressedDataSize": "31000924",
+    "TransformMatrix": "1 0 0 0 1 0 0 0 1",
+    "Offset": "11.231999999999999 1.5659999999999998 18.186",
+    "CenterOfRotation": "0 0 0",
+    "AnatomicalOrientation": "RAI",
+    "ElementSpacing": "0.017999999999999999 0.017999999999999999 0.017999999999999999",
+    "geometry_note": "DICOM patient LPS frame, with original measured 18 micrometer spacing; no cavity filling",
+    "modality": "CT-derived specimen segmentation",
+    "segmentation_threshold_raw": "10361.669921875",
+    "segmentation_values": "1=selected mineralized specimen, 0=background or CT-derived void",
+    "DimSize": "746 1903 2886",
+    "ElementType": "MET_UCHAR",
+    "ElementDataFile": "LOCAL"
+  },
+  "sampling_stride": 4,
+  "derived_root_pitch_mm": 0.19,
+  "display_height_mm": 100,
+  "processing": "largest component, internal void fill for tooling, Gaussian sigma 0.65, PCA broad root down, height normalisation; online meshes simplified",
+  "display_transform_R": [
+    [
+      -0.4009504434931399,
+      1.8854012039549133,
+      0.11323245596229993
+    ],
+    [
+      1.8823396991419183,
+      0.38929618833204865,
+      0.18321103099891783
+    ],
+    [
+      0.15606583864575468,
+      0.14842952863476314,
+      -1.9188362817427382
+    ]
+  ],
+  "display_transform_t": [
+    -34.88000208985485,
+    -24.75224976729674,
+    94.78638155695049
+  ]
+}
