@@ -363,6 +363,23 @@ model-viewer{display:block;width:100%;height:min(61dvh,650px);min-height:280px;b
 @media print{.specimen-disclosure{display:none!important}}
 
 
+
+/* Independent sculpture study: two visible entrances in the scrolling portfolio. */
+.research-design-entry{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:9px 22px;align-items:center;margin:16px 0 4px;padding:19px 21px;border:1px solid #d7d1e2;border-radius:10px;background:linear-gradient(120deg,#f2eff7,#f7faf9);color:#292338;text-decoration:none;transition:border-color .2s,box-shadow .2s}
+.research-design-entry:hover,.research-design-entry:focus-visible{border-color:#8d7ba8;box-shadow:0 5px 20px #34284d10}
+.research-design-entry .entry-label{grid-column:1/-1;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#71657f}
+.research-design-entry strong{font-size:14px;font-weight:600;line-height:1.5}
+.research-design-entry .entry-description{grid-column:1;font-size:11px;line-height:1.65;color:#6b6475}
+.research-design-entry .entry-action{grid-column:2;grid-row:2/4;white-space:nowrap;font-size:11px;color:#57446e;border-bottom:1px solid #a99bb9;padding:7px 0}
+.sculpture-portal{display:grid;grid-template-columns:220px minmax(0,1fr) auto;gap:28px;align-items:center;margin:26px 0 30px;padding:16px 24px 16px 16px;border:1px solid #4a4b60;border-radius:4px;background:linear-gradient(110deg,#15242c,#201c30);color:#f2effa;text-decoration:none;transition:border-color .2s,background .2s}
+.sculpture-portal:hover,.sculpture-portal:focus-visible{border-color:#a9b7bc;background:linear-gradient(110deg,#192d36,#272137)}
+.sculpture-portal img{display:block;width:220px;height:200px;object-fit:contain;background:#0d202a}
+.sculpture-portal .portal-kicker{display:block;margin-bottom:11px;color:#a8b7bb;font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+.sculpture-portal strong{display:block;margin-bottom:10px;font-family:Georgia,serif;font-size:25px;font-weight:400;line-height:1.25}
+.sculpture-portal .portal-description{display:block;max-width:390px;color:#b5b7c6;font-size:12px;line-height:1.7}
+.sculpture-portal .portal-action{font-size:11px;white-space:nowrap;border-bottom:1px solid #89949c;padding:9px 0;color:#e1dfdb}
+@media(max-width:700px){.research-design-entry{grid-template-columns:1fr;padding:17px}.research-design-entry .entry-action{grid-column:1;grid-row:auto;justify-self:start}.sculpture-portal{grid-template-columns:100px minmax(0,1fr);gap:17px;padding:14px}.sculpture-portal img{width:100px;height:160px;object-fit:cover}.sculpture-portal strong{font-size:22px}.sculpture-portal .portal-description{font-size:11px}.sculpture-portal .portal-action{grid-column:2;justify-self:start;margin-top:-8px}.sculpture-portal .portal-kicker{font-size:8px;letter-spacing:.1em}}
+@media print{.research-design-entry,.sculpture-portal{display:none!important}}
 </style><link rel="stylesheet" href="assets/cv-additions.css"></head><body>
 <nav class="toolbar" aria-label="CV and demonstration actions">
 <a class="button action launch" id="viewPrototype" href="https://eliguli712.github.io/Antiterrastrae/?demo=1#antiterrastrae">
@@ -419,6 +436,9 @@ model-viewer{display:block;width:100%;height:min(61dvh,650px);min-height:280px;b
 <article class="entry project-visual" id="high-res-meg-teeth" style="padding:16px 18px">
 <div class="entry-head"><h3><a href="fea_research/high_res_meg_teeth/">Megalodon μCT · archived COMSOL solver &amp; full 32M 3D</a></h3><span class="date">Full-resolution CT archive</span></div>
 </article>
+<a class="research-design-entry" id="megalodon-design-research" href="design/megalodon/" aria-label="Explore the Otodus megalodon numerical stress and sculpture study">
+<span class="entry-label">Interactive study / Anatomy &amp; mechanics</span><strong><i>Otodus megalodon</i> · Numerical stress in three dimensions</strong><span class="entry-description">Explore the registered von Mises field, clear resin support and live structural calculations.</span><span class="entry-action">Enter the 3D study ↗</span></a>
+
 </section>
 <section aria-labelledby="projects">
 <h2 id="projects">Selected Research &amp; Computational Projects</h2>
@@ -501,7 +521,7 @@ model-viewer{display:block;width:100%;height:min(61dvh,650px);min-height:280px;b
 </section>
 <section aria-labelledby="skills">
 <h2 id="skills">Technical Skills &amp; Research Direction</h2>
-<div class="skill-row"><strong>Programming</strong><span>Python, NumPy, pandas, scikit-learn; JavaScript, HTML/CSS; WebGL/Canvas; SQL; GitHub; AI-assisted development and debugging.</span></div>
+<div class="skill-row"><strong>Programming</strong><span>Python, NumPy, pandas, scikit-learn; JavaScript, HTML/CSS; WebGL/Canvas; SQL; GitHub.</span></div>
 <div class="skill-row"><strong>Methods</strong><span>Numerical methods, differential equations, finite-element assembly, eigenvalue problems, three-dimensional mesh processing, scientific visualization and literature verification.</span></div>
 <div class="skill-row"><strong>Training sought</strong><span>Specimen-based CT/μCT segmentation, comparative cranial anatomy, geometric morphometrics and finite-element analysis of biological structures.</span></div>
 </section>
@@ -555,6 +575,10 @@ model-viewer{display:block;width:100%;height:min(61dvh,650px);min-height:280px;b
 </section>
 <section class="artworks gallery-wall" id="artworks" aria-labelledby="artworks-title">
 <header class="wall-heading"><div><p class="wall-eyebrow">ELIGULI HAN / SELECTED WORKS</p><h2 id="artworks-title">Life, form &amp; visual systems.</h2><p class="wall-intro">Paleontological reconstruction, cetacean card design and interactive cartography.</p></div><a class="wall-back" href="#cv">Research CV ↑</a></header>
+
+<a class="sculpture-portal" id="megalodon-design-art" href="design/megalodon/" aria-label="Enter the Otodus megalodon independent sculpture gallery">
+<img src="design/megalodon/assets/High_Stress_Design_Preview.png" width="1600" height="1120" loading="lazy" decoding="async" alt="Megalodon tooth sculpture held by a transparent dual-cube resin frame">
+<span><span class="portal-kicker">Independent gallery / Form &amp; force</span><strong><i>Otodus megalodon</i></strong><span class="portal-description">Scientific colour meets clear resin. Rotate the sculpture, compare full spectrum and pearlescent wash, and explore the construction.</span></span><span class="portal-action">Enter the gallery ↗</span></a>
 <fieldset class="wall-filter"><legend class="wall-sr">Filter selected works</legend>
 <input type="radio" name="work-category" id="wall-all" checked><label for="wall-all">All works <span>04</span></label>
 <input type="radio" name="work-category" id="wall-reconstruction"><label for="wall-reconstruction">Reconstruction <span>01</span></label>
@@ -611,4 +635,5 @@ model-viewer{display:block;width:100%;height:min(61dvh,650px);min-height:280px;b
 <p class="screen-note">Research CV &amp; personal art portfolio · Summer 2027 · Word, Markdown and PDF downloads contain the research CV.</p>
 <script type="module" src="assets/publications.js"></script>
 </body></html>
+
 

@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const out = join(root, 'dist');
-const required = ['cv.html', 'index.html', 'assets', 'publications', 'cv.pdf', 'cv.docx', 'cv.md', 'fea_research', 'downloads', 'neuroscience.html'];
+const required = ['cv.html', 'index.html', 'assets', 'publications', 'cv.pdf', 'cv.docx', 'cv.md', 'fea_research', 'downloads', 'neuroscience.html', 'design/megalodon'];
 for (const name of required) {
   if (!existsSync(join(root, name))) throw new Error('Missing source: ' + name);
 }
@@ -21,3 +21,4 @@ writeFileSync(join(out, 'index.html'), cv);
 writeFileSync(join(out, 'cv.html'), cv);
 writeFileSync(join(out, 'antiterrastrae.html'), demo);
 console.log('Built Eliguli: CV homepage, local prototype, publications and downloads.');
+
