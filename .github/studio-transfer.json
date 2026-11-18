@@ -180,66 +180,6 @@
       "path": "posters/manifest.json",
       "bytes": 13698,
       "sha256": "aa9cde12b9a09f684bd1f1a54aa4e2bd40e7dc97d0e0b558cb91045abfbd2793"
-    },
-    {
-      "path": "tmp/poster-render/de/page-1.png",
-      "bytes": 1210357,
-      "sha256": "2932222a1ce619a2e828c33b74a85b5aed403bbfea17a02a6cd361743c44b669"
-    },
-    {
-      "path": "tmp/poster-render/de/page-2.png",
-      "bytes": 837349,
-      "sha256": "60b98bd9dca9d9af74ab9a784b993c558501151b94710f4d86e612800167bc36"
-    },
-    {
-      "path": "tmp/poster-render/de/page-3.png",
-      "bytes": 1870759,
-      "sha256": "f7ba63e5178fd5ff91166099b32b764c852cdb3b0c1132245971fcdbfc37fa53"
-    },
-    {
-      "path": "tmp/poster-render/de/page-4.png",
-      "bytes": 717517,
-      "sha256": "95a28540d26ec274397fede34d223a087137031ea57f03711f221fc4117cf960"
-    },
-    {
-      "path": "tmp/poster-render/en/page-1.png",
-      "bytes": 1207307,
-      "sha256": "625e71ceaf7b68f15f64d0fc0fc81f1d3c532c75012ea4fe60290eda17e613bc"
-    },
-    {
-      "path": "tmp/poster-render/en/page-2.png",
-      "bytes": 782442,
-      "sha256": "04910b655947adcd678dc062158ece2e9dca68bf7ab891c1b6b01a43d450bb77"
-    },
-    {
-      "path": "tmp/poster-render/en/page-3.png",
-      "bytes": 1866444,
-      "sha256": "ad21c24053671af6e92c800e1e0041e041e96bcf9bc2d4700eeb2f836fa8a57f"
-    },
-    {
-      "path": "tmp/poster-render/en/page-4.png",
-      "bytes": 686815,
-      "sha256": "2b95e15652114b8d3abaad8d6543b3733f8bb01d5885944195f08d64d2eaec30"
-    },
-    {
-      "path": "tmp/poster-render/it/page-1.png",
-      "bytes": 1194163,
-      "sha256": "3c8ce65454d86cc80e52ec4335c862e78b720bb83d19a7400d6080fee590b733"
-    },
-    {
-      "path": "tmp/poster-render/it/page-2.png",
-      "bytes": 791799,
-      "sha256": "e1345f2690e797c9dd17d8fb25987b96d00bd5e77ed5cf463135e0fb6f88de55"
-    },
-    {
-      "path": "tmp/poster-render/it/page-3.png",
-      "bytes": 1866931,
-      "sha256": "55228d57f19665efec8531aac8d1a98264e83285621a94a54307073a0eace77d"
-    },
-    {
-      "path": "tmp/poster-render/it/page-4.png",
-      "bytes": 672632,
-      "sha256": "fd713bea7edbf0694e7a0e6c9f24dfa4acd8e4c2a47847c55663efde07e46a2e"
     }
   ]
 }
