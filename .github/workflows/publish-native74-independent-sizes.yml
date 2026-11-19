@@ -1,0 +1,88 @@
+name: Publish complete native tooth sizes and independent FEM
+on:
+  push:
+    branches: [main]
+    paths:
+      - design/native-stress-r5/**
+      - .github/workflows/publish-native74-independent-sizes.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: native74-independent-r5
+  cancel-in-progress: false
+jobs:
+  exports:
+    runs-on: ubuntu-latest
+    timeout-minutes: 100
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: design/native-stress-r5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical tools
+        run: python -m pip install numpy scipy matplotlib scikit-fem pyamg
+      - name: Verify original public scan and mechanical inputs
+        run: >-
+          python design/native-stress-r5/prepare_repro_inputs.py
+          --cache "$RUNNER_TEMP/native-cache"
+          --inputs "$RUNNER_TEMP/fem-inputs"
+      - name: Independently assemble, solve and converge both physical sizes
+        run: |
+          python design/native-stress-r5/solve_sizes.py --size 50 --inputs "$RUNNER_TEMP/fem-inputs" --output "$RUNNER_TEMP/solutions" --native-height-mm 51.63315333301228
+          python design/native-stress-r5/solve_sizes.py --size 100 --inputs "$RUNNER_TEMP/fem-inputs" --output "$RUNNER_TEMP/solutions" --native-height-mm 51.63315333301228
+          python design/native-stress-r5/project_repro_fields.py --cache "$RUNNER_TEMP/native-cache" --solutions "$RUNNER_TEMP/solutions"
+      - name: Preserve export source and generate complete streaming geometry
+        run: |
+          cp -a design/native-stress-r5 "$RUNNER_TEMP/export-source"
+          g++ -O3 "$RUNNER_TEMP/export-source/normals.cpp" -o "$RUNNER_TEMP/native-normals"
+          "$RUNNER_TEMP/native-normals" "$RUNNER_TEMP/native-cache"
+          python "$RUNNER_TEMP/export-source/prepare_geometry.py" --cache "$RUNNER_TEMP/native-cache" --out "$RUNNER_TEMP/public-data"
+      - name: Publish complete streaming geometry on its data branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch --orphan native74-r5-data
+          git rm -rf . >/dev/null 2>&1 || true
+          mkdir -p data
+          cp "$RUNNER_TEMP/public-data/"geometry-*.bin.gz data/
+          cp "$RUNNER_TEMP/public-data/geometry.json" data/
+          git add --sparse data
+          git commit -m "Publish all 74,293,846 original native tooth faces for streaming"
+          git push origin HEAD:refs/heads/native74-r5-data --force
+      - name: Write and validate all original faces in both physical sizes
+        run: >-
+          python "$RUNNER_TEMP/export-source/export_models.py"
+          --cache "$RUNNER_TEMP/native-cache"
+          --solutions "$RUNNER_TEMP/solutions"
+          --output "$RUNNER_TEMP/exports"
+          --size all
+          --site-source "$RUNNER_TEMP/native-cache"
+      - name: Publish verified complete models
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag=megalodon-independent-sizes-r5
+          if ! gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release create "$tag" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "Otodus megalodon: complete native 5 cm and 10 cm models" --notes "Complete 74,293,846-face native CT geometry in two physical sizes, with separately assembled and solved FEM fields. See per-size properties and the manifest for units, assumptions, macro-apex convergence, source hashes, and complete face-by-face export validation."
+          fi
+          gh release upload "$tag" --repo "$GITHUB_REPOSITORY" --clobber "$RUNNER_TEMP/exports/"*.3mf "$RUNNER_TEMP/exports/"*_OBJ.zip "$RUNNER_TEMP/exports/"*_STL.zip "$RUNNER_TEMP/exports/"*properties.json "$RUNNER_TEMP/exports/export-manifest.json" "$RUNNER_TEMP/solutions/"*solution.npz "$RUNNER_TEMP/solutions/"*summary.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: native74-independent-export-audit
+          path: |
+            ${{ runner.temp }}/exports/*properties.json
+            ${{ runner.temp }}/exports/export-manifest.json
+            ${{ runner.temp }}/solutions/*summary.json
