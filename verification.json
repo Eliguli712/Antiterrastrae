@@ -1,8 +1,8 @@
 {
-  "source_commit": "00ac45b60f94afa469275fabdc14023efcd3b372",
-  "verified_at": "2026-11-19T04:36:08.843311+00:00",
+  "source_commit": "3645671128cf1bbcffa9e59efd7004937da9636d",
+  "verified_at": "2026-11-19T07:47:58.815582+00:00",
   "execution": "GitHub Actions",
-  "run_url": "https://github.com/Eliguli712/Antiterrastrae/actions/runs/44459065802",
+  "run_url": "https://github.com/Eliguli712/Antiterrastrae/actions/runs/44481986804",
   "sites": {
     "github_pages": {
       "url": "https://eliguli712.github.io/Antiterrastrae/",
@@ -10,8 +10,8 @@
       "checked_files": [
         {
           "path": "cv.html",
-          "bytes": 417610,
-          "sha256": "8da577a6fafa24d2d2c4fa86c4ce0a5aebcdd834391bcdc45165599b0f4d8a0f",
+          "bytes": 419765,
+          "sha256": "99fdc3ede4177b19c75aebf8427d3dd56b179b85d07673b1d07f943a34b24209",
           "matches": true
         },
         {
@@ -297,7 +297,7 @@
     "vercel": {
       "url": "https://eliguli.vercel.app/",
       "http": "failed",
-      "error": "Published file differs: cv.html; expected SHA-256 8da577a6fafa24d2d2c4fa86c4ce0a5aebcdd834391bcdc45165599b0f4d8a0f, observed 13d9664bd027d85611637112817a1f77e965ae64cf9ae076074da1144f4973c2",
+      "error": "Published file differs: cv.html; expected SHA-256 99fdc3ede4177b19c75aebf8427d3dd56b179b85d07673b1d07f943a34b24209, observed 13d9664bd027d85611637112817a1f77e965ae64cf9ae076074da1144f4973c2",
       "attempts": 4
     }
   },
