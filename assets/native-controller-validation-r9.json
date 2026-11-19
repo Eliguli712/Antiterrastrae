@@ -1,0 +1,32 @@
+{
+  "revision": "R9",
+  "original_null_array_failure_reproduced": true,
+  "real_three_post_upload_bounds_test": true,
+  "preview_post_upload_bounds_test": true,
+  "cases": [
+    {
+      "size_mm": 50,
+      "source_faces": 74293846,
+      "source_chunks": 75,
+      "post_upload_bounds_passes": 150,
+      "maximum_resident_chunks": 1,
+      "largest_source_bytes": 22558205
+    },
+    {
+      "size_mm": 100,
+      "source_faces": 74293846,
+      "source_chunks": 75,
+      "post_upload_bounds_passes": 150,
+      "maximum_resident_chunks": 1,
+      "largest_source_bytes": 22558205
+    }
+  ],
+  "camera_cancellation_releases_source": true,
+  "error_status_reports_disabled_controller": true,
+  "original_linear_turbo_comparison_samples": 1025,
+  "original_linear_turbo_comparison": "exact within 1e-9 RGB units",
+  "maximum_pending_source_requests": 1,
+  "render_target_pixel_budget": 1800000,
+  "method": "Real geometry and scalar chunks through the native controller, Three.js upload callbacks and bounds; renderer adapter, not a GPU image test",
+  "gpu_visual_execution_tested": false
+}

@@ -1,0 +1,591 @@
+{
+  "revision": "R9",
+  "nominal_size_mm": 50,
+  "appearance": "Original restored-studio linear full-spectrum Turbo mode",
+  "palette_interpolation": "Linear scalar normalization and interpolation between the exact 256 integer RGB knots in stress-palette.js",
+  "palette_source_sha256": "13e77acf4fd76a2423427aa5a6645aa4184594d79537e62c4b2649a249cb49e2",
+  "field_revision": "Independent per-size R7 recovered numerical field, unchanged",
+  "scalar_units": "Pa",
+  "colour_min_pa": 253167.0947190341,
+  "colour_max_pa": 250522132.6467093,
+  "source_solution_sha256": "5c02c1938617d3943815b50c7264922742c08aa1b436d7d8306a3d6ee5121363",
+  "raw_solved_element_stresses_unchanged": true,
+  "source_geometry_sha256": "69928fc1d776a0cb2cd3da389802e0b08d226395005bbf4a2094180e90622b73",
+  "geometry_manifest_sha256": "35b9fe0e15fe472bd478d24fe654f570f6885cd38d7e5f52bd5ce74f0e2b25ce",
+  "field_manifest_sha256": "da5ae5010df3d480086b4266e263aa605a072f7f62281a383cf0d2792590f078",
+  "geometry_position_encoding": "Original float32 canonical coordinates; 50 mm uses its declared physical display transform",
+  "native_source_chunk_count": 75,
+  "native_source_faces_rendered_per_camera": 74293846,
+  "stream_vertices_including_chunk_overlap": 39428327,
+  "face_reduction": false,
+  "source_values_modified": false,
+  "unsupported_stream_vertices": 0,
+  "support_revision": "R8 original 100 mm support and independent 50 mm socket",
+  "support_parts": [
+    {
+      "file": "50mm-main.bin",
+      "triangles": 66942,
+      "sha256": "b086ff9e1353ebbba00314c208a39b19a8b496d7bb1fc41df79a9993761c1ac6"
+    },
+    {
+      "file": "50mm-cap.bin",
+      "triangles": 73582,
+      "sha256": "13773a354e2afca8cf60d7e1d2dd0205e5f6a078e6c24d220cbd543dae6e0581"
+    }
+  ],
+  "raster_sha256": "5e43557d9a9e95e76d1648837652915e3d46f77a722018508c78ff434c9276d5",
+  "renderer_actual_face_count_assertion": "Source faces rendered per camera: 74293846",
+  "source_chunks": [
+    {
+      "index": 0,
+      "triangles": 1000000,
+      "vertices_including_overlap": 500560,
+      "geometry_sha256": "0e1683947ffaa86198b4f18f5769b666e03fd6c17daceae65e657dd57ce1891c",
+      "field_sha256": "19f619013041bd0523c27bc73f4cb8e76fc62843f59fb094bc656fd0f8e6e999"
+    },
+    {
+      "index": 1,
+      "triangles": 1000000,
+      "vertices_including_overlap": 502350,
+      "geometry_sha256": "9e6cff8485d7bcfb350032fd6c16f440dd7068ee6ab785e998d969c2507fc157",
+      "field_sha256": "7b5506a42ca09d603f17f359773a6f6c796de07496cc9209418e7b724115a03e"
+    },
+    {
+      "index": 2,
+      "triangles": 1000000,
+      "vertices_including_overlap": 502593,
+      "geometry_sha256": "c836eb11430494078a1c6ea1fb70c7d70a4d496da735e33ac9e15532b7d1d59c",
+      "field_sha256": "b8de2f2e1dfe0301700d53d8cc97bda1f0209eabd727d36b5f4357367e46a5b0"
+    },
+    {
+      "index": 3,
+      "triangles": 1000000,
+      "vertices_including_overlap": 502781,
+      "geometry_sha256": "d560f8bb227fdc6b74a9fb71a4de2077706a6d1f7ec4a856dbdb330ea76d49d4",
+      "field_sha256": "a9759694e54fe8f26ca221f9e32b03442ad118f20a5d430102d2056dcd047810"
+    },
+    {
+      "index": 4,
+      "triangles": 1000000,
+      "vertices_including_overlap": 503328,
+      "geometry_sha256": "be1677c6cc50b14b3cdd23bf77c8a47c929e329b0093694e761c18b99bceb27c",
+      "field_sha256": "b59442b630004cd95087096486ee4e71c2e4243200566c83090e4655b8ba43e3"
+    },
+    {
+      "index": 5,
+      "triangles": 1000000,
+      "vertices_including_overlap": 503397,
+      "geometry_sha256": "3cd4f4b1534bab4325259a2e06dd8aa455d14df0f5f2bea580b51e0c742b0009",
+      "field_sha256": "3328106a6880eccf23eb8df3a3cada6a27d9e78fcaf7707f8d2e74ac292eb36a"
+    },
+    {
+      "index": 6,
+      "triangles": 1000000,
+      "vertices_including_overlap": 504520,
+      "geometry_sha256": "3953667da306ac512f29c29e23a9b5de5fe74373034f59776e91ce9b8bbb182b",
+      "field_sha256": "836037375e51c3fa0d2ed681ffdd3ea825b0dd389efd947c4862231a74f2242a"
+    },
+    {
+      "index": 7,
+      "triangles": 1000000,
+      "vertices_including_overlap": 504877,
+      "geometry_sha256": "e975003c2f0e2fc19b876fdc64a3a3e3fda490c57099939a948e8df884722d79",
+      "field_sha256": "6e46dedb354e8d27aed0d0009c050d7306555ebd1309076bc6be2f2e297407f8"
+    },
+    {
+      "index": 8,
+      "triangles": 1000000,
+      "vertices_including_overlap": 505679,
+      "geometry_sha256": "3ef7886d8642c94e5543d7fce987bde904fce6b9fe953f765d975f45f4548a5c",
+      "field_sha256": "4b1de5dda8409a8400f07f4209d76e51d46ff992fdf7c335725bf5c569273a0d"
+    },
+    {
+      "index": 9,
+      "triangles": 1000000,
+      "vertices_including_overlap": 506404,
+      "geometry_sha256": "52a4f6c2b2ef60e4cdb929001fca39e0348c21df241435ec0445e4f47a6e7a50",
+      "field_sha256": "512c404e5ebe5d49e375ec13287159d3b1750401ed3f988a8071defdd7e33e1c"
+    },
+    {
+      "index": 10,
+      "triangles": 1000000,
+      "vertices_including_overlap": 509536,
+      "geometry_sha256": "ed4f0c8e1a6312ff5f9b8e7b4b1109347199538fe891b8a222d3a4b9a97562fe",
+      "field_sha256": "d010c7721097e4fe8c7b29777d007cf899be6b2cdb7ab321609e68ed1438b384"
+    },
+    {
+      "index": 11,
+      "triangles": 1000000,
+      "vertices_including_overlap": 511621,
+      "geometry_sha256": "dd4e1ae22defe1eff6d5a8dcb2d3c13b3bacf1f87a725268f5b64946cdd23ac8",
+      "field_sha256": "e77e0ab894f7fef2f596f28cb40760cabc7eba7cd5243e9002a3259573ea4c43"
+    },
+    {
+      "index": 12,
+      "triangles": 1000000,
+      "vertices_including_overlap": 513482,
+      "geometry_sha256": "8dc53be703ac34fb4bf3d00d66aa4b4c797bbb6be244785383413e5d3282eaec",
+      "field_sha256": "e39f7dc174d4391767fccd4632a82a9aeb91967ddd44e9213b2357edea854274"
+    },
+    {
+      "index": 13,
+      "triangles": 1000000,
+      "vertices_including_overlap": 507742,
+      "geometry_sha256": "aec8dac1e48254639e259e6f98f6b23cccedfe9abddba045d59524ad229635d9",
+      "field_sha256": "222247e02485b7685d639b233a428d8caf34cbaa734e46c6a4cc90b6d60e08fe"
+    },
+    {
+      "index": 14,
+      "triangles": 1000000,
+      "vertices_including_overlap": 516014,
+      "geometry_sha256": "17ff99bb1a525610fe443981f817435d13dcf92162675d11df76994d9a08de69",
+      "field_sha256": "ee39b2210d6f4b37133cea1d6f7b8e561e1eb9813e397a8f654259eaad47c198"
+    },
+    {
+      "index": 15,
+      "triangles": 1000000,
+      "vertices_including_overlap": 519116,
+      "geometry_sha256": "02a8f231dabe4dc01fbb7ec57f56a0b945c335bea655f07ffc28ac8010b8e3c1",
+      "field_sha256": "3092fd2b08f20d250d04007038f98525c61d5180f251148e1c9be9897599187f"
+    },
+    {
+      "index": 16,
+      "triangles": 1000000,
+      "vertices_including_overlap": 519888,
+      "geometry_sha256": "0c525ecfb101d3f018e47d973187fbde1b018d3f377745f65d34fd9cfe31d7ca",
+      "field_sha256": "aac20472ea9c36702b0d5a8c040b42b534c416636a6dd7471e809e91bcb7d37c"
+    },
+    {
+      "index": 17,
+      "triangles": 1000000,
+      "vertices_including_overlap": 523388,
+      "geometry_sha256": "5ce63cbcfb45574ba25ef1561c2c26b11ef6932a69d318fd736640fc23a42cab",
+      "field_sha256": "572d728c9cf4bebe75899532b81529a862ac0f4d9ef682339e38442e423d6b77"
+    },
+    {
+      "index": 18,
+      "triangles": 1000000,
+      "vertices_including_overlap": 525206,
+      "geometry_sha256": "c29ba180c15a2835ae16ef5e38fd5552e814f0e8a8085cb3fe6880f4728ea8da",
+      "field_sha256": "d93558a93874acfc17299a00042071fd8ca890f69500bb88130a0f5250963298"
+    },
+    {
+      "index": 19,
+      "triangles": 1000000,
+      "vertices_including_overlap": 528062,
+      "geometry_sha256": "4279d9fcd90de75f6ea0369848966d9791331294d82d5b1030f6e254df912dc3",
+      "field_sha256": "e084afe808c314221aefe527a2bb37b6816f680b985e63334501c580c1885d74"
+    },
+    {
+      "index": 20,
+      "triangles": 1000000,
+      "vertices_including_overlap": 511335,
+      "geometry_sha256": "4292d6d5d4144ebf34213bbe64c18464176b0876a779b18ec10589bdabe86678",
+      "field_sha256": "bc7ad7518b163968af599aea2202d4ac614a34224f16907b0214904a3bccc607"
+    },
+    {
+      "index": 21,
+      "triangles": 1000000,
+      "vertices_including_overlap": 534523,
+      "geometry_sha256": "15bf0238f4b22345d20b7338eefe9d98bf86bc00e9425568468e5cf408ff7a0d",
+      "field_sha256": "0ce3f33f2428fd939b1a6e6a8e2ead799294b71d7c892dbd34b7d4267bc2f366"
+    },
+    {
+      "index": 22,
+      "triangles": 1000000,
+      "vertices_including_overlap": 537669,
+      "geometry_sha256": "57b62200aea095eebda4c9e22dfb9a643cc01695b3f0d2754d0aa1d66479de05",
+      "field_sha256": "4017b54549d4c2b71985ffc5adb6a62b571f9fda2a9af04f7311b081968c9eb0"
+    },
+    {
+      "index": 23,
+      "triangles": 1000000,
+      "vertices_including_overlap": 539246,
+      "geometry_sha256": "a8c86353737fd0e30ebea3716f2b3a7dc164e925e38e6b00cd353848b111d9c3",
+      "field_sha256": "c9d3335beeb09f9cba08e1a8f6e001a220e0d099258f9a6806a61aab5baf491a"
+    },
+    {
+      "index": 24,
+      "triangles": 1000000,
+      "vertices_including_overlap": 540906,
+      "geometry_sha256": "288204880538be84728c8e47f3111d2902c2d3a72e7b9a583318c887fe967dd5",
+      "field_sha256": "8569d4f0b141205c2ef52e9063dfe5e87862ae8f6b7236ba33a502582a0c3f5a"
+    },
+    {
+      "index": 25,
+      "triangles": 1000000,
+      "vertices_including_overlap": 540519,
+      "geometry_sha256": "19cb8a7d1b26de7adc292370629190e5501862021263b4acf56a41439cf2e3e8",
+      "field_sha256": "8363821534dce4a67c26f8a6873a39520c0a88e3269f2cc3e118ff0027267c9e"
+    },
+    {
+      "index": 26,
+      "triangles": 1000000,
+      "vertices_including_overlap": 544974,
+      "geometry_sha256": "966bb4244eaf18d51af8bc8a570a832ef88c16353d5a36ee1b8341bc3489976f",
+      "field_sha256": "ade12ef7baee8c0186c324e41649af9ae9e90bfa9af5f8a596008d3c72b51a73"
+    },
+    {
+      "index": 27,
+      "triangles": 1000000,
+      "vertices_including_overlap": 546647,
+      "geometry_sha256": "24d7f422a72931b22bd000d5778a6bc58fd2af8233e438862464492e111dfa52",
+      "field_sha256": "8b6d178c436e6b1474c1c37a640f6d45f8f520370385487ba8f6a379ddfc3474"
+    },
+    {
+      "index": 28,
+      "triangles": 1000000,
+      "vertices_including_overlap": 549449,
+      "geometry_sha256": "733d9dda6f7f7e25f7067ad1b71eaf3609f984e330007b43e3c1086e2dd4af73",
+      "field_sha256": "44bd8b0b5584a91378e912148801c4e0171812c83d1b3f47a1ff918a68d53124"
+    },
+    {
+      "index": 29,
+      "triangles": 1000000,
+      "vertices_including_overlap": 553054,
+      "geometry_sha256": "0718212fd394e4b4fc290c36ea42125823ddfe1cb5edc3a9502b59fb54aeb3ba",
+      "field_sha256": "cf7a353eee6175a025abdb8896c4802af9d3acf8225b8e2d60a8451c8f1440dd"
+    },
+    {
+      "index": 30,
+      "triangles": 1000000,
+      "vertices_including_overlap": 550303,
+      "geometry_sha256": "337f94497c625658d5275be51e34ce8ad8c0e557a37d23d0c328b95f83288f98",
+      "field_sha256": "1309cfca4e580b7089ed66aaa6df256f3cd46ce2eca6add2a15ff871b16e86ad"
+    },
+    {
+      "index": 31,
+      "triangles": 1000000,
+      "vertices_including_overlap": 525490,
+      "geometry_sha256": "65fbdae4f91c8b73912f5ad19d53216a3a1d2eda4786183b8cd071e654dc790d",
+      "field_sha256": "632ee7922f62f8f5b642b21fed5703cd0c647af997be938986522b3dff55bc8d"
+    },
+    {
+      "index": 32,
+      "triangles": 1000000,
+      "vertices_including_overlap": 544789,
+      "geometry_sha256": "eae8c54370321368bd730a90752fa581600c6ca9fd247044a56c914f6347114a",
+      "field_sha256": "752171ab5b1da0e189b15b36b723eaa19cf421d28c3e31018728a07fa6c68402"
+    },
+    {
+      "index": 33,
+      "triangles": 1000000,
+      "vertices_including_overlap": 555005,
+      "geometry_sha256": "bdd1bc2112ea2a65f7b6a07e1426f415e7e5c8ef8d42d6995f9adb0549018a55",
+      "field_sha256": "e97bec5ec5e6b703f802542860f646254ca8eb567daa64186d812fd48e5da47c"
+    },
+    {
+      "index": 34,
+      "triangles": 1000000,
+      "vertices_including_overlap": 555695,
+      "geometry_sha256": "b5ed5e4025bb2f2dac3d3af08c8f09355c5f5c9a02521a7f93e72722273158ba",
+      "field_sha256": "323e5b7abfbad246943a44443ee6b3ed86d8e41eeefaaf55c48436ac4f9be800"
+    },
+    {
+      "index": 35,
+      "triangles": 1000000,
+      "vertices_including_overlap": 553769,
+      "geometry_sha256": "18436ad6fddd6476900ac0c9d26de6eec62aecd8455feb3c10cb2937db278eb5",
+      "field_sha256": "381aeccb779e2f3e08add6e0df24b5fac1a3673d426e1fc4c20bfad448edf31d"
+    },
+    {
+      "index": 36,
+      "triangles": 1000000,
+      "vertices_including_overlap": 553051,
+      "geometry_sha256": "58205896f4c120e1a32e84e944d1b674e1dd598ccb3b075ee156f384d1b56457",
+      "field_sha256": "8cef609a090a71cfcbaa3f44d8fb59a6b34ea061629494791e180421559e8fd9"
+    },
+    {
+      "index": 37,
+      "triangles": 1000000,
+      "vertices_including_overlap": 553087,
+      "geometry_sha256": "dbd5d87a6d27ead8ee6d9fdfec9694a1642ea633024f088e0ce51ffe12a5c749",
+      "field_sha256": "20e5d3d0e7ac95fbc9c1a57a04cddc12906dad89d55dae7e552efea299f6de88"
+    },
+    {
+      "index": 38,
+      "triangles": 1000000,
+      "vertices_including_overlap": 552924,
+      "geometry_sha256": "070e640f6b09965f36d9a2503ecbbfa66a8e429f5a888b29c32f2d46285efb99",
+      "field_sha256": "5f15b7a4dc764a3f2b3007c6d188a535350ee074874a05ddf989d2a22ec7e712"
+    },
+    {
+      "index": 39,
+      "triangles": 1000000,
+      "vertices_including_overlap": 550615,
+      "geometry_sha256": "bd52cfd4a28c16a425556eeaf5dc5bf862ba89f5d2175a27c6b07dfbed916065",
+      "field_sha256": "fd2e7aa2d0a680884a321176900ada490a16e257e49361293e1905324bd82148"
+    },
+    {
+      "index": 40,
+      "triangles": 1000000,
+      "vertices_including_overlap": 551983,
+      "geometry_sha256": "791dfa9a7afdf2680d71441383c027c5bc9f43259b37484594f748ce8bd0f2b2",
+      "field_sha256": "b674b769d8d6836f30a2efbd8c072d64f51f6a9161e102d8e45d94b6159de351"
+    },
+    {
+      "index": 41,
+      "triangles": 1000000,
+      "vertices_including_overlap": 553721,
+      "geometry_sha256": "16d4dc75b7d7489a3ba7b45c7708d4566d1924e3dc6c51ed9c756c70a2139acf",
+      "field_sha256": "f2b95f5239f7069498c8e12fa4e9323efba368352465e9bf74c7c9ff6b97c31e"
+    },
+    {
+      "index": 42,
+      "triangles": 1000000,
+      "vertices_including_overlap": 554098,
+      "geometry_sha256": "6e76addd57f50d57a8bf8d26faa5d6753252247694c3fbe3731fb793874b2d1f",
+      "field_sha256": "22038c7abef8a38232ed74893122507376747c4e41b414855cc83e9e7161b04c"
+    },
+    {
+      "index": 43,
+      "triangles": 1000000,
+      "vertices_including_overlap": 552639,
+      "geometry_sha256": "966fa508b73a07492456b2bd0331b9fe61bc8b978f828afdce6d91b06d763bab",
+      "field_sha256": "61f8271297cc09f01df9fc2a4c5238a52a9a369410bf77e7fd2375264cb1f5e3"
+    },
+    {
+      "index": 44,
+      "triangles": 1000000,
+      "vertices_including_overlap": 551599,
+      "geometry_sha256": "884f67205eb59fea0f59a099b996e46a7811503c1de4b0216e350fbd2cfa63a3",
+      "field_sha256": "5e27d80298283025929b2b008b1b22e614b8036fca8cf674f0475854939b9a04"
+    },
+    {
+      "index": 45,
+      "triangles": 1000000,
+      "vertices_including_overlap": 550950,
+      "geometry_sha256": "d13a0d516d08511111b4459bb8ff413c4c9326a82bb70e4576614861e8b990e1",
+      "field_sha256": "afe027de251ce7df5bbc40b738d3032bc34aab0049db65dc8380789657cb0d86"
+    },
+    {
+      "index": 46,
+      "triangles": 1000000,
+      "vertices_including_overlap": 550781,
+      "geometry_sha256": "bc2a5966f37b970b5c597dfd457b9357a17106378d56f1396d5db30d804ec312",
+      "field_sha256": "272b403183cc687fcdbc80a30472e57a609042be4e924cc17da7decf128ffa6c"
+    },
+    {
+      "index": 47,
+      "triangles": 1000000,
+      "vertices_including_overlap": 542504,
+      "geometry_sha256": "4e3edf85cec76affed08e8166b9f0788ba6ed6fb8ce474780e7c6b780d096593",
+      "field_sha256": "17fa42a6c4944c8277ed920646d48ebe6ec3d36bf6ffee9259453bff2b69db8c"
+    },
+    {
+      "index": 48,
+      "triangles": 1000000,
+      "vertices_including_overlap": 525937,
+      "geometry_sha256": "816714b05fc77e5d558556b584b553b681d07b43cd3f4fb0cb4a948c042d74c5",
+      "field_sha256": "2226066b6b4af35c37699e830b61a5ff4f6cb6954d749bef65e33b21ea7ebc09"
+    },
+    {
+      "index": 49,
+      "triangles": 1000000,
+      "vertices_including_overlap": 538863,
+      "geometry_sha256": "471eb0d2cf983f2f59b68da5348e2c025fe3dd92fdd0c9d4544d10c721e5d7eb",
+      "field_sha256": "ad4fedb58c95980bcf2ffbb4d83b90302263fddb136ff4d97aff8addeb3f1ff0"
+    },
+    {
+      "index": 50,
+      "triangles": 1000000,
+      "vertices_including_overlap": 548350,
+      "geometry_sha256": "dba01adf7803e1fbe7648c7cd49ce2583b97670e520f6ac09c8ba2ad3eef4b94",
+      "field_sha256": "0e3ad6938b57233113eed3d001ba815a3297f45bde9c402c5322e8f09424793a"
+    },
+    {
+      "index": 51,
+      "triangles": 1000000,
+      "vertices_including_overlap": 547862,
+      "geometry_sha256": "87c8ae793da952db7204ac79539b9f244af64a1bf57f64811b49e61f4495a7e2",
+      "field_sha256": "b75d8b9aeebf752b351466771ef747b570f507bfa505b8b414e293fbc82aecf5"
+    },
+    {
+      "index": 52,
+      "triangles": 1000000,
+      "vertices_including_overlap": 547017,
+      "geometry_sha256": "8a5f96e3979dbe7e9737531eaf1e294594689279e560827bcba56c5589f36f4c",
+      "field_sha256": "6ef204cce604822792f0eac2b770358f35e4d5529a94219435c3eae0e508e136"
+    },
+    {
+      "index": 53,
+      "triangles": 1000000,
+      "vertices_including_overlap": 546350,
+      "geometry_sha256": "a73f032525eeec8a4c928e2f37e5d9110480bd0ab0a0a7290256b67de5f6a25f",
+      "field_sha256": "d106ecd9cd0999999443810c3384f4b7a2a7bc07838a63191f0a9551c1b211d4"
+    },
+    {
+      "index": 54,
+      "triangles": 1000000,
+      "vertices_including_overlap": 545039,
+      "geometry_sha256": "960e95e0b34e6f6392e9bdc9fbc18f1b72d8b2dbf91b50bd4a935ac0b12dbde2",
+      "field_sha256": "bd316c01d201affe3ec219e348456841c9bf73505c3d1d126470a2928471999c"
+    },
+    {
+      "index": 55,
+      "triangles": 1000000,
+      "vertices_including_overlap": 544426,
+      "geometry_sha256": "49c913870facd1c3bec657d73a4aa38bdb7b32779476190dc21550dcf89e253f",
+      "field_sha256": "9e5c03848b5526cc3c2549899d88ffd70193339b78bf2c8754b1f120c5393c67"
+    },
+    {
+      "index": 56,
+      "triangles": 1000000,
+      "vertices_including_overlap": 545404,
+      "geometry_sha256": "3d65a9a9b5dd22ed05ba91c9ba3e6fe7672c6fa488a07c3ce894611ac411e96d",
+      "field_sha256": "e6907e5f0d0eea0210182550a36d28d12332aef1271679f3d78a6b3e5eb645f5"
+    },
+    {
+      "index": 57,
+      "triangles": 1000000,
+      "vertices_including_overlap": 542327,
+      "geometry_sha256": "0c13fd80671de71b3ec1ca55ee6e3e06bccd4f09220bfe636971d33ed2ad5ae6",
+      "field_sha256": "292fb9c20b251e18b110a7c761c19f687b7efcbcbd6e51a06315b731fb4d6ba7"
+    },
+    {
+      "index": 58,
+      "triangles": 1000000,
+      "vertices_including_overlap": 540773,
+      "geometry_sha256": "3266a58726f206b03ed0dea18e0d77ea60c14be2fd59c94c2df90bfe10cd93d6",
+      "field_sha256": "3b6a7791796e2fe398c941359dab3547f4dc2c8958e6b55cb1103cd48017dabe"
+    },
+    {
+      "index": 59,
+      "triangles": 1000000,
+      "vertices_including_overlap": 540777,
+      "geometry_sha256": "c1825bedb1e2a5db3fc39500bd603545d1204f71aa3423995f3b72b58fc01d56",
+      "field_sha256": "0bb3fe89c688bdee18db2552a604e09f4e013eba2a3381989e6ff7eac319a6cb"
+    },
+    {
+      "index": 60,
+      "triangles": 1000000,
+      "vertices_including_overlap": 539178,
+      "geometry_sha256": "f5859ac0886a67c82c63cf813a25f3f4ed1c8ddd733b5f0f5a5170bb27d5cbe9",
+      "field_sha256": "176cd4392486c29d533d78fc487d1b35c59c4232b004bff0c4af33162a639d3b"
+    },
+    {
+      "index": 61,
+      "triangles": 1000000,
+      "vertices_including_overlap": 537564,
+      "geometry_sha256": "2b7887dbbbe3af80a3bab4befb2ccc57ac496f6ca7a16d9016f9b6a29a21ce0d",
+      "field_sha256": "88797ba711471a31184448344eee09bb25200f0977b610f5883d20a576d7b762"
+    },
+    {
+      "index": 62,
+      "triangles": 1000000,
+      "vertices_including_overlap": 535055,
+      "geometry_sha256": "f428b97b042c273ce14b1cd52cf2d79f102b63c8438ac5ee805122de831c8d00",
+      "field_sha256": "49f6581216ffe7c5e3c94e44a52a6484cb6fd24d584c8fb8fb7fd3fdfbf9bd34"
+    },
+    {
+      "index": 63,
+      "triangles": 1000000,
+      "vertices_including_overlap": 531880,
+      "geometry_sha256": "5f6aa7c81a61dae8a3f4216c2a748edfaa3e8077e8ff6f1fc3fe0ef29fb4329d",
+      "field_sha256": "fca28a50526133b270e7904e4bee691ac1fa123377aae2a73054f515591e9799"
+    },
+    {
+      "index": 64,
+      "triangles": 1000000,
+      "vertices_including_overlap": 528582,
+      "geometry_sha256": "eae21da4d36ab8a6df9324bc25211d97b4743a1b196abe319097bc7851ba8985",
+      "field_sha256": "19eeee7e1d8db0e97896d4e096eec39d53dd605396d12bffec0d9a8215468902"
+    },
+    {
+      "index": 65,
+      "triangles": 1000000,
+      "vertices_including_overlap": 522214,
+      "geometry_sha256": "58403a4ed2d8ca4f3486b2c56f74d2fc8b73171b2ba98a9458c6d595f05d97ed",
+      "field_sha256": "e8a79d3d26bf80c33b55005c3612643b9cba8397df70d02b54c9ca1a2a1124c1"
+    },
+    {
+      "index": 66,
+      "triangles": 1000000,
+      "vertices_including_overlap": 513356,
+      "geometry_sha256": "69f460089d7867ee3b00cd417fdcc95615e61dcac26a427829b35c5115a3b6a4",
+      "field_sha256": "86ca47006d1d6e33f528d3530664164cbab18a2176cf62698082e356f2f713a2"
+    },
+    {
+      "index": 67,
+      "triangles": 1000000,
+      "vertices_including_overlap": 511058,
+      "geometry_sha256": "dc2a54dbc54c008f489e8c8ecfe26b0277e30c864691188697cd70bb8807b92d",
+      "field_sha256": "6a119f8805d060431dfd5c1581f84fd0804004a974ffd3b9595007a15d70af5a"
+    },
+    {
+      "index": 68,
+      "triangles": 1000000,
+      "vertices_including_overlap": 513543,
+      "geometry_sha256": "5fd90e7760cfa46335a4c11de4eab47325d89359675b71dde6bac7a642eb252a",
+      "field_sha256": "42510c576deb6a46fe6063a724427445d915a959d195a5c6b0c49d89c61bf1f7"
+    },
+    {
+      "index": 69,
+      "triangles": 1000000,
+      "vertices_including_overlap": 507521,
+      "geometry_sha256": "43453d3b66a91414f9f2560bd60a244a84dcea4db064aeeedffabe24e6a776a1",
+      "field_sha256": "ddcb2c6263332e14f090a93068ecfede960048c6fe7ca511dfa70b32d1cdd6dc"
+    },
+    {
+      "index": 70,
+      "triangles": 1000000,
+      "vertices_including_overlap": 506983,
+      "geometry_sha256": "063e308acd100a796e989c6b7762fd0a5e812423d8f94ec20928bc791bf12cbb",
+      "field_sha256": "868042f135cec81b46b6877d24cd2e0b9b418906678a7e94e9b7b46eaf2542a4"
+    },
+    {
+      "index": 71,
+      "triangles": 1000000,
+      "vertices_including_overlap": 504414,
+      "geometry_sha256": "57c9fa7f2d22cfe4f3a4e29d8d081e053e01f219d0ec7bf7133fe31329589018",
+      "field_sha256": "a0be8fd4814c46213d6a42615732992971c4efe10cebdc9331c62feac9b22983"
+    },
+    {
+      "index": 72,
+      "triangles": 1000000,
+      "vertices_including_overlap": 502835,
+      "geometry_sha256": "4ad88fdf121b6602e31caf2eed76918e8dde781405ca13a76545b65b468f39f0",
+      "field_sha256": "d84a2379f9183a74a5fafbe7179c2a24590a99a9fed98d5e77d9c9e82405cbcf"
+    },
+    {
+      "index": 73,
+      "triangles": 1000000,
+      "vertices_including_overlap": 501659,
+      "geometry_sha256": "0a4696c5a2625ca2f6426b71bb538bcc34c111c71b376e62eca9ad6bb4740d2a",
+      "field_sha256": "5dcea2632e3ce598867299f2f9e7a453f2c1f4e88c82a6f9700515809b4c47bb"
+    },
+    {
+      "index": 74,
+      "triangles": 293846,
+      "vertices_including_overlap": 147491,
+      "geometry_sha256": "c03cf602bd1f133f4e68766c4f71d2d0d1f34a2cbf1c741d1238760f0a31db4a",
+      "field_sha256": "72ee8eaabc3702b8a7b18ab4d7efe9ca229849b1c797e70840e9b4a300eaf939"
+    }
+  ],
+  "plates": [
+    {
+      "file": "50mm-linear-front.webp",
+      "width": 2400,
+      "height": 2800,
+      "native_source_faces_rendered": 74293846,
+      "bytes": 194194,
+      "sha256": "82d7678efaff5d24866826181e9a1f7ed8dede6707e11af6e36536d30ecb9c84"
+    },
+    {
+      "file": "50mm-linear-oblique.webp",
+      "width": 2400,
+      "height": 2800,
+      "native_source_faces_rendered": 74293846,
+      "bytes": 222348,
+      "sha256": "5133ec9e4d341dbcc88ea397d8f8e60885a3f2bac163cf133f11eccecba236e0"
+    },
+    {
+      "file": "50mm-linear-reverse.webp",
+      "width": 2400,
+      "height": 2800,
+      "native_source_faces_rendered": 74293846,
+      "bytes": 188900,
+      "sha256": "e3ae2f1a9ec12b1ff6185a69dbe042b3b6977d863e712966f56c0c2c0f99ea3e"
+    }
+  ]
+}
