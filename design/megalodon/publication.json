@@ -1,10 +1,35 @@
 {
-  "revision": "R7",
+  "revision": "R8",
   "canonical_url": "https://eliguli712.github.io/Antiterrastrae/design/megalodon/",
-  "asset_commit": "5d5316eba77b04e9cea85228a942224c0d087960",
-  "source_commit": "844cf47229f49171728d983d36528028330c9131",
+  "asset_commit": "c63fa1de6fb6b86dc7eacab3ce238665e9f558ab",
+  "source_commit": "6cc7780ddb759d7507a3f0ec6574b4be493fb103",
   "deleted_duplicate": "dual-scale-original-posters.html",
   "native_field_values_per_size": 39428327,
   "unsupported_native_display_vertices": 0,
-  "fixed_boundary_retest": "Passed for both sizes"
+  "fixed_boundary_retest": "Passed for both sizes",
+  "cv_cover": "First supplied desktop screenshot; original image bytes, shared by research and art entrances",
+  "cv_cover_sha256": "0b3a0ad3f0a8b4616239beef1974007d64484ac3612e0d2eb6809fadebee616c",
+  "support_100mm": "Original R2.1 CAD masters restored, one upper transition, 18 nodes and 28 beams",
+  "support_50mm": "Independent smaller socket, unchanged lower frame, two upper bevel bands, 27 nodes and 50 beams",
+  "beams_recomputed": {
+    "50mm": {
+      "max_vm_MPa": 0.05939293802728602,
+      "max_displacement_mm": 0.00859099738095909
+    },
+    "100mm": {
+      "max_vm_MPa": 0.24759247550249153,
+      "max_displacement_mm": 0.03385046793536078
+    }
+  },
+  "native_tooth_fem": "Existing R7 projected independently solved proxy fields retained; native porous volume has not been solved",
+  "native_rendering": {
+    "faces": 74293846,
+    "resident_source_chunks": 1,
+    "workers": 1,
+    "maximum_framebuffer_pixels": 1800000,
+    "actual_source_controller_test": "75 native geometry and scalar chunks, all faces, one maximum resident source chunk",
+    "gpu_visual_execution_tested": false,
+    "no_webgl_fallback": "Complete native source plates plus interactive software preview"
+  },
+  "posters": "Original EN/DE/IT four-page editions; only page-four QR changed. Supplied Kakeya mark centred. All QR codes decoded at four PDF render resolutions."
 }

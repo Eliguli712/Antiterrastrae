@@ -380,7 +380,16 @@ model-viewer{display:block;width:100%;height:min(61dvh,650px);min-height:280px;b
 .sculpture-portal .portal-action{font-size:11px;white-space:nowrap;border-bottom:1px solid #89949c;padding:9px 0;color:#e1dfdb}
 @media(max-width:700px){.research-design-entry{grid-template-columns:1fr;padding:17px}.research-design-entry .entry-action{grid-column:1;grid-row:auto;justify-self:start}.sculpture-portal{grid-template-columns:100px minmax(0,1fr);gap:17px;padding:14px}.sculpture-portal img{width:100px;height:160px;object-fit:cover}.sculpture-portal strong{font-size:22px}.sculpture-portal .portal-description{font-size:11px}.sculpture-portal .portal-action{grid-column:2;justify-self:start;margin-top:-8px}.sculpture-portal .portal-kicker{font-size:8px;letter-spacing:.1em}}
 @media print{.research-design-entry,.sculpture-portal{display:none!important}}
-</style><link rel="stylesheet" href="assets/cv-additions.css"></head><body>
+</style><link rel="stylesheet" href="assets/cv-additions.css">
+<style id="megalodon-cover-r8">
+#megalodon-design-research{grid-template-columns:160px minmax(0,1fr) auto;column-gap:20px}
+#megalodon-design-research .megalodon-entry-cover{grid-column:1;grid-row:1/4;display:block;width:160px;height:auto;aspect-ratio:1348/1141;object-fit:contain;border-radius:3px;background:#0b171d}
+#megalodon-design-research .entry-label,#megalodon-design-research strong,#megalodon-design-research .entry-description{grid-column:2}
+#megalodon-design-research .entry-action{grid-column:3;grid-row:1/4}
+#megalodon-design-art .megalodon-entry-cover{height:auto;aspect-ratio:1348/1141;object-fit:contain;background:#0b171d}
+@media(max-width:700px){#megalodon-design-research{grid-template-columns:100px minmax(0,1fr);gap:7px 15px}#megalodon-design-research .megalodon-entry-cover{width:100px;grid-row:1/5}#megalodon-design-research .entry-action{grid-column:2;grid-row:4;justify-self:start}#megalodon-design-art .megalodon-entry-cover{width:100px;height:auto;object-fit:contain;align-self:start}}
+</style>
+</head><body>
 <nav class="toolbar" aria-label="CV and demonstration actions">
 <a class="button action launch" id="viewPrototype" href="https://eliguli712.github.io/Antiterrastrae/?demo=1#antiterrastrae">
 <span class="action-label">Interactive prototype</span>
@@ -438,6 +447,7 @@ model-viewer{display:block;width:100%;height:min(61dvh,650px);min-height:280px;b
 <div class="entry-head"><h3><a href="fea_research/high_res_meg_teeth/">Megalodon μCT · archived COMSOL solver &amp; full 32M 3D</a></h3><span class="date">Full-resolution CT archive</span></div>
 </article>
 <a class="research-design-entry" id="megalodon-design-research" href="design/megalodon/" aria-label="Explore the Otodus megalodon numerical stress and sculpture study">
+<img class="megalodon-entry-cover" src="https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/c63fa1de6fb6b86dc7eacab3ce238665e9f558ab/assets/cv-cover-r8.jpg" width="1348" height="1141" loading="lazy" decoding="async" alt="Otodus megalodon gallery: numerical-colour tooth, transparent support and original cube dimensions">
 <span class="entry-label">Interactive study / Anatomy &amp; mechanics</span><strong><i>Otodus megalodon</i> · Numerical stress in three dimensions</strong><span class="entry-description">Explore the registered von Mises field, clear resin support and live structural calculations.</span><span class="entry-action">Enter the 3D study ↗</span></a>
 
 </section>
@@ -590,7 +600,7 @@ model-viewer{display:block;width:100%;height:min(61dvh,650px);min-height:280px;b
 
 <a class="research-design-entry" id="live-orca-art" href="https://eliguli712.github.io/Antiterrastrae/live-orca/" target="_blank" rel="noopener" aria-label="Explore Live Orca skeletal anatomy and measured movement"><span class="entry-label">Interactive anatomy / Movement &amp; form</span><strong><i>Orcinus orca</i> · A skeleton in motion</strong><span class="entry-description">Rotate the complete museum scan, isolate anatomical regions and replay a measured 50 Hz movement record. Surface masks and inferred soft discs reveal the structure behind the motion.</span><span class="entry-action">Explore Live Orca</span></a>
 <a class="sculpture-portal" id="megalodon-design-art" href="design/megalodon/" aria-label="Enter the Otodus megalodon independent sculpture gallery">
-<img src="design/megalodon/assets/High_Stress_Design_Preview.png" width="1600" height="1120" loading="lazy" decoding="async" alt="Megalodon tooth sculpture held by a transparent dual-cube resin frame">
+<img class="megalodon-entry-cover" src="https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/c63fa1de6fb6b86dc7eacab3ce238665e9f558ab/assets/cv-cover-r8.jpg" width="1348" height="1141" loading="lazy" decoding="async" alt="Otodus megalodon gallery: numerical-colour tooth, transparent support and original cube dimensions">
 <span><span class="portal-kicker">Independent gallery / Form &amp; force</span><strong><i>Otodus megalodon</i></strong><span class="portal-description">Scientific colour meets clear resin. Rotate the sculpture, compare full spectrum and pearlescent wash, and explore the construction.</span></span><span class="portal-action">Enter the gallery ↗</span></a>
 <fieldset class="wall-filter"><legend class="wall-sr">Filter selected works</legend>
 <input type="radio" name="work-category" id="wall-all" checked><label for="wall-all">All works <span>04</span></label>
@@ -648,5 +658,6 @@ model-viewer{display:block;width:100%;height:min(61dvh,650px);min-height:280px;b
 <p class="screen-note">Research CV &amp; personal art portfolio · Summer 2027 · Word, Markdown and PDF downloads contain the research CV.</p>
 <script type="module" src="assets/publications.js"></script>
 </body></html>
+
 
 
