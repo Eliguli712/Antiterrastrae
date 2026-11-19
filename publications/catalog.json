@@ -9,8 +9,8 @@
       "date": "19 November 2026",
       "description": "Calibrated CT geometry, regional stress quantiles, targeted mesh refinement, material and attachment sensitivity, and registered axial field comparisons. Includes public native, optimised and 200M exterior data links.",
       "pages": 12,
-      "bytes": 18182136,
-      "sha256": "241a23169b09ba7bad9028226d0bc02d4576cc29a8e660ae01de2da91fb9f189",
+      "bytes": 18182133,
+      "sha256": "f795ffc49bb64a47a5a967e7ed8b815f940615e167daa8ab1ab91f9a2d1d0dee",
       "source_file": "megalodon-current-preprint-source.zip",
       "axis_data_file": "megalodon-archive-axis-data.zip"
     },
