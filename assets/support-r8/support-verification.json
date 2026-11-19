@@ -1,0 +1,113 @@
+{
+  "revision": "R8",
+  "beam_analytic": {
+    "cantilever_F_L3_over_3EI_relative_error": 2.220446049250313e-16
+  },
+  "cases": {
+    "50": {
+      "nodes": 27,
+      "beam_elements": 50,
+      "bevel_bands": 2,
+      "all_edge_endpoints_have_spheres": true,
+      "fixed_translation_max_mm": 0.0,
+      "free_relative_residual": 1.9362308942752117e-12,
+      "force_balance_N": [
+        -2.5803764371534407e-13,
+        -5.350164597060701e-13,
+        -6.049050149670165e-13
+      ],
+      "moment_balance_N_mm": [
+        4.6556855592960744e-11,
+        -2.0356341612348672e-11,
+        -3.816561288679876e-12
+      ],
+      "energy_balance_relative_error": 5.385331764852295e-13,
+      "stiffness_symmetry_relative_error": 9.713354813552404e-17,
+      "max_beam_shear_parameter_phi": 31.827027027026876
+    },
+    "100": {
+      "nodes": 18,
+      "beam_elements": 28,
+      "bevel_bands": 1,
+      "all_edge_endpoints_have_spheres": true,
+      "fixed_translation_max_mm": 0.0,
+      "free_relative_residual": 1.4415808422777062e-14,
+      "force_balance_N": [
+        -3.4945128803243555e-15,
+        5.164398895678589e-15,
+        2.345346139520643e-15
+      ],
+      "moment_balance_N_mm": [
+        -2.944730397838949e-13,
+        -4.044133050985781e-13,
+        -8.061637176104016e-14
+      ],
+      "energy_balance_relative_error": 1.136863933666178e-16,
+      "stiffness_symmetry_relative_error": 1.3252615639460022e-17,
+      "max_beam_shear_parameter_phi": 0.13936094674556215
+    }
+  },
+  "parts": [
+    {
+      "file": "Support_R8_50mm_main.stl",
+      "sha256": "18ded9126b3740646f223abfd22a3d43cb28cb044cea906272747928bfd99783",
+      "watertight": true,
+      "connected": true,
+      "restored_STL_master_bitwise_equal_to_source": false
+    },
+    {
+      "file": "Support_R8_50mm_cap.stl",
+      "sha256": "4e6b1085b9fe1781055fd76d0e7f3affc8db0172887727b8041ff7e000f8b021",
+      "watertight": true,
+      "connected": true,
+      "restored_STL_master_bitwise_equal_to_source": false
+    },
+    {
+      "file": "Support_R8_100mm_main.stl",
+      "sha256": "cb510f46e2edfbf31dab228431378ad4675766d052901db554c552e7a4242d07",
+      "watertight": true,
+      "connected": true,
+      "restored_STL_master_bitwise_equal_to_source": true
+    },
+    {
+      "file": "Support_R8_100mm_cap.stl",
+      "sha256": "484b753a5aed6d7841a4a3c554f4f69a6433ea64292deea6732ab7b0f23c0de1",
+      "watertight": true,
+      "connected": true,
+      "restored_STL_master_bitwise_equal_to_source": true
+    }
+  ],
+  "spherical_patch": [
+    {
+      "variant": "solid",
+      "tetrahedra": 12800,
+      "positive_volumes": true,
+      "rigid_motion_relative_residual": 1.6324021763712685e-18,
+      "affine_patch_relative_residual": 2.077127644577789e-15
+    },
+    {
+      "variant": "wall",
+      "tetrahedra": 11520,
+      "positive_volumes": true,
+      "rigid_motion_relative_residual": 1.486162521192889e-18,
+      "affine_patch_relative_residual": 2.5571067419213367e-15
+    }
+  ],
+  "spherical_submodel_count": 90,
+  "all_sphere_submodel_max_gauge_reaction_relative": 1.7854814469639785e-11,
+  "native_porous_tooth_FEM_completed": false,
+  "physical_retention_test_completed": false,
+  "Chien_shell_equations_implemented": false,
+  "self_contained_kit_reproduction": {
+    "ZIP_CRC_passed": true,
+    "beam_max_translation_absolute_difference_mm": {
+      "50": 8.083811398051921e-16,
+      "100": 0.0
+    },
+    "beam_max_vm_absolute_difference_MPa": {
+      "50": 7.480127628411992e-15,
+      "100": 0.0
+    },
+    "ball_fem_JSON_reproduced_bitwise": true
+  }
+}

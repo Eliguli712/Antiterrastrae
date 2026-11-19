@@ -1,0 +1,61 @@
+{
+  "source_pdf_sha256": "455d86972729cfd5322a6caa023d402245ad4011ec4356a2fd016cb4ba16e4a5",
+  "output_pdf_sha256": "e6eac8bcf3019064a109830af51dfc327f055461613363785f6fbc766fe09a8a",
+  "badge_sha256": "b687593ada98b253ccc978cb85cc71c4957471ea5f6c132d5b0a1a4e5ace638a",
+  "pages": 4,
+  "modified_page": 4,
+  "all_original_artwork_image_streams_unchanged": true,
+  "all_original_wording_unchanged": true,
+  "changed_pixels_outside_qr_rect_at_150dpi": 0,
+  "qr": {
+    "target": "https://eliguli712.github.io/Antiterrastrae/design/megalodon/",
+    "error_correction": "H",
+    "version": 7,
+    "data_modules": 45,
+    "quiet_zone_modules": 4,
+    "outer_rect_pdf_pt": [
+      408.24,
+      626.4,
+      482.4,
+      700.56
+    ],
+    "centre_white_patch_side_pt": 16.0,
+    "badge_width_pt": 15.0,
+    "badge_height_pt": 13.946731234866828,
+    "badge_is_original_unchanged_image": true
+  },
+  "scan_tests": [
+    {
+      "render_dpi": 110,
+      "decoded": [
+        "https://eliguli712.github.io/Antiterrastrae/design/megalodon/"
+      ],
+      "complete_page_scan": true
+    },
+    {
+      "render_dpi": 150,
+      "decoded": [
+        "https://eliguli712.github.io/Antiterrastrae/design/megalodon/"
+      ],
+      "complete_page_scan": true
+    },
+    {
+      "render_dpi": 200,
+      "decoded": [
+        "https://eliguli712.github.io/Antiterrastrae/design/megalodon/"
+      ],
+      "complete_page_scan": true
+    },
+    {
+      "render_dpi": 300,
+      "decoded": [
+        "https://eliguli712.github.io/Antiterrastrae/design/megalodon/"
+      ],
+      "complete_page_scan": true
+    }
+  ],
+  "preview_dimensions_px": [
+    2550,
+    3300
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "method": "Real 75 geometry chunks and corresponding 100 mm scalar chunks passed through the native-refinement controller with a renderer/worker test adapter",
+  "all_source_faces": 74293846,
+  "native_draws": 75,
+  "maximum_resident_source_chunks": 1,
+  "maximum_pending_chunk_requests": 1,
+  "largest_vertex_index_scalar_buffer_bytes": 22558205,
+  "source_meshes_after_complete": 0,
+  "render_target_pixel_budget": 1800000,
+  "gpu_visual_execution_tested": false
+}

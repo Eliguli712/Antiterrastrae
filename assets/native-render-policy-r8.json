@@ -1,0 +1,16 @@
+{
+  "schema": "megalodon-native-render-budget-r8",
+  "full_native_source_triangles": 74293846,
+  "resident_source_chunks": 1,
+  "workers": 1,
+  "max_framebuffer_pixels": 1800000,
+  "cpu_full_source_renders": {
+    "50": 74293846,
+    "100": 74293846
+  },
+  "numerical_stress_field": "Unchanged R7 recovered display field from the original independent 50/100 mm solved element stresses",
+  "native_porous_tooth_FEM_solved": false,
+  "full_geometry_downloads_preserved": true,
+  "verified_source_chunks": 75,
+  "largest_decoded_geometry_chunk_bytes": 20335693
+}
