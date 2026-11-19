@@ -4,9 +4,12 @@ import concurrent.futures, gzip, hashlib, json, os, struct, subprocess, sys, url
 import numpy as np
 
 DATA=Path(sys.argv[1]); OUT=DATA/'assets/field-r7'; CACHE=Path(os.environ['RUNNER_TEMP'])/'megalodon-recovery-cache';CACHE.mkdir(exist_ok=True)
-geometry=json.loads((DATA/'assets/native74-r5/geometry.json').read_text())
-R=np.array(geometry['display_affine_R']);T=np.array(geometry['display_affine_T']);inverse=np.linalg.inv(R)
+reference=json.loads((DATA/'assets/native74-r5/geometry.json').read_text())
+R=np.array(reference['display_affine_R']);T=np.array(reference['display_affine_T']);inverse=np.linalg.inv(R)
 native_origin='https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/'
+with urllib.request.urlopen(native_origin+'geometry.json',timeout=120) as r:geometry=json.load(r)
+assert geometry['triangles']==74293846 and len(geometry['chunks'])==75
+(OUT/'verified-native-geometry.json').write_text(json.dumps(geometry,indent=2))
 def native(chunk):
     p=CACHE/Path(chunk['url']).name
     if not p.exists():
@@ -39,7 +42,7 @@ for size in [50,100]:
     model=CACHE/f'{size}mm-model.bin'
     with model.open('wb') as f:
         f.write(struct.pack('<III',len(p),len(faces),len(t)));f.write(p.astype('<f8').tobytes());f.write(nodal.astype('<f8').tobytes());f.write(faces.astype('<u4').tobytes());f.write(t.astype('<u4').tobytes())
-    scale=size/geometry['native_longitudinal_height_mm'];cutoff=.75*scale
+    scale=size/reference['native_longitudinal_height_mm'];cutoff=.75*scale
     proc=subprocess.Popen([str(binary),str(model),str(cutoff)],stdin=subprocess.PIPE,stdout=subprocess.PIPE)
     metadata['chunks']=[];vertices=zero=0;max_distance=0.
     for i,chunk in enumerate(geometry['chunks']):
