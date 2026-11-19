@@ -1,0 +1,1864 @@
+{
+  "schema": "r7-fixed-case-independent-retest-v1",
+  "cases": [
+    {
+      "schema": "r7-original-fixed-boundary-retest-v1",
+      "size_mm": 50,
+      "source_solution_file": "/workspace/scratch/798f43faaad4/r7-fem/50mm-solution.npz",
+      "source_solution_sha256": "5c02c1938617d3943815b50c7264922742c08aa1b436d7d8306a3d6ee5121363",
+      "source_solver_file": "/workspace/sites/megalodon-field-r7/.sites-checkout/scripts/native74/solve_sizes.py",
+      "source_solver_sha256": "773f4dc6b3bb5d571d5dd1b289a0ac213d13b32aeefe66e3e3a4b88965175b38",
+      "geometry_and_boundaries_unchanged": true,
+      "no_native_pore_FEM_claim": true,
+      "geometry_scope": "The archived closed-solid mechanical proxy with local apical refinement. NativeCT void boundaries are not represented in this volume mesh.",
+      "nodes": 181357,
+      "tetrahedra": 948322,
+      "constrained_nodes": 176,
+      "constrained_displacement_dofs": 528,
+      "loaded_boundary_faces": 4376,
+      "pressure_MPa": 1.0,
+      "lambda_MPa": 29000.0,
+      "mu_MPa": 28500.0,
+      "fixed_dofs": {
+        "old_max_abs_displacement_mm": 0.0,
+        "new_max_abs_displacement_mm": 0.0,
+        "all_old_exactly_zero": true,
+        "all_new_exactly_zero": true
+      },
+      "fresh_solver_metrics": {
+        "nodes": 181357,
+        "tetrahedra": 948322,
+        "free_dofs": 543543,
+        "solver": "CG / smoothed-aggregation AMG with six rigid-motion candidates",
+        "cg_iterations": 47,
+        "relative_free_residual": 1.783288093034018e-10,
+        "force_balance_relative_error": 1.6299248578695378e-12,
+        "applied_force_N": [
+          -426.5519335339758,
+          -102.82410049478635,
+          -12.54872316763488
+        ],
+        "reaction_force_N": [
+          426.5519335341955,
+          102.824100494382,
+          12.548723167087061
+        ],
+        "loaded_area_mm2": 453.1975711691213,
+        "pressure_MPa": 1.0,
+        "max_displacement_mm": 0.5902970200531678,
+        "strain_energy_N_mm": 62.57919272730295,
+        "external_work_N_mm": 125.15838545451157,
+        "energy_identity_relative_error": 7.536982301021728e-13,
+        "affine_patch_relative_residual": 3.160481125650758e-14,
+        "rigid_motion_relative_residual": 2.1057801769827392e-19,
+        "proxy_volume_mm3": 5241.380520061477,
+        "proxy_surface_area_mm2": 2560.404145998199,
+        "fixed_nodes": 176,
+        "loaded_faces": 4376,
+        "max_element_edge_mm": 3.926867470410615,
+        "minimum_element_volume_mm3": 1.8110978888895484e-06,
+        "max_vm_MPa": 875.0325860007832,
+        "solve_wall_seconds": 38.361090660095215
+      },
+      "independent_equilibrium_check": {
+        "method": "Reconstruct element stress and nodal internal force directly from the newly solved displacement, then independently integrate consistent pressure tractions and constrained-node reactions. No global stiffness matrix is reused in this check.",
+        "relative_free_residual": 1.7033893492503437e-10,
+        "applied_force_N": [
+          -426.5519335339758,
+          -102.82410049478635,
+          -12.54872316763488
+        ],
+        "reaction_force_N": [
+          426.55193353419554,
+          102.82410049438204,
+          12.548723167087488
+        ],
+        "force_balance_residual_N": [
+          2.1975665731588379e-10,
+          -4.043130275022122e-10,
+          -5.473914654885448e-10
+        ],
+        "force_balance_relative_error": 1.6291661824647648e-12,
+        "moment_reference_point_mm": [
+          15.508621460859407,
+          23.643359520315272,
+          8.95151663484627
+        ],
+        "applied_moment_N_mm": [
+          1435.9237355251864,
+          -5708.529388596003,
+          -1637.7718881945973
+        ],
+        "reaction_moment_N_mm": [
+          -1435.9237355092341,
+          5708.529388610288,
+          1637.771888191912
+        ],
+        "moment_balance_residual_N_mm": [
+          1.5952309695421718e-08,
+          1.4285433280747384e-08,
+          -2.6852831069845706e-09
+        ],
+        "moment_balance_relative_error": 7.992005743569644e-13,
+        "moment_normalization_N_mm": 27003.841839672456,
+        "strain_energy_N_mm": 62.57919272721573,
+        "external_work_N_mm": 125.15838545451156,
+        "energy_identity_relative_error": 6.400417178496458e-13,
+        "reintegrated_volume_mm3": 5241.380520061475,
+        "net_internal_force_N": [
+          -2.597777697924516e-13,
+          2.787687989010189e-12,
+          3.759089012088966e-12
+        ],
+        "net_internal_moment_N_mm": [
+          -2.980913882214412e-11,
+          5.4948853213622474e-12,
+          -3.3231879370990146e-12
+        ]
+      },
+      "old_new_solution_difference": {
+        "displacement_relative_L2": 7.1686161362482875e-12,
+        "displacement_max_vector_difference_mm": 4.369864089797569e-12,
+        "von_mises_relative_L2": 1.643494435156665e-11,
+        "von_mises_max_absolute_difference_MPa": 5.795300239697099e-09,
+        "independent_stress_recovery_max_absolute_difference_MPa": 0.0,
+        "independent_volume_max_absolute_difference_mm3": 0.0
+      },
+      "zero_stress_audit": {
+        "old_zero_elements": 367,
+        "new_zero_elements": 367,
+        "tetrahedra_with_all4_nodes_fixed": 367,
+        "all_zero_elements_are_all4_fixed": true,
+        "old_zero_elements_identical_new": true,
+        "zero_elements_outside_fully_fixed_volumes": 0,
+        "minimum_strictly_positive_stress_MPa": 0.00029894610512917747,
+        "interpretation": "Every node of each367fully constrained tetrahedra has u=0. The P1 displacement is therefore identically0throughout that cell; its small-strain stress is exactly0. This is a consequence of the fixed-volume support idealization, not an unsupported mapping or a missing solver value."
+      },
+      "archived_projected_field_audit": {
+        "source_meta_file": "/workspace/sites/megalodon-field-r7/.sites-checkout/dist/assets/native74-r5/50mm-field.json",
+        "original_unique_vertex_counts": {
+          "zero_vertices": 173752,
+          "positive_vertices": 36704583,
+          "unsupported_vertices": 1073364,
+          "mapped_vertices": 36878335,
+          "unmapped_vertices": 1073364
+        },
+        "all_chunks_sha256_verified": true,
+        "chunk_counts_include_boundary_seam_copies": true,
+        "chunk_totals": {
+          "chunk_vertex_copies": 39428327,
+          "finite_positive": 38155604,
+          "finite_exact_zero": 174517,
+          "finite_negative": 0,
+          "nan_unsupported": 1098206,
+          "infinite": 0
+        },
+        "per_chunk": [
+          {
+            "file": "50mm-field-00.bin.gz",
+            "vertex_copies": 500560,
+            "positive": 500560,
+            "zero": 0,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-01.bin.gz",
+            "vertex_copies": 502350,
+            "positive": 502350,
+            "zero": 0,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-02.bin.gz",
+            "vertex_copies": 502593,
+            "positive": 502593,
+            "zero": 0,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-03.bin.gz",
+            "vertex_copies": 502781,
+            "positive": 502781,
+            "zero": 0,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-04.bin.gz",
+            "vertex_copies": 503328,
+            "positive": 499765,
+            "zero": 0,
+            "negative": 0,
+            "nan": 3563,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-05.bin.gz",
+            "vertex_copies": 503397,
+            "positive": 433655,
+            "zero": 0,
+            "negative": 0,
+            "nan": 69742,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-06.bin.gz",
+            "vertex_copies": 504520,
+            "positive": 406401,
+            "zero": 0,
+            "negative": 0,
+            "nan": 98119,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-07.bin.gz",
+            "vertex_copies": 504877,
+            "positive": 396578,
+            "zero": 0,
+            "negative": 0,
+            "nan": 108299,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-08.bin.gz",
+            "vertex_copies": 505679,
+            "positive": 414239,
+            "zero": 0,
+            "negative": 0,
+            "nan": 91440,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-09.bin.gz",
+            "vertex_copies": 506404,
+            "positive": 436199,
+            "zero": 0,
+            "negative": 0,
+            "nan": 70205,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-10.bin.gz",
+            "vertex_copies": 509536,
+            "positive": 471799,
+            "zero": 0,
+            "negative": 0,
+            "nan": 37737,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-11.bin.gz",
+            "vertex_copies": 511621,
+            "positive": 470707,
+            "zero": 0,
+            "negative": 0,
+            "nan": 40914,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-12.bin.gz",
+            "vertex_copies": 513482,
+            "positive": 486290,
+            "zero": 0,
+            "negative": 0,
+            "nan": 27192,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-13.bin.gz",
+            "vertex_copies": 507742,
+            "positive": 469373,
+            "zero": 0,
+            "negative": 0,
+            "nan": 38369,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-14.bin.gz",
+            "vertex_copies": 516014,
+            "positive": 480200,
+            "zero": 0,
+            "negative": 0,
+            "nan": 35814,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-15.bin.gz",
+            "vertex_copies": 519116,
+            "positive": 494124,
+            "zero": 0,
+            "negative": 0,
+            "nan": 24992,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-16.bin.gz",
+            "vertex_copies": 519888,
+            "positive": 488235,
+            "zero": 0,
+            "negative": 0,
+            "nan": 31653,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-17.bin.gz",
+            "vertex_copies": 523388,
+            "positive": 493747,
+            "zero": 0,
+            "negative": 0,
+            "nan": 29641,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-18.bin.gz",
+            "vertex_copies": 525206,
+            "positive": 503991,
+            "zero": 0,
+            "negative": 0,
+            "nan": 21215,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-19.bin.gz",
+            "vertex_copies": 528062,
+            "positive": 497801,
+            "zero": 0,
+            "negative": 0,
+            "nan": 30261,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-20.bin.gz",
+            "vertex_copies": 511335,
+            "positive": 491564,
+            "zero": 0,
+            "negative": 0,
+            "nan": 19771,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-21.bin.gz",
+            "vertex_copies": 534523,
+            "positive": 515294,
+            "zero": 0,
+            "negative": 0,
+            "nan": 19229,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-22.bin.gz",
+            "vertex_copies": 537669,
+            "positive": 520089,
+            "zero": 0,
+            "negative": 0,
+            "nan": 17580,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-23.bin.gz",
+            "vertex_copies": 539246,
+            "positive": 512633,
+            "zero": 0,
+            "negative": 0,
+            "nan": 26613,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-24.bin.gz",
+            "vertex_copies": 540906,
+            "positive": 512555,
+            "zero": 0,
+            "negative": 0,
+            "nan": 28351,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-25.bin.gz",
+            "vertex_copies": 540519,
+            "positive": 515913,
+            "zero": 0,
+            "negative": 0,
+            "nan": 24606,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-26.bin.gz",
+            "vertex_copies": 544974,
+            "positive": 526945,
+            "zero": 0,
+            "negative": 0,
+            "nan": 18029,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-27.bin.gz",
+            "vertex_copies": 546647,
+            "positive": 529335,
+            "zero": 0,
+            "negative": 0,
+            "nan": 17312,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-28.bin.gz",
+            "vertex_copies": 549449,
+            "positive": 527168,
+            "zero": 0,
+            "negative": 0,
+            "nan": 22281,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-29.bin.gz",
+            "vertex_copies": 553054,
+            "positive": 530860,
+            "zero": 0,
+            "negative": 0,
+            "nan": 22194,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-30.bin.gz",
+            "vertex_copies": 550303,
+            "positive": 532434,
+            "zero": 0,
+            "negative": 0,
+            "nan": 17869,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-31.bin.gz",
+            "vertex_copies": 525490,
+            "positive": 520977,
+            "zero": 0,
+            "negative": 0,
+            "nan": 4513,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-32.bin.gz",
+            "vertex_copies": 544789,
+            "positive": 539126,
+            "zero": 0,
+            "negative": 0,
+            "nan": 5663,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-33.bin.gz",
+            "vertex_copies": 555005,
+            "positive": 549441,
+            "zero": 0,
+            "negative": 0,
+            "nan": 5564,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-34.bin.gz",
+            "vertex_copies": 555695,
+            "positive": 549906,
+            "zero": 0,
+            "negative": 0,
+            "nan": 5789,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-35.bin.gz",
+            "vertex_copies": 553769,
+            "positive": 545945,
+            "zero": 0,
+            "negative": 0,
+            "nan": 7824,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-36.bin.gz",
+            "vertex_copies": 553051,
+            "positive": 544659,
+            "zero": 0,
+            "negative": 0,
+            "nan": 8392,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-37.bin.gz",
+            "vertex_copies": 553087,
+            "positive": 543752,
+            "zero": 0,
+            "negative": 0,
+            "nan": 9335,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-38.bin.gz",
+            "vertex_copies": 552924,
+            "positive": 541565,
+            "zero": 0,
+            "negative": 0,
+            "nan": 11359,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-39.bin.gz",
+            "vertex_copies": 550615,
+            "positive": 541949,
+            "zero": 0,
+            "negative": 0,
+            "nan": 8666,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-40.bin.gz",
+            "vertex_copies": 551983,
+            "positive": 545388,
+            "zero": 0,
+            "negative": 0,
+            "nan": 6595,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-41.bin.gz",
+            "vertex_copies": 553721,
+            "positive": 548473,
+            "zero": 0,
+            "negative": 0,
+            "nan": 5248,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-42.bin.gz",
+            "vertex_copies": 554098,
+            "positive": 549507,
+            "zero": 0,
+            "negative": 0,
+            "nan": 4591,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-43.bin.gz",
+            "vertex_copies": 552639,
+            "positive": 550106,
+            "zero": 0,
+            "negative": 0,
+            "nan": 2533,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-44.bin.gz",
+            "vertex_copies": 551599,
+            "positive": 550471,
+            "zero": 0,
+            "negative": 0,
+            "nan": 1128,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-45.bin.gz",
+            "vertex_copies": 550950,
+            "positive": 549573,
+            "zero": 0,
+            "negative": 0,
+            "nan": 1377,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-46.bin.gz",
+            "vertex_copies": 550781,
+            "positive": 548211,
+            "zero": 0,
+            "negative": 0,
+            "nan": 2570,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-47.bin.gz",
+            "vertex_copies": 542504,
+            "positive": 540750,
+            "zero": 0,
+            "negative": 0,
+            "nan": 1754,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-48.bin.gz",
+            "vertex_copies": 525937,
+            "positive": 524942,
+            "zero": 0,
+            "negative": 0,
+            "nan": 995,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-49.bin.gz",
+            "vertex_copies": 538863,
+            "positive": 537646,
+            "zero": 0,
+            "negative": 0,
+            "nan": 1217,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-50.bin.gz",
+            "vertex_copies": 548350,
+            "positive": 547198,
+            "zero": 0,
+            "negative": 0,
+            "nan": 1152,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-51.bin.gz",
+            "vertex_copies": 547862,
+            "positive": 547475,
+            "zero": 0,
+            "negative": 0,
+            "nan": 387,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-52.bin.gz",
+            "vertex_copies": 547017,
+            "positive": 546274,
+            "zero": 0,
+            "negative": 0,
+            "nan": 743,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-53.bin.gz",
+            "vertex_copies": 546350,
+            "positive": 545433,
+            "zero": 0,
+            "negative": 0,
+            "nan": 917,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-54.bin.gz",
+            "vertex_copies": 545039,
+            "positive": 543882,
+            "zero": 0,
+            "negative": 0,
+            "nan": 1157,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-55.bin.gz",
+            "vertex_copies": 544426,
+            "positive": 542965,
+            "zero": 0,
+            "negative": 0,
+            "nan": 1461,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-56.bin.gz",
+            "vertex_copies": 545404,
+            "positive": 543903,
+            "zero": 0,
+            "negative": 0,
+            "nan": 1501,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-57.bin.gz",
+            "vertex_copies": 542327,
+            "positive": 541820,
+            "zero": 0,
+            "negative": 0,
+            "nan": 507,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-58.bin.gz",
+            "vertex_copies": 540773,
+            "positive": 540603,
+            "zero": 0,
+            "negative": 0,
+            "nan": 170,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-59.bin.gz",
+            "vertex_copies": 540777,
+            "positive": 540677,
+            "zero": 0,
+            "negative": 0,
+            "nan": 100,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-60.bin.gz",
+            "vertex_copies": 539178,
+            "positive": 539047,
+            "zero": 0,
+            "negative": 0,
+            "nan": 131,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-61.bin.gz",
+            "vertex_copies": 537564,
+            "positive": 537108,
+            "zero": 0,
+            "negative": 0,
+            "nan": 456,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-62.bin.gz",
+            "vertex_copies": 535055,
+            "positive": 534439,
+            "zero": 0,
+            "negative": 0,
+            "nan": 616,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-63.bin.gz",
+            "vertex_copies": 531880,
+            "positive": 531800,
+            "zero": 0,
+            "negative": 0,
+            "nan": 80,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-64.bin.gz",
+            "vertex_copies": 528582,
+            "positive": 528582,
+            "zero": 0,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-65.bin.gz",
+            "vertex_copies": 522214,
+            "positive": 522121,
+            "zero": 0,
+            "negative": 0,
+            "nan": 93,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-66.bin.gz",
+            "vertex_copies": 513356,
+            "positive": 513350,
+            "zero": 0,
+            "negative": 0,
+            "nan": 6,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-67.bin.gz",
+            "vertex_copies": 511058,
+            "positive": 511058,
+            "zero": 0,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-68.bin.gz",
+            "vertex_copies": 513543,
+            "positive": 513543,
+            "zero": 0,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-69.bin.gz",
+            "vertex_copies": 507521,
+            "positive": 507521,
+            "zero": 0,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-70.bin.gz",
+            "vertex_copies": 506983,
+            "positive": 506983,
+            "zero": 0,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-71.bin.gz",
+            "vertex_copies": 504414,
+            "positive": 446834,
+            "zero": 57571,
+            "negative": 0,
+            "nan": 9,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-72.bin.gz",
+            "vertex_copies": 502835,
+            "positive": 464148,
+            "zero": 38687,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-73.bin.gz",
+            "vertex_copies": 501659,
+            "positive": 501043,
+            "zero": 0,
+            "negative": 0,
+            "nan": 616,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "50mm-field-74.bin.gz",
+            "vertex_copies": 147491,
+            "positive": 69232,
+            "zero": 78259,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          }
+        ],
+        "source_projection": "Nearest independently solved element centroid in the same recalibrated scanner frame; rejected farther than0.75 source mm. Surface projection is not an additional solve.",
+        "source_distance_cutoff_print_mm": 0.7262775480347028,
+        "interpretation": "Finite0Pa values and NaN unsupported mappings are different numerical categories. Both were colored gray by the archived v>0 shader and positive-only static plate colour test."
+      },
+      "total_wall_seconds": 41.20831847190857,
+      "passed": true,
+      "recomputed_solution": {
+        "file": "/workspace/scratch/798f43faaad4/r7-fem/50mm-recomputed.npz",
+        "bytes": 33312078,
+        "sha256": "53b2585856b345bc4fc7318c8e675d85a221bb7232c4b8f64079e37c1746e0b0",
+        "original_geometry_and_BC_arrays_bitwise_identical": {
+          "points_m": true,
+          "tets": true,
+          "boundary_faces": true,
+          "loaded_face_indices": true,
+          "fixed_node_indices": true
+        },
+        "new_extra_fields": [
+          "reaction_forces_N",
+          "full_nodal_residual_N",
+          "all_fixed_tet_indices"
+        ]
+      }
+    },
+    {
+      "schema": "r7-original-fixed-boundary-retest-v1",
+      "size_mm": 100,
+      "source_solution_file": "/workspace/scratch/798f43faaad4/r7-fem/100mm-solution.npz",
+      "source_solution_sha256": "a9e45992921f8a3ce6c90aa6898b92bfd8951a6101eeb23dfa630c8f73eea857",
+      "source_solver_file": "/workspace/sites/megalodon-field-r7/.sites-checkout/scripts/native74/solve_sizes.py",
+      "source_solver_sha256": "773f4dc6b3bb5d571d5dd1b289a0ac213d13b32aeefe66e3e3a4b88965175b38",
+      "geometry_and_boundaries_unchanged": true,
+      "no_native_pore_FEM_claim": true,
+      "geometry_scope": "The archived closed-solid mechanical proxy with local apical refinement. NativeCT void boundaries are not represented in this volume mesh.",
+      "nodes": 204789,
+      "tetrahedra": 1073103,
+      "constrained_nodes": 176,
+      "constrained_displacement_dofs": 528,
+      "loaded_boundary_faces": 4956,
+      "pressure_MPa": 1.0,
+      "lambda_MPa": 29000.0,
+      "mu_MPa": 28500.0,
+      "fixed_dofs": {
+        "old_max_abs_displacement_mm": 0.0,
+        "new_max_abs_displacement_mm": 0.0,
+        "all_old_exactly_zero": true,
+        "all_new_exactly_zero": true
+      },
+      "fresh_solver_metrics": {
+        "nodes": 204789,
+        "tetrahedra": 1073103,
+        "free_dofs": 613839,
+        "solver": "CG / smoothed-aggregation AMG with six rigid-motion candidates",
+        "cg_iterations": 46,
+        "relative_free_residual": 1.8967285091635674e-10,
+        "force_balance_relative_error": 7.278505727334642e-12,
+        "applied_force_N": [
+          -1706.2077341359034,
+          -411.2964019791458,
+          -50.19489267053941
+        ],
+        "reaction_force_N": [
+          1706.2077341486513,
+          411.29640197903683,
+          50.19489267143176
+        ],
+        "loaded_area_mm2": 1812.7902846764855,
+        "pressure_MPa": 1.0,
+        "max_displacement_mm": 1.18078670091182,
+        "strain_energy_N_mm": 500.64845360132415,
+        "external_work_N_mm": 1001.2969071943699,
+        "energy_identity_relative_error": 8.267725676301964e-12,
+        "affine_patch_relative_residual": 3.423599255392546e-14,
+        "rigid_motion_relative_residual": 1.9942183665356527e-19,
+        "proxy_volume_mm3": 41931.0441604918,
+        "proxy_surface_area_mm2": 10241.616583992796,
+        "fixed_nodes": 176,
+        "loaded_faces": 4956,
+        "max_element_edge_mm": 7.85373494082123,
+        "minimum_element_volume_mm3": 1.4488783111116365e-05,
+        "max_vm_MPa": 875.0372959572936,
+        "solve_wall_seconds": 44.33571481704712
+      },
+      "independent_equilibrium_check": {
+        "method": "Reconstruct element stress and nodal internal force directly from the newly solved displacement, then independently integrate consistent pressure tractions and constrained-node reactions. No global stiffness matrix is reused in this check.",
+        "relative_free_residual": 1.807179869274803e-10,
+        "applied_force_N": [
+          -1706.2077341359034,
+          -411.2964019791458,
+          -50.19489267053941
+        ],
+        "reaction_force_N": [
+          1706.207734148651,
+          411.2964019790377,
+          50.19489267143095
+        ],
+        "force_balance_residual_N": [
+          1.2747705113724805e-08,
+          -1.0811618267325684e-10,
+          8.915392868402705e-10
+        ],
+        "force_balance_relative_error": 7.278340225208361e-12,
+        "moment_reference_point_mm": [
+          30.83356584280804,
+          46.79650442877944,
+          18.879812458353996
+        ],
+        "applied_moment_N_mm": [
+          11061.037848549515,
+          -43992.42725126895,
+          -12341.312865112037
+        ],
+        "reaction_moment_N_mm": [
+          -11061.037848602899,
+          43992.42725132596,
+          12341.312865115779
+        ],
+        "moment_balance_residual_N_mm": [
+          -5.3383701015263796e-08,
+          5.700712790712714e-08,
+          3.741661203093827e-09
+        ],
+        "moment_balance_relative_error": 3.619379406477371e-13,
+        "moment_normalization_N_mm": 216030.73471737967,
+        "strain_energy_N_mm": 500.6484536026538,
+        "external_work_N_mm": 1001.2969071943699,
+        "energy_identity_relative_error": 1.0923530165499405e-11,
+        "reintegrated_volume_mm3": 41931.04416049184,
+        "net_internal_force_N": [
+          8.31745609886081e-12,
+          -3.196123992229476e-12,
+          -2.5802697509820418e-11
+        ],
+        "net_internal_moment_N_mm": [
+          -5.451236717530917e-11,
+          1.4660315332491747e-11,
+          1.299902763934527e-10
+        ]
+      },
+      "old_new_solution_difference": {
+        "displacement_relative_L2": 7.546740583227422e-12,
+        "displacement_max_vector_difference_mm": 9.060706184446293e-12,
+        "von_mises_relative_L2": 1.5736154892932135e-11,
+        "von_mises_max_absolute_difference_MPa": 5.954120751994196e-09,
+        "independent_stress_recovery_max_absolute_difference_MPa": 0.0,
+        "independent_volume_max_absolute_difference_mm3": 0.0
+      },
+      "zero_stress_audit": {
+        "old_zero_elements": 367,
+        "new_zero_elements": 367,
+        "tetrahedra_with_all4_nodes_fixed": 367,
+        "all_zero_elements_are_all4_fixed": true,
+        "old_zero_elements_identical_new": true,
+        "zero_elements_outside_fully_fixed_volumes": 0,
+        "minimum_strictly_positive_stress_MPa": 0.0002807608507171764,
+        "interpretation": "Every node of each367fully constrained tetrahedra has u=0. The P1 displacement is therefore identically0throughout that cell; its small-strain stress is exactly0. This is a consequence of the fixed-volume support idealization, not an unsupported mapping or a missing solver value."
+      },
+      "archived_projected_field_audit": {
+        "source_meta_file": "/workspace/sites/megalodon-field-r7/.sites-checkout/dist/assets/native74-r5/100mm-field.json",
+        "original_unique_vertex_counts": {
+          "zero_vertices": 173752,
+          "positive_vertices": 36796798,
+          "unsupported_vertices": 981149,
+          "mapped_vertices": 36970550,
+          "unmapped_vertices": 981149
+        },
+        "all_chunks_sha256_verified": true,
+        "chunk_counts_include_boundary_seam_copies": true,
+        "chunk_totals": {
+          "chunk_vertex_copies": 39428327,
+          "finite_positive": 38248619,
+          "finite_exact_zero": 174517,
+          "finite_negative": 0,
+          "nan_unsupported": 1005191,
+          "infinite": 0
+        },
+        "per_chunk": [
+          {
+            "file": "100mm-field-00.bin.gz",
+            "vertex_copies": 500560,
+            "positive": 500560,
+            "zero": 0,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-01.bin.gz",
+            "vertex_copies": 502350,
+            "positive": 502350,
+            "zero": 0,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-02.bin.gz",
+            "vertex_copies": 502593,
+            "positive": 502593,
+            "zero": 0,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-03.bin.gz",
+            "vertex_copies": 502781,
+            "positive": 502781,
+            "zero": 0,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-04.bin.gz",
+            "vertex_copies": 503328,
+            "positive": 503250,
+            "zero": 0,
+            "negative": 0,
+            "nan": 78,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-05.bin.gz",
+            "vertex_copies": 503397,
+            "positive": 481193,
+            "zero": 0,
+            "negative": 0,
+            "nan": 22204,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-06.bin.gz",
+            "vertex_copies": 504520,
+            "positive": 428371,
+            "zero": 0,
+            "negative": 0,
+            "nan": 76149,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-07.bin.gz",
+            "vertex_copies": 504877,
+            "positive": 410176,
+            "zero": 0,
+            "negative": 0,
+            "nan": 94701,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-08.bin.gz",
+            "vertex_copies": 505679,
+            "positive": 420428,
+            "zero": 0,
+            "negative": 0,
+            "nan": 85251,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-09.bin.gz",
+            "vertex_copies": 506404,
+            "positive": 436434,
+            "zero": 0,
+            "negative": 0,
+            "nan": 69970,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-10.bin.gz",
+            "vertex_copies": 509536,
+            "positive": 471799,
+            "zero": 0,
+            "negative": 0,
+            "nan": 37737,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-11.bin.gz",
+            "vertex_copies": 511621,
+            "positive": 470707,
+            "zero": 0,
+            "negative": 0,
+            "nan": 40914,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-12.bin.gz",
+            "vertex_copies": 513482,
+            "positive": 486290,
+            "zero": 0,
+            "negative": 0,
+            "nan": 27192,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-13.bin.gz",
+            "vertex_copies": 507742,
+            "positive": 469373,
+            "zero": 0,
+            "negative": 0,
+            "nan": 38369,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-14.bin.gz",
+            "vertex_copies": 516014,
+            "positive": 480200,
+            "zero": 0,
+            "negative": 0,
+            "nan": 35814,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-15.bin.gz",
+            "vertex_copies": 519116,
+            "positive": 494124,
+            "zero": 0,
+            "negative": 0,
+            "nan": 24992,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-16.bin.gz",
+            "vertex_copies": 519888,
+            "positive": 488235,
+            "zero": 0,
+            "negative": 0,
+            "nan": 31653,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-17.bin.gz",
+            "vertex_copies": 523388,
+            "positive": 493747,
+            "zero": 0,
+            "negative": 0,
+            "nan": 29641,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-18.bin.gz",
+            "vertex_copies": 525206,
+            "positive": 503991,
+            "zero": 0,
+            "negative": 0,
+            "nan": 21215,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-19.bin.gz",
+            "vertex_copies": 528062,
+            "positive": 497801,
+            "zero": 0,
+            "negative": 0,
+            "nan": 30261,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-20.bin.gz",
+            "vertex_copies": 511335,
+            "positive": 491564,
+            "zero": 0,
+            "negative": 0,
+            "nan": 19771,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-21.bin.gz",
+            "vertex_copies": 534523,
+            "positive": 515294,
+            "zero": 0,
+            "negative": 0,
+            "nan": 19229,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-22.bin.gz",
+            "vertex_copies": 537669,
+            "positive": 520089,
+            "zero": 0,
+            "negative": 0,
+            "nan": 17580,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-23.bin.gz",
+            "vertex_copies": 539246,
+            "positive": 512633,
+            "zero": 0,
+            "negative": 0,
+            "nan": 26613,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-24.bin.gz",
+            "vertex_copies": 540906,
+            "positive": 512555,
+            "zero": 0,
+            "negative": 0,
+            "nan": 28351,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-25.bin.gz",
+            "vertex_copies": 540519,
+            "positive": 515913,
+            "zero": 0,
+            "negative": 0,
+            "nan": 24606,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-26.bin.gz",
+            "vertex_copies": 544974,
+            "positive": 526945,
+            "zero": 0,
+            "negative": 0,
+            "nan": 18029,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-27.bin.gz",
+            "vertex_copies": 546647,
+            "positive": 529335,
+            "zero": 0,
+            "negative": 0,
+            "nan": 17312,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-28.bin.gz",
+            "vertex_copies": 549449,
+            "positive": 527168,
+            "zero": 0,
+            "negative": 0,
+            "nan": 22281,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-29.bin.gz",
+            "vertex_copies": 553054,
+            "positive": 530860,
+            "zero": 0,
+            "negative": 0,
+            "nan": 22194,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-30.bin.gz",
+            "vertex_copies": 550303,
+            "positive": 532434,
+            "zero": 0,
+            "negative": 0,
+            "nan": 17869,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-31.bin.gz",
+            "vertex_copies": 525490,
+            "positive": 520977,
+            "zero": 0,
+            "negative": 0,
+            "nan": 4513,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-32.bin.gz",
+            "vertex_copies": 544789,
+            "positive": 539126,
+            "zero": 0,
+            "negative": 0,
+            "nan": 5663,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-33.bin.gz",
+            "vertex_copies": 555005,
+            "positive": 549441,
+            "zero": 0,
+            "negative": 0,
+            "nan": 5564,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-34.bin.gz",
+            "vertex_copies": 555695,
+            "positive": 549906,
+            "zero": 0,
+            "negative": 0,
+            "nan": 5789,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-35.bin.gz",
+            "vertex_copies": 553769,
+            "positive": 545945,
+            "zero": 0,
+            "negative": 0,
+            "nan": 7824,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-36.bin.gz",
+            "vertex_copies": 553051,
+            "positive": 544659,
+            "zero": 0,
+            "negative": 0,
+            "nan": 8392,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-37.bin.gz",
+            "vertex_copies": 553087,
+            "positive": 543752,
+            "zero": 0,
+            "negative": 0,
+            "nan": 9335,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-38.bin.gz",
+            "vertex_copies": 552924,
+            "positive": 541565,
+            "zero": 0,
+            "negative": 0,
+            "nan": 11359,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-39.bin.gz",
+            "vertex_copies": 550615,
+            "positive": 541949,
+            "zero": 0,
+            "negative": 0,
+            "nan": 8666,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-40.bin.gz",
+            "vertex_copies": 551983,
+            "positive": 545388,
+            "zero": 0,
+            "negative": 0,
+            "nan": 6595,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-41.bin.gz",
+            "vertex_copies": 553721,
+            "positive": 548473,
+            "zero": 0,
+            "negative": 0,
+            "nan": 5248,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-42.bin.gz",
+            "vertex_copies": 554098,
+            "positive": 549507,
+            "zero": 0,
+            "negative": 0,
+            "nan": 4591,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-43.bin.gz",
+            "vertex_copies": 552639,
+            "positive": 550106,
+            "zero": 0,
+            "negative": 0,
+            "nan": 2533,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-44.bin.gz",
+            "vertex_copies": 551599,
+            "positive": 550471,
+            "zero": 0,
+            "negative": 0,
+            "nan": 1128,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-45.bin.gz",
+            "vertex_copies": 550950,
+            "positive": 549573,
+            "zero": 0,
+            "negative": 0,
+            "nan": 1377,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-46.bin.gz",
+            "vertex_copies": 550781,
+            "positive": 548211,
+            "zero": 0,
+            "negative": 0,
+            "nan": 2570,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-47.bin.gz",
+            "vertex_copies": 542504,
+            "positive": 540750,
+            "zero": 0,
+            "negative": 0,
+            "nan": 1754,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-48.bin.gz",
+            "vertex_copies": 525937,
+            "positive": 524942,
+            "zero": 0,
+            "negative": 0,
+            "nan": 995,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-49.bin.gz",
+            "vertex_copies": 538863,
+            "positive": 537646,
+            "zero": 0,
+            "negative": 0,
+            "nan": 1217,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-50.bin.gz",
+            "vertex_copies": 548350,
+            "positive": 547198,
+            "zero": 0,
+            "negative": 0,
+            "nan": 1152,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-51.bin.gz",
+            "vertex_copies": 547862,
+            "positive": 547475,
+            "zero": 0,
+            "negative": 0,
+            "nan": 387,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-52.bin.gz",
+            "vertex_copies": 547017,
+            "positive": 546274,
+            "zero": 0,
+            "negative": 0,
+            "nan": 743,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-53.bin.gz",
+            "vertex_copies": 546350,
+            "positive": 545433,
+            "zero": 0,
+            "negative": 0,
+            "nan": 917,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-54.bin.gz",
+            "vertex_copies": 545039,
+            "positive": 543882,
+            "zero": 0,
+            "negative": 0,
+            "nan": 1157,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-55.bin.gz",
+            "vertex_copies": 544426,
+            "positive": 542965,
+            "zero": 0,
+            "negative": 0,
+            "nan": 1461,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-56.bin.gz",
+            "vertex_copies": 545404,
+            "positive": 543903,
+            "zero": 0,
+            "negative": 0,
+            "nan": 1501,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-57.bin.gz",
+            "vertex_copies": 542327,
+            "positive": 541820,
+            "zero": 0,
+            "negative": 0,
+            "nan": 507,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-58.bin.gz",
+            "vertex_copies": 540773,
+            "positive": 540603,
+            "zero": 0,
+            "negative": 0,
+            "nan": 170,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-59.bin.gz",
+            "vertex_copies": 540777,
+            "positive": 540677,
+            "zero": 0,
+            "negative": 0,
+            "nan": 100,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-60.bin.gz",
+            "vertex_copies": 539178,
+            "positive": 539047,
+            "zero": 0,
+            "negative": 0,
+            "nan": 131,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-61.bin.gz",
+            "vertex_copies": 537564,
+            "positive": 537108,
+            "zero": 0,
+            "negative": 0,
+            "nan": 456,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-62.bin.gz",
+            "vertex_copies": 535055,
+            "positive": 534439,
+            "zero": 0,
+            "negative": 0,
+            "nan": 616,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-63.bin.gz",
+            "vertex_copies": 531880,
+            "positive": 531800,
+            "zero": 0,
+            "negative": 0,
+            "nan": 80,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-64.bin.gz",
+            "vertex_copies": 528582,
+            "positive": 528582,
+            "zero": 0,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-65.bin.gz",
+            "vertex_copies": 522214,
+            "positive": 522121,
+            "zero": 0,
+            "negative": 0,
+            "nan": 93,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-66.bin.gz",
+            "vertex_copies": 513356,
+            "positive": 513350,
+            "zero": 0,
+            "negative": 0,
+            "nan": 6,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-67.bin.gz",
+            "vertex_copies": 511058,
+            "positive": 511058,
+            "zero": 0,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-68.bin.gz",
+            "vertex_copies": 513543,
+            "positive": 513543,
+            "zero": 0,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-69.bin.gz",
+            "vertex_copies": 507521,
+            "positive": 507521,
+            "zero": 0,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-70.bin.gz",
+            "vertex_copies": 506983,
+            "positive": 506983,
+            "zero": 0,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-71.bin.gz",
+            "vertex_copies": 504414,
+            "positive": 446834,
+            "zero": 57571,
+            "negative": 0,
+            "nan": 9,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-72.bin.gz",
+            "vertex_copies": 502835,
+            "positive": 464148,
+            "zero": 38687,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-73.bin.gz",
+            "vertex_copies": 501659,
+            "positive": 501043,
+            "zero": 0,
+            "negative": 0,
+            "nan": 616,
+            "infinite": 0,
+            "sha256_verified": true
+          },
+          {
+            "file": "100mm-field-74.bin.gz",
+            "vertex_copies": 147491,
+            "positive": 69232,
+            "zero": 78259,
+            "negative": 0,
+            "nan": 0,
+            "infinite": 0,
+            "sha256_verified": true
+          }
+        ],
+        "source_projection": "Nearest independently solved element centroid in the same recalibrated scanner frame; rejected farther than0.75 source mm. Surface projection is not an additional solve.",
+        "source_distance_cutoff_print_mm": 1.4525550960694056,
+        "interpretation": "Finite0Pa values and NaN unsupported mappings are different numerical categories. Both were colored gray by the archived v>0 shader and positive-only static plate colour test."
+      },
+      "total_wall_seconds": 47.19855713844299,
+      "passed": true,
+      "recomputed_solution": {
+        "file": "/workspace/scratch/798f43faaad4/r7-fem/100mm-recomputed.npz",
+        "bytes": 37741505,
+        "sha256": "d19be15f6a5578a2285b156c511af423d7e6f6a2bf33ed447d578a5969e12d91",
+        "original_geometry_and_BC_arrays_bitwise_identical": {
+          "points_m": true,
+          "tets": true,
+          "boundary_faces": true,
+          "loaded_face_indices": true,
+          "fixed_node_indices": true
+        },
+        "new_extra_fields": [
+          "reaction_forces_N",
+          "full_nodal_residual_N",
+          "all_fixed_tet_indices"
+        ]
+      }
+    }
+  ],
+  "all_cases_complete": true,
+  "no_boundaries_moved_or_deleted": true,
+  "no_source_site_files_modified": true
+}

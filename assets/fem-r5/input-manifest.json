@@ -1,0 +1,27 @@
+{
+  "repository": "https://github.com/Eliguli712/Antiterrastrae",
+  "revision": "7818f2cfc632351abdf6492fa790db303d638b72",
+  "base_url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/7818f2cfc632351abdf6492fa790db303d638b72/fea_research/high_res_meg_teeth/data/",
+  "inputs": [
+    {
+      "name": "solution.npz",
+      "sha256": "f816917260e5fd875134e266590120cbab9d2258546306f31b021f02c94ea27a",
+      "bytes": 3156564
+    },
+    {
+      "name": "qf_solution.npz",
+      "sha256": "78eec317bf22fc3c89cd6f79dfbf786e7a718958eea0982daf762e05f9161da6",
+      "bytes": 33420372
+    },
+    {
+      "name": "qf_region_masks.npz",
+      "sha256": "217b9c961c586e7dd75cc0f232e916b3ae1b6e1d4016feaef436c53d4456d001",
+      "bytes": 871930
+    }
+  ],
+  "native_geometry": {
+    "url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/Megalodon_FullCT_Native_Internal_74M_18um.3mf",
+    "sha256": "69928fc1d776a0cb2cd3da389802e0b08d226395005bbf4a2094180e90622b73",
+    "native_height_mm": 51.63315333301228
+  }
+}

@@ -1,0 +1,3010 @@
+{
+  "schema": "native74-complete-export-properties-v1",
+  "species": "Otodus megalodon",
+  "nominal_height_mm": 100,
+  "units": "mm",
+  "vertices": 37951699,
+  "triangles": 74293846,
+  "face_reduction": false,
+  "all_source_triangle_indices_and_order_preserved": true,
+  "source_geometry_url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/Megalodon_FullCT_Native_Internal_74M_18um.3mf",
+  "source_geometry_sha256": "69928fc1d776a0cb2cd3da389802e0b08d226395005bbf4a2094180e90622b73",
+  "source_vertex_xml_sha256": "eb8373f2ddf70e7ff98bc3a190f4db92e15b19e32313a529943d7c557886d4d5",
+  "vertex_coordinates": "Exact original Float64 decimal coordinates; OBJ uses12significant decimal digits; binary STL usesFloat32 as required by its format;3MF preserves original vertex XML literally.",
+  "print_transform": {
+    "R": [
+      [
+        0.3916250209003652,
+        -1.8896005868512973,
+        -0.1643222107322461
+      ],
+      [
+        -1.8936263969740943,
+        -0.37991608089014606,
+        -0.1442399526063988
+      ],
+      [
+        0.10849532456107326,
+        0.18983075993161974,
+        -1.9243584309831898
+      ]
+    ],
+    "T": [
+      35.49153583794037,
+      35.69259136159072,
+      95.86285688694991
+    ],
+    "determinant": 7.264639251396815,
+    "application": "column-vector world_mm=R*original_scanner_mm+T; positive determinant preserves winding"
+  },
+  "actual_bounds_mm": [
+    [
+      -33.96354727249855,
+      -10.172634727319625,
+      2.1725838905695127e-09
+    ],
+    [
+      33.963547370883255,
+      10.172634121636094,
+      100.00000016195953
+    ]
+  ],
+  "actual_dimensions_mm": [
+    67.9270946433818,
+    20.34526884895572,
+    100.00000015978695
+  ],
+  "height_tolerance_from_nominal_mm": 1.5978694989371434e-07,
+  "native_signed_material_volume_mm3": 41044.76713257431,
+  "native_signed_volume_mm3": 41044.76713257431,
+  "native_surface_area_mm2": 30751.62779413605,
+  "solid_pla_mass_g": 50.89551124439214,
+  "native_material_centroid_mm": [
+    -0.9750689509543405,
+    -1.9869743948193395,
+    46.13779062864431
+  ],
+  "zero_area_triangles": 0,
+  "integration": "Direct Float64 integration of every transformed native triangle, including inward-oriented void boundaries; independently performed for each size.",
+  "mass_example": {
+    "density_g_cm3": 1.24,
+    "material": "Explicit nominal PLA density assumption; not a measured material property",
+    "fully_solid_native_material_mass_g": 50.89551124439214,
+    "infill_or_supports_included": false
+  },
+  "stress": {
+    "source_independent_solution": "100mm-solution.npz",
+    "source_independent_solution_sha256": "a9e45992921f8a3ce6c90aa6898b92bfd8951a6101eeb23dfa630c8f73eea857",
+    "native_vertex_field_sha256": "ac80a95c69f877b5d6b573ad1d19be27e35b1b33f1ffb27f92bc994709017081",
+    "dtype": "Float32 Pa; NaN means unsupported projection",
+    "stress_rescaling_used": false,
+    "mapped_vertices": 36796798,
+    "unmapped_vertices": 1154901,
+    "finite_min_Pa": 280.7605895996094,
+    "finite_max_Pa": 875037312.0,
+    "shared_color_min_Pa": 253167.0947190341,
+    "shared_color_max_Pa": 250522132.64670932,
+    "color_transform": "logarithmic; values outside display range clipped for colour only",
+    "palette": "Matplotlib Turbo256; index256 is unsupported gray",
+    "color_palette_rgb": [
+      [
+        48,
+        18,
+        59
+      ],
+      [
+        50,
+        21,
+        67
+      ],
+      [
+        51,
+        24,
+        74
+      ],
+      [
+        52,
+        27,
+        81
+      ],
+      [
+        53,
+        30,
+        88
+      ],
+      [
+        54,
+        33,
+        95
+      ],
+      [
+        55,
+        36,
+        102
+      ],
+      [
+        56,
+        39,
+        109
+      ],
+      [
+        57,
+        42,
+        115
+      ],
+      [
+        58,
+        45,
+        121
+      ],
+      [
+        59,
+        47,
+        128
+      ],
+      [
+        60,
+        50,
+        134
+      ],
+      [
+        61,
+        53,
+        139
+      ],
+      [
+        62,
+        56,
+        145
+      ],
+      [
+        63,
+        59,
+        151
+      ],
+      [
+        63,
+        62,
+        156
+      ],
+      [
+        64,
+        64,
+        162
+      ],
+      [
+        65,
+        67,
+        167
+      ],
+      [
+        65,
+        70,
+        172
+      ],
+      [
+        66,
+        73,
+        177
+      ],
+      [
+        66,
+        75,
+        181
+      ],
+      [
+        67,
+        78,
+        186
+      ],
+      [
+        68,
+        81,
+        191
+      ],
+      [
+        68,
+        84,
+        195
+      ],
+      [
+        68,
+        86,
+        199
+      ],
+      [
+        69,
+        89,
+        203
+      ],
+      [
+        69,
+        92,
+        207
+      ],
+      [
+        69,
+        94,
+        211
+      ],
+      [
+        70,
+        97,
+        214
+      ],
+      [
+        70,
+        100,
+        218
+      ],
+      [
+        70,
+        102,
+        221
+      ],
+      [
+        70,
+        105,
+        224
+      ],
+      [
+        70,
+        107,
+        227
+      ],
+      [
+        71,
+        110,
+        230
+      ],
+      [
+        71,
+        113,
+        233
+      ],
+      [
+        71,
+        115,
+        235
+      ],
+      [
+        71,
+        118,
+        238
+      ],
+      [
+        71,
+        120,
+        240
+      ],
+      [
+        71,
+        123,
+        242
+      ],
+      [
+        70,
+        125,
+        244
+      ],
+      [
+        70,
+        128,
+        246
+      ],
+      [
+        70,
+        130,
+        248
+      ],
+      [
+        70,
+        133,
+        250
+      ],
+      [
+        70,
+        135,
+        251
+      ],
+      [
+        69,
+        138,
+        252
+      ],
+      [
+        69,
+        140,
+        253
+      ],
+      [
+        68,
+        143,
+        254
+      ],
+      [
+        67,
+        145,
+        254
+      ],
+      [
+        66,
+        148,
+        255
+      ],
+      [
+        65,
+        150,
+        255
+      ],
+      [
+        64,
+        153,
+        255
+      ],
+      [
+        62,
+        155,
+        254
+      ],
+      [
+        61,
+        158,
+        254
+      ],
+      [
+        59,
+        160,
+        253
+      ],
+      [
+        58,
+        163,
+        252
+      ],
+      [
+        56,
+        165,
+        251
+      ],
+      [
+        55,
+        168,
+        250
+      ],
+      [
+        53,
+        171,
+        248
+      ],
+      [
+        51,
+        173,
+        247
+      ],
+      [
+        49,
+        175,
+        245
+      ],
+      [
+        47,
+        178,
+        244
+      ],
+      [
+        46,
+        180,
+        242
+      ],
+      [
+        44,
+        183,
+        240
+      ],
+      [
+        42,
+        185,
+        238
+      ],
+      [
+        40,
+        188,
+        235
+      ],
+      [
+        39,
+        190,
+        233
+      ],
+      [
+        37,
+        192,
+        231
+      ],
+      [
+        35,
+        195,
+        228
+      ],
+      [
+        34,
+        197,
+        226
+      ],
+      [
+        32,
+        199,
+        223
+      ],
+      [
+        31,
+        201,
+        221
+      ],
+      [
+        30,
+        203,
+        218
+      ],
+      [
+        28,
+        205,
+        216
+      ],
+      [
+        27,
+        208,
+        213
+      ],
+      [
+        26,
+        210,
+        210
+      ],
+      [
+        26,
+        212,
+        208
+      ],
+      [
+        25,
+        213,
+        205
+      ],
+      [
+        24,
+        215,
+        202
+      ],
+      [
+        24,
+        217,
+        200
+      ],
+      [
+        24,
+        219,
+        197
+      ],
+      [
+        24,
+        221,
+        194
+      ],
+      [
+        24,
+        222,
+        192
+      ],
+      [
+        24,
+        224,
+        189
+      ],
+      [
+        25,
+        226,
+        187
+      ],
+      [
+        25,
+        227,
+        185
+      ],
+      [
+        26,
+        228,
+        182
+      ],
+      [
+        28,
+        230,
+        180
+      ],
+      [
+        29,
+        231,
+        178
+      ],
+      [
+        31,
+        233,
+        175
+      ],
+      [
+        32,
+        234,
+        172
+      ],
+      [
+        34,
+        235,
+        170
+      ],
+      [
+        37,
+        236,
+        167
+      ],
+      [
+        39,
+        238,
+        164
+      ],
+      [
+        42,
+        239,
+        161
+      ],
+      [
+        44,
+        240,
+        158
+      ],
+      [
+        47,
+        241,
+        155
+      ],
+      [
+        50,
+        242,
+        152
+      ],
+      [
+        53,
+        243,
+        148
+      ],
+      [
+        56,
+        244,
+        145
+      ],
+      [
+        60,
+        245,
+        142
+      ],
+      [
+        63,
+        246,
+        138
+      ],
+      [
+        67,
+        247,
+        135
+      ],
+      [
+        70,
+        248,
+        132
+      ],
+      [
+        74,
+        248,
+        128
+      ],
+      [
+        78,
+        249,
+        125
+      ],
+      [
+        82,
+        250,
+        122
+      ],
+      [
+        85,
+        250,
+        118
+      ],
+      [
+        89,
+        251,
+        115
+      ],
+      [
+        93,
+        252,
+        111
+      ],
+      [
+        97,
+        252,
+        108
+      ],
+      [
+        101,
+        253,
+        105
+      ],
+      [
+        105,
+        253,
+        102
+      ],
+      [
+        109,
+        254,
+        98
+      ],
+      [
+        113,
+        254,
+        95
+      ],
+      [
+        117,
+        254,
+        92
+      ],
+      [
+        121,
+        254,
+        89
+      ],
+      [
+        125,
+        255,
+        86
+      ],
+      [
+        128,
+        255,
+        83
+      ],
+      [
+        132,
+        255,
+        81
+      ],
+      [
+        136,
+        255,
+        78
+      ],
+      [
+        139,
+        255,
+        75
+      ],
+      [
+        143,
+        255,
+        73
+      ],
+      [
+        146,
+        255,
+        71
+      ],
+      [
+        150,
+        254,
+        68
+      ],
+      [
+        153,
+        254,
+        66
+      ],
+      [
+        156,
+        254,
+        64
+      ],
+      [
+        159,
+        253,
+        63
+      ],
+      [
+        161,
+        253,
+        61
+      ],
+      [
+        164,
+        252,
+        60
+      ],
+      [
+        167,
+        252,
+        58
+      ],
+      [
+        169,
+        251,
+        57
+      ],
+      [
+        172,
+        251,
+        56
+      ],
+      [
+        175,
+        250,
+        55
+      ],
+      [
+        177,
+        249,
+        54
+      ],
+      [
+        180,
+        248,
+        54
+      ],
+      [
+        183,
+        247,
+        53
+      ],
+      [
+        185,
+        246,
+        53
+      ],
+      [
+        188,
+        245,
+        52
+      ],
+      [
+        190,
+        244,
+        52
+      ],
+      [
+        193,
+        243,
+        52
+      ],
+      [
+        195,
+        241,
+        52
+      ],
+      [
+        198,
+        240,
+        52
+      ],
+      [
+        200,
+        239,
+        52
+      ],
+      [
+        203,
+        237,
+        52
+      ],
+      [
+        205,
+        236,
+        52
+      ],
+      [
+        208,
+        234,
+        52
+      ],
+      [
+        210,
+        233,
+        53
+      ],
+      [
+        212,
+        231,
+        53
+      ],
+      [
+        215,
+        229,
+        53
+      ],
+      [
+        217,
+        228,
+        54
+      ],
+      [
+        219,
+        226,
+        54
+      ],
+      [
+        221,
+        224,
+        55
+      ],
+      [
+        223,
+        223,
+        55
+      ],
+      [
+        225,
+        221,
+        55
+      ],
+      [
+        227,
+        219,
+        56
+      ],
+      [
+        229,
+        217,
+        56
+      ],
+      [
+        231,
+        215,
+        57
+      ],
+      [
+        233,
+        213,
+        57
+      ],
+      [
+        235,
+        211,
+        57
+      ],
+      [
+        236,
+        209,
+        58
+      ],
+      [
+        238,
+        207,
+        58
+      ],
+      [
+        239,
+        205,
+        58
+      ],
+      [
+        241,
+        203,
+        58
+      ],
+      [
+        242,
+        201,
+        58
+      ],
+      [
+        244,
+        199,
+        58
+      ],
+      [
+        245,
+        197,
+        58
+      ],
+      [
+        246,
+        195,
+        58
+      ],
+      [
+        247,
+        193,
+        58
+      ],
+      [
+        248,
+        190,
+        57
+      ],
+      [
+        249,
+        188,
+        57
+      ],
+      [
+        250,
+        186,
+        57
+      ],
+      [
+        251,
+        184,
+        56
+      ],
+      [
+        251,
+        182,
+        55
+      ],
+      [
+        252,
+        179,
+        54
+      ],
+      [
+        252,
+        177,
+        54
+      ],
+      [
+        253,
+        174,
+        53
+      ],
+      [
+        253,
+        172,
+        52
+      ],
+      [
+        254,
+        169,
+        51
+      ],
+      [
+        254,
+        167,
+        50
+      ],
+      [
+        254,
+        164,
+        49
+      ],
+      [
+        254,
+        161,
+        48
+      ],
+      [
+        254,
+        158,
+        47
+      ],
+      [
+        254,
+        155,
+        45
+      ],
+      [
+        254,
+        153,
+        44
+      ],
+      [
+        254,
+        150,
+        43
+      ],
+      [
+        254,
+        147,
+        42
+      ],
+      [
+        254,
+        144,
+        41
+      ],
+      [
+        253,
+        141,
+        39
+      ],
+      [
+        253,
+        138,
+        38
+      ],
+      [
+        252,
+        135,
+        37
+      ],
+      [
+        252,
+        132,
+        35
+      ],
+      [
+        251,
+        129,
+        34
+      ],
+      [
+        251,
+        126,
+        33
+      ],
+      [
+        250,
+        123,
+        31
+      ],
+      [
+        249,
+        120,
+        30
+      ],
+      [
+        249,
+        117,
+        29
+      ],
+      [
+        248,
+        114,
+        28
+      ],
+      [
+        247,
+        111,
+        26
+      ],
+      [
+        246,
+        108,
+        25
+      ],
+      [
+        245,
+        105,
+        24
+      ],
+      [
+        244,
+        102,
+        23
+      ],
+      [
+        243,
+        99,
+        21
+      ],
+      [
+        242,
+        96,
+        20
+      ],
+      [
+        241,
+        93,
+        19
+      ],
+      [
+        240,
+        91,
+        18
+      ],
+      [
+        239,
+        88,
+        17
+      ],
+      [
+        237,
+        85,
+        16
+      ],
+      [
+        236,
+        83,
+        15
+      ],
+      [
+        235,
+        80,
+        14
+      ],
+      [
+        234,
+        78,
+        13
+      ],
+      [
+        232,
+        75,
+        12
+      ],
+      [
+        231,
+        73,
+        12
+      ],
+      [
+        229,
+        71,
+        11
+      ],
+      [
+        228,
+        69,
+        10
+      ],
+      [
+        226,
+        67,
+        10
+      ],
+      [
+        225,
+        65,
+        9
+      ],
+      [
+        223,
+        63,
+        8
+      ],
+      [
+        221,
+        61,
+        8
+      ],
+      [
+        220,
+        59,
+        7
+      ],
+      [
+        218,
+        57,
+        7
+      ],
+      [
+        216,
+        55,
+        6
+      ],
+      [
+        214,
+        53,
+        6
+      ],
+      [
+        212,
+        51,
+        5
+      ],
+      [
+        210,
+        49,
+        5
+      ],
+      [
+        208,
+        47,
+        5
+      ],
+      [
+        206,
+        45,
+        4
+      ],
+      [
+        204,
+        43,
+        4
+      ],
+      [
+        202,
+        42,
+        4
+      ],
+      [
+        200,
+        40,
+        3
+      ],
+      [
+        197,
+        38,
+        3
+      ],
+      [
+        195,
+        37,
+        3
+      ],
+      [
+        193,
+        35,
+        2
+      ],
+      [
+        190,
+        33,
+        2
+      ],
+      [
+        188,
+        32,
+        2
+      ],
+      [
+        185,
+        30,
+        2
+      ],
+      [
+        183,
+        29,
+        2
+      ],
+      [
+        180,
+        27,
+        1
+      ],
+      [
+        178,
+        26,
+        1
+      ],
+      [
+        175,
+        24,
+        1
+      ],
+      [
+        172,
+        23,
+        1
+      ],
+      [
+        169,
+        22,
+        1
+      ],
+      [
+        167,
+        20,
+        1
+      ],
+      [
+        164,
+        19,
+        1
+      ],
+      [
+        161,
+        18,
+        1
+      ],
+      [
+        158,
+        16,
+        1
+      ],
+      [
+        155,
+        15,
+        1
+      ],
+      [
+        152,
+        14,
+        1
+      ],
+      [
+        149,
+        13,
+        1
+      ],
+      [
+        146,
+        11,
+        1
+      ],
+      [
+        142,
+        10,
+        1
+      ],
+      [
+        139,
+        9,
+        2
+      ],
+      [
+        136,
+        8,
+        2
+      ],
+      [
+        133,
+        7,
+        2
+      ],
+      [
+        129,
+        6,
+        2
+      ],
+      [
+        126,
+        5,
+        2
+      ],
+      [
+        122,
+        4,
+        3
+      ],
+      [
+        154,
+        163,
+        173
+      ]
+    ],
+    "OBJ_materials": "Each original triangle uses a material selected from its mean finite vertex scalar; any unsupported corner makes the face gray.",
+    "3MF_materials": "Original face connectivity and per-corner palette indices; unsupported corners gray.",
+    "projection_scope": "Scalar field transferred from independent closed-solid volume solve to full native CT surface; not an additional volume solve."
+  },
+  "FEM": {
+    "schema": "independent-size-fem-v1",
+    "size_mm": 100,
+    "independent_matrix_assembly_and_solve": true,
+    "stress_rescaling_used": false,
+    "source_inputs": {
+      "solution.npz": "f816917260e5fd875134e266590120cbab9d2258546306f31b021f02c94ea27a",
+      "qf_solution.npz": "78eec317bf22fc3c89cd6f79dfbf786e7a718958eea0982daf762e05f9161da6",
+      "qf_region_masks.npz": "217b9c961c586e7dd75cc0f232e916b3ae1b6e1d4016feaef436c53d4456d001"
+    },
+    "coordinate_calibration": "Original archived L0 points: X,Y retained; Z multiplied by 18/16 before size-specific domain construction.",
+    "size_definition": "Exact principal-longitudinal extent of the native74M CT surface; the separate solid proxy has a slightly different bound.",
+    "native_source_principal_height_mm": 51.63315333301228,
+    "linear_length_factor_from_calibrated_proxy": 1.9367401280925407,
+    "source_scanner_mm_to_solution_m": {
+      "scale": 0.0019367401280925406,
+      "translation_m": [
+        0,
+        0,
+        0
+      ],
+      "input_frame": "Corrected18um scanner XYZ in mm; native CT coordinates already in this frame."
+    },
+    "native_principal_longitudinal_extent_mm": 100,
+    "principal_longitudinal_extent_mm": 99.90827973827713,
+    "axis_aligned_bounds_mm": [
+      [
+        13.672657467900999,
+        2.7164193912732695,
+        2.721072263812009
+      ],
+      [
+        39.62996416822013,
+        68.95240061545788,
+        103.10767946971447
+      ]
+    ],
+    "principal_extent_mm": [
+      67.9804223572336,
+      99.90827973827713,
+      20.255853549180927
+    ],
+    "constitutive": {
+      "model": "Homogeneous isotropic small-strain linear elasticity",
+      "lambda_MPa": 29000.0,
+      "mu_MPa": 28500.0,
+      "E_MPa": 71373.91304347826,
+      "nu": 0.25217391304347825,
+      "property_status": "Assumed fossil-domain constants retained from existing pressure experiment; not measured specimen properties."
+    },
+    "loads": {
+      "pressure_MPa": 1.0,
+      "patch": "Frozen original L0 crown-face patch inherited by checked planar/barycentric containment",
+      "support": "All three displacement components zero in bilateral geometric root-cap volumes",
+      "body_force": "omitted"
+    },
+    "tip_roi": {
+      "definition": "Frozen union of 730 original calibrated L0 tetrahedra, inherited by containment-checked child centroid assignment.",
+      "reference_volume_mm3": 152.95249887179625,
+      "convergence_criterion": "Q95, Q99 and integrated strain energy each change by <2% on two consecutive local refinement steps; at least four solved meshes.",
+      "criterion_met": true,
+      "consecutive_passes": 2,
+      "scope": "Local h-convergence on unchanged polyhedral closed-solid proxy. No original CT serration reconstruction, contact convergence or pore-resolution claim."
+    },
+    "display_geometry": {
+      "native_surface_triangles": 74293846,
+      "relationship": "Separate unreduced CT surface for visualization and manufacturing. Stress may be projected onto it; it is not this tetrahedral solve domain."
+    },
+    "mass_example": {
+      "material": "PLA nominal density assumption only",
+      "density_g_cm3": 1.24,
+      "proxy_solid_volume_mm3": 41931.0441604918,
+      "proxy_mass_g": 51.99449475900983,
+      "usage": "Calculated directly by integration on this size-specific FEM proxy. Native CT mesh volume and print infill mass must be computed separately."
+    },
+    "final": {
+      "nodes": 204789,
+      "tetrahedra": 1073103,
+      "free_dofs": 613839,
+      "solver": "CG / smoothed-aggregation AMG with six rigid-motion candidates",
+      "cg_iterations": 46,
+      "relative_free_residual": 1.906344057303202e-10,
+      "force_balance_relative_error": 1.8553105935293922e-12,
+      "applied_force_N": [
+        -1706.2077341359038,
+        -411.29640197914574,
+        -50.19489267053941
+      ],
+      "reaction_force_N": [
+        1706.207734139001,
+        411.29640197978625,
+        50.194892669759525
+      ],
+      "loaded_area_mm2": 1812.7902846764855,
+      "pressure_MPa": 1.0,
+      "max_displacement_mm": 1.1807867009027617,
+      "strain_energy_N_mm": 500.6484535965992,
+      "external_work_N_mm": 1001.2969071870382,
+      "energy_identity_relative_error": 6.152256083652098e-12,
+      "affine_patch_relative_residual": 3.414228988190238e-14,
+      "rigid_motion_relative_residual": 1.9860684964613818e-19,
+      "proxy_volume_mm3": 41931.0441604918,
+      "proxy_surface_area_mm2": 10241.616583992796,
+      "fixed_nodes": 176,
+      "loaded_faces": 4956,
+      "max_element_edge_mm": 7.85373494082123,
+      "minimum_element_volume_mm3": 1.4488783111116365e-05,
+      "max_vm_MPa": 875.0372959513395,
+      "solve_wall_seconds": 36.11099410057068,
+      "level": 5,
+      "regions": {
+        "R0": {
+          "elements": 8694,
+          "volume_mm3": 5234.710054808438,
+          "Q90_MPa": 8.547154015846624,
+          "Q95_MPa": 9.830814584977523,
+          "Q99_MPa": 12.287468811408015,
+          "strain_energy_N_mm": 1.073691753273812
+        },
+        "RA": {
+          "elements": 91624,
+          "volume_mm3": 1246.4632013543217,
+          "Q90_MPa": 23.185949549769678,
+          "Q95_MPa": 28.595433360668917,
+          "Q99_MPa": 45.12302706392774,
+          "strain_energy_N_mm": 1.8502423725532142
+        },
+        "RB": {
+          "elements": 139265,
+          "volume_mm3": 1044.650755498563,
+          "Q90_MPa": 12.815491590948925,
+          "Q95_MPa": 14.394947492042483,
+          "Q99_MPa": 19.05396443549284,
+          "strain_energy_N_mm": 0.40124779838362706
+        },
+        "Rtip": {
+          "elements": 459820,
+          "volume_mm3": 1111.1447269032774,
+          "Q90_MPa": 0.4319738727582565,
+          "Q95_MPa": 0.5293416466507834,
+          "Q99_MPa": 0.7026848339497779,
+          "strain_energy_N_mm": 0.0004488983351520248
+        },
+        "Rcr": {
+          "elements": 22808,
+          "volume_mm3": 9937.193402794754,
+          "Q90_MPa": 41.48092269208465,
+          "Q95_MPa": 60.34880110952834,
+          "Q99_MPa": 108.27945339923752,
+          "strain_energy_N_mm": 57.21514299855137
+        },
+        "Rroot": {
+          "elements": 4775,
+          "volume_mm3": 2301.3537444729955,
+          "Q90_MPa": 187.85468168690966,
+          "Q95_MPa": 257.05910018722267,
+          "Q99_MPa": 404.4124366330813,
+          "strain_energy_N_mm": 210.0544771420587
+        }
+      },
+      "tip_max_edge_mm": 1.4876647075076221,
+      "tip_median_edge_mm": 0.32174441244402474,
+      "tip_last_step_change_percent": {
+        "Q95_MPa": 0.02195638639297441,
+        "Q99_MPa": 0.24607108345707143,
+        "strain_energy_N_mm": 0.06505016566231482
+      }
+    },
+    "history": [
+      {
+        "nodes": 13584,
+        "tetrahedra": 55852,
+        "free_dofs": 40224,
+        "solver": "CG / smoothed-aggregation AMG with six rigid-motion candidates",
+        "cg_iterations": 37,
+        "relative_free_residual": 7.753469088592792e-11,
+        "force_balance_relative_error": 1.7098369382617192e-12,
+        "applied_force_N": [
+          -1706.207734135906,
+          -411.29640197914614,
+          -50.19489267053955
+        ],
+        "reaction_force_N": [
+          1706.207734133041,
+          411.29640197833714,
+          50.19489267092595
+        ],
+        "loaded_area_mm2": 1812.7902846764855,
+        "pressure_MPa": 1.0,
+        "max_displacement_mm": 1.180157810565717,
+        "strain_energy_N_mm": 500.6072970316262,
+        "external_work_N_mm": 1001.2145940620926,
+        "energy_identity_relative_error": 1.1584261009723128e-12,
+        "affine_patch_relative_residual": 1.5058819402225915e-14,
+        "rigid_motion_relative_residual": 7.036742962736663e-19,
+        "proxy_volume_mm3": 41931.04416049181,
+        "proxy_surface_area_mm2": 10241.616583992794,
+        "fixed_nodes": 176,
+        "loaded_faces": 3103,
+        "max_element_edge_mm": 8.613376760183089,
+        "minimum_element_volume_mm3": 0.00010498012592590482,
+        "max_vm_MPa": 875.0234975705156,
+        "solve_wall_seconds": 1.276428461074829,
+        "level": 0,
+        "regions": {
+          "R0": {
+            "elements": 1236,
+            "volume_mm3": 5234.710054808438,
+            "Q90_MPa": 8.52061790761326,
+            "Q95_MPa": 9.79004707560272,
+            "Q99_MPa": 12.26671385035429,
+            "strain_energy_N_mm": 1.0554198838528988
+          },
+          "RA": {
+            "elements": 1765,
+            "volume_mm3": 1246.4632013543217,
+            "Q90_MPa": 23.192392450575095,
+            "Q95_MPa": 28.602323148202718,
+            "Q99_MPa": 45.119547747966614,
+            "strain_energy_N_mm": 1.8524337255277477
+          },
+          "RB": {
+            "elements": 1025,
+            "volume_mm3": 1044.650755498563,
+            "Q90_MPa": 12.833790815407717,
+            "Q95_MPa": 14.41874386664,
+            "Q99_MPa": 19.085882422017907,
+            "strain_energy_N_mm": 0.4038923048974867
+          },
+          "Rtip": {
+            "elements": 730,
+            "volume_mm3": 1111.1447269032774,
+            "Q90_MPa": 0.4800932223981312,
+            "Q95_MPa": 0.5865949691029083,
+            "Q99_MPa": 0.8069949321186055,
+            "strain_energy_N_mm": 0.0006145462795621405
+          },
+          "Rcr": {
+            "elements": 22808,
+            "volume_mm3": 9937.193402794754,
+            "Q90_MPa": 41.48035844288997,
+            "Q95_MPa": 60.34747152716197,
+            "Q99_MPa": 108.27724721757393,
+            "strain_energy_N_mm": 57.20930284501351
+          },
+          "Rroot": {
+            "elements": 4775,
+            "volume_mm3": 2301.3537444729955,
+            "Q90_MPa": 187.85183188474187,
+            "Q95_MPa": 257.05859247397353,
+            "Q99_MPa": 404.41235323962394,
+            "strain_energy_N_mm": 210.05215034582582
+          }
+        },
+        "tip_max_edge_mm": 6.9892309811212545,
+        "tip_median_edge_mm": 2.2574797563855444
+      },
+      {
+        "nodes": 15062,
+        "tetrahedra": 63025,
+        "free_dofs": 44658,
+        "solver": "CG / smoothed-aggregation AMG with six rigid-motion candidates",
+        "cg_iterations": 47,
+        "relative_free_residual": 1.1207034103203238e-10,
+        "force_balance_relative_error": 4.687493726566236e-12,
+        "applied_force_N": [
+          -1706.2077341359056,
+          -411.29640197914614,
+          -50.19489267053961
+        ],
+        "reaction_force_N": [
+          1706.2077341439776,
+          411.2964019777065,
+          50.19489266982673
+        ],
+        "loaded_area_mm2": 1812.7902846764855,
+        "pressure_MPa": 1.0,
+        "max_displacement_mm": 1.1804059635412743,
+        "strain_energy_N_mm": 500.6220795828121,
+        "external_work_N_mm": 1001.2441591617763,
+        "energy_identity_relative_error": 3.843063327078145e-12,
+        "affine_patch_relative_residual": 1.8558977025883306e-14,
+        "rigid_motion_relative_residual": 6.689021721782736e-19,
+        "proxy_volume_mm3": 41931.04416049181,
+        "proxy_surface_area_mm2": 10241.616583992794,
+        "fixed_nodes": 176,
+        "loaded_faces": 3168,
+        "max_element_edge_mm": 7.85373494082123,
+        "minimum_element_volume_mm3": 0.00010498012592590482,
+        "max_vm_MPa": 875.0287588544054,
+        "solve_wall_seconds": 1.4450764656066895,
+        "level": 1,
+        "regions": {
+          "R0": {
+            "elements": 1325,
+            "volume_mm3": 5234.710054808437,
+            "Q90_MPa": 8.528103754437492,
+            "Q95_MPa": 9.788744805149507,
+            "Q99_MPa": 12.276310341444796,
+            "strain_energy_N_mm": 1.0631789644862717
+          },
+          "RA": {
+            "elements": 2390,
+            "volume_mm3": 1246.4632013543219,
+            "Q90_MPa": 23.19001264184638,
+            "Q95_MPa": 28.59977272296712,
+            "Q99_MPa": 45.120690704052265,
+            "strain_energy_N_mm": 1.8513730748790647
+          },
+          "RB": {
+            "elements": 2039,
+            "volume_mm3": 1044.6507554985633,
+            "Q90_MPa": 12.826981475923407,
+            "Q95_MPa": 14.409592796065272,
+            "Q99_MPa": 19.073482423389127,
+            "strain_energy_N_mm": 0.40245647323707656
+          },
+          "Rtip": {
+            "elements": 3744,
+            "volume_mm3": 1111.1447269032774,
+            "Q90_MPa": 0.4523879760664748,
+            "Q95_MPa": 0.5629114121367823,
+            "Q99_MPa": 0.7729426760383162,
+            "strain_energy_N_mm": 0.0005227465516281805
+          },
+          "Rcr": {
+            "elements": 22808,
+            "volume_mm3": 9937.193402794754,
+            "Q90_MPa": 41.48058410374253,
+            "Q95_MPa": 60.347972282615785,
+            "Q99_MPa": 108.27809780748616,
+            "strain_energy_N_mm": 57.21155451620281
+          },
+          "Rroot": {
+            "elements": 4775,
+            "volume_mm3": 2301.3537444729955,
+            "Q90_MPa": 187.85295486416103,
+            "Q95_MPa": 257.05879261850856,
+            "Q99_MPa": 404.41240641598597,
+            "strain_energy_N_mm": 210.0530564251577
+          }
+        },
+        "tip_max_edge_mm": 5.528977136791362,
+        "tip_median_edge_mm": 1.6059878687713243,
+        "tip_last_step_change_percent": {
+          "Q95_MPa": 4.0374633628968475,
+          "Q99_MPa": 4.219636917779869,
+          "strain_energy_N_mm": 14.93780549763748
+        }
+      },
+      {
+        "nodes": 19545,
+        "tetrahedra": 84946,
+        "free_dofs": 58107,
+        "solver": "CG / smoothed-aggregation AMG with six rigid-motion candidates",
+        "cg_iterations": 44,
+        "relative_free_residual": 1.301717862868589e-10,
+        "force_balance_relative_error": 1.4503671489019646e-12,
+        "applied_force_N": [
+          -1706.2077341359047,
+          -411.296401979146,
+          -50.19489267053955
+        ],
+        "reaction_force_N": [
+          1706.207734134085,
+          411.2964019793419,
+          50.194892672310246
+        ],
+        "loaded_area_mm2": 1812.7902846764853,
+        "pressure_MPa": 1.0,
+        "max_displacement_mm": 1.180529205581355,
+        "strain_energy_N_mm": 500.6299464152047,
+        "external_work_N_mm": 1001.2598928305155,
+        "energy_identity_relative_error": 1.0593635114496924e-13,
+        "affine_patch_relative_residual": 2.147768984455585e-14,
+        "rigid_motion_relative_residual": 5.788922087651642e-19,
+        "proxy_volume_mm3": 41931.0441604918,
+        "proxy_surface_area_mm2": 10241.616583992796,
+        "fixed_nodes": 176,
+        "loaded_faces": 3292,
+        "max_element_edge_mm": 7.85373494082123,
+        "minimum_element_volume_mm3": 0.00010498012592590482,
+        "max_vm_MPa": 875.0310752464926,
+        "solve_wall_seconds": 1.8165512084960938,
+        "level": 2,
+        "regions": {
+          "R0": {
+            "elements": 1578,
+            "volume_mm3": 5234.710054808438,
+            "Q90_MPa": 8.536508011936398,
+            "Q95_MPa": 9.788856130918653,
+            "Q99_MPa": 12.279574948795153,
+            "strain_energy_N_mm": 1.0672107275674918
+          },
+          "RA": {
+            "elements": 4353,
+            "volume_mm3": 1246.4632013543217,
+            "Q90_MPa": 23.188461476722843,
+            "Q95_MPa": 28.5980683487425,
+            "Q99_MPa": 45.12110828854245,
+            "strain_energy_N_mm": 1.850611818590561
+          },
+          "RB": {
+            "elements": 5029,
+            "volume_mm3": 1044.650755498563,
+            "Q90_MPa": 12.824815014756778,
+            "Q95_MPa": 14.406465929991553,
+            "Q99_MPa": 19.069318127023134,
+            "strain_energy_N_mm": 0.40213806356908466
+          },
+          "Rtip": {
+            "elements": 13065,
+            "volume_mm3": 1111.1447269032774,
+            "Q90_MPa": 0.4427368896289887,
+            "Q95_MPa": 0.5291688811460121,
+            "Q99_MPa": 0.7179526691167635,
+            "strain_energy_N_mm": 0.00047255573276048813
+          },
+          "Rcr": {
+            "elements": 22808,
+            "volume_mm3": 9937.193402794754,
+            "Q90_MPa": 41.48069292497793,
+            "Q95_MPa": 60.34817928121597,
+            "Q99_MPa": 108.27846093977801,
+            "strain_energy_N_mm": 57.21261516247438
+          },
+          "Rroot": {
+            "elements": 4775,
+            "volume_mm3": 2301.3537444729955,
+            "Q90_MPa": 187.85342904337688,
+            "Q95_MPa": 257.0587269650601,
+            "Q99_MPa": 404.4121459736521,
+            "strain_energy_N_mm": 210.05331184015444
+          }
+        },
+        "tip_max_edge_mm": 3.6629172121959037,
+        "tip_median_edge_mm": 1.0570392274000726,
+        "tip_last_step_change_percent": {
+          "Q95_MPa": 5.9942879577952235,
+          "Q99_MPa": 7.114370654677993,
+          "strain_energy_N_mm": 9.601367758690083
+        }
+      },
+      {
+        "nodes": 33085,
+        "tetrahedra": 155040,
+        "free_dofs": 98727,
+        "solver": "CG / smoothed-aggregation AMG with six rigid-motion candidates",
+        "cg_iterations": 45,
+        "relative_free_residual": 1.4481543588748645e-10,
+        "force_balance_relative_error": 5.0842977933583e-13,
+        "applied_force_N": [
+          -1706.2077341359063,
+          -411.29640197914586,
+          -50.194892670539566
+        ],
+        "reaction_force_N": [
+          1706.2077341365966,
+          411.29640197968143,
+          50.19489267035641
+        ],
+        "loaded_area_mm2": 1812.790284676485,
+        "pressure_MPa": 1.0,
+        "max_displacement_mm": 1.1806645032199672,
+        "strain_energy_N_mm": 500.6399708005494,
+        "external_work_N_mm": 1001.2799415979766,
+        "energy_identity_relative_error": 3.1181905225884635e-12,
+        "affine_patch_relative_residual": 2.509240228986336e-14,
+        "rigid_motion_relative_residual": 4.434348516852645e-19,
+        "proxy_volume_mm3": 41931.0441604918,
+        "proxy_surface_area_mm2": 10241.616583992796,
+        "fixed_nodes": 176,
+        "loaded_faces": 3539,
+        "max_element_edge_mm": 7.85373494082123,
+        "minimum_element_volume_mm3": 0.00010498012592590482,
+        "max_vm_MPa": 875.0345292170658,
+        "solve_wall_seconds": 3.2231109142303467,
+        "level": 3,
+        "regions": {
+          "R0": {
+            "elements": 2409,
+            "volume_mm3": 5234.710054808438,
+            "Q90_MPa": 8.546882669520075,
+            "Q95_MPa": 9.808214449335784,
+            "Q99_MPa": 12.281294525615879,
+            "strain_energy_N_mm": 1.071292180251849
+          },
+          "RA": {
+            "elements": 10554,
+            "volume_mm3": 1246.4632013543217,
+            "Q90_MPa": 23.18715855529176,
+            "Q95_MPa": 28.59671474413758,
+            "Q99_MPa": 45.12222263183508,
+            "strain_energy_N_mm": 1.850407723764967
+          },
+          "RB": {
+            "elements": 14814,
+            "volume_mm3": 1044.650755498563,
+            "Q90_MPa": 12.816025681447515,
+            "Q95_MPa": 14.399240971466888,
+            "Q99_MPa": 19.059805805155595,
+            "strain_energy_N_mm": 0.4013653935582772
+          },
+          "Rtip": {
+            "elements": 43887,
+            "volume_mm3": 1111.1447269032774,
+            "Q90_MPa": 0.4343744272240536,
+            "Q95_MPa": 0.5274549332336533,
+            "Q99_MPa": 0.7032211897342449,
+            "strain_energy_N_mm": 0.00045269641808203773
+          },
+          "Rcr": {
+            "elements": 22808,
+            "volume_mm3": 9937.193402794754,
+            "Q90_MPa": 41.48081824992461,
+            "Q95_MPa": 60.34853566813689,
+            "Q99_MPa": 108.27901525470966,
+            "strain_energy_N_mm": 57.21399565576497
+          },
+          "Rroot": {
+            "elements": 4775,
+            "volume_mm3": 2301.3537444729955,
+            "Q90_MPa": 187.85412195426738,
+            "Q95_MPa": 257.0589832826432,
+            "Q99_MPa": 404.412396282708,
+            "strain_energy_N_mm": 210.054004305092
+          }
+        },
+        "tip_max_edge_mm": 2.7644885683956812,
+        "tip_median_edge_mm": 0.7127179350876418,
+        "tip_last_step_change_percent": {
+          "Q95_MPa": 0.32389431303044974,
+          "Q99_MPa": 2.051873335973737,
+          "strain_energy_N_mm": 4.202533860385092
+        }
+      },
+      {
+        "nodes": 75038,
+        "tetrahedra": 376544,
+        "free_dofs": 224586,
+        "solver": "CG / smoothed-aggregation AMG with six rigid-motion candidates",
+        "cg_iterations": 47,
+        "relative_free_residual": 1.7516592414426374e-10,
+        "force_balance_relative_error": 3.435007716235061e-12,
+        "applied_force_N": [
+          -1706.207734135905,
+          -411.2964019791469,
+          -50.19489267053953
+        ],
+        "reaction_force_N": [
+          1706.2077341415925,
+          411.2964019773585,
+          50.19489266962903
+        ],
+        "loaded_area_mm2": 1812.7902846764853,
+        "pressure_MPa": 1.0,
+        "max_displacement_mm": 1.180735536189187,
+        "strain_energy_N_mm": 500.6447120548106,
+        "external_work_N_mm": 1001.2894241071405,
+        "energy_identity_relative_error": 2.4775658527857734e-12,
+        "affine_patch_relative_residual": 2.884144219469006e-14,
+        "rigid_motion_relative_residual": 3.08914058911531e-19,
+        "proxy_volume_mm3": 41931.0441604918,
+        "proxy_surface_area_mm2": 10241.616583992794,
+        "fixed_nodes": 176,
+        "loaded_faces": 4012,
+        "max_element_edge_mm": 7.85373494082123,
+        "minimum_element_volume_mm3": 5.731905795409319e-05,
+        "max_vm_MPa": 875.0359476004221,
+        "solve_wall_seconds": 9.85806393623352,
+        "level": 4,
+        "regions": {
+          "R0": {
+            "elements": 4008,
+            "volume_mm3": 5234.710054808438,
+            "Q90_MPa": 8.544463570754434,
+            "Q95_MPa": 9.816696729411563,
+            "Q99_MPa": 12.284113233481952,
+            "strain_energy_N_mm": 1.073012480068758
+          },
+          "RA": {
+            "elements": 30323,
+            "volume_mm3": 1246.4632013543219,
+            "Q90_MPa": 23.186476310065682,
+            "Q95_MPa": 28.595986381053,
+            "Q99_MPa": 45.12256860740447,
+            "strain_energy_N_mm": 1.850297792757839
+          },
+          "RB": {
+            "elements": 45127,
+            "volume_mm3": 1044.650755498563,
+            "Q90_MPa": 12.81576760546072,
+            "Q95_MPa": 14.39706913581746,
+            "Q99_MPa": 19.056867086478107,
+            "strain_energy_N_mm": 0.4013021571780729
+          },
+          "Rtip": {
+            "elements": 143105,
+            "volume_mm3": 1111.1447269032774,
+            "Q90_MPa": 0.43223582601774385,
+            "Q95_MPa": 0.5292254478665599,
+            "Q99_MPa": 0.7009599741467945,
+            "strain_energy_N_mm": 0.00044860651587027927
+          },
+          "Rcr": {
+            "elements": 22808,
+            "volume_mm3": 9937.193402794754,
+            "Q90_MPa": 41.480875041187566,
+            "Q95_MPa": 60.34867300425363,
+            "Q99_MPa": 108.27924404508919,
+            "strain_energy_N_mm": 57.214598216442724
+          },
+          "Rroot": {
+            "elements": 4775,
+            "volume_mm3": 2301.3537444729955,
+            "Q90_MPa": 187.8544209943695,
+            "Q95_MPa": 257.05902830573774,
+            "Q99_MPa": 404.41238650554993,
+            "strain_energy_N_mm": 210.05423451094083
+          }
+        },
+        "tip_max_edge_mm": 2.1378457333602294,
+        "tip_median_edge_mm": 0.476066585592769,
+        "tip_last_step_change_percent": {
+          "Q95_MPa": 0.3356712623867439,
+          "Q99_MPa": 0.3215511165562209,
+          "strain_energy_N_mm": 0.9034536277283487
+        }
+      },
+      {
+        "nodes": 204789,
+        "tetrahedra": 1073103,
+        "free_dofs": 613839,
+        "solver": "CG / smoothed-aggregation AMG with six rigid-motion candidates",
+        "cg_iterations": 46,
+        "relative_free_residual": 1.906344057303202e-10,
+        "force_balance_relative_error": 1.8553105935293922e-12,
+        "applied_force_N": [
+          -1706.2077341359038,
+          -411.29640197914574,
+          -50.19489267053941
+        ],
+        "reaction_force_N": [
+          1706.207734139001,
+          411.29640197978625,
+          50.194892669759525
+        ],
+        "loaded_area_mm2": 1812.7902846764855,
+        "pressure_MPa": 1.0,
+        "max_displacement_mm": 1.1807867009027617,
+        "strain_energy_N_mm": 500.6484535965992,
+        "external_work_N_mm": 1001.2969071870382,
+        "energy_identity_relative_error": 6.152256083652098e-12,
+        "affine_patch_relative_residual": 3.414228988190238e-14,
+        "rigid_motion_relative_residual": 1.9860684964613818e-19,
+        "proxy_volume_mm3": 41931.0441604918,
+        "proxy_surface_area_mm2": 10241.616583992796,
+        "fixed_nodes": 176,
+        "loaded_faces": 4956,
+        "max_element_edge_mm": 7.85373494082123,
+        "minimum_element_volume_mm3": 1.4488783111116365e-05,
+        "max_vm_MPa": 875.0372959513395,
+        "solve_wall_seconds": 36.11099410057068,
+        "level": 5,
+        "regions": {
+          "R0": {
+            "elements": 8694,
+            "volume_mm3": 5234.710054808438,
+            "Q90_MPa": 8.547154015846624,
+            "Q95_MPa": 9.830814584977523,
+            "Q99_MPa": 12.287468811408015,
+            "strain_energy_N_mm": 1.073691753273812
+          },
+          "RA": {
+            "elements": 91624,
+            "volume_mm3": 1246.4632013543217,
+            "Q90_MPa": 23.185949549769678,
+            "Q95_MPa": 28.595433360668917,
+            "Q99_MPa": 45.12302706392774,
+            "strain_energy_N_mm": 1.8502423725532142
+          },
+          "RB": {
+            "elements": 139265,
+            "volume_mm3": 1044.650755498563,
+            "Q90_MPa": 12.815491590948925,
+            "Q95_MPa": 14.394947492042483,
+            "Q99_MPa": 19.05396443549284,
+            "strain_energy_N_mm": 0.40124779838362706
+          },
+          "Rtip": {
+            "elements": 459820,
+            "volume_mm3": 1111.1447269032774,
+            "Q90_MPa": 0.4319738727582565,
+            "Q95_MPa": 0.5293416466507834,
+            "Q99_MPa": 0.7026848339497779,
+            "strain_energy_N_mm": 0.0004488983351520248
+          },
+          "Rcr": {
+            "elements": 22808,
+            "volume_mm3": 9937.193402794754,
+            "Q90_MPa": 41.48092269208465,
+            "Q95_MPa": 60.34880110952834,
+            "Q99_MPa": 108.27945339923752,
+            "strain_energy_N_mm": 57.21514299855137
+          },
+          "Rroot": {
+            "elements": 4775,
+            "volume_mm3": 2301.3537444729955,
+            "Q90_MPa": 187.85468168690966,
+            "Q95_MPa": 257.05910018722267,
+            "Q99_MPa": 404.4124366330813,
+            "strain_energy_N_mm": 210.0544771420587
+          }
+        },
+        "tip_max_edge_mm": 1.4876647075076221,
+        "tip_median_edge_mm": 0.32174441244402474,
+        "tip_last_step_change_percent": {
+          "Q95_MPa": 0.02195638639297441,
+          "Q99_MPa": 0.24607108345707143,
+          "strain_energy_N_mm": 0.06505016566231482
+        }
+      }
+    ],
+    "limitations": [
+      "No measured fossil strength or material heterogeneity",
+      "Native CT internal voids are omitted by the fixed closed-solid mechanical proxy",
+      "Adaptive refinement preserves the archived coarse polyhedral surface; it cannot restore unrepresented serration anatomy",
+      "The 74M surface triangle count is not the FEM tetrahedron count",
+      "Reported h-convergence is conditional on the stated proxy, pressure patch, support and material model"
+    ]
+  },
+  "download_format_notes": {
+    "OBJ": "ExtractZIP, keep tooth.obj and tooth.mtl in the same directory; import with unitsmillimetre. stress_vertex_values_Pa.f32 is losslessly compressed withinZIP.",
+    "STL": "ExtractZIP; binarySTL contains the complete triangle surface, with unitsmm in itsheader andpropertiesJSON. STL has no standard colour or unit field.",
+    "3MF": "Open directly in a3MF-capable application. Modelunit ismillimeter; per-corner colour and native internal void boundary topology are retained. Numerical field is included as custom metadata. Appearance depends on material-extension support."
+  },
+  "fixed_display_centers": [
+    [
+      28.64849386340784,
+      -4.860449679557943,
+      102.02593452337332
+    ],
+    [
+      -20.999552146906275,
+      -5.884077876084069,
+      88.99824684464328
+    ]
+  ],
+  "fixed_display_points": [
+    [
+      -22.899737108844086,
+      -2.1022820986321378,
+      90.07760567489396
+    ],
+    [
+      -24.84964931587222,
+      -2.708552183004336,
+      90.19690970997058
+    ],
+    [
+      -23.886000202678908,
+      -2.4346942660640707,
+      89.8151713790501
+    ],
+    [
+      -22.184254499571573,
+      -2.6208528763896126,
+      89.13148316786253
+    ],
+    [
+      -23.212979373448817,
+      -2.8078736700787914,
+      88.88520747356151
+    ],
+    [
+      -23.965648848265715,
+      -3.178395702950013,
+      88.88600468915648
+    ],
+    [
+      -20.29160738480936,
+      -2.605878084678423,
+      89.48840932561441
+    ],
+    [
+      -18.38184007408237,
+      -2.183965126803834,
+      90.65021273162785
+    ],
+    [
+      -23.112968549299715,
+      -3.5537780766511204,
+      88.0408104687874
+    ],
+    [
+      -20.908636014144435,
+      -3.514030340394413,
+      88.39035308480896
+    ],
+    [
+      -21.619569189379234,
+      -4.345423310087483,
+      87.38279664369965
+    ],
+    [
+      -19.02919476978363,
+      -3.7171849254730986,
+      88.86418391614846
+    ],
+    [
+      -22.500511017465136,
+      -4.764110969455004,
+      87.40512546406157
+    ],
+    [
+      -17.58815465625365,
+      -3.5241037533331863,
+      89.6096597661652
+    ],
+    [
+      -21.773465227555654,
+      -5.267941582799494,
+      86.79095287569724
+    ],
+    [
+      -16.238598331652028,
+      -4.143558088236354,
+      90.23486737890266
+    ],
+    [
+      -17.734645308684023,
+      -4.772226599854719,
+      88.93684193419082
+    ],
+    [
+      -22.196987265103843,
+      -5.8376390459458705,
+      87.12261154428272
+    ],
+    [
+      -19.323269687619657,
+      -5.268356104918965,
+      88.01426086707072
+    ],
+    [
+      -20.482973324033537,
+      -5.823034855016658,
+      87.14370383167628
+    ],
+    [
+      -18.546376077537417,
+      -5.977505908295257,
+      88.25386789329134
+    ],
+    [
+      -16.638250843700042,
+      -5.368138425752058,
+      89.70600668592091
+    ],
+    [
+      -22.29905233809675,
+      -6.884970625253359,
+      87.70398737133944
+    ],
+    [
+      -17.64517034074086,
+      -6.151661843495226,
+      89.13400662501084
+    ],
+    [
+      -21.719776651591516,
+      -6.763454840252123,
+      86.98273397827255
+    ],
+    [
+      -21.35561168327156,
+      -6.775914338741529,
+      86.86830192787653
+    ],
+    [
+      -19.592331434415144,
+      -6.901424765896962,
+      87.82258066081847
+    ],
+    [
+      -20.674401738135636,
+      -7.2390400823296375,
+      87.32521035483818
+    ],
+    [
+      -24.204629873749845,
+      -6.818366195045719,
+      90.61172876298247
+    ],
+    [
+      -16.146235606935306,
+      -5.958772699544021,
+      90.54286337138355
+    ],
+    [
+      -21.61523224874916,
+      -7.488305609625712,
+      87.53372247458454
+    ],
+    [
+      -18.020444909015595,
+      -6.948800865187337,
+      90.0699699100085
+    ],
+    [
+      31.068843643887238,
+      -5.3435088124707875,
+      103.60974019186243
+    ],
+    [
+      -16.979837189256813,
+      -6.600748892717434,
+      90.17742555980786
+    ],
+    [
+      -18.482455647228498,
+      -6.802126448460726,
+      88.73236199639743
+    ],
+    [
+      -22.014419617080762,
+      -7.872693524712993,
+      87.81949987146803
+    ],
+    [
+      -22.937897087969034,
+      -7.863432537651008,
+      88.98087108992706
+    ],
+    [
+      -19.90246534311747,
+      -5.272920412745435,
+      90.14115677977986
+    ],
+    [
+      -18.9062059486615,
+      -7.512217284326567,
+      89.19357310151528
+    ],
+    [
+      -21.55367871100806,
+      -8.384605464885368,
+      88.09635609210807
+    ],
+    [
+      -22.326232753325577,
+      -8.382675289063243,
+      88.33557974392343
+    ],
+    [
+      -23.501719363529354,
+      -8.591613821258676,
+      90.26330536955811
+    ],
+    [
+      -20.268674121162213,
+      -7.964663262165871,
+      88.39312174816432
+    ],
+    [
+      -19.752480635242065,
+      -8.191387212990271,
+      89.69367395087909
+    ],
+    [
+      -20.690385684762852,
+      -8.486646801561207,
+      89.25444781915104
+    ],
+    [
+      -20.757859649259927,
+      -8.515017824900013,
+      90.27230889881689
+    ],
+    [
+      -22.410534815432406,
+      -8.868514619271096,
+      89.1577142515913
+    ],
+    [
+      -22.680838924757516,
+      -9.223620936620712,
+      90.21882430703063
+    ],
+    [
+      -21.607489056651126,
+      -8.932894351338135,
+      89.61557923846668
+    ],
+    [
+      -21.432226752247203,
+      -2.0406834824904934,
+      90.18540369378955
+    ],
+    [
+      30.56151143004008,
+      -5.989031264627862,
+      101.7416624126399
+    ],
+    [
+      -21.49129624176772,
+      -4.809931645461958,
+      89.27307384515154
+    ],
+    [
+      -20.448629976275846,
+      -6.24066975356547,
+      88.49280168231297
+    ],
+    [
+      28.73097846341531,
+      -4.913277774788959,
+      103.75258938193899
+    ],
+    [
+      24.01572190996238,
+      -1.2760904494558503,
+      103.72129988833889
+    ],
+    [
+      29.44242991024214,
+      -6.712466381792922,
+      102.79709862074606
+    ],
+    [
+      27.174182002381833,
+      -1.5295613209778551,
+      103.00510501526499
+    ],
+    [
+      25.310479224372095,
+      -1.9035412817629833,
+      103.2050612234781
+    ],
+    [
+      28.2326690838214,
+      -1.5127947266042128,
+      103.46255463310492
+    ],
+    [
+      22.77390485336724,
+      -2.5392412658906665,
+      103.25864392680181
+    ],
+    [
+      25.85006689005202,
+      -2.36064892105243,
+      102.04725905682326
+    ],
+    [
+      27.680144036061982,
+      -6.511682614103464,
+      103.31635429475838
+    ],
+    [
+      -20.411736967155754,
+      -3.944538770542607,
+      89.7605357589142
+    ],
+    [
+      27.35134008616631,
+      -2.34055424294025,
+      101.38528906974301
+    ],
+    [
+      28.369896636851465,
+      -2.11362845416523,
+      101.77987930609433
+    ],
+    [
+      -22.59023820245332,
+      -5.981853486882372,
+      90.0432785773827
+    ],
+    [
+      -19.344093037981665,
+      -6.533253951399672,
+      89.49646369664885
+    ],
+    [
+      29.115352845901,
+      -2.1382452073124014,
+      102.6449605233652
+    ],
+    [
+      24.92898406389892,
+      -2.79855652998134,
+      102.13224204204263
+    ],
+    [
+      29.80979334012634,
+      -1.7989763482375594,
+      103.40287844989604
+    ],
+    [
+      27.88166535154581,
+      -3.9613271993390526,
+      103.28711431963896
+    ],
+    [
+      29.584377134205937,
+      -2.414416929476367,
+      101.44592730580203
+    ],
+    [
+      22.84419235262564,
+      -3.7420695207215218,
+      103.58945213054434
+    ],
+    [
+      23.995398172128432,
+      -3.4154549848423557,
+      102.71443172318959
+    ],
+    [
+      26.779883707127446,
+      -3.1672070741181884,
+      101.05164526001546
+    ],
+    [
+      28.69303308204833,
+      -3.3710479000365225,
+      103.31723172326207
+    ],
+    [
+      -22.59365682799399,
+      -7.4552277508136555,
+      88.28889858912235
+    ],
+    [
+      -22.22752818364271,
+      -7.865350188468149,
+      90.67594058652114
+    ],
+    [
+      -23.972612967033562,
+      -5.035206753898144,
+      89.51575164506225
+    ],
+    [
+      25.606314480799135,
+      -3.732337434471617,
+      101.50521274099547
+    ],
+    [
+      -21.749088356491306,
+      -8.11251314959484,
+      89.38008135575713
+    ],
+    [
+      31.211036997990583,
+      -7.250587231148636,
+      102.14144359876806
+    ],
+    [
+      30.052245333350882,
+      -3.4230400476557463,
+      101.83259177882634
+    ],
+    [
+      26.921635916745252,
+      -3.8331114357886804,
+      102.38887457173895
+    ],
+    [
+      31.22464691985381,
+      -2.220189316457706,
+      102.90069368436703
+    ],
+    [
+      -22.742886458797436,
+      -3.8017542086565683,
+      89.43147061516335
+    ],
+    [
+      -23.496770171287892,
+      -3.329813896610382,
+      89.95832625493172
+    ],
+    [
+      30.545751465352694,
+      -2.547081771236563,
+      101.6385749423045
+    ],
+    [
+      30.087066767997168,
+      -7.8647425780785625,
+      103.18486512265773
+    ],
+    [
+      -20.109343219303803,
+      -4.643087079523916,
+      87.86597792716141
+    ],
+    [
+      -22.056747099817734,
+      -7.196820133391334,
+      88.913859064763
+    ],
+    [
+      29.684093528417126,
+      -3.164511316039352,
+      100.56846779607346
+    ],
+    [
+      -20.998697057268217,
+      -7.039648907691415,
+      89.577426997701
+    ],
+    [
+      25.35973766239485,
+      -4.325352013336932,
+      102.26533569226194
+    ],
+    [
+      31.58768628835641,
+      -2.7441558646800317,
+      101.7449266779788
+    ],
+    [
+      24.766015658349993,
+      -3.913583032146761,
+      102.86863323013307
+    ],
+    [
+      28.266957696005235,
+      -3.517194365596211,
+      100.67315102416875
+    ],
+    [
+      31.13130473865109,
+      -3.9024202464481306,
+      102.2626516691045
+    ],
+    [
+      27.02983688909312,
+      -3.8282386082708726,
+      100.7167132505187
+    ],
+    [
+      32.01881587721817,
+      -2.680333722606214,
+      102.74736390098897
+    ],
+    [
+      26.585064977845647,
+      -4.160061383246031,
+      101.06808379743788
+    ],
+    [
+      27.670942233049647,
+      -3.5840375146924046,
+      100.5594202273841
+    ],
+    [
+      -22.0832370340951,
+      -3.6253009404190166,
+      88.12678134837931
+    ],
+    [
+      28.683859116333718,
+      -3.777777771802043,
+      102.01308570660703
+    ],
+    [
+      -21.14071256894477,
+      -7.80944088228383,
+      87.67682046144812
+    ],
+    [
+      30.97263961387835,
+      -3.231823851991116,
+      100.93324874920414
+    ],
+    [
+      29.72566300761588,
+      -4.74520687793909,
+      102.03730146205658
+    ],
+    [
+      -17.469651757962488,
+      -5.69853668480404,
+      90.3184588452377
+    ],
+    [
+      28.72919754021892,
+      -4.445464733314992,
+      100.19656130908896
+    ],
+    [
+      30.457215390252667,
+      -2.9494562300039817,
+      103.19057258359672
+    ],
+    [
+      -21.43881400027673,
+      -7.85345807573335,
+      88.65433217773946
+    ],
+    [
+      -18.615733667538834,
+      -5.306124041638661,
+      89.57376739634809
+    ],
+    [
+      27.615284689348773,
+      -2.7287805679978874,
+      103.14976857900402
+    ],
+    [
+      31.819401379812135,
+      -3.445272207039153,
+      100.94725893784523
+    ],
+    [
+      29.80417854269654,
+      -4.215625678354023,
+      100.02902680790095
+    ],
+    [
+      24.788354322689667,
+      -4.762880798655971,
+      103.67463290876977
+    ],
+    [
+      -21.309803817117135,
+      -7.11644365142795,
+      88.28959086634933
+    ],
+    [
+      27.726066346510123,
+      -4.93202291707167,
+      100.74646192396196
+    ],
+    [
+      25.74874677111965,
+      -4.813040047813274,
+      102.83801559943187
+    ],
+    [
+      26.030073656348044,
+      -3.5309850132589773,
+      103.16720108929222
+    ],
+    [
+      26.76382543022315,
+      -4.777452045430721,
+      101.60377685653269
+    ],
+    [
+      31.064515052704465,
+      -3.911572515981348,
+      100.12564347851625
+    ],
+    [
+      32.22220186875278,
+      -3.882841749324797,
+      102.87303109330232
+    ],
+    [
+      31.79912208973105,
+      -3.8788928995611727,
+      100.43965382366473
+    ],
+    [
+      26.474008975343203,
+      -5.13664031865931,
+      102.51530915803919
+    ],
+    [
+      23.129144472506745,
+      -6.004233847183009,
+      103.65656703995069
+    ],
+    [
+      32.03334050312079,
+      -4.265602693491573,
+      101.23785834328179
+    ],
+    [
+      24.448902672557075,
+      -5.57657129028707,
+      103.2229625912032
+    ],
+    [
+      30.783118941187027,
+      -4.524851136082738,
+      101.02097943487033
+    ],
+    [
+      31.826654491097944,
+      -4.591479151965395,
+      100.04686422833707
+    ],
+    [
+      29.93395588807456,
+      -5.583842566497772,
+      100.10117619529188
+    ],
+    [
+      28.50229051407625,
+      -5.2790541783561835,
+      100.73919985608238
+    ],
+    [
+      25.2476994131106,
+      -5.84585430213496,
+      103.04245934334067
+    ],
+    [
+      27.595945207413564,
+      -5.536490181959309,
+      102.07045586619377
+    ],
+    [
+      30.15379670969572,
+      -6.6084938652987475,
+      100.77201435957483
+    ],
+    [
+      24.379000225460793,
+      -6.399464293783836,
+      103.15813386963984
+    ],
+    [
+      25.6858909371667,
+      -6.013971281219078,
+      102.51205851808155
+    ],
+    [
+      31.412915937388632,
+      -5.13112642297034,
+      99.76599823956992
+    ],
+    [
+      26.79688655091006,
+      -6.108237867283691,
+      102.09897169062144
+    ],
+    [
+      24.952163575426844,
+      -6.738421907149494,
+      103.16942135656622
+    ],
+    [
+      29.20625435251127,
+      -6.207182653635563,
+      101.04625120079803
+    ],
+    [
+      27.9807298756786,
+      -6.323258838310629,
+      101.66518454531723
+    ],
+    [
+      -23.06958528116529,
+      -6.207381696493549,
+      88.6038098989478
+    ],
+    [
+      32.16306160541152,
+      -5.618119045086864,
+      101.34084880721238
+    ],
+    [
+      26.576182400872035,
+      -7.158793761873163,
+      102.60611559273372
+    ],
+    [
+      31.96269557168779,
+      -5.847841268748624,
+      100.02556571147883
+    ],
+    [
+      31.316078815807806,
+      -6.360475653007306,
+      100.11920515577951
+    ],
+    [
+      28.6475872678911,
+      -7.209771214950493,
+      101.50616693738833
+    ],
+    [
+      -18.857086206771783,
+      -7.505919029750899,
+      90.45446574464837
+    ],
+    [
+      -24.501792308411687,
+      -3.864046912085165,
+      89.92756997054072
+    ],
+    [
+      29.8859228406782,
+      -7.340040394796283,
+      100.98884899182718
+    ],
+    [
+      31.319733491919482,
+      -7.182348520391521,
+      100.49207000613848
+    ],
+    [
+      -23.212467747619236,
+      -4.937412539654353,
+      88.50061040938245
+    ],
+    [
+      27.954387821986693,
+      -7.726785235255029,
+      102.27384460564959
+    ],
+    [
+      29.309930179572717,
+      -7.941278524624735,
+      101.6729616569963
+    ],
+    [
+      -21.71137438543827,
+      -5.776179954774527,
+      88.33498687969052
+    ],
+    [
+      27.40187050960806,
+      -8.161675773085257,
+      103.3505031229699
+    ],
+    [
+      32.23102394785933,
+      -7.43004525443542,
+      100.6689494538934
+    ],
+    [
+      32.478054431124534,
+      -6.827266782556073,
+      102.81571078578011
+    ],
+    [
+      31.671425392469075,
+      -8.05627513639088,
+      101.05861672602228
+    ],
+    [
+      30.38563630524985,
+      -8.389147336578326,
+      101.79474274016168
+    ],
+    [
+      29.283791991124563,
+      -8.49963387391007,
+      102.69170899066623
+    ],
+    [
+      29.568575155668665,
+      -8.723416619535364,
+      103.64756097449148
+    ],
+    [
+      32.343578834903255,
+      -8.055887359854935,
+      101.2961107854292
+    ],
+    [
+      32.40183227049472,
+      -8.317936025679252,
+      102.49046163308655
+    ],
+    [
+      30.58750714188501,
+      -8.89086266350266,
+      103.0253935869816
+    ],
+    [
+      31.471287288155875,
+      -8.78381389673062,
+      102.30599094300162
+    ],
+    [
+      27.585983524907284,
+      -3.9451339250122146,
+      101.46074638328417
+    ],
+    [
+      -21.36255177604596,
+      -6.459000610990067,
+      87.64867177590375
+    ],
+    [
+      -18.522608389355256,
+      -6.03125277657476,
+      90.7205414170182
+    ],
+    [
+      -21.818879396439684,
+      -8.678497580210284,
+      88.69652090895853
+    ],
+    [
+      -21.558217041876404,
+      -3.498639148592865,
+      89.81804400555981
+    ],
+    [
+      -21.215174264087196,
+      -8.528147981361819,
+      88.68928656814177
+    ],
+    [
+      32.03156229295029,
+      -3.4763116250090036,
+      102.04050929189454
+    ],
+    [
+      32.02296730722129,
+      -3.1261750485019704,
+      101.89640726613598
+    ],
+    [
+      23.866182648448348,
+      -3.9464041891961728,
+      103.40407766761172
+    ]
+  ]
+}

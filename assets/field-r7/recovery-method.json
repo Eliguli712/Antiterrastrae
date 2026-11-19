@@ -1,0 +1,31 @@
+{
+  "revision": "R7",
+  "cases": {
+    "50": {
+      "source_solution_sha256": "5c02c1938617d3943815b50c7264922742c08aa1b436d7d8306a3d6ee5121363",
+      "nodal_recovery": "Volume-weighted arithmetic average of incident element von Mises scalars; subsequent containing-tetrahedron barycentric interpolation, with true closest-boundary interpolation only for near exterior points. Display recovery, not another FEM solve.",
+      "nodes": 181357,
+      "elements": 948322,
+      "boundary_faces": 41608,
+      "zero_elements": 367,
+      "zero_recovered_nodes": 88,
+      "min_recovered_nodal_Pa": 0.0,
+      "max_recovered_nodal_Pa": 615017758.174436,
+      "full_porous_native_FEM": false
+    },
+    "100": {
+      "source_solution_sha256": "a9e45992921f8a3ce6c90aa6898b92bfd8951a6101eeb23dfa630c8f73eea857",
+      "nodal_recovery": "Volume-weighted arithmetic average of incident element von Mises scalars; subsequent containing-tetrahedron barycentric interpolation, with true closest-boundary interpolation only for near exterior points. Display recovery, not another FEM solve.",
+      "nodes": 204789,
+      "elements": 1073103,
+      "boundary_faces": 45050,
+      "zero_elements": 367,
+      "zero_recovered_nodes": 88,
+      "min_recovered_nodal_Pa": 0.0,
+      "max_recovered_nodal_Pa": 615019706.2446463,
+      "full_porous_native_FEM": false
+    }
+  },
+  "raw_element_stress_values_unchanged": true,
+  "unmapped_values_are_never_filled_from_image_colour": true
+}

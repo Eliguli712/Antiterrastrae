@@ -1,0 +1,12 @@
+{
+  "all_source_faces_checked": 74293846,
+  "all_original_connectivity_preserved": true,
+  "maximum_display_float32_coordinate_error_mm": 7.629394474406581e-06,
+  "both_sizes_independently_solved": true,
+  "tip_convergence_criterion_verified": true,
+  "complete_native_plates_verified": 12,
+  "poster_pages_present": 12,
+  "display_fields_bitwise_identical_to_published_3mf_fields": true,
+  "release_tag": "megalodon-independent-sizes-r5",
+  "complete_exports_crc_checked": 6
+}

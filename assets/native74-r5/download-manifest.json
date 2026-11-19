@@ -1,0 +1,193 @@
+{
+  "schema": "native74-complete-exports-v1",
+  "source_sha256": "69928fc1d776a0cb2cd3da389802e0b08d226395005bbf4a2094180e90622b73",
+  "source_vertices": 37951699,
+  "source_triangles": 74293846,
+  "surface_reduction": false,
+  "files": [
+    {
+      "filename": "Megalodon_Native74_50mm_OBJ.zip",
+      "size_mm": 50,
+      "format": "OBJ",
+      "bytes": 1397547711,
+      "sha256": "b21c89b5d26fbfae63b63150fa22e1fef2d035917a034d00d537b1cc6a43a4dd",
+      "triangles": 74293846,
+      "vertices": 37951699,
+      "vertices_note": "Original shared vertices",
+      "units": "mm",
+      "properties": "50mm-properties.json",
+      "validation": {
+        "vertices": 37951699,
+        "triangles": 74293846,
+        "coordinate_max_absolute_error_mm": 5.00009e-11,
+        "bounds_mm": [
+          [
+            -16.9818,
+            -5.08632,
+            1.08629e-09
+          ],
+          [
+            16.9818,
+            5.08632,
+            50
+          ]
+        ],
+        "all_zip_members_crc_passed": true,
+        "all_source_triangle_indices_and_order_identical": true
+      },
+      "url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-independent-sizes-r5/Megalodon_Native74_50mm_OBJ.zip"
+    },
+    {
+      "filename": "Megalodon_Native74_50mm_STL.zip",
+      "size_mm": 50,
+      "format": "STL",
+      "bytes": 1148794943,
+      "sha256": "c282df63f0b0258d747c150e122505bcfd297bbbe1c697dd554d4ca755f7e34e",
+      "triangles": 74293846,
+      "vertices": 222881538,
+      "vertices_note": "BinarySTL duplicates three corners per face by format",
+      "units": "mm",
+      "properties": "50mm-properties.json",
+      "validation": {
+        "all_zip_members_crc_passed": true,
+        "triangles_checked": 74293846,
+        "all_source_triangle_corner_coordinates_and_order_verified": true,
+        "coordinate_max_absolute_error_mm": 1.9073483699116878e-06,
+        "bounds_mm": [
+          [
+            -16.981773376464844,
+            -5.086317539215088,
+            1.0862919452847564e-09
+          ],
+          [
+            16.981773376464844,
+            5.08631706237793,
+            50.0
+          ]
+        ],
+        "header_unit_mm_verified": true,
+        "binary_stl_record_bytes": 50
+      },
+      "url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-independent-sizes-r5/Megalodon_Native74_50mm_STL.zip"
+    },
+    {
+      "filename": "Megalodon_Native74_50mm_Stress.3mf",
+      "size_mm": 50,
+      "format": "3MF",
+      "bytes": 1139954231,
+      "sha256": "3a703c5eddcce42fa217b0e115ce23e95afab744c46976be98fcef22e29e3a3a",
+      "triangles": 74293846,
+      "vertices": 37951699,
+      "vertices_note": "Original shared vertices",
+      "units": "mm",
+      "properties": "50mm-properties.json",
+      "validation": {
+        "all_zip_members_crc_passed": true,
+        "all_source_vertex_xml_literal_identical": true,
+        "source_vertex_xml_sha256": "eb8373f2ddf70e7ff98bc3a190f4db92e15b19e32313a529943d7c557886d4d5",
+        "all_source_triangle_indices_and_order_identical": true,
+        "all_per_corner_color_indices_verified": true,
+        "vertices_checked": 37951699,
+        "triangles_checked": 74293846,
+        "millimetre_model_unit_verified": true,
+        "print_transform_present": true
+      },
+      "url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-independent-sizes-r5/Megalodon_Native74_50mm_Stress.3mf"
+    },
+    {
+      "filename": "Megalodon_Native74_100mm_OBJ.zip",
+      "size_mm": 100,
+      "format": "OBJ",
+      "bytes": 1404271594,
+      "sha256": "69d488f997c28ff132a95ace0f7221db029431a6144993e21ae3826e0064fd96",
+      "triangles": 74293846,
+      "vertices": 37951699,
+      "vertices_note": "Original shared vertices",
+      "units": "mm",
+      "properties": "100mm-properties.json",
+      "validation": {
+        "vertices": 37951699,
+        "triangles": 74293846,
+        "coordinate_max_absolute_error_mm": 5.00009e-11,
+        "bounds_mm": [
+          [
+            -33.9635,
+            -10.1726,
+            2.17258e-09
+          ],
+          [
+            33.9635,
+            10.1726,
+            100
+          ]
+        ],
+        "all_zip_members_crc_passed": true,
+        "all_source_triangle_indices_and_order_identical": true
+      },
+      "url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-independent-sizes-r5/Megalodon_Native74_100mm_OBJ.zip"
+    },
+    {
+      "filename": "Megalodon_Native74_100mm_STL.zip",
+      "size_mm": 100,
+      "format": "STL",
+      "bytes": 1148583031,
+      "sha256": "7b38fea0e65f4424dbe24478484487ab61914b45e65fc2cbdd7b1a5e566e5022",
+      "triangles": 74293846,
+      "vertices": 222881538,
+      "vertices_note": "BinarySTL duplicates three corners per face by format",
+      "units": "mm",
+      "properties": "100mm-properties.json",
+      "validation": {
+        "all_zip_members_crc_passed": true,
+        "triangles_checked": 74293846,
+        "all_source_triangle_corner_coordinates_and_order_verified": true,
+        "coordinate_max_absolute_error_mm": 3.8146967398233755e-06,
+        "bounds_mm": [
+          [
+            -33.96354675292969,
+            -10.172635078430176,
+            2.1725838905695127e-09
+          ],
+          [
+            33.96354675292969,
+            10.17263412475586,
+            100.0
+          ]
+        ],
+        "header_unit_mm_verified": true,
+        "binary_stl_record_bytes": 50
+      },
+      "url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-independent-sizes-r5/Megalodon_Native74_100mm_STL.zip"
+    },
+    {
+      "filename": "Megalodon_Native74_100mm_Stress.3mf",
+      "size_mm": 100,
+      "format": "3MF",
+      "bytes": 1141054690,
+      "sha256": "b6098d6138e76652c75c308f52394d5b51449f6b9a2635e90969bb23f93301db",
+      "triangles": 74293846,
+      "vertices": 37951699,
+      "vertices_note": "Original shared vertices",
+      "units": "mm",
+      "properties": "100mm-properties.json",
+      "validation": {
+        "all_zip_members_crc_passed": true,
+        "all_source_vertex_xml_literal_identical": true,
+        "source_vertex_xml_sha256": "eb8373f2ddf70e7ff98bc3a190f4db92e15b19e32313a529943d7c557886d4d5",
+        "all_source_triangle_indices_and_order_identical": true,
+        "all_per_corner_color_indices_verified": true,
+        "vertices_checked": 37951699,
+        "triangles_checked": 74293846,
+        "millimetre_model_unit_verified": true,
+        "print_transform_present": true
+      },
+      "url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-independent-sizes-r5/Megalodon_Native74_100mm_Stress.3mf"
+    }
+  ],
+  "properties_files": [
+    "50mm-properties.json",
+    "100mm-properties.json"
+  ],
+  "release_tag": "megalodon-independent-sizes-r5",
+  "status": "verified_and_published"
+}

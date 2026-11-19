@@ -1,0 +1,47 @@
+{
+  "native_source_faces_rendered_per_camera": 74293846,
+  "recovery": "R7 volume containment / true boundary projection",
+  "raw_solved_element_stresses_unchanged": true,
+  "unsupported_stream_vertices": 0,
+  "zero_is_colour_minimum": true,
+  "physical_scale": 0.5,
+  "source_solution_sha256": "5c02c1938617d3943815b50c7264922742c08aa1b436d7d8306a3d6ee5121363",
+  "plates": [
+    {
+      "file": "50mm-spectrum-reverse.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 219690
+    },
+    {
+      "file": "50mm-spectrum-front.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 223730
+    },
+    {
+      "file": "50mm-wash-oblique.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 223186
+    },
+    {
+      "file": "50mm-wash-front.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 194848
+    },
+    {
+      "file": "50mm-wash-reverse.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 188120
+    },
+    {
+      "file": "50mm-spectrum-oblique.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 249218
+    }
+  ]
+}

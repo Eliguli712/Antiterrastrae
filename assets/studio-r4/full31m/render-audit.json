@@ -1,0 +1,40 @@
+{
+  "faces_per_view": 31999434,
+  "face_reduction": false,
+  "width": 1600,
+  "height": 1900,
+  "source_sha256": "88007a9df60462b646e8bec3018e73add3cbc7069929f69f2ff40f250301fd6e",
+  "source_solution_sha256": "78eec317bf22fc3c89cd6f79dfbf786e7a718958eea0982daf762e05f9161da6",
+  "plates": [
+    {
+      "file": "spectrum-reverse.webp",
+      "sha256": "b59f3798afaab843aa0688fec425b940f3c4d58eccfee435f97b80c307a8f69f",
+      "bytes": 220954
+    },
+    {
+      "file": "spectrum-front.webp",
+      "sha256": "5367f7c63003af4058b26cbf29092e9db963ac74449248e5645122b56e5ebcb4",
+      "bytes": 211172
+    },
+    {
+      "file": "wash-oblique.webp",
+      "sha256": "0c7993a3994591e620bd625453544400b787681086d1efc2acd0cf420493740e",
+      "bytes": 166896
+    },
+    {
+      "file": "wash-front.webp",
+      "sha256": "4ed1066bd1ea1e9b3134aed2b6999f4c10e3595a9a8dbbbc2972ff5e8c409cc1",
+      "bytes": 163058
+    },
+    {
+      "file": "wash-reverse.webp",
+      "sha256": "484b22fe0357c1092ce023bcb76226464947adafcb2a4591957695275be73f02",
+      "bytes": 177308
+    },
+    {
+      "file": "spectrum-oblique.webp",
+      "sha256": "3b86f2888a45f6b8856053873bc6cbe7efd6fbc64a5da637dcf0eaa3ebba6f88",
+      "bytes": 217286
+    }
+  ]
+}

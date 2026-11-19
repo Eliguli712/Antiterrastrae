@@ -1,0 +1,47 @@
+{
+  "triangles_per_view": 74293846,
+  "face_reduction": false,
+  "light_and_camera_shared_between_sizes": true,
+  "physical_tooth_scale": 1.0,
+  "support_revision": "R6",
+  "source_solution_sha256": "a9e45992921f8a3ce6c90aa6898b92bfd8951a6101eeb23dfa630c8f73eea857",
+  "source_geometry_sha256": "69928fc1d776a0cb2cd3da389802e0b08d226395005bbf4a2094180e90622b73",
+  "plates": [
+    {
+      "file": "100mm-spectrum-reverse.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 537950
+    },
+    {
+      "file": "100mm-spectrum-front.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 553028
+    },
+    {
+      "file": "100mm-wash-oblique.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 437794
+    },
+    {
+      "file": "100mm-wash-front.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 437468
+    },
+    {
+      "file": "100mm-wash-reverse.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 412470
+    },
+    {
+      "file": "100mm-spectrum-oblique.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 541272
+    }
+  ]
+}

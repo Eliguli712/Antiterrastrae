@@ -1,0 +1,15 @@
+{
+  "50": {
+    "verified_chunks": 75,
+    "finite_values": 39428327,
+    "retained_zero_values": 55733,
+    "unsupported": 0
+  },
+  "100": {
+    "verified_chunks": 75,
+    "finite_values": 39428327,
+    "retained_zero_values": 55733,
+    "unsupported": 0
+  },
+  "largest_asset_bytes": 16777216
+}

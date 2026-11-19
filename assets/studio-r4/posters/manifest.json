@@ -1,0 +1,457 @@
+{
+  "schema": "source-to-sculpture-poster-assets-v1",
+  "source_content_modified": false,
+  "renderer": {
+    "engine": "MuPDF / PyMuPDF 1.26.6",
+    "intermediate": "PNG",
+    "jpeg_encoder": "Pillow",
+    "image_width_px": 1700,
+    "thumbnail_width_px": 360,
+    "jpeg_quality": 94,
+    "chroma_subsampling": "4:4:4",
+    "progressive": true
+  },
+  "website_label_languages": [
+    "en",
+    "de",
+    "el"
+  ],
+  "languages": [
+    {
+      "language": "en",
+      "language_names": {
+        "en": "English",
+        "de": "Englisch",
+        "el": "Αγγλικά"
+      },
+      "page_count": 4,
+      "source": {
+        "file": "en/source.pdf",
+        "original_filename": "Source_to_Sculpture_Interstellar_v6_EN.pdf",
+        "mime_type": "application/pdf",
+        "size_bytes": 8432995,
+        "sha256": "3ce769303f2a6bb5e4bb3c3112088b5b4d4f22bb074c7c5ad90f00845b643d23",
+        "unchanged": true,
+        "page_dimensions_pt": [
+          [
+            612.0,
+            792.0
+          ],
+          [
+            612.0,
+            792.0
+          ],
+          [
+            612.0,
+            792.0
+          ],
+          [
+            612.0,
+            792.0
+          ]
+        ]
+      },
+      "pages": [
+        {
+          "page": 1,
+          "labels": {
+            "en": "Cover",
+            "de": "Titelblatt",
+            "el": "Εξώφυλλο"
+          },
+          "source_page_width_pt": 612.0,
+          "source_page_height_pt": 792.0,
+          "image": {
+            "file": "en/page-01.jpg",
+            "width_px": 1700,
+            "height_px": 2200,
+            "size_bytes": 445313,
+            "sha256": "7ae052f774a48f05c5803cbeb3a7a674cb3dd37df394e7efda062c2eb01e2fd4",
+            "mime_type": "image/jpeg"
+          },
+          "thumbnail": {
+            "file": "en/thumb-01.jpg",
+            "width_px": 360,
+            "height_px": 466,
+            "size_bytes": 35645,
+            "sha256": "484c822651b4bcbf3de9e66ec1386799f2cf7b227a38cf3264d5370ba7e34adf",
+            "mime_type": "image/jpeg"
+          }
+        },
+        {
+          "page": 2,
+          "labels": {
+            "en": "Workflow",
+            "de": "Arbeitsablauf",
+            "el": "Διαδικασία"
+          },
+          "source_page_width_pt": 612.0,
+          "source_page_height_pt": 792.0,
+          "image": {
+            "file": "en/page-02.jpg",
+            "width_px": 1700,
+            "height_px": 2200,
+            "size_bytes": 407422,
+            "sha256": "bc5345236f350fe1f13503efd185a0bba2e8b64459f0b9a937bbec60de1bd6c1",
+            "mime_type": "image/jpeg"
+          },
+          "thumbnail": {
+            "file": "en/thumb-02.jpg",
+            "width_px": 360,
+            "height_px": 466,
+            "size_bytes": 37359,
+            "sha256": "7778a129dba6ec37d57b434800e5d4803ea0dc393ea0a849b5c3db4d5f1b22f1",
+            "mime_type": "image/jpeg"
+          }
+        },
+        {
+          "page": 3,
+          "labels": {
+            "en": "Pearlescent anatomy",
+            "de": "Anatomie in Perlglanz",
+            "el": "Ανατομία σε περλέ αποχρώσεις"
+          },
+          "source_page_width_pt": 612.0,
+          "source_page_height_pt": 792.0,
+          "image": {
+            "file": "en/page-03.jpg",
+            "width_px": 1700,
+            "height_px": 2200,
+            "size_bytes": 633979,
+            "sha256": "63a9ca6e1a9a9e9f10917f3527c1c6f6d224d8ad038dbe485101be5287585b5e",
+            "mime_type": "image/jpeg"
+          },
+          "thumbnail": {
+            "file": "en/thumb-03.jpg",
+            "width_px": 360,
+            "height_px": 466,
+            "size_bytes": 52230,
+            "sha256": "f5dd9f3e8d150ca2e03987d89cafa6b0ee36ef1bfd7b5a7cabd1a34781c54496",
+            "mime_type": "image/jpeg"
+          }
+        },
+        {
+          "page": 4,
+          "labels": {
+            "en": "Artist & research",
+            "de": "Künstlerische Praxis & Forschung",
+            "el": "Καλλιτέχνης και έρευνα"
+          },
+          "source_page_width_pt": 612.0,
+          "source_page_height_pt": 792.0,
+          "image": {
+            "file": "en/page-04.jpg",
+            "width_px": 1700,
+            "height_px": 2200,
+            "size_bytes": 422685,
+            "sha256": "a81ea7d3dff9e5c0539cd0095bfed3d8cd3f113e6b5439710ff88039da50bc6a",
+            "mime_type": "image/jpeg"
+          },
+          "thumbnail": {
+            "file": "en/thumb-04.jpg",
+            "width_px": 360,
+            "height_px": 466,
+            "size_bytes": 37415,
+            "sha256": "229f12518bb42a84513223b9772b71b5cc38d2b8d8b2a0368a50182b08a4567c",
+            "mime_type": "image/jpeg"
+          }
+        }
+      ]
+    },
+    {
+      "language": "de",
+      "language_names": {
+        "en": "German",
+        "de": "Deutsch",
+        "el": "Γερμανικά"
+      },
+      "page_count": 4,
+      "source": {
+        "file": "de/source.pdf",
+        "original_filename": "Source_to_Sculpture_Interstellar_v6_DE.pdf",
+        "mime_type": "application/pdf",
+        "size_bytes": 8538688,
+        "sha256": "455d86972729cfd5322a6caa023d402245ad4011ec4356a2fd016cb4ba16e4a5",
+        "unchanged": true,
+        "page_dimensions_pt": [
+          [
+            612.0,
+            792.0
+          ],
+          [
+            612.0,
+            792.0
+          ],
+          [
+            612.0,
+            792.0
+          ],
+          [
+            612.0,
+            792.0
+          ]
+        ]
+      },
+      "pages": [
+        {
+          "page": 1,
+          "labels": {
+            "en": "Cover",
+            "de": "Titelblatt",
+            "el": "Εξώφυλλο"
+          },
+          "source_page_width_pt": 612.0,
+          "source_page_height_pt": 792.0,
+          "image": {
+            "file": "de/page-01.jpg",
+            "width_px": 1700,
+            "height_px": 2200,
+            "size_bytes": 453264,
+            "sha256": "3d54d0e1d1b8d71030d64e702f3a1d6396178bd8417cbe179e6d8fee99b7e5ef",
+            "mime_type": "image/jpeg"
+          },
+          "thumbnail": {
+            "file": "de/thumb-01.jpg",
+            "width_px": 360,
+            "height_px": 466,
+            "size_bytes": 36380,
+            "sha256": "ee33c26ad73cdccbf9845023c2fea1aaf0949f86b623153d9d68e83a46ecc6a7",
+            "mime_type": "image/jpeg"
+          }
+        },
+        {
+          "page": 2,
+          "labels": {
+            "en": "Workflow",
+            "de": "Arbeitsablauf",
+            "el": "Διαδικασία"
+          },
+          "source_page_width_pt": 612.0,
+          "source_page_height_pt": 792.0,
+          "image": {
+            "file": "de/page-02.jpg",
+            "width_px": 1700,
+            "height_px": 2200,
+            "size_bytes": 437917,
+            "sha256": "9c976f487ec562d8e609cf4c4c643cd01ddc802f45c5c8cb9b0c1def2bbe59bc",
+            "mime_type": "image/jpeg"
+          },
+          "thumbnail": {
+            "file": "de/thumb-02.jpg",
+            "width_px": 360,
+            "height_px": 466,
+            "size_bytes": 40042,
+            "sha256": "f0113814f76fcd4f53abdca3d0b1da148f5c73a8db9340a9bb09b99fe4de95b8",
+            "mime_type": "image/jpeg"
+          }
+        },
+        {
+          "page": 3,
+          "labels": {
+            "en": "Pearlescent anatomy",
+            "de": "Anatomie in Perlglanz",
+            "el": "Ανατομία σε περλέ αποχρώσεις"
+          },
+          "source_page_width_pt": 612.0,
+          "source_page_height_pt": 792.0,
+          "image": {
+            "file": "de/page-03.jpg",
+            "width_px": 1700,
+            "height_px": 2200,
+            "size_bytes": 633074,
+            "sha256": "e9b41b361020269a1d6ef09f53b359e4cb937e84912c4055f774145609f52481",
+            "mime_type": "image/jpeg"
+          },
+          "thumbnail": {
+            "file": "de/thumb-03.jpg",
+            "width_px": 360,
+            "height_px": 466,
+            "size_bytes": 51933,
+            "sha256": "7557039d52d44025f730a8574bb8890e1edb40a47680ef17ddcea8827677f126",
+            "mime_type": "image/jpeg"
+          }
+        },
+        {
+          "page": 4,
+          "labels": {
+            "en": "Artist & research",
+            "de": "Künstlerische Praxis & Forschung",
+            "el": "Καλλιτέχνης και έρευνα"
+          },
+          "source_page_width_pt": 612.0,
+          "source_page_height_pt": 792.0,
+          "image": {
+            "file": "de/page-04.jpg",
+            "width_px": 1700,
+            "height_px": 2200,
+            "size_bytes": 443669,
+            "sha256": "27136eb80aca68b0f945418aeb9669e3449047ca1eb3244a75b86a93556403f5",
+            "mime_type": "image/jpeg"
+          },
+          "thumbnail": {
+            "file": "de/thumb-04.jpg",
+            "width_px": 360,
+            "height_px": 466,
+            "size_bytes": 38793,
+            "sha256": "8b1865fb607a3fc3160c20e5c2eb39ac53e24f782f1ebea6572c8048f187c6e5",
+            "mime_type": "image/jpeg"
+          }
+        }
+      ]
+    },
+    {
+      "language": "it",
+      "language_names": {
+        "en": "Italian",
+        "de": "Italienisch",
+        "el": "Ιταλικά"
+      },
+      "page_count": 4,
+      "source": {
+        "file": "it/source.pdf",
+        "original_filename": "Source_to_Sculpture_Interstellar_v6_IT.pdf",
+        "mime_type": "application/pdf",
+        "size_bytes": 8360172,
+        "sha256": "5574e87800d40ee6542809fc597251e769e438b2da191652a3705cccd61ddc0c",
+        "unchanged": true,
+        "page_dimensions_pt": [
+          [
+            612.0,
+            792.0
+          ],
+          [
+            612.0,
+            792.0
+          ],
+          [
+            612.0,
+            792.0
+          ],
+          [
+            612.0,
+            792.0
+          ]
+        ]
+      },
+      "pages": [
+        {
+          "page": 1,
+          "labels": {
+            "en": "Cover",
+            "de": "Titelblatt",
+            "el": "Εξώφυλλο"
+          },
+          "source_page_width_pt": 612.0,
+          "source_page_height_pt": 792.0,
+          "image": {
+            "file": "it/page-01.jpg",
+            "width_px": 1700,
+            "height_px": 2200,
+            "size_bytes": 443766,
+            "sha256": "e431e0e766fd09d4da6d5c121a25ab036c1bb7aea3e281a11137172d827165f8",
+            "mime_type": "image/jpeg"
+          },
+          "thumbnail": {
+            "file": "it/thumb-01.jpg",
+            "width_px": 360,
+            "height_px": 466,
+            "size_bytes": 35524,
+            "sha256": "fd721d4381739d99adb593580366cd9f0f39d851e519289eb323b4f79a269174",
+            "mime_type": "image/jpeg"
+          }
+        },
+        {
+          "page": 2,
+          "labels": {
+            "en": "Workflow",
+            "de": "Arbeitsablauf",
+            "el": "Διαδικασία"
+          },
+          "source_page_width_pt": 612.0,
+          "source_page_height_pt": 792.0,
+          "image": {
+            "file": "it/page-02.jpg",
+            "width_px": 1700,
+            "height_px": 2200,
+            "size_bytes": 422500,
+            "sha256": "f556598be530c444db3c44de1d87f53bb0e8f326897f4ff9763565714cc103c5",
+            "mime_type": "image/jpeg"
+          },
+          "thumbnail": {
+            "file": "it/thumb-02.jpg",
+            "width_px": 360,
+            "height_px": 466,
+            "size_bytes": 38803,
+            "sha256": "9a36701084066288316f982aa45a40b7cdf73c07c350cc6b075da6a1fc84e385",
+            "mime_type": "image/jpeg"
+          }
+        },
+        {
+          "page": 3,
+          "labels": {
+            "en": "Pearlescent anatomy",
+            "de": "Anatomie in Perlglanz",
+            "el": "Ανατομία σε περλέ αποχρώσεις"
+          },
+          "source_page_width_pt": 612.0,
+          "source_page_height_pt": 792.0,
+          "image": {
+            "file": "it/page-03.jpg",
+            "width_px": 1700,
+            "height_px": 2200,
+            "size_bytes": 635589,
+            "sha256": "6d43052ae4cad0af037d973b3788ff6c89c46a000c7dbbd6504c176d01efac05",
+            "mime_type": "image/jpeg"
+          },
+          "thumbnail": {
+            "file": "it/thumb-03.jpg",
+            "width_px": 360,
+            "height_px": 466,
+            "size_bytes": 52073,
+            "sha256": "539c746d615209b00ecd4bdcc58b8018430bbc4093939507eb8100a8f1f19fe8",
+            "mime_type": "image/jpeg"
+          }
+        },
+        {
+          "page": 4,
+          "labels": {
+            "en": "Artist & research",
+            "de": "Künstlerische Praxis & Forschung",
+            "el": "Καλλιτέχνης και έρευνα"
+          },
+          "source_page_width_pt": 612.0,
+          "source_page_height_pt": 792.0,
+          "image": {
+            "file": "it/page-04.jpg",
+            "width_px": 1700,
+            "height_px": 2200,
+            "size_bytes": 422109,
+            "sha256": "443c940d8ce4d34644e9940388c5d27d11be5a8f5d5109c125cf0901d5a09b30",
+            "mime_type": "image/jpeg"
+          },
+          "thumbnail": {
+            "file": "it/thumb-04.jpg",
+            "width_px": 360,
+            "height_px": 466,
+            "size_bytes": 36460,
+            "sha256": "e9d04057e399317762c0b95c81d955008fe97ed8de4c0630427e25e33c3fbfc6",
+            "mime_type": "image/jpeg"
+          }
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "unchanged_source_pdf_copies": true,
+    "all_page_rasters_match_independent_render": true,
+    "checked_pages": 12,
+    "master_dimensions_px": [
+      1700,
+      2200
+    ],
+    "thumbnail_dimensions_px": [
+      360,
+      466
+    ]
+  }
+}

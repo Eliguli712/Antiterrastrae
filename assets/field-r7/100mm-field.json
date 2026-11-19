@@ -1,0 +1,422 @@
+{
+  "schema": "native74-recovered-boundary-field-r7",
+  "nominal_native_height_mm": 100,
+  "source_solution_sha256": "a9e45992921f8a3ce6c90aa6898b92bfd8951a6101eeb23dfa630c8f73eea857",
+  "projection": "Containing-tetrahedron barycentric interpolation of volume-weighted recovered nodal von Mises; true closest-boundary interpolation only for near exterior points. Not a new porous-domain FEM solve.",
+  "distance_cutoff_print_mm": 1.4525550960694056,
+  "units": "Pa",
+  "threshold_pa": 33072067.260742188,
+  "color_scale": {
+    "min_pa": 253167.0947190341,
+    "max_pa": 250522132.6467093,
+    "transform": "log",
+    "zero": "Zero is retained numerically and coloured at the lowest palette endpoint.",
+    "unsupported": "Only genuinely unsupported distance remains NaN, never reconstructed from image colour."
+  },
+  "stream_local_vertices_include_chunk_overlap": true,
+  "chunks": [
+    {
+      "url": "../field-r7/100mm-field-00.bin.gz",
+      "bytes": 1776144,
+      "sha256": "93258156c98a4df376fba1357284bc9a061c73fe426b62de7e3b04f8664c92b7"
+    },
+    {
+      "url": "../field-r7/100mm-field-01.bin.gz",
+      "bytes": 1777980,
+      "sha256": "93e6a0c88e5ec7e609cf92a8f6e8ff0a060590c99a44ee66bc0f39d446a582e7"
+    },
+    {
+      "url": "../field-r7/100mm-field-02.bin.gz",
+      "bytes": 1765652,
+      "sha256": "af2c2b7a22e1dc2ccdaaaafc8901538abc9402d936c1e80f2e868a7f74dc0e21"
+    },
+    {
+      "url": "../field-r7/100mm-field-03.bin.gz",
+      "bytes": 1760485,
+      "sha256": "b7edb063e335ee2eddde86aaccdb0c7d58b5032015044df98fb6d5d51ce08794"
+    },
+    {
+      "url": "../field-r7/100mm-field-04.bin.gz",
+      "bytes": 1738347,
+      "sha256": "534c6a489ae612b48afc9b28fa5dcbdfabc24c7880eedd5a20ef4be67e56b50a"
+    },
+    {
+      "url": "../field-r7/100mm-field-05.bin.gz",
+      "bytes": 1716089,
+      "sha256": "924d0c049e325cdef520aaf3fafd0877117c48892eef52074a4edcea1955d031"
+    },
+    {
+      "url": "../field-r7/100mm-field-06.bin.gz",
+      "bytes": 1713679,
+      "sha256": "f5dc9fd06b020f68a5b7043aa493e1347ff8f444cac0e23e71e826da27cbb3e8"
+    },
+    {
+      "url": "../field-r7/100mm-field-07.bin.gz",
+      "bytes": 1728489,
+      "sha256": "2180c388dae2f1ef19ffeae4f4a82175aa57b5bee39664fa99be25b829749f60"
+    },
+    {
+      "url": "../field-r7/100mm-field-08.bin.gz",
+      "bytes": 1744271,
+      "sha256": "53e1533ec0cabbfc7c3dbde35beeab7bffe209071873b7ef5c52fd8fcd17a138"
+    },
+    {
+      "url": "../field-r7/100mm-field-09.bin.gz",
+      "bytes": 1756134,
+      "sha256": "e7fb9d5d26ffc0577c400034371da3355dff7533d94ebacf49ce56c7ccf1c2a1"
+    },
+    {
+      "url": "../field-r7/100mm-field-10.bin.gz",
+      "bytes": 1773358,
+      "sha256": "60306afc6e1abaec7ef21b6104ebbea7235597697a6ac21a62bf04b34b73be62"
+    },
+    {
+      "url": "../field-r7/100mm-field-11.bin.gz",
+      "bytes": 1783514,
+      "sha256": "8c100599561106fac50dbea3f7826033952cb79034612fecff68506d90070baa"
+    },
+    {
+      "url": "../field-r7/100mm-field-12.bin.gz",
+      "bytes": 1792963,
+      "sha256": "50b251e0975535b1dd9b1333fba528cf8946e7e928713acf37c4f9696370cea8"
+    },
+    {
+      "url": "../field-r7/100mm-field-13.bin.gz",
+      "bytes": 1767258,
+      "sha256": "e4d2e80e33c1170b3e910bab52193bac0e3800bbe0ff5b2d88240ce54d3732c5"
+    },
+    {
+      "url": "../field-r7/100mm-field-14.bin.gz",
+      "bytes": 1796769,
+      "sha256": "1ea07f2e7aacf7afbc26f34ed4e839e11ba17e99821508052d89f6e599d59b02"
+    },
+    {
+      "url": "../field-r7/100mm-field-15.bin.gz",
+      "bytes": 1806993,
+      "sha256": "2455b519e9eb41327f78480d433df53a4dd3663c668a334b9b04da92a75e4d8a"
+    },
+    {
+      "url": "../field-r7/100mm-field-16.bin.gz",
+      "bytes": 1809655,
+      "sha256": "4a1a05f56aa5b40eb2a3c1c5d1f0e8369879c87253859cd5a8e58f07b0a5bcb5"
+    },
+    {
+      "url": "../field-r7/100mm-field-17.bin.gz",
+      "bytes": 1823343,
+      "sha256": "b580d1b1956a504acd46aebadef76ce41c366c44da4b819762ce720c4878eb27"
+    },
+    {
+      "url": "../field-r7/100mm-field-18.bin.gz",
+      "bytes": 1828187,
+      "sha256": "b77c089128c7cae35207b45409d3ec37aa8e2c6db6f93dee0b17eea685b436a4"
+    },
+    {
+      "url": "../field-r7/100mm-field-19.bin.gz",
+      "bytes": 1839504,
+      "sha256": "67a6c69643d513ab7acf699ed3162d741bb4a0c85d7e45d4f596d24732a3d91c"
+    },
+    {
+      "url": "../field-r7/100mm-field-20.bin.gz",
+      "bytes": 1770731,
+      "sha256": "4af3f3cab27f7350951b5c6214bc1d56c457a54760de1d9e13b4448fa50d76ba"
+    },
+    {
+      "url": "../field-r7/100mm-field-21.bin.gz",
+      "bytes": 1863927,
+      "sha256": "6bd452675dbb16e46a4bb91c5305489313a7bc41bed8ccddba2789785bb918fc"
+    },
+    {
+      "url": "../field-r7/100mm-field-22.bin.gz",
+      "bytes": 1875554,
+      "sha256": "e334d7cff56d7234de62cbf9ba80b798964c7361c6856854a13ae4bfab98315e"
+    },
+    {
+      "url": "../field-r7/100mm-field-23.bin.gz",
+      "bytes": 1881824,
+      "sha256": "0e2e80b0b3edc9a146a28cf29b86c9fc60645850f16c21f0141b17c23734f912"
+    },
+    {
+      "url": "../field-r7/100mm-field-24.bin.gz",
+      "bytes": 1889979,
+      "sha256": "661392c288e4467e1b1a990b081f49ac57a35ea018bb65fae96e9d2e1309e0d5"
+    },
+    {
+      "url": "../field-r7/100mm-field-25.bin.gz",
+      "bytes": 1890930,
+      "sha256": "86d664be895e5503e73214dc53a5a9be376be827a1d0285aa11f1f0d75d50764"
+    },
+    {
+      "url": "../field-r7/100mm-field-26.bin.gz",
+      "bytes": 1905105,
+      "sha256": "a88a1b6b61946499d26ba28562d019cd899028528f303837ec9a579a2e1bce9d"
+    },
+    {
+      "url": "../field-r7/100mm-field-27.bin.gz",
+      "bytes": 1911007,
+      "sha256": "7b51063d27db9ffb30e896895e448d676c30b338de0956afd469e3fb368f40f9"
+    },
+    {
+      "url": "../field-r7/100mm-field-28.bin.gz",
+      "bytes": 1924318,
+      "sha256": "5affc1f723616aa9cc46a4cf1ca3142da3e452dfa49deb93b139c715e9ff7efc"
+    },
+    {
+      "url": "../field-r7/100mm-field-29.bin.gz",
+      "bytes": 1941505,
+      "sha256": "ebd5ed751f58d6d327e0ae3b04fd2aac24232cf04d0d46c7d5a8423d7f7e04f5"
+    },
+    {
+      "url": "../field-r7/100mm-field-30.bin.gz",
+      "bytes": 1932735,
+      "sha256": "06e826367a88c197bab6acc6464df886c291d427d65a34cfc06fa92aadf09363"
+    },
+    {
+      "url": "../field-r7/100mm-field-31.bin.gz",
+      "bytes": 1841307,
+      "sha256": "8e61933c4d3105a480863f2d7e3051ddf64e0913dcf8e2b107eb3360724acfe6"
+    },
+    {
+      "url": "../field-r7/100mm-field-32.bin.gz",
+      "bytes": 1910226,
+      "sha256": "45acc8c8ae16f05158467c65b0cc0f3c152be267a79d1501d449f06a340b3c53"
+    },
+    {
+      "url": "../field-r7/100mm-field-33.bin.gz",
+      "bytes": 1948822,
+      "sha256": "48cc6cc8a99b0cb0037edd935275d973437d0649b5dc4882457143e0b1d67b43"
+    },
+    {
+      "url": "../field-r7/100mm-field-34.bin.gz",
+      "bytes": 1950282,
+      "sha256": "a60ba02ecc0b65682b1a707eae439970fb30375eb5b78df630461aea946e013a"
+    },
+    {
+      "url": "../field-r7/100mm-field-35.bin.gz",
+      "bytes": 1941608,
+      "sha256": "a3126447153c5472bcd1844f5e8acc3b5a03ff906038c843dd1e5571d166e248"
+    },
+    {
+      "url": "../field-r7/100mm-field-36.bin.gz",
+      "bytes": 1937684,
+      "sha256": "5cd7d7bc6f049f636ece3024fb5482a4f1c8cf1c58c83faab7838de0b13bc604"
+    },
+    {
+      "url": "../field-r7/100mm-field-37.bin.gz",
+      "bytes": 1938172,
+      "sha256": "3bf2ddd78d62cd62ec4dabe41e0aa6a03d91582164b449014a29dbeb27a9e43c"
+    },
+    {
+      "url": "../field-r7/100mm-field-38.bin.gz",
+      "bytes": 1939454,
+      "sha256": "536a4f6005fec5a89b62c200c5e4bb7985bfcd5e16c3ace04e4dd944ba7b6132"
+    },
+    {
+      "url": "../field-r7/100mm-field-39.bin.gz",
+      "bytes": 1932605,
+      "sha256": "c37d227418ac56572fd89d0d101fa094c0fb0505ea9c2f59b1d47b34a3c342ab"
+    },
+    {
+      "url": "../field-r7/100mm-field-40.bin.gz",
+      "bytes": 1937709,
+      "sha256": "272299e5157a59b3dc00dc19be26f96fc28df4a3aef3b84b81c4734cab2cfede"
+    },
+    {
+      "url": "../field-r7/100mm-field-41.bin.gz",
+      "bytes": 1943788,
+      "sha256": "e68f491c14b09b909017657e63d14a2c9aab7bb3206af4858897950eabf4bf0c"
+    },
+    {
+      "url": "../field-r7/100mm-field-42.bin.gz",
+      "bytes": 1946018,
+      "sha256": "d71821f2fc2668a693efe7684558cb801e0a3752adfb0bfd519011450a76351d"
+    },
+    {
+      "url": "../field-r7/100mm-field-43.bin.gz",
+      "bytes": 1938086,
+      "sha256": "5a93d10e9533a0a355b8832e13e270b96a9d315a75459ee7ebd0cb73ddf4b003"
+    },
+    {
+      "url": "../field-r7/100mm-field-44.bin.gz",
+      "bytes": 1933377,
+      "sha256": "b76e8cf678e2b8b3b6fb5718bb258cca43f8a30bb31abb03b5499f8a06adcb22"
+    },
+    {
+      "url": "../field-r7/100mm-field-45.bin.gz",
+      "bytes": 1932538,
+      "sha256": "b3d3019cca83d1e2ad42ab102e846f86d5a2bf44133948e2f0de84b2dc7e4afe"
+    },
+    {
+      "url": "../field-r7/100mm-field-46.bin.gz",
+      "bytes": 1932325,
+      "sha256": "a9ac4ce33e854acd65f1a8e0cd0ea6d91fd8a5be26c5ed7b072b2c62b44e1b6d"
+    },
+    {
+      "url": "../field-r7/100mm-field-47.bin.gz",
+      "bytes": 1901610,
+      "sha256": "3436163c9791479ffa9e1ae0b1329e21a72c03bab6cb7983456e4348591923c5"
+    },
+    {
+      "url": "../field-r7/100mm-field-48.bin.gz",
+      "bytes": 1841126,
+      "sha256": "f47a886686e18fab57953fdcf8e7ce40e598d4ece6e8407feae66c3359a81ab2"
+    },
+    {
+      "url": "../field-r7/100mm-field-49.bin.gz",
+      "bytes": 1883498,
+      "sha256": "f459613f87db9211d41e15b13bd8bafceb60df33349ed32fcbb0f47db5d4ffd1"
+    },
+    {
+      "url": "../field-r7/100mm-field-50.bin.gz",
+      "bytes": 1917468,
+      "sha256": "e8fb75604404f438e7825e902761c369815eceed04a67df4c01af4dd0db1fafc"
+    },
+    {
+      "url": "../field-r7/100mm-field-51.bin.gz",
+      "bytes": 1915542,
+      "sha256": "0638947ca105c46c7cb7c13e7136f7d4f55fb0b8c7bf110edaa3a3a9e627d672"
+    },
+    {
+      "url": "../field-r7/100mm-field-52.bin.gz",
+      "bytes": 1911959,
+      "sha256": "ed48bc157191a14405ed7960e8f2e13e2f4be28c0fc4d72e41c46349f4aa1de0"
+    },
+    {
+      "url": "../field-r7/100mm-field-53.bin.gz",
+      "bytes": 1908212,
+      "sha256": "008f73947c454c137d156e5c1437fea6df9e326ce3382eaed084d6e0b2f387e2"
+    },
+    {
+      "url": "../field-r7/100mm-field-54.bin.gz",
+      "bytes": 1906155,
+      "sha256": "8d279116a09528208eeba9d83394dc41e5397b06fbb6cba7b31758d1d0a87b8c"
+    },
+    {
+      "url": "../field-r7/100mm-field-55.bin.gz",
+      "bytes": 1901367,
+      "sha256": "f78410e3673db6ff3f7077d4b9cf4dcdf116827faf034b1d2d98848a7d2c8562"
+    },
+    {
+      "url": "../field-r7/100mm-field-56.bin.gz",
+      "bytes": 1905299,
+      "sha256": "3db2aaf136d013c16e9ec6b91b6608c4f1f346e97bbf1af7fc8cafcf29197092"
+    },
+    {
+      "url": "../field-r7/100mm-field-57.bin.gz",
+      "bytes": 1897162,
+      "sha256": "4ef1dd59b7d7befa82d8bf632ab7c2394272c33248673e6e9a1a7f7dbaf1b2fb"
+    },
+    {
+      "url": "../field-r7/100mm-field-58.bin.gz",
+      "bytes": 1892165,
+      "sha256": "63c8ba6e732e216202f854fd116bd9358956bac5f6d25002a11fa119bc5a1ff0"
+    },
+    {
+      "url": "../field-r7/100mm-field-59.bin.gz",
+      "bytes": 1891588,
+      "sha256": "66fcbf3612bcfa04e0dc4406d2f624ed051b9b175ab543499e086f25e3d82e94"
+    },
+    {
+      "url": "../field-r7/100mm-field-60.bin.gz",
+      "bytes": 1886669,
+      "sha256": "b9796903d78fc7face7b692e30bf52cc45d26b8a1ebcca8b16403bb3bf530a1e"
+    },
+    {
+      "url": "../field-r7/100mm-field-61.bin.gz",
+      "bytes": 1886081,
+      "sha256": "6bf97c94b11b7ae77ddfc3b1b5e66b8186426f0e60f5cf571555bade73c1b8b9"
+    },
+    {
+      "url": "../field-r7/100mm-field-62.bin.gz",
+      "bytes": 1879199,
+      "sha256": "a3b77be690ef9b9a2070b052ed6192b88981e76689b058d59675c757aa35179e"
+    },
+    {
+      "url": "../field-r7/100mm-field-63.bin.gz",
+      "bytes": 1868212,
+      "sha256": "c3f64f7a10c46421dcdf6ec3cea46ad3916275486a269cbc5885fbdaa65a3934"
+    },
+    {
+      "url": "../field-r7/100mm-field-64.bin.gz",
+      "bytes": 1857298,
+      "sha256": "55318f0a25dd4d679857828f7c5066dadbf64fb92ce0980963e2e1ed8ed24d67"
+    },
+    {
+      "url": "../field-r7/100mm-field-65.bin.gz",
+      "bytes": 1834130,
+      "sha256": "fbc5f00782d6a8094bb78f3e55b37110b7db1abdf606d1d2d089c3bcaf211238"
+    },
+    {
+      "url": "../field-r7/100mm-field-66.bin.gz",
+      "bytes": 1804683,
+      "sha256": "67dce1fc831ff06d59290f1afbd28bc796dba98dccd139cdeb54bb53fd429eb7"
+    },
+    {
+      "url": "../field-r7/100mm-field-67.bin.gz",
+      "bytes": 1793844,
+      "sha256": "6b104f387b8bbc4f809dafe3b13b534ca82600c125fa3476b70dd92d215a4557"
+    },
+    {
+      "url": "../field-r7/100mm-field-68.bin.gz",
+      "bytes": 1798545,
+      "sha256": "e204e34fc5bdcb7e9169c62a2f4983f2c3e2ada48d6181a893cd5f4e3c6bc1fd"
+    },
+    {
+      "url": "../field-r7/100mm-field-69.bin.gz",
+      "bytes": 1780854,
+      "sha256": "cc9b40078accbc057595cabcf62bba015a9031129ee708ccfcb62aff65954a72"
+    },
+    {
+      "url": "../field-r7/100mm-field-70.bin.gz",
+      "bytes": 1808478,
+      "sha256": "b642c335a6f8e6153c32aa16cc4ed3f5e8531561d124105c84fa54516d6162c1"
+    },
+    {
+      "url": "../field-r7/100mm-field-71.bin.gz",
+      "bytes": 1792126,
+      "sha256": "76c3e6a81badf241657229bbd49cec21b8a2f5540291501bfc459702eb81769b"
+    },
+    {
+      "url": "../field-r7/100mm-field-72.bin.gz",
+      "bytes": 1695230,
+      "sha256": "3884c1f79b6d91d2b9df63d8db85abf26bbdf91ef652b6caaf20ecd29e9d6cac"
+    },
+    {
+      "url": "../field-r7/100mm-field-73.bin.gz",
+      "bytes": 1754028,
+      "sha256": "d944c86b20fdc015ef47fd05885593c82bd244ab3d013e64504cd46966dfe2ef"
+    },
+    {
+      "url": "../field-r7/100mm-field-74.bin.gz",
+      "bytes": 422134,
+      "sha256": "8cfd33a7839508f53b3ccbd93321155ba1b7d7d348756d56faebe1e04f553cbb"
+    }
+  ],
+  "interactive": {
+    "interactive-fine.bin": {
+      "vertices": 1375557,
+      "unsupported": 0,
+      "maximum_projection_mm": 1.3792774677276611
+    },
+    "interactive-medium.bin": {
+      "vertices": 397465,
+      "unsupported": 0,
+      "maximum_projection_mm": 0.9860509634017944
+    },
+    "interactive-light.bin": {
+      "vertices": 107935,
+      "unsupported": 0,
+      "maximum_projection_mm": 0.7268989086151123
+    },
+    "tooling-tooth.bin": {
+      "vertices": 48245,
+      "unsupported": 0,
+      "maximum_projection_mm": 0.4065863788127899
+    }
+  },
+  "stream_vertices": 39428327,
+  "mapped_stream_vertices": 39428327,
+  "unsupported_stream_vertices": 0,
+  "zero_stream_vertices": 55733,
+  "maximum_boundary_projection_mm": 1.4118800163269043,
+  "reproduced_from_original_numerical_archive": true
+}

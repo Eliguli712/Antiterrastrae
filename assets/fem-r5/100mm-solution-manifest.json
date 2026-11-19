@@ -1,0 +1,22 @@
+{
+  "filename": "100mm-solution.npz",
+  "parts": [
+    {
+      "file": "100mm-solution.npz.part0",
+      "bytes": 16777216,
+      "sha256": "06eb1c17857ac1b5f5a77c37957f99765e26573beb693764dd36fbafde559af6"
+    },
+    {
+      "file": "100mm-solution.npz.part1",
+      "bytes": 16777216,
+      "sha256": "ed2e79a6045c7cb2b6f169d38d66a0d4b493bcf5f4a55a4cc92ae04f5b9bbf8f"
+    },
+    {
+      "file": "100mm-solution.npz.part2",
+      "bytes": 2650594,
+      "sha256": "ab1cec848a8c15fa7f01cf531d80677a2c0b87dd7e96aa308a3d41a2076b5991"
+    }
+  ],
+  "bytes": 36205026,
+  "sha256": "a9e45992921f8a3ce6c90aa6898b92bfd8951a6101eeb23dfa630c8f73eea857"
+}

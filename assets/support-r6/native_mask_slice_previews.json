@@ -1,0 +1,66 @@
+{
+  "schema": "native-mask-slices-exact-pixels-v1",
+  "slices": [
+    {
+      "name": "middle",
+      "file": "/workspace/scratch/798f43faaad4/native-cache/native_mask_middle_z1443.png",
+      "png_pixels_xy": [
+        746,
+        1903
+      ],
+      "source_local_z_index_0based": 1443,
+      "source_original_dicom_z_index_0based": 1519,
+      "array_indexing": "plane[iy,ix]",
+      "native_pixel_spacing_xy_mm": [
+        0.018,
+        0.018
+      ],
+      "first_pixel_center_image_index_frame_mm": [
+        7.056,
+        1.368,
+        27.341999999999995
+      ],
+      "first_pixel_center_patient_lps_mm": [
+        11.232,
+        1.566,
+        44.16
+      ],
+      "pixel_to_image_index_frame_mm": "x=7.056+0.018*ix; y=1.368+0.018*iy; z=fixed as recorded",
+      "orientation": "Image row direction is positive nativeY; column direction is positive nativeX. No rotation, flipping, resampling or interpolation.",
+      "values": "255=selected material1;0=background/CT threshold void0",
+      "source_mask_sha256": "8a68259cc4c079eaef5ec604e60bea2de6bf8bf4ebb7d9499347651676e19bce",
+      "source_note": "Direct binary segmentation slice; not an FEA result or original intensity image."
+    },
+    {
+      "name": "near_root",
+      "file": "/workspace/scratch/798f43faaad4/native-cache/native_mask_near_root_z2600.png",
+      "png_pixels_xy": [
+        746,
+        1903
+      ],
+      "source_local_z_index_0based": 2600,
+      "source_original_dicom_z_index_0based": 2676,
+      "array_indexing": "plane[iy,ix]",
+      "native_pixel_spacing_xy_mm": [
+        0.018,
+        0.018
+      ],
+      "first_pixel_center_image_index_frame_mm": [
+        7.056,
+        1.368,
+        48.168
+      ],
+      "first_pixel_center_patient_lps_mm": [
+        11.232,
+        1.566,
+        64.98599999999999
+      ],
+      "pixel_to_image_index_frame_mm": "x=7.056+0.018*ix; y=1.368+0.018*iy; z=fixed as recorded",
+      "orientation": "Image row direction is positive nativeY; column direction is positive nativeX. No rotation, flipping, resampling or interpolation.",
+      "values": "255=selected material1;0=background/CT threshold void0",
+      "source_mask_sha256": "8a68259cc4c079eaef5ec604e60bea2de6bf8bf4ebb7d9499347651676e19bce",
+      "source_note": "Direct binary segmentation slice; not an FEA result or original intensity image."
+    }
+  ],
+  "interpolation": false
+}

@@ -1,0 +1,560 @@
+{
+  "schema": "native74-interactive-cluster-r7",
+  "source_file": "Megalodon_FullCT_Native_Internal_74M_18um.3mf",
+  "source_sha256": "69928fc1d776a0cb2cd3da389802e0b08d226395005bbf4a2094180e90622b73",
+  "source_manifest_sha256": "35b9fe0e15fe472bd478d24fe654f570f6885cd38d7e5f52bd5ce74f0e2b25ce",
+  "input": {
+    "source_triangles_processed": 74293846,
+    "source_packed_vertex_records": 39428327,
+    "unique_float32_coordinate_records": 37951699
+  },
+  "coordinate_system": "float32 canonical 100 mm coordinates from native74-r5 geometry manifest; no further orientation or shape edits",
+  "source_chunks_sha256_verified": true,
+  "all_74293846_source_faces_processed": true,
+  "method": "fixed-grid vertex clustering, mean of distinct Float32 geometric coordinate locations in each occupied cell; remove collapsed, duplicate and zero-area triangles; recompute area-weighted normals",
+  "mean_weighting": "Coordinate duplicates from transfer chunks are removed globally. The observed 37,951,699 unique coordinate count exactly matches the original source vertex count. Native vertex IDs are absent from transfer chunks.",
+  "deviation_scope": "Reported bound is source coordinate to its cell centroid, not a bidirectional surface Hausdorff bound. Small components and thin pore walls may collapse; unreferenced clustered vertices are omitted.",
+  "purpose": "interaction-only display approximation, separate from complete native downloads and all FEM meshes",
+  "not_for_manufacturing_or_fem": true,
+  "topology": "Clustering creates nonmanifold edges and open boundaries; actual counts are recorded per level. No repair or invented shape added.",
+  "binary_layout": {
+    "byte_order": "little endian",
+    "header": "uint32 vertex_count; uint32 triangle_count",
+    "vertices": "vertex_count interleaved records of float32 x,y,z,nx,ny,nz",
+    "faces": "triangle_count records of uint32 a,b,c"
+  },
+  "parts_layout": "Fine compressed bytes are split only for transfer. Concatenate all numbered byte parts before gzip decompression to recover the unchanged global vertex/triangle order.",
+  "source_display_affine_R": [
+    [
+      0.3916250209003652,
+      -1.8896005868512973,
+      -0.1643222107322461
+    ],
+    [
+      -1.8936263969740943,
+      -0.37991608089014606,
+      -0.1442399526063988
+    ],
+    [
+      0.10849532456107326,
+      0.18983075993161974,
+      -1.9243584309831898
+    ]
+  ],
+  "source_display_affine_T": [
+    35.49153583794037,
+    35.69259136159072,
+    182.60196213035087
+  ],
+  "levels": {
+    "fine": {
+      "grid_mm": 0.16,
+      "vertices": 1375557,
+      "triangles": 2797058,
+      "collapsed_triangles": 70835128,
+      "duplicate_triangles_removed": 661660,
+      "zero_area_triangles_removed": 0,
+      "boundary_edges": 599329,
+      "nonmanifold_edges": 643515,
+      "unique_coordinate_cells": 1817444,
+      "cluster_point_max_deviation_mm": 0.212161512392,
+      "cluster_point_theoretical_bound_mm": 0.277128129211,
+      "bounds_mm": [
+        [
+          -33.9466552734,
+          -10.1197872162,
+          86.7601623535
+        ],
+        [
+          33.9381828308,
+          10.1335372925,
+          186.729522705
+        ]
+      ],
+      "bytes": 66578072,
+      "unpacked_file": "interactive-fine.bin",
+      "decoded_sha256": "dfe80c37bf469fa70cfac8de4ba83fca6fe711209e5fd9883812b99fff86511b",
+      "normal_max_unit_error": 5.0316152466756137e-08,
+      "finite_positions_and_normals": true,
+      "all_indices_in_range": true,
+      "format": "uint32_nv_nf_interleaved_float32_xyz_normal_uint32_faces",
+      "encoding": "gzip",
+      "transport_layout": "concatenate numbered compressed byte parts in order, then gunzip once; a part alone is not a complete gzip stream",
+      "transport_bytes": 44079464,
+      "transport_sha256": "c04607186f1683aa3001ee695a8fd8586bc82158c1ff8bd10e370537df4e81de",
+      "parts": [
+        {
+          "url": "interactive-fine.bin.gz.part00",
+          "bytes": 12582912,
+          "sha256": "bdd2d3ccdb48cc33dc79f09d15caf21e066e3dcf31a8229451d3e2ded4dbd79f"
+        },
+        {
+          "url": "interactive-fine.bin.gz.part01",
+          "bytes": 12582912,
+          "sha256": "6e2e5c8d8c2d917a15657f21f4bf5fa81a94f6f362ee8281c6064aa1e705c302"
+        },
+        {
+          "url": "interactive-fine.bin.gz.part02",
+          "bytes": 12582912,
+          "sha256": "d7ce302584a6cdc12f82edfce54ce7a4119199ebce0e50bfda51241fcf121eb0"
+        },
+        {
+          "url": "interactive-fine.bin.gz.part03",
+          "bytes": 6330728,
+          "sha256": "426eca1bd98edebc6d580b622b3600e9e17a1494bad9f83eb72eeb476ccb0394"
+        }
+      ]
+    },
+    "medium": {
+      "grid_mm": 0.28,
+      "vertices": 397465,
+      "triangles": 854974,
+      "collapsed_triangles": 73128852,
+      "duplicate_triangles_removed": 310020,
+      "zero_area_triangles_removed": 0,
+      "boundary_edges": 188411,
+      "nonmanifold_edges": 211295,
+      "unique_coordinate_cells": 586792,
+      "cluster_point_max_deviation_mm": 0.378146209706,
+      "cluster_point_theoretical_bound_mm": 0.484974226119,
+      "bounds_mm": [
+        [
+          -33.9257049561,
+          -10.1197872162,
+          86.7681045532
+        ],
+        [
+          33.9200363159,
+          10.1284666061,
+          186.639572144
+        ]
+      ],
+      "bytes": 19798856,
+      "unpacked_file": "interactive-medium.bin",
+      "decoded_sha256": "82519925ad3d786c7e53693ae36dfced1868628eaccc45f5b8301a526e5c1722",
+      "normal_max_unit_error": 4.9543030455900805e-08,
+      "finite_positions_and_normals": true,
+      "all_indices_in_range": true,
+      "format": "uint32_nv_nf_interleaved_float32_xyz_normal_uint32_faces",
+      "url": "interactive-medium.bin.gz",
+      "encoding": "gzip",
+      "transport_bytes": 12795592,
+      "transport_sha256": "8e82ea72a7ac34d1f3fdc04464f0a93824abf4365d50982e6acb868385a1e0a4",
+      "parts": []
+    },
+    "light": {
+      "grid_mm": 0.5,
+      "vertices": 107935,
+      "triangles": 247031,
+      "collapsed_triangles": 73918482,
+      "duplicate_triangles_removed": 128333,
+      "zero_area_triangles_removed": 0,
+      "boundary_edges": 49853,
+      "nonmanifold_edges": 62217,
+      "unique_coordinate_cells": 162538,
+      "cluster_point_max_deviation_mm": 0.699595036874,
+      "cluster_point_theoretical_bound_mm": 0.866025403784,
+      "bounds_mm": [
+        [
+          -33.9036560059,
+          -10.0680303574,
+          86.8500213623
+        ],
+        [
+          33.905708313,
+          10.0859966278,
+          186.620269775
+        ]
+      ],
+      "bytes": 5554820,
+      "unpacked_file": "interactive-light.bin",
+      "decoded_sha256": "2955cad19385afbff28638d28f63fd2bb5b7be240ac4b3fbeb1ba05abe81057a",
+      "normal_max_unit_error": 4.813726417474129e-08,
+      "finite_positions_and_normals": true,
+      "all_indices_in_range": true,
+      "format": "uint32_nv_nf_interleaved_float32_xyz_normal_uint32_faces",
+      "url": "interactive-light.bin",
+      "encoding": "identity",
+      "transport_bytes": 5554820,
+      "transport_sha256": "2955cad19385afbff28638d28f63fd2bb5b7be240ac4b3fbeb1ba05abe81057a",
+      "parts": []
+    }
+  },
+  "source_chunks": [
+    {
+      "url": "geometry-00.bin.gz",
+      "sha256": "0e1683947ffaa86198b4f18f5769b666e03fd6c17daceae65e657dd57ce1891c",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-01.bin.gz",
+      "sha256": "9e6cff8485d7bcfb350032fd6c16f440dd7068ee6ab785e998d969c2507fc157",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-02.bin.gz",
+      "sha256": "c836eb11430494078a1c6ea1fb70c7d70a4d496da735e33ac9e15532b7d1d59c",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-03.bin.gz",
+      "sha256": "d560f8bb227fdc6b74a9fb71a4de2077706a6d1f7ec4a856dbdb330ea76d49d4",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-04.bin.gz",
+      "sha256": "be1677c6cc50b14b3cdd23bf77c8a47c929e329b0093694e761c18b99bceb27c",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-05.bin.gz",
+      "sha256": "3cd4f4b1534bab4325259a2e06dd8aa455d14df0f5f2bea580b51e0c742b0009",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-06.bin.gz",
+      "sha256": "3953667da306ac512f29c29e23a9b5de5fe74373034f59776e91ce9b8bbb182b",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-07.bin.gz",
+      "sha256": "e975003c2f0e2fc19b876fdc64a3a3e3fda490c57099939a948e8df884722d79",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-08.bin.gz",
+      "sha256": "3ef7886d8642c94e5543d7fce987bde904fce6b9fe953f765d975f45f4548a5c",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-09.bin.gz",
+      "sha256": "52a4f6c2b2ef60e4cdb929001fca39e0348c21df241435ec0445e4f47a6e7a50",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-10.bin.gz",
+      "sha256": "ed4f0c8e1a6312ff5f9b8e7b4b1109347199538fe891b8a222d3a4b9a97562fe",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-11.bin.gz",
+      "sha256": "dd4e1ae22defe1eff6d5a8dcb2d3c13b3bacf1f87a725268f5b64946cdd23ac8",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-12.bin.gz",
+      "sha256": "8dc53be703ac34fb4bf3d00d66aa4b4c797bbb6be244785383413e5d3282eaec",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-13.bin.gz",
+      "sha256": "aec8dac1e48254639e259e6f98f6b23cccedfe9abddba045d59524ad229635d9",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-14.bin.gz",
+      "sha256": "17ff99bb1a525610fe443981f817435d13dcf92162675d11df76994d9a08de69",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-15.bin.gz",
+      "sha256": "02a8f231dabe4dc01fbb7ec57f56a0b945c335bea655f07ffc28ac8010b8e3c1",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-16.bin.gz",
+      "sha256": "0c525ecfb101d3f018e47d973187fbde1b018d3f377745f65d34fd9cfe31d7ca",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-17.bin.gz",
+      "sha256": "5ce63cbcfb45574ba25ef1561c2c26b11ef6932a69d318fd736640fc23a42cab",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-18.bin.gz",
+      "sha256": "c29ba180c15a2835ae16ef5e38fd5552e814f0e8a8085cb3fe6880f4728ea8da",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-19.bin.gz",
+      "sha256": "4279d9fcd90de75f6ea0369848966d9791331294d82d5b1030f6e254df912dc3",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-20.bin.gz",
+      "sha256": "4292d6d5d4144ebf34213bbe64c18464176b0876a779b18ec10589bdabe86678",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-21.bin.gz",
+      "sha256": "15bf0238f4b22345d20b7338eefe9d98bf86bc00e9425568468e5cf408ff7a0d",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-22.bin.gz",
+      "sha256": "57b62200aea095eebda4c9e22dfb9a643cc01695b3f0d2754d0aa1d66479de05",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-23.bin.gz",
+      "sha256": "a8c86353737fd0e30ebea3716f2b3a7dc164e925e38e6b00cd353848b111d9c3",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-24.bin.gz",
+      "sha256": "288204880538be84728c8e47f3111d2902c2d3a72e7b9a583318c887fe967dd5",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-25.bin.gz",
+      "sha256": "19cb8a7d1b26de7adc292370629190e5501862021263b4acf56a41439cf2e3e8",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-26.bin.gz",
+      "sha256": "966bb4244eaf18d51af8bc8a570a832ef88c16353d5a36ee1b8341bc3489976f",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-27.bin.gz",
+      "sha256": "24d7f422a72931b22bd000d5778a6bc58fd2af8233e438862464492e111dfa52",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-28.bin.gz",
+      "sha256": "733d9dda6f7f7e25f7067ad1b71eaf3609f984e330007b43e3c1086e2dd4af73",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-29.bin.gz",
+      "sha256": "0718212fd394e4b4fc290c36ea42125823ddfe1cb5edc3a9502b59fb54aeb3ba",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-30.bin.gz",
+      "sha256": "337f94497c625658d5275be51e34ce8ad8c0e557a37d23d0c328b95f83288f98",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-31.bin.gz",
+      "sha256": "65fbdae4f91c8b73912f5ad19d53216a3a1d2eda4786183b8cd071e654dc790d",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-32.bin.gz",
+      "sha256": "eae8c54370321368bd730a90752fa581600c6ca9fd247044a56c914f6347114a",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-33.bin.gz",
+      "sha256": "bdd1bc2112ea2a65f7b6a07e1426f415e7e5c8ef8d42d6995f9adb0549018a55",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-34.bin.gz",
+      "sha256": "b5ed5e4025bb2f2dac3d3af08c8f09355c5f5c9a02521a7f93e72722273158ba",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-35.bin.gz",
+      "sha256": "18436ad6fddd6476900ac0c9d26de6eec62aecd8455feb3c10cb2937db278eb5",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-36.bin.gz",
+      "sha256": "58205896f4c120e1a32e84e944d1b674e1dd598ccb3b075ee156f384d1b56457",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-37.bin.gz",
+      "sha256": "dbd5d87a6d27ead8ee6d9fdfec9694a1642ea633024f088e0ce51ffe12a5c749",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-38.bin.gz",
+      "sha256": "070e640f6b09965f36d9a2503ecbbfa66a8e429f5a888b29c32f2d46285efb99",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-39.bin.gz",
+      "sha256": "bd52cfd4a28c16a425556eeaf5dc5bf862ba89f5d2175a27c6b07dfbed916065",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-40.bin.gz",
+      "sha256": "791dfa9a7afdf2680d71441383c027c5bc9f43259b37484594f748ce8bd0f2b2",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-41.bin.gz",
+      "sha256": "16d4dc75b7d7489a3ba7b45c7708d4566d1924e3dc6c51ed9c756c70a2139acf",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-42.bin.gz",
+      "sha256": "6e76addd57f50d57a8bf8d26faa5d6753252247694c3fbe3731fb793874b2d1f",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-43.bin.gz",
+      "sha256": "966fa508b73a07492456b2bd0331b9fe61bc8b978f828afdce6d91b06d763bab",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-44.bin.gz",
+      "sha256": "884f67205eb59fea0f59a099b996e46a7811503c1de4b0216e350fbd2cfa63a3",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-45.bin.gz",
+      "sha256": "d13a0d516d08511111b4459bb8ff413c4c9326a82bb70e4576614861e8b990e1",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-46.bin.gz",
+      "sha256": "bc2a5966f37b970b5c597dfd457b9357a17106378d56f1396d5db30d804ec312",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-47.bin.gz",
+      "sha256": "4e3edf85cec76affed08e8166b9f0788ba6ed6fb8ce474780e7c6b780d096593",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-48.bin.gz",
+      "sha256": "816714b05fc77e5d558556b584b553b681d07b43cd3f4fb0cb4a948c042d74c5",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-49.bin.gz",
+      "sha256": "471eb0d2cf983f2f59b68da5348e2c025fe3dd92fdd0c9d4544d10c721e5d7eb",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-50.bin.gz",
+      "sha256": "dba01adf7803e1fbe7648c7cd49ce2583b97670e520f6ac09c8ba2ad3eef4b94",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-51.bin.gz",
+      "sha256": "87c8ae793da952db7204ac79539b9f244af64a1bf57f64811b49e61f4495a7e2",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-52.bin.gz",
+      "sha256": "8a5f96e3979dbe7e9737531eaf1e294594689279e560827bcba56c5589f36f4c",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-53.bin.gz",
+      "sha256": "a73f032525eeec8a4c928e2f37e5d9110480bd0ab0a0a7290256b67de5f6a25f",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-54.bin.gz",
+      "sha256": "960e95e0b34e6f6392e9bdc9fbc18f1b72d8b2dbf91b50bd4a935ac0b12dbde2",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-55.bin.gz",
+      "sha256": "49c913870facd1c3bec657d73a4aa38bdb7b32779476190dc21550dcf89e253f",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-56.bin.gz",
+      "sha256": "3d65a9a9b5dd22ed05ba91c9ba3e6fe7672c6fa488a07c3ce894611ac411e96d",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-57.bin.gz",
+      "sha256": "0c13fd80671de71b3ec1ca55ee6e3e06bccd4f09220bfe636971d33ed2ad5ae6",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-58.bin.gz",
+      "sha256": "3266a58726f206b03ed0dea18e0d77ea60c14be2fd59c94c2df90bfe10cd93d6",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-59.bin.gz",
+      "sha256": "c1825bedb1e2a5db3fc39500bd603545d1204f71aa3423995f3b72b58fc01d56",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-60.bin.gz",
+      "sha256": "f5859ac0886a67c82c63cf813a25f3f4ed1c8ddd733b5f0f5a5170bb27d5cbe9",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-61.bin.gz",
+      "sha256": "2b7887dbbbe3af80a3bab4befb2ccc57ac496f6ca7a16d9016f9b6a29a21ce0d",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-62.bin.gz",
+      "sha256": "f428b97b042c273ce14b1cd52cf2d79f102b63c8438ac5ee805122de831c8d00",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-63.bin.gz",
+      "sha256": "5f6aa7c81a61dae8a3f4216c2a748edfaa3e8077e8ff6f1fc3fe0ef29fb4329d",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-64.bin.gz",
+      "sha256": "eae21da4d36ab8a6df9324bc25211d97b4743a1b196abe319097bc7851ba8985",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-65.bin.gz",
+      "sha256": "58403a4ed2d8ca4f3486b2c56f74d2fc8b73171b2ba98a9458c6d595f05d97ed",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-66.bin.gz",
+      "sha256": "69f460089d7867ee3b00cd417fdcc95615e61dcac26a427829b35c5115a3b6a4",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-67.bin.gz",
+      "sha256": "dc2a54dbc54c008f489e8c8ecfe26b0277e30c864691188697cd70bb8807b92d",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-68.bin.gz",
+      "sha256": "5fd90e7760cfa46335a4c11de4eab47325d89359675b71dde6bac7a642eb252a",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-69.bin.gz",
+      "sha256": "43453d3b66a91414f9f2560bd60a244a84dcea4db064aeeedffabe24e6a776a1",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-70.bin.gz",
+      "sha256": "063e308acd100a796e989c6b7762fd0a5e812423d8f94ec20928bc791bf12cbb",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-71.bin.gz",
+      "sha256": "57c9fa7f2d22cfe4f3a4e29d8d081e053e01f219d0ec7bf7133fe31329589018",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-72.bin.gz",
+      "sha256": "4ad88fdf121b6602e31caf2eed76918e8dde781405ca13a76545b65b468f39f0",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-73.bin.gz",
+      "sha256": "0a4696c5a2625ca2f6426b71bb538bcc34c111c71b376e62eca9ad6bb4740d2a",
+      "triangles": 1000000
+    },
+    {
+      "url": "geometry-74.bin.gz",
+      "sha256": "c03cf602bd1f133f4e68766c4f71d2d0d1f34a2cbf1c741d1238760f0a31db4a",
+      "triangles": 293846
+    }
+  ]
+}

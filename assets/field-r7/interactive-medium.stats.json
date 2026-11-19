@@ -1,0 +1,15 @@
+{
+"grid_mm":0.28,
+"vertices":397465,
+"triangles":854974,
+"collapsed_triangles":73128852,
+"duplicate_triangles_removed":310020,
+"zero_area_triangles_removed":0,
+"boundary_edges":188411,
+"nonmanifold_edges":211295,
+"unique_coordinate_cells":586792,
+"cluster_point_max_deviation_mm":0.378146209706,
+"cluster_point_theoretical_bound_mm":0.484974226119,
+"bounds_mm":[[-33.9257049561,-10.1197872162,86.7681045532],[33.9200363159,10.1284666061,186.639572144]],
+"bytes":19798856
+}

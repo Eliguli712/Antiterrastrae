@@ -1,0 +1,83 @@
+{
+  "schema": "native18um-mask-complete-audit-v1",
+  "file": "/workspace/scratch/798f43faaad4/native-cache/SpecimenMask_18um.mha",
+  "file_bytes": 31001630,
+  "file_sha256": "8a68259cc4c079eaef5ec604e60bea2de6bf8bf4ebb7d9499347651676e19bce",
+  "source_url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/Megalodon_FullCT_SpecimenMask_18um.mha",
+  "shape_xyz": [
+    746,
+    1903,
+    2886
+  ],
+  "shape_zyx": [
+    2886,
+    1903,
+    746
+  ],
+  "native_spacing_xyz_mm": [
+    0.018,
+    0.018,
+    0.018
+  ],
+  "mha_origin_lps_mm": [
+    11.232,
+    1.566,
+    18.186
+  ],
+  "image_index_frame_origin_mm": [
+    7.056,
+    1.368,
+    1.368
+  ],
+  "dicom_lps_origin_mm": [
+    4.176,
+    0.198,
+    16.818
+  ],
+  "total_grid_voxels": 4097075268,
+  "material_voxels": 967429317,
+  "background_or_void_voxels": 3129645951,
+  "decoded_uint8_sha256": "d8b630b35c365f861ccc46d625a28cad21395055271f9cc937d9a9211c02a543",
+  "native_selected_material_voxel_volume_mm3": 5642.047776743999,
+  "six_tetrahedra_per_material_voxel_count": 5804575902,
+  "streaming": {
+    "max_decompress_block_bytes": 8388608,
+    "max_carry_plane_bytes": 1419638,
+    "full_array_loaded": false,
+    "completed_planes": 2886,
+    "runtime_seconds": 13.441867113113403
+  },
+  "tool_only_stride4": {
+    "file": "/workspace/scratch/798f43faaad4/native-cache/tool_mask_stride4.npy",
+    "dtype": "bool",
+    "shape_zyx": [
+      722,
+      476,
+      187
+    ],
+    "stride_xyz": [
+      4,
+      4,
+      4
+    ],
+    "spacing_xyz_mm": [
+      0.072,
+      0.072,
+      0.072
+    ],
+    "origin_lps_mm": [
+      11.232,
+      1.566,
+      18.186
+    ],
+    "origin_image_index_frame_mm": [
+      7.056,
+      1.368,
+      1.368
+    ],
+    "selected_tool_samples": 15115304,
+    "method": "Nearest selection of original voxel centers at z,y,x indices0,4,8,...; no hole filling or closing.",
+    "usage": "Interaction, clamp fitting and spatial tools only. This reduced mask must not be presented as native CT FEM geometry."
+  },
+  "header_ascii": "ObjectType = Image\nNDims = 3\nBinaryData = True\nBinaryDataByteOrderMSB = False\nCompressedData = True\nCompressedDataSize = 31000924\nTransformMatrix = 1 0 0 0 1 0 0 0 1\nOffset = 11.231999999999999 1.5659999999999998 18.186\nCenterOfRotation = 0 0 0\nAnatomicalOrientation = RAI\nElementSpacing = 0.017999999999999999 0.017999999999999999 0.017999999999999999\ngeometry_note = DICOM patient LPS frame, with original measured 18 micrometer spacing; no cavity filling\nmodality = CT-derived specimen segmentation\nsegmentation_threshold_raw = 10361.669921875\nsegmentation_values = 1=selected mineralized specimen, 0=background or CT-derived void\nDimSize = 746 1903 2886\nElementType = MET_UCHAR\nElementDataFile = LOCAL\n"
+}

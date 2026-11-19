@@ -1,0 +1,122 @@
+{
+  "schema": "native-porous-tet-feasibility-audit-v1",
+  "status": "not_meshed_or_solved",
+  "native_mask": {
+    "file_sha256": "8a68259cc4c079eaef5ec604e60bea2de6bf8bf4ebb7d9499347651676e19bce",
+    "decoded_uint8_sha256": "d8b630b35c365f861ccc46d625a28cad21395055271f9cc937d9a9211c02a543",
+    "shape_xyz": [
+      746,
+      1903,
+      2886
+    ],
+    "native_spacing_xyz_mm": [
+      0.018,
+      0.018,
+      0.018
+    ],
+    "total_grid_voxels": 4097075268,
+    "material_voxels": 967429317,
+    "native_selected_material_voxel_volume_mm3": 5642.047776743999,
+    "six_tetrahedra_per_material_voxel_count": 5804575902
+  },
+  "original_intensity_CT": {
+    "local_3050_DICOM_series_found": false,
+    "library_filename_queries_found_original_DICOM": false,
+    "available_binary_segmentation": true,
+    "note": "The selected18um binary segmentation is sufficient to define the requested void/material domain. Raw intensity DICOMs are not present in this cloud workspace; this audit does not claim they are irretrievably unavailable."
+  },
+  "native_surface_topology": {
+    "vertices": 37951699,
+    "triangles": 74293846,
+    "unique_edges": 111440769,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "nonmanifold_vertices": 0,
+    "orientation_conflict_edges": 0,
+    "unused_vertices": 0,
+    "degenerate_triangles": 0,
+    "surface_components": 803443,
+    "positive_outer_components": 1,
+    "negative_inner_components": 803442,
+    "inner_components_total_volume_mm3": 12.936867533782785,
+    "signed_material_volume_mm3": 5649.938794232148,
+    "full_self_intersection_audit_completed": false,
+    "full_nested_shell_containment_audit_completed": false,
+    "conclusion": "A watertight consistently oriented2-manifold PLC candidate. Existing audits do not certify an embedded nonintersecting cavity complex suitable for immediate constrained tetrahedralization."
+  },
+  "strict_original_boundary_lower_bounds": {
+    "all_boundary_vertices_retained": 37951699,
+    "P1_displacement_dofs_at_least": 113855097,
+    "tetrahedra_at_least_for_face_connected_volume": 37951696,
+    "derivation": "A connected face-adjacency spanning tree starts with4vertices in the first tet; every additional tet shares a triangular face and introduces at most1new vertex. Thus V<=T+3.",
+    "boundary_facets_simple_lower_bound_tets": 18573462,
+    "at_33M_tets_complete_original_boundary_possible": false,
+    "note": "At least33M is a lower threshold, not a maximum. The original boundary already forces at least37.95M tetrahedra and may require far more for valid quality and thin features."
+  },
+  "memory_storage_estimates": {
+    "geometry_points_float64_bytes": 910840776,
+    "minimum_tet_connectivity_uint32_bytes": 607227136,
+    "one_displacement_or_load_vector_float64_bytes": 910840776,
+    "six_rigid_candidates_float64_bytes": 5465044656,
+    "boundary_graph_full_3x3_BSR_bytes": 19975132812,
+    "boundary_graph_scalar_CSR64_bytes": 38470826912,
+    "basis_for_matrix_estimate": "Counts only boundary adjacency: diagonalblocksV + directededgeblocks2E,9Float64values per3x3block. Actual volume mesh adds interior edges and nodes. Full BSR is18.60GiB; existing SciPy scalar CSR64 graph is35.83GiB before AMG and most other data. These are storage-model estimates, not universal bounds for every possible matrix-free algorithm.",
+    "voxel6_tet_count": 5804575902,
+    "voxel6_tet_connectivity_uint32_bytes": 92873214432,
+    "voxel6_tet_one_element_scalar_float64_bytes": 46436607216,
+    "suggested_full_boundary_HPC_initial_budget": {
+      "RAM_GiB_range": [
+        256,
+        512
+      ],
+      "temporary_storage_GB_at_least": 200,
+      "CPU_cores_range": [
+        32,
+        64
+      ],
+      "confidence": "Engineering planning estimate only; perform a representative meshing pilot and measure peak memory before requesting production resources."
+    }
+  },
+  "current_resources": {
+    "physical_RAM_bytes": 10451423232,
+    "physical_RAM_GiB": 9.733646392822266,
+    "disk_free_bytes": 7237206016,
+    "disk_free_GiB": 6.74017333984375,
+    "visible_logical_CPUs": 9
+  },
+  "current_solver_limits": {
+    "implementation": "Serial Python/NumPy P1 element assembly into SciPy CSR, CG with PyAMG smoothed aggregation and6rigid-motion candidates",
+    "current50mm_tets": 948322,
+    "current100mm_tets": 1073103,
+    "geometry": "Closed-solid L0 proxy with local apical refinement; original native voids omitted",
+    "why_not_native33M_claim": "Surface projection never introduces the missing native pore geometry into the solved domain. Existing numerical fields are not a porous33Mtet result.",
+    "current_environment_can_run_existing_native_full_boundary_problem_with_this_solver": false
+  },
+  "recommended_execution_plan": [
+    "Freeze original18um segmentation and native surface hashes; preserve every original low-density void boundary and positive material domain.",
+    "Run global self-intersection and shell-containment checks using robust predicates; obtain strictly interior seeds for every excluded cavity from the original mask, without hole filling or smoothing.",
+    "Generate a constrained tetrahedral mesh from the native PLC with TetGen/Gmsh or a distributed mesher, preserving boundary facets or only explicitly recorded conforming subdivision; adapt interior sizing and refine narrow ligaments and stress regions. Do not prepromise a33Mcap.",
+    "Verify positive Jacobians, nonoverlap, exact boundary conformity, material/void occupancy and integrated volume; compare directly with the original segmentation.",
+    "Partition and solve50mm and100mm cases independently using a distributed PETSc block or matrix-free elasticity implementation with a verified scalable preconditioner. Record actual nodes, tetrahedra, loads, constraints and units.",
+    "Treat boundary-adjacent tetrahedra and interior material as display selections on one volumetric mesh. If original voids are intentionally filled, record a distinct geometry and rerun its mechanics.",
+    "Evaluate tip and support-region convergence on fixed physical ROIs and prescribed tolerances; source model count or algebraic residual alone is not convergence evidence."
+  ],
+  "external_primary_references": [
+    {
+      "title": "TetGen Introduction / PLC limitations",
+      "url": "https://www.wias-berlin.de/software/tetgen/1.5/doc/manual/manual002.html"
+    },
+    {
+      "title": "TetGen hole points and boundary markers",
+      "url": "https://www.wias-berlin.de/software/tetgen/fformats.poly.html"
+    },
+    {
+      "title": "Gmsh HXT and mesh algorithms",
+      "url": "https://www.gmsh.info/doc/texinfo/"
+    },
+    {
+      "title": "PETSc block sparse matrices",
+      "url": "https://petsc.org/release/manualpages/Mat/MatCreateSBAIJ/"
+    }
+  ]
+}

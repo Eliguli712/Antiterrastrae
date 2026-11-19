@@ -1,0 +1,17 @@
+{
+  "filename": "50mm-solution.npz",
+  "parts": [
+    {
+      "file": "50mm-solution.npz.part0",
+      "bytes": 16777216,
+      "sha256": "c03a8b633ca8c28a31defddbfd404999c160714c98623c37cdd7ab1b3bfd52f1"
+    },
+    {
+      "file": "50mm-solution.npz.part1",
+      "bytes": 15082301,
+      "sha256": "66f8d2b74c779048b74183b5e13b5e43e201016e3d9a8e5cef4811749f16df86"
+    }
+  ],
+  "bytes": 31859517,
+  "sha256": "5c02c1938617d3943815b50c7264922742c08aa1b436d7d8306a3d6ee5121363"
+}

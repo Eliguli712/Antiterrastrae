@@ -1,0 +1,51 @@
+{
+  "beam_analytic": {
+    "cantilever_F_L3_over_3EI_relative_error": 2.220446049250313e-16
+  },
+  "parts": [
+    {
+      "file": "Support_R6_50mm_main.stl",
+      "sha256": "18ded9126b3740646f223abfd22a3d43cb28cb044cea906272747928bfd99783",
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "file": "Support_R6_50mm_cap.stl",
+      "sha256": "4e6b1085b9fe1781055fd76d0e7f3affc8db0172887727b8041ff7e000f8b021",
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "file": "Support_R6_100mm_main.stl",
+      "sha256": "6cfb24e267d12e5905cadaf8fe8228883ef39b6ba372ebe79c2a0ade4d5db4d5",
+      "watertight": true,
+      "connected": true
+    },
+    {
+      "file": "Support_R6_100mm_cap.stl",
+      "sha256": "43bff0602529054f71a2e63328a6b6988ce61b29612dfbd4beecc16f980b9c15",
+      "watertight": true,
+      "connected": true
+    }
+  ],
+  "spherical_patch": [
+    {
+      "variant": "solid",
+      "positive_volumes": true,
+      "tetrahedra": 12800,
+      "rigid_motion_relative_residual": 1.6324021763712706e-18,
+      "affine_patch_relative_residual": 2.077127644577789e-15
+    },
+    {
+      "variant": "wall",
+      "positive_volumes": true,
+      "tetrahedra": 11520,
+      "rigid_motion_relative_residual": 1.4861625211928912e-18,
+      "affine_patch_relative_residual": 2.5571067419213367e-15
+    }
+  ],
+  "all_sphere_submodel_max_gauge_reaction_relative": 1.7854814469639785e-11,
+  "native_porous_tooth_FEM_completed": false,
+  "physical_retention_test_completed": false,
+  "Chien_shell_equations_implemented": false
+}
