@@ -1,0 +1,24 @@
+name: Publish megalodon support and poster assets R8
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/megalodon-r8-assets.json'
+      - '.github/scripts/publish-megalodon-r8-assets.py'
+      - '.github/workflows/publish-megalodon-r8-assets.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: megalodon-r8-assets
+  cancel-in-progress: false
+jobs:
+  publish-assets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Verify and preserve R8 assets
+        run: python .github/scripts/publish-megalodon-r8-assets.py

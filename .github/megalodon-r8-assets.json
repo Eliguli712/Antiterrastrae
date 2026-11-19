@@ -1,0 +1,353 @@
+{
+  "revision": "R8",
+  "origin": "https://megalodon-native-stress-eliguli.eliguli712.chatgpt.site",
+  "canonical_url": "https://eliguli712.github.io/Antiterrastrae/design/megalodon/",
+  "source_commit": "6cc7780ddb759d7507a3f0ec6574b4be493fb103",
+  "files": [
+    {
+      "path": "assets/art-reference-r8.jpeg",
+      "bytes": 395269,
+      "sha256": "a2e5ff6d01d6d18270c2508dcb38136819c2280df7c4d5c668b9599fb1871f9c"
+    },
+    {
+      "path": "assets/cv-cover-r8.jpg",
+      "bytes": 133724,
+      "sha256": "0b3a0ad3f0a8b4616239beef1974007d64484ac3612e0d2eb6809fadebee616c"
+    },
+    {
+      "path": "assets/kakeya-mark-r8.png",
+      "bytes": 126893,
+      "sha256": "b687593ada98b253ccc978cb85cc71c4957471ea5f6c132d5b0a1a4e5ace638a"
+    },
+    {
+      "path": "assets/native-controller-validation-r8.json",
+      "bytes": 470,
+      "sha256": "ab4141256e92dab010fc62e23dca9cbfaf5c9a2b2480394a5e324972b083f154"
+    },
+    {
+      "path": "assets/native-plates-r8/100mm-render-audit.json",
+      "bytes": 1161,
+      "sha256": "4840ca789c4d3c6643e438773e8a952ee0f04a8c412c72259d74c73e2d7a27c5"
+    },
+    {
+      "path": "assets/native-plates-r8/100mm-spectrum-front.webp",
+      "bytes": 530220,
+      "sha256": "6b7109725d6b52fc48f4f2d920278288f38c628a93cb196327c0a63875d578b2"
+    },
+    {
+      "path": "assets/native-plates-r8/100mm-spectrum-oblique.webp",
+      "bytes": 522548,
+      "sha256": "93ba4026ece3910b6db4a01764b8ab8e9f8f41fcd790f63dc8737788a06ba5a7"
+    },
+    {
+      "path": "assets/native-plates-r8/100mm-spectrum-reverse.webp",
+      "bytes": 504528,
+      "sha256": "d36df3582cae29ffc7b49ec7e9ccd4c7cdef42d6c7f23bae7d7335d860bc01e1"
+    },
+    {
+      "path": "assets/native-plates-r8/100mm-wash-front.webp",
+      "bytes": 427074,
+      "sha256": "1185bd2a31d1b217c03bdf527a1eac2542498606f966372aaaf9652807469481"
+    },
+    {
+      "path": "assets/native-plates-r8/100mm-wash-oblique.webp",
+      "bytes": 418554,
+      "sha256": "e563c36329d63228a6742cf0b3193df180b124d0100f0b3be6cc3ced305cdc8e"
+    },
+    {
+      "path": "assets/native-plates-r8/100mm-wash-reverse.webp",
+      "bytes": 389326,
+      "sha256": "a20ac1693fe4305dc4a7532d25ce3a32e463a47044ed4d8145c721a7ac021dab"
+    },
+    {
+      "path": "assets/native-plates-r8/50mm-render-audit.json",
+      "bytes": 1155,
+      "sha256": "9f4aa28c138a6bc196294af88c58fe90df23ea5457d5a0e007c31932865ec86f"
+    },
+    {
+      "path": "assets/native-plates-r8/50mm-spectrum-front.webp",
+      "bytes": 223730,
+      "sha256": "6388b34e37a3d8a863622778f220dc97fb4661167abd1496ba3acf1aec96646c"
+    },
+    {
+      "path": "assets/native-plates-r8/50mm-spectrum-oblique.webp",
+      "bytes": 249218,
+      "sha256": "585286ca199440663ba6e5d2e795d8d373e3ffd483aea8e33c677e5a8d983f22"
+    },
+    {
+      "path": "assets/native-plates-r8/50mm-spectrum-reverse.webp",
+      "bytes": 219690,
+      "sha256": "d8da3a8d5b99a24b90ce6ebadf9af046e8ea844009be2dd1654581c474b39e3d"
+    },
+    {
+      "path": "assets/native-plates-r8/50mm-wash-front.webp",
+      "bytes": 194848,
+      "sha256": "6a6b5ece8b4218167442d09aac4cbcaf8c8878e04223efaa7cde5f408ca6af4b"
+    },
+    {
+      "path": "assets/native-plates-r8/50mm-wash-oblique.webp",
+      "bytes": 223186,
+      "sha256": "44834771a370fdc0a55ab8611ec4ab5d9a891e61b8a8ae496f1c004e9fd6233a"
+    },
+    {
+      "path": "assets/native-plates-r8/50mm-wash-reverse.webp",
+      "bytes": 188120,
+      "sha256": "3602a6839c3204322b06b3e99894a4f3fcff6cdf81abb3a5299695e8bf717f02"
+    },
+    {
+      "path": "assets/native-render-policy-r8.json",
+      "bytes": 559,
+      "sha256": "86622dd35575adc0ee6e14596771f9547a95af28ff24b8dfe433b20e67f914fa"
+    },
+    {
+      "path": "assets/posters-r8/Poster_R8_QR_Update_Source.zip",
+      "bytes": 131941,
+      "sha256": "94feb95ac2944ec2f8384500e233e6f1fa48ab6efbbfcb24f40a1b35bf7ad97e"
+    },
+    {
+      "path": "assets/posters-r8/de/page-01.jpg",
+      "bytes": 1117254,
+      "sha256": "d4d7bc5e5dc793b112955ede220d6f7dfc316052940d34a95cb2e9a7603cecd7"
+    },
+    {
+      "path": "assets/posters-r8/de/page-02.jpg",
+      "bytes": 1055509,
+      "sha256": "a869138cb48ae81214fb3786028d57e89ae7ab84b35c30091e4f6889feb2f13e"
+    },
+    {
+      "path": "assets/posters-r8/de/page-03.jpg",
+      "bytes": 1655120,
+      "sha256": "d2cfd1e1883e17a3ba34c4a7d0413d1049d783df260096d57addaf0cbb95e525"
+    },
+    {
+      "path": "assets/posters-r8/de/page-04.jpg",
+      "bytes": 1093630,
+      "sha256": "1c9b127886c4dc4f1ab7d21cedecabe6eaf8b45cdb11490742cb671b5b0b655b"
+    },
+    {
+      "path": "assets/posters-r8/de/qr-validation.json",
+      "bytes": 1651,
+      "sha256": "98c3ffe957dcce6c15be575e6fc5d499be50c99ac42f2017b83633bb6c61d96f"
+    },
+    {
+      "path": "assets/posters-r8/de/qr-with-kakeya.png",
+      "bytes": 14877,
+      "sha256": "dd30ccf25825334097e6d120037571c13b795a5e4c5ded3eee3a1f4784093f9b"
+    },
+    {
+      "path": "assets/posters-r8/de/source.pdf",
+      "bytes": 8638264,
+      "sha256": "e6eac8bcf3019064a109830af51dfc327f055461613363785f6fbc766fe09a8a"
+    },
+    {
+      "path": "assets/posters-r8/de/thumb-01.jpg",
+      "bytes": 38690,
+      "sha256": "7b5e5f31cf10939cf37a54903dbe137855eb99dfda4bdddb4cca8ccc4cbc8e49"
+    },
+    {
+      "path": "assets/posters-r8/de/thumb-02.jpg",
+      "bytes": 41753,
+      "sha256": "5eb9e70c899b6162e5844c315315b4f0744fcc0894e49f0d91bcb831b2247983"
+    },
+    {
+      "path": "assets/posters-r8/de/thumb-03.jpg",
+      "bytes": 55976,
+      "sha256": "7bb5802283ea1b031f9cd7ebaccb5437bb7ed590e65734a051d8aa5ee28fa76f"
+    },
+    {
+      "path": "assets/posters-r8/de/thumb-04.jpg",
+      "bytes": 40436,
+      "sha256": "e770e8af388a07e91607eacd0fe86d4b92cefec087e48578c5ca376add6795c6"
+    },
+    {
+      "path": "assets/posters-r8/en/page-01.jpg",
+      "bytes": 1099513,
+      "sha256": "d2abe1cf9775d0b87af847b43b1f26821e2833f9835ec9747b4e83013e96a43e"
+    },
+    {
+      "path": "assets/posters-r8/en/page-02.jpg",
+      "bytes": 989638,
+      "sha256": "0a0309efeeb656213c136dc6bb9a3d94601425f17a3d9ee6119ee2f190338e52"
+    },
+    {
+      "path": "assets/posters-r8/en/page-03.jpg",
+      "bytes": 1654114,
+      "sha256": "e2d7635db020b6271824e1bd5fa7163da8c56cd7069e35d585e28d7be1a5c699"
+    },
+    {
+      "path": "assets/posters-r8/en/page-04.jpg",
+      "bytes": 1043782,
+      "sha256": "a5ecc922a7b9e69269c3ff65f3371d9ebd8a1147aeaceb888b276d946b1e92ce"
+    },
+    {
+      "path": "assets/posters-r8/en/qr-validation.json",
+      "bytes": 1651,
+      "sha256": "52a888848e903977e09e2829beca23e4cd3e31b8f4b508145d2699fe4fefdcef"
+    },
+    {
+      "path": "assets/posters-r8/en/qr-with-kakeya.png",
+      "bytes": 14877,
+      "sha256": "dd30ccf25825334097e6d120037571c13b795a5e4c5ded3eee3a1f4784093f9b"
+    },
+    {
+      "path": "assets/posters-r8/en/source.pdf",
+      "bytes": 8533771,
+      "sha256": "73fa85fd006dc30ec18158e4f7799b3461769dbd1bea69ed4c664fc206e29676"
+    },
+    {
+      "path": "assets/posters-r8/en/thumb-01.jpg",
+      "bytes": 38028,
+      "sha256": "b5d8ac41601ea29dcaf431302970ba69d75407959a257fd48038f3995b5ce581"
+    },
+    {
+      "path": "assets/posters-r8/en/thumb-02.jpg",
+      "bytes": 38985,
+      "sha256": "4c21781a9c0a08daf351a578d3150d54890961ef07db40dc094bfeb9e3ecd5a2"
+    },
+    {
+      "path": "assets/posters-r8/en/thumb-03.jpg",
+      "bytes": 56239,
+      "sha256": "d3a802da9c0b3dc5befbc531d351e3750bad103aa389a0f4c57151c279f8ec84"
+    },
+    {
+      "path": "assets/posters-r8/en/thumb-04.jpg",
+      "bytes": 38968,
+      "sha256": "687cce8f5fe924ff4c17b6b8a49bbcd1668faeca19e9e9e3cbe31fc8e28f8dda"
+    },
+    {
+      "path": "assets/posters-r8/it/page-01.jpg",
+      "bytes": 1093982,
+      "sha256": "2b53fceaa47a84fd749560fe2e21679947709d79dab9982b00d2637373b62742"
+    },
+    {
+      "path": "assets/posters-r8/it/page-02.jpg",
+      "bytes": 1022946,
+      "sha256": "58d4e6c511d4cd510f042bda83ffeb1c4f37da70b1a997a87d2c5c7b4b2c28a6"
+    },
+    {
+      "path": "assets/posters-r8/it/page-03.jpg",
+      "bytes": 1658906,
+      "sha256": "67ce9db349b0e3f5c119c8e2afae54919d9e893c9e9567d895eea19e83511f99"
+    },
+    {
+      "path": "assets/posters-r8/it/page-04.jpg",
+      "bytes": 1041177,
+      "sha256": "a8014cdb73149a097541b6a5ef21d08fd4ca96084184d47ff8d490ee014a1329"
+    },
+    {
+      "path": "assets/posters-r8/it/qr-validation.json",
+      "bytes": 1651,
+      "sha256": "d429630971c3d0dc86a3e74ae17b0be1cfa98fad93b05904a7cecae1a071929f"
+    },
+    {
+      "path": "assets/posters-r8/it/qr-with-kakeya.png",
+      "bytes": 14877,
+      "sha256": "dd30ccf25825334097e6d120037571c13b795a5e4c5ded3eee3a1f4784093f9b"
+    },
+    {
+      "path": "assets/posters-r8/it/source.pdf",
+      "bytes": 8459517,
+      "sha256": "a4e0f626f675885bd8694d766760bb3ab463cf8e16c3e2fbf56de9770df1b5c5"
+    },
+    {
+      "path": "assets/posters-r8/it/thumb-01.jpg",
+      "bytes": 37847,
+      "sha256": "ec6969d7a0a46a8f1ca2e47331ab41286c46601b647c2017b5fc9297b9432b91"
+    },
+    {
+      "path": "assets/posters-r8/it/thumb-02.jpg",
+      "bytes": 40437,
+      "sha256": "57c79943046290b91900d470e63bda28089cef42550154185163eeb899e66003"
+    },
+    {
+      "path": "assets/posters-r8/it/thumb-03.jpg",
+      "bytes": 56083,
+      "sha256": "7868c8bbbec6d6f3058ce340953553512cc63e0d7a16b3a62463166099196116"
+    },
+    {
+      "path": "assets/posters-r8/it/thumb-04.jpg",
+      "bytes": 38008,
+      "sha256": "29c10d9c5dbdce1cc220ada1c9c77fc2c9c0419c7dab0bb8ff23e6a8c5fa2d02"
+    },
+    {
+      "path": "assets/posters-r8/kakeya-mark.png",
+      "bytes": 126893,
+      "sha256": "b687593ada98b253ccc978cb85cc71c4957471ea5f6c132d5b0a1a4e5ace638a"
+    },
+    {
+      "path": "assets/posters-r8/validation.json",
+      "bytes": 5860,
+      "sha256": "108569490a1adcdf3dc108f02c284c5c652a36d2ab453b44e0ac7a37ce2bd4ab"
+    },
+    {
+      "path": "assets/support-r8/100mm-cap.bin",
+      "bytes": 1070936,
+      "sha256": "da70103e651224af1cb6d200b49c9611af4694d994a25295cf22acc6a0aa65bb"
+    },
+    {
+      "path": "assets/support-r8/100mm-main.bin",
+      "bytes": 2196104,
+      "sha256": "622a9fa2e8fb63a6173b37c7c5c098ec6e3ace551b87890186f5e11208a0f8b7"
+    },
+    {
+      "path": "assets/support-r8/50mm-cap.bin",
+      "bytes": 1765928,
+      "sha256": "13773a354e2afca8cf60d7e1d2dd0205e5f6a078e6c24d220cbd543dae6e0581"
+    },
+    {
+      "path": "assets/support-r8/50mm-main.bin",
+      "bytes": 1605320,
+      "sha256": "b086ff9e1353ebbba00314c208a39b19a8b496d7bb1fc41df79a9993761c1ac6"
+    },
+    {
+      "path": "assets/support-r8/README.txt",
+      "bytes": 3615,
+      "sha256": "cb5e442f2775574f3f8a2aee7c8a07bd25a267e96d4717baee61c85816f3bbed"
+    },
+    {
+      "path": "assets/support-r8/Support_R8_100mm_cap.stl",
+      "bytes": 2231384,
+      "sha256": "484b753a5aed6d7841a4a3c554f4f69a6433ea64292deea6732ab7b0f23c0de1"
+    },
+    {
+      "path": "assets/support-r8/Support_R8_100mm_main.stl",
+      "bytes": 4577484,
+      "sha256": "cb510f46e2edfbf31dab228431378ad4675766d052901db554c552e7a4242d07"
+    },
+    {
+      "path": "assets/support-r8/Support_R8_50mm_cap.stl",
+      "bytes": 3679184,
+      "sha256": "4e6b1085b9fe1781055fd76d0e7f3affc8db0172887727b8041ff7e000f8b021"
+    },
+    {
+      "path": "assets/support-r8/Support_R8_50mm_main.stl",
+      "bytes": 3347184,
+      "sha256": "18ded9126b3740646f223abfd22a3d43cb28cb044cea906272747928bfd99783"
+    },
+    {
+      "path": "assets/support-r8/Support_R8_Design_and_Calculation.zip",
+      "bytes": 9266330,
+      "sha256": "2a17fd783c2eb9e3cdeaed4e596ec8515aa24c50ad7ef6b64f91a7beae67745e"
+    },
+    {
+      "path": "assets/support-r8/ball-fem.json",
+      "bytes": 748433,
+      "sha256": "f8479be6024cb8061769d4428856b46fb0f955d3143e522742078131495b5d1d"
+    },
+    {
+      "path": "assets/support-r8/frame-fem.json",
+      "bytes": 69786,
+      "sha256": "d2c4ae878d7d3f38ad47cba3c072e2091d7773b3161ce3f2b38b427a835d4b96"
+    },
+    {
+      "path": "assets/support-r8/support-verification.json",
+      "bytes": 3570,
+      "sha256": "26f362d90209f069f3e66034fea35ed60ef629f4752432503b53e52ff55ac81c"
+    },
+    {
+      "path": "assets/support-r8/support.json",
+      "bytes": 27832,
+      "sha256": "599f0aa6daefa4c912123dced4d8306e1b6afe71c56d773d41ee7f337305c55e"
+    }
+  ]
+}
