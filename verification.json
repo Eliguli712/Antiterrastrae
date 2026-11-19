@@ -1,8 +1,8 @@
 {
-  "source_commit": "744a2f9950851f0b1ea3bf8fd221ce3f1354fb48",
-  "verified_at": "2026-11-19T17:52:23.001643+00:00",
+  "source_commit": "302538ea5da415141a0669bca8a36961dd60d3db",
+  "verified_at": "2026-11-19T17:56:53.835062+00:00",
   "execution": "GitHub Actions",
-  "run_url": "https://github.com/Eliguli712/Antiterrastrae/actions/runs/44580727375",
+  "run_url": "https://github.com/Eliguli712/Antiterrastrae/actions/runs/44581719987",
   "sites": {
     "github_pages": {
       "url": "https://eliguli712.github.io/Antiterrastrae/",
@@ -10,26 +10,26 @@
       "checked_files": [
         {
           "path": "cv.html",
-          "bytes": 597247,
-          "sha256": "9a06493273d203fca94a50bb4208f9ca3bf7745ebbf206d1936c8ae5fde4cde5",
+          "bytes": 597315,
+          "sha256": "20b8866607cc307080bdf8124beea3ec1b608a05cbcae497ccf9d0bbe240e908",
           "matches": true
         },
         {
           "path": "publications/catalog.json",
           "bytes": 7649,
-          "sha256": "5929c3dec141ef0e3dcd521cb35c9b0f1489f2b0647cd72f64c007a64466cd19",
+          "sha256": "05ed62f4b486f6fb0b8fdf6da7a59e1dc19817498ba66deb4b04ee580083f129",
           "matches": true
         },
         {
           "path": "cv.pdf",
           "bytes": 349379,
-          "sha256": "6c1447ace2dabdb520bcf885eced077b2d231afbb5d4c75defc000863f6a0666",
+          "sha256": "66fd10d355ffebf5582cb9b3031dc85f46c20b4b4196799c2e918ae542f3bc61",
           "matches": true
         },
         {
           "path": "cv.docx",
-          "bytes": 26261,
-          "sha256": "65a18efd01ae9b0756e8c8f1857d76a4b84cab7beecbb7aeeb58977d2e28c624",
+          "bytes": 26313,
+          "sha256": "9a4fc87b7f77a431c1e3aaba47c83a58852046d60285c1c7187080ad0bcc2244",
           "matches": true
         },
         {
@@ -190,8 +190,8 @@
         },
         {
           "path": "publications/megalodon-current-preprint.pdf",
-          "bytes": 18182136,
-          "sha256": "241a23169b09ba7bad9028226d0bc02d4576cc29a8e660ae01de2da91fb9f189",
+          "bytes": 18182133,
+          "sha256": "f795ffc49bb64a47a5a967e7ed8b815f940615e167daa8ab1ab91f9a2d1d0dee",
           "matches": true
         },
         {
@@ -303,7 +303,7 @@
     "vercel": {
       "url": "https://eliguli.vercel.app/",
       "http": "failed",
-      "error": "Published file differs: cv.html; expected SHA-256 9a06493273d203fca94a50bb4208f9ca3bf7745ebbf206d1936c8ae5fde4cde5, observed 256fc4abad06c14026bce4a59e7339eb3351bc742b596e8c771891a00a2228d3",
+      "error": "Published file differs: cv.html; expected SHA-256 20b8866607cc307080bdf8124beea3ec1b608a05cbcae497ccf9d0bbe240e908, observed 256fc4abad06c14026bce4a59e7339eb3351bc742b596e8c771891a00a2228d3",
       "attempts": 4
     }
   },
