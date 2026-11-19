@@ -1,8 +1,8 @@
 {
-  "source_commit": "53ca073c145f7ddab6e846f53500bd870fbc6c47",
-  "verified_at": "2026-11-19T17:30:33.249304+00:00",
+  "source_commit": "744a2f9950851f0b1ea3bf8fd221ce3f1354fb48",
+  "verified_at": "2026-11-19T17:52:23.001643+00:00",
   "execution": "GitHub Actions",
-  "run_url": "https://github.com/Eliguli712/Antiterrastrae/actions/runs/44576982143",
+  "run_url": "https://github.com/Eliguli712/Antiterrastrae/actions/runs/44580727375",
   "sites": {
     "github_pages": {
       "url": "https://eliguli712.github.io/Antiterrastrae/",
@@ -10,32 +10,32 @@
       "checked_files": [
         {
           "path": "cv.html",
-          "bytes": 421367,
-          "sha256": "2aa3581c87b0c6a28040f9bd2eca520e6f3045d194a286fba02247965a2bdc6d",
+          "bytes": 597247,
+          "sha256": "9a06493273d203fca94a50bb4208f9ca3bf7745ebbf206d1936c8ae5fde4cde5",
           "matches": true
         },
         {
           "path": "publications/catalog.json",
-          "bytes": 6904,
-          "sha256": "9cab00f67d405d5364568ae5490efd617db11f6920084be679332b35c154aff7",
+          "bytes": 7649,
+          "sha256": "5929c3dec141ef0e3dcd521cb35c9b0f1489f2b0647cd72f64c007a64466cd19",
           "matches": true
         },
         {
           "path": "cv.pdf",
-          "bytes": 219431,
-          "sha256": "da458f76f084705417565664186cb40c0210f864e010a33a00f12d1cb7161e73",
+          "bytes": 349379,
+          "sha256": "6c1447ace2dabdb520bcf885eced077b2d231afbb5d4c75defc000863f6a0666",
           "matches": true
         },
         {
           "path": "cv.docx",
-          "bytes": 25797,
-          "sha256": "1eda871edb523e566145f3645fb705dbb0e250af4f90b97435597358ef7a0c2e",
+          "bytes": 26261,
+          "sha256": "65a18efd01ae9b0756e8c8f1857d76a4b84cab7beecbb7aeeb58977d2e28c624",
           "matches": true
         },
         {
           "path": "cv.md",
-          "bytes": 4887,
-          "sha256": "c1176d131001553f3325b40786835c1c5a118b2fb7a34fa8544d54ba9d2e2b91",
+          "bytes": 5232,
+          "sha256": "6dcbd8abb7949499f3f9f33aef6c1bc094044d74a735fdea2c40c60836f690ad",
           "matches": true
         },
         {
@@ -189,6 +189,12 @@
           "matches": true
         },
         {
+          "path": "publications/megalodon-current-preprint.pdf",
+          "bytes": 18182136,
+          "sha256": "241a23169b09ba7bad9028226d0bc02d4576cc29a8e660ae01de2da91fb9f189",
+          "matches": true
+        },
+        {
           "path": "publications/megalodon-9page-report.pdf",
           "bytes": 9819706,
           "sha256": "2f0e465c25db57de7080e338ed655d10fe16f7fb9f5d84df2797b9714c33fe6c",
@@ -297,7 +303,7 @@
     "vercel": {
       "url": "https://eliguli.vercel.app/",
       "http": "failed",
-      "error": "Published file differs: cv.html; expected SHA-256 2aa3581c87b0c6a28040f9bd2eca520e6f3045d194a286fba02247965a2bdc6d, observed 256fc4abad06c14026bce4a59e7339eb3351bc742b596e8c771891a00a2228d3",
+      "error": "Published file differs: cv.html; expected SHA-256 9a06493273d203fca94a50bb4208f9ca3bf7745ebbf206d1936c8ae5fde4cde5, observed 256fc4abad06c14026bce4a59e7339eb3351bc742b596e8c771891a00a2228d3",
       "attempts": 4
     }
   },
