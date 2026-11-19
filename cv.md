@@ -36,11 +36,13 @@ B.A. candidate, Mathematics & Computer Science
 
 ## Research Report
 
-**Han, E. (2026).** [Tooth-scale Stress Localisation in a micro-CT-derived Otodus megalodon Model: Calibrated Geometry, Numerical Verification and Regional Sensitivity.](https://eliguli712.github.io/Antiterrastrae/publications/reader.html?paper=megalodon-9page-report)
+**Han, E. (2026).** [Tooth-scale Stress Localisation in a micro-CT-derived Otodus megalodon Model: Calibrated Geometry, Numerical Verification and Regional Sensitivity.](https://eliguli712.github.io/Antiterrastrae/publications/reader.html?paper=megalodon-current-preprint)
 
-Scientifically revised technical report · 9 pages · 31 October 2026
+Preprint · 12 pages · 19 November 2026
 
-Calibrated CT geometry, controlled numerical stress experiments, numerical verification and regional sensitivity under stated modelling assumptions.
+Calibrated CT geometry, controlled numerical stress experiments, regional quantile stability, material and attachment sensitivity, and registered axial field comparisons under stated modelling assumptions. Includes public native, optimised and 200M exterior data links.
+
+[LaTeX source package](https://eliguli712.github.io/Antiterrastrae/publications/megalodon-current-preprint-source.zip) · [Preserved 9-page edition](https://eliguli712.github.io/Antiterrastrae/publications/reader.html?paper=megalodon-9page-report)
 
 ## Selected Research & Computational Projects
 

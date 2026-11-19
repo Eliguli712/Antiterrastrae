@@ -28,7 +28,9 @@ def main():
         threading.Thread(target=server.serve_forever, daemon=True).start()
         try:
             with sync_playwright() as playwright:
-                browser = playwright.chromium.launch(executable_path='/usr/bin/chromium', headless=True,
+                chrome = (shutil.which('chromium') or shutil.which('chromium-browser')
+                          or '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome')
+                browser = playwright.chromium.launch(executable_path=chrome, headless=True,
                     args=['--no-sandbox', '--disable-dev-shm-usage'])
                 page = browser.new_page()
                 page.goto(f'http://127.0.0.1:{server.server_port}/cv.html', wait_until='networkidle')
@@ -38,12 +40,18 @@ def main():
                     const url=new URL(link.href);
                     if(url.hostname==='127.0.0.1') link.href='https://eliguli712.github.io/Antiterrastrae'+url.pathname+url.search+url.hash;
                   }
+                  const title=document.querySelector('.report-primary > summary strong');
+                  const paper=document.querySelector('.report-primary .report-fulltext');
+                  if(title&&paper){
+                    const link=document.createElement('a'); link.href=paper.href;
+                    title.replaceWith(link); link.append(title);
+                  }
                 }''')
                 page.pdf(path=str(stage / 'cv.pdf'), prefer_css_page_size=True, print_background=False)
                 browser.close()
         finally:
             server.shutdown(); server.server_close()
-        text = subprocess.run(['/usr/bin/pdftotext', str(stage / 'cv.pdf'), '-'],
+        text = subprocess.run([shutil.which('pdftotext') or '/usr/bin/pdftotext', str(stage / 'cv.pdf'), '-'],
                               capture_output=True, text=True, check=True).stdout
         normalized = ' '.join(text.lower().split())
         compact = re.sub(r'\s+', '', normalized)

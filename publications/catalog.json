@@ -1,13 +1,27 @@
 {
   "documents": [
     {
+      "id": "megalodon-current-preprint",
+      "file": "megalodon-current-preprint.pdf",
+      "title": "Tooth-scale Stress Localisation in a µCT-derived Otodus megalodon Model",
+      "category": "Computational biomechanics",
+      "status": "Preprint",
+      "date": "19 November 2026",
+      "description": "Calibrated CT geometry, regional stress quantiles, targeted mesh refinement, material and attachment sensitivity, and registered axial field comparisons. Includes public native, optimised and 200M exterior data links.",
+      "pages": 12,
+      "bytes": 18182136,
+      "sha256": "241a23169b09ba7bad9028226d0bc02d4576cc29a8e660ae01de2da91fb9f189",
+      "source_file": "megalodon-current-preprint-source.zip",
+      "axis_data_file": "megalodon-archive-axis-data.zip"
+    },
+    {
       "id": "megalodon-9page-report",
       "file": "megalodon-9page-report.pdf",
       "title": "Tooth-scale Stress Localisation in a µCT-derived Otodus megalodon Model",
-      "category": "Computational biomechanics",
-      "status": "Revised technical report",
+      "category": "Research archive",
+      "status": "Legacy 9-page edition",
       "date": "31 October 2026",
-      "description": "Calibrated geometry, numerical verification and regional sensitivity. Current condensed edition with the complete report content.",
+      "description": "The unchanged nine-page edition, retained alongside the current preprint and earlier reports.",
       "pages": 9,
       "bytes": 9819706,
       "sha256": "2f0e465c25db57de7080e338ed655d10fe16f7fb9f5d84df2797b9714c33fe6c"

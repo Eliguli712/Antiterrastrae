@@ -4,14 +4,18 @@ import hashlib
 import html
 import json
 import re
+import shutil
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLICATIONS = ROOT / 'publications'
 DOCUMENTS = [
+    ('megalodon-current-preprint', 'Tooth-scale Stress Localisation in a µCT-derived Otodus megalodon Model',
+     'Computational biomechanics', 'Preprint', '19 November 2026',
+     'Calibrated CT geometry, regional stress quantiles, targeted mesh refinement, material and attachment sensitivity, and registered axial field comparisons. Includes public native, optimised and 200M exterior data links.'),
     ('megalodon-9page-report', 'Tooth-scale Stress Localisation in a µCT-derived Otodus megalodon Model',
-     'Computational biomechanics', 'Revised technical report', '31 October 2026',
-     'Calibrated geometry, numerical verification and regional sensitivity. Current condensed edition with the complete report content.'),
+     'Research archive', 'Legacy 9-page edition', '31 October 2026',
+     'The unchanged nine-page edition, retained alongside the current preprint and earlier reports.'),
     ('massa-corporis', 'Massa Corporis et Densitas Architecturae',
      'Comparative palaeobiology', 'Working draft', 'October 2026',
      'Body-mass estimation in cetaceans and Mesozoic marine reptiles, with explicit scaling assumptions and alternative estimates.'),
@@ -50,7 +54,7 @@ def describe(entry):
     slug, title, category, status, date, description = entry
     file = slug + '.pdf'
     path = PUBLICATIONS / file
-    info = subprocess.run(['/usr/bin/pdfinfo', str(path)], check=True, capture_output=True, text=True).stdout
+    info = subprocess.run([shutil.which('pdfinfo') or '/usr/bin/pdfinfo', str(path)], check=True, capture_output=True, text=True).stdout
     pages = int(re.search(r'^Pages:\s+(\d+)', info, re.M)[1])
     assert pages > 0 and path.read_bytes().startswith(b'%PDF-')
     return dict(id=slug, file=file, title=title, category=category, status=status,
