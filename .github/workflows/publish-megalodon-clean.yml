@@ -5,6 +5,8 @@ on:
     paths:
       - '.github/workflows/publish-megalodon-clean.yml'
       - '.github/scripts/publish-megalodon-clean.py'
+      - '.github/scripts/recover-native-field-r7.py'
+      - '.github/scripts/project-boundary-r7.cpp'
       - '.github/megalodon-clean-manifest.json'
   workflow_dispatch:
 permissions:
