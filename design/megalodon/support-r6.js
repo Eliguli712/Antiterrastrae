@@ -1,4 +1,4 @@
-import {createAssemblyViewer} from './assembly-viewer-r7.js';
+import {createAssemblyViewer} from './assembly-viewer-r7.js?v=r8-2';
 import {gradient,TOOTH_LO,TOOTH_HI,DEFAULT_THRESHOLD} from './field-colours-r7.js';
 const $=id=>document.getElementById(id),root=new URL('https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/c63fa1de6fb6b86dc7eacab3ce238665e9f558ab/assets/support-r8/',import.meta.url).href;const S={size:50,mode:'all',sphereVariant:'wall',colour:'log',threshold:DEFAULT_THRESHOLD,commonScale:false};let model,frame,balls,preview,feasibility,viewer,domainSize=50,generation=0;
 const tr=(en,de,el)=>({en,de,el}[document.documentElement.lang]||en),number=(n,d=3)=>Number(n).toLocaleString(document.documentElement.lang,{maximumFractionDigits:d});async function json(name){const r=await fetch(root+name);if(!r.ok)throw Error(name+' HTTP '+r.status);return r.json();}

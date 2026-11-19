@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import {targetDimensions} from './native-refinement-r8.js';
+import {targetDimensions} from './native-refinement-r8.js?v=r8-2';
 import {OrbitControls} from './vendor/OrbitControls.js';
 const LO=.2531670947190341,HI=250.5221326467093;
 export class NativeViewer{
