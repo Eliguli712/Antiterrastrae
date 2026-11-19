@@ -1,0 +1,26 @@
+name: Publish clean megalodon gallery
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-megalodon-clean.yml'
+      - '.github/scripts/publish-megalodon-clean.py'
+      - '.github/megalodon-clean-manifest.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: publish-clean-megalodon
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Verify assets and publish gallery
+        run: |
+          python -m pip install numpy
+          python .github/scripts/publish-megalodon-clean.py
