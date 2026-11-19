@@ -1,0 +1,10 @@
+{
+  "revision": "R7",
+  "canonical_url": "https://eliguli712.github.io/Antiterrastrae/design/megalodon/",
+  "asset_commit": "5d5316eba77b04e9cea85228a942224c0d087960",
+  "source_commit": "844cf47229f49171728d983d36528028330c9131",
+  "deleted_duplicate": "dual-scale-original-posters.html",
+  "native_field_values_per_size": 39428327,
+  "unsupported_native_display_vertices": 0,
+  "fixed_boundary_retest": "Passed for both sizes"
+}

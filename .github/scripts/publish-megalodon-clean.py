@@ -23,6 +23,11 @@ def download(item, destination):
     target.parent.mkdir(parents=True, exist_ok=True)
     if target.is_file() and hashlib.sha256(target.read_bytes()).hexdigest() == item['sha256']:
         return
+    if 'content_utf8' in item:
+        content=item['content_utf8'].encode()
+        assert hashlib.sha256(content).hexdigest()==item['sha256']
+        target.write_bytes(content)
+        return
     for attempt in range(4):
         try:
             request = urllib.request.Request(ORIGIN + str(relative), headers={'User-Agent': 'Megalodon-Publication/7'})
@@ -45,7 +50,7 @@ if remote:
     parent = 'FETCH_HEAD'
 else:
     parent = 'HEAD'
-git('worktree', 'add', '--detach', '--no-checkout', str(DATA), parent)
+git('worktree', 'add', '--detach', *([] if remote else ['--no-checkout']), str(DATA), parent)
 git('read-tree', '--empty', cwd=DATA)
 asset_items = [x for x in MANIFEST['files'] if x['path'].startswith('assets/')]
 with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:

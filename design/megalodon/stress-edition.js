@@ -21,7 +21,7 @@ function t(k){return window.designI18n?.t(k)||extra[k]?.[0]||k}
 function register(){window.designI18n?.register(extra);for(const el of document.querySelectorAll('[data-i18n]'))if(extra[el.dataset.i18n])el.textContent=t(el.dataset.i18n);for(const el of document.querySelectorAll('[data-i18n-aria]'))if(extra[el.dataset.i18nAria])el.setAttribute('aria-label',t(el.dataset.i18nAria));}
 register();
 async function get(name,type='json'){
- for(const base of ['assets/',remote]){
+ for(const base of ['https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/5d5316eba77b04e9cea85228a942224c0d087960/assets/',remote]){
   try{const r=await fetch(base+name);if(!r.ok)continue;return type==='json'?await r.json():await r.arrayBuffer()}catch{}
  }
  throw Error('Unavailable numerical asset: '+name);
