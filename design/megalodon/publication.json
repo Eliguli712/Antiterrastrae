@@ -1,7 +1,7 @@
 {
-  "revision": "R8",
+  "revision": "R9",
   "canonical_url": "https://eliguli712.github.io/Antiterrastrae/design/megalodon/",
-  "asset_commit": "c63fa1de6fb6b86dc7eacab3ce238665e9f558ab",
+  "asset_commit": "defa54fdf8ec93392453c5a90b6562b77cbbb299",
   "source_commit": "6cc7780ddb759d7507a3f0ec6574b4be493fb103",
   "deleted_duplicate": "dual-scale-original-posters.html",
   "native_field_values_per_size": 39428327,
@@ -31,5 +31,15 @@
     "gpu_visual_execution_tested": false,
     "no_webgl_fallback": "Complete native source plates plus interactive software preview"
   },
-  "posters": "Original EN/DE/IT four-page editions; only page-four QR changed. Supplied Kakeya mark centred. All QR codes decoded at four PDF render resolutions."
+  "posters": "Original EN/DE/IT four-page editions; only page-four QR changed. Supplied Kakeya mark centred. All QR codes decoded at four PDF render resolutions.",
+  "native_array_lifetime": "CPU attribute arrays and precomputed bounds remain valid until the current chunk GPU fence; geometry and arrays released together afterwards",
+  "native_failure_controls": "Controller disposed before error status is emitted; native-load control becomes retryable",
+  "default_palette": "Original restored studio Turbo LUT, linearly interpolated; independent R7 field values unchanged",
+  "optional_palettes": [
+    "logarithmic",
+    "pearlescent wash"
+  ],
+  "native_regression": "Both sizes: 75 real chunks, 74293846 source faces, 150 post-upload bounds passes, one maximum resident chunk, cancellation and renderer interruption checked",
+  "gpu_visual_execution_tested": false,
+  "native_regression_audit": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/defa54fdf8ec93392453c5a90b6562b77cbbb299/assets/native-controller-validation-r9.json"
 }

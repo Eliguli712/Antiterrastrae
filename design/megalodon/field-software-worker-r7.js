@@ -1,4 +1,4 @@
-import {fieldColour,TOOTH_LO,TOOTH_HI} from './field-colours-r7.js';
+import {fieldColour,TOOTH_LO,TOOTH_HI} from './field-colours-r7.js?v=r9-1';
 let meshes=[],palette=[];
 function rotate(p,yaw,pitch){const cy=Math.cos(yaw),sy=Math.sin(yaw),cp=Math.cos(pitch),sp=Math.sin(pitch),x=cy*p[0]+sy*p[1],y=-sy*p[0]+cy*p[1];return[x,cp*y-sp*p[2],sp*y+cp*p[2]];}
 function transform(p,kind,s){const target=kind==='tooth'?'tooth':'support';if(target==='tooth')p=[p[0]*s.size/100,p[1]*s.size/100,86.73910524340096+(p[2]-86.73910524340096)*s.size/100];const o=target==='tooth'?[0,0,86.73910524340096+s.size/2]:[0,0,45],pose=s.poses[target],q=rotate(p.map((v,i)=>v-o[i]),pose.r[0],pose.r[1]);return q.map((v,i)=>v+o[i]+pose.t[i]);}
