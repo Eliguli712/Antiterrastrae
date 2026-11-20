@@ -1,0 +1,104 @@
+{
+  "date": "2026-11-19",
+  "frames": 3050,
+  "fps": 25,
+  "duration_seconds": 122,
+  "source_native_spacing_mm": 0.018,
+  "mask_sha256": "8a68259cc4c079eaef5ec604e60bea2de6bf8bf4ebb7d9499347651676e19bce",
+  "source_frame": [
+    17.970990955154033,
+    19.84263381339287,
+    45.444574966531945
+  ],
+  "basis_columns": [
+    [
+      -0.20220834753192696,
+      -0.05601955728976829,
+      0.9777390211040299
+    ],
+    [
+      0.9756603683904302,
+      -0.09801560734871566,
+      0.1961626525827801
+    ],
+    [
+      0.0848447390275762,
+      0.9936069393462997,
+      0.07447563589672614
+    ]
+  ],
+  "broadface_thickness_range_mm": [
+    -6.308459565167138,
+    4.235436057168356
+  ],
+  "broadface_largest_frame": 2226,
+  "broadface_correlation": {
+    "Pearson": -0.3006119418910252,
+    "Spearman": -0.45961424606007695,
+    "planes": 2950
+  },
+  "native_axis_correlations": [
+    {
+      "axis": "Z",
+      "Pearson": -0.8390495068609778,
+      "Spearman": -0.851502704479197,
+      "planes": 2836
+    },
+    {
+      "axis": "Y",
+      "Pearson": 0.312879553412708,
+      "Spearman": 0.3242246892467889,
+      "planes": 1878
+    },
+    {
+      "axis": "X",
+      "Pearson": 0.13586345428380225,
+      "Spearman": 0.01606589141256457,
+      "planes": 723
+    }
+  ],
+  "display": "Raw values linear in [-3292,26623]; external background excluded by selected native 3D mask. Enclosed low-density pixels remain dark. This is display isolation, not beam-hardening correction. Oblique grid: 72 um; exact stride-two 36 um display cache.",
+  "scope": "The natural broad-face sweep is parallel to the registered transverse/crown-root plane, moving through thickness. It need not be an isosceles triangle; specimen shape is not altered. 3050 playback frames are resliced samples, not 3050 independent newly acquired oblique images.",
+  "non_claims": [
+    "No tissue identification, recovered obscured detail, new acquired resolution, damage diagnosis, FEA or shock solution."
+  ],
+  "outputs": [
+    {
+      "file": "CT_broadface_longitudinal_3050.mp4",
+      "bytes": 48671406,
+      "sha256": "960a77189f2551b5c666d834ed9c70acd1aa6b879950baa4ed5c6f522e14f13d"
+    },
+    {
+      "file": "CT_broadface_longitudinal_3050.gif",
+      "bytes": 37363254,
+      "sha256": "36ab78c874d260fd10667813769b49bd4dc3a5b1950a9b2cec75209eedb998d4"
+    },
+    {
+      "file": "CT_specimen_three_axes_3050.gif",
+      "bytes": 36996812,
+      "sha256": "117d492eac99ca7ea8bbbc6e266ccb1dc59836970011d1b0aa6a5ea5b6a621b8"
+    },
+    {
+      "file": "CT_broadface_poster.jpg",
+      "bytes": 499763,
+      "sha256": "849cbfb9384c0e58ad90585e4d8a521cfef78d9370fdc364e25492c3e8b3c8b6"
+    },
+    {
+      "file": "CT_three_axes_poster.jpg",
+      "bytes": 458472,
+      "sha256": "1b868d8504b3f9a160aa95fb8835da1a56445fca4cd70d43d66dacdd3be81c0b"
+    },
+    {
+      "file": "CT_specimen_three_axes_3050.mp4",
+      "bytes": 42846715,
+      "sha256": "6a6ec0b94e26e94678fc8be78e4c511cf27d0b8734c0e2b102515ae3f2e2ff4f"
+    }
+  ],
+  "runtime_seconds": 1099.6789797920064,
+  "orientation": "Broad-face longitudinal raster: apex at top, bilateral root at bottom; crownward coordinate increases upwards.",
+  "published_date": "2026-11-20",
+  "primary_reproduction_code": {
+    "file": "export_specimen_movies.py",
+    "sha256": "e3f887a6369a51f3c71286b110212787e72eeb278891479d8d5eb12f1846fd95"
+  }
+}
