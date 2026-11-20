@@ -1,0 +1,9 @@
+{
+  "shader_source": "native-refinement-r8.js copyMaterial, exact vertex and fragment bodies",
+  "GLES_version": "OpenGL ES 3.2 Mesa 25.0.7-2+deb13u1",
+  "renderer": "llvmpipe (LLVM 19.1.7, 256 bits)",
+  "shader_compile_and_link": "passed",
+  "colour_copy_exact": true,
+  "native_depth_preserved_for_front_and_back_overlays": true,
+  "physical_mobile_GPU_tested": false
+}

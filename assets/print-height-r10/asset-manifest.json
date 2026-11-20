@@ -1,0 +1,132 @@
+{
+  "revision": "R10",
+  "files": [
+    {
+      "file": "100mm-assembly-height-comparison.png",
+      "bytes": 305787,
+      "SHA256": "2900a10e3ffef00999df06f1d138dcbf8d860de64f4d0233fb9cf25e51ba2348"
+    },
+    {
+      "file": "100mm-assembly-minimum-height.json",
+      "bytes": 5240,
+      "SHA256": "36d617af23fe9cc07a14aed5b5bd89f8b713f97c37bfd2b2e722f51b7c4f7e55"
+    },
+    {
+      "file": "100mm-cap-minimum-height.json",
+      "bytes": 5285,
+      "SHA256": "974e03b47cb6f9e68e95e9005e7a7dee494700c0f284cf4fe51fea3dd6b4efbb"
+    },
+    {
+      "file": "100mm-main-minimum-height.json",
+      "bytes": 5024,
+      "SHA256": "29f0a82a5519f7a498dd1cf93d64be2d4d062e90ec3b087de941fb2512bda8d0"
+    },
+    {
+      "file": "50mm-assembly-height-comparison.png",
+      "bytes": 255988,
+      "SHA256": "7b8a20a0915f41c16df0d01cddd533450171d0e96397a4d646a00e7fde7cf733"
+    },
+    {
+      "file": "50mm-assembly-minimum-height.json",
+      "bytes": 5242,
+      "SHA256": "3c6e0eeecc9653f162c76f5b7ea137c95ed5b1d2a586b734992d88e5340767d1"
+    },
+    {
+      "file": "50mm-cap-minimum-height.json",
+      "bytes": 11439,
+      "SHA256": "048e5b726403dc32b7528b4177acaf6203c3b28cb466efc305151ce237134bb8"
+    },
+    {
+      "file": "50mm-main-minimum-height.json",
+      "bytes": 5024,
+      "SHA256": "c5efc2ef01c8fab07fc5c20908fe4c94dadcde20a63437d7739460d7458206b2"
+    },
+    {
+      "file": "README.md",
+      "bytes": 6402,
+      "SHA256": "c0c72deb50e64050117e0d19a1da6236506a26f50c6c439a863d1f6f013dd7f7"
+    },
+    {
+      "file": "Support_R8_100mm_assembly_Minimum_Height.stl",
+      "bytes": 6808784,
+      "SHA256": "82f149945ea80558873cacec522d6fcd4e54bacc3c84ca1beb4b00489f46b4c4"
+    },
+    {
+      "file": "Support_R8_100mm_cap_Minimum_Height.stl",
+      "bytes": 2231384,
+      "SHA256": "605f0bde1fb196eaeb9b5a760a82ca3c33603a632ba6000ff5adb1baed94d59e"
+    },
+    {
+      "file": "Support_R8_100mm_main_Minimum_Height.stl",
+      "bytes": 4577484,
+      "SHA256": "ae24de6524a5fcc8f9321d54dfac08f35ebf7f99cc59cd6b57c686b498803906"
+    },
+    {
+      "file": "Support_R8_50mm_assembly_Minimum_Height.stl",
+      "bytes": 7026284,
+      "SHA256": "389bf1aefa97ed6700caa26a7ffef7d7936f49774d29a0f5f2cc481c96d84245"
+    },
+    {
+      "file": "Support_R8_50mm_cap_Minimum_Height.stl",
+      "bytes": 3679184,
+      "SHA256": "f6ece2ce0d98c4ff888454d34715734440d1477d6f64ecc52e9ad1081c3ed74b"
+    },
+    {
+      "file": "Support_R8_50mm_main_Minimum_Height.stl",
+      "bytes": 3347184,
+      "SHA256": "ba5db05f87eccc1f1a0bd3ecb2bbd7e0dadb979c7f8e160a1f3cfb88f3a1f03f"
+    },
+    {
+      "file": "figure-provenance.json",
+      "bytes": 931,
+      "SHA256": "2fd43beea7b1e2cef6b9c2bee3b9ee8f7f50a0de3ea0b2bb058600f5b467e307"
+    },
+    {
+      "file": "minimum-print-height.csv",
+      "bytes": 1577,
+      "SHA256": "47fb61a3a4114296e1aebd7a52babc40350cc4813255c2b555c734b324e4d49b"
+    },
+    {
+      "file": "minimum-print-height.json",
+      "bytes": 44041,
+      "SHA256": "b39712752ef97cf9eeb44c5c743d01396517539de21c020cce9151aa59f5bff2"
+    },
+    {
+      "file": "verification.json",
+      "bytes": 4381,
+      "SHA256": "a8f64f8dc63eeac4d1a006c0f23fb57cfef0012fa1bbccaaceed6d7a4d8e11dd"
+    }
+  ],
+  "source_files": [
+    {
+      "file": "README.md",
+      "bytes": 6402,
+      "SHA256": "c0c72deb50e64050117e0d19a1da6236506a26f50c6c439a863d1f6f013dd7f7"
+    },
+    {
+      "file": "analytic-validation.json",
+      "bytes": 1515,
+      "SHA256": "ee3e62ff8b291b4ef12f96cf43ea7bb6215a87eb3a49d9d39ff73eeaf24ba1a0"
+    },
+    {
+      "file": "min_width.cpp",
+      "bytes": 7020,
+      "SHA256": "63a3058b76f87dcef60860fa6b52dba5675cff55dbd7f4939bc21a4e28ec2dd1"
+    },
+    {
+      "file": "render_figures.py",
+      "bytes": 5489,
+      "SHA256": "5cd7143c8764467d47cf0260d9dff6bbfdf29ccfa09ee52221021ce8c70cecbb"
+    },
+    {
+      "file": "solve_print_height.py",
+      "bytes": 11843,
+      "SHA256": "1f6763ef1a5b218b9b07f6e9698afb9df8cdc41bb2a8ae925a47996451a551d5"
+    },
+    {
+      "file": "verify_results.py",
+      "bytes": 3266,
+      "SHA256": "a0c7cec27103c2e0865150f469805adf49a7b4bf928d02bf1d1469dea29a3818"
+    }
+  ]
+}

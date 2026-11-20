@@ -1,0 +1,16 @@
+{
+  "revision": "R10",
+  "worker_same_chunk_warm_load_additional_fetches": 0,
+  "first_chunk_cache_hit_additional_fetches": 0,
+  "compressed_cache_bytes": 33193989,
+  "cache_budget_bytes": 33554432,
+  "shared_source_buffer_transferred_once": true,
+  "values_remain_original_Pa_after_main_thread_edits": true,
+  "wide_view_chunks": 75,
+  "local_16mm_window_chunks": 17,
+  "local_submitted_faces": 17000000,
+  "local_skipped_chunks": 58,
+  "all_skipped_source_vertices_checked": 30614539,
+  "culling_removes_geometry": false,
+  "source_triangles": 74293846
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "size_mm": 50,
+    "file": "50mm-assembly-height-comparison.png",
+    "all_original_STL_triangles_per_pose": 140524,
+    "convex_hull_solid_rendered": false,
+    "mesh_decimation_performed": false,
+    "normal_shading": "Per-original-STL-face Lambert-style mathematical shading; not a physical resin rendering.",
+    "original_pose_height_mm": 106.73910522460938,
+    "oriented_pose_height_mm": 83.07937997438299,
+    "XY_display_centring_only": true
+  },
+  {
+    "size_mm": 100,
+    "file": "100mm-assembly-height-comparison.png",
+    "all_original_STL_triangles_per_pose": 136174,
+    "convex_hull_solid_rendered": false,
+    "mesh_decimation_performed": false,
+    "normal_shading": "Per-original-STL-face Lambert-style mathematical shading; not a physical resin rendering.",
+    "original_pose_height_mm": 127.839111328125,
+    "oriented_pose_height_mm": 83.07937997438299,
+    "XY_display_centring_only": true
+  }
+]

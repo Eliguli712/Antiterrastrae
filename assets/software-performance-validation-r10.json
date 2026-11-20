@@ -1,0 +1,10 @@
+{
+  "method": "Same real interactive-light source tooth; seven camera poses; Node worker-adapter CPU timings, not device FPS",
+  "triangles": 247031,
+  "width": 430,
+  "height": 570,
+  "before_mean_warm_ms": 557.2343321666666,
+  "after_mean_warm_ms": 466.3711881666666,
+  "pixel_SHA256_identical_at_all_poses": true,
+  "unchanged_colour_recalculations_after_first_frame": 0
+}

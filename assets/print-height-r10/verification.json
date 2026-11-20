@@ -1,0 +1,119 @@
+{
+  "all_checks_passed": true,
+  "cases": [
+    {
+      "size_mm": 50,
+      "part": "main",
+      "triangles_preserved": 66942,
+      "z_min_exactly_zero": true,
+      "maximum_float32_reencoding_coordinate_error_mm": 3.814697265625e-06,
+      "relative_signed_volume_change": 1.5271939168816518e-08,
+      "certificate_gap_mm": 9.564875262872696e-06,
+      "convex_hull_width_recheck_error_mm": 0.0,
+      "SHA256": "ba5db05f87eccc1f1a0bd3ecb2bbd7e0dadb979c7f8e160a1f3cfb88f3a1f03f"
+    },
+    {
+      "size_mm": 50,
+      "part": "cap",
+      "triangles_preserved": 73582,
+      "z_min_exactly_zero": true,
+      "maximum_float32_reencoding_coordinate_error_mm": 1.9073486328125e-06,
+      "relative_signed_volume_change": 9.834853960902097e-09,
+      "certificate_gap_mm": 9.81213396858199e-06,
+      "convex_hull_width_recheck_error_mm": 0.0,
+      "SHA256": "f6ece2ce0d98c4ff888454d34715734440d1477d6f64ecc52e9ad1081c3ed74b"
+    },
+    {
+      "size_mm": 50,
+      "part": "assembly",
+      "triangles_preserved": 140524,
+      "z_min_exactly_zero": true,
+      "maximum_float32_reencoding_coordinate_error_mm": 3.814697265625e-06,
+      "relative_signed_volume_change": 6.452299344165373e-08,
+      "certificate_gap_mm": 9.564875262872696e-06,
+      "convex_hull_width_recheck_error_mm": 0.0,
+      "SHA256": "389bf1aefa97ed6700caa26a7ffef7d7936f49774d29a0f5f2cc481c96d84245"
+    },
+    {
+      "size_mm": 100,
+      "part": "main",
+      "triangles_preserved": 91548,
+      "z_min_exactly_zero": true,
+      "maximum_float32_reencoding_coordinate_error_mm": 7.628965448702729e-06,
+      "relative_signed_volume_change": 4.922656424265064e-10,
+      "certificate_gap_mm": 9.688776028707324e-06,
+      "convex_hull_width_recheck_error_mm": 0.0,
+      "SHA256": "ae24de6524a5fcc8f9321d54dfac08f35ebf7f99cc59cd6b57c686b498803906"
+    },
+    {
+      "size_mm": 100,
+      "part": "cap",
+      "triangles_preserved": 44626,
+      "z_min_exactly_zero": true,
+      "maximum_float32_reencoding_coordinate_error_mm": 3.814697265625e-06,
+      "relative_signed_volume_change": 6.506255777018958e-10,
+      "certificate_gap_mm": 9.83803189264637e-06,
+      "convex_hull_width_recheck_error_mm": 0.0,
+      "SHA256": "605f0bde1fb196eaeb9b5a760a82ca3c33603a632ba6000ff5adb1baed94d59e"
+    },
+    {
+      "size_mm": 100,
+      "part": "assembly",
+      "triangles_preserved": 136174,
+      "z_min_exactly_zero": true,
+      "maximum_float32_reencoding_coordinate_error_mm": 7.48267740391384e-06,
+      "relative_signed_volume_change": 2.805851683243275e-08,
+      "certificate_gap_mm": 9.688776028707324e-06,
+      "convex_hull_width_recheck_error_mm": 0.0,
+      "SHA256": "82f149945ea80558873cacec522d6fcd4e54bacc3c84ca1beb4b00489f46b4c4"
+    }
+  ],
+  "analytic_fixtures": [
+    {
+      "fixture": "rectangular_box_2_3_4",
+      "expected_minimum_mm": 2.0,
+      "computed_minimum_mm": 2,
+      "candidate_type": "face_normal",
+      "certificate": {
+        "lower_bound_mm": 1.9999949640255759,
+        "upper_bound_mm": 2.000000001,
+        "gap_mm": 5.036974424038132e-06,
+        "target_tolerance_mm": 1e-05,
+        "dot_roundoff_allowance_mm": 1e-09,
+        "diameter_upper_bound_mm": 5.385164808134504,
+        "sphere_cells_evaluated": 680,
+        "sphere_cells_subdivided": 168,
+        "sphere_cells_pruned": 512,
+        "sphere_cells_remaining": 0,
+        "max_depth": 19,
+        "peak_heap_cells": 24,
+        "long_double_mantissa_bits": 64,
+        "covers_all_unit_directions": true,
+        "exact_rational_interval_arithmetic": false
+      }
+    },
+    {
+      "fixture": "regular_tetrahedron_edge_edge",
+      "expected_minimum_mm": 2.0,
+      "computed_minimum_mm": 2,
+      "candidate_type": "edge_cross",
+      "certificate": {
+        "lower_bound_mm": 1.9999907128715761,
+        "upper_bound_mm": 2.000000001,
+        "gap_mm": 9.288128423795127e-06,
+        "target_tolerance_mm": 1e-05,
+        "dot_roundoff_allowance_mm": 1e-09,
+        "diameter_upper_bound_mm": 2.82842712574619,
+        "sphere_cells_evaluated": 3688,
+        "sphere_cells_subdivided": 920,
+        "sphere_cells_pruned": 2768,
+        "sphere_cells_remaining": 0,
+        "max_depth": 18,
+        "peak_heap_cells": 200,
+        "long_double_mantissa_bits": 64,
+        "covers_all_unit_directions": true,
+        "exact_rational_interval_arithmetic": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "revision": "R10",
+  "canonical_gallery_url": "https://eliguli712.github.io/Antiterrastrae/design/megalodon/",
+  "latex_method": "Self-contained, compiled LaTeX wrapper with original poster PDF as faithful artwork background.",
+  "languages": [
+    {
+      "language": "en",
+      "pages": 4,
+      "pdf": {
+        "url": "en/source.pdf",
+        "bytes": 8533771,
+        "sha256": "73fa85fd006dc30ec18158e4f7799b3461769dbd1bea69ed4c664fc206e29676"
+      },
+      "latex": {
+        "url": "en/Source_to_Sculpture_EN_LaTeX.zip",
+        "bytes": 8387374,
+        "sha256": "d1decf2ecb653c013acf8afb20ba8977437166736882129ac6b054008b8dfcfa",
+        "self_contained": true,
+        "compiled_successfully": true,
+        "method": "Original PDF as faithful artwork background; editable LaTeX wrapper and links."
+      },
+      "validation": "en/validation.json"
+    },
+    {
+      "language": "de",
+      "pages": 4,
+      "pdf": {
+        "url": "de/source.pdf",
+        "bytes": 8638264,
+        "sha256": "e6eac8bcf3019064a109830af51dfc327f055461613363785f6fbc766fe09a8a"
+      },
+      "latex": {
+        "url": "de/Source_to_Sculpture_DE_LaTeX.zip",
+        "bytes": 8490085,
+        "sha256": "4c0a28798d49a1fedd02ca10f630008935d37e67eedbc0bad74366695ef3e630",
+        "self_contained": true,
+        "compiled_successfully": true,
+        "method": "Original PDF as faithful artwork background; editable LaTeX wrapper and links."
+      },
+      "validation": "de/validation.json"
+    },
+    {
+      "language": "it",
+      "pages": 4,
+      "pdf": {
+        "url": "it/source.pdf",
+        "bytes": 8459517,
+        "sha256": "a4e0f626f675885bd8694d766760bb3ab463cf8e16c3e2fbf56de9770df1b5c5"
+      },
+      "latex": {
+        "url": "it/Source_to_Sculpture_IT_LaTeX.zip",
+        "bytes": 8317299,
+        "sha256": "535981b02727106cf8089258ffea6402f87fded129e1f471eee4df0606c732e5",
+        "self_contained": true,
+        "compiled_successfully": true,
+        "method": "Original PDF as faithful artwork background; editable LaTeX wrapper and links."
+      },
+      "validation": "it/validation.json"
+    }
+  ]
+}

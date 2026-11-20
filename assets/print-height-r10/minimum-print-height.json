@@ -1,0 +1,1435 @@
+{
+  "revision": "R10",
+  "units": "mm",
+  "input_geometry_revision": "R8",
+  "objective": "Minimum vertical extent over every rigid print-axis orientation of each complete manufacturing STL surface.",
+  "continuous_CAD_sphere_equivalence_claimed": false,
+  "mesh_decimation_performed": false,
+  "generated_supports_and_rafts_included": false,
+  "reference": {
+    "authors": "Michael E. Houle and Godfried Toussaint",
+    "title": "Computing the Width of a Set",
+    "journal": "IEEE Transactions on Pattern Analysis and Machine Intelligence 10(5), 761\u2013765, 1988",
+    "DOI": "10.1109/34.6790",
+    "paper": "https://cgm.cs.mcgill.ca/~godfried/publications/width.pdf",
+    "theorem": "Theorem 3.1 / Corollary 3.1"
+  },
+  "cases": [
+    {
+      "axis": [
+        0,
+        -0.974816611284939,
+        0.22300801412269472
+      ],
+      "width_mm": 83.07937997438299,
+      "projection_min_mm": -31.734127292187278,
+      "projection_max_mm": 51.345252682195714,
+      "candidate": "face_normal",
+      "candidate_indices": [
+        23,
+        0
+      ],
+      "face_candidates": 504,
+      "edge_pairs_total": 285390,
+      "nonparallel_edge_candidates": 284935,
+      "exactly_parallel_pairs": 455,
+      "near_parallel_exact_arithmetic_checks": 459,
+      "antipodal_pairs_within_1e_minus7_mm": 2873,
+      "certificate": {
+        "lower_bound_mm": 83.07937041050774,
+        "upper_bound_mm": 83.07937997538299,
+        "gap_mm": 9.564875262872696e-06,
+        "target_tolerance_mm": 1e-05,
+        "dot_roundoff_allowance_mm": 1e-09,
+        "diameter_upper_bound_mm": 117.75836364763649,
+        "sphere_cells_evaluated": 25528,
+        "sphere_cells_subdivided": 6380,
+        "sphere_cells_pruned": 19148,
+        "sphere_cells_remaining": 0,
+        "max_depth": 24,
+        "peak_heap_cells": 924,
+        "long_double_mantissa_bits": 64,
+        "covers_all_unit_directions": true,
+        "exact_rational_interval_arithmetic": false
+      },
+      "counts": {
+        "all_STL_unique_vertices": 33417,
+        "convex_hull_vertices": 254,
+        "triangulated_hull_faces": 504,
+        "triangulated_hull_edges_including_coplanar_diagonals": 756,
+        "near_parallel_pairs_prepared_with_exact_integers": 459,
+        "STL_coordinate_quantization_applied": false
+      },
+      "computation_seconds": 0.3878900189997694,
+      "candidate_search_scope": "All hull face normals and every non-parallel pair of triangulated hull edges; no antipodal pruning.",
+      "global_certificate_method": "Independent spherical triangle branch-and-bound over all eight octants. Uses a subset of actual STL vertices for valid lower bounds and the complete STL vertex set for the upper bound.",
+      "all_STL_vertices_height_recheck_mm": 83.07937997438299,
+      "convex_hull_equivalence_recheck_error_mm": 0.0,
+      "size_mm": 50,
+      "part": "main",
+      "original_Z_height_mm": 106.73910522460938,
+      "source_STLs": [
+        {
+          "file": "Support_R8_50mm_main.stl",
+          "SHA256": "18ded9126b3740646f223abfd22a3d43cb28cb044cea906272747928bfd99783",
+          "triangles": 66942
+        }
+      ],
+      "full_original_triangles": 66942,
+      "includes_tooth": false,
+      "includes_generated_print_supports": false,
+      "includes_raft": false,
+      "includes_hardware": false,
+      "assembly_union_or_fusion_performed": false,
+      "object_scope": "Full original manufacturing part",
+      "height_reduction_percent": 22.165939278242597,
+      "print_axis_in_source_coordinates": [
+        0.0,
+        -0.9748166112849391,
+        0.22300801412269475
+      ],
+      "rotation_matrix_column_vector": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          0.22300801412269475,
+          0.9748166112849391
+        ],
+        [
+          0.0,
+          -0.9748166112849391,
+          0.22300801412269475
+        ]
+      ],
+      "placement_translation_mm": [
+        42.46955108642578,
+        6.543908003220027,
+        31.734127292187278
+      ],
+      "transformation": "p_print = R @ p_source + t",
+      "z0_translation_mm": 31.734127292187278,
+      "print_bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          84.93910217285156,
+          112.2563705444336,
+          83.07937622070312
+        ]
+      ],
+      "full_precision_oriented_extent_mm": [
+        84.93910217285156,
+        112.25637061887745,
+        83.07937997438299
+      ],
+      "exported_STL_height_mm": 83.07937622070312,
+      "STL_triangle_count_preserved": 66942,
+      "exported_file": "Support_R8_50mm_main_Minimum_Height.stl",
+      "exported_SHA256": "ba5db05f87eccc1f1a0bd3ecb2bbd7e0dadb979c7f8e160a1f3cfb88f3a1f03f",
+      "export_bytes": 3347184,
+      "contact_features": [
+        {
+          "side": "lower",
+          "projection_mm": -31.734127292187278,
+          "near_contact_tolerance_mm": 1e-07,
+          "vertices": 3,
+          "affine_dimension_at_tolerance": 2,
+          "feature": "face_or_coplanar_contacts",
+          "coordinates_mm": [
+            [
+              -26.0,
+              42.27532958984375,
+              42.494285583496094
+            ],
+            [
+              4.898587410340671e-16,
+              33.7274055480957,
+              5.1294474601745605
+            ],
+            [
+              26.0,
+              42.27532958984375,
+              42.494285583496094
+            ]
+          ]
+        },
+        {
+          "side": "upper",
+          "projection_mm": 51.34525268219572,
+          "near_contact_tolerance_mm": 1e-07,
+          "vertices": 2,
+          "affine_dimension_at_tolerance": 1,
+          "feature": "edge",
+          "coordinates_mm": [
+            [
+              -26.0,
+              -42.27532958984375,
+              45.444820404052734
+            ],
+            [
+              26.0,
+              -42.27532958984375,
+              45.444820404052734
+            ]
+          ]
+        }
+      ],
+      "polarity_tie_break": "Prefer larger affine-dimension bottom contact, then more contact vertices.",
+      "XY_twist_rule": "Projection of source X, or source Y near parallelism; not XY packing optimization.",
+      "export_float32_height_change_mm": -3.7536798629389523e-06,
+      "hull_vertices_height_recheck_mm": 83.07937997438299,
+      "long_double_full_STL_recheck_error_mm": 0.0,
+      "antipodal_pair_count_includes_coplanar_triangulation_diagonals": true
+    },
+    {
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "width_mm": 7.550000190734863,
+      "projection_min_mm": -7.550000190734863,
+      "projection_max_mm": 0,
+      "candidate": "face_normal",
+      "candidate_indices": [
+        564,
+        0
+      ],
+      "face_candidates": 652,
+      "edge_pairs_total": 477753,
+      "nonparallel_edge_candidates": 477628,
+      "exactly_parallel_pairs": 125,
+      "near_parallel_exact_arithmetic_checks": 126,
+      "antipodal_pairs_within_1e_minus7_mm": 3545,
+      "certificate": {
+        "lower_bound_mm": 7.549990379600895,
+        "upper_bound_mm": 7.550000191734863,
+        "gap_mm": 9.81213396858199e-06,
+        "target_tolerance_mm": 1e-05,
+        "dot_roundoff_allowance_mm": 1e-09,
+        "diameter_upper_bound_mm": 50.12546757986653,
+        "sphere_cells_evaluated": 2408,
+        "sphere_cells_subdivided": 600,
+        "sphere_cells_pruned": 1808,
+        "sphere_cells_remaining": 0,
+        "max_depth": 22,
+        "peak_heap_cells": 84,
+        "long_double_mantissa_bits": 64,
+        "covers_all_unit_directions": true,
+        "exact_rational_interval_arithmetic": false
+      },
+      "counts": {
+        "all_STL_unique_vertices": 36789,
+        "convex_hull_vertices": 328,
+        "triangulated_hull_faces": 652,
+        "triangulated_hull_edges_including_coplanar_diagonals": 978,
+        "near_parallel_pairs_prepared_with_exact_integers": 126,
+        "STL_coordinate_quantization_applied": false
+      },
+      "computation_seconds": 0.6926512430000002,
+      "candidate_search_scope": "All hull face normals and every non-parallel pair of triangulated hull edges; no antipodal pruning.",
+      "global_certificate_method": "Independent spherical triangle branch-and-bound over all eight octants. Uses a subset of actual STL vertices for valid lower bounds and the complete STL vertex set for the upper bound.",
+      "all_STL_vertices_height_recheck_mm": 7.550000190734863,
+      "convex_hull_equivalence_recheck_error_mm": 0.0,
+      "size_mm": 50,
+      "part": "cap",
+      "original_Z_height_mm": 21.199996948242188,
+      "source_STLs": [
+        {
+          "file": "Support_R8_50mm_cap.stl",
+          "SHA256": "4e6b1085b9fe1781055fd76d0e7f3affc8db0172887727b8041ff7e000f8b021",
+          "triangles": 73582
+        }
+      ],
+      "full_original_triangles": 73582,
+      "includes_tooth": false,
+      "includes_generated_print_supports": false,
+      "includes_raft": false,
+      "includes_hardware": false,
+      "assembly_union_or_fusion_performed": false,
+      "object_scope": "Full original manufacturing part",
+      "height_reduction_percent": 64.38678642658542,
+      "print_axis_in_source_coordinates": [
+        -0.0,
+        -1.0,
+        -0.0
+      ],
+      "rotation_matrix_column_vector": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          -0.0,
+          -1.0,
+          -0.0
+        ]
+      ],
+      "placement_translation_mm": [
+        24.350000381469727,
+        -85.53910827636719,
+        -0.0
+      ],
+      "transformation": "p_print = R @ p_source + t",
+      "z0_translation_mm": -0.0,
+      "print_bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          48.75,
+          21.199996948242188,
+          7.550000190734863
+        ]
+      ],
+      "full_precision_oriented_extent_mm": [
+        48.75,
+        21.199996948242188,
+        7.550000190734863
+      ],
+      "exported_STL_height_mm": 7.550000190734863,
+      "STL_triangle_count_preserved": 73582,
+      "exported_file": "Support_R8_50mm_cap_Minimum_Height.stl",
+      "exported_SHA256": "f6ece2ce0d98c4ff888454d34715734440d1477d6f64ecc52e9ad1081c3ed74b",
+      "export_bytes": 3679184,
+      "contact_features": [
+        {
+          "side": "lower",
+          "projection_mm": 0.0,
+          "near_contact_tolerance_mm": 1e-07,
+          "vertices": 64,
+          "affine_dimension_at_tolerance": 2,
+          "feature": "face_or_coplanar_contacts",
+          "coordinates_mm": [
+            [
+              -24.350000381469727,
+              0.0,
+              94.53910827636719
+            ],
+            [
+              -24.350000381469727,
+              0.0,
+              104.53910827636719
+            ],
+            [
+              -22.30000114440918,
+              0.0,
+              99.53910827636719
+            ],
+            [
+              -22.26364517211914,
+              0.0,
+              99.2164535522461
+            ],
+            [
+              -22.26364517211914,
+              0.0,
+              99.86176300048828
+            ],
+            [
+              -22.156404495239258,
+              0.0,
+              98.90997314453125
+            ],
+            [
+              -22.156404495239258,
+              0.0,
+              100.1682357788086
+            ],
+            [
+              -21.98365592956543,
+              0.0,
+              98.63504791259766
+            ],
+            [
+              -21.98365592956543,
+              0.0,
+              100.44316864013672
+            ],
+            [
+              -21.754060745239258,
+              0.0,
+              98.40544891357422
+            ],
+            [
+              -21.754060745239258,
+              0.0,
+              100.67276000976562
+            ],
+            [
+              -21.4791316986084,
+              0.0,
+              98.23270416259766
+            ],
+            [
+              -21.4791316986084,
+              0.0,
+              100.84551239013672
+            ],
+            [
+              -21.17265510559082,
+              0.0,
+              98.12545776367188
+            ],
+            [
+              -21.17265510559082,
+              0.0,
+              100.95275115966797
+            ],
+            [
+              -20.850000381469727,
+              0.0,
+              98.08910369873047
+            ],
+            [
+              -20.850000381469727,
+              0.0,
+              100.98910522460938
+            ],
+            [
+              -20.527345657348633,
+              0.0,
+              98.12545776367188
+            ],
+            [
+              -20.527345657348633,
+              0.0,
+              100.95275115966797
+            ],
+            [
+              -20.220869064331055,
+              0.0,
+              98.23270416259766
+            ],
+            [
+              -20.220869064331055,
+              0.0,
+              100.84551239013672
+            ],
+            [
+              -19.945940017700195,
+              0.0,
+              98.40544891357422
+            ],
+            [
+              -19.945940017700195,
+              0.0,
+              100.67276000976562
+            ],
+            [
+              -19.716344833374023,
+              0.0,
+              98.63504791259766
+            ],
+            [
+              -19.716344833374023,
+              0.0,
+              100.44316864013672
+            ],
+            [
+              -19.543596267700195,
+              0.0,
+              98.90997314453125
+            ],
+            [
+              -19.543596267700195,
+              0.0,
+              100.1682357788086
+            ],
+            [
+              -19.436355590820312,
+              0.0,
+              99.2164535522461
+            ],
+            [
+              -19.436355590820312,
+              0.0,
+              99.86176300048828
+            ],
+            [
+              -19.399999618530273,
+              0.0,
+              99.53910827636719
+            ],
+            [
+              -17.350000381469727,
+              0.0,
+              94.53910827636719
+            ],
+            [
+              -17.350000381469727,
+              0.0,
+              104.53910827636719
+            ],
+            [
+              17.399999618530273,
+              0.0,
+              94.53910827636719
+            ],
+            [
+              17.399999618530273,
+              0.0,
+              104.53910827636719
+            ],
+            [
+              19.44999885559082,
+              0.0,
+              99.53910827636719
+            ],
+            [
+              19.48635482788086,
+              0.0,
+              99.2164535522461
+            ],
+            [
+              19.48635482788086,
+              0.0,
+              99.86176300048828
+            ],
+            [
+              19.593595504760742,
+              0.0,
+              98.90997314453125
+            ],
+            [
+              19.593595504760742,
+              0.0,
+              100.1682357788086
+            ],
+            [
+              19.76634407043457,
+              0.0,
+              98.63504791259766
+            ],
+            [
+              19.76634407043457,
+              0.0,
+              100.44316864013672
+            ],
+            [
+              19.995939254760742,
+              0.0,
+              98.40544891357422
+            ],
+            [
+              19.995939254760742,
+              0.0,
+              100.67276000976562
+            ],
+            [
+              20.2708683013916,
+              0.0,
+              98.23270416259766
+            ],
+            [
+              20.2708683013916,
+              0.0,
+              100.84551239013672
+            ],
+            [
+              20.57734489440918,
+              0.0,
+              98.12545776367188
+            ],
+            [
+              20.57734489440918,
+              0.0,
+              100.95275115966797
+            ],
+            [
+              20.899999618530273,
+              0.0,
+              98.08910369873047
+            ],
+            [
+              20.899999618530273,
+              0.0,
+              100.98910522460938
+            ],
+            [
+              21.222654342651367,
+              0.0,
+              98.12545776367188
+            ],
+            [
+              21.222654342651367,
+              0.0,
+              100.95275115966797
+            ],
+            [
+              21.529130935668945,
+              0.0,
+              98.23270416259766
+            ],
+            [
+              21.529130935668945,
+              0.0,
+              100.84551239013672
+            ],
+            [
+              21.804059982299805,
+              0.0,
+              98.40544891357422
+            ],
+            [
+              21.804059982299805,
+              0.0,
+              100.67276000976562
+            ],
+            [
+              22.033655166625977,
+              0.0,
+              98.63504791259766
+            ],
+            [
+              22.033655166625977,
+              0.0,
+              100.44316864013672
+            ],
+            [
+              22.206403732299805,
+              0.0,
+              98.90997314453125
+            ],
+            [
+              22.206403732299805,
+              0.0,
+              100.1682357788086
+            ],
+            [
+              22.313644409179688,
+              0.0,
+              99.2164535522461
+            ],
+            [
+              22.313644409179688,
+              0.0,
+              99.86176300048828
+            ],
+            [
+              22.350000381469727,
+              0.0,
+              99.53910827636719
+            ],
+            [
+              24.399999618530273,
+              0.0,
+              94.53910827636719
+            ],
+            [
+              24.399999618530273,
+              0.0,
+              104.53910827636719
+            ]
+          ]
+        },
+        {
+          "side": "upper",
+          "projection_mm": 7.550000190734863,
+          "near_contact_tolerance_mm": 1e-07,
+          "vertices": 10,
+          "affine_dimension_at_tolerance": 2,
+          "feature": "face_or_coplanar_contacts",
+          "coordinates_mm": [
+            [
+              -11.899999618530273,
+              -7.550000190734863,
+              90.38910675048828
+            ],
+            [
+              -11.899999618530273,
+              -7.550000190734863,
+              90.83910369873047
+            ],
+            [
+              -11.899999618530273,
+              -7.550000190734863,
+              92.18910217285156
+            ],
+            [
+              -11.75,
+              -7.550000190734863,
+              90.23910522460938
+            ],
+            [
+              -11.59999942779541,
+              -7.550000190734863,
+              92.48910522460938
+            ],
+            [
+              7.149999141693115,
+              -7.550000190734863,
+              105.68910217285156
+            ],
+            [
+              8.649999618530273,
+              -7.550000190734863,
+              106.58910369873047
+            ],
+            [
+              9.69999885559082,
+              -7.550000190734863,
+              105.08910369873047
+            ],
+            [
+              9.69999885559082,
+              -7.550000190734863,
+              106.28910827636719
+            ],
+            [
+              10.000001907348633,
+              -7.550000190734863,
+              106.58910369873047
+            ]
+          ]
+        }
+      ],
+      "polarity_tie_break": "Prefer larger affine-dimension bottom contact, then more contact vertices.",
+      "XY_twist_rule": "Projection of source X, or source Y near parallelism; not XY packing optimization.",
+      "export_float32_height_change_mm": 0.0,
+      "hull_vertices_height_recheck_mm": 7.550000190734863,
+      "long_double_full_STL_recheck_error_mm": 0.0,
+      "antipodal_pair_count_includes_coplanar_triangulation_diagonals": true
+    },
+    {
+      "axis": [
+        0.974816611284939,
+        0,
+        0.22300801412269472
+      ],
+      "width_mm": 83.07937997438299,
+      "projection_min_mm": -31.734127292187278,
+      "projection_max_mm": 51.345252682195714,
+      "candidate": "face_normal",
+      "candidate_indices": [
+        52,
+        0
+      ],
+      "face_candidates": 562,
+      "edge_pairs_total": 354903,
+      "nonparallel_edge_candidates": 354374,
+      "exactly_parallel_pairs": 529,
+      "near_parallel_exact_arithmetic_checks": 533,
+      "antipodal_pairs_within_1e_minus7_mm": 6154,
+      "certificate": {
+        "lower_bound_mm": 83.07937041050774,
+        "upper_bound_mm": 83.07937997538299,
+        "gap_mm": 9.564875262872696e-06,
+        "target_tolerance_mm": 1e-05,
+        "dot_roundoff_allowance_mm": 1e-09,
+        "diameter_upper_bound_mm": 117.75836364763649,
+        "sphere_cells_evaluated": 25408,
+        "sphere_cells_subdivided": 6350,
+        "sphere_cells_pruned": 19058,
+        "sphere_cells_remaining": 0,
+        "max_depth": 24,
+        "peak_heap_cells": 928,
+        "long_double_mantissa_bits": 64,
+        "covers_all_unit_directions": true,
+        "exact_rational_interval_arithmetic": false
+      },
+      "counts": {
+        "all_STL_unique_vertices": 70206,
+        "convex_hull_vertices": 283,
+        "triangulated_hull_faces": 562,
+        "triangulated_hull_edges_including_coplanar_diagonals": 843,
+        "near_parallel_pairs_prepared_with_exact_integers": 533,
+        "STL_coordinate_quantization_applied": false
+      },
+      "computation_seconds": 0.48574005600039527,
+      "candidate_search_scope": "All hull face normals and every non-parallel pair of triangulated hull edges; no antipodal pruning.",
+      "global_certificate_method": "Independent spherical triangle branch-and-bound over all eight octants. Uses a subset of actual STL vertices for valid lower bounds and the complete STL vertex set for the upper bound.",
+      "all_STL_vertices_height_recheck_mm": 83.07937997438299,
+      "convex_hull_equivalence_recheck_error_mm": 0.0,
+      "size_mm": 50,
+      "part": "assembly",
+      "original_Z_height_mm": 106.73910522460938,
+      "source_STLs": [
+        {
+          "file": "Support_R8_50mm_main.stl",
+          "SHA256": "18ded9126b3740646f223abfd22a3d43cb28cb044cea906272747928bfd99783",
+          "triangles": 66942
+        },
+        {
+          "file": "Support_R8_50mm_cap.stl",
+          "SHA256": "4e6b1085b9fe1781055fd76d0e7f3affc8db0172887727b8041ff7e000f8b021",
+          "triangles": 73582
+        }
+      ],
+      "full_original_triangles": 140524,
+      "includes_tooth": false,
+      "includes_generated_print_supports": false,
+      "includes_raft": false,
+      "includes_hardware": false,
+      "assembly_union_or_fusion_performed": false,
+      "object_scope": "Assembly envelope in the original assembled positions; two independent parts",
+      "height_reduction_percent": 22.165939278242597,
+      "print_axis_in_source_coordinates": [
+        0.9748166112849391,
+        0.0,
+        0.22300801412269475
+      ],
+      "rotation_matrix_column_vector": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -0.22300801412269475,
+          0.0,
+          0.9748166112849391
+        ],
+        [
+          0.9748166112849391,
+          0.0,
+          0.22300801412269475
+        ]
+      ],
+      "placement_translation_mm": [
+        42.46955108642578,
+        6.543908003220027,
+        31.734127292187278
+      ],
+      "transformation": "p_print = R @ p_source + t",
+      "z0_translation_mm": 31.734127292187278,
+      "print_bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          84.93910217285156,
+          114.41954803466797,
+          83.07937622070312
+        ]
+      ],
+      "full_precision_oriented_extent_mm": [
+        84.93910217285156,
+        114.41954820699368,
+        83.07937997438299
+      ],
+      "exported_STL_height_mm": 83.07937622070312,
+      "STL_triangle_count_preserved": 140524,
+      "exported_file": "Support_R8_50mm_assembly_Minimum_Height.stl",
+      "exported_SHA256": "389bf1aefa97ed6700caa26a7ffef7d7936f49774d29a0f5f2cc481c96d84245",
+      "export_bytes": 7026284,
+      "contact_features": [
+        {
+          "side": "lower",
+          "projection_mm": -31.734127292187278,
+          "near_contact_tolerance_mm": 1e-07,
+          "vertices": 3,
+          "affine_dimension_at_tolerance": 2,
+          "feature": "face_or_coplanar_contacts",
+          "coordinates_mm": [
+            [
+              -42.27532958984375,
+              -26.0,
+              42.494285583496094
+            ],
+            [
+              -42.27532958984375,
+              26.0,
+              42.494285583496094
+            ],
+            [
+              -33.7274055480957,
+              1.3780371607341924e-15,
+              5.1294474601745605
+            ]
+          ]
+        },
+        {
+          "side": "upper",
+          "projection_mm": 51.34525268219572,
+          "near_contact_tolerance_mm": 1e-07,
+          "vertices": 2,
+          "affine_dimension_at_tolerance": 1,
+          "feature": "edge",
+          "coordinates_mm": [
+            [
+              42.27532958984375,
+              -26.0,
+              45.444820404052734
+            ],
+            [
+              42.27532958984375,
+              26.0,
+              45.444820404052734
+            ]
+          ]
+        }
+      ],
+      "polarity_tie_break": "Prefer larger affine-dimension bottom contact, then more contact vertices.",
+      "XY_twist_rule": "Projection of source X, or source Y near parallelism; not XY packing optimization.",
+      "export_float32_height_change_mm": -3.7536798629389523e-06,
+      "hull_vertices_height_recheck_mm": 83.07937997438299,
+      "long_double_full_STL_recheck_error_mm": 0.0,
+      "antipodal_pair_count_includes_coplanar_triangulation_diagonals": true
+    },
+    {
+      "axis": [
+        0,
+        -0.974816611284939,
+        0.22300801412269472
+      ],
+      "width_mm": 83.07937997438299,
+      "projection_min_mm": -31.734127292187278,
+      "projection_max_mm": 51.345252682195714,
+      "candidate": "face_normal",
+      "candidate_indices": [
+        27,
+        0
+      ],
+      "face_candidates": 544,
+      "edge_pairs_total": 332520,
+      "nonparallel_edge_candidates": 332189,
+      "exactly_parallel_pairs": 331,
+      "near_parallel_exact_arithmetic_checks": 335,
+      "antipodal_pairs_within_1e_minus7_mm": 2632,
+      "certificate": {
+        "lower_bound_mm": 83.07937028660696,
+        "upper_bound_mm": 83.07937997538299,
+        "gap_mm": 9.688776028707324e-06,
+        "target_tolerance_mm": 1e-05,
+        "dot_roundoff_allowance_mm": 1e-09,
+        "diameter_upper_bound_mm": 144.04691283724887,
+        "sphere_cells_evaluated": 19000,
+        "sphere_cells_subdivided": 4748,
+        "sphere_cells_pruned": 14252,
+        "sphere_cells_remaining": 0,
+        "max_depth": 24,
+        "peak_heap_cells": 710,
+        "long_double_mantissa_bits": 64,
+        "covers_all_unit_directions": true,
+        "exact_rational_interval_arithmetic": false
+      },
+      "counts": {
+        "all_STL_unique_vertices": 45730,
+        "convex_hull_vertices": 274,
+        "triangulated_hull_faces": 544,
+        "triangulated_hull_edges_including_coplanar_diagonals": 816,
+        "near_parallel_pairs_prepared_with_exact_integers": 335,
+        "STL_coordinate_quantization_applied": false
+      },
+      "computation_seconds": 0.4518180850000135,
+      "candidate_search_scope": "All hull face normals and every non-parallel pair of triangulated hull edges; no antipodal pruning.",
+      "global_certificate_method": "Independent spherical triangle branch-and-bound over all eight octants. Uses a subset of actual STL vertices for valid lower bounds and the complete STL vertex set for the upper bound.",
+      "all_STL_vertices_height_recheck_mm": 83.07937997438299,
+      "convex_hull_equivalence_recheck_error_mm": 0.0,
+      "size_mm": 100,
+      "part": "main",
+      "original_Z_height_mm": 127.839111328125,
+      "source_STLs": [
+        {
+          "file": "Support_R8_100mm_main.stl",
+          "SHA256": "cb510f46e2edfbf31dab228431378ad4675766d052901db554c552e7a4242d07",
+          "triangles": 91548
+        }
+      ],
+      "full_original_triangles": 91548,
+      "includes_tooth": false,
+      "includes_generated_print_supports": false,
+      "includes_raft": false,
+      "includes_hardware": false,
+      "assembly_union_or_fusion_performed": false,
+      "object_scope": "Full original manufacturing part",
+      "height_reduction_percent": 35.01254888956251,
+      "print_axis_in_source_coordinates": [
+        0.0,
+        -0.9748166112849391,
+        0.22300801412269475
+      ],
+      "rotation_matrix_column_vector": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          0.22300801412269475,
+          0.9748166112849391
+        ],
+        [
+          0.0,
+          -0.9748166112849391,
+          0.22300801412269475
+        ]
+      ],
+      "placement_translation_mm": [
+        43.722930908203125,
+        6.543908003220027,
+        31.734127292187278
+      ],
+      "transformation": "p_print = R @ p_source + t",
+      "z0_translation_mm": 31.734127292187278,
+      "print_bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          86.1924819946289,
+          133.78823852539062,
+          83.07937622070312
+        ]
+      ],
+      "full_precision_oriented_extent_mm": [
+        86.1924819946289,
+        133.78823625695406,
+        83.07937997438299
+      ],
+      "exported_STL_height_mm": 83.07937622070312,
+      "STL_triangle_count_preserved": 91548,
+      "exported_file": "Support_R8_100mm_main_Minimum_Height.stl",
+      "exported_SHA256": "ae24de6524a5fcc8f9321d54dfac08f35ebf7f99cc59cd6b57c686b498803906",
+      "export_bytes": 4577484,
+      "contact_features": [
+        {
+          "side": "lower",
+          "projection_mm": -31.734127292187278,
+          "near_contact_tolerance_mm": 1e-07,
+          "vertices": 3,
+          "affine_dimension_at_tolerance": 2,
+          "feature": "face_or_coplanar_contacts",
+          "coordinates_mm": [
+            [
+              -26.0,
+              42.27532958984375,
+              42.494285583496094
+            ],
+            [
+              4.898587410340671e-16,
+              33.7274055480957,
+              5.1294474601745605
+            ],
+            [
+              26.0,
+              42.27532958984375,
+              42.494285583496094
+            ]
+          ]
+        },
+        {
+          "side": "upper",
+          "projection_mm": 51.34525268219572,
+          "near_contact_tolerance_mm": 1e-07,
+          "vertices": 2,
+          "affine_dimension_at_tolerance": 1,
+          "feature": "edge",
+          "coordinates_mm": [
+            [
+              -26.0,
+              -42.27532958984375,
+              45.444820404052734
+            ],
+            [
+              26.0,
+              -42.27532958984375,
+              45.444820404052734
+            ]
+          ]
+        }
+      ],
+      "polarity_tie_break": "Prefer larger affine-dimension bottom contact, then more contact vertices.",
+      "XY_twist_rule": "Projection of source X, or source Y near parallelism; not XY packing optimization.",
+      "export_float32_height_change_mm": -3.7536798629389523e-06,
+      "hull_vertices_height_recheck_mm": 83.07937997438299,
+      "long_double_full_STL_recheck_error_mm": 0.0,
+      "antipodal_pair_count_includes_coplanar_triangulation_diagonals": true
+    },
+    {
+      "axis": [
+        0,
+        0.9827982707624534,
+        0.18468231909506447
+      ],
+      "width_mm": 14.740634996368286,
+      "projection_min_mm": 7.435167181035465,
+      "projection_max_mm": 22.17580217740375,
+      "candidate": "face_normal",
+      "candidate_indices": [
+        4,
+        0
+      ],
+      "face_candidates": 248,
+      "edge_pairs_total": 69006,
+      "nonparallel_edge_candidates": 68921,
+      "exactly_parallel_pairs": 85,
+      "near_parallel_exact_arithmetic_checks": 85,
+      "antipodal_pairs_within_1e_minus7_mm": 243,
+      "certificate": {
+        "lower_bound_mm": 14.740625159336393,
+        "upper_bound_mm": 14.740634997368286,
+        "gap_mm": 9.83803189264637e-06,
+        "target_tolerance_mm": 1e-05,
+        "dot_roundoff_allowance_mm": 1e-09,
+        "diameter_upper_bound_mm": 86.67890322041552,
+        "sphere_cells_evaluated": 7880,
+        "sphere_cells_subdivided": 1968,
+        "sphere_cells_pruned": 5912,
+        "sphere_cells_remaining": 0,
+        "max_depth": 23,
+        "peak_heap_cells": 344,
+        "long_double_mantissa_bits": 64,
+        "covers_all_unit_directions": true,
+        "exact_rational_interval_arithmetic": false
+      },
+      "counts": {
+        "all_STL_unique_vertices": 22309,
+        "convex_hull_vertices": 126,
+        "triangulated_hull_faces": 248,
+        "triangulated_hull_edges_including_coplanar_diagonals": 372,
+        "near_parallel_pairs_prepared_with_exact_integers": 85,
+        "STL_coordinate_quantization_applied": false
+      },
+      "computation_seconds": 0.05437647700000525,
+      "candidate_search_scope": "All hull face normals and every non-parallel pair of triangulated hull edges; no antipodal pruning.",
+      "global_certificate_method": "Independent spherical triangle branch-and-bound over all eight octants. Uses a subset of actual STL vertices for valid lower bounds and the complete STL vertex set for the upper bound.",
+      "all_STL_vertices_height_recheck_mm": 14.740634996368286,
+      "convex_hull_equivalence_recheck_error_mm": 0.0,
+      "size_mm": 100,
+      "part": "cap",
+      "original_Z_height_mm": 39.58000946044922,
+      "source_STLs": [
+        {
+          "file": "Support_R8_100mm_cap.stl",
+          "SHA256": "484b753a5aed6d7841a4a3c554f4f69a6433ea64292deea6732ab7b0f23c0de1",
+          "triangles": 44626
+        }
+      ],
+      "full_original_triangles": 44626,
+      "includes_tooth": false,
+      "includes_generated_print_supports": false,
+      "includes_raft": false,
+      "includes_hardware": false,
+      "assembly_union_or_fusion_performed": false,
+      "object_scope": "Full original manufacturing part",
+      "height_reduction_percent": 62.75737374166614,
+      "print_axis_in_source_coordinates": [
+        0.0,
+        0.9827982707624535,
+        0.1846823190950645
+      ],
+      "rotation_matrix_column_vector": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.1846823190950645,
+          -0.9827982707624535
+        ],
+        [
+          0.0,
+          0.9827982707624535,
+          0.1846823190950645
+        ]
+      ],
+      "placement_translation_mm": [
+        43.722930908203125,
+        128.49165399206433,
+        -7.435167181035466
+      ],
+      "transformation": "p_print = R @ p_source + t",
+      "z0_translation_mm": -7.435167181035466,
+      "print_bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          84.55047607421875,
+          41.44746780395508,
+          14.74063491821289
+        ]
+      ],
+      "full_precision_oriented_extent_mm": [
+        84.55047225952148,
+        41.44746709991293,
+        14.740634996368287
+      ],
+      "exported_STL_height_mm": 14.74063491821289,
+      "STL_triangle_count_preserved": 44626,
+      "exported_file": "Support_R8_100mm_cap_Minimum_Height.stl",
+      "exported_SHA256": "605f0bde1fb196eaeb9b5a760a82ca3c33603a632ba6000ff5adb1baed94d59e",
+      "export_bytes": 2231384,
+      "contact_features": [
+        {
+          "side": "lower",
+          "projection_mm": 7.435167181035466,
+          "near_contact_tolerance_mm": 1e-07,
+          "vertices": 5,
+          "affine_dimension_at_tolerance": 2,
+          "feature": "face_or_coplanar_contacts",
+          "coordinates_mm": [
+            [
+              -42.822933197021484,
+              -12.492551803588867,
+              106.73910522460938
+            ],
+            [
+              -34.62293243408203,
+              -12.492551803588867,
+              106.73910522460938
+            ],
+            [
+              0.9170687198638916,
+              -15.303756713867188,
+              121.69910430908203
+            ],
+            [
+              31.727540969848633,
+              -12.492551803588867,
+              106.73910522460938
+            ],
+            [
+              39.92753982543945,
+              -12.492551803588867,
+              106.73910522460938
+            ]
+          ]
+        },
+        {
+          "side": "upper",
+          "projection_mm": 22.175802177403753,
+          "near_contact_tolerance_mm": 1e-07,
+          "vertices": 2,
+          "affine_dimension_at_tolerance": 1,
+          "feature": "edge",
+          "coordinates_mm": [
+            [
+              -38.722930908203125,
+              1.70744788646698,
+              110.98910522460938
+            ],
+            [
+              35.82754135131836,
+              1.70744788646698,
+              110.98910522460938
+            ]
+          ]
+        }
+      ],
+      "polarity_tie_break": "Prefer larger affine-dimension bottom contact, then more contact vertices.",
+      "XY_twist_rule": "Projection of source X, or source Y near parallelism; not XY packing optimization.",
+      "export_float32_height_change_mm": -7.815539504463231e-08,
+      "hull_vertices_height_recheck_mm": 14.740634996368286,
+      "long_double_full_STL_recheck_error_mm": 0.0,
+      "antipodal_pair_count_includes_coplanar_triangulation_diagonals": true
+    },
+    {
+      "axis": [
+        0,
+        0.974816611284939,
+        0.22300801412269472
+      ],
+      "width_mm": 83.07937997438299,
+      "projection_min_mm": -31.734127292187278,
+      "projection_max_mm": 51.345252682195714,
+      "candidate": "face_normal",
+      "candidate_indices": [
+        228,
+        0
+      ],
+      "face_candidates": 602,
+      "edge_pairs_total": 407253,
+      "nonparallel_edge_candidates": 406941,
+      "exactly_parallel_pairs": 312,
+      "near_parallel_exact_arithmetic_checks": 316,
+      "antipodal_pairs_within_1e_minus7_mm": 4754,
+      "certificate": {
+        "lower_bound_mm": 83.07937028660696,
+        "upper_bound_mm": 83.07937997538299,
+        "gap_mm": 9.688776028707324e-06,
+        "target_tolerance_mm": 1e-05,
+        "dot_roundoff_allowance_mm": 1e-09,
+        "diameter_upper_bound_mm": 144.04691283724887,
+        "sphere_cells_evaluated": 18744,
+        "sphere_cells_subdivided": 4684,
+        "sphere_cells_pruned": 14060,
+        "sphere_cells_remaining": 0,
+        "max_depth": 24,
+        "peak_heap_cells": 700,
+        "long_double_mantissa_bits": 64,
+        "covers_all_unit_directions": true,
+        "exact_rational_interval_arithmetic": false
+      },
+      "counts": {
+        "all_STL_unique_vertices": 67971,
+        "convex_hull_vertices": 303,
+        "triangulated_hull_faces": 602,
+        "triangulated_hull_edges_including_coplanar_diagonals": 903,
+        "near_parallel_pairs_prepared_with_exact_integers": 316,
+        "STL_coordinate_quantization_applied": false
+      },
+      "computation_seconds": 0.5792236170000251,
+      "candidate_search_scope": "All hull face normals and every non-parallel pair of triangulated hull edges; no antipodal pruning.",
+      "global_certificate_method": "Independent spherical triangle branch-and-bound over all eight octants. Uses a subset of actual STL vertices for valid lower bounds and the complete STL vertex set for the upper bound.",
+      "all_STL_vertices_height_recheck_mm": 83.07937997438299,
+      "convex_hull_equivalence_recheck_error_mm": 0.0,
+      "size_mm": 100,
+      "part": "assembly",
+      "original_Z_height_mm": 127.839111328125,
+      "source_STLs": [
+        {
+          "file": "Support_R8_100mm_main.stl",
+          "SHA256": "cb510f46e2edfbf31dab228431378ad4675766d052901db554c552e7a4242d07",
+          "triangles": 91548
+        },
+        {
+          "file": "Support_R8_100mm_cap.stl",
+          "SHA256": "484b753a5aed6d7841a4a3c554f4f69a6433ea64292deea6732ab7b0f23c0de1",
+          "triangles": 44626
+        }
+      ],
+      "full_original_triangles": 136174,
+      "includes_tooth": false,
+      "includes_generated_print_supports": false,
+      "includes_raft": false,
+      "includes_hardware": false,
+      "assembly_union_or_fusion_performed": false,
+      "object_scope": "Assembly envelope in the original assembled positions; two independent parts",
+      "height_reduction_percent": 35.01254888956251,
+      "print_axis_in_source_coordinates": [
+        0.0,
+        0.9748166112849391,
+        0.22300801412269475
+      ],
+      "rotation_matrix_column_vector": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.22300801412269475,
+          -0.9748166112849391
+        ],
+        [
+          0.0,
+          0.9748166112849391,
+          0.22300801412269475
+        ]
+      ],
+      "placement_translation_mm": [
+        43.722930908203125,
+        128.0757726700887,
+        31.734127292187278
+      ],
+      "transformation": "p_print = R @ p_source + t",
+      "z0_translation_mm": 31.734127292187278,
+      "print_bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          86.1924819946289,
+          134.6196746826172,
+          83.07937622070312
+        ]
+      ],
+      "full_precision_oriented_extent_mm": [
+        86.1924819946289,
+        134.61968067330872,
+        83.07937997438299
+      ],
+      "exported_STL_height_mm": 83.07937622070312,
+      "STL_triangle_count_preserved": 136174,
+      "exported_file": "Support_R8_100mm_assembly_Minimum_Height.stl",
+      "exported_SHA256": "82f149945ea80558873cacec522d6fcd4e54bacc3c84ca1beb4b00489f46b4c4",
+      "export_bytes": 6808784,
+      "contact_features": [
+        {
+          "side": "lower",
+          "projection_mm": -31.734127292187278,
+          "near_contact_tolerance_mm": 1e-07,
+          "vertices": 3,
+          "affine_dimension_at_tolerance": 2,
+          "feature": "face_or_coplanar_contacts",
+          "coordinates_mm": [
+            [
+              -26.0,
+              -42.27532958984375,
+              42.494285583496094
+            ],
+            [
+              4.898587410340671e-16,
+              -33.7274055480957,
+              5.1294474601745605
+            ],
+            [
+              26.0,
+              -42.27532958984375,
+              42.494285583496094
+            ]
+          ]
+        },
+        {
+          "side": "upper",
+          "projection_mm": 51.34525268219572,
+          "near_contact_tolerance_mm": 1e-07,
+          "vertices": 2,
+          "affine_dimension_at_tolerance": 1,
+          "feature": "edge",
+          "coordinates_mm": [
+            [
+              -26.0,
+              42.27532958984375,
+              45.444820404052734
+            ],
+            [
+              26.0,
+              42.27532958984375,
+              45.444820404052734
+            ]
+          ]
+        }
+      ],
+      "polarity_tie_break": "Prefer larger affine-dimension bottom contact, then more contact vertices.",
+      "XY_twist_rule": "Projection of source X, or source Y near parallelism; not XY packing optimization.",
+      "export_float32_height_change_mm": -3.7536798629389523e-06,
+      "hull_vertices_height_recheck_mm": 83.07937997438299,
+      "long_double_full_STL_recheck_error_mm": 0.0,
+      "antipodal_pair_count_includes_coplanar_triangulation_diagonals": true
+    }
+  ],
+  "independently_oriented_separate_parts_batch": [
+    {
+      "size_mm": 50,
+      "height_mm": 83.07937997438299,
+      "bed_XY_constraints_considered": false
+    },
+    {
+      "size_mm": 100,
+      "height_mm": 83.07937997438299,
+      "bed_XY_constraints_considered": false
+    }
+  ],
+  "verification_scope": "Numerical certificate relative to exact source-STL coordinates; not a physical manufacturing precision claim."
+}

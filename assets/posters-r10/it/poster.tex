@@ -1,0 +1,29 @@
+% Faithful LaTeX reproduction of Eliguli Han's supplied poster artwork.
+% The complete original PDF is an included artwork asset.
+% This file does not pretend that flattened artwork/text is editable LaTeX.
+\documentclass[letterpaper]{article}
+\usepackage{pdfpages}
+\usepackage[hidelinks]{hyperref}
+\usepackage{eso-pic}
+\hypersetup{pdfauthor={Eliguli Han},pdftitle={Source to Sculpture - Italiano}}
+\pagestyle{empty}
+\paperwidth=612bp \paperheight=792bp
+\pdfpagewidth=612bp \pdfpageheight=792bp
+% Quantize the near-zero PDF import offset to exactly zero.
+\pdfdecimaldigits=2
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=15
+\pdflinkmargin=0pt
+\begin{document}
+\includepdf[pages={1},noautoscale=true,scale=1,pagecommand={}]{poster-artwork.pdf}
+\includepdf[pages={2},noautoscale=true,scale=1,pagecommand={}]{poster-artwork.pdf}
+\includepdf[pages={3},noautoscale=true,scale=1,pagecommand={}]{poster-artwork.pdf}
+% Restore the original clickable URI regions on this page.
+\AddToShipoutPictureFG*{\AtPageLowerLeft{%%
+  \setlength{\unitlength}{1bp}%%
+  \put(51.223000,71.333008){\href{https://eliguli712.github.io/Antiterrastrae/cv.html}{\phantom{\rule{171.581001bp}{8.966003bp}}}}%
+  \put(408.239990,91.440002){\href{https://eliguli712.github.io/Antiterrastrae/design/megalodon/}{\phantom{\rule{74.160004bp}{74.159973bp}}}}%
+}}
+\includepdf[pages={4},noautoscale=true,scale=1,pagecommand={}]{poster-artwork.pdf}
+\end{document}
