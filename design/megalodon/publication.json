@@ -1,9 +1,8 @@
 {
-  "revision": "R9",
+  "revision": "R10",
   "canonical_url": "https://eliguli712.github.io/Antiterrastrae/design/megalodon/",
-  "asset_commit": "defa54fdf8ec93392453c5a90b6562b77cbbb299",
-  "source_commit": "6cc7780ddb759d7507a3f0ec6574b4be493fb103",
-  "deleted_duplicate": "dual-scale-original-posters.html",
+  "asset_commit": "20ee6acf54e4d168eb2762205600bfe81bc0e19f",
+  "source_commit": "2adff30c56a0c9e0d4a3e03470b6386a1f9f7a00",
   "native_field_values_per_size": 39428327,
   "unsupported_native_display_vertices": 0,
   "fixed_boundary_retest": "Passed for both sizes",
@@ -29,9 +28,17 @@
     "maximum_framebuffer_pixels": 1800000,
     "actual_source_controller_test": "75 native geometry and scalar chunks, all faces, one maximum resident source chunk",
     "gpu_visual_execution_tested": false,
-    "no_webgl_fallback": "Complete native source plates plus interactive software preview"
+    "no_webgl_fallback": "Complete native source plates plus interactive software preview",
+    "compressed_cache_bytes": 33554432,
+    "zero_copy_decoded_views": true,
+    "idle_delay_ms": 120,
+    "pose_composite_reuse": true,
+    "frustum_culling": "Conservative original per-chunk AABBs; source triangles unchanged",
+    "render_targets": 2,
+    "depth_preserved_during_composition": true,
+    "local_detail_regression": "16 mm frustum: 17/75 chunks; 30614539 culled vertices independently checked outside view"
   },
-  "posters": "Original EN/DE/IT four-page editions; only page-four QR changed. Supplied Kakeya mark centred. All QR codes decoded at four PDF render resolutions.",
+  "posters": "Original EN/DE/IT artwork and centred Kakeya QR preserved byte-for-byte. New self-contained LaTeX PDF-background wrapper packages compile successfully; all 12 pages pixel-identical at 150 dpi. 24 PDF/compiled-output QR scan tests passed.",
   "native_array_lifetime": "CPU attribute arrays and precomputed bounds remain valid until the current chunk GPU fence; geometry and arrays released together afterwards",
   "native_failure_controls": "Controller disposed before error status is emitted; native-load control becomes retryable",
   "default_palette": "Original restored studio Turbo LUT, linearly interpolated; independent R7 field values unchanged",
@@ -39,7 +46,50 @@
     "logarithmic",
     "pearlescent wash"
   ],
-  "native_regression": "Both sizes: 75 real chunks, 74293846 source faces, 150 post-upload bounds passes, one maximum resident chunk, cancellation and renderer interruption checked",
+  "native_regression": "Both sizes: 75 real chunks, 74293846 source faces, 150 post-upload bounds passes, one resident source chunk; cancellation, failure recovery and cached-pose recomposition checked",
   "gpu_visual_execution_tested": false,
-  "native_regression_audit": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/defa54fdf8ec93392453c5a90b6562b77cbbb299/assets/native-controller-validation-r9.json"
+  "native_regression_audit": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/20ee6acf54e4d168eb2762205600bfe81bc0e19f/assets/native-controller-validation-r10.json",
+  "previous_geometry_and_field_assets": "Existing pinned R7/R9 asset commits remain unchanged",
+  "retained_original_art_pages": [
+    "studio.html",
+    "dual-scale-original-posters.html"
+  ],
+  "print_orientation": {
+    "method": "Complete convex-hull face and nonparallel edge-pair candidates with independent whole-sphere branch-and-bound certificate",
+    "source": "Complete current R8 manufacturing STL surfaces, including spherical nodes, no triangle reduction",
+    "numeric_certificate_tolerance_mm": 1e-05,
+    "candidate_axes": 1928100,
+    "branch_and_bound_cells": 98968,
+    "minimum_heights_mm": {
+      "50_main": 83.079379974,
+      "50_cap": 7.550000191,
+      "50_assembly": 83.079379974,
+      "100_main": 83.079379974,
+      "100_cap": 14.740634996,
+      "100_assembly": 83.079379974
+    },
+    "exclusions": [
+      "tooth",
+      "screws",
+      "print supports",
+      "raft"
+    ],
+    "formal_interval_proof": false,
+    "smooth_analytic_cad_sphere_claim": false
+  },
+  "fixed_annotation": "Locally foldable native details, persistent state; pointer input isolated from model gestures",
+  "latex_editability": "Wrapper and links editable. Original poster body remains the preserved PDF artwork background.",
+  "performance_validation": {
+    "software_warm_frame_mean_ms_before": 557.234,
+    "software_warm_frame_mean_ms_after": 466.371,
+    "software_pixels_identical": true,
+    "scope": "Node worker adapter with actual light geometry and seven poses; not device FPS",
+    "depth_shader": "Actual GLSL rendered on surfaceless Mesa OpenGL ES 3.2; copy color and depth verified",
+    "physical_mobile_gpu_tested": false
+  },
+  "validation_urls": [
+    "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/20ee6acf54e4d168eb2762205600bfe81bc0e19f/assets/native-performance-validation-r10.json",
+    "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/20ee6acf54e4d168eb2762205600bfe81bc0e19f/assets/software-performance-validation-r10.json",
+    "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/20ee6acf54e4d168eb2762205600bfe81bc0e19f/assets/depth-composition-validation-r10.json"
+  ]
 }

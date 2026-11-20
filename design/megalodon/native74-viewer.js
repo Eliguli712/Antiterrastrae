@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import {targetDimensions} from './native-refinement-r8.js?v=r9-1';
+import {targetDimensions} from './native-refinement-r8.js?v=r10-1';
 import {OrbitControls} from './vendor/OrbitControls.js';
 const LO=.2531670947190341,HI=250.5221326467093;
 export class NativeViewer{
@@ -28,6 +28,7 @@ export class NativeViewer{
  setView(name){const yaw=name==='front'?0:name==='reverse'?Math.PI:.49,pitch=name==='oblique'?.30:.12,r=450;this.controls.target.set(0,0,(86.73910524340096+this.physicalSize)/2);this.camera.position.copy(this.controls.target.clone().add(new THREE.Vector3(Math.sin(yaw)*Math.cos(pitch)*r,-Math.cos(yaw)*Math.cos(pitch)*r,Math.sin(pitch)*r)));this.camera.zoom=1;this.controls.update();this.resize();}
  project(p){const q=this.toothGroup.localToWorld(new THREE.Vector3(...p)).project(this.camera);return[(q.x+1)*this.el.clientWidth/2,(1-q.y)*this.el.clientHeight/2];}
  resize(){const w=this.el.clientWidth,h=this.el.clientHeight;if(!w||!h)return;const [W]=targetDimensions(w,h,devicePixelRatio);this.renderer.setPixelRatio(W/w);const H=Math.max((86.73910524340096+this.physicalSize)*1.18,160/(w/h));this.camera.left=-H*w/h/2;this.camera.right=H*w/h/2;this.camera.top=H/2;this.camera.bottom=-H/2;this.camera.updateProjectionMatrix();this.renderer.setSize(w,h,false);this.dirty=true;}
- tick(){this.frame=requestAnimationFrame(()=>this.tick());if(this.controls.update()||this.dirty){this.beforePreview?.();this.renderer.render(this.scene,this.camera);this.onCamera?.();this.dirty=false;}}
+ tick(){this.frame=requestAnimationFrame(()=>this.tick());if(this.controls.update()||this.dirty){if(!this.beforePreview?.()){this.renderer.render(this.scene,this.camera);this.onCamera?.();}this.dirty=false;}}
  dispose(){this.nativeRefinement?.dispose();this.generation++;for(const w of this.workers)w.terminate();cancelAnimationFrame(this.frame);this.resizeObserver.disconnect();this.controls.dispose();this.scene.traverse(o=>{o.geometry?.dispose();if(o.material&&o.material!==this.material)o.material.dispose();});this.uniforms.nativePalette.value.dispose();this.material.dispose();this.artMaterial?.dispose();this.environmentTarget?.dispose();this.renderer.dispose();this.renderer.domElement.remove();}
 }
+
