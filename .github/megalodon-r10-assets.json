@@ -1,0 +1,372 @@
+{
+  "origin": "https://megalodon-native-stress-eliguli.eliguli712.chatgpt.site",
+  "canonical_url": "https://eliguli712.github.io/Antiterrastrae/design/megalodon/",
+  "source_commit": "8048c83aea6c94b3ffd4051323de2ade20140fdb",
+  "files": [
+    {
+      "path": "assets/depth-composition-validation-r10.json",
+      "bytes": 372,
+      "sha256": "54c5e00e4429d5dbd4d10aeffb5382ad3447dee5c7cff6936fbe56f7a6a32b6c"
+    },
+    {
+      "path": "assets/native-chunk-bounds-r10.json",
+      "bytes": 26763,
+      "sha256": "1dbe1056259e05924e3241d169ddf4d8fe7a95a15f40ca0159c47038730f91bc"
+    },
+    {
+      "path": "assets/native-controller-validation-r10.json",
+      "bytes": 1248,
+      "sha256": "fb40598304b26e5748c18625770ae4a8a7fdf0c5b301776bc0249f1952fad7e9"
+    },
+    {
+      "path": "assets/native-performance-validation-r10.json",
+      "bytes": 557,
+      "sha256": "0f7c75fbf0b8e4ceae428836eb85078d744a3452d19965fe1f45d42c0487f9d5"
+    },
+    {
+      "path": "assets/posters-r10/Poster_R10_Build_and_Audit_Source.zip",
+      "bytes": 10009,
+      "sha256": "34f49a3ff967e7307d1e9416abdbc2f763f06b9020819f1a64b2994a4c4e3bb5"
+    },
+    {
+      "path": "assets/posters-r10/de/Source_to_Sculpture_DE_LaTeX.zip",
+      "bytes": 8490085,
+      "sha256": "4c0a28798d49a1fedd02ca10f630008935d37e67eedbc0bad74366695ef3e630"
+    },
+    {
+      "path": "assets/posters-r10/de/page-01.jpg",
+      "bytes": 1117254,
+      "sha256": "d4d7bc5e5dc793b112955ede220d6f7dfc316052940d34a95cb2e9a7603cecd7"
+    },
+    {
+      "path": "assets/posters-r10/de/page-02.jpg",
+      "bytes": 1055509,
+      "sha256": "a869138cb48ae81214fb3786028d57e89ae7ab84b35c30091e4f6889feb2f13e"
+    },
+    {
+      "path": "assets/posters-r10/de/page-03.jpg",
+      "bytes": 1655120,
+      "sha256": "d2cfd1e1883e17a3ba34c4a7d0413d1049d783df260096d57addaf0cbb95e525"
+    },
+    {
+      "path": "assets/posters-r10/de/page-04.jpg",
+      "bytes": 1093630,
+      "sha256": "1c9b127886c4dc4f1ab7d21cedecabe6eaf8b45cdb11490742cb671b5b0b655b"
+    },
+    {
+      "path": "assets/posters-r10/de/poster.tex",
+      "bytes": 1429,
+      "sha256": "004da65f4c5071b90a8f9477301dad707ef1685b30c38ba7ae68f7c6e96e4a31"
+    },
+    {
+      "path": "assets/posters-r10/de/qr-validation.json",
+      "bytes": 1651,
+      "sha256": "98c3ffe957dcce6c15be575e6fc5d499be50c99ac42f2017b83633bb6c61d96f"
+    },
+    {
+      "path": "assets/posters-r10/de/qr-with-kakeya.png",
+      "bytes": 14877,
+      "sha256": "dd30ccf25825334097e6d120037571c13b795a5e4c5ded3eee3a1f4784093f9b"
+    },
+    {
+      "path": "assets/posters-r10/de/source.pdf",
+      "bytes": 8638264,
+      "sha256": "e6eac8bcf3019064a109830af51dfc327f055461613363785f6fbc766fe09a8a"
+    },
+    {
+      "path": "assets/posters-r10/de/thumb-01.jpg",
+      "bytes": 38690,
+      "sha256": "7b5e5f31cf10939cf37a54903dbe137855eb99dfda4bdddb4cca8ccc4cbc8e49"
+    },
+    {
+      "path": "assets/posters-r10/de/thumb-02.jpg",
+      "bytes": 41753,
+      "sha256": "5eb9e70c899b6162e5844c315315b4f0744fcc0894e49f0d91bcb831b2247983"
+    },
+    {
+      "path": "assets/posters-r10/de/thumb-03.jpg",
+      "bytes": 55976,
+      "sha256": "7bb5802283ea1b031f9cd7ebaccb5437bb7ed590e65734a051d8aa5ee28fa76f"
+    },
+    {
+      "path": "assets/posters-r10/de/thumb-04.jpg",
+      "bytes": 40436,
+      "sha256": "e770e8af388a07e91607eacd0fe86d4b92cefec087e48578c5ca376add6795c6"
+    },
+    {
+      "path": "assets/posters-r10/de/validation.json",
+      "bytes": 3942,
+      "sha256": "41f8463c549137f806a4075419ee4b78cffc01127f2c4a90a7e1726681f1b73c"
+    },
+    {
+      "path": "assets/posters-r10/en/Source_to_Sculpture_EN_LaTeX.zip",
+      "bytes": 8387374,
+      "sha256": "d1decf2ecb653c013acf8afb20ba8977437166736882129ac6b054008b8dfcfa"
+    },
+    {
+      "path": "assets/posters-r10/en/page-01.jpg",
+      "bytes": 1099513,
+      "sha256": "d2abe1cf9775d0b87af847b43b1f26821e2833f9835ec9747b4e83013e96a43e"
+    },
+    {
+      "path": "assets/posters-r10/en/page-02.jpg",
+      "bytes": 989638,
+      "sha256": "0a0309efeeb656213c136dc6bb9a3d94601425f17a3d9ee6119ee2f190338e52"
+    },
+    {
+      "path": "assets/posters-r10/en/page-03.jpg",
+      "bytes": 1654114,
+      "sha256": "e2d7635db020b6271824e1bd5fa7163da8c56cd7069e35d585e28d7be1a5c699"
+    },
+    {
+      "path": "assets/posters-r10/en/page-04.jpg",
+      "bytes": 1043782,
+      "sha256": "a5ecc922a7b9e69269c3ff65f3371d9ebd8a1147aeaceb888b276d946b1e92ce"
+    },
+    {
+      "path": "assets/posters-r10/en/poster.tex",
+      "bytes": 1429,
+      "sha256": "0dfff2fafbf1aa9cad04b25cefb356d6e152f3402a3be53c6b02ffa66f8547f2"
+    },
+    {
+      "path": "assets/posters-r10/en/qr-validation.json",
+      "bytes": 1651,
+      "sha256": "52a888848e903977e09e2829beca23e4cd3e31b8f4b508145d2699fe4fefdcef"
+    },
+    {
+      "path": "assets/posters-r10/en/qr-with-kakeya.png",
+      "bytes": 14877,
+      "sha256": "dd30ccf25825334097e6d120037571c13b795a5e4c5ded3eee3a1f4784093f9b"
+    },
+    {
+      "path": "assets/posters-r10/en/source.pdf",
+      "bytes": 8533771,
+      "sha256": "73fa85fd006dc30ec18158e4f7799b3461769dbd1bea69ed4c664fc206e29676"
+    },
+    {
+      "path": "assets/posters-r10/en/thumb-01.jpg",
+      "bytes": 38028,
+      "sha256": "b5d8ac41601ea29dcaf431302970ba69d75407959a257fd48038f3995b5ce581"
+    },
+    {
+      "path": "assets/posters-r10/en/thumb-02.jpg",
+      "bytes": 38985,
+      "sha256": "4c21781a9c0a08daf351a578d3150d54890961ef07db40dc094bfeb9e3ecd5a2"
+    },
+    {
+      "path": "assets/posters-r10/en/thumb-03.jpg",
+      "bytes": 56239,
+      "sha256": "d3a802da9c0b3dc5befbc531d351e3750bad103aa389a0f4c57151c279f8ec84"
+    },
+    {
+      "path": "assets/posters-r10/en/thumb-04.jpg",
+      "bytes": 38968,
+      "sha256": "687cce8f5fe924ff4c17b6b8a49bbcd1668faeca19e9e9e3cbe31fc8e28f8dda"
+    },
+    {
+      "path": "assets/posters-r10/en/validation.json",
+      "bytes": 3942,
+      "sha256": "0bb7881d6d903ba45047a1debdf3d88dcbfce4f27e9dd419ff57710b4d147b40"
+    },
+    {
+      "path": "assets/posters-r10/it/Source_to_Sculpture_IT_LaTeX.zip",
+      "bytes": 8317299,
+      "sha256": "535981b02727106cf8089258ffea6402f87fded129e1f471eee4df0606c732e5"
+    },
+    {
+      "path": "assets/posters-r10/it/page-01.jpg",
+      "bytes": 1093982,
+      "sha256": "2b53fceaa47a84fd749560fe2e21679947709d79dab9982b00d2637373b62742"
+    },
+    {
+      "path": "assets/posters-r10/it/page-02.jpg",
+      "bytes": 1022946,
+      "sha256": "58d4e6c511d4cd510f042bda83ffeb1c4f37da70b1a997a87d2c5c7b4b2c28a6"
+    },
+    {
+      "path": "assets/posters-r10/it/page-03.jpg",
+      "bytes": 1658906,
+      "sha256": "67ce9db349b0e3f5c119c8e2afae54919d9e893c9e9567d895eea19e83511f99"
+    },
+    {
+      "path": "assets/posters-r10/it/page-04.jpg",
+      "bytes": 1041177,
+      "sha256": "a8014cdb73149a097541b6a5ef21d08fd4ca96084184d47ff8d490ee014a1329"
+    },
+    {
+      "path": "assets/posters-r10/it/poster.tex",
+      "bytes": 1430,
+      "sha256": "7a596f064eabaf6d4e0e451c04990756b60f4d576e15b1c175b64eeb0eedd949"
+    },
+    {
+      "path": "assets/posters-r10/it/qr-validation.json",
+      "bytes": 1651,
+      "sha256": "d429630971c3d0dc86a3e74ae17b0be1cfa98fad93b05904a7cecae1a071929f"
+    },
+    {
+      "path": "assets/posters-r10/it/qr-with-kakeya.png",
+      "bytes": 14877,
+      "sha256": "dd30ccf25825334097e6d120037571c13b795a5e4c5ded3eee3a1f4784093f9b"
+    },
+    {
+      "path": "assets/posters-r10/it/source.pdf",
+      "bytes": 8459517,
+      "sha256": "a4e0f626f675885bd8694d766760bb3ab463cf8e16c3e2fbf56de9770df1b5c5"
+    },
+    {
+      "path": "assets/posters-r10/it/thumb-01.jpg",
+      "bytes": 37847,
+      "sha256": "ec6969d7a0a46a8f1ca2e47331ab41286c46601b647c2017b5fc9297b9432b91"
+    },
+    {
+      "path": "assets/posters-r10/it/thumb-02.jpg",
+      "bytes": 40437,
+      "sha256": "57c79943046290b91900d470e63bda28089cef42550154185163eeb899e66003"
+    },
+    {
+      "path": "assets/posters-r10/it/thumb-03.jpg",
+      "bytes": 56083,
+      "sha256": "7868c8bbbec6d6f3058ce340953553512cc63e0d7a16b3a62463166099196116"
+    },
+    {
+      "path": "assets/posters-r10/it/thumb-04.jpg",
+      "bytes": 38008,
+      "sha256": "29c10d9c5dbdce1cc220ada1c9c77fc2c9c0419c7dab0bb8ff23e6a8c5fa2d02"
+    },
+    {
+      "path": "assets/posters-r10/it/validation.json",
+      "bytes": 3942,
+      "sha256": "63a6042e182f7b914b2943907c63bfc12de13cf6ca356efb39077a5da9859607"
+    },
+    {
+      "path": "assets/posters-r10/kakeya-mark.png",
+      "bytes": 126893,
+      "sha256": "b687593ada98b253ccc978cb85cc71c4957471ea5f6c132d5b0a1a4e5ace638a"
+    },
+    {
+      "path": "assets/posters-r10/poster-downloads.json",
+      "bytes": 2129,
+      "sha256": "3530eb268c421f718648afb7a3c469fb68564b24bc1990da8f8ccc4367089651"
+    },
+    {
+      "path": "assets/posters-r10/supplied-kakeya-reference.jpeg",
+      "bytes": 31836,
+      "sha256": "e8a7418f8b036e65baf5cf922d6096c474df38cc260abe561efd605748001a88"
+    },
+    {
+      "path": "assets/posters-r10/validation.json",
+      "bytes": 13570,
+      "sha256": "e8d23de39d58b931c73bdb4329762707ee2f2d53df89ff1ca747ef470225dee3"
+    },
+    {
+      "path": "assets/print-height-r10/100mm-assembly-height-comparison.png",
+      "bytes": 305787,
+      "sha256": "2900a10e3ffef00999df06f1d138dcbf8d860de64f4d0233fb9cf25e51ba2348"
+    },
+    {
+      "path": "assets/print-height-r10/100mm-assembly-minimum-height.json",
+      "bytes": 5240,
+      "sha256": "36d617af23fe9cc07a14aed5b5bd89f8b713f97c37bfd2b2e722f51b7c4f7e55"
+    },
+    {
+      "path": "assets/print-height-r10/100mm-cap-minimum-height.json",
+      "bytes": 5285,
+      "sha256": "974e03b47cb6f9e68e95e9005e7a7dee494700c0f284cf4fe51fea3dd6b4efbb"
+    },
+    {
+      "path": "assets/print-height-r10/100mm-main-minimum-height.json",
+      "bytes": 5024,
+      "sha256": "29f0a82a5519f7a498dd1cf93d64be2d4d062e90ec3b087de941fb2512bda8d0"
+    },
+    {
+      "path": "assets/print-height-r10/50mm-assembly-height-comparison.png",
+      "bytes": 255988,
+      "sha256": "7b8a20a0915f41c16df0d01cddd533450171d0e96397a4d646a00e7fde7cf733"
+    },
+    {
+      "path": "assets/print-height-r10/50mm-assembly-minimum-height.json",
+      "bytes": 5242,
+      "sha256": "3c6e0eeecc9653f162c76f5b7ea137c95ed5b1d2a586b734992d88e5340767d1"
+    },
+    {
+      "path": "assets/print-height-r10/50mm-cap-minimum-height.json",
+      "bytes": 11439,
+      "sha256": "048e5b726403dc32b7528b4177acaf6203c3b28cb466efc305151ce237134bb8"
+    },
+    {
+      "path": "assets/print-height-r10/50mm-main-minimum-height.json",
+      "bytes": 5024,
+      "sha256": "c5efc2ef01c8fab07fc5c20908fe4c94dadcde20a63437d7739460d7458206b2"
+    },
+    {
+      "path": "assets/print-height-r10/README.md",
+      "bytes": 6402,
+      "sha256": "c0c72deb50e64050117e0d19a1da6236506a26f50c6c439a863d1f6f013dd7f7"
+    },
+    {
+      "path": "assets/print-height-r10/Support_R8_100mm_assembly_Minimum_Height.stl",
+      "bytes": 6808784,
+      "sha256": "82f149945ea80558873cacec522d6fcd4e54bacc3c84ca1beb4b00489f46b4c4"
+    },
+    {
+      "path": "assets/print-height-r10/Support_R8_100mm_cap_Minimum_Height.stl",
+      "bytes": 2231384,
+      "sha256": "605f0bde1fb196eaeb9b5a760a82ca3c33603a632ba6000ff5adb1baed94d59e"
+    },
+    {
+      "path": "assets/print-height-r10/Support_R8_100mm_main_Minimum_Height.stl",
+      "bytes": 4577484,
+      "sha256": "ae24de6524a5fcc8f9321d54dfac08f35ebf7f99cc59cd6b57c686b498803906"
+    },
+    {
+      "path": "assets/print-height-r10/Support_R8_50mm_assembly_Minimum_Height.stl",
+      "bytes": 7026284,
+      "sha256": "389bf1aefa97ed6700caa26a7ffef7d7936f49774d29a0f5f2cc481c96d84245"
+    },
+    {
+      "path": "assets/print-height-r10/Support_R8_50mm_cap_Minimum_Height.stl",
+      "bytes": 3679184,
+      "sha256": "f6ece2ce0d98c4ff888454d34715734440d1477d6f64ecc52e9ad1081c3ed74b"
+    },
+    {
+      "path": "assets/print-height-r10/Support_R8_50mm_main_Minimum_Height.stl",
+      "bytes": 3347184,
+      "sha256": "ba5db05f87eccc1f1a0bd3ecb2bbd7e0dadb979c7f8e160a1f3cfb88f3a1f03f"
+    },
+    {
+      "path": "assets/print-height-r10/Support_R8_Minimum_Print_Height_R10.zip",
+      "bytes": 12039133,
+      "sha256": "7b68d4ada16b3e20e6db6a777a8e0d2c417f9268f4c6346d882a30671524011a"
+    },
+    {
+      "path": "assets/print-height-r10/asset-manifest.json",
+      "bytes": 4159,
+      "sha256": "4de234479d1a4e02d314bac627c7cff00adfc84da2452ca15faf556c53ebd7bc"
+    },
+    {
+      "path": "assets/print-height-r10/figure-provenance.json",
+      "bytes": 931,
+      "sha256": "2fd43beea7b1e2cef6b9c2bee3b9ee8f7f50a0de3ea0b2bb058600f5b467e307"
+    },
+    {
+      "path": "assets/print-height-r10/minimum-print-height.csv",
+      "bytes": 1577,
+      "sha256": "47fb61a3a4114296e1aebd7a52babc40350cc4813255c2b555c734b324e4d49b"
+    },
+    {
+      "path": "assets/print-height-r10/minimum-print-height.json",
+      "bytes": 44041,
+      "sha256": "b39712752ef97cf9eeb44c5c743d01396517539de21c020cce9151aa59f5bff2"
+    },
+    {
+      "path": "assets/print-height-r10/verification.json",
+      "bytes": 4381,
+      "sha256": "a8f64f8dc63eeac4d1a006c0f23fb57cfef0012fa1bbccaaceed6d7a4d8e11dd"
+    },
+    {
+      "path": "assets/software-performance-validation-r10.json",
+      "bytes": 376,
+      "sha256": "38a56652d7de2da869da634b7ace13e0ac6ef17ea0a4016b4335cb45a67216c6"
+    }
+  ]
+}
