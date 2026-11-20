@@ -1,6 +1,6 @@
-import{t,lang,label,fmt,esc,functionLabels,download}from'./i18n.js';
-import{mid,fixed}from'./models.js';
-import{makeRows,standardize,finite,validScenario,validateWorkspace,extrapolate}from'./features-core.js';
+import{t,lang,label,fmt,esc,functionLabels,download}from'./i18n.js?v=20261120b';
+import{mid,fixed}from'./models.js?v=20261120b';
+import{makeRows,standardize,finite,validScenario,validateWorkspace,extrapolate}from'./features-core.js?v=20261120b';
 const $=s=>document.querySelector(s);
 const storageKey='cenozoic-workspace-v2';
 const empty=()=>({schema:'cenozoic-workspace/1',scenarios:[],annotations:[]});
