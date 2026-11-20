@@ -1,0 +1,1784 @@
+{
+  "features": [
+    {
+      "id": "aquaticcommitment",
+      "label": {
+        "en": "Aquatic specialization",
+        "de": "Wasseranpassung"
+      },
+      "definition": {
+        "en": "Curatorial ordinal character-state codes, not measured proportions of time in water, evolutionary progress, or performance. The categories summarize aquatic use and skeletal specialization explicitly supported by the linked entry. Fully aquatic is reserved for an explicit interpretation or decisive loss of terrestrial support. Null means the entry cannot support a state; marine occurrence alone is not scored.",
+        "de": "Kuratorische ordinale Merkmalscodes, keine gemessenen Anteile der Zeit im Wasser, kein Evolutionsfortschritt und keine Leistungswerte. Die Kategorien fassen ausdrücklich belegte Gewässernutzung und Skelettanpassung des verknüpften Eintrags zusammen. Vollständig aquatisch wird nur bei ausdrücklicher Interpretation oder entscheidendem Verlust der Landstützfunktion vergeben. Null bedeutet, dass der Eintrag keinen Zustand stützt; ein Meeresfund allein wird nicht codiert."
+      },
+      "levels": [
+        {
+          "value": 0,
+          "label": {
+            "en": "Terrestrial locomotor interpretation only",
+            "de": "Nur terrestrische Fortbewegung interpretiert"
+          }
+        },
+        {
+          "value": 0.25,
+          "label": {
+            "en": "Aquatic use inferred from proxies",
+            "de": "Gewässernutzung aus Indizien erschlossen"
+          }
+        },
+        {
+          "value": 0.5,
+          "label": {
+            "en": "Amphibious skeletal combination",
+            "de": "Amphibische Skelettkombination"
+          }
+        },
+        {
+          "value": 0.75,
+          "label": {
+            "en": "Specialized aquatic body or limbs",
+            "de": "Spezialisierter aquatischer Körper oder Gliedmaßen"
+          }
+        },
+        {
+          "value": 1,
+          "label": {
+            "en": "Fully aquatic interpretation supported",
+            "de": "Vollständig aquatische Lebensweise gestützt"
+          }
+        }
+      ]
+    },
+    {
+      "id": "terrestrialsupport",
+      "label": {
+        "en": "Terrestrial body support",
+        "de": "Körperstützung an Land"
+      },
+      "definition": {
+        "en": "Curatorial ordinal codes for the documented capacity of limbs and pelvis to support the body on land. These are anatomical interpretation categories, not force measurements or fractions of body weight. Short limbs alone do not establish lost support; missing postcrania remain null.",
+        "de": "Kuratorische ordinale Codes für die dokumentierte Fähigkeit von Gliedmaßen und Becken, den Körper an Land zu tragen. Dies sind anatomische Interpretationskategorien, keine Kraftmessungen oder Körpergewichtsanteile. Kurze Gliedmaßen allein belegen keinen Verlust der Stützfunktion; fehlende postkraniale Knochen bleiben null."
+      },
+      "levels": [
+        {
+          "value": 0,
+          "label": {
+            "en": "Pelvic support connection lost",
+            "de": "Stützverbindung des Beckens verloren"
+          }
+        },
+        {
+          "value": 0.25,
+          "label": {
+            "en": "Strongly reduced hindlimbs documented",
+            "de": "Stark reduzierte Hintergliedmaßen belegt"
+          }
+        },
+        {
+          "value": 0.5,
+          "label": {
+            "en": "Amphibious support retained; loading unresolved",
+            "de": "Amphibische Stützung erhalten; Belastung ungeklärt"
+          }
+        },
+        {
+          "value": 0.75,
+          "label": {
+            "en": "Body-bearing limbs explicitly retained",
+            "de": "Körpertragende Gliedmaßen ausdrücklich erhalten"
+          }
+        },
+        {
+          "value": 1,
+          "label": {
+            "en": "Terrestrial locomotor skeleton retained",
+            "de": "Terrestrisches Bewegungsskelett erhalten"
+          }
+        }
+      ]
+    },
+    {
+      "id": "functionaldentition",
+      "label": {
+        "en": "Dental apparatus",
+        "de": "Zahnapparat"
+      },
+      "definition": {
+        "en": "Curatorial ordinal categories describing preserved dental participation and architecture, not tooth counts, bite force, cutting efficiency, or a universal evolutionary scale. Robust or serrated teeth share a display category without being equivalent mechanisms. Apparent absence is scored only where the entry explicitly describes loss or functional toothlessness. Null is unsupported.",
+        "de": "Kuratorische ordinale Kategorien für erhaltene Zahnbeteiligung und Zahnarchitektur, keine Zahnzahlen, Beißkräfte, Schneideleistungen oder universelle Evolutionsskala. Robuste oder gesägte Zähne teilen eine Darstellungskategorie, ohne gleichartige Mechanismen zu sein. Abwesenheit wird nur codiert, wenn der Eintrag Verlust oder funktionelle Zahnlosigkeit ausdrücklich beschreibt. Null bedeutet unbelegt."
+      },
+      "levels": [
+        {
+          "value": 0,
+          "label": {
+            "en": "Teeth reported absent",
+            "de": "Zähne als fehlend beschrieben"
+          }
+        },
+        {
+          "value": 0.25,
+          "label": {
+            "en": "Functionally or nearly toothless",
+            "de": "Funktionell oder nahezu zahnlos"
+          }
+        },
+        {
+          "value": 0.5,
+          "label": {
+            "en": "Teeth present; processing role unresolved",
+            "de": "Zähne vorhanden; Verarbeitungsfunktion ungeklärt"
+          }
+        },
+        {
+          "value": 0.75,
+          "label": {
+            "en": "Differentiated teeth or lateral cusplets",
+            "de": "Differenzierte Zähne oder seitliche Nebenspitzen"
+          }
+        },
+        {
+          "value": 1,
+          "label": {
+            "en": "Enlarged or serrated handling teeth",
+            "de": "Vergrößerte oder gesägte Beutezähne"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bulkfeeding",
+      "label": {
+        "en": "Filter-feeding apparatus",
+        "de": "Filtrierapparat"
+      },
+      "definition": {
+        "en": "Curatorial ordinal categories for the anatomical interpretation of filtering structures. These are hypothesis and preservation categories, not measured fractions of bulk feeding, filtered volume, or evolutionary advancement. Zero means an individual-prey interpretation is favored in the entry, not proof that filtering was impossible. Missing baleen alone is insufficient for zero. Null means no supported state.",
+        "de": "Kuratorische ordinale Kategorien für die anatomische Interpretation von Filtrierstrukturen. Dies sind Hypothesen- und Erhaltungskategorien, keine gemessenen Anteile der Filtriernahrung, filtrierten Volumina oder Entwicklungsstufen. Der Zahlenwert 0 bedeutet, dass der Eintrag Einzelbeutefang bevorzugt, und beweist keine Unmöglichkeit des Filtrierens. Fehlende Barten allein rechtfertigen diesen Zahlenwert nicht. Ein JSON-null-Feld bezeichnet einen unbelegten Zustand."
+      },
+      "levels": [
+        {
+          "value": 0,
+          "label": {
+            "en": "Individual-prey interpretation favored",
+            "de": "Einzelbeutefang bevorzugt interpretiert"
+          }
+        },
+        {
+          "value": 0.25,
+          "label": {
+            "en": "Disputed tooth-filtering hypothesis",
+            "de": "Umstrittene Hypothese des Zahnfiltrierens"
+          }
+        },
+        {
+          "value": 0.5,
+          "label": {
+            "en": "Palatal proxy for possible baleen",
+            "de": "Gaumenindiz für mögliche Barten"
+          }
+        },
+        {
+          "value": 0.75,
+          "label": {
+            "en": "Baleen-type bony apparatus inferred",
+            "de": "Bartenartiger Knochenapparat erschlossen"
+          }
+        },
+        {
+          "value": 1,
+          "label": {
+            "en": "Fossil baleen directly preserved",
+            "de": "Fossile Barten direkt erhalten"
+          }
+        }
+      ]
+    },
+    {
+      "id": "raptorialapparatus",
+      "label": {
+        "en": "Prey-capture architecture",
+        "de": "Beutefangapparat"
+      },
+      "definition": {
+        "en": "Curatorial ordinal categories for capture-related skull, jaw, and tooth architecture. They summarize an anatomical feeding interpretation, not bite force, prey size, trophic level, attack behavior, or predatory superiority. A suction-favored interpretation can receive zero even when teeth remain. Null means insufficient functional evidence.",
+        "de": "Kuratorische ordinale Kategorien für fangbezogene Schädel-, Kiefer- und Zahnarchitektur. Sie fassen anatomische Ernährungsinterpretationen zusammen, keine Beißkraft, Beutegröße, trophische Stufe, Angriffshandlung oder räuberische Überlegenheit. Eine bevorzugte Saugfraßinterpretation kann auch bei erhaltenen Zähnen den Zahlenwert null erhalten. Ein null-Feld bedeutet unzureichende Funktionsbelege."
+      },
+      "levels": [
+        {
+          "value": 0,
+          "label": {
+            "en": "Suction-favored oral architecture",
+            "de": "Für Saugnahrung interpretierter Mundapparat"
+          }
+        },
+        {
+          "value": 0.25,
+          "label": {
+            "en": "Grasping role tentatively proposed",
+            "de": "Greiffunktion vorläufig vorgeschlagen"
+          }
+        },
+        {
+          "value": 0.5,
+          "label": {
+            "en": "Mixed capture and suction interpretation",
+            "de": "Gemischter Fang- und Saugfraß interpretiert"
+          }
+        },
+        {
+          "value": 0.75,
+          "label": {
+            "en": "Robust capture-related skull or teeth",
+            "de": "Robuste fangbezogene Schädel- oder Zahnstruktur"
+          }
+        },
+        {
+          "value": 1,
+          "label": {
+            "en": "Combined biting apparatus or serrated teeth",
+            "de": "Kombinierter Beißapparat oder gesägte Zähne"
+          }
+        }
+      ]
+    },
+    {
+      "id": "acousticstructures",
+      "label": {
+        "en": "Acoustic anatomical evidence",
+        "de": "Akustische Anatomiebelege"
+      },
+      "definition": {
+        "en": "Curatorial ordinal categories distinguish ear affinity, sensory anatomy, and particular acoustic hypotheses. They are not a measurement of hearing range, echolocation quality, intelligence, or an evolutionary ladder. Sound production and reception are different components; a higher display code does not establish better sonar. Null includes sensory evidence that is not specifically auditory.",
+        "de": "Kuratorische ordinale Kategorien unterscheiden Ohrmerkmale zur Verwandtschaft, Sinnesanatomie und bestimmte akustische Hypothesen. Sie messen weder Hörbereich, Echoortungsqualität, Intelligenz noch eine evolutionäre Rangfolge. Schallerzeugung und Schallempfang sind verschiedene Komponenten; ein höherer Darstellungscode belegt kein besseres Sonar. Null umfasst auch Sinnesbelege, die nicht ausdrücklich das Hören betreffen."
+      },
+      "levels": [
+        {
+          "value": 0,
+          "label": {
+            "en": "Explicitly unspecialized auditory state",
+            "de": "Ausdrücklich unspezialisierter Hörzustand"
+          }
+        },
+        {
+          "value": 0.25,
+          "label": {
+            "en": "Cetacean-related ear characters",
+            "de": "Walverwandte Ohrmerkmale"
+          }
+        },
+        {
+          "value": 0.5,
+          "label": {
+            "en": "Ear or cranial sensory specialization",
+            "de": "Ohr- oder kraniale Sinnesspezialisierung"
+          }
+        },
+        {
+          "value": 0.75,
+          "label": {
+            "en": "High-frequency reception hypothesis",
+            "de": "Hypothese des Hochfrequenzhörens"
+          }
+        },
+        {
+          "value": 1,
+          "label": {
+            "en": "Combined sound-production bony proxies",
+            "de": "Kombinierte Knochenindizien der Schallerzeugung"
+          }
+        }
+      ]
+    },
+    {
+      "id": "axialswimming",
+      "label": {
+        "en": "Axial propulsion interpretation",
+        "de": "Interpretation des Achsenantriebs"
+      },
+      "definition": {
+        "en": "Curatorial ordinal categories for the documented interpretation of swimming propulsion. These are qualitative locomotor hypotheses, not measured force shares, efficiency, speed, or a progression toward a modern tail fluke. A long trunk, a short limb, or a marine skull alone cannot establish an axial state. Null is unresolved.",
+        "de": "Kuratorische ordinale Kategorien für die dokumentierte Interpretation des Schwimmantriebs. Dies sind qualitative Bewegungshypothesen, keine gemessenen Kraftanteile, Wirkungsgrade, Geschwindigkeiten oder Fortschrittsstufen zur modernen Schwanzfluke. Ein langer Rumpf, kurze Gliedmaßen oder ein Meeressäugerschädel allein belegen keinen Achsenantrieb. Null bedeutet ungeklärt."
+      },
+      "levels": [
+        {
+          "value": 0,
+          "label": {
+            "en": "Forelimb propulsion explicitly documented",
+            "de": "Vordergliedmaßenantrieb ausdrücklich belegt"
+          }
+        },
+        {
+          "value": 0.25,
+          "label": {
+            "en": "Hindfoot propulsion emphasized",
+            "de": "Hinterfußantrieb hervorgehoben"
+          }
+        },
+        {
+          "value": 0.5,
+          "label": {
+            "en": "Trunk participation with limb support",
+            "de": "Rumpfbeteiligung neben Gliedmaßenstützung"
+          }
+        },
+        {
+          "value": 0.75,
+          "label": {
+            "en": "Body or tail emphasis inferred",
+            "de": "Körper- oder Schwanzbetonung erschlossen"
+          }
+        },
+        {
+          "value": 1,
+          "label": {
+            "en": "Tail-dominant propulsion explicitly supported",
+            "de": "Schwanzdominierter Antrieb ausdrücklich gestützt"
+          }
+        }
+      ]
+    }
+  ],
+  "sequences": [
+    {
+      "id": "whale-water-and-limbs",
+      "label": {
+        "en": "Whale water use and limb mosaics",
+        "de": "Gewässernutzung und Gliedmaßenmosaike der Wale"
+      },
+      "description": {
+        "en": "Compare land support, repeated water use, amphibious limbs, and later body-tail emphasis across coexisting early cetacean relatives. Indohyus is a close relative, not an assigned whale ancestor. Nodes are ordered only by the midpoint of their displayed age windows, which may overlap or enclose imprecise records. Connections compare documented forms; they do not assert direct ancestry, exact succession, or a universal trend.",
+        "de": "Verglichen werden Landstützung, wiederholte Gewässernutzung, amphibische Gliedmaßen und spätere Körper-Schwanz-Betonung bei nebeneinander bestehenden frühen Walverwandten. Indohyus ist ein naher Verwandter, kein festgelegter Walvorfahr. Die Knoten sind nur nach dem Mittelpunkt ihrer dargestellten Altersfenster geordnet; diese können sich überlappen oder ungenaue Nachweise umfassen. Verbindungen vergleichen belegte Formen und behaupten weder direkte Abstammung, genaue Abfolge noch einen universellen Trend."
+      },
+      "nodeIds": [
+        "E040",
+        "E042",
+        "E043",
+        "E053",
+        "E054",
+        "E055",
+        "E056",
+        "E058",
+        "E061",
+        "E072"
+      ]
+    },
+    {
+      "id": "basilosaurid-body-plans",
+      "label": {
+        "en": "Fully aquatic archaeocete body plans",
+        "de": "Vollständig aquatische Baupläne früher Wale"
+      },
+      "description": {
+        "en": "Small size, compact bodies, elongation, and heavy bones reveal different marine solutions. Missing mechanics are left unscored rather than inferred from a reconstructed silhouette. Nodes are ordered only by the midpoint of their displayed age windows, which may overlap or enclose imprecise records. Connections compare documented forms; they do not assert direct ancestry, exact succession, or a universal trend.",
+        "de": "Kleine Größe, kompakte Körper, Verlängerung und schwere Knochen zeigen verschiedene Meereslösungen. Fehlende Mechanik bleibt unbewertet, statt aus einer rekonstruierten Silhouette erschlossen zu werden. Die Knoten sind nur nach dem Mittelpunkt ihrer dargestellten Altersfenster geordnet; diese können sich überlappen oder ungenaue Nachweise umfassen. Verbindungen vergleichen belegte Formen und behaupten weder direkte Abstammung, genaue Abfolge noch einen universellen Trend."
+      },
+      "nodeIds": [
+        "E062",
+        "E066",
+        "E067",
+        "E070",
+        "E074",
+        "E075",
+        "E076"
+      ]
+    },
+    {
+      "id": "mysticete-feeding",
+      "label": {
+        "en": "Mysticete feeding experiments",
+        "de": "Ernährungsvarianten früher Bartenwale"
+      },
+      "description": {
+        "en": "Toothed capture, suction, disputed dental filtering, tooth loss, possible palatal baleen proxies, and directly fossilized baleen are separate evidence states. Mysticete membership alone does not demonstrate filter feeding. Nodes are ordered only by the midpoint of their displayed age windows, which may overlap or enclose imprecise records. Connections compare documented forms; they do not assert direct ancestry, exact succession, or a universal trend.",
+        "de": "Bezahnter Beutefang, Saugnahrung, umstrittenes Zahnfiltrieren, Zahnverlust, mögliche Gaumenindizien für Barten und direkt fossilisierte Barten sind getrennte Belegzustände. Bartenwalzugehörigkeit allein belegt keine Filtriernahrung. Die Knoten sind nur nach dem Mittelpunkt ihrer dargestellten Altersfenster geordnet; diese können sich überlappen oder ungenaue Nachweise umfassen. Verbindungen vergleichen belegte Formen und behaupten weder direkte Abstammung, genaue Abfolge noch einen universellen Trend."
+      },
+      "nodeIds": [
+        "E068",
+        "E080",
+        "L002",
+        "L004",
+        "L008",
+        "L010",
+        "L024",
+        "L025",
+        "L026",
+        "L031",
+        "L075"
+      ]
+    },
+    {
+      "id": "odontocete-sensory-mosaics",
+      "label": {
+        "en": "Odontocete sensory mosaics",
+        "de": "Sinnesmosaike früher Zahnwale"
+      },
+      "description": {
+        "en": "Compare cranial sensory anatomy, toothlessness, sound-production proxies, and high-frequency reception. Oral specialization and acoustic anatomy are independent, and isolated sensory structures do not measure sonar performance. Nodes are ordered only by the midpoint of their displayed age windows, which may overlap or enclose imprecise records. Connections compare documented forms; they do not assert direct ancestry, exact succession, or a universal trend.",
+        "de": "Verglichen werden kraniale Sinnesanatomie, Zahnlosigkeit, Schallerzeugungsindizien und Hochfrequenzwahrnehmung. Mundspezialisierung und akustische Anatomie sind unabhängig; einzelne Sinnesstrukturen messen keine Sonarleistung. Die Knoten sind nur nach dem Mittelpunkt ihrer dargestellten Altersfenster geordnet; diese können sich überlappen oder ungenaue Nachweise umfassen. Verbindungen vergleichen belegte Formen und behaupten weder direkte Abstammung, genaue Abfolge noch einen universellen Trend."
+      },
+      "nodeIds": [
+        "L003",
+        "L005",
+        "L007",
+        "L009",
+        "L035",
+        "L036"
+      ]
+    },
+    {
+      "id": "raptorial-physeteroids",
+      "label": {
+        "en": "Raptorial sperm-whale relatives",
+        "de": "Räuberische Pottwalverwandte"
+      },
+      "description": {
+        "en": "Associated skulls, jaws, teeth, and muscle attachment regions support several biting body plans at different sizes. The codes do not supply bite-force estimates or known prey lists. Nodes are ordered only by the midpoint of their displayed age windows, which may overlap or enclose imprecise records. Connections compare documented forms; they do not assert direct ancestry, exact succession, or a universal trend.",
+        "de": "Zusammengehörige Schädel, Kiefer, Zähne und Muskelansatzregionen stützen verschiedene Beißbaupläne unterschiedlicher Größe. Die Codes liefern keine Beißkraftschätzungen oder bekannten Beutelisten. Die Knoten sind nur nach dem Mittelpunkt ihrer dargestellten Altersfenster geordnet; diese können sich überlappen oder ungenaue Nachweise umfassen. Verbindungen vergleichen belegte Formen und behaupten weder direkte Abstammung, genaue Abfolge noch einen universellen Trend."
+      },
+      "nodeIds": [
+        "L057",
+        "L065",
+        "L070",
+        "L071",
+        "L078"
+      ]
+    },
+    {
+      "id": "otodontid-tooth-architecture",
+      "label": {
+        "en": "Otodontid tooth architecture",
+        "de": "Zahnarchitektur der Otodontiden"
+      },
+      "description": {
+        "en": "Compare smooth cusplet-bearing teeth, serrated crowns, and changing lateral cusplets. Some distinct architectures share a display code; taxonomic transitions and ontogenetic variation prevent a simple species-by-species ladder. Nodes are ordered only by the midpoint of their displayed age windows, which may overlap or enclose imprecise records. Connections compare documented forms; they do not assert direct ancestry, exact succession, or a universal trend.",
+        "de": "Verglichen werden glatte Zähne mit Nebenspitzen, gesägte Kronen und sich ändernde seitliche Nebenspitzen. Manche unterschiedlichen Architekturen teilen einen Darstellungscode; taxonomische Übergänge und ontogenetische Variation verhindern eine einfache Artenleiter. Die Knoten sind nur nach dem Mittelpunkt ihrer dargestellten Altersfenster geordnet; diese können sich überlappen oder ungenaue Nachweise umfassen. Verbindungen vergleichen belegte Formen und behaupten weder direkte Abstammung, genaue Abfolge noch einen universellen Trend."
+      },
+      "nodeIds": [
+        "E028",
+        "E063",
+        "L015",
+        "L060",
+        "L067"
+      ]
+    },
+    {
+      "id": "pinniped-water-use",
+      "label": {
+        "en": "Carnivoran routes into water",
+        "de": "Wege der Raubtiere ins Wasser"
+      },
+      "description": {
+        "en": "Endocast-based underwater foraging hypotheses, aquatic limbs, and retained land support provide an independent comparison with whale aquatic transitions. These taxa are not declared a chain of ancestors. Nodes are ordered only by the midpoint of their displayed age windows, which may overlap or enclose imprecise records. Connections compare documented forms; they do not assert direct ancestry, exact succession, or a universal trend.",
+        "de": "Hirnausgussbasierte Hypothesen zur Unterwassernahrung, aquatische Gliedmaßen und erhaltene Landstützung erlauben einen unabhängigen Vergleich mit dem Wasserübergang der Wale. Diese Taxa werden nicht als Vorfahrenkette erklärt. Die Knoten sind nur nach dem Mittelpunkt ihrer dargestellten Altersfenster geordnet; diese können sich überlappen oder ungenaue Nachweise umfassen. Verbindungen vergleichen belegte Formen und behaupten weder direkte Abstammung, genaue Abfolge noch einen universellen Trend."
+      },
+      "nodeIds": [
+        "L037",
+        "L040",
+        "L041"
+      ]
+    },
+    {
+      "id": "penguin-locomotor-evidence",
+      "label": {
+        "en": "Early penguin locomotor evidence",
+        "de": "Bewegungsbelege früher Pinguine"
+      },
+      "description": {
+        "en": "Direct descriptions of diving and forelimb propulsion can be scored; gigantism and ancestral humerus anatomy alone cannot be converted into swimming commitment or axial thrust. All-null rows retain those documented limits. Nodes are ordered only by the midpoint of their displayed age windows, which may overlap or enclose imprecise records. Connections compare documented forms; they do not assert direct ancestry, exact succession, or a universal trend.",
+        "de": "Direkte Beschreibungen von Tauchen und Vordergliedmaßenantrieb lassen sich codieren; Riesenwuchs und ursprüngliche Oberarmknochenanatomie allein lassen sich nicht in Wasserbindung oder Achsenschub umrechnen. Vollständig leere Bewertungszeilen bewahren diese Beleggrenzen. Die Knoten sind nur nach dem Mittelpunkt ihrer dargestellten Altersfenster geordnet; diese können sich überlappen oder ungenaue Nachweise umfassen. Verbindungen vergleichen belegte Formen und behaupten weder direkte Abstammung, genaue Abfolge noch einen universellen Trend."
+      },
+      "nodeIds": [
+        "E008",
+        "E009",
+        "E017",
+        "E018"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "eventId": "E008",
+      "values": {
+        "aquaticcommitment": 0.75,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "The entry identifies a diving bird with characteristic penguin tarsometatarsal anatomy; it does not imply an inability to come ashore or a measured diving performance.",
+          "de": "Der Eintrag identifiziert einen Tauchvogel mit charakteristischer Pinguin-Tarsometatarsusanatomie; dies bedeutet weder Unfähigkeit zum Landgang noch eine gemessene Tauchleistung."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.26879/1009"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E009",
+      "values": {
+        "aquaticcommitment": 0.75,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": 0
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "Loss of flight and forelimb-powered diving are explicitly described, supporting aquatic limb specialization while retaining ancestral anatomical differences.",
+          "de": "Flugverlust und vordergliedmaßengetriebenes Tauchen werden ausdrücklich beschrieben und stützen eine aquatische Gliedmaßenspezialisierung bei erhaltenen ursprünglichen Anatomieunterschieden."
+        },
+        "axialswimming": {
+          "en": "The entry explicitly identifies forelimb propulsion underwater. Zero labels that appendicular emphasis and does not assert an immobile trunk or tail.",
+          "de": "Der Eintrag nennt ausdrücklich Vordergliedmaßenantrieb unter Wasser. Der Zahlenwert null bezeichnet diese Gliedmaßenbetonung und behauptet keinen unbeweglichen Rumpf oder Schwanz."
+        }
+      },
+      "sources": [
+        "https://academic.oup.com/mbe/article/23/6/1144/1055321",
+        "https://doi.org/10.26879/1009"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E017",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "The entry documents a robust wing girdle, limb bones, and gigantism with ancestral forelimb forms. Size and ancestry alone cannot set aquatic commitment, so the cell remains null.",
+          "de": "Der Eintrag belegt einen robusten Schultergürtel, Gliedmaßenknochen und Riesenwuchs mit ursprünglichen Vordergliedmaßenformen. Größe und Ursprünglichkeit allein bestimmen keine Wasserbindung; das Feld bleibt null."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1038/s41467-017-01959-6",
+        "https://doi.org/10.26879/1009"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E018",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "axialswimming": {
+          "en": "A huge humerus and ancestral forelimb traits concern body size and flipper anatomy; the entry does not resolve an axial propulsion category, so the cell remains null.",
+          "de": "Ein riesiger Oberarmknochen und ursprüngliche Vordergliedmaßenmerkmale betreffen Körpergröße und Flossenanatomie; der Eintrag bestimmt keine Achsenantriebskategorie, daher bleibt das Feld null."
+        }
+      },
+      "sources": [
+        "https://www.cambridge.org/core/journals/journal-of-paleontology/article/abs/largestknown-fossil-penguin-provides-insight-into-the-early-evolution-of-sphenisciform-body-size-and-flipper-anatomy/8D4A78B2CA0A716134F8E60169A633FD"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E028",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 0.75,
+        "bulkfeeding": null,
+        "raptorialapparatus": 0.75,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "Robust teeth retain lateral cusplets and lack the strong serration of later forms. The code preserves this cusplet-bearing architectural category.",
+          "de": "Robuste Zähne tragen seitliche Nebenspitzen und besitzen nicht die starke Sägung späterer Formen. Der Code hält diese Kategorie einer Architektur mit Nebenspitzen fest."
+        },
+        "raptorialapparatus": {
+          "en": "Robust, cusplet-bearing teeth are the documented prey-handling tool; a complete body or specific diet cannot be reconstructed from these teeth alone.",
+          "de": "Robuste Zähne mit Nebenspitzen sind das belegte Beutewerkzeug; ein vollständiger Körper oder eine bestimmte Nahrung kann daraus allein nicht rekonstruiert werden."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1126/sciadv.abl6529"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E040",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": 1,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": 0.25,
+        "axialswimming": null
+      },
+      "rationales": {
+        "terrestrialsupport": {
+          "en": "The entry describes limbs and trunk that still support movement on land; the code denotes retained terrestrial anatomy, not a measured load.",
+          "de": "Der Eintrag beschreibt Gliedmaßen und Rumpf, die weiterhin Bewegung an Land ermöglichen; der Code bezeichnet erhaltene Landanatomie, keine gemessene Last."
+        },
+        "acousticstructures": {
+          "en": "Cranial and ear characters diagnose cetacean affinity despite a terrestrial locomotor skeleton; this does not establish echolocation.",
+          "de": "Schädel- und Ohrmerkmale belegen die Walverwandtschaft trotz eines terrestrischen Bewegungsskeletts; dies belegt keine Echoortung."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1038/35095005"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E042",
+      "values": {
+        "aquaticcommitment": 0.5,
+        "terrestrialsupport": 0.75,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": 0.5
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "Robust body-bearing limbs and large feet occur with a trunk adapted for aquatic movement, supporting an amphibious combination.",
+          "de": "Robuste körpertragende Gliedmaßen und große Füße treten mit einem an Wasserbewegung angepassten Rumpf auf und stützen eine amphibische Kombination."
+        },
+        "terrestrialsupport": {
+          "en": "The entry explicitly identifies robust limbs capable of supporting the body; exact terrestrial gait and loading are not observed.",
+          "de": "Der Eintrag nennt ausdrücklich robuste, körpertragende Gliedmaßen; genauer Landgang und Belastung sind nicht beobachtet."
+        },
+        "axialswimming": {
+          "en": "The trunk is described as adapted for aquatic movement alongside large feet; this codes possible trunk participation without assigning a thrust fraction.",
+          "de": "Der Rumpf wird neben großen Füßen als an Wasserbewegung angepasst beschrieben; dies codiert mögliche Rumpfbeteiligung ohne Schubanteil."
+        }
+      },
+      "sources": [
+        "https://www.nyit.edu/medicine/college-of-osteopathic-medicine/anatomy/evolution-of-dolphins-and-whales/cetacean-family-tree/ambulocetus-natans/"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E043",
+      "values": {
+        "aquaticcommitment": 0.25,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": 0.25,
+        "axialswimming": null
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "Dense bones and isotope signals support repeated use of water, while the entry explicitly leaves the degree of immersion uncertain.",
+          "de": "Dichte Knochen und Isotopensignale stützen wiederholte Gewässernutzung; der Eintrag lässt deren Ausmaß ausdrücklich offen."
+        },
+        "acousticstructures": {
+          "en": "The described ear-region similarities are evidence of proximity to whales, not a reconstructed hearing performance.",
+          "de": "Die beschriebenen Ähnlichkeiten der Ohrregion belegen die Nähe zu Walen, keine rekonstruierte Hörleistung."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1038/nature06343"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E053",
+      "values": {
+        "aquaticcommitment": 0.75,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": 0.25
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "Elongated digits adapted for propulsion coexist with an artiodactyl-type ankle, documenting an early aquatic limb mosaic.",
+          "de": "Verlängerte, an den Antrieb angepasste Finger und Zehen treten mit einem paarhuferartigen Sprunggelenk auf und belegen ein frühes aquatisches Gliedmaßenmosaik."
+        },
+        "axialswimming": {
+          "en": "The entry favors an important hindfoot contribution. The incomplete terminal tail cannot demonstrate a modern fluke or a measured balance of forces.",
+          "de": "Der Eintrag betont einen wichtigen Beitrag der Hinterfüße. Das unvollständige Schwanzende belegt weder eine moderne Fluke noch ein gemessenes Kräfteverhältnis."
+        }
+      },
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/11567134/"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E054",
+      "values": {
+        "aquaticcommitment": 0.5,
+        "terrestrialsupport": 0.75,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "Retained weight-bearing hindlimbs support an amphibious anatomical interpretation; the proposed land birth remains a separate debated hypothesis.",
+          "de": "Erhaltene tragfähige Hintergliedmaßen stützen eine amphibische anatomische Interpretation; die vorgeschlagene Landgeburt bleibt eine gesonderte umstrittene Hypothese."
+        },
+        "terrestrialsupport": {
+          "en": "The entry explicitly notes hindlimbs that retained weight-bearing function; the pregnancy does not itself measure that capacity.",
+          "de": "Der Eintrag nennt ausdrücklich Hintergliedmaßen mit erhaltener Stützfunktion; die Trächtigkeit misst diese Fähigkeit nicht."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1371/journal.pone.0004366"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E055",
+      "values": {
+        "aquaticcommitment": 0.75,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": 0.5,
+        "axialswimming": null
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "A long body, short limbs, bone evidence, and isotopes jointly support specialized nearshore aquatic life; swimming efficiency is unresolved.",
+          "de": "Langer Körper, kurze Gliedmaßen, Knochenbefunde und Isotope stützen gemeinsam ein spezialisiertes küstennahes Wasserleben; die Schwimmeffizienz bleibt offen."
+        },
+        "acousticstructures": {
+          "en": "A large middle-ear cavity is a documented cranial specialization. Its size is not converted into hearing range or sonar performance.",
+          "de": "Eine große Mittelohrhöhle ist eine belegte Schädelspezialisierung. Ihre Größe wird nicht in Hörbereich oder Sonarleistung umgerechnet."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1371/journal.pone.0118409"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E056",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 1,
+        "bulkfeeding": null,
+        "raptorialapparatus": 1,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "The described teeth accompany a strong jaw and temporal region interpreted as mechanically processing prey; no bite-force value is assigned.",
+          "de": "Die beschriebenen Zähne gehören zu kräftigen Kiefern und einer Schläfenregion, die als mechanischer Beuteapparat interpretiert werden; es wird kein Beißkraftwert vergeben."
+        },
+        "raptorialapparatus": {
+          "en": "Temporal fossa, jaws, and teeth jointly support the published strong biting interpretation; actual prey and bite force are not directly preserved.",
+          "de": "Schläfengrube, Kiefer und Zähne stützen gemeinsam die publizierte Interpretation kräftigen Zubeißens; tatsächliche Beute und Beißkraft sind nicht direkt überliefert."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1098/rspb.2021.1368"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E058",
+      "values": {
+        "aquaticcommitment": 0.5,
+        "terrestrialsupport": 0.5,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "Limbs with small hooves and a combined land-and-water locomotor skeleton support an amphibious state despite the distant marine occurrence.",
+          "de": "Gliedmaßen mit kleinen Hufen und eine kombinierte Land-Wasser-Bewegungsanatomie stützen einen amphibischen Zustand trotz des weit entfernten Meeresfundorts."
+        },
+        "terrestrialsupport": {
+          "en": "The entry describes a land-and-water limb combination with small hooves; it does not quantify terrestrial loading or gait.",
+          "de": "Der Eintrag beschreibt eine Land-Wasser-Gliedmaßenkombination mit kleinen Hufen; er quantifiziert weder Landbelastung noch Gangart."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1016/j.cub.2019.02.050"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E061",
+      "values": {
+        "aquaticcommitment": 0.75,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "The slender trunk and relatively short limbs are presented as a distinct nearshore aquatic adaptation; the code does not specify exact swimming mechanics.",
+          "de": "Der schlanke Rumpf und die relativ kurzen Gliedmaßen werden als eigene küstennahe Wasseranpassung dargestellt; der Code bestimmt keine genaue Schwimmmechanik."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.26879/459"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E062",
+      "values": {
+        "aquaticcommitment": 1,
+        "terrestrialsupport": null,
+        "functionaldentition": 0.5,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "The entry explicitly describes early fully aquatic basilosaurids. The small, immature individual is not treated as a body-size or performance endpoint.",
+          "de": "Der Eintrag beschreibt ausdrücklich frühe vollständig aquatische Basilosauriden. Das kleine, unreife Individuum wird nicht als Endpunkt von Körpergröße oder Leistung behandelt."
+        },
+        "functionaldentition": {
+          "en": "Cranial teeth and tooth replacement are documented, but the entry uses them for development and life history rather than a specific prey-processing mechanism.",
+          "de": "Schädelzähne und Zahnwechsel sind belegt; der Eintrag nutzt sie jedoch für Entwicklung und Lebensgeschichte statt für einen bestimmten Beuteverarbeitungsmechanismus."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1038/s42003-023-04986-w"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E063",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 1,
+        "bulkfeeding": null,
+        "raptorialapparatus": 1,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "Serrated teeth are explicitly documented. Nitrogen-isotope evidence concerns trophic position and is not converted into a stronger tooth or bite score.",
+          "de": "Gesägte Zähne sind ausdrücklich belegt. Stickstoffisotopenbefunde betreffen die trophische Position und werden nicht in einen höheren Zahn- oder Beißwert umgerechnet."
+        },
+        "raptorialapparatus": {
+          "en": "The serrated tooth edges support a cutting-apparatus category. Isotope evidence for a high trophic position does not identify a particular prey or attack.",
+          "de": "Die gesägten Zahnkanten stützen eine Schneidapparat-Kategorie. Isotopenbelege für eine hohe trophische Position identifizieren weder bestimmte Beute noch einen Angriff."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1126/sciadv.abl6529"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E066",
+      "values": {
+        "aquaticcommitment": 1,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "The entry explicitly places the heavy-boned animal among fully aquatic alternatives and interprets slow, shallow-water swimming; no speed is measured.",
+          "de": "Der Eintrag ordnet das schwerknochige Tier ausdrücklich vollständig aquatischen Alternativen zu und interpretiert langsames Schwimmen im Flachwasser; eine Geschwindigkeit wird nicht gemessen."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1371/journal.pone.0276110"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E067",
+      "values": {
+        "aquaticcommitment": 0.75,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "Extreme bone-mass increase in vertebrae, ribs, and pelvis supports an unusual aquatic skeletal specialization. It does not reveal missing limbs, skull, or swimming performance.",
+          "de": "Die extreme Knochenmassenzunahme an Wirbeln, Rippen und Becken stützt eine ungewöhnliche aquatische Skelettspezialisierung. Sie erschließt weder fehlende Gliedmaßen und Schädel noch die Schwimmleistung."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1038/s41586-023-06381-1",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10909350/"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E068",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 0.5,
+        "bulkfeeding": null,
+        "raptorialapparatus": 0.5,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "Teeth are explicitly retained, but their morphology is not described here as a particular differentiated or enlarged processing apparatus.",
+          "de": "Zähne sind ausdrücklich erhalten; ihre Morphologie wird hier jedoch nicht als bestimmter differenzierter oder vergrößerter Verarbeitungsapparat beschrieben."
+        },
+        "raptorialapparatus": {
+          "en": "The entry proposes capture and suction as possible feeding components; neither behavior is directly observed and baleen is not directly preserved.",
+          "de": "Der Eintrag schlägt Fang- und Saugnahrung als mögliche Komponenten vor; keines der Verhalten ist direkt beobachtet und Barten sind nicht direkt erhalten."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1016/j.cub.2017.04.026"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E070",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "The entry documents marine distribution and relatively compact proportions, but does not by itself resolve an ordinal locomotor commitment state; this cell remains null.",
+          "de": "Der Eintrag belegt Meeresverbreitung und relativ kompakte Proportionen, bestimmt für sich allein jedoch keinen ordinalen Zustand der Bewegungsbindung an Wasser; dieses Feld bleibt null."
+        }
+      },
+      "sources": [
+        "https://science.gmu.edu/academics/departments-units/j-shukla-department-atmospheric-oceanic-earth-sciences/facilities/zygorhiza-kochii"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E072",
+      "values": {
+        "aquaticcommitment": 0.75,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": 0.75
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "Body elongation and reduced hindfoot-propulsion features support a specialized aquatic locomotor interpretation, with incomplete evidence for the tail end.",
+          "de": "Körperverlängerung und verringerte Merkmale des Hinterfußantriebs stützen eine spezialisierte aquatische Bewegungsinterpretation; das Schwanzende ist unvollständig belegt."
+        },
+        "axialswimming": {
+          "en": "The published interpretation shifts emphasis from hindfeet toward body and tail; the code is not a measured propulsion ratio or evidence of a modern fluke.",
+          "de": "Die publizierte Interpretation verschiebt die Betonung von Hinterfüßen zu Körper und Schwanz; der Code ist weder ein gemessener Antriebsanteil noch ein Nachweis einer modernen Fluke."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1371/journal.pone.0225391"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E074",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "axialswimming": {
+          "en": "The near-complete skeleton and compact proportions provide a reference for reconstruction, but the entry does not assign an axial propulsion mechanism; this cell remains null.",
+          "de": "Das nahezu vollständige Skelett und kompakte Proportionen bilden eine Rekonstruktionsreferenz; der Eintrag weist jedoch keinen Achsenantriebsmechanismus zu, daher bleibt dieses Feld null."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.5252/g2017n1a1"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E075",
+      "values": {
+        "aquaticcommitment": 1,
+        "terrestrialsupport": 0,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "Flipper-like forelimbs and a reduced pelvis detached from the vertebral column support the fully aquatic anatomical interpretation.",
+          "de": "Flossenartige Vordergliedmaßen und ein verkleinertes, von der Wirbelsäule gelöstes Becken stützen die vollständig aquatische anatomische Interpretation."
+        },
+        "terrestrialsupport": {
+          "en": "The documented separation of the reduced pelvis from the vertebral column supports loss of the terrestrial pelvic support connection; no support-force ratio is implied.",
+          "de": "Die belegte Ablösung des verkleinerten Beckens von der Wirbelsäule stützt den Verlust der terrestrischen Beckenstützverbindung; ein Stützkraftanteil ist damit nicht gemeint."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1371/journal.pone.0118409"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E076",
+      "values": {
+        "aquaticcommitment": 1,
+        "terrestrialsupport": 0.25,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": 0.75
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "The entry explicitly links elongated vertebrae and reduced hindlimbs to fully aquatic life, while retaining uncertainty about fluke shape and movement.",
+          "de": "Der Eintrag verknüpft verlängerte Wirbel und reduzierte Hintergliedmaßen ausdrücklich mit vollständig aquatischem Leben; Flukenform und Bewegung bleiben unsicher."
+        },
+        "terrestrialsupport": {
+          "en": "Strongly reduced hindlimbs are documented. The code describes reduction and does not independently reconstruct an attachment or support force.",
+          "de": "Stark reduzierte Hintergliedmaßen sind belegt. Der Code beschreibt die Reduktion und rekonstruiert weder eigenständig eine Verbindung noch eine Stützkraft."
+        },
+        "axialswimming": {
+          "en": "Elongated vertebrae support the proposed broad body-undulation interpretation, but the exact wave pattern and fluke shape remain inferred.",
+          "de": "Verlängerte Wirbel stützen die vorgeschlagene ausgedehnte Körperwellung; genaues Wellenmuster und Flukenform bleiben jedoch erschlossen."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1371/journal.pone.0118409"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "E080",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 0.75,
+        "bulkfeeding": 0,
+        "raptorialapparatus": 0.5,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "Spaced teeth and dental wear are documented together with a broad rostrum and interpreted capture or assisted suction.",
+          "de": "Weit auseinanderstehende Zähne und Zahnabrieb sind zusammen mit einem breiten Rostrum und interpretiertem Fang- oder unterstütztem Saugfraß belegt."
+        },
+        "bulkfeeding": {
+          "en": "The entry favors raptorial or suction-assisted feeding and interprets palatal grooves as gum supply. This is not direct proof that filtering was impossible.",
+          "de": "Der Eintrag bevorzugt Beutefang oder saugunterstützte Nahrungsaufnahme und deutet Gaumenrinnen als Zahnfleischversorgung. Dies beweist nicht direkt, dass Filtrieren unmöglich war."
+        },
+        "raptorialapparatus": {
+          "en": "Tooth spacing, wear, and the broad rostrum support a mixed capture/suction interpretation without identifying particular prey.",
+          "de": "Zahnabstände, Abrieb und breites Rostrum stützen eine gemischte Fang-Saug-Interpretation, ohne bestimmte Beute zu identifizieren."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1016/j.cub.2018.04.027",
+        "https://doi.org/10.1016/j.cub.2024.03.011"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L002",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 0.75,
+        "bulkfeeding": null,
+        "raptorialapparatus": 0.5,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "The entry explicitly describes differentiated teeth; jaw and dental morphology underpin capture and suction hypotheses rather than proof of baleen.",
+          "de": "Der Eintrag beschreibt ausdrücklich differenzierte Zähne; Kiefer- und Zahnmorphologie begründen Fang- und Saughypothesen statt eines Bartennachweises."
+        },
+        "raptorialapparatus": {
+          "en": "Published interpretation discusses both capture and suction from the teeth and jaws; their relative contributions are unmeasured.",
+          "de": "Die publizierte Interpretation diskutiert Fang- und Saugnahrung anhand von Zähnen und Kiefern; ihre relativen Beiträge sind nicht gemessen."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1098/rsos.150476"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L003",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 0.5,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": 0.5,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "The entry documents a distinctive dentition with a short rostrum; the functional feeding interpretation remains anatomical.",
+          "de": "Der Eintrag belegt eine besondere Bezahnung mit kurzem Rostrum; die funktionelle Ernährungsinterpretation bleibt anatomisch."
+        },
+        "acousticstructures": {
+          "en": "The skull and jaw are described as preserving early odontocete sensory structures; no hearing range or sonar quality is derived.",
+          "de": "Schädel und Kiefer werden als Träger früher Zahnwal-Sinnesstrukturen beschrieben; weder Hörbereich noch Sonarqualität werden daraus abgeleitet."
+        }
+      },
+      "sources": [
+        "https://repository.si.edu/items/0deeffed-2e09-4f31-a605-f2572a8b50bd",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3114740/"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L004",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 0,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "The near-complete skull and jaws are reported to lack teeth. The absence of clear baleen evidence is kept separate and is not scored as absence of filtering.",
+          "de": "Am nahezu vollständigen Schädel und den Kiefern werden keine Zähne gefunden. Fehlende klare Bartenbelege werden getrennt behandelt und nicht als Fehlen des Filtrierens codiert."
+        }
+      },
+      "sources": [
+        "https://repository.si.edu/items/5786d8fe-4815-4d6b-881f-0c7315f778c2"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L005",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 0,
+        "bulkfeeding": null,
+        "raptorialapparatus": 0,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "The entry explicitly describes a toothless short-rostrum odontocete; this is an anatomical state rather than a prediction from classification.",
+          "de": "Der Eintrag beschreibt ausdrücklich einen zahnlosen Zahnwal mit kurzem Rostrum; dies ist ein anatomischer Zustand statt einer Vorhersage aus der Klassifikation."
+        },
+        "raptorialapparatus": {
+          "en": "Rostral vascular foramina and oral structures support the published suction-feeding interpretation; soft lips and particular prey are not preserved.",
+          "de": "Gefäßöffnungen am Rostrum und Mundstrukturen stützen die publizierte Saugfraßinterpretation; weiche Lippen und bestimmte Beute sind nicht erhalten."
+        }
+      },
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5577471/"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L007",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 0.5,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": 0.5,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "The entry includes dentition among the preserved cranial character combinations but does not assign a specific prey-processing mechanism.",
+          "de": "Der Eintrag nennt Bezahnung unter den erhaltenen Schädelmerkmalskombinationen, weist jedoch keinen bestimmten Beuteverarbeitungsmechanismus zu."
+        },
+        "acousticstructures": {
+          "en": "Ear-region and facial anatomy, including cranial asymmetry, provide sensory comparisons. Asymmetry alone cannot quantify sonar performance.",
+          "de": "Ohrregion und Gesichtsanatomie einschließlich Schädelasymmetrie erlauben Sinnesvergleiche. Asymmetrie allein kann Sonarleistung nicht quantifizieren."
+        }
+      },
+      "sources": [
+        "https://www.mdpi.com/1424-2818/15/11/1154"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L008",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 1,
+        "bulkfeeding": 0.25,
+        "raptorialapparatus": 0.75,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "A large toothed oral apparatus is documented; the code does not settle whether the teeth also contributed to filtering.",
+          "de": "Ein großer bezahnter Mundapparat ist belegt; der Code entscheidet nicht, ob die Zähne auch zum Filtrieren beitrugen."
+        },
+        "bulkfeeding": {
+          "en": "The published tooth-filtering interpretation uses interdental spaces, but the entry explicitly notes dispute; the code denotes a hypothesis, not observed behavior.",
+          "de": "Die publizierte Zahnfiltrierinterpretation nutzt Zahnzwischenräume, ist laut Eintrag aber ausdrücklich umstritten; der Code bezeichnet eine Hypothese, kein beobachtetes Verhalten."
+        },
+        "raptorialapparatus": {
+          "en": "The large toothed mouth has capture-related characters alongside the disputed filtering interpretation; exact prey handling remains inferred.",
+          "de": "Der große bezahnte Mund besitzt fangbezogene Merkmale neben der umstrittenen Filtrierinterpretation; die genaue Beuteverarbeitung bleibt erschlossen."
+        }
+      },
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/28669761/"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L009",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": 0.5,
+        "axialswimming": null
+      },
+      "rationales": {
+        "acousticstructures": {
+          "en": "New cranial and ear-region material documents sensory anatomy. Endocast comparisons do not directly recover cognition or acoustic performance.",
+          "de": "Neues Schädel- und Ohrmaterial dokumentiert Sinnesanatomie. Vergleiche von Hirnausgüssen erschließen weder Kognition noch akustische Leistung direkt."
+        }
+      },
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5695589/"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L010",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 0.25,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "The entry explicitly identifies a functionally toothless mysticete from cranial and ear material; it does not preserve direct baleen evidence.",
+          "de": "Der Eintrag identifiziert anhand von Schädel- und Ohrmaterial ausdrücklich einen funktionell zahnlosen Bartenwal; direkte Bartenbelege sind nicht erhalten."
+        }
+      },
+      "sources": [
+        "https://www.biodiversitylibrary.org/part/352098",
+        "https://doi.org/10.1080/03036758.2023.2277739"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L015",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 1,
+        "bulkfeeding": null,
+        "raptorialapparatus": 1,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "The teeth combine lateral cusplets with serrated edges; equal display codes do not erase their difference from later reduced-cusplet forms.",
+          "de": "Die Zähne kombinieren seitliche Nebenspitzen mit gesägten Kanten; gleiche Darstellungscodes beseitigen nicht ihren Unterschied zu späteren Formen mit reduzierten Nebenspitzen."
+        },
+        "raptorialapparatus": {
+          "en": "Serrated edges are documented alongside lateral cusplets, supporting a cutting-dental category without a whole-body or bite-force reconstruction.",
+          "de": "Gesägte Kanten sind neben seitlichen Nebenspitzen belegt und stützen eine Schneidzahn-Kategorie ohne Ganzkörper- oder Beißkraftrekonstruktion."
+        }
+      },
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5695589/"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L024",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 0.5,
+        "bulkfeeding": 0.5,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "The skull retains teeth, but this entry does not detail their processing specialization; their coexistence with a possible baleen supply system is the comparison.",
+          "de": "Der Schädel behält Zähne, deren Verarbeitungsspezialisierung dieser Eintrag nicht näher beschreibt; verglichen wird ihre Koexistenz mit einer möglichen Bartenversorgung."
+        },
+        "bulkfeeding": {
+          "en": "CT-documented palatal neurovascular canals are interpreted as a possible baleen supply. Keratinous baleen is not directly preserved.",
+          "de": "CT-dokumentierte neurovaskuläre Gaumenkanäle werden als mögliche Bartenversorgung interpretiert. Keratinhaltige Barten sind nicht direkt erhalten."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1093/zoolinnean/zlab017"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L025",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 1,
+        "bulkfeeding": 0,
+        "raptorialapparatus": 1,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "Large teeth occur with a short, robust rostrum; these documented structures support an individual-prey capture interpretation.",
+          "de": "Große Zähne treten mit einem kurzen, robusten Rostrum auf; diese belegten Strukturen stützen eine Interpretation als Einzelbeutefänger."
+        },
+        "bulkfeeding": {
+          "en": "The entry favors capture of relatively large individual prey rather than treating early mysticete membership as evidence of filtering. This is an anatomical interpretation.",
+          "de": "Der Eintrag bevorzugt den Fang relativ großer Einzelbeute, statt frühe Bartenwalzugehörigkeit als Filtrierbeleg zu behandeln. Dies ist eine anatomische Interpretation."
+        },
+        "raptorialapparatus": {
+          "en": "The short robust rostrum and large teeth jointly support capture of larger individual prey; stomach contents and actual attacks are not preserved.",
+          "de": "Kurzes robustes Rostrum und große Zähne stützen gemeinsam den Fang größerer Einzelbeute; Mageninhalt und tatsächliche Angriffe sind nicht erhalten."
+        }
+      },
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC1639514/"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L026",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 0.25,
+        "bulkfeeding": 0.75,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "The entry describes a functionally nearly toothless mouth, not a measured tooth-reduction percentage.",
+          "de": "Der Eintrag beschreibt einen funktionell nahezu zahnlosen Mund, keinen gemessenen Prozentsatz der Zahnreduktion."
+        },
+        "bulkfeeding": {
+          "en": "The slender rostrum and nearly toothless oral apparatus are interpreted as an early baleen-type structure; baleen is indirectly inferred from palatal anatomy.",
+          "de": "Schlankes Rostrum und nahezu zahnloser Mundapparat werden als frühe bartenartige Struktur interpretiert; Barten sind indirekt aus der Gaumenanatomie erschlossen."
+        }
+      },
+      "sources": [
+        "https://www.biodiversitylibrary.org/part/352100",
+        "https://doi.org/10.1080/03036758.2023.2277739"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L031",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 0.5,
+        "bulkfeeding": null,
+        "raptorialapparatus": 0,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "The described skull, teeth, and lower jaw establish a toothed apparatus; the entry emphasizes inferred suction rather than a quantified tooth-handling role.",
+          "de": "Der beschriebene Schädel, die Zähne und der Unterkiefer belegen einen bezahnten Apparat; der Eintrag betont erschlossene Saugnahrung statt einer quantifizierten Zahnfunktion."
+        },
+        "raptorialapparatus": {
+          "en": "The combined skull, dental, and mandibular anatomy is interpreted as favoring suction. This does not mean teeth were absent or that bottom feeding was observed.",
+          "de": "Die kombinierte Schädel-, Zahn- und Unterkieferanatomie wird als für Saugnahrung geeignet interpretiert. Dies bedeutet weder Zahnlosigkeit noch beobachtete Bodennahrung."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1111/j.1096-3642.2009.00572.x"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L035",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": 1,
+        "axialswimming": null
+      },
+      "rationales": {
+        "acousticstructures": {
+          "en": "Air-sac-related depressions, facial asymmetry, and expanded maxillae jointly support a sound-production hypothesis. The high code labels this anatomical combination, not superior sonar.",
+          "de": "Luftsackbezogene Vertiefungen, Gesichtsasymmetrie und verbreiterte Oberkiefer stützen gemeinsam eine Schallerzeugungshypothese. Der hohe Code bezeichnet diese anatomische Kombination, kein überlegenes Sonar."
+        }
+      },
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/24670659/",
+        "https://www.mdpi.com/1424-2818/15/11/1154"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L036",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": 0.75,
+        "axialswimming": null
+      },
+      "rationales": {
+        "acousticstructures": {
+          "en": "Inner-ear anatomy supports a comparative-model inference of high-frequency reception, distinct from sound production; no hearing-frequency value is assigned.",
+          "de": "Innenohranatomie stützt eine aus Vergleichsmodellen erschlossene Hochfrequenzwahrnehmung, getrennt von Schallerzeugung; ein Hörfrequenzwert wird nicht vergeben."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1016/j.cub.2016.06.004",
+        "https://www.mdpi.com/1424-2818/15/11/1154"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L037",
+      "values": {
+        "aquaticcommitment": 0.25,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "Sensory-region comparisons of the fossil endocast are related to underwater foraging; this is an indirect water-use interpretation, not a swimming or hearing measurement.",
+          "de": "Vergleiche der Sinnesregionen des fossilen Hirnausgusses werden mit Unterwassernahrung verbunden; dies ist eine indirekte Gewässernutzungsinterpretation, keine Schwimm- oder Hörmessung."
+        }
+      },
+      "sources": [
+        "https://www.nature.com/articles/s42003-023-05135-z"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L040",
+      "values": {
+        "aquaticcommitment": 0.75,
+        "terrestrialsupport": null,
+        "functionaldentition": 0.5,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "The near-complete skeleton has limbs explicitly adapted for aquatic movement, representing an independent carnivoran route toward marine activity.",
+          "de": "Das nahezu vollständige Skelett besitzt ausdrücklich an Wasserbewegung angepasste Gliedmaßen und zeigt einen unabhängigen Raubtierweg zur Meeresnutzung."
+        },
+        "functionaldentition": {
+          "en": "A relatively primitive dentition is documented, but its handling specialization is not detailed in this entry.",
+          "de": "Eine relativ ursprüngliche Bezahnung ist belegt; ihre Verarbeitungsspezialisierung wird in diesem Eintrag jedoch nicht näher beschrieben."
+        }
+      },
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/17818847/"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L041",
+      "values": {
+        "aquaticcommitment": 0.5,
+        "terrestrialsupport": 0.75,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "aquaticcommitment": {
+          "en": "Semi-aquatic adaptations coexist with limbs capable of bearing weight on land; this supports an amphibious combination without making it a required ancestor.",
+          "de": "Semiaquatische Anpassungen bestehen neben an Land tragfähigen Gliedmaßen; dies stützt eine amphibische Kombination, ohne sie zu einem notwendigen Vorfahren zu machen."
+        },
+        "terrestrialsupport": {
+          "en": "The entry explicitly states that the limbs can bear weight on land; exact gait and loading remain unquantified.",
+          "de": "Der Eintrag nennt ausdrücklich an Land tragfähige Gliedmaßen; genaue Gangart und Belastung bleiben unquantifiziert."
+        }
+      },
+      "sources": [
+        "https://www.nature.com/articles/nature07985"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L057",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 1,
+        "bulkfeeding": null,
+        "raptorialapparatus": 1,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "Large teeth in both upper and lower jaws are associated with a skeleton, providing an enlarged dental state without estimating bite force.",
+          "de": "Große Zähne in Ober- und Unterkiefer sind mit einem Skelett verbunden und belegen einen vergrößerten Zahnzustand ohne Schätzung der Beißkraft."
+        },
+        "raptorialapparatus": {
+          "en": "The associated skeleton and large upper and lower teeth support a biting apparatus different from the living sperm whale; large-prey behavior remains inferred.",
+          "de": "Das zugehörige Skelett und große Ober- und Unterkieferzähne stützen einen vom heutigen Pottwal abweichenden Beißapparat; Großbeuteverhalten bleibt erschlossen."
+        }
+      },
+      "sources": [
+        "https://gbank.gsj.jp/geolis/geolis_link/200722486/ja",
+        "https://doi.org/10.1111/zoj.12456"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L060",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 0.75,
+        "bulkfeeding": null,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "A tooth series documents progressive reduction of lateral cusplets. This category records the explicitly described cusplet architecture; it does not rank this taxon below serrated predecessors.",
+          "de": "Eine Zahnserie dokumentiert die schrittweise Reduktion seitlicher Nebenspitzen. Diese Kategorie erfasst die ausdrücklich beschriebene Nebenspitzenarchitektur und ordnet das Taxon nicht unter gesägte Vorgänger ein."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1080/02724634.2018.1546732"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L065",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": 0.75,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "raptorialapparatus": {
+          "en": "The entry describes a robust, well-preserved skull within a raptorial sperm-whale comparison. It does not provide a measured bite or detailed dental state here.",
+          "de": "Der Eintrag beschreibt einen robusten, gut erhaltenen Schädel im Vergleich räuberischer Pottwalverwandter. Eine gemessene Beißleistung oder detaillierte Zahncodierung liefert er hier nicht."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1111/zoj.12456"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L067",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 1,
+        "bulkfeeding": null,
+        "raptorialapparatus": 1,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "Broad serrated crowns are explicitly described as suited to processing large prey; no tooth-derived total length or bite-force value is supplied.",
+          "de": "Breite gesägte Kronen werden ausdrücklich als zur Verarbeitung großer Beute geeignet beschrieben; eine aus Zähnen abgeleitete Gesamtlänge oder Beißkraft wird nicht angegeben."
+        },
+        "raptorialapparatus": {
+          "en": "Broad serrated crowns support the cutting-apparatus interpretation. Independent nitrogen-isotope evidence supports high trophic position, not a known prey list.",
+          "de": "Breite gesägte Kronen stützen die Schneidapparat-Interpretation. Unabhängige Stickstoffisotope stützen eine hohe trophische Position, keine bekannte Beuteliste."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1080/02724634.2018.1546732",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9217088/"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L070",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 1,
+        "bulkfeeding": null,
+        "raptorialapparatus": 1,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "Functional teeth in both upper and lower jaws accompany a huge skull; this directly supports a large dental apparatus without a body-length estimate.",
+          "de": "Funktionelle Zähne in Ober- und Unterkiefer gehören zu einem riesigen Schädel; dies stützt direkt einen großen Zahnapparat ohne Körperlängenschätzung."
+        },
+        "raptorialapparatus": {
+          "en": "The huge skull and functional upper and lower teeth support the published large biting-predator interpretation; the prey spectrum remains reconstructed.",
+          "de": "Der riesige Schädel und funktionelle Ober- und Unterkieferzähne stützen die publizierte Interpretation als großer Beißräuber; das Beutespektrum bleibt rekonstruiert."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1111/zoj.12456"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L071",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": 1,
+        "bulkfeeding": null,
+        "raptorialapparatus": 1,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "functionaldentition": {
+          "en": "Large upper and lower teeth are documented in a near-complete skeleton, supporting an enlarged functional dentition category.",
+          "de": "Große Ober- und Unterkieferzähne sind an einem nahezu vollständigen Skelett belegt und stützen die Kategorie vergrößerter funktioneller Bezahnung."
+        },
+        "raptorialapparatus": {
+          "en": "Large teeth, elongated zygomatic processes, and a developed temporal region jointly underpin the large-prey feeding interpretation; actual behavior remains inferred.",
+          "de": "Große Zähne, verlängerte Jochfortsätze und eine entwickelte Schläfenregion begründen gemeinsam die Interpretation als Großbeutefänger; tatsächliches Verhalten bleibt erschlossen."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1111/j.1096-3642.2006.00228.x"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L075",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": 1,
+        "raptorialapparatus": null,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "bulkfeeding": {
+          "en": "Exceptionally preserved fossil baleen directly documents the filtering structure; the exact food and filtering motion remain model-dependent.",
+          "de": "Außergewöhnlich erhaltene fossile Barten belegen die Filtrierstruktur direkt; genaue Nahrung und Filtrierbewegung bleiben modellabhängig."
+        }
+      },
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5522891/"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    },
+    {
+      "eventId": "L078",
+      "values": {
+        "aquaticcommitment": null,
+        "terrestrialsupport": null,
+        "functionaldentition": null,
+        "bulkfeeding": null,
+        "raptorialapparatus": 0.75,
+        "acousticstructures": null,
+        "axialswimming": null
+      },
+      "rationales": {
+        "raptorialapparatus": {
+          "en": "The skull and muscle attachment regions support a smaller raptorial sperm-whale body plan; the entry does not detail a dental state or measured bite force.",
+          "de": "Schädel und Muskelansatzregionen stützen einen kleineren räuberischen Pottwalbauplan; der Eintrag beschreibt weder einen detaillierten Zahnzustand noch eine gemessene Beißkraft."
+        }
+      },
+      "sources": [
+        "https://doi.org/10.1111/zoj.12456"
+      ],
+      "basis": "curatorial-ordinal-from-published-description"
+    }
+  ]
+}
