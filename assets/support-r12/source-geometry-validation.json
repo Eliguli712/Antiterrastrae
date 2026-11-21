@@ -1,0 +1,233 @@
+{
+  "triangles": [
+    {
+      "nodes": [
+        "A5_A1_mid",
+        "A5_A4_mid",
+        "P"
+      ],
+      "lengths_mm": [
+        36.76955262170048,
+        36.76955262170048,
+        36.76955262170048
+      ],
+      "maximum_edge_spread_mm": 0.0,
+      "source_vertex_registration_error_mm": 6.6438232693192024e-09
+    },
+    {
+      "nodes": [
+        "A7_A3_mid",
+        "A7_A6_mid",
+        "P"
+      ],
+      "lengths_mm": [
+        36.76955262170048,
+        36.76955262170048,
+        36.76955262170048
+      ],
+      "maximum_edge_spread_mm": 0.0,
+      "source_vertex_registration_error_mm": 6.6438232693192024e-09
+    },
+    {
+      "nodes": [
+        "B3_B1_mid",
+        "B3_B2_mid",
+        "P"
+      ],
+      "lengths_mm": [
+        36.76955262170048,
+        36.76955262170048,
+        36.76955262170048
+      ],
+      "maximum_edge_spread_mm": 0.0,
+      "source_vertex_registration_error_mm": 6.6438232693192024e-09
+    },
+    {
+      "nodes": [
+        "B7_B5_mid",
+        "B7_B6_mid",
+        "P"
+      ],
+      "lengths_mm": [
+        36.76955262170048,
+        36.76955262170048,
+        36.76955262170048
+      ],
+      "maximum_edge_spread_mm": 0.0,
+      "source_vertex_registration_error_mm": 6.6438232693192024e-09
+    }
+  ],
+  "common_vertices": [
+    "P"
+  ],
+  "shared_apex_count": 1,
+  "structural_nodes": 30,
+  "beam_elements": 52,
+  "fused_rod_crossing_nodes": [
+    "J01",
+    "J02",
+    "J03",
+    "J04",
+    "J05",
+    "J06",
+    "J07",
+    "J08"
+  ],
+  "cut_fraction": 0.5,
+  "cube_edge_mm": 52.0,
+  "unchanged_foot_centers": true,
+  "manufacturing_node_radius_floor_mm": 4.4,
+  "foot_radius_floor_mm": 8.1,
+  "incidence": {
+    "A0": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 89.99999999999999,
+      "patches_may_overlap": false
+    },
+    "A1": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 89.99999999999997,
+      "patches_may_overlap": true
+    },
+    "A2": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 89.99999999999999,
+      "patches_may_overlap": false
+    },
+    "A3": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 89.99999999999997,
+      "patches_may_overlap": true
+    },
+    "A4": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 89.99999999999997,
+      "patches_may_overlap": true
+    },
+    "A6": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 89.99999999999997,
+      "patches_may_overlap": true
+    },
+    "B0": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 89.99999999999999,
+      "patches_may_overlap": false
+    },
+    "B1": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 89.99999999999999,
+      "patches_may_overlap": true
+    },
+    "B2": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 89.99999999999999,
+      "patches_may_overlap": true
+    },
+    "B4": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 89.99999999999999,
+      "patches_may_overlap": false
+    },
+    "B5": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 89.99999999999999,
+      "patches_may_overlap": true
+    },
+    "B6": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 89.99999999999999,
+      "patches_may_overlap": true
+    },
+    "Q_bottom": {
+      "degree": 4,
+      "minimum_incident_angle_degrees": 90.0,
+      "patches_may_overlap": true
+    },
+    "P": {
+      "degree": 8,
+      "minimum_incident_angle_degrees": 16.842116236298835,
+      "patches_may_overlap": true
+    },
+    "A5_A1_mid": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 60.00000000000001,
+      "patches_may_overlap": true
+    },
+    "A5_A4_mid": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 60.00000000000001,
+      "patches_may_overlap": true
+    },
+    "A7_A3_mid": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 60.00000000000001,
+      "patches_may_overlap": true
+    },
+    "A7_A6_mid": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 60.00000000000001,
+      "patches_may_overlap": true
+    },
+    "B3_B1_mid": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 60.00000000000001,
+      "patches_may_overlap": true
+    },
+    "B3_B2_mid": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 60.00000000000001,
+      "patches_may_overlap": true
+    },
+    "B7_B5_mid": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 60.00000000000001,
+      "patches_may_overlap": true
+    },
+    "B7_B6_mid": {
+      "degree": 3,
+      "minimum_incident_angle_degrees": 60.00000000000001,
+      "patches_may_overlap": true
+    },
+    "J01": {
+      "degree": 4,
+      "minimum_incident_angle_degrees": 59.99999999999997,
+      "patches_may_overlap": true
+    },
+    "J02": {
+      "degree": 4,
+      "minimum_incident_angle_degrees": 59.99999999999997,
+      "patches_may_overlap": true
+    },
+    "J03": {
+      "degree": 4,
+      "minimum_incident_angle_degrees": 59.99999999999997,
+      "patches_may_overlap": true
+    },
+    "J04": {
+      "degree": 4,
+      "minimum_incident_angle_degrees": 59.99999999999997,
+      "patches_may_overlap": true
+    },
+    "J05": {
+      "degree": 4,
+      "minimum_incident_angle_degrees": 59.999999999999986,
+      "patches_may_overlap": true
+    },
+    "J06": {
+      "degree": 4,
+      "minimum_incident_angle_degrees": 59.999999999999986,
+      "patches_may_overlap": true
+    },
+    "J07": {
+      "degree": 4,
+      "minimum_incident_angle_degrees": 59.999999999999986,
+      "patches_may_overlap": true
+    },
+    "J08": {
+      "degree": 4,
+      "minimum_incident_angle_degrees": 59.999999999999986,
+      "patches_may_overlap": true
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "cases": 120,
+  "source_unit_vertices": 642,
+  "display_vertices": 2562,
+  "source_faces": 1280,
+  "display_faces": 5120,
+  "maximum_unit_direction_error": 4.8913398886796244e-9,
+  "original_encoded_field_values_preserved": true,
+  "new_values_are_convex_interpolation": true,
+  "new_stress_extrema_created": false,
+  "display_refinement_is_not_additional_FEM_elements": true,
+  "topology_cached": true
+}

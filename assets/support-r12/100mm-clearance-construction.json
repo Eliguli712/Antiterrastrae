@@ -1,0 +1,48 @@
+{
+  "requested_minimum_clearance_mm": 0.45,
+  "maximum_source_triangle_edge_mm": 0.04931588692888864,
+  "profile_pitch_mm": 0.1,
+  "raster_bin_and_piecewise_linear_interpolation_guard_mm": 0.28284271247461906,
+  "root_nominal_wall_mm": 3.4,
+  "cutters": {
+    "front": {
+      "vertical_offset_mm": 0.5343158869288887,
+      "xz_dilation_radius_mm": 1.1350013118781266,
+      "cutter_simplification_tolerance_mm": 0.002,
+      "guard_mm": 0.035
+    },
+    "rear": {
+      "vertical_offset_mm": 0.5343158869288887,
+      "xz_dilation_radius_mm": 1.1350013118781266,
+      "cutter_simplification_tolerance_mm": 0.002,
+      "guard_mm": 0.035
+    },
+    "outer-front": {
+      "vertical_offset_mm": 3.9343158869288883,
+      "xz_dilation_radius_mm": 4.535001311878126,
+      "cutter_simplification_tolerance_mm": 0.002,
+      "guard_mm": 0.035
+    },
+    "outer-rear": {
+      "vertical_offset_mm": 3.9343158869288883,
+      "xz_dilation_radius_mm": 4.535001311878126,
+      "cutter_simplification_tolerance_mm": 0.002,
+      "guard_mm": 0.035
+    },
+    "verify-front": {
+      "vertical_offset_mm": 0.5023158869288886,
+      "xz_dilation_radius_mm": 0.7881585994035077,
+      "cutter_simplification_tolerance_mm": 0.0005,
+      "guard_mm": 0.003
+    },
+    "verify-rear": {
+      "vertical_offset_mm": 0.5023158869288886,
+      "xz_dilation_radius_mm": 0.7881585994035077,
+      "cutter_simplification_tolerance_mm": 0.0005,
+      "guard_mm": 0.003
+    }
+  },
+  "proof": "For any relevant source triangle, every triangle point is within its measured maximum edge length of a source vertex. Any point in the desired 0.45 mm neighbourhood is consequently within 0.45+max_edge of a source vertex. Vertex binning and each interpolation-cell corner together shift X/Z by at most 2*sqrt(2)*pitch. The cutter radial and Y offsets cover these distances plus explicit guards. Its Y sweep contains the whole protected neighbourhood. A separate tighter cutter is intersected with each final float32 STL, so cleanup and export are audited.",
+  "exact_rational_interval_proof": false,
+  "physical_print_fit_tested": false
+}

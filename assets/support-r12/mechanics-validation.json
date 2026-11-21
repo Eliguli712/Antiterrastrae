@@ -1,0 +1,146 @@
+{
+  "revision": "R12",
+  "source_registration_checked": {
+    "all_node_source_registration_max_error_mm": 1.1507435356642061e-08,
+    "rod_centerline_surface_samples": 1092,
+    "rod_centerline_max_distance_to_original_STL_boundary_mm": 6.643823269322052e-09,
+    "source_SHA256": "0520a5e7b449174a31883b816588c8b6383bbe81da1fe240adff2a878c09d922",
+    "source_file": "DoubleCube_CommonPoint_Height100mm(1).stl",
+    "four_equilateral_triangles": true,
+    "twelve_3D_triangle_edges_mm": [
+      36.76955262170048,
+      36.76955262170048,
+      36.76955262170048,
+      36.76955262170048,
+      36.76955262170048,
+      36.76955262170048,
+      36.76955262170048,
+      36.76955262170048,
+      36.76955262170048,
+      36.76955262170048,
+      36.76955262170048,
+      36.76955262170048
+    ],
+    "exactly_one_common_vertex": "P",
+    "method": "All 30 graph nodes compared to source STL vertices; 21 samples on each of 52 rod centrelines independently compared to the original 72 triangles with libigl squared distance. All 12 triangle sides checked from 3D coordinates.",
+    "all_node_centers_source_registered": true,
+    "centerline_samples_are_not_fullsolidcollision_certification": true
+  },
+  "independent_size_cases": 2,
+  "global_frame_nodes_per_case": 30,
+  "global_beam_elements_per_case": 52,
+  "one_way_node_submodel_count": 120,
+  "sphere_surface_vertices_per_submodel": 642,
+  "sphere_surface_triangles_per_submodel": 1280,
+  "all_algebraic_and_geometry_checks_passed": true,
+  "full_CAD_mass_calibration_used": true,
+  "original_native_74293846_tooth_faces_modified": false,
+  "full_native_porous_tooth_FEM_solved_by_this_study": false,
+  "physical_print_fit_or_strength_tested": false,
+  "node_peak_mesh_convergence_verified": false,
+  "source_code_and_result_SHA256": {
+    "build_graph.py": "6986290a75411138901e864834c19b871ce502d9b3524d283662d653ed4a5e7b",
+    "verify_source.py": "958374a038298e76c2171c696b7a778c175a7867deb76076e7feed753064d2a1",
+    "size_joints.py": "868738374f79096f57e386493d79ee5aa261c76d57a65c773b92e43a992ff895",
+    "frame_fem_r12.py": "1692c41b800efe843cf5f7c3459b64b1ae4bd58dc1cb787402ed2c7516eee72d",
+    "mechanics_review.py": "522b4929c141d544ff1f7d893214a4792dcc69a846b657e9a569e4901dfb622c",
+    "support.json": "774fdfc3ea361b761b556f4a52c76da9503e8bbf026588c7b8eee8ce1b47236e",
+    "frame-fem.json": "cf57852e12639a10643abe507a9690ab7daa7fed4f3cd5002552c21729e764a4",
+    "ball-fem.json": "b3b960af56d85673d9cb8a6384eaf0d0cab8590c8e4b859cf6ab5813d94fcbaa",
+    "radius-design.json": "4d2ed531c90cdf786ad4123b4788b00bb6feee5b52b1e3845e875757be0628cd",
+    "mechanics-model-review.json": "3edb3d06f38840e71709b9f906e893a92def12a7ec4fbc6005e08e8820a98099"
+  },
+  "cases": {
+    "50": {
+      "CAD_volume_mm3": 54419.58420369009,
+      "CAD_mass_g": 64.21510936035429,
+      "native_printed_PLA_tooth_mass_g": 6.361938905549017,
+      "tooth_gravity_factor": 3,
+      "max_Euler_Bernoulli_vm_MPa": 0.027106425519945944,
+      "max_solid_node_vm_MPa": 0.016448472690973145,
+      "max_hollow_research_node_vm_MPa": 0.027535778499593728,
+      "max_global_translation_mm": 0.001232542602596173,
+      "max_free_relative_residual": 1.6693967812750168e-14,
+      "force_balance_norm_N": 1.2299742931667913e-15,
+      "moment_balance_norm_N_mm": 2.3118142515295584e-14,
+      "energy_balance_relative_error": 9.326784803209554e-16,
+      "stiffness_symmetry_relative_error": 2.488265744640095e-17,
+      "max_node_free_relative_residual": 1.9723052446824568e-13,
+      "max_node_gauge_reaction_relative": 2.1588503435391852e-13,
+      "all_radii_at_manufacturing_floor": true,
+      "nonfoot_radius_mm": 4.4,
+      "foot_radius_mm": 8.1,
+      "thin_hollow_shell_or_Chien_equivalence_claimed": false,
+      "short_beam_sensitivity": {
+        "Euler_Bernoulli_max_translation_mm": 0.001232542602596173,
+        "Timoshenko_max_translation_mm": 0.0014341955175222218,
+        "Timoshenko_to_Euler_max_translation_ratio": 1.1636072574702863,
+        "Euler_Bernoulli_peak_nominal_section_vm_MPa": 0.027106425519945944,
+        "Timoshenko_peak_nominal_section_vm_MPa": 0.02678763222941264,
+        "minimum_centerline_L_over_d": 1.6827425971406984,
+        "maximum_shear_parameter_phi": 0.8122551221421439,
+        "members_below_L_over_d_10": 52,
+        "total_members": 52,
+        "Timoshenko_free_relative_residual": 1.3020034676934757e-14,
+        "Timoshenko_force_balance_N": [
+          5.78299886276612e-16,
+          2.6205292900659166e-16,
+          1.27675647831893e-15
+        ],
+        "Timoshenko_moment_balance_N_mm": [
+          -3.802513859341161e-14,
+          -1.3766765505351941e-14,
+          5.754681426462728e-14
+        ]
+      }
+    },
+    "100": {
+      "CAD_volume_mm3": 80213.28707225794,
+      "CAD_mass_g": 94.65167874526436,
+      "native_printed_PLA_tooth_mass_g": 50.89551124439214,
+      "tooth_gravity_factor": 3,
+      "max_Euler_Bernoulli_vm_MPa": 0.11410462151991027,
+      "max_solid_node_vm_MPa": 0.16338482409844785,
+      "max_hollow_research_node_vm_MPa": 0.24971097077100454,
+      "max_global_translation_mm": 0.005456035548847242,
+      "max_free_relative_residual": 6.2278415330483096e-15,
+      "force_balance_norm_N": 6.112158305204198e-15,
+      "moment_balance_norm_N_mm": 2.744041179040724e-13,
+      "energy_balance_relative_error": 1.0304692982560275e-14,
+      "stiffness_symmetry_relative_error": 2.488265744640095e-17,
+      "max_node_free_relative_residual": 1.89934268803312e-13,
+      "max_node_gauge_reaction_relative": 2.122043340575204e-13,
+      "all_radii_at_manufacturing_floor": true,
+      "nonfoot_radius_mm": 4.4,
+      "foot_radius_mm": 8.1,
+      "thin_hollow_shell_or_Chien_equivalence_claimed": false,
+      "short_beam_sensitivity": {
+        "Euler_Bernoulli_max_translation_mm": 0.005456035548847242,
+        "Timoshenko_max_translation_mm": 0.006369758164118931,
+        "Timoshenko_to_Euler_max_translation_ratio": 1.1674700626656918,
+        "Euler_Bernoulli_peak_nominal_section_vm_MPa": 0.11410462151991027,
+        "Timoshenko_peak_nominal_section_vm_MPa": 0.1128046774549402,
+        "minimum_centerline_L_over_d": 1.6827425971406984,
+        "maximum_shear_parameter_phi": 0.8122551221421439,
+        "members_below_L_over_d_10": 52,
+        "total_members": 52,
+        "Timoshenko_free_relative_residual": 4.46785398775079e-15,
+        "Timoshenko_force_balance_N": [
+          5.805685793225379e-15,
+          -2.142587593972095e-15,
+          6.5780714209040525e-15
+        ],
+        "Timoshenko_moment_balance_N_mm": [
+          2.585154312839677e-13,
+          3.0148106233696126e-13,
+          1.429035161506007e-14
+        ]
+      }
+    }
+  },
+  "limits": [
+    "The global frame and one-way spherical submodels idealize full manufacturing geometry.",
+    "Detailed socket contact, fasteners, finite cap-withdrawal relief, flat-foot clipping, adhesion, creep and failure are not a coupled3D solution.",
+    "Every beam has L/d<10; the reported Timoshenko comparison quantifies transverse shear sensitivity."
+  ]
+}

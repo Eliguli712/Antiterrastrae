@@ -1,0 +1,9 @@
+{
+  "revision": "R12",
+  "canonical_url": "https://eliguli712.github.io/Antiterrastrae/design/megalodon/",
+  "source_commit": "69e84abb5f6c5e36af384964929d327ad465f07f",
+  "verified_assets": 79,
+  "verified_bytes": 660711980,
+  "source_geometry_sha256": "0520a5e7b449174a31883b816588c8b6383bbe81da1fe240adff2a878c09d922",
+  "scope": "Source-correct four-equilateral-cut support for both tooth sizes, measured-CAD independent support mechanics, smooth analytic surfaces, all-native tooth fit checks, full-source display plates and certified STL print directions. Legacy native tooth data and stored tooth fields remain pinned to prior immutable source commits."
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "size_mm": 50,
+    "file": "50mm-assembly-height-comparison.png",
+    "sha256": "0075fff902cf20baf2642f0bb9216fd801180ecc4fbab5633e2f162693a61390",
+    "bytes": 396170,
+    "width": 2100,
+    "height": 1200,
+    "complete_original_STL_triangles_per_pose": 1346748,
+    "mesh_decimation_performed": false,
+    "convex_hull_solid_rendered": false,
+    "render_method": "Every manufacturing STL triangle rasterized with face Lambert shading and a shared orthographic scale. Rendering is a geometry comparison, not physical resin shading.",
+    "source_STLs": [
+      {
+        "file": "main",
+        "sha256": "2abdd74c163940197fe9a76a15335ab17651944fc4a56953707b5b3180364c40",
+        "triangles": 883450
+      },
+      {
+        "file": "cap",
+        "sha256": "12d7068ea60f7e6e3b4df987286b36ee5273def17045fd540799c05af1f864d8",
+        "triangles": 463298
+      }
+    ],
+    "original_pose_height_mm": 100.73910522460938,
+    "minimum_pose_height_mm": 81.04020771758441,
+    "display_XY_centering_only": true
+  },
+  {
+    "size_mm": 100,
+    "file": "100mm-assembly-height-comparison.png",
+    "sha256": "4eb7afe3284a32d1c9000e4ddcca3cfb23487ac86787c9888e6c5f67a6946f81",
+    "bytes": 458917,
+    "width": 2100,
+    "height": 1200,
+    "complete_original_STL_triangles_per_pose": 1530388,
+    "mesh_decimation_performed": false,
+    "convex_hull_solid_rendered": false,
+    "render_method": "Every manufacturing STL triangle rasterized with face Lambert shading and a shared orthographic scale. Rendering is a geometry comparison, not physical resin shading.",
+    "source_STLs": [
+      {
+        "file": "main",
+        "sha256": "36860b32bc0d1d44178c581cfd8a6bbae853a22c9917ee478b1eceb576be790a",
+        "triangles": 1021558
+      },
+      {
+        "file": "cap",
+        "sha256": "f0223a36fde48f49efefd16d32ddfd302425eaa70b0c092bec96ea770989be8f",
+        "triangles": 508830
+      }
+    ],
+    "original_pose_height_mm": 121.839111328125,
+    "minimum_pose_height_mm": 81.04020771758441,
+    "display_XY_centering_only": true
+  }
+]

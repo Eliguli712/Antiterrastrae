@@ -1,0 +1,31 @@
+{
+  "revision": "R12",
+  "size_mm": 50,
+  "source_faces_audited": 74293846,
+  "source_chunks_verified": 75,
+  "minimum_clearance_mm": 0.35,
+  "passed": true,
+  "physical_print_fit_tested": false,
+  "tooth_geometry_modified": false,
+  "tooth_rigid_translation_mm": [
+    0.0,
+    0.0,
+    -6.0
+  ],
+  "front_cap_additional_withdrawal_mm": 0.002,
+  "tests": {
+    "main_cap_intersection_mm3": 0.0,
+    "cap_withdrawal_0.5mm_intersection_mm3": 0.0,
+    "cap_withdrawal_1mm_intersection_mm3": 0.0,
+    "cap_withdrawal_2mm_intersection_mm3": 0.0,
+    "cap_withdrawal_5mm_intersection_mm3": 0.0,
+    "cap_withdrawal_10mm_intersection_mm3": 0.0,
+    "cap_withdrawal_40mm_intersection_mm3": 0.0,
+    "main_native_protected_envelope_intersection_mm3": 0.0,
+    "cap_native_protected_envelope_intersection_mm3": 0.0
+  },
+  "method": "All source vertex profiles with measured maximum native triangle edge, guarded swept envelopes, and independent protected-envelope intersections against final rounded STL.",
+  "continuous_cap_withdrawal_corridor_mm": 44.9,
+  "independent_corridor_XZ_clearance_mm": 0.01,
+  "continuous_corridor_intersection_mm3": 0.0
+}

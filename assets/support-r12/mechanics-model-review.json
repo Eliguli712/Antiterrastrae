@@ -1,0 +1,62 @@
+{
+  "revision": "R12",
+  "purpose": "Sensitivity of requested Euler\u2013Bernoulli idealization to beam transverse shear on the same source-correct frame.",
+  "primary_published_frame_model": "Euler\u2013Bernoulli",
+  "secondary_model": "Linear 3D Timoshenko frame with circular-section shear factor0.9",
+  "circular_section_shear_factor": 0.9,
+  "cantilever_F_L3_over_3EI_plus_F_L_over_kGA_relative_error": 0.0,
+  "Timoshenko_load_vector": "The same consistent distributed uniform gravity forces and end moments as primary model.",
+  "cases": {
+    "50": {
+      "Euler_Bernoulli_max_translation_mm": 0.001232542602596173,
+      "Timoshenko_max_translation_mm": 0.0014341955175222218,
+      "Timoshenko_to_Euler_max_translation_ratio": 1.1636072574702863,
+      "Euler_Bernoulli_peak_nominal_section_vm_MPa": 0.027106425519945944,
+      "Timoshenko_peak_nominal_section_vm_MPa": 0.02678763222941264,
+      "minimum_centerline_L_over_d": 1.6827425971406984,
+      "maximum_shear_parameter_phi": 0.8122551221421439,
+      "members_below_L_over_d_10": 52,
+      "total_members": 52,
+      "Timoshenko_free_relative_residual": 1.3020034676934757e-14,
+      "Timoshenko_force_balance_N": [
+        5.78299886276612e-16,
+        2.6205292900659166e-16,
+        1.27675647831893e-15
+      ],
+      "Timoshenko_moment_balance_N_mm": [
+        -3.802513859341161e-14,
+        -1.3766765505351941e-14,
+        5.754681426462728e-14
+      ]
+    },
+    "100": {
+      "Euler_Bernoulli_max_translation_mm": 0.005456035548847242,
+      "Timoshenko_max_translation_mm": 0.006369758164118931,
+      "Timoshenko_to_Euler_max_translation_ratio": 1.1674700626656918,
+      "Euler_Bernoulli_peak_nominal_section_vm_MPa": 0.11410462151991027,
+      "Timoshenko_peak_nominal_section_vm_MPa": 0.1128046774549402,
+      "minimum_centerline_L_over_d": 1.6827425971406984,
+      "maximum_shear_parameter_phi": 0.8122551221421439,
+      "members_below_L_over_d_10": 52,
+      "total_members": 52,
+      "Timoshenko_free_relative_residual": 4.46785398775079e-15,
+      "Timoshenko_force_balance_N": [
+        5.805685793225379e-15,
+        -2.142587593972095e-15,
+        6.5780714209040525e-15
+      ],
+      "Timoshenko_moment_balance_N_mm": [
+        2.585154312839677e-13,
+        3.0148106233696126e-13,
+        1.429035161506007e-14
+      ]
+    }
+  },
+  "limitations": [
+    "All members are short enough that Euler\u2013Bernoulli slenderness is limited; the shear comparison is a model sensitivity check.",
+    "Neither beam formulation resolves fused solid joint geometry, finite socket/contact/fastener loading, adhesion, creep or failure.",
+    "Short element centreline portions inside spheres remain part of the idealized beam model.",
+    "A one-way spherical submodel is not a fully coupled3D frame/socket solution.",
+    "No eigenbuckling or nonlinear fracture safety claim is made."
+  ]
+}

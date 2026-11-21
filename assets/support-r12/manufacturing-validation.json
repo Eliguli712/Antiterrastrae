@@ -1,0 +1,217 @@
+{
+  "revision": "R12",
+  "actual_curved_surfaces_rebuilt": true,
+  "coplanar_subdivision_used_for_smoothing": false,
+  "original_native_tooth_faces": 74293846,
+  "tooth_stress_fields_recomputed_in_this_change": false,
+  "all_graph_node_centers_and_sampled_centerlines_retained": true,
+  "registered_source_SHA256": "0520a5e7b449174a31883b816588c8b6383bbe81da1fe240adff2a878c09d922",
+  "cases": [
+    {
+      "size_mm": 50,
+      "nodes_inside_manufacturing_main": 30,
+      "beam_centerline_samples_inside_manufacturing_main": 1716,
+      "centerline_samples_per_beam": 33,
+      "sphere_segment_count": 192,
+      "cylinder_circular_segments": 224,
+      "regular_sphere_radius_mm": 4.4,
+      "foot_sphere_radius_mm": 8.1,
+      "maximum_foot_sphere_facet_sag_mm": 0.0029063168467808654,
+      "legacy_foot_sphere_facet_sag_mm_at_same_radius": 0.1809285325882707,
+      "rod_radius_mm": 3.2,
+      "maximum_rod_chord_sag_mm": 0.0003147143693599475,
+      "legacy_rod_chord_sag_mm": 0.02012092834162367,
+      "analytic_unit_sphere_comparison": {
+        "24": {
+          "sphere_faces": 288,
+          "maximum_unit_facet_sag": 0.022336855875095152
+        },
+        "192": {
+          "sphere_faces": 18432,
+          "maximum_unit_facet_sag": 0.000358804548985292
+        }
+      },
+      "CAD_parts": [
+        {
+          "triangles": 883450,
+          "vertices": 441673,
+          "watertight": true,
+          "winding_consistent": true,
+          "components": 1,
+          "all_edges_have_two_incident_faces": true,
+          "zero_area_faces": 0,
+          "volume_mm3": 51653.064009946895,
+          "center_mm": [
+            -0.023350801410006367,
+            0.42751145866587553,
+            43.66084006825624
+          ],
+          "bounds_mm": [
+            [
+              -41.169551849365234,
+              -41.169551849365234,
+              0.0
+            ],
+            [
+              41.169551849365234,
+              41.169551849365234,
+              100.73910522460938
+            ]
+          ],
+          "file": "Support_R12_50mm_main.stl",
+          "sha256": "2abdd74c163940197fe9a76a15335ab17651944fc4a56953707b5b3180364c40",
+          "bytes": 44172584,
+          "cleanup_tolerance_mm": 0.0001,
+          "microscopic_components_removed_mm3": [],
+          "coincident_vertex_weld_decimal_places": 6,
+          "coincident_vertices_welded": 12,
+          "coincident_weld_maximum_possible_displacement_mm": 1.7320508075688771e-06,
+          "holes_filled": false,
+          "packed_file": "50mm-main.bin",
+          "packed_sha256": "5e406544fdeabd995d16173337f595049e0eccb4761eaf4035b77339a9941389"
+        },
+        {
+          "triangles": 463298,
+          "vertices": 231647,
+          "watertight": true,
+          "winding_consistent": true,
+          "components": 1,
+          "all_edges_have_two_incident_faces": true,
+          "zero_area_faces": 0,
+          "volume_mm3": 2766.5201937431934,
+          "center_mm": [
+            -0.566522039265275,
+            -4.450779306937973,
+            91.67178383647612
+          ],
+          "bounds_mm": [
+            [
+              -24.350000381469727,
+              -7.697975158691406,
+              79.53910827636719
+            ],
+            [
+              24.399999618530273,
+              -0.0020000000949949026,
+              100.73910522460938
+            ]
+          ],
+          "file": "Support_R12_50mm_cap.stl",
+          "sha256": "12d7068ea60f7e6e3b4df987286b36ee5273def17045fd540799c05af1f864d8",
+          "bytes": 23164984,
+          "cleanup_tolerance_mm": 0.0,
+          "microscopic_components_removed_mm3": [],
+          "coincident_vertex_weld_decimal_places": 5,
+          "coincident_vertices_welded": 13,
+          "coincident_weld_maximum_possible_displacement_mm": 1.7320508075688774e-05,
+          "holes_filled": false,
+          "packed_file": "50mm-cap.bin",
+          "packed_sha256": "f4e16281b10ffcfd529e331d9eb353a3adf0eefc397b3e5d6425cd658df102e1"
+        }
+      ]
+    },
+    {
+      "size_mm": 100,
+      "nodes_inside_manufacturing_main": 30,
+      "beam_centerline_samples_inside_manufacturing_main": 1716,
+      "centerline_samples_per_beam": 33,
+      "sphere_segment_count": 192,
+      "cylinder_circular_segments": 224,
+      "regular_sphere_radius_mm": 4.4,
+      "foot_sphere_radius_mm": 8.1,
+      "maximum_foot_sphere_facet_sag_mm": 0.0029063168467808654,
+      "legacy_foot_sphere_facet_sag_mm_at_same_radius": 0.1809285325882707,
+      "rod_radius_mm": 3.2,
+      "maximum_rod_chord_sag_mm": 0.0003147143693599475,
+      "legacy_rod_chord_sag_mm": 0.02012092834162367,
+      "analytic_unit_sphere_comparison": {
+        "24": {
+          "sphere_faces": 288,
+          "maximum_unit_facet_sag": 0.022336855875095152
+        },
+        "192": {
+          "sphere_faces": 18432,
+          "maximum_unit_facet_sag": 0.000358804548985292
+        }
+      },
+      "CAD_parts": [
+        {
+          "triangles": 1021558,
+          "vertices": 510727,
+          "watertight": true,
+          "winding_consistent": true,
+          "components": 1,
+          "all_edges_have_two_incident_faces": true,
+          "zero_area_faces": 0,
+          "volume_mm3": 65016.307435022645,
+          "center_mm": [
+            -0.6590486708689351,
+            1.689865424095371,
+            57.14485092911193
+          ],
+          "bounds_mm": [
+            [
+              -43.722930908203125,
+              -41.169551849365234,
+              0.0
+            ],
+            [
+              41.169551849365234,
+              41.169551849365234,
+              121.839111328125
+            ]
+          ],
+          "file": "Support_R12_100mm_main.stl",
+          "sha256": "36860b32bc0d1d44178c581cfd8a6bbae853a22c9917ee478b1eceb576be790a",
+          "bytes": 51077984,
+          "cleanup_tolerance_mm": 0.0,
+          "microscopic_components_removed_mm3": [],
+          "coincident_vertex_weld_decimal_places": null,
+          "coincident_vertices_welded": 0,
+          "coincident_weld_maximum_possible_displacement_mm": null,
+          "holes_filled": false,
+          "packed_file": "100mm-main.bin",
+          "packed_sha256": "126092dc072602ed34bb9808d7ab608d2e741d33b7b9f098d696afaa937d52bf"
+        },
+        {
+          "triangles": 508830,
+          "vertices": 254411,
+          "watertight": true,
+          "winding_consistent": true,
+          "components": 1,
+          "all_edges_have_two_incident_faces": true,
+          "zero_area_faces": 0,
+          "volume_mm3": 15196.979637235285,
+          "center_mm": [
+            -2.709078238449433,
+            -8.94343761930576,
+            103.77730090948299
+          ],
+          "bounds_mm": [
+            [
+              -43.722930908203125,
+              -15.761870384216309,
+              79.53910827636719
+            ],
+            [
+              40.82754135131836,
+              1.7054479122161865,
+              121.839111328125
+            ]
+          ],
+          "file": "Support_R12_100mm_cap.stl",
+          "sha256": "f0223a36fde48f49efefd16d32ddfd302425eaa70b0c092bec96ea770989be8f",
+          "bytes": 25441584,
+          "cleanup_tolerance_mm": 0.0,
+          "microscopic_components_removed_mm3": [],
+          "coincident_vertex_weld_decimal_places": null,
+          "coincident_vertices_welded": 0,
+          "coincident_weld_maximum_possible_displacement_mm": null,
+          "holes_filled": false,
+          "packed_file": "100mm-cap.bin",
+          "packed_sha256": "049830fe9c90a5534478fb7aab072c0386cb008c05d7dfc7cfe64649c87df722"
+        }
+      ]
+    }
+  ]
+}

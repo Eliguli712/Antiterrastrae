@@ -1,0 +1,186 @@
+{
+  "axis": [
+    0,
+    -0.9823413242878181,
+    0.18709762851638664
+  ],
+  "width_mm": 81.04020771758441,
+  "certificate": {
+    "lower_bound_mm": 81.04020353386989,
+    "upper_bound_mm": 81.04020771858441,
+    "gap_mm": 4.184714532007305e-06,
+    "target_tolerance_mm": 1e-05,
+    "dot_roundoff_allowance_mm": 1e-09,
+    "diameter_upper_bound_mm": 169.7976168154935,
+    "sphere_cells_evaluated": 1548,
+    "sphere_cells_subdivided": 385,
+    "sphere_cells_pruned": 1163,
+    "sphere_cells_remaining": 0,
+    "max_depth": 21,
+    "peak_heap_cells": 56,
+    "upper_bound_updates": 0,
+    "long_double_mantissa_bits": 64,
+    "covers_all_unit_directions": true,
+    "exact_rational_interval_arithmetic": false,
+    "spherical_cap_dot_bound": true,
+    "arithmetic": "long double with explicit roundoff allowance; numerical certificate, not exact rational/interval proof"
+  },
+  "counts": {
+    "all_STL_unique_vertices": 510727,
+    "convex_hull_vertices": 5869,
+    "triangulated_hull_faces": 11734,
+    "seed_directions": 11871,
+    "local_search_starts": 24,
+    "source_coordinates_quantized": false
+  },
+  "computation_seconds": 0.8638181569999688,
+  "candidate_search_scope": "Convex-hull face normals, a spherical seed lattice and local numerical minimization propose candidates. No edge-pair enumeration is used.",
+  "global_certificate_method": "Independent spherical branch-and-bound covers all eight octants. Lower bounds are minima of actual source-vertex difference dot products over an enclosing spherical cap, plus a conservative box-diagonal Lipschitz bound. Upper bounds are checked over all source STL vertices.",
+  "all_STL_vertices_height_recheck_mm": 81.04020771758442,
+  "hull_vertices_height_recheck_mm": 81.04020771758442,
+  "convex_hull_equivalence_recheck_error_mm": 0.0,
+  "size_mm": 100,
+  "part": "main",
+  "original_Z_height_mm": 121.839111328125,
+  "source_STLs": [
+    {
+      "file": "Support_R12_100mm_main.stl",
+      "SHA256": "36860b32bc0d1d44178c581cfd8a6bbae853a22c9917ee478b1eceb576be790a",
+      "triangles": 1021558
+    }
+  ],
+  "full_original_triangles": 1021558,
+  "includes_tooth": false,
+  "includes_generated_print_supports": false,
+  "includes_raft": false,
+  "includes_hardware": false,
+  "assembly_union_or_fusion_performed": false,
+  "object_scope": "Complete manufacturing part",
+  "height_reduction_percent": 33.4858841022445,
+  "print_axis_in_source_coordinates": [
+    0.0,
+    -0.9823413242878181,
+    0.18709762851638664
+  ],
+  "rotation_matrix_column_vector": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      -0.0,
+      0.18709762851638664,
+      0.9823413242878181
+    ],
+    [
+      0.0,
+      -0.9823413242878181,
+      0.18709762851638664
+    ]
+  ],
+  "placement_translation_mm": [
+    1.2766895294189453,
+    -58.384296183173326,
+    32.293504766731424
+  ],
+  "transformation": "p_print = R @ p_source + t, followed only by audited float32 export-collapse cleanup when required",
+  "z0_translation_mm": 32.293504766731424,
+  "print_bounds_mm": [
+    [
+      -42.44624328613281,
+      -63.94267654418945,
+      0.0
+    ],
+    [
+      42.44624328613281,
+      63.94267654418945,
+      81.04020690917969
+    ]
+  ],
+  "full_precision_oriented_extent_mm": [
+    84.89248275756836,
+    127.88534928658022,
+    81.04020771758442
+  ],
+  "exported_STL_height_mm": 81.04020690917969,
+  "STL_triangle_count_preserved": true,
+  "STL_original_face_order_preserved": true,
+  "STL_original_attribute_words_preserved": true,
+  "maximum_float32_reencoding_coordinate_error_mm": 3.8144020919617105e-06,
+  "source_signed_volume_mm3": 65016.307435022725,
+  "export_signed_volume_mm3": 65016.308230256815,
+  "signed_volume_relative_change": 1.2231301971502641e-08,
+  "exported_file": "Support_R12_100mm_main_Minimum_Height.stl",
+  "exported_SHA256": "8e2974d7e9a030391f231d407ccc552c87664eac1cb24fa88bc2f2d903d0df63",
+  "export_bytes": 51077984,
+  "contact_features": [
+    {
+      "side": "lower",
+      "projection_mm": -32.293504766731424,
+      "vertices": 3,
+      "affine_dimension_at_tolerance": 2,
+      "near_contact_tolerance_mm": 1e-07,
+      "coordinates_mm": [
+        [
+          -26.0,
+          41.08500671386719,
+          43.11115646362305
+        ],
+        [
+          4.959819422097685e-16,
+          33.94436264038086,
+          5.6197686195373535
+        ],
+        [
+          26.0,
+          41.08500671386719,
+          43.11115646362305
+        ]
+      ]
+    },
+    {
+      "side": "upper",
+      "projection_mm": 48.746702950852985,
+      "vertices": 2,
+      "affine_dimension_at_tolerance": 1,
+      "near_contact_tolerance_mm": 1e-07,
+      "coordinates_mm": [
+        [
+          -26.0,
+          -41.08500671386719,
+          44.82794952392578
+        ],
+        [
+          26.0,
+          -41.08500671386719,
+          44.82794952392578
+        ]
+      ]
+    }
+  ],
+  "polarity_tie_break": "Prefer larger affine-dimensional bottom contact, then more source vertices; not a stability certification.",
+  "XY_twist_rule": "Projection of source X, or source Y near parallelism; XY translation centres the model for float32 precision, not XY packing optimization.",
+  "export_float32_height_change_mm": -8.084047209422351e-07,
+  "STL_source_triangle_count": 1021558,
+  "STL_export_triangle_count": 1021558,
+  "relative_order_of_surviving_faces_preserved": true,
+  "STL_original_attribute_words_preserved_for_surviving_faces": true,
+  "export_removed_degenerate_count": 0,
+  "export_removed_original_face_indices": [],
+  "export_welded_vertex_count": 0,
+  "export_coincident_vertex_weld_decimal_places": null,
+  "maximum_actual_weld_displacement_mm": 0.0,
+  "maximum_possible_weld_displacement_mm": null,
+  "holes_filled": false,
+  "native_tooth_geometry_modified": false,
+  "export_topology": {
+    "watertight": true,
+    "winding_consistent": true,
+    "zero_area_faces": 0,
+    "all_edges_have_two_incident_faces": true,
+    "components": 1,
+    "expected_components": 1
+  },
+  "certificate_scope": "Full original valid manufacturing STL before binary export quantization/cleanup; actual exported Z extent is separately rechecked."
+}

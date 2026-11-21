@@ -1,0 +1,128 @@
+{
+  "revision": "R12",
+  "native_source_faces_rendered_per_camera": 74293846,
+  "source_chunk_vertices_including_duplicates": 39428327,
+  "source_geometry_sha256": "69928fc1d776a0cb2cd3da389802e0b08d226395005bbf4a2094180e90622b73",
+  "geometry_transport_sha256_verified_for_all_chunks": true,
+  "field_transport_sha256_verified_for_all_chunks": true,
+  "source_solution_sha256": "a9e45992921f8a3ce6c90aa6898b92bfd8951a6101eeb23dfa630c8f73eea857",
+  "raw_solved_element_stresses_unchanged": true,
+  "native_source_coordinates_changed": false,
+  "display_rigid_translation_mm": [
+    0,
+    0,
+    -6
+  ],
+  "physical_scale": 1.0,
+  "unsupported_stream_vertices": 0,
+  "palette_file_sha256": "a376918a278a5e289499d877e025151eedb0241167c340e37e7710395e83e1fd",
+  "palette_entries": 256,
+  "colour_min_pa": 253167.0947190341,
+  "colour_max_pa": 250522132.6467093,
+  "threshold_pa": 33072067.260742188,
+  "default_palette": "Original 256-entry Turbo LUT, continuous linear interpolation; unchanged numerical R7 field",
+  "optional_palettes": [
+    "logarithmic Turbo",
+    "pearlescent wash"
+  ],
+  "cameras": "R7/R8 original front/oblique/reverse orthographic cameras",
+  "resin_material": "R7/R8 original shade and .065 per-surface alpha; source-correct R12 smooth manufacturing support meshes",
+  "support_parts": [
+    {
+      "file": "100mm-main.bin",
+      "sha256": "126092dc072602ed34bb9808d7ab608d2e741d33b7b9f098d696afaa937d52bf",
+      "vertices": 510727,
+      "triangles": 1021558
+    },
+    {
+      "file": "100mm-cap.bin",
+      "sha256": "049830fe9c90a5534478fb7aab072c0386cb008c05d7dfc7cfe64649c87df722",
+      "vertices": 254411,
+      "triangles": 508830
+    }
+  ],
+  "elapsed_seconds": 78.81675338745117,
+  "plates": [
+    {
+      "file": "100mm-linear-front.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 417806,
+      "sha256": "34851ce6b36c22eda51ba6d1fb0b302ca3dc257c9874fc37167f82a1a63547c9",
+      "palette": "linear",
+      "view": "front"
+    },
+    {
+      "file": "100mm-linear-oblique.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 428864,
+      "sha256": "7cb049dd2959777bed893bf222e99d1d369c01a864a3f6b8462519a8d851067d",
+      "palette": "linear",
+      "view": "oblique"
+    },
+    {
+      "file": "100mm-linear-reverse.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 396274,
+      "sha256": "27ccff7e317bcebbc7088c07a9d793c61ac42ddc17f0b45ec8af8765498d562f",
+      "palette": "linear",
+      "view": "reverse"
+    },
+    {
+      "file": "100mm-spectrum-front.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 540242,
+      "sha256": "ce34a35f8a8791a066a8d62913b9f16f44fd3c22fa983a27463f24e74c646678",
+      "palette": "spectrum",
+      "view": "front"
+    },
+    {
+      "file": "100mm-spectrum-oblique.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 542058,
+      "sha256": "91156581d2f4cb758f7d4a50bcd892a01b82186c39bd31c10e6a9ede40787856",
+      "palette": "spectrum",
+      "view": "oblique"
+    },
+    {
+      "file": "100mm-spectrum-reverse.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 513108,
+      "sha256": "d719461cfd46ffb8fc42b50bc9f8abb3002e53935e20e2a9844cce9387ecdd44",
+      "palette": "spectrum",
+      "view": "reverse"
+    },
+    {
+      "file": "100mm-wash-front.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 422908,
+      "sha256": "e22c787f51ecdacbd017b7e6bbae462bfcf7136ae36e91832a7dd80eb4070778",
+      "palette": "wash",
+      "view": "front"
+    },
+    {
+      "file": "100mm-wash-oblique.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 434218,
+      "sha256": "782cfe0ec143f0960c1bcccc397cf21c515e614786b26e7071870b20afa8b43c",
+      "palette": "wash",
+      "view": "oblique"
+    },
+    {
+      "file": "100mm-wash-reverse.webp",
+      "width": 2400,
+      "height": 2800,
+      "bytes": 395758,
+      "sha256": "f78df7440e6f9e5488a61d41563efb272c7a601e8d0eff73ff58daf148483626",
+      "palette": "wash",
+      "view": "reverse"
+    }
+  ]
+}

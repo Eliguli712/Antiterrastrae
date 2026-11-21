@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "maximum_absolute_error_mm": 2.4913404672588513e-13,
+  "cases": [
+    {
+      "name": "rotated_cube",
+      "analytical_minimum_width_mm": 2.0,
+      "computed_width_mm": 2,
+      "absolute_error_mm": 0.0,
+      "certificate": {
+        "lower_bound_mm": 1.9999999020690093,
+        "upper_bound_mm": 2.000000001,
+        "gap_mm": 9.893099073808587e-08,
+        "target_tolerance_mm": 1e-07,
+        "dot_roundoff_allowance_mm": 1e-09,
+        "diameter_upper_bound_mm": 5.658083612419025,
+        "sphere_cells_evaluated": 1944,
+        "sphere_cells_subdivided": 484,
+        "sphere_cells_pruned": 1460,
+        "sphere_cells_remaining": 0,
+        "max_depth": 26,
+        "peak_heap_cells": 52,
+        "upper_bound_updates": 0,
+        "long_double_mantissa_bits": 64,
+        "covers_all_unit_directions": true,
+        "exact_rational_interval_arithmetic": false,
+        "spherical_cap_dot_bound": true,
+        "arithmetic": "long double with explicit roundoff allowance; numerical certificate, not exact rational/interval proof"
+      }
+    },
+    {
+      "name": "rotated_thin_box",
+      "analytical_minimum_width_mm": 1.0,
+      "computed_width_mm": 1.0000000000000013,
+      "absolute_error_mm": 1.3322676295501878e-15,
+      "certificate": {
+        "lower_bound_mm": 0.9999999152131857,
+        "upper_bound_mm": 1.0000000010000014,
+        "gap_mm": 8.57868157137483e-08,
+        "target_tolerance_mm": 1e-07,
+        "dot_roundoff_allowance_mm": 1e-09,
+        "diameter_upper_bound_mm": 16.356683470130843,
+        "sphere_cells_evaluated": 760,
+        "sphere_cells_subdivided": 188,
+        "sphere_cells_pruned": 570,
+        "sphere_cells_remaining": 2,
+        "max_depth": 27,
+        "peak_heap_cells": 22,
+        "upper_bound_updates": 0,
+        "long_double_mantissa_bits": 64,
+        "covers_all_unit_directions": true,
+        "exact_rational_interval_arithmetic": false,
+        "spherical_cap_dot_bound": true,
+        "arithmetic": "long double with explicit roundoff allowance; numerical certificate, not exact rational/interval proof"
+      }
+    },
+    {
+      "name": "regular_tetrahedron",
+      "analytical_minimum_width_mm": 2.0,
+      "computed_width_mm": 2.000000000000249,
+      "absolute_error_mm": 2.4913404672588513e-13,
+      "certificate": {
+        "lower_bound_mm": 1.999999901166856,
+        "upper_bound_mm": 2.000000001000249,
+        "gap_mm": 9.983339320908478e-08,
+        "target_tolerance_mm": 1e-07,
+        "dot_roundoff_allowance_mm": 1e-09,
+        "diameter_upper_bound_mm": 4.5381637448181475,
+        "sphere_cells_evaluated": 1944,
+        "sphere_cells_subdivided": 484,
+        "sphere_cells_pruned": 1460,
+        "sphere_cells_remaining": 0,
+        "max_depth": 24,
+        "peak_heap_cells": 54,
+        "upper_bound_updates": 0,
+        "long_double_mantissa_bits": 64,
+        "covers_all_unit_directions": true,
+        "exact_rational_interval_arithmetic": false,
+        "spherical_cap_dot_bound": true,
+        "arithmetic": "long double with explicit roundoff allowance; numerical certificate, not exact rational/interval proof"
+      }
+    },
+    {
+      "name": "regular_octahedron",
+      "analytical_minimum_width_mm": 1.1547005383792517,
+      "computed_width_mm": 1.1547005383792515,
+      "absolute_error_mm": 2.220446049250313e-16,
+      "certificate": {
+        "lower_bound_mm": 1.1547004429241639,
+        "upper_bound_mm": 1.1547005393792515,
+        "gap_mm": 9.645508770774608e-08,
+        "target_tolerance_mm": 1e-07,
+        "dot_roundoff_allowance_mm": 1e-09,
+        "diameter_upper_bound_mm": 2.6069495906746822,
+        "sphere_cells_evaluated": 3600,
+        "sphere_cells_subdivided": 898,
+        "sphere_cells_pruned": 2702,
+        "sphere_cells_remaining": 0,
+        "max_depth": 24,
+        "peak_heap_cells": 96,
+        "upper_bound_updates": 0,
+        "long_double_mantissa_bits": 64,
+        "covers_all_unit_directions": true,
+        "exact_rational_interval_arithmetic": false,
+        "spherical_cap_dot_bound": true,
+        "arithmetic": "long double with explicit roundoff allowance; numerical certificate, not exact rational/interval proof"
+      }
+    }
+  ]
+}

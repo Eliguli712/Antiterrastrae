@@ -1,0 +1,107 @@
+{
+  "revision": "R12",
+  "complete": true,
+  "all_six_orientations_present": true,
+  "archive_STL_scope": "Both combined main+cap assembly orientations. Individual main and cap oriented STLs are separate downloads; all six numerical records and source code are included.",
+  "maximum_original_surface_numeric_certificate_gap_mm": 9.659244189064338e-06,
+  "all_six_binary_exports_pass_strict_topology": true,
+  "download_archive": {
+    "file": "Support_R12_Minimum_Print_Height.zip",
+    "bytes": 57633201,
+    "sha256": "81071d8a011d6718d5c3b4a6608331f10628a51eea23e752736c1f1b9b3ac657",
+    "entries": 26,
+    "CRC_passed": true
+  },
+  "files": [
+    {
+      "file": "100mm-assembly-height-comparison.png",
+      "bytes": 458917,
+      "sha256": "4eb7afe3284a32d1c9000e4ddcca3cfb23487ac86787c9888e6c5f67a6946f81"
+    },
+    {
+      "file": "100mm-assembly-minimum-height.json",
+      "bytes": 6618,
+      "sha256": "7c1f5588e00b45f24ccfdb24bc64899a159aad7ed2fdf44530b2949338a06016"
+    },
+    {
+      "file": "100mm-cap-minimum-height.json",
+      "bytes": 6518,
+      "sha256": "c83d46057134d2e9188301c560ed385561d1e6416bc6f0b63ecb6e5c6343ecdc"
+    },
+    {
+      "file": "100mm-main-minimum-height.json",
+      "bytes": 6121,
+      "sha256": "e016c986bd0c81e21465fc802bbe4f3fbaee9b632ae7a2255b0719b21141ee97"
+    },
+    {
+      "file": "50mm-assembly-height-comparison.png",
+      "bytes": 396170,
+      "sha256": "0075fff902cf20baf2642f0bb9216fd801180ecc4fbab5633e2f162693a61390"
+    },
+    {
+      "file": "50mm-assembly-minimum-height.json",
+      "bytes": 6324,
+      "sha256": "c6203eb76fbf65c643cad00c4fd5358127dac0cd39637587d632144f864713ff"
+    },
+    {
+      "file": "50mm-cap-minimum-height.json",
+      "bytes": 74357,
+      "sha256": "37a1d4f9240af83a68a7f257cda59fccb81d79d9e5673c3900e55030f225dd19"
+    },
+    {
+      "file": "50mm-main-minimum-height.json",
+      "bytes": 6104,
+      "sha256": "8881778ceaafabce530cee69cd0c570b71ebe757c2a11b7d3e50566d8860fb0f"
+    },
+    {
+      "file": "README.md",
+      "bytes": 4549,
+      "sha256": "237b3c27a4134d58d3681a108def03fa0f3b232ad475629df3e3415374da3319"
+    },
+    {
+      "file": "Support_R12_100mm_assembly_Minimum_Height.stl",
+      "bytes": 76518484,
+      "sha256": "1d66c38994d81431f2e84191b5c04439b1ee07c3d812e3431b1b56144ebf980b"
+    },
+    {
+      "file": "Support_R12_50mm_assembly_Minimum_Height.stl",
+      "bytes": 67337484,
+      "sha256": "68aa3f059ab6f0c40b61fe6c723791e6e8fcfe86570a4ebbfb96b184a25ac1a2"
+    },
+    {
+      "file": "Support_R12_Minimum_Print_Height.zip",
+      "bytes": 57633201,
+      "sha256": "81071d8a011d6718d5c3b4a6608331f10628a51eea23e752736c1f1b9b3ac657"
+    },
+    {
+      "file": "analytic-validation.json",
+      "bytes": 4210,
+      "sha256": "7907c2c9552849814a0c4bc17adcb887e8285e4650642ec1298803ed5ed823f3"
+    },
+    {
+      "file": "export-topology-validation.json",
+      "bytes": 3486,
+      "sha256": "fa67f0fa46f70c1039d781429e9fd54ad362d197abfcc1af4eed64a2ea2c276a"
+    },
+    {
+      "file": "figure-provenance.json",
+      "bytes": 2052,
+      "sha256": "5a91417fa3fa2bb2d44c75416407d4d80384258740dbf8fc3f031bac1a0d1853"
+    },
+    {
+      "file": "minimum-print-height.csv",
+      "bytes": 1592,
+      "sha256": "0d2981cd95ce5d201b55a601ef348e5ffc2ba0246478a9f297d0dfbd848e36b5"
+    },
+    {
+      "file": "minimum-print-height.json",
+      "bytes": 123828,
+      "sha256": "b92769cb28cecdb559ab4e3fd68fa2832b17c179ce47ac44e6436bf732f79a58"
+    },
+    {
+      "file": "source-inputs.json",
+      "bytes": 1027,
+      "sha256": "779eaa4543fa059abdc1d537dd22cb47b22e3c8408e12f494c4e8fd3b53b4c32"
+    }
+  ]
+}

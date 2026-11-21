@@ -1,0 +1,31 @@
+{
+  "revision": "R12",
+  "source_geometry_scope": "Final unmodified manufacturing main and cap surfaces; no native tooth or print auxiliaries.",
+  "source_download_page": "https://eliguli712.github.io/Antiterrastrae/design/megalodon/#support",
+  "files": [
+    {
+      "file": "Support_R12_50mm_main.stl",
+      "sha256": "2abdd74c163940197fe9a76a15335ab17651944fc4a56953707b5b3180364c40",
+      "bytes": 44172584,
+      "triangles": 883450
+    },
+    {
+      "file": "Support_R12_50mm_cap.stl",
+      "sha256": "12d7068ea60f7e6e3b4df987286b36ee5273def17045fd540799c05af1f864d8",
+      "bytes": 23164984,
+      "triangles": 463298
+    },
+    {
+      "file": "Support_R12_100mm_main.stl",
+      "sha256": "36860b32bc0d1d44178c581cfd8a6bbae853a22c9917ee478b1eceb576be790a",
+      "bytes": 51077984,
+      "triangles": 1021558
+    },
+    {
+      "file": "Support_R12_100mm_cap.stl",
+      "sha256": "f0223a36fde48f49efefd16d32ddfd302425eaa70b0c092bec96ea770989be8f",
+      "bytes": 25441584,
+      "triangles": 508830
+    }
+  ]
+}

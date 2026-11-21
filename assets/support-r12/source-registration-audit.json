@@ -1,0 +1,26 @@
+{
+  "all_node_source_registration_max_error_mm": 1.1507435356642061e-08,
+  "rod_centerline_surface_samples": 1092,
+  "rod_centerline_max_distance_to_original_STL_boundary_mm": 6.643823269322052e-09,
+  "source_SHA256": "0520a5e7b449174a31883b816588c8b6383bbe81da1fe240adff2a878c09d922",
+  "source_file": "DoubleCube_CommonPoint_Height100mm(1).stl",
+  "four_equilateral_triangles": true,
+  "twelve_3D_triangle_edges_mm": [
+    36.76955262170048,
+    36.76955262170048,
+    36.76955262170048,
+    36.76955262170048,
+    36.76955262170048,
+    36.76955262170048,
+    36.76955262170048,
+    36.76955262170048,
+    36.76955262170048,
+    36.76955262170048,
+    36.76955262170048,
+    36.76955262170048
+  ],
+  "exactly_one_common_vertex": "P",
+  "method": "All 30 graph nodes compared to source STL vertices; 21 samples on each of 52 rod centrelines independently compared to the original 72 triangles with libigl squared distance. All 12 triangle sides checked from 3D coordinates.",
+  "all_node_centers_source_registered": true,
+  "centerline_samples_are_not_fullsolidcollision_certification": true
+}

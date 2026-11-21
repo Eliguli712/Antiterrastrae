@@ -1,0 +1,997 @@
+{
+  "revision": "R12",
+  "method": "Candidate solid spherical-node radius iteration using independently solved 5cm and10cm source-correct Euler\u2013Bernoulli global frames and balanced finite-area 3D P1 elasticity submodels.",
+  "source_geometry_sha256": "0520a5e7b449174a31883b816588c8b6383bbe81da1fe240adff2a878c09d922",
+  "CAD_masses_are_measured": true,
+  "radius_increment_mm": 0.1,
+  "nominal_assumed_strength_MPa": 30.0,
+  "nominal_strength_is_not_a_measured_resin_property": true,
+  "material_safety_factor": 3.0,
+  "local_model_reserve_factor": 2.0,
+  "assumed_allowable_MPa": 5.0,
+  "tooth_gravity_factor": 3.0,
+  "physical_print_fit_or_strength_tested": false,
+  "solid_node_peak_mesh_convergence_verified": false,
+  "full_native_tooth_volumetric_FEM_solved": false,
+  "geometry_modified_native_tooth": false,
+  "notes": [
+    "All physical rod crossings are fused and share DOFs.",
+    "Beam gravity and first moment use measured CAD only when CAD_masses_are_measured is true.",
+    "Each independent tooth mass and centroid were integrated over all native source faces, including original internal void boundaries.",
+    "The tooth is reduced to its force and eccentric moment at the shared apex for support mechanics.",
+    "All sizes can legitimately select equal radii when manufacturing and foot contact floors govern the gravity study.",
+    "Overlapping patches represent fused nearby rod branches; their balanced forces and moments superpose.",
+    "P1 local node peaks are discretization-dependent and not a strength certification.",
+    "Euler\u2013Bernoulli nominal section stresses omit socket/contact/fastener/creep and local bevel-plate bending.",
+    "Solid printed nodes and 1.2 mm hollow research nodes are explicitly separate results."
+  ],
+  "geometry": {
+    "triangles": [
+      {
+        "nodes": [
+          "A5_A1_mid",
+          "A5_A4_mid",
+          "P"
+        ],
+        "lengths_mm": [
+          36.76955262170048,
+          36.76955262170048,
+          36.76955262170048
+        ],
+        "maximum_edge_spread_mm": 0.0,
+        "source_vertex_registration_error_mm": 6.6438232693192024e-09
+      },
+      {
+        "nodes": [
+          "A7_A3_mid",
+          "A7_A6_mid",
+          "P"
+        ],
+        "lengths_mm": [
+          36.76955262170048,
+          36.76955262170048,
+          36.76955262170048
+        ],
+        "maximum_edge_spread_mm": 0.0,
+        "source_vertex_registration_error_mm": 6.6438232693192024e-09
+      },
+      {
+        "nodes": [
+          "B3_B1_mid",
+          "B3_B2_mid",
+          "P"
+        ],
+        "lengths_mm": [
+          36.76955262170048,
+          36.76955262170048,
+          36.76955262170048
+        ],
+        "maximum_edge_spread_mm": 0.0,
+        "source_vertex_registration_error_mm": 6.6438232693192024e-09
+      },
+      {
+        "nodes": [
+          "B7_B5_mid",
+          "B7_B6_mid",
+          "P"
+        ],
+        "lengths_mm": [
+          36.76955262170048,
+          36.76955262170048,
+          36.76955262170048
+        ],
+        "maximum_edge_spread_mm": 0.0,
+        "source_vertex_registration_error_mm": 6.6438232693192024e-09
+      }
+    ],
+    "common_vertices": [
+      "P"
+    ],
+    "shared_apex_count": 1,
+    "structural_nodes": 30,
+    "beam_elements": 52,
+    "fused_rod_crossing_nodes": [
+      "J01",
+      "J02",
+      "J03",
+      "J04",
+      "J05",
+      "J06",
+      "J07",
+      "J08"
+    ],
+    "cut_fraction": 0.5,
+    "cube_edge_mm": 52.0,
+    "unchanged_foot_centers": true,
+    "manufacturing_node_radius_floor_mm": 4.4,
+    "foot_radius_floor_mm": 8.1,
+    "incidence": {
+      "A0": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999999,
+        "patches_may_overlap": false
+      },
+      "A1": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999997,
+        "patches_may_overlap": true
+      },
+      "A2": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999999,
+        "patches_may_overlap": false
+      },
+      "A3": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999997,
+        "patches_may_overlap": true
+      },
+      "A4": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999997,
+        "patches_may_overlap": true
+      },
+      "A6": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999997,
+        "patches_may_overlap": true
+      },
+      "B0": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999999,
+        "patches_may_overlap": false
+      },
+      "B1": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999999,
+        "patches_may_overlap": true
+      },
+      "B2": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999999,
+        "patches_may_overlap": true
+      },
+      "B4": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999999,
+        "patches_may_overlap": false
+      },
+      "B5": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999999,
+        "patches_may_overlap": true
+      },
+      "B6": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999999,
+        "patches_may_overlap": true
+      },
+      "Q_bottom": {
+        "degree": 4,
+        "minimum_incident_angle_degrees": 90.0,
+        "patches_may_overlap": true
+      },
+      "P": {
+        "degree": 8,
+        "minimum_incident_angle_degrees": 16.842116236298835,
+        "patches_may_overlap": true
+      },
+      "A5_A1_mid": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 60.00000000000001,
+        "patches_may_overlap": true
+      },
+      "A5_A4_mid": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 60.00000000000001,
+        "patches_may_overlap": true
+      },
+      "A7_A3_mid": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 60.00000000000001,
+        "patches_may_overlap": true
+      },
+      "A7_A6_mid": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 60.00000000000001,
+        "patches_may_overlap": true
+      },
+      "B3_B1_mid": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 60.00000000000001,
+        "patches_may_overlap": true
+      },
+      "B3_B2_mid": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 60.00000000000001,
+        "patches_may_overlap": true
+      },
+      "B7_B5_mid": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 60.00000000000001,
+        "patches_may_overlap": true
+      },
+      "B7_B6_mid": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 60.00000000000001,
+        "patches_may_overlap": true
+      },
+      "J01": {
+        "degree": 4,
+        "minimum_incident_angle_degrees": 59.99999999999997,
+        "patches_may_overlap": true
+      },
+      "J02": {
+        "degree": 4,
+        "minimum_incident_angle_degrees": 59.99999999999997,
+        "patches_may_overlap": true
+      },
+      "J03": {
+        "degree": 4,
+        "minimum_incident_angle_degrees": 59.99999999999997,
+        "patches_may_overlap": true
+      },
+      "J04": {
+        "degree": 4,
+        "minimum_incident_angle_degrees": 59.99999999999997,
+        "patches_may_overlap": true
+      },
+      "J05": {
+        "degree": 4,
+        "minimum_incident_angle_degrees": 59.999999999999986,
+        "patches_may_overlap": true
+      },
+      "J06": {
+        "degree": 4,
+        "minimum_incident_angle_degrees": 59.999999999999986,
+        "patches_may_overlap": true
+      },
+      "J07": {
+        "degree": 4,
+        "minimum_incident_angle_degrees": 59.999999999999986,
+        "patches_may_overlap": true
+      },
+      "J08": {
+        "degree": 4,
+        "minimum_incident_angle_degrees": 59.999999999999986,
+        "patches_may_overlap": true
+      }
+    }
+  },
+  "iterations": [
+    {
+      "iteration": 0,
+      "changed_nodes": [],
+      "beam_peaks_MPa": {
+        "50": 0.027106425519945944,
+        "100": 0.11410462151991027
+      },
+      "solid_node_peaks_MPa": {
+        "50": 0.016448472690973145,
+        "100": 0.16338482409844785
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "size_mm": 50,
+      "node": "A0",
+      "selected_radius_mm": 8.1,
+      "manufacturing_floor_mm": 8.1,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.006451098831299568,
+      "solid_node_FE_surface_q95_MPa": 0.0035820590282456435,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "A1",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.014698821924558434,
+      "solid_node_FE_surface_q95_MPa": 0.008198143546512092,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "A2",
+      "selected_radius_mm": 8.1,
+      "manufacturing_floor_mm": 8.1,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.006298397722366928,
+      "solid_node_FE_surface_q95_MPa": 0.003489077742322686,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "A3",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.014641565917850985,
+      "solid_node_FE_surface_q95_MPa": 0.00813376470086695,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "A4",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.014884280517191942,
+      "solid_node_FE_surface_q95_MPa": 0.008319025917912429,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "A6",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.014828218452304849,
+      "solid_node_FE_surface_q95_MPa": 0.008275887692800021,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "B0",
+      "selected_radius_mm": 8.1,
+      "manufacturing_floor_mm": 8.1,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.006334178533609081,
+      "solid_node_FE_surface_q95_MPa": 0.0035190213518842125,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "B1",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.015426180986496866,
+      "solid_node_FE_surface_q95_MPa": 0.00847007343487478,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "B2",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.015073296380683852,
+      "solid_node_FE_surface_q95_MPa": 0.008278290623862457,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "B4",
+      "selected_radius_mm": 8.1,
+      "manufacturing_floor_mm": 8.1,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.006451403996955165,
+      "solid_node_FE_surface_q95_MPa": 0.0035821407583316676,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "B5",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.015548856438744927,
+      "solid_node_FE_surface_q95_MPa": 0.008517515477015004,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "B6",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.015195979892922469,
+      "solid_node_FE_surface_q95_MPa": 0.008316112133609336,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "Q_bottom",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.0005270343924244368,
+      "solid_node_FE_surface_q95_MPa": 0.00037817386751844265,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 5
+    },
+    {
+      "size_mm": 50,
+      "node": "P",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.009720490575192057,
+      "solid_node_FE_surface_q95_MPa": 0.006294888871690885,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 9
+    },
+    {
+      "size_mm": 50,
+      "node": "A5_A1_mid",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.006555591964390861,
+      "solid_node_FE_surface_q95_MPa": 0.004062010937824014,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "A5_A4_mid",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.0065098886995337505,
+      "solid_node_FE_surface_q95_MPa": 0.004052585034705502,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "A7_A3_mid",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.0063889408731520585,
+      "solid_node_FE_surface_q95_MPa": 0.003910466762848058,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "A7_A6_mid",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.00634462828943898,
+      "solid_node_FE_surface_q95_MPa": 0.003925750134389122,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "B3_B1_mid",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.0062268411483065444,
+      "solid_node_FE_surface_q95_MPa": 0.003865743643543969,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "B3_B2_mid",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.006270557974983232,
+      "solid_node_FE_surface_q95_MPa": 0.003840017382994594,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "B7_B5_mid",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.006296666955997199,
+      "solid_node_FE_surface_q95_MPa": 0.00394552287929403,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "B7_B6_mid",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.006360786625201568,
+      "solid_node_FE_surface_q95_MPa": 0.0039019686499062066,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 50,
+      "node": "J01",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.01617135420684911,
+      "solid_node_FE_surface_q95_MPa": 0.009634555827272021,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 5
+    },
+    {
+      "size_mm": 50,
+      "node": "J02",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.01614603989716911,
+      "solid_node_FE_surface_q95_MPa": 0.009520987836348858,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 5
+    },
+    {
+      "size_mm": 50,
+      "node": "J03",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.016448472690973145,
+      "solid_node_FE_surface_q95_MPa": 0.009737568197163135,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 5
+    },
+    {
+      "size_mm": 50,
+      "node": "J04",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.01642359841030149,
+      "solid_node_FE_surface_q95_MPa": 0.009644934467462016,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 5
+    },
+    {
+      "size_mm": 50,
+      "node": "J05",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.014581286916552756,
+      "solid_node_FE_surface_q95_MPa": 0.008720524246400888,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 5
+    },
+    {
+      "size_mm": 50,
+      "node": "J06",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.014538306387050826,
+      "solid_node_FE_surface_q95_MPa": 0.00858331461185292,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 5
+    },
+    {
+      "size_mm": 50,
+      "node": "J07",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.014834944417875934,
+      "solid_node_FE_surface_q95_MPa": 0.008771186101726846,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 5
+    },
+    {
+      "size_mm": 50,
+      "node": "J08",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.014792210186953978,
+      "solid_node_FE_surface_q95_MPa": 0.00872176465941129,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 5
+    },
+    {
+      "size_mm": 100,
+      "node": "A0",
+      "selected_radius_mm": 8.1,
+      "manufacturing_floor_mm": 8.1,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.021123485257393524,
+      "solid_node_FE_surface_q95_MPa": 0.012410926677976808,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "A1",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.055058215457067204,
+      "solid_node_FE_surface_q95_MPa": 0.030428323579110756,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "A2",
+      "selected_radius_mm": 8.1,
+      "manufacturing_floor_mm": 8.1,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.017854589971321264,
+      "solid_node_FE_surface_q95_MPa": 0.010538107591018238,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "A3",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.05197926558428699,
+      "solid_node_FE_surface_q95_MPa": 0.029255917877546504,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "A4",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.06360832652231885,
+      "solid_node_FE_surface_q95_MPa": 0.036450627903448676,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "A6",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.0605749754683123,
+      "solid_node_FE_surface_q95_MPa": 0.035472015436343,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "B0",
+      "selected_radius_mm": 8.1,
+      "manufacturing_floor_mm": 8.1,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.019311223788316255,
+      "solid_node_FE_surface_q95_MPa": 0.010230101609133423,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "B1",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.06031487659724256,
+      "solid_node_FE_surface_q95_MPa": 0.03396099889868699,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "B2",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.053306851803008655,
+      "solid_node_FE_surface_q95_MPa": 0.029908637590926233,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "B4",
+      "selected_radius_mm": 8.1,
+      "manufacturing_floor_mm": 8.1,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.024740523894745525,
+      "solid_node_FE_surface_q95_MPa": 0.013027890883853026,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "B5",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.0659036038210775,
+      "solid_node_FE_surface_q95_MPa": 0.03607125592204056,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "B6",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.059000244593714016,
+      "solid_node_FE_surface_q95_MPa": 0.03205326203363386,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "Q_bottom",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.0027728527068040694,
+      "solid_node_FE_surface_q95_MPa": 0.0017029354222974152,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 5
+    },
+    {
+      "size_mm": 100,
+      "node": "P",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.16338482409844785,
+      "solid_node_FE_surface_q95_MPa": 0.0943067418865003,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 9
+    },
+    {
+      "size_mm": 100,
+      "node": "A5_A1_mid",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.038846077251967745,
+      "solid_node_FE_surface_q95_MPa": 0.02240038803502496,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "A5_A4_mid",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.03606623073800997,
+      "solid_node_FE_surface_q95_MPa": 0.022886686246034914,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "A7_A3_mid",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.03463044025172511,
+      "solid_node_FE_surface_q95_MPa": 0.019726280719463474,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "A7_A6_mid",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.03196778649250893,
+      "solid_node_FE_surface_q95_MPa": 0.020909911793231917,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "B3_B1_mid",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.030483875012415118,
+      "solid_node_FE_surface_q95_MPa": 0.020104055243098676,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "B3_B2_mid",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.03260706009385033,
+      "solid_node_FE_surface_q95_MPa": 0.01950244971582658,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "B7_B5_mid",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.036046400615413435,
+      "solid_node_FE_surface_q95_MPa": 0.02328674825346814,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "B7_B6_mid",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.03859864060889688,
+      "solid_node_FE_surface_q95_MPa": 0.02320916339482614,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 4
+    },
+    {
+      "size_mm": 100,
+      "node": "J01",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.06184374904488509,
+      "solid_node_FE_surface_q95_MPa": 0.03628155645624589,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 5
+    },
+    {
+      "size_mm": 100,
+      "node": "J02",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.05564908200924776,
+      "solid_node_FE_surface_q95_MPa": 0.03284946885904625,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 5
+    },
+    {
+      "size_mm": 100,
+      "node": "J03",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.06855199168711548,
+      "solid_node_FE_surface_q95_MPa": 0.03987452290737196,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 5
+    },
+    {
+      "size_mm": 100,
+      "node": "J04",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.06799237801521929,
+      "solid_node_FE_surface_q95_MPa": 0.03699251834279149,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 5
+    },
+    {
+      "size_mm": 100,
+      "node": "J05",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.06561076083392549,
+      "solid_node_FE_surface_q95_MPa": 0.03886997412874403,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 5
+    },
+    {
+      "size_mm": 100,
+      "node": "J06",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.0574893499283595,
+      "solid_node_FE_surface_q95_MPa": 0.03662092616694837,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 5
+    },
+    {
+      "size_mm": 100,
+      "node": "J07",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.06944069483143082,
+      "solid_node_FE_surface_q95_MPa": 0.041129012461142374,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 5
+    },
+    {
+      "size_mm": 100,
+      "node": "J08",
+      "selected_radius_mm": 4.4,
+      "manufacturing_floor_mm": 4.4,
+      "governing_constraint": "manufacturing/contact floor",
+      "solid_node_FE_peak_MPa": 0.0686031644372403,
+      "solid_node_FE_surface_q95_MPa": 0.03851548123010074,
+      "assumed_allowable_MPa": 5.0,
+      "peak_mesh_convergence_verified": false,
+      "member_load_count": 5
+    }
+  ]
+}

@@ -1,0 +1,1908 @@
+{
+  "revision": "R12",
+  "unit": "mm",
+  "nodes": {
+    "A0": [
+      -26.0,
+      0,
+      7.2
+    ],
+    "A1": [
+      -26.0,
+      36.76955262170048,
+      43.96955262170048
+    ],
+    "A2": [
+      26.0,
+      0,
+      7.2
+    ],
+    "A3": [
+      26.0,
+      36.76955262170048,
+      43.96955262170048
+    ],
+    "A4": [
+      -26.0,
+      -36.76955262170048,
+      43.96955262170048
+    ],
+    "A6": [
+      26.0,
+      -36.76955262170048,
+      43.96955262170048
+    ],
+    "B0": [
+      0,
+      26.0,
+      7.2
+    ],
+    "B1": [
+      -36.76955262170048,
+      26.0,
+      43.96955262170048
+    ],
+    "B2": [
+      36.76955262170048,
+      26.0,
+      43.96955262170048
+    ],
+    "B4": [
+      0,
+      -26.0,
+      7.2
+    ],
+    "B5": [
+      -36.76955262170048,
+      -26.0,
+      43.96955262170048
+    ],
+    "B6": [
+      36.76955262170048,
+      -26.0,
+      43.96955262170048
+    ],
+    "Q_bottom": [
+      0,
+      0,
+      7.2
+    ],
+    "P": [
+      0,
+      0,
+      80.73910524340096
+    ],
+    "A5_A1_mid": [
+      -26.0,
+      18.38477631085024,
+      62.354328932550715
+    ],
+    "A5_A4_mid": [
+      -26.0,
+      -18.38477631085024,
+      62.354328932550715
+    ],
+    "A7_A3_mid": [
+      26.0,
+      18.38477631085024,
+      62.354328932550715
+    ],
+    "A7_A6_mid": [
+      26.0,
+      -18.38477631085024,
+      62.354328932550715
+    ],
+    "B3_B1_mid": [
+      -18.38477631085024,
+      26.0,
+      62.354328932550715
+    ],
+    "B3_B2_mid": [
+      18.38477631085024,
+      26.0,
+      62.354328932550715
+    ],
+    "B7_B5_mid": [
+      -18.38477631085024,
+      -26.0,
+      62.354328932550715
+    ],
+    "B7_B6_mid": [
+      18.38477631085024,
+      -26.0,
+      62.354328932550715
+    ],
+    "J01": [
+      -25.999999999999993,
+      26.0,
+      33.199999999999996
+    ],
+    "J02": [
+      25.999999999999993,
+      26.0,
+      33.199999999999996
+    ],
+    "J03": [
+      -25.999999999999993,
+      -26.0,
+      33.199999999999996
+    ],
+    "J04": [
+      25.999999999999993,
+      -26.0,
+      33.199999999999996
+    ],
+    "J05": [
+      -26.0,
+      26.0,
+      54.73910524340095
+    ],
+    "J06": [
+      26.0,
+      26.0,
+      54.73910524340095
+    ],
+    "J07": [
+      -26.0,
+      -26.0,
+      54.73910524340095
+    ],
+    "J08": [
+      26.0,
+      -26.0,
+      54.73910524340095
+    ]
+  },
+  "edges": [
+    [
+      "A0",
+      "J01"
+    ],
+    [
+      "J01",
+      "A1"
+    ],
+    [
+      "A0",
+      "Q_bottom"
+    ],
+    [
+      "Q_bottom",
+      "A2"
+    ],
+    [
+      "A0",
+      "J03"
+    ],
+    [
+      "J03",
+      "A4"
+    ],
+    [
+      "A1",
+      "A3"
+    ],
+    [
+      "A2",
+      "J02"
+    ],
+    [
+      "J02",
+      "A3"
+    ],
+    [
+      "A2",
+      "J04"
+    ],
+    [
+      "J04",
+      "A6"
+    ],
+    [
+      "A4",
+      "A6"
+    ],
+    [
+      "B0",
+      "J01"
+    ],
+    [
+      "J01",
+      "B1"
+    ],
+    [
+      "B0",
+      "J02"
+    ],
+    [
+      "J02",
+      "B2"
+    ],
+    [
+      "B0",
+      "Q_bottom"
+    ],
+    [
+      "Q_bottom",
+      "B4"
+    ],
+    [
+      "B1",
+      "B5"
+    ],
+    [
+      "B2",
+      "B6"
+    ],
+    [
+      "B4",
+      "J03"
+    ],
+    [
+      "J03",
+      "B5"
+    ],
+    [
+      "B4",
+      "J04"
+    ],
+    [
+      "J04",
+      "B6"
+    ],
+    [
+      "A1",
+      "J05"
+    ],
+    [
+      "J05",
+      "A5_A1_mid"
+    ],
+    [
+      "A4",
+      "J07"
+    ],
+    [
+      "J07",
+      "A5_A4_mid"
+    ],
+    [
+      "A5_A1_mid",
+      "A5_A4_mid"
+    ],
+    [
+      "A5_A4_mid",
+      "P"
+    ],
+    [
+      "P",
+      "A5_A1_mid"
+    ],
+    [
+      "A3",
+      "J06"
+    ],
+    [
+      "J06",
+      "A7_A3_mid"
+    ],
+    [
+      "A6",
+      "J08"
+    ],
+    [
+      "J08",
+      "A7_A6_mid"
+    ],
+    [
+      "A7_A3_mid",
+      "A7_A6_mid"
+    ],
+    [
+      "A7_A6_mid",
+      "P"
+    ],
+    [
+      "P",
+      "A7_A3_mid"
+    ],
+    [
+      "B1",
+      "J05"
+    ],
+    [
+      "J05",
+      "B3_B1_mid"
+    ],
+    [
+      "B2",
+      "J06"
+    ],
+    [
+      "J06",
+      "B3_B2_mid"
+    ],
+    [
+      "B3_B1_mid",
+      "B3_B2_mid"
+    ],
+    [
+      "B3_B2_mid",
+      "P"
+    ],
+    [
+      "P",
+      "B3_B1_mid"
+    ],
+    [
+      "B5",
+      "J07"
+    ],
+    [
+      "J07",
+      "B7_B5_mid"
+    ],
+    [
+      "B6",
+      "J08"
+    ],
+    [
+      "J08",
+      "B7_B6_mid"
+    ],
+    [
+      "B7_B5_mid",
+      "B7_B6_mid"
+    ],
+    [
+      "B7_B6_mid",
+      "P"
+    ],
+    [
+      "P",
+      "B7_B5_mid"
+    ]
+  ],
+  "radii_mm": {
+    "A0": 8.1,
+    "A1": 4.4,
+    "A2": 8.1,
+    "A3": 4.4,
+    "A4": 4.4,
+    "A6": 4.4,
+    "B0": 8.1,
+    "B1": 4.4,
+    "B2": 4.4,
+    "B4": 8.1,
+    "B5": 4.4,
+    "B6": 4.4,
+    "Q_bottom": 4.4,
+    "P": 4.4,
+    "A5_A1_mid": 4.4,
+    "A5_A4_mid": 4.4,
+    "A7_A3_mid": 4.4,
+    "A7_A6_mid": 4.4,
+    "B3_B1_mid": 4.4,
+    "B3_B2_mid": 4.4,
+    "B7_B5_mid": 4.4,
+    "B7_B6_mid": 4.4,
+    "J01": 4.4,
+    "J02": 4.4,
+    "J03": 4.4,
+    "J04": 4.4,
+    "J05": 4.4,
+    "J06": 4.4,
+    "J07": 4.4,
+    "J08": 4.4
+  },
+  "feet": [
+    "A0",
+    "A2",
+    "B0",
+    "B4"
+  ],
+  "rod_diameter_mm": 6.4,
+  "top_triangles": [
+    [
+      "A5_A1_mid",
+      "A5_A4_mid",
+      "P"
+    ],
+    [
+      "A7_A3_mid",
+      "A7_A6_mid",
+      "P"
+    ],
+    [
+      "B3_B1_mid",
+      "B3_B2_mid",
+      "P"
+    ],
+    [
+      "B7_B5_mid",
+      "B7_B6_mid",
+      "P"
+    ]
+  ],
+  "top_side_lengths_mm": [
+    [
+      36.76955262170048,
+      36.76955262170048,
+      36.76955262170048
+    ],
+    [
+      36.76955262170048,
+      36.76955262170048,
+      36.76955262170048
+    ],
+    [
+      36.76955262170048,
+      36.76955262170048,
+      36.76955262170048
+    ],
+    [
+      36.76955262170048,
+      36.76955262170048,
+      36.76955262170048
+    ]
+  ],
+  "bevel_bands": 1,
+  "case_specific_graphs": true,
+  "all_edge_endpoints_have_spheres": true,
+  "tooth_anchor_mm": [
+    0,
+    0,
+    80.73910524340096
+  ],
+  "source_geometry": {
+    "file": "DoubleCube_CommonPoint_Height100mm(1).stl",
+    "sha256": "0520a5e7b449174a31883b816588c8b6383bbe81da1fe240adff2a878c09d922",
+    "triangles": 72,
+    "source_original_cube_edge_mm": 70.71067811865476,
+    "target_original_cube_edge_mm": 52.0,
+    "uniform_scale": 0.7353910524340094,
+    "translation_mm": [
+      0,
+      0,
+      7.2
+    ],
+    "cut_fraction": 0.5,
+    "four_equilateral_common_point_triangles": true,
+    "shared_vertex": "P",
+    "source_STL_watertight": true,
+    "source_STL_winding_consistent": true,
+    "note": "STL sets cut triangle planes and topology; structural rods follow the original two cubes plus the four cut perimeters. Internal polyhedron union seams are not added as rods. Every crossing of existing rods is fused and split into one shared structural node."
+  },
+  "geometry_validation": {
+    "triangles": [
+      {
+        "nodes": [
+          "A5_A1_mid",
+          "A5_A4_mid",
+          "P"
+        ],
+        "lengths_mm": [
+          36.76955262170048,
+          36.76955262170048,
+          36.76955262170048
+        ],
+        "maximum_edge_spread_mm": 0.0,
+        "source_vertex_registration_error_mm": 6.6438232693192024e-09
+      },
+      {
+        "nodes": [
+          "A7_A3_mid",
+          "A7_A6_mid",
+          "P"
+        ],
+        "lengths_mm": [
+          36.76955262170048,
+          36.76955262170048,
+          36.76955262170048
+        ],
+        "maximum_edge_spread_mm": 0.0,
+        "source_vertex_registration_error_mm": 6.6438232693192024e-09
+      },
+      {
+        "nodes": [
+          "B3_B1_mid",
+          "B3_B2_mid",
+          "P"
+        ],
+        "lengths_mm": [
+          36.76955262170048,
+          36.76955262170048,
+          36.76955262170048
+        ],
+        "maximum_edge_spread_mm": 0.0,
+        "source_vertex_registration_error_mm": 6.6438232693192024e-09
+      },
+      {
+        "nodes": [
+          "B7_B5_mid",
+          "B7_B6_mid",
+          "P"
+        ],
+        "lengths_mm": [
+          36.76955262170048,
+          36.76955262170048,
+          36.76955262170048
+        ],
+        "maximum_edge_spread_mm": 0.0,
+        "source_vertex_registration_error_mm": 6.6438232693192024e-09
+      }
+    ],
+    "common_vertices": [
+      "P"
+    ],
+    "shared_apex_count": 1,
+    "structural_nodes": 30,
+    "beam_elements": 52,
+    "fused_rod_crossing_nodes": [
+      "J01",
+      "J02",
+      "J03",
+      "J04",
+      "J05",
+      "J06",
+      "J07",
+      "J08"
+    ],
+    "cut_fraction": 0.5,
+    "cube_edge_mm": 52.0,
+    "unchanged_foot_centers": true,
+    "manufacturing_node_radius_floor_mm": 4.4,
+    "foot_radius_floor_mm": 8.1,
+    "incidence": {
+      "A0": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999999,
+        "patches_may_overlap": false
+      },
+      "A1": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999997,
+        "patches_may_overlap": true
+      },
+      "A2": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999999,
+        "patches_may_overlap": false
+      },
+      "A3": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999997,
+        "patches_may_overlap": true
+      },
+      "A4": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999997,
+        "patches_may_overlap": true
+      },
+      "A6": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999997,
+        "patches_may_overlap": true
+      },
+      "B0": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999999,
+        "patches_may_overlap": false
+      },
+      "B1": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999999,
+        "patches_may_overlap": true
+      },
+      "B2": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999999,
+        "patches_may_overlap": true
+      },
+      "B4": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999999,
+        "patches_may_overlap": false
+      },
+      "B5": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999999,
+        "patches_may_overlap": true
+      },
+      "B6": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 89.99999999999999,
+        "patches_may_overlap": true
+      },
+      "Q_bottom": {
+        "degree": 4,
+        "minimum_incident_angle_degrees": 90.0,
+        "patches_may_overlap": true
+      },
+      "P": {
+        "degree": 8,
+        "minimum_incident_angle_degrees": 16.842116236298835,
+        "patches_may_overlap": true
+      },
+      "A5_A1_mid": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 60.00000000000001,
+        "patches_may_overlap": true
+      },
+      "A5_A4_mid": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 60.00000000000001,
+        "patches_may_overlap": true
+      },
+      "A7_A3_mid": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 60.00000000000001,
+        "patches_may_overlap": true
+      },
+      "A7_A6_mid": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 60.00000000000001,
+        "patches_may_overlap": true
+      },
+      "B3_B1_mid": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 60.00000000000001,
+        "patches_may_overlap": true
+      },
+      "B3_B2_mid": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 60.00000000000001,
+        "patches_may_overlap": true
+      },
+      "B7_B5_mid": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 60.00000000000001,
+        "patches_may_overlap": true
+      },
+      "B7_B6_mid": {
+        "degree": 3,
+        "minimum_incident_angle_degrees": 60.00000000000001,
+        "patches_may_overlap": true
+      },
+      "J01": {
+        "degree": 4,
+        "minimum_incident_angle_degrees": 59.99999999999997,
+        "patches_may_overlap": true
+      },
+      "J02": {
+        "degree": 4,
+        "minimum_incident_angle_degrees": 59.99999999999997,
+        "patches_may_overlap": true
+      },
+      "J03": {
+        "degree": 4,
+        "minimum_incident_angle_degrees": 59.99999999999997,
+        "patches_may_overlap": true
+      },
+      "J04": {
+        "degree": 4,
+        "minimum_incident_angle_degrees": 59.99999999999997,
+        "patches_may_overlap": true
+      },
+      "J05": {
+        "degree": 4,
+        "minimum_incident_angle_degrees": 59.999999999999986,
+        "patches_may_overlap": true
+      },
+      "J06": {
+        "degree": 4,
+        "minimum_incident_angle_degrees": 59.999999999999986,
+        "patches_may_overlap": true
+      },
+      "J07": {
+        "degree": 4,
+        "minimum_incident_angle_degrees": 59.999999999999986,
+        "patches_may_overlap": true
+      },
+      "J08": {
+        "degree": 4,
+        "minimum_incident_angle_degrees": 59.999999999999986,
+        "patches_may_overlap": true
+      }
+    }
+  },
+  "sizing_constraints": {
+    "rod_radius_mm": 3.2,
+    "radial_solid_ligament_mm": 1.2,
+    "radial_ligament_is_assumed_manufacturing_constraint": true,
+    "foot_center_height_mm": 7.2,
+    "minimum_flat_contact_disk_radius_mm": 3.5,
+    "foot_radius_formula": "ceil_0.1(sqrt(foot_center_height^2 + contact_radius^2))",
+    "patch_overlap_allowed_for_fused_rod_branches": true,
+    "nominal_allowable_MPa": 5.0,
+    "allowable_is_assumed_not_measured": true,
+    "gravity_load_factor": 3,
+    "caution": "Individual load patches are allowed to overlap at fused near-parallel branches. Requiring disjoint patches would enlarge the common apex sphere until neighbouring short branches disappear. Stress checks use superposed balanced tractions on the same solid node."
+  },
+  "cases": {
+    "50": {
+      "size_mm": 50,
+      "revision": "R12",
+      "frame_scale": 1,
+      "root_clearance_mm": 0.35,
+      "root_wall_mm": 2.2,
+      "root_height_mm": 20,
+      "root_base_z_mm": 79.53910827636719,
+      "tooling_pitch_mm": 0.05,
+      "ct_native_spacing_um": 18,
+      "tooth_anchor_mm": [
+        0,
+        0,
+        80.73910524340096
+      ],
+      "tooth_display_scale": 0.5,
+      "frame_graph": {
+        "nodes": {
+          "A0": [
+            -26.0,
+            0,
+            7.2
+          ],
+          "A1": [
+            -26.0,
+            36.76955262170048,
+            43.96955262170048
+          ],
+          "A2": [
+            26.0,
+            0,
+            7.2
+          ],
+          "A3": [
+            26.0,
+            36.76955262170048,
+            43.96955262170048
+          ],
+          "A4": [
+            -26.0,
+            -36.76955262170048,
+            43.96955262170048
+          ],
+          "A6": [
+            26.0,
+            -36.76955262170048,
+            43.96955262170048
+          ],
+          "B0": [
+            0,
+            26.0,
+            7.2
+          ],
+          "B1": [
+            -36.76955262170048,
+            26.0,
+            43.96955262170048
+          ],
+          "B2": [
+            36.76955262170048,
+            26.0,
+            43.96955262170048
+          ],
+          "B4": [
+            0,
+            -26.0,
+            7.2
+          ],
+          "B5": [
+            -36.76955262170048,
+            -26.0,
+            43.96955262170048
+          ],
+          "B6": [
+            36.76955262170048,
+            -26.0,
+            43.96955262170048
+          ],
+          "Q_bottom": [
+            0,
+            0,
+            7.2
+          ],
+          "P": [
+            0,
+            0,
+            80.73910524340096
+          ],
+          "A5_A1_mid": [
+            -26.0,
+            18.38477631085024,
+            62.354328932550715
+          ],
+          "A5_A4_mid": [
+            -26.0,
+            -18.38477631085024,
+            62.354328932550715
+          ],
+          "A7_A3_mid": [
+            26.0,
+            18.38477631085024,
+            62.354328932550715
+          ],
+          "A7_A6_mid": [
+            26.0,
+            -18.38477631085024,
+            62.354328932550715
+          ],
+          "B3_B1_mid": [
+            -18.38477631085024,
+            26.0,
+            62.354328932550715
+          ],
+          "B3_B2_mid": [
+            18.38477631085024,
+            26.0,
+            62.354328932550715
+          ],
+          "B7_B5_mid": [
+            -18.38477631085024,
+            -26.0,
+            62.354328932550715
+          ],
+          "B7_B6_mid": [
+            18.38477631085024,
+            -26.0,
+            62.354328932550715
+          ],
+          "J01": [
+            -25.999999999999993,
+            26.0,
+            33.199999999999996
+          ],
+          "J02": [
+            25.999999999999993,
+            26.0,
+            33.199999999999996
+          ],
+          "J03": [
+            -25.999999999999993,
+            -26.0,
+            33.199999999999996
+          ],
+          "J04": [
+            25.999999999999993,
+            -26.0,
+            33.199999999999996
+          ],
+          "J05": [
+            -26.0,
+            26.0,
+            54.73910524340095
+          ],
+          "J06": [
+            26.0,
+            26.0,
+            54.73910524340095
+          ],
+          "J07": [
+            -26.0,
+            -26.0,
+            54.73910524340095
+          ],
+          "J08": [
+            26.0,
+            -26.0,
+            54.73910524340095
+          ]
+        },
+        "edges": [
+          [
+            "A0",
+            "J01"
+          ],
+          [
+            "J01",
+            "A1"
+          ],
+          [
+            "A0",
+            "Q_bottom"
+          ],
+          [
+            "Q_bottom",
+            "A2"
+          ],
+          [
+            "A0",
+            "J03"
+          ],
+          [
+            "J03",
+            "A4"
+          ],
+          [
+            "A1",
+            "A3"
+          ],
+          [
+            "A2",
+            "J02"
+          ],
+          [
+            "J02",
+            "A3"
+          ],
+          [
+            "A2",
+            "J04"
+          ],
+          [
+            "J04",
+            "A6"
+          ],
+          [
+            "A4",
+            "A6"
+          ],
+          [
+            "B0",
+            "J01"
+          ],
+          [
+            "J01",
+            "B1"
+          ],
+          [
+            "B0",
+            "J02"
+          ],
+          [
+            "J02",
+            "B2"
+          ],
+          [
+            "B0",
+            "Q_bottom"
+          ],
+          [
+            "Q_bottom",
+            "B4"
+          ],
+          [
+            "B1",
+            "B5"
+          ],
+          [
+            "B2",
+            "B6"
+          ],
+          [
+            "B4",
+            "J03"
+          ],
+          [
+            "J03",
+            "B5"
+          ],
+          [
+            "B4",
+            "J04"
+          ],
+          [
+            "J04",
+            "B6"
+          ],
+          [
+            "A1",
+            "J05"
+          ],
+          [
+            "J05",
+            "A5_A1_mid"
+          ],
+          [
+            "A4",
+            "J07"
+          ],
+          [
+            "J07",
+            "A5_A4_mid"
+          ],
+          [
+            "A5_A1_mid",
+            "A5_A4_mid"
+          ],
+          [
+            "A5_A4_mid",
+            "P"
+          ],
+          [
+            "P",
+            "A5_A1_mid"
+          ],
+          [
+            "A3",
+            "J06"
+          ],
+          [
+            "J06",
+            "A7_A3_mid"
+          ],
+          [
+            "A6",
+            "J08"
+          ],
+          [
+            "J08",
+            "A7_A6_mid"
+          ],
+          [
+            "A7_A3_mid",
+            "A7_A6_mid"
+          ],
+          [
+            "A7_A6_mid",
+            "P"
+          ],
+          [
+            "P",
+            "A7_A3_mid"
+          ],
+          [
+            "B1",
+            "J05"
+          ],
+          [
+            "J05",
+            "B3_B1_mid"
+          ],
+          [
+            "B2",
+            "J06"
+          ],
+          [
+            "J06",
+            "B3_B2_mid"
+          ],
+          [
+            "B3_B1_mid",
+            "B3_B2_mid"
+          ],
+          [
+            "B3_B2_mid",
+            "P"
+          ],
+          [
+            "P",
+            "B3_B1_mid"
+          ],
+          [
+            "B5",
+            "J07"
+          ],
+          [
+            "J07",
+            "B7_B5_mid"
+          ],
+          [
+            "B6",
+            "J08"
+          ],
+          [
+            "J08",
+            "B7_B6_mid"
+          ],
+          [
+            "B7_B5_mid",
+            "B7_B6_mid"
+          ],
+          [
+            "B7_B6_mid",
+            "P"
+          ],
+          [
+            "P",
+            "B7_B5_mid"
+          ]
+        ],
+        "radii_mm": {
+          "A0": 8.1,
+          "A1": 4.4,
+          "A2": 8.1,
+          "A3": 4.4,
+          "A4": 4.4,
+          "A6": 4.4,
+          "B0": 8.1,
+          "B1": 4.4,
+          "B2": 4.4,
+          "B4": 8.1,
+          "B5": 4.4,
+          "B6": 4.4,
+          "Q_bottom": 4.4,
+          "P": 4.4,
+          "A5_A1_mid": 4.4,
+          "A5_A4_mid": 4.4,
+          "A7_A3_mid": 4.4,
+          "A7_A6_mid": 4.4,
+          "B3_B1_mid": 4.4,
+          "B3_B2_mid": 4.4,
+          "B7_B5_mid": 4.4,
+          "B7_B6_mid": 4.4,
+          "J01": 4.4,
+          "J02": 4.4,
+          "J03": 4.4,
+          "J04": 4.4,
+          "J05": 4.4,
+          "J06": 4.4,
+          "J07": 4.4,
+          "J08": 4.4
+        },
+        "feet": [
+          "A0",
+          "A2",
+          "B0",
+          "B4"
+        ],
+        "rod_diameter_mm": 6.4,
+        "top_triangles": [
+          [
+            "A5_A1_mid",
+            "A5_A4_mid",
+            "P"
+          ],
+          [
+            "A7_A3_mid",
+            "A7_A6_mid",
+            "P"
+          ],
+          [
+            "B3_B1_mid",
+            "B3_B2_mid",
+            "P"
+          ],
+          [
+            "B7_B5_mid",
+            "B7_B6_mid",
+            "P"
+          ]
+        ]
+      },
+      "bevel_bands": 1,
+      "top_transition": "Four equilateral source-cut triangle loops, one shared apex P; t=0.50a",
+      "parts": [
+        {
+          "triangles": 883450,
+          "vertices": 441673,
+          "watertight": true,
+          "winding_consistent": true,
+          "components": 1,
+          "all_edges_have_two_incident_faces": true,
+          "zero_area_faces": 0,
+          "volume_mm3": 51653.064009946895,
+          "center_mm": [
+            -0.023350801410006367,
+            0.42751145866587553,
+            43.66084006825624
+          ],
+          "bounds_mm": [
+            [
+              -41.169551849365234,
+              -41.169551849365234,
+              0.0
+            ],
+            [
+              41.169551849365234,
+              41.169551849365234,
+              100.73910522460938
+            ]
+          ],
+          "file": "Support_R12_50mm_main.stl",
+          "sha256": "2abdd74c163940197fe9a76a15335ab17651944fc4a56953707b5b3180364c40",
+          "bytes": 44172584,
+          "cleanup_tolerance_mm": 0.0001,
+          "microscopic_components_removed_mm3": [],
+          "coincident_vertex_weld_decimal_places": 6,
+          "coincident_vertices_welded": 12,
+          "coincident_weld_maximum_possible_displacement_mm": 1.7320508075688771e-06,
+          "holes_filled": false,
+          "packed_file": "50mm-main.bin",
+          "packed_sha256": "5e406544fdeabd995d16173337f595049e0eccb4761eaf4035b77339a9941389"
+        },
+        {
+          "triangles": 463298,
+          "vertices": 231647,
+          "watertight": true,
+          "winding_consistent": true,
+          "components": 1,
+          "all_edges_have_two_incident_faces": true,
+          "zero_area_faces": 0,
+          "volume_mm3": 2766.5201937431934,
+          "center_mm": [
+            -0.566522039265275,
+            -4.450779306937973,
+            91.67178383647612
+          ],
+          "bounds_mm": [
+            [
+              -24.350000381469727,
+              -7.697975158691406,
+              79.53910827636719
+            ],
+            [
+              24.399999618530273,
+              -0.0020000000949949026,
+              100.73910522460938
+            ]
+          ],
+          "file": "Support_R12_50mm_cap.stl",
+          "sha256": "12d7068ea60f7e6e3b4df987286b36ee5273def17045fd540799c05af1f864d8",
+          "bytes": 23164984,
+          "cleanup_tolerance_mm": 0.0,
+          "microscopic_components_removed_mm3": [],
+          "coincident_vertex_weld_decimal_places": 5,
+          "coincident_vertices_welded": 13,
+          "coincident_weld_maximum_possible_displacement_mm": 1.7320508075688774e-05,
+          "holes_filled": false,
+          "packed_file": "50mm-cap.bin",
+          "packed_sha256": "f4e16281b10ffcfd529e331d9eb353a3adf0eefc397b3e5d6425cd658df102e1"
+        }
+      ],
+      "resin_volume_ml": 54.419584203690086,
+      "resin_center_mm": [
+        -0.05096391569920595,
+        0.1795145268356064,
+        46.10156517483363
+      ],
+      "frame_bounds_mm": [
+        [
+          -41.169552621700475,
+          -41.169552621700475,
+          0.0
+        ],
+        [
+          41.169552621700475,
+          41.169552621700475,
+          85.13910524340096
+        ]
+      ],
+      "all_edge_endpoints_have_spheres": true,
+      "native_surface_clearance": {
+        "revision": "R12",
+        "size_mm": 50,
+        "source_faces_audited": 74293846,
+        "source_chunks_verified": 75,
+        "minimum_clearance_mm": 0.35,
+        "passed": true,
+        "physical_print_fit_tested": false,
+        "tooth_geometry_modified": false,
+        "tooth_rigid_translation_mm": [
+          0.0,
+          0.0,
+          -6.0
+        ],
+        "front_cap_additional_withdrawal_mm": 0.002,
+        "tests": {
+          "main_cap_intersection_mm3": 0.0,
+          "cap_withdrawal_0.5mm_intersection_mm3": 0.0,
+          "cap_withdrawal_1mm_intersection_mm3": 0.0,
+          "cap_withdrawal_2mm_intersection_mm3": 0.0,
+          "cap_withdrawal_5mm_intersection_mm3": 0.0,
+          "cap_withdrawal_10mm_intersection_mm3": 0.0,
+          "cap_withdrawal_40mm_intersection_mm3": 0.0,
+          "main_native_protected_envelope_intersection_mm3": 0.0,
+          "cap_native_protected_envelope_intersection_mm3": 0.0
+        },
+        "method": "All source vertex profiles with measured maximum native triangle edge, guarded swept envelopes, and independent protected-envelope intersections against final rounded STL.",
+        "continuous_cap_withdrawal_corridor_mm": 44.9,
+        "independent_corridor_XZ_clearance_mm": 0.01,
+        "continuous_corridor_intersection_mm3": 0.0
+      },
+      "geometry_checks": {
+        "main_cap_intersection_mm3": 0.0,
+        "cap_withdrawal_0.5mm_intersection_mm3": 0.0,
+        "cap_withdrawal_1mm_intersection_mm3": 0.0,
+        "cap_withdrawal_2mm_intersection_mm3": 0.0,
+        "cap_withdrawal_5mm_intersection_mm3": 0.0,
+        "cap_withdrawal_10mm_intersection_mm3": 0.0,
+        "cap_withdrawal_40mm_intersection_mm3": 0.0,
+        "main_native_protected_envelope_intersection_mm3": 0.0,
+        "cap_native_protected_envelope_intersection_mm3": 0.0
+      },
+      "native_74M_collision_test_completed": true,
+      "status": "digitally_fitted_source_correct_candidate",
+      "seconds": 39.66228699684143,
+      "notes": [
+        "Native tooth geometry and existing numerical stress fields are unchanged.",
+        "The complete source-correct frame is new analytic high-resolution CAD, not subdivision of legacy planar triangles.",
+        "Socket, fasteners, contact and strength are not solved as a fully coupled continuum.",
+        "Physical print retention/strength are untested."
+      ]
+    },
+    "100": {
+      "size_mm": 100,
+      "revision": "R12",
+      "frame_scale": 1,
+      "root_clearance_mm": 0.45,
+      "root_wall_mm": 3.4,
+      "root_height_mm": 40,
+      "root_base_z_mm": 79.53910827636719,
+      "tooling_pitch_mm": 0.1,
+      "ct_native_spacing_um": 18,
+      "tooth_anchor_mm": [
+        0,
+        0,
+        80.73910524340096
+      ],
+      "tooth_display_scale": 1.0,
+      "frame_graph": {
+        "nodes": {
+          "A0": [
+            -26.0,
+            0,
+            7.2
+          ],
+          "A1": [
+            -26.0,
+            36.76955262170048,
+            43.96955262170048
+          ],
+          "A2": [
+            26.0,
+            0,
+            7.2
+          ],
+          "A3": [
+            26.0,
+            36.76955262170048,
+            43.96955262170048
+          ],
+          "A4": [
+            -26.0,
+            -36.76955262170048,
+            43.96955262170048
+          ],
+          "A6": [
+            26.0,
+            -36.76955262170048,
+            43.96955262170048
+          ],
+          "B0": [
+            0,
+            26.0,
+            7.2
+          ],
+          "B1": [
+            -36.76955262170048,
+            26.0,
+            43.96955262170048
+          ],
+          "B2": [
+            36.76955262170048,
+            26.0,
+            43.96955262170048
+          ],
+          "B4": [
+            0,
+            -26.0,
+            7.2
+          ],
+          "B5": [
+            -36.76955262170048,
+            -26.0,
+            43.96955262170048
+          ],
+          "B6": [
+            36.76955262170048,
+            -26.0,
+            43.96955262170048
+          ],
+          "Q_bottom": [
+            0,
+            0,
+            7.2
+          ],
+          "P": [
+            0,
+            0,
+            80.73910524340096
+          ],
+          "A5_A1_mid": [
+            -26.0,
+            18.38477631085024,
+            62.354328932550715
+          ],
+          "A5_A4_mid": [
+            -26.0,
+            -18.38477631085024,
+            62.354328932550715
+          ],
+          "A7_A3_mid": [
+            26.0,
+            18.38477631085024,
+            62.354328932550715
+          ],
+          "A7_A6_mid": [
+            26.0,
+            -18.38477631085024,
+            62.354328932550715
+          ],
+          "B3_B1_mid": [
+            -18.38477631085024,
+            26.0,
+            62.354328932550715
+          ],
+          "B3_B2_mid": [
+            18.38477631085024,
+            26.0,
+            62.354328932550715
+          ],
+          "B7_B5_mid": [
+            -18.38477631085024,
+            -26.0,
+            62.354328932550715
+          ],
+          "B7_B6_mid": [
+            18.38477631085024,
+            -26.0,
+            62.354328932550715
+          ],
+          "J01": [
+            -25.999999999999993,
+            26.0,
+            33.199999999999996
+          ],
+          "J02": [
+            25.999999999999993,
+            26.0,
+            33.199999999999996
+          ],
+          "J03": [
+            -25.999999999999993,
+            -26.0,
+            33.199999999999996
+          ],
+          "J04": [
+            25.999999999999993,
+            -26.0,
+            33.199999999999996
+          ],
+          "J05": [
+            -26.0,
+            26.0,
+            54.73910524340095
+          ],
+          "J06": [
+            26.0,
+            26.0,
+            54.73910524340095
+          ],
+          "J07": [
+            -26.0,
+            -26.0,
+            54.73910524340095
+          ],
+          "J08": [
+            26.0,
+            -26.0,
+            54.73910524340095
+          ]
+        },
+        "edges": [
+          [
+            "A0",
+            "J01"
+          ],
+          [
+            "J01",
+            "A1"
+          ],
+          [
+            "A0",
+            "Q_bottom"
+          ],
+          [
+            "Q_bottom",
+            "A2"
+          ],
+          [
+            "A0",
+            "J03"
+          ],
+          [
+            "J03",
+            "A4"
+          ],
+          [
+            "A1",
+            "A3"
+          ],
+          [
+            "A2",
+            "J02"
+          ],
+          [
+            "J02",
+            "A3"
+          ],
+          [
+            "A2",
+            "J04"
+          ],
+          [
+            "J04",
+            "A6"
+          ],
+          [
+            "A4",
+            "A6"
+          ],
+          [
+            "B0",
+            "J01"
+          ],
+          [
+            "J01",
+            "B1"
+          ],
+          [
+            "B0",
+            "J02"
+          ],
+          [
+            "J02",
+            "B2"
+          ],
+          [
+            "B0",
+            "Q_bottom"
+          ],
+          [
+            "Q_bottom",
+            "B4"
+          ],
+          [
+            "B1",
+            "B5"
+          ],
+          [
+            "B2",
+            "B6"
+          ],
+          [
+            "B4",
+            "J03"
+          ],
+          [
+            "J03",
+            "B5"
+          ],
+          [
+            "B4",
+            "J04"
+          ],
+          [
+            "J04",
+            "B6"
+          ],
+          [
+            "A1",
+            "J05"
+          ],
+          [
+            "J05",
+            "A5_A1_mid"
+          ],
+          [
+            "A4",
+            "J07"
+          ],
+          [
+            "J07",
+            "A5_A4_mid"
+          ],
+          [
+            "A5_A1_mid",
+            "A5_A4_mid"
+          ],
+          [
+            "A5_A4_mid",
+            "P"
+          ],
+          [
+            "P",
+            "A5_A1_mid"
+          ],
+          [
+            "A3",
+            "J06"
+          ],
+          [
+            "J06",
+            "A7_A3_mid"
+          ],
+          [
+            "A6",
+            "J08"
+          ],
+          [
+            "J08",
+            "A7_A6_mid"
+          ],
+          [
+            "A7_A3_mid",
+            "A7_A6_mid"
+          ],
+          [
+            "A7_A6_mid",
+            "P"
+          ],
+          [
+            "P",
+            "A7_A3_mid"
+          ],
+          [
+            "B1",
+            "J05"
+          ],
+          [
+            "J05",
+            "B3_B1_mid"
+          ],
+          [
+            "B2",
+            "J06"
+          ],
+          [
+            "J06",
+            "B3_B2_mid"
+          ],
+          [
+            "B3_B1_mid",
+            "B3_B2_mid"
+          ],
+          [
+            "B3_B2_mid",
+            "P"
+          ],
+          [
+            "P",
+            "B3_B1_mid"
+          ],
+          [
+            "B5",
+            "J07"
+          ],
+          [
+            "J07",
+            "B7_B5_mid"
+          ],
+          [
+            "B6",
+            "J08"
+          ],
+          [
+            "J08",
+            "B7_B6_mid"
+          ],
+          [
+            "B7_B5_mid",
+            "B7_B6_mid"
+          ],
+          [
+            "B7_B6_mid",
+            "P"
+          ],
+          [
+            "P",
+            "B7_B5_mid"
+          ]
+        ],
+        "radii_mm": {
+          "A0": 8.1,
+          "A1": 4.4,
+          "A2": 8.1,
+          "A3": 4.4,
+          "A4": 4.4,
+          "A6": 4.4,
+          "B0": 8.1,
+          "B1": 4.4,
+          "B2": 4.4,
+          "B4": 8.1,
+          "B5": 4.4,
+          "B6": 4.4,
+          "Q_bottom": 4.4,
+          "P": 4.4,
+          "A5_A1_mid": 4.4,
+          "A5_A4_mid": 4.4,
+          "A7_A3_mid": 4.4,
+          "A7_A6_mid": 4.4,
+          "B3_B1_mid": 4.4,
+          "B3_B2_mid": 4.4,
+          "B7_B5_mid": 4.4,
+          "B7_B6_mid": 4.4,
+          "J01": 4.4,
+          "J02": 4.4,
+          "J03": 4.4,
+          "J04": 4.4,
+          "J05": 4.4,
+          "J06": 4.4,
+          "J07": 4.4,
+          "J08": 4.4
+        },
+        "feet": [
+          "A0",
+          "A2",
+          "B0",
+          "B4"
+        ],
+        "rod_diameter_mm": 6.4,
+        "top_triangles": [
+          [
+            "A5_A1_mid",
+            "A5_A4_mid",
+            "P"
+          ],
+          [
+            "A7_A3_mid",
+            "A7_A6_mid",
+            "P"
+          ],
+          [
+            "B3_B1_mid",
+            "B3_B2_mid",
+            "P"
+          ],
+          [
+            "B7_B5_mid",
+            "B7_B6_mid",
+            "P"
+          ]
+        ]
+      },
+      "bevel_bands": 1,
+      "top_transition": "Four equilateral source-cut triangle loops, one shared apex P; t=0.50a",
+      "parts": [
+        {
+          "triangles": 1021558,
+          "vertices": 510727,
+          "watertight": true,
+          "winding_consistent": true,
+          "components": 1,
+          "all_edges_have_two_incident_faces": true,
+          "zero_area_faces": 0,
+          "volume_mm3": 65016.307435022645,
+          "center_mm": [
+            -0.6590486708689351,
+            1.689865424095371,
+            57.14485092911193
+          ],
+          "bounds_mm": [
+            [
+              -43.722930908203125,
+              -41.169551849365234,
+              0.0
+            ],
+            [
+              41.169551849365234,
+              41.169551849365234,
+              121.839111328125
+            ]
+          ],
+          "file": "Support_R12_100mm_main.stl",
+          "sha256": "36860b32bc0d1d44178c581cfd8a6bbae853a22c9917ee478b1eceb576be790a",
+          "bytes": 51077984,
+          "cleanup_tolerance_mm": 0.0,
+          "microscopic_components_removed_mm3": [],
+          "coincident_vertex_weld_decimal_places": null,
+          "coincident_vertices_welded": 0,
+          "coincident_weld_maximum_possible_displacement_mm": null,
+          "holes_filled": false,
+          "packed_file": "100mm-main.bin",
+          "packed_sha256": "126092dc072602ed34bb9808d7ab608d2e741d33b7b9f098d696afaa937d52bf"
+        },
+        {
+          "triangles": 508830,
+          "vertices": 254411,
+          "watertight": true,
+          "winding_consistent": true,
+          "components": 1,
+          "all_edges_have_two_incident_faces": true,
+          "zero_area_faces": 0,
+          "volume_mm3": 15196.979637235285,
+          "center_mm": [
+            -2.709078238449433,
+            -8.94343761930576,
+            103.77730090948299
+          ],
+          "bounds_mm": [
+            [
+              -43.722930908203125,
+              -15.761870384216309,
+              79.53910827636719
+            ],
+            [
+              40.82754135131836,
+              1.7054479122161865,
+              121.839111328125
+            ]
+          ],
+          "file": "Support_R12_100mm_cap.stl",
+          "sha256": "f0223a36fde48f49efefd16d32ddfd302425eaa70b0c092bec96ea770989be8f",
+          "bytes": 25441584,
+          "cleanup_tolerance_mm": 0.0,
+          "microscopic_components_removed_mm3": [],
+          "coincident_vertex_weld_decimal_places": null,
+          "coincident_vertices_welded": 0,
+          "coincident_weld_maximum_possible_displacement_mm": null,
+          "holes_filled": false,
+          "packed_file": "100mm-cap.bin",
+          "packed_sha256": "049830fe9c90a5534478fb7aab072c0386cb008c05d7dfc7cfe64649c87df722"
+        }
+      ],
+      "resin_volume_ml": 80.21328707225794,
+      "resin_center_mm": [
+        -1.0474414014421982,
+        -0.32468971664523244,
+        65.97970134669555
+      ],
+      "frame_bounds_mm": [
+        [
+          -41.169552621700475,
+          -41.169552621700475,
+          0.0
+        ],
+        [
+          41.169552621700475,
+          41.169552621700475,
+          85.13910524340096
+        ]
+      ],
+      "all_edge_endpoints_have_spheres": true,
+      "native_surface_clearance": {
+        "revision": "R12",
+        "size_mm": 100,
+        "source_faces_audited": 74293846,
+        "source_chunks_verified": 75,
+        "minimum_clearance_mm": 0.45,
+        "passed": true,
+        "physical_print_fit_tested": false,
+        "tooth_geometry_modified": false,
+        "tooth_rigid_translation_mm": [
+          0.0,
+          0.0,
+          -6.0
+        ],
+        "front_cap_additional_withdrawal_mm": 0.002,
+        "tests": {
+          "main_cap_intersection_mm3": 0.0,
+          "cap_withdrawal_0.5mm_intersection_mm3": 0.0,
+          "cap_withdrawal_1mm_intersection_mm3": 0.0,
+          "cap_withdrawal_2mm_intersection_mm3": 0.0,
+          "cap_withdrawal_5mm_intersection_mm3": 0.0,
+          "cap_withdrawal_10mm_intersection_mm3": 0.0,
+          "cap_withdrawal_40mm_intersection_mm3": 0.0,
+          "main_native_protected_envelope_intersection_mm3": 0.0,
+          "cap_native_protected_envelope_intersection_mm3": 0.0
+        },
+        "method": "All source vertex profiles with measured maximum native triangle edge, guarded swept envelopes, and independent protected-envelope intersections against final rounded STL."
+      },
+      "geometry_checks": {
+        "main_cap_intersection_mm3": 0.0,
+        "cap_withdrawal_0.5mm_intersection_mm3": 0.0,
+        "cap_withdrawal_1mm_intersection_mm3": 0.0,
+        "cap_withdrawal_2mm_intersection_mm3": 0.0,
+        "cap_withdrawal_5mm_intersection_mm3": 0.0,
+        "cap_withdrawal_10mm_intersection_mm3": 0.0,
+        "cap_withdrawal_40mm_intersection_mm3": 0.0,
+        "main_native_protected_envelope_intersection_mm3": 0.0,
+        "cap_native_protected_envelope_intersection_mm3": 0.0
+      },
+      "native_74M_collision_test_completed": true,
+      "status": "digitally_fitted_source_correct_candidate",
+      "seconds": 25.477859258651733,
+      "notes": [
+        "Native tooth geometry and existing numerical stress fields are unchanged.",
+        "The complete source-correct frame is new analytic high-resolution CAD, not subdivision of legacy planar triangles.",
+        "Socket, fasteners, contact and strength are not solved as a fully coupled continuum.",
+        "Physical print retention/strength are untested."
+      ]
+    }
+  },
+  "frame_note": "Both physical sizes use the uploaded half-edge-trimmed dual-cube graph, four equilateral triangles and one common apex. Real rod crossings are fused in CAD and frame mechanics.",
+  "radius_design_record": "radius-design.json",
+  "mechanics_recomputed_from_exact_CAD_mass": true
+}
