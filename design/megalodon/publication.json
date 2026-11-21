@@ -1,95 +1,111 @@
 {
-  "revision": "R10",
+  "revision": "R12",
   "canonical_url": "https://eliguli712.github.io/Antiterrastrae/design/megalodon/",
-  "asset_commit": "20ee6acf54e4d168eb2762205600bfe81bc0e19f",
-  "source_commit": "2adff30c56a0c9e0d4a3e03470b6386a1f9f7a00",
-  "native_field_values_per_size": 39428327,
-  "unsupported_native_display_vertices": 0,
-  "fixed_boundary_retest": "Passed for both sizes",
-  "cv_cover": "First supplied desktop screenshot; original image bytes, shared by research and art entrances",
-  "cv_cover_sha256": "0b3a0ad3f0a8b4616239beef1974007d64484ac3612e0d2eb6809fadebee616c",
-  "support_100mm": "Original R2.1 CAD masters restored, one upper transition, 18 nodes and 28 beams",
-  "support_50mm": "Independent smaller socket, unchanged lower frame, two upper bevel bands, 27 nodes and 50 beams",
-  "beams_recomputed": {
-    "50mm": {
-      "max_vm_MPa": 0.05939293802728602,
-      "max_displacement_mm": 0.00859099738095909
-    },
-    "100mm": {
-      "max_vm_MPa": 0.24759247550249153,
-      "max_displacement_mm": 0.03385046793536078
+  "default_edition": "refined",
+  "legacy_page": "legacy.html",
+  "legacy_baseline_commit": "b7ea6ee8480a672cd58fb7570e7cf957f1680513",
+  "uploaded_geometry_source": {
+    "file": "DoubleCube_CommonPoint_Height100mm(1).stl",
+    "sha256": "0520a5e7b449174a31883b816588c8b6383bbe81da1fe240adff2a878c09d922",
+    "triangles": 72,
+    "source_original_cube_edge_mm": 70.71067811865476,
+    "target_original_cube_edge_mm": 52.0,
+    "uniform_scale": 0.7353910524340094,
+    "translation_mm": [
+      0,
+      0,
+      7.2
+    ],
+    "cut_fraction": 0.5,
+    "four_equilateral_common_point_triangles": true,
+    "shared_vertex": "P",
+    "source_STL_watertight": true,
+    "source_STL_winding_consistent": true,
+    "note": "STL sets cut triangle planes and topology; structural rods follow the original two cubes plus the four cut perimeters. Internal polyhedron union seams are not added as rods. Every crossing of existing rods is fused and split into one shared structural node."
+  },
+  "support_geometry": {
+    "original_cube_edge_mm": 52,
+    "source_triangle_loops": 4,
+    "shared_apex_count": 1,
+    "shared_apex_mm": [
+      0,
+      0,
+      80.73910524340096
+    ],
+    "equilateral_triangle_side_mm": 36.76955262170048,
+    "source_cut_fraction": 0.5,
+    "nodes": 30,
+    "beams": 52,
+    "real_fused_rod_crossings": 8,
+    "ordinary_node_radius_mm": 4.4,
+    "foot_radius_mm": 8.1,
+    "analytic_sphere_segments": 192,
+    "rod_circular_segments": 224
+  },
+  "support_mechanics": {
+    "independent_5cm_and_10cm_assemblies": true,
+    "actual_CAD_mass_and_centroid_used": true,
+    "tooth_mass_and_eccentric_gravity_moment_from_native_material": true,
+    "global_model": "Euler\u2013Bernoulli, with separate Timoshenko sensitivity",
+    "node_model": "3D solid and 1.2 mm hollow-wall research submodels",
+    "Chien_shell_equations_implemented": false,
+    "local_peak_mesh_convergence_verified": false,
+    "physical_print_fit_or_strength_tested": false,
+    "beam_peak_MPa": {
+      "50": 0.027106425519945944,
+      "100": 0.11410462151991027
     }
   },
-  "native_tooth_fem": "Existing R7 projected independently solved proxy fields retained; native porous volume has not been solved",
-  "native_rendering": {
-    "faces": 74293846,
-    "resident_source_chunks": 1,
-    "workers": 1,
-    "maximum_framebuffer_pixels": 1800000,
-    "actual_source_controller_test": "75 native geometry and scalar chunks, all faces, one maximum resident source chunk",
-    "gpu_visual_execution_tested": false,
-    "no_webgl_fallback": "Complete native source plates plus interactive software preview",
-    "compressed_cache_bytes": 33554432,
-    "zero_copy_decoded_views": true,
-    "idle_delay_ms": 120,
-    "pose_composite_reuse": true,
-    "frustum_culling": "Conservative original per-chunk AABBs; source triangles unchanged",
-    "render_targets": 2,
-    "depth_preserved_during_composition": true,
-    "local_detail_regression": "16 mm frustum: 17/75 chunks; 30614539 culled vertices independently checked outside view"
-  },
-  "posters": "Original EN/DE/IT artwork and centred Kakeya QR preserved byte-for-byte. New self-contained LaTeX PDF-background wrapper packages compile successfully; all 12 pages pixel-identical at 150 dpi. 24 PDF/compiled-output QR scan tests passed.",
-  "native_array_lifetime": "CPU attribute arrays and precomputed bounds remain valid until the current chunk GPU fence; geometry and arrays released together afterwards",
-  "native_failure_controls": "Controller disposed before error status is emitted; native-load control becomes retryable",
-  "default_palette": "Original restored studio Turbo LUT, linearly interpolated; independent R7 field values unchanged",
-  "optional_palettes": [
-    "logarithmic",
-    "pearlescent wash"
-  ],
-  "native_regression": "Both sizes: 75 real chunks, 74293846 source faces, 150 post-upload bounds passes, one resident source chunk; cancellation, failure recovery and cached-pose recomposition checked",
-  "gpu_visual_execution_tested": false,
-  "native_regression_audit": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/20ee6acf54e4d168eb2762205600bfe81bc0e19f/assets/native-controller-validation-r10.json",
-  "previous_geometry_and_field_assets": "Existing pinned R7/R9 asset commits remain unchanged",
-  "retained_original_art_pages": [
-    "studio.html",
-    "dual-scale-original-posters.html"
-  ],
-  "print_orientation": {
-    "method": "Complete convex-hull face and nonparallel edge-pair candidates with independent whole-sphere branch-and-bound certificate",
-    "source": "Complete current R8 manufacturing STL surfaces, including spherical nodes, no triangle reduction",
-    "numeric_certificate_tolerance_mm": 1e-05,
-    "candidate_axes": 1928100,
-    "branch_and_bound_cells": 98968,
-    "minimum_heights_mm": {
-      "50_main": 83.079379974,
-      "50_cap": 7.550000191,
-      "50_assembly": 83.079379974,
-      "100_main": 83.079379974,
-      "100_cap": 14.740634996,
-      "100_assembly": 83.079379974
-    },
-    "exclusions": [
-      "tooth",
-      "screws",
-      "print supports",
-      "raft"
+  "native_tooth": {
+    "faces_per_size": 74293846,
+    "source_unique_vertices": 37951699,
+    "original_internal_void_surfaces_retained": true,
+    "source_coordinates_or_stored_tooth_fields_edited": false,
+    "scene_rigid_translation_mm": [
+      0,
+      0,
+      -6
     ],
-    "formal_interval_proof": false,
-    "smooth_analytic_cad_sphere_claim": false
+    "native_porous_volume_FEM_solved": false,
+    "current_colour_field_domain": "Previously independently solved closed mechanical proxy, explicitly distinguished in page and downloads"
   },
-  "fixed_annotation": "Locally foldable native details, persistent state; pointer input isolated from model gestures",
-  "latex_editability": "Wrapper and links editable. Original poster body remains the preserved PDF artwork background.",
-  "performance_validation": {
-    "software_warm_frame_mean_ms_before": 557.234,
-    "software_warm_frame_mean_ms_after": 466.371,
-    "software_pixels_identical": true,
-    "scope": "Node worker adapter with actual light geometry and seven poses; not device FPS",
-    "depth_shader": "Actual GLSL rendered on surfaceless Mesa OpenGL ES 3.2; copy color and depth verified",
-    "physical_mobile_gpu_tested": false
+  "rendering": {
+    "default_palette": "Original continuous linear 256-entry Turbo gradient",
+    "optional_palettes": [
+      "logarithmic Turbo",
+      "pearlescent wash"
+    ],
+    "shared_display_limits_MPa": [
+      0.2531670947190341,
+      250.5221326467093
+    ],
+    "all_native_faces_rendered_in_each_plate": true,
+    "complete_native_detail": "Bounded one-chunk compositing with cancellation and cached pose refresh",
+    "maximum_source_resident_chunks": 1,
+    "maximum_render_target_pixels": 1800000,
+    "real_Three_upload_and_null_array_regression_passed": true,
+    "browser_QA_route": "CPU fallback; GPU visual execution and Safari device testing were not available",
+    "software_fallback_FEM_spheres": "Original 642-vertex numerical surface; GPU presentation refines to 2562 without changing source values."
   },
-  "validation_urls": [
-    "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/20ee6acf54e4d168eb2762205600bfe81bc0e19f/assets/native-performance-validation-r10.json",
-    "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/20ee6acf54e4d168eb2762205600bfe81bc0e19f/assets/software-performance-validation-r10.json",
-    "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/20ee6acf54e4d168eb2762205600bfe81bc0e19f/assets/depth-composition-validation-r10.json"
-  ]
+  "download_paths": {
+    "support": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/d2b106f38bf0938fb0c5a08fc4356aac20c5d40c/assets/support-r12/",
+    "oriented_STLs": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/d2b106f38bf0938fb0c5a08fc4356aac20c5d40c/assets/print-height-r12/",
+    "native_plates": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/d2b106f38bf0938fb0c5a08fc4356aac20c5d40c/assets/native-plates-r12/"
+  },
+  "minimum_assembled_print_height_mm": {
+    "50": 81.04020771758441,
+    "100": 81.04020771758441
+  },
+  "validation_files": [
+    "source-registration-audit.json",
+    "manufacturing-validation.json",
+    "mechanics-validation.json",
+    "native-details-validation-r12.json",
+    "display-refinement-validation.json",
+    "reproduction-validation.json"
+  ],
+  "retained_source_commit": "69e84abb5f6c5e36af384964929d327ad465f07f",
+  "support_data_workflow_commit": "7118cab34d762f90d41f81a41a476a66dcc7e40c",
+  "immutable_asset_commit": "d2b106f38bf0938fb0c5a08fc4356aac20c5d40c",
+  "verified_asset_files": 79
 }
