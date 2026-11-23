@@ -38,11 +38,11 @@ B.A. candidate, Mathematics & Computer Science
 
 **Han, E. (2026).** [Tooth-scale Stress Localisation in a micro-CT-derived Otodus megalodon Model: Calibrated Geometry, Numerical Verification and Regional Sensitivity.](https://eliguli712.github.io/Antiterrastrae/publications/reader.html?paper=megalodon-current-preprint)
 
-Preprint · 12 pages · 19 November 2026
+Preprint · 12 pages · 23 November 2026
 
-Calibrated CT geometry, controlled numerical stress experiments, regional quantile stability, material and attachment sensitivity, and registered axial field comparisons under stated modelling assumptions. Includes public native, optimised and 200M exterior data links.
+Calibrated CT geometry, regional quantile stability, same-domain P1/P2 verification, material-interface and attachment sensitivity, an independently verified full-objective 10 kPa neo-Hookean jaw control, conservative jaw-to-root transfer and unit-margin tensile responses. Includes public native, optimised, exact 200M exterior and raw numerical-field archives under stated modelling assumptions.
 
-[LaTeX source package](https://eliguli712.github.io/Antiterrastrae/publications/megalodon-current-preprint-source.zip) · [Preserved 9-page edition](https://eliguli712.github.io/Antiterrastrae/publications/reader.html?paper=megalodon-9page-report)
+[LaTeX source package](https://eliguli712.github.io/Antiterrastrae/publications/megalodon-current-preprint-source.zip) · [10 kPa objective jaw data](https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/DebunkMeg_Jaw_Objective_10kPa_NH_2026-11-23.zip) · [Jaw–tooth edge-transfer data](https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/DebunkMeg_Jaw_Tooth_Edge_Transfer_2026-11-23.zip) · [Raw A2/A3 fields](https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/DebunkMeg_Regional_Fields_A2_A3_2026-11-22.zip) · [Preserved 9-page edition](https://eliguli712.github.io/Antiterrastrae/publications/reader.html?paper=megalodon-9page-report)
 
 ## Selected Research & Computational Projects
 

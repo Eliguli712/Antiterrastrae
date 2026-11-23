@@ -11,8 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 PUBLICATIONS = ROOT / 'publications'
 DOCUMENTS = [
     ('megalodon-current-preprint', 'Tooth-scale Stress Localisation in a µCT-derived Otodus megalodon Model',
-     'Computational biomechanics', 'Preprint', '19 November 2026',
-     'Calibrated CT geometry, regional stress quantiles, targeted mesh refinement, material and attachment sensitivity, and registered axial field comparisons. Includes public native, optimised and 200M exterior data links.'),
+     'Computational biomechanics', 'Preprint', '23 November 2026',
+     'Calibrated CT geometry, regional stress quantiles, P1/P2 verification, interface and attachment sensitivity, an independently verified full-objective 10 kPa neo-Hookean jaw control, conservative jaw-to-root transfer and unit-margin tensile responses. Includes public native, optimised, 200M exterior and raw numerical-field links.'),
     ('megalodon-9page-report', 'Tooth-scale Stress Localisation in a µCT-derived Otodus megalodon Model',
      'Research archive', 'Legacy 9-page edition', '31 October 2026',
      'The unchanged nine-page edition, retained alongside the current preprint and earlier reports.'),
