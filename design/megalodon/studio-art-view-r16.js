@@ -10,12 +10,16 @@ async function getJSON(url){
  return response.json();
 }
 
-function artTooth(){
+function artTooth(finish='resin'){
  // These are the original studio Art display colours and material parameters.
- const material=new THREE.MeshPhysicalMaterial({
+ const resin={
   color:0xffffff,roughness:.19,metalness:.035,transmission:.12,thickness:1.2,
   ior:1.49,clearcoat:1,clearcoatRoughness:.065,envMapIntensity:1.15,side:THREE.DoubleSide
- });
+ };
+ const material=new THREE.MeshPhysicalMaterial(finish==='abs'?{
+  ...resin,roughness:.49,metalness:0,transmission:0,thickness:0,
+  clearcoat:.12,clearcoatRoughness:.3,envMapIntensity:.7
+ }:resin);
  const colour=hex=>`vec3(${new THREE.Color(hex).toArray().map(channel=>channel.toFixed(8)).join(',')})`;
  material.onBeforeCompile=shader=>{
   shader.vertexShader=shader.vertexShader
@@ -31,7 +35,7 @@ function artTooth(){
  return material;
 }
 
-export async function mountStudioArt(container){
+export async function mountStudioArt(container,{onCapMove=()=>{}}={}){
  const viewer=new ModelViewer(container,await getJSON(modelURL));
  try{
   await viewer.load();
@@ -44,7 +48,9 @@ export async function mountStudioArt(container){
   throw error;
  }
  const oldTooth=viewer.tooth.material;
- viewer.tooth.material=artTooth();
+ const toothFinishes={resin:artTooth()};
+ viewer.tooth.material=toothFinishes.resin;
+ container.dataset.toothFinish='resin';
  oldTooth.dispose();
  const glass=new THREE.MeshPhysicalMaterial({
   color:0xa9c1ce,roughness:.065,metalness:0,transmission:.96,thickness:6.4,
@@ -102,6 +108,122 @@ export async function mountStudioArt(container){
  }
  viewer.controls.addEventListener('change',invalidate);
  new ResizeObserver(invalidate).observe(container);
+
+ const surface=viewer.renderer.domElement;
+ const capSeat=viewer.cap.position.clone();
+ const picker=new THREE.Raycaster();
+ const pointer=new THREE.Vector2();
+ const intersection=new THREE.Vector3();
+ const reportPosition=()=>{
+  const offset=viewer.cap.position.clone().sub(capSeat).toArray();
+  container.dataset.capPosition=offset.map(value=>value.toFixed(3)).join(',');
+  onCapMove(offset);
+  invalidate();
+ };
+ let capMode='vertical',drag=null;
+ surface.tabIndex=0;
+ surface.setAttribute('aria-label',container.getAttribute('aria-label'));
+ surface.setAttribute('aria-describedby','studioArtStatus studioArtCapHelp');
+
+ function pointerRay(event){
+  const rect=surface.getBoundingClientRect();
+  pointer.set(2*(event.clientX-rect.left)/rect.width-1,1-2*(event.clientY-rect.top)/rect.height);
+  viewer.camera.updateMatrixWorld();
+  picker.setFromCamera(pointer,viewer.camera);
+ }
+ function stopCapDrag(){
+  if(!drag)return;
+  const {id}=drag;
+  drag=null;
+  viewer.controls.enabled=true;
+  container.classList.remove('studio-cap-drag-active');
+  if(surface.hasPointerCapture(id))surface.releasePointerCapture(id);
+ }
+ function resetCap(){
+  stopCapDrag();
+  viewer.cap.position.copy(capSeat);
+  reportPosition();
+ }
+ function setCapDistance(value){
+  if(capMode==='free'||!Number.isFinite(value))return;
+  const distance=THREE.MathUtils.clamp(value,0,40);
+  viewer.cap.position.copy(capSeat);
+  if(capMode==='rail'){
+   // Archived assembly travel, along the model's negative Y axis.
+   viewer.cap.position.y-=distance;
+  }else{
+   viewer.cap.position.z+=distance;
+  }
+  reportPosition();
+ }
+ function setCapMode(next){
+  if(!['vertical','free','rail'].includes(next))return;
+  stopCapDrag();
+  capMode=next;
+  container.dataset.capMode=next;
+  if(next==='free')reportPosition();
+  else setCapDistance(next==='rail'?
+   capSeat.y-viewer.cap.position.y:viewer.cap.position.z-capSeat.z);
+ }
+
+ surface.addEventListener('pointerdown',event=>{
+  if(capMode!=='free'||drag||!event.isPrimary||event.button!==0)return;
+  pointerRay(event);
+  viewer.cap.updateWorldMatrix(true,false);
+  const hit=picker.intersectObject(viewer.cap,false)[0];
+  if(!hit)return;
+  const plane=new THREE.Plane().setFromNormalAndCoplanarPoint(
+   viewer.camera.getWorldDirection(new THREE.Vector3()),hit.point);
+  drag={id:event.pointerId,plane,grab:hit.point.clone(),position:viewer.cap.position.clone()};
+  viewer.controls.enabled=false;
+  container.classList.add('studio-cap-drag-active');
+  surface.focus({preventScroll:true});
+  surface.setPointerCapture(event.pointerId);
+  event.preventDefault();
+  event.stopImmediatePropagation();
+ },true);
+ surface.addEventListener('pointermove',event=>{
+  if(!drag||event.pointerId!==drag.id)return;
+  pointerRay(event);
+  if(picker.ray.intersectPlane(drag.plane,intersection)){
+   viewer.cap.position.copy(drag.position).add(intersection.sub(drag.grab));
+   reportPosition();
+  }
+  event.preventDefault();
+  event.stopImmediatePropagation();
+ },true);
+ for(const type of ['pointerup','pointercancel','lostpointercapture']){
+  surface.addEventListener(type,event=>{
+   if(!drag||event.pointerId!==drag.id)return;
+   stopCapDrag();
+   event.stopImmediatePropagation();
+  },true);
+ }
+ surface.addEventListener('keydown',event=>{
+  if(event.key==='Escape'){
+   event.preventDefault();
+   resetCap();
+   return;
+  }
+  if(capMode!=='free'||event.altKey||event.ctrlKey||event.metaKey)return;
+  const step=event.shiftKey?5:1;
+  const moves={
+   ArrowRight:[0,step],ArrowLeft:[0,-step],ArrowUp:[1,step],ArrowDown:[1,-step],
+   PageUp:[2,step],PageDown:[2,-step]
+  };
+  if(!Object.hasOwn(moves,event.key))return;
+  const [axis,distance]=moves[event.key];
+  const direction=new THREE.Vector3(0,0,1);
+  if(axis<2){
+   viewer.camera.updateMatrixWorld();
+   direction.setFromMatrixColumn(viewer.camera.matrixWorld,axis);
+  }
+  event.preventDefault();
+  viewer.cap.position.addScaledVector(direction,distance);
+  reportPosition();
+ });
+ setCapMode(capMode);
+
  function reset(){
   viewer.controls.target.set(0,0,93);
   viewer.camera.position.set(235,-470,257);
@@ -115,9 +237,19 @@ export async function mountStudioArt(container){
   setVisible(on){
    visible=on;
    if(on){viewer.resize();invalidate();}
+   else stopCapDrag();
   },
   reset,
-  setCap(distance){viewer.openCap(distance);invalidate();},
+  setCapMode,
+  resetCap,
+  setCap:setCapDistance,
+  setToothFinish(finish){
+   if(!['resin','abs'].includes(finish))return;
+   toothFinishes[finish]??=artTooth(finish);
+   viewer.tooth.material=toothFinishes[finish];
+   container.dataset.toothFinish=finish;
+   invalidate();
+  },
   async setRuler(on){
    showRuler=on;
    if(on&&!rulerTask)rulerTask=getJSON(rulerURL).then(data=>{

@@ -1,9 +1,9 @@
 import{SOURCE_CACHE,digest}from'./native-store-r15.js?v=1';
-const SHELL='megalodon-shell-r15-v5';
-const files=['./','./exhibition.css','./native-batch-r14.css?v=1','./native-shared-r15.css?v=3','./native-app-r15.js?v=3','./native-engine-r15.js?v=3','./native-content-r15.js?v=1','./native-stream-r15.js?v=2','./native-store-r15.js?v=1','./native-section-r15.js?v=1','./native-contours-r15.js?v=1','./native-panels-r15.js?v=3','./cad-palaeo-ruler-r14.js?v=1','./vendor/three.module.js','./vendor/OrbitControls.js','./assets/native74-batch-publication.json?v=1','./assets/native-interactive-publication.json?v=2','./assets/curved-zone-guide.json?v=2'];
+const SHELL='megalodon-shell-r15-v6';
+const files=['./','./exhibition.css','./native-batch-r14.css?v=1','./native-shared-r15.css?v=3','./native-app-r15.js?v=4','./native-engine-r15.js?v=3','./native-content-r15.js?v=1','./native-stream-r15.js?v=2','./native-store-r15.js?v=1','./native-section-r15.js?v=1','./native-contours-r15.js?v=1','./native-panels-r15.js?v=4','./cad-palaeo-ruler-r14.js?v=1','./vendor/three.module.js','./vendor/OrbitControls.js','./assets/native74-batch-publication.json?v=1','./assets/native-interactive-publication.json?v=3','./assets/curved-zone-guide.json?v=2','./assets/native-cut-playback/Native74_Internal_PCA_Axis_1_maximum_section.png','./assets/native-cut-playback/Native74_Internal_PCA_Axis_2_maximum_section.png','./assets/native-cut-playback/Native74_Internal_PCA_Axis_3_maximum_section.png'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(SHELL).then(async c=>{await Promise.allSettled(files.map(f=>c.add(f)));await self.skipWaiting();})));
 self.addEventListener('activate',e=>e.waitUntil(self.clients.claim()));
-const catalogueURL='./assets/native-interactive-publication.json?v=2';
+const catalogueURL='./assets/native-interactive-publication.json?v=3';
 let catalogue;
 async function loadMovieCatalogue(){
  const cache=await caches.open(SHELL);

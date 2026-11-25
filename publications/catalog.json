@@ -9,15 +9,16 @@
       "date": "25 November 2026",
       "description": "Calibrated CT geometry, regional stress quantiles, and same-domain P1/P2 verification. Twelve fitted tooth–jaw finite-element cases test how attachment stiffness and loading direction redistribute principal tensile stress at the cutting margins. Includes native-surface figures, material and attachment sensitivity, and links to public geometry and numerical data.",
       "pages": 12,
-      "bytes": 47555360,
-      "sha256": "7e6372c2d24155a4f658345e496d630f0eb8bd9cd69e732b31f99e7074193b20",
+      "bytes": 47555924,
+      "sha256": "6905920cd7796f5e113027bab1e844f98257ccbc94694b8b52d664de1022ac09",
       "axis_data_file": "megalodon-archive-axis-data.zip",
       "p1_p2_data_file": "megalodon-P1-P2-validation.zip",
       "interface_data_file": "megalodon-interface-validation.zip",
       "threshold_data_file": "megalodon-threshold-validation.zip",
       "jaw_data_url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/DebunkMeg_Jaw_Objective_10kPa_NH_2026-11-23.zip",
       "transfer_data_url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/DebunkMeg_Jaw_Tooth_Edge_Transfer_2026-11-23.zip",
-      "regional_data_url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/DebunkMeg_Regional_Fields_A2_A3_2026-11-22.zip"
+      "regional_data_url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/DebunkMeg_Regional_Fields_A2_A3_2026-11-22.zip",
+      "source_file": "megalodon-2026-11-25-qian-source.zip"
     },
     {
       "id": "megalodon-2026-11-25-ct-mechanics",

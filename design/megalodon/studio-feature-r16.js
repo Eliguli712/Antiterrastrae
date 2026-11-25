@@ -7,7 +7,21 @@ const translations = {
   studioExactPop: ['Open art station', 'Kunststation öffnen', 'Άνοιγμα καλλιτεχνικής προβολής'],
   studioExactCap: ['Cap withdrawal video', 'Video zum Ausziehen der Kappe', 'Βίντεο απόσυρσης καλύμματος'],
   studioExactField: ['Original 3MF colours and stress field', 'Originale 3MF-Farben und Spannungsfeld', 'Αρχικά χρώματα 3MF και πεδίο τάσεων'],
-  studioExactBench: ['Open the assembly and calculations workbench', 'Arbeitsbereich für Montage und Berechnung öffnen', 'Άνοιγμα χώρου συναρμολόγησης και υπολογισμών']
+  studioExactBench: ['Open the assembly and calculations workbench', 'Arbeitsbereich für Montage und Berechnung öffnen', 'Άνοιγμα χώρου συναρμολόγησης και υπολογισμών'],
+  studioCapMotion: ['Cap motion', 'Kappenbewegung', 'Κίνηση καλύμματος'],
+  studioCapVertical: ['Vertical lift', 'Vertikal anheben', 'Κατακόρυφη ανύψωση'],
+  studioCapFree: ['Free drag', 'Frei ziehen', 'Ελεύθερη μετακίνηση'],
+  studioCapRail: ['Original slide rail', 'Ursprüngliche Führung', 'Αρχικός οδηγός ολίσθησης'],
+  studioCapReset: ['Reset cap', 'Kappe zurücksetzen', 'Επαναφορά καλύμματος'],
+  studioToothFinish: ['Tooth finish', 'Zahnoberfläche', 'Φινίρισμα δοντιού'],
+  studioResinFinish: ['Cobalt resin', 'Kobaltharz', 'Ρητίνη κοβαλτίου'],
+  studioABSFinish: ['ABS plastic', 'ABS-Kunststoff', 'Πλαστικό ABS'],
+  studioFinishHelp: ['Changes the tooth appearance. The stand and cap keep their original materials.', 'Ändert das Aussehen des Zahns. Ständer und Kappe behalten ihre Originalmaterialien.', 'Αλλάζει την εμφάνιση του δοντιού. Η βάση και το κάλυμμα διατηρούν τα αρχικά υλικά τους.'],
+  studioLiftMeasure: ['Lift cap', 'Kappe anheben', 'Ανύψωση καλύμματος'],
+  studioRailMeasure: ['Withdraw cap', 'Kappe ausziehen', 'Απόσυρση καλύμματος'],
+  studioVerticalHelp: ['Lift the cap straight up from 0 to 40 mm.', 'Kappe von 0 bis 40 mm senkrecht anheben.', 'Ανύψωση του καλύμματος κατακόρυφα από 0 έως 40 mm.'],
+  studioRailHelp: ['Slide the cap 0–40 mm along the original CAD rail.', 'Kappe auf der ursprünglichen CAD-Führung um 0–40 mm verschieben.', 'Ολίσθηση του καλύμματος κατά 0–40 mm στον αρχικό οδηγό CAD.'],
+  studioFreeHelp: ['Drag the cap to move it. Drag elsewhere to rotate. With the view focused, use the arrow keys to move, Page Up or Page Down to change height, or Escape to reset the cap.', 'Kappe zum Verschieben ziehen. Zum Drehen außerhalb der Kappe ziehen. In der fokussierten Ansicht Pfeiltasten zum Verschieben, Bild auf oder Bild ab für die Höhe und Esc zum Zurücksetzen verwenden.', 'Σύρετε το κάλυμμα για να το μετακινήσετε. Σύρετε αλλού για περιστροφή. Με εστιασμένη την προβολή, χρησιμοποιήστε τα βέλη για μετακίνηση, Page Up ή Page Down για το ύψος ή Esc για επαναφορά.']
 };
 const {applyLanguage} = await import('./i18n.js');
 window.designI18n.register(translations);
@@ -39,8 +53,36 @@ if (root.dataset.studioDisplay === 'workbench') {
   const stage=element('studioArtworkStage'),canvas=element('studioArtCanvas'),photo=element('studioArtwork');
   const interactive=element('studioInteractive'),reference=element('studioReference');
   const navigation=element('studioArtNavigation'),status=element('studioArtStatus');
-  const cap=element('studioArtCap');
+  const cap=element('studioArtCap'),capControls=element('studioArtCapControls');
+  const capMode=element('studioArtCapMode'),capSlider=element('studioArtCapSlide');
+  const capPosition=element('studioArtCapPosition'),capHelp=element('studioArtCapHelp');
+  const toothFinish=element('studioArtToothFinish');
+  let capOffset=[0,0,0];
   let mode='interactive',visible=false,viewer=null,loading=null,failed=false;
+
+  function paintCapPosition(offset){
+    capOffset=offset;
+    const round=value=>Math.round(value*100)/100;
+    const [x,y,z]=offset.map(round);
+    if(capMode.value==='free'){
+      const signed=value=>value>0?`+${value}`:String(value);
+      capPosition.value=`X ${signed(x)} · Y ${signed(y)} · Z ${signed(z)} mm`;
+    }else{
+      const distance=capMode.value==='rail'?-y:z;
+      cap.value=String(distance);
+      element('studioArtCapValue').value=`${distance} mm`;
+    }
+  }
+
+  function paintCapMode(){
+    const free=capMode.value==='free',rail=capMode.value==='rail';
+    const t=window.designI18n.t;
+    capSlider.hidden=free;
+    capPosition.hidden=!free;
+    element('studioArtCapMeasure').textContent=t(rail?'studioRailMeasure':'studioLiftMeasure');
+    capHelp.textContent=t(free?'studioFreeHelp':rail?'studioRailHelp':'studioVerticalHelp');
+    paintCapPosition(capOffset);
+  }
 
   function updateRuler(){
     const live=mode==='interactive'&&viewer!==null;
@@ -57,6 +99,7 @@ if (root.dataset.studioDisplay === 'workbench') {
     canvas.setAttribute('aria-hidden',String(!live));
     photo.hidden=live;
     navigation.hidden=!live;
+    capControls.hidden=!live;
     interactive.setAttribute('aria-pressed',String(mode==='interactive'));
     reference.setAttribute('aria-pressed',String(mode==='reference'));
     status.textContent=live?'Drag to rotate. Right-drag or use two fingers to pan. Scroll or pinch to zoom.':
@@ -68,9 +111,12 @@ if (root.dataset.studioDisplay === 'workbench') {
 
   function load(){
     if(mode!=='interactive'||!visible||viewer||loading||failed)return;
-    loading=import('./studio-art-view-r16.js?v=1').then(({mountStudioArt})=>mountStudioArt(canvas))
+    loading=import('./studio-art-view-r16.js?v=2').then(({mountStudioArt})=>
+      mountStudioArt(canvas,{onCapMove:paintCapPosition}))
       .then(view=>{
         viewer=view;
+        viewer.setCapMode(capMode.value);
+        viewer.setToothFinish(toothFinish.value);
         stage.dataset.art3d='ready';
         paint();
       }).catch(()=>{
@@ -90,11 +136,15 @@ if (root.dataset.studioDisplay === 'workbench') {
   reference.addEventListener('click',()=>{mode='reference';paint();});
   toggle.addEventListener('change',updateRuler);
   element('studioArtHome').addEventListener('click',()=>viewer?.reset());
-  cap.addEventListener('input',()=>{
-    const distance=Number(cap.value);
-    viewer?.setCap(distance);
-    element('studioArtCapValue').textContent=`${distance} mm`;
+  capMode.addEventListener('change',()=>{
+    viewer?.setCapMode(capMode.value);
+    paintCapMode();
   });
+  cap.addEventListener('input',()=>viewer?.setCap(Number(cap.value)));
+  element('studioArtCapReset').addEventListener('click',()=>viewer?.resetCap());
+  toothFinish.addEventListener('change',()=>viewer?.setToothFinish(toothFinish.value));
+  window.addEventListener('design-language-changed',paintCapMode);
+  paintCapMode();
   paint();
   function updateLinks(){
     for (const link of art.querySelectorAll('.studio-pop-out, .studio-workbench-link a, a[href$="#native74-batch"]')) {

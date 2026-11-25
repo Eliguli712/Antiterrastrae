@@ -1,4 +1,4 @@
-import{mountSlicePanels,mountDomainMetrics,mountAxisMovies,foldSections,speedControl,syncSpeedLabel}from'./native-panels-r15.js?v=3';
+import{mountSlicePanels,mountDomainMetrics,mountAxisMovies,foldSections,speedControl,syncSpeedLabel}from'./native-panels-r15.js?v=4';
 import{NativeEngine,NATIVE_FACES}from'./native-engine-r15.js?v=3';
 import{renderAnalysis,hydrateOtherContent}from'./native-content-r15.js?v=1';
 import{layoutCadScale}from'./cad-palaeo-ruler-r14.js?v=1';
@@ -247,7 +247,7 @@ function sourceState(){
  for(const{card,view}of viewList){const el=card.querySelector('.native-view-count');if(view.static){el.textContent='74,293,846 source triangles · complete static reference';}else if(engine.ready&&view.mode===9&&!engine.photoReady){el.textContent='74,293,846 source faces resident · preparing original natural photograph colours';}else if(engine.ready){el.textContent=`74,293,846 original source triangles · ${view.mesh==='vertices'?'complete native mesh vertices':'complete shared 3D'}${state.part==='whole'?'':state.part==='split'?' · crown / transition / root in three display passes':' · '+state.part+' visible'}`;}else if(engine.preview){el.textContent=`${count(engine.preview.userData.faces)}-face immediate proxy · preparing ${count(engine.faces)} / 74,293,846 native faces`;}view.element.dataset.sharedGpu='true';}
 }
 try{
- [pub,interactive]=await Promise.all([get('./assets/native74-batch-publication.json?v=1'),get('./assets/native-interactive-publication.json?v=2')]);
+ [pub,interactive]=await Promise.all([get('./assets/native74-batch-publication.json?v=1'),get('./assets/native-interactive-publication.json?v=3')]);
  const data=await Promise.all([get(interactive.geometry),get(interactive.volume),get(interactive.mask),get(interactive.preview),get(pub.ruler.mesh),get(pub.palette),get(pub.cases[50].field),get(pub.cases[100].field),get(interactive.pca),get(interactive.counts),interactive.natural?.field?get(interactive.natural.field):Promise.resolve(null),get('./assets/curved-zone-guide.json?v=2')]);
  [geometry]=data;const volume=data[1],mask=data[2],preview=data[3],ruler=data[4];palette=data[5];fields={50:data[6],100:data[7]};pca=data[8];stats=data[9];const natural=data[10];if(natural)natural.chunks=natural.chunks.map(p=>({...p,url:new URL(p.url,interactive.natural.base).href}));
  const absolute=(part,base)=>({...part,url:new URL(part.url,base).href});geometry.chunks=geometry.chunks.map(p=>absolute(p,interactive.base));mask.slabs=mask.slabs.map(p=>absolute(p,interactive.base));volume.file=absolute(volume.file,interactive.base);preview.file=absolute(preview.file,interactive.base);
@@ -311,6 +311,6 @@ try{
  engine.start();slicePanels=mountSlicePanels(engine,pca,stats,linkPlane);mountAxisMovies(interactive,stats);mountDomainMetrics(stats);const internalEntry=viewList.find(e=>e.key==='internal');internalEntry.card.querySelector('.native-cut').value='pca3';internalEntry.card.querySelector('.native-pca-sampling').value='.018';cutSetup(internalEntry);viewList.filter(e=>e.key!=='internal').forEach(e=>cutSetup(e));foldSections(engine);navigator.storage?.persist?.().then(kept=>q('#nativeStorageStatus').textContent=kept?'Persistent storage granted.':'Local cache enabled; retention follows browser storage limits.').catch(()=>{});
  window.addEventListener('native-shared-state',sourceState);
 
- if('serviceWorker'in navigator)navigator.serviceWorker.register('./native-precache-r15-sw.js?v=3',{scope:'./',type:'module'}).catch(e=>console.info('Offline shell',e.message));
+ if('serviceWorker'in navigator)navigator.serviceWorker.register('./native-precache-r15-sw.js?v=4',{scope:'./',type:'module'}).catch(e=>console.info('Offline shell',e.message));
  window.__nativeSharedR15={engine,state,publication:interactive};
 }catch(e){note('The shared native visualizer could not start: '+e.message);console.error(e);}
