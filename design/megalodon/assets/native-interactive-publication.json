@@ -1,0 +1,144 @@
+{
+  "schema": "native74-shared-display-r15",
+  "base": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/",
+  "geometry": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/compact-native.json",
+  "volume": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/display-volume.json",
+  "mask": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/native-mask.json",
+  "preview": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/immediate-preview.json",
+  "filter_record": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/filter-result.json",
+  "filter_model": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/MPPCA_intensity_patch_model.npz",
+  "comparison": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Masked_CT_Basic_MPPCA_Comparison.png",
+  "compact_audit": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/compact-result.json",
+  "pca": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/pca-sections.json",
+  "counts": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/native-voxel-counts.json",
+  "movie_record": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/axis-movies.json",
+  "movies": [
+    {
+      "axis": 1,
+      "file": "Native74_Internal_PCA_Axis_1_50mm_1080p.mp4",
+      "bytes": 525924,
+      "sha256": "a8eb985275647ef8874977cbdd705de1324e530948f6bce8540921b731bfff9c",
+      "poster": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_1_poster.png",
+      "poster_sha256": "ef6dcfd6d42c089cde4409f668911da9b8b91068d720c0794145a5789e39eec2",
+      "width": 1920,
+      "height": 1080,
+      "frames": 300,
+      "fps": 25,
+      "duration_s": 12,
+      "source_triangles_examined_per_axis": 74293846,
+      "source_vertices": 37951699,
+      "surface_decimation": false,
+      "source_native_sampling_mm": 0.018,
+      "source_native_sampling_um": 18,
+      "source_coordinate_PCA_normal": [
+        -0.057078421241341264,
+        -0.09418775987466738,
+        0.9939168575481491
+      ],
+      "cut_offsets_native_mm": [
+        -27.808385848999023,
+        23.890844345092773
+      ],
+      "display_model_height_mm": 50,
+      "coordinate_convention": "Original source position determines clipping and existing colours; model-to-screen scale does not alter the source domain.",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_1_50mm_1080p.mp4"
+    },
+    {
+      "axis": 2,
+      "file": "Native74_Internal_PCA_Axis_2_50mm_1080p.mp4",
+      "bytes": 576780,
+      "sha256": "ef92b6c68113d21467442f4fa7a65ed5ff475130f09dbc35247ab0bb9750278b",
+      "poster": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_2_poster.png",
+      "poster_sha256": "2ffc42b341db224f506767eca36090b5fd73d803619c848586a09ade250b83d1",
+      "width": 1920,
+      "height": 1080,
+      "frames": 300,
+      "fps": 25,
+      "duration_s": 12,
+      "source_triangles_examined_per_axis": 74293846,
+      "source_vertices": 37951699,
+      "surface_decimation": false,
+      "source_native_sampling_mm": 0.018,
+      "source_native_sampling_um": 18,
+      "source_coordinate_PCA_normal": [
+        -0.2016547068614822,
+        0.9761082946778717,
+        0.08091956661813175
+      ],
+      "cut_offsets_native_mm": [
+        -18.090173721313477,
+        17.006650924682617
+      ],
+      "display_model_height_mm": 50,
+      "coordinate_convention": "Original source position determines clipping and existing colours; model-to-screen scale does not alter the source domain.",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_2_50mm_1080p.mp4"
+    },
+    {
+      "axis": 3,
+      "file": "Native74_Internal_PCA_Axis_3_50mm_1080p.mp4",
+      "bytes": 1234111,
+      "sha256": "4aa58562561316378398f52e3558ee14b19a48c9314968921c5e6998f5350a3a",
+      "poster": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_3_poster.png",
+      "poster_sha256": "2cb2ac55339c3ff22a12ceb48974ee16ef63f0ef0140ca5addff453a1ed0a642",
+      "width": 1920,
+      "height": 1080,
+      "frames": 300,
+      "fps": 25,
+      "duration_s": 12,
+      "source_triangles_examined_per_axis": 74293846,
+      "source_vertices": 37951699,
+      "surface_decimation": false,
+      "source_native_sampling_mm": 0.018,
+      "source_native_sampling_um": 18,
+      "source_coordinate_PCA_normal": [
+        -0.9777921215827041,
+        -0.19580925144346106,
+        -0.07470812552825656
+      ],
+      "cut_offsets_native_mm": [
+        -4.247888088226318,
+        6.295042991638184
+      ],
+      "display_model_height_mm": 50,
+      "coordinate_convention": "Original source position determines clipping and existing colours; model-to-screen scale does not alter the source domain.",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_3_50mm_1080p.mp4"
+    }
+  ],
+  "extra_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_1_50mm_1080p.mp4",
+      "bytes": 525924,
+      "sha256": "a8eb985275647ef8874977cbdd705de1324e530948f6bce8540921b731bfff9c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_2_50mm_1080p.mp4",
+      "bytes": 576780,
+      "sha256": "ef92b6c68113d21467442f4fa7a65ed5ff475130f09dbc35247ab0bb9750278b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_3_50mm_1080p.mp4",
+      "bytes": 1234111,
+      "sha256": "4aa58562561316378398f52e3558ee14b19a48c9314968921c5e6998f5350a3a"
+    }
+  ],
+  "persistent": true,
+  "source_faces": 74293846,
+  "source_vertices": 37951699,
+  "GPU_geometry_bytes_one_shared_palette": 987897906,
+  "original_colours_unchanged": true,
+  "native_mask_unchanged": true,
+  "native_porous_FEM": "deferred by user",
+  "display_filters": "Explicit 144um artistic intensity derivatives; original source geometry and original 3MF RGB remain unchanged.",
+  "section_validation": "./assets/native-section-validation.json",
+  "natural": {
+    "original_archive": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/Megalodon_FullCT_NaturalColors_PBR.3mf",
+    "models": {
+      "50": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-paper-mr5-native74/Megalodon_50mm_Native74_Natural_Photo_Reference.3mf",
+      "100": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-paper-mr5-native74/Megalodon_100mm_Native74_Natural_Photo_Reference.3mf"
+    },
+    "base": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/654cd6054a24dba6efadde6d5b06473d745f3949/assets/natural74-r15/",
+    "field": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/654cd6054a24dba6efadde6d5b06473d745f3949/assets/natural74-r15/natural-field.json",
+    "registration": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/654cd6054a24dba6efadde6d5b06473d745f3949/assets/natural74-r15/appearance-registration.json",
+    "audit": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/654cd6054a24dba6efadde6d5b06473d745f3949/assets/natural74-r15/natural-field-audit.json"
+  }
+}

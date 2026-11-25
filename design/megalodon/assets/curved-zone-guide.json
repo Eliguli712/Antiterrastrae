@@ -1,0 +1,294 @@
+{
+  "schema": "photo-reference-neck-guide-r15",
+  "reference_file": "codex-clipboard-1747726a-cd1e-4ed3-8324-44cc2897ae92.png",
+  "reference_sha256": "95ef6c8bebca8afa1c67b3c5f3205929eccba0f6e77bfe80b8cffcf8ce90c8ce",
+  "literature_read_before_recommendation": true,
+  "profiles": {
+    "front": {
+      "manual_source_landmarks_xy_px": [
+        [
+          130,
+          735
+        ],
+        [
+          190,
+          690
+        ],
+        [
+          255,
+          649
+        ],
+        [
+          320,
+          615
+        ],
+        [
+          390,
+          599
+        ],
+        [
+          460,
+          614
+        ],
+        [
+          525,
+          645
+        ],
+        [
+          590,
+          691
+        ],
+        [
+          650,
+          735
+        ]
+      ],
+      "silhouette_bbox_xyxy_px": [
+        79,
+        207,
+        730,
+        1034
+      ],
+      "image_x_center_px": 404.5,
+      "image_half_width_px": 325.5,
+      "image_y_apex_px": 207,
+      "image_y_lowest_root_px": 1034,
+      "image_normalized_coordinate": "u=(x_px-image_x_center_px)/325.5; z_norm=50-(y_px-207)/827*100",
+      "image_polynomial_z_coefficients_ascending": [
+        1.6222457353553497,
+        -2.176796077467064,
+        -25.12543678511106
+      ],
+      "canonical_x_polynomial_z_coefficients_ascending": [
+        1.6222457353553497,
+        2.176796077467064,
+        -25.12543678511106
+      ],
+      "fit_residual_RMS_percent_image_height": 0.5835490790781265,
+      "center_height_percent": 51.62224573535535,
+      "profile_type": "apex-facing central arch; negative quadratic term",
+      "scope": "Manual image-guided illustrative display guide. Bbox-normalized coordinates approximate registration; not exact material-interface segmentation."
+    },
+    "reverse": {
+      "manual_source_landmarks_xy_px": [
+        [
+          1734,
+          719
+        ],
+        [
+          1800,
+          669
+        ],
+        [
+          1870,
+          628
+        ],
+        [
+          1950,
+          606
+        ],
+        [
+          2010,
+          607
+        ],
+        [
+          2070,
+          630
+        ],
+        [
+          2150,
+          674
+        ],
+        [
+          2220,
+          719
+        ],
+        [
+          2265,
+          740
+        ]
+      ],
+      "silhouette_bbox_xyxy_px": [
+        1679,
+        207,
+        2330,
+        1034
+      ],
+      "image_x_center_px": 2004.5,
+      "image_half_width_px": 325.5,
+      "image_y_apex_px": 207,
+      "image_y_lowest_root_px": 1034,
+      "image_normalized_coordinate": "u=(x_px-image_x_center_px)/325.5; z_norm=50-(y_px-207)/827*100",
+      "image_polynomial_z_coefficients_ascending": [
+        0.9778758991869908,
+        -3.417741414401363,
+        -22.191648855600874
+      ],
+      "canonical_x_polynomial_z_coefficients_ascending": [
+        0.9778758991869908,
+        -3.417741414401363,
+        -22.191648855600874
+      ],
+      "fit_residual_RMS_percent_image_height": 0.8989933233667491,
+      "center_height_percent": 50.97787589918699,
+      "profile_type": "apex-facing central arch; negative quadratic term",
+      "scope": "Manual image-guided illustrative display guide. Bbox-normalized coordinates approximate registration; not exact material-interface segmentation."
+    }
+  },
+  "recommended_source_frame_blend": "nx=canonical_x/34.5; w=smoothstep(-6.5,6.5,canonical_y); neck=mix(poly_reverse(nx),poly_front(nx),w); add an optional common vertical user offset. Positive canonical Z points to the apex. Front +Y; reverse -Y.",
+  "recommended_band_width": "band=transition_width*(1-0.45*min(nx*nx,1)); thicker medially, tapering laterally; this is a literature-informed display band, not measured tissue thickness.",
+  "source_mesh_changed": false,
+  "source_RGB_changed": false,
+  "non_claims": [
+    "No biological tissue segmentation",
+    "No claimed micrometre anatomical accuracy",
+    "No calibrated colours on unphotographed surfaces",
+    "Image fit is illustrative and should remain adjustable"
+  ],
+  "default_height_percent": 51.3,
+  "default_curvature_control": 8,
+  "literature": [
+    {
+      "title": "Boessenecker et al. (2019), PeerJ 7:e6088",
+      "url": "https://doi.org/10.7717/peerj.6088",
+      "supports": "Lingual chevron-shaped neck, thicker medially and thinner laterally; side-dependent morphology."
+    },
+    {
+      "title": "Medina-Gavil\u00e1n et al. (2015), first description from Seville",
+      "url": "https://ariasmontano.uhu.es/rest/api/core/bitstreams/852dc6e7-9c05-43f3-b5b6-db5d07483414/content",
+      "supports": "Different labial and lingual base-of-crown profiles."
+    },
+    {
+      "title": "Jambura et al. (2019), Scientific Reports 9:9652",
+      "url": "https://doi.org/10.1038/s41598-019-46081-3",
+      "supports": "Fossil CT can fail to resolve enameloid/dentine tissue interfaces."
+    }
+  ],
+  "separate_boundaries": {
+    "schema": "separate-upper-lower-photo-display-guides-r15",
+    "canonical_coordinate": "n=x/34.5; +Z points toward crown apex. Front+Y and Reverse\u2212Y screen-coordinate sign conventions already incorporated.",
+    "profiles": {
+      "front": {
+        "upper": [
+          1.6222457353553497,
+          2.176796077467064,
+          -25.12543678511106
+        ],
+        "lower": [
+          -8.39740988430956,
+          4.471861539614356,
+          -20.49629763084591
+        ],
+        "lower_landmarks_xy_px": [
+          [
+            130,
+            775
+          ],
+          [
+            190,
+            750
+          ],
+          [
+            255,
+            710
+          ],
+          [
+            320,
+            682
+          ],
+          [
+            390,
+            682
+          ],
+          [
+            460,
+            702
+          ],
+          [
+            525,
+            735
+          ],
+          [
+            590,
+            775
+          ],
+          [
+            650,
+            805
+          ]
+        ],
+        "confidence": "Approximate manual positions where visible vertical striae merge into the rough root texture.",
+        "minimum_band_width_for_abs_nx_le1": 3.0954510032524674
+      },
+      "reverse": {
+        "upper": [
+          0.9778758991869908,
+          -3.417741414401363,
+          -22.191648855600874
+        ],
+        "lower": [
+          -8.495932413603118,
+          -2.4802966827432478,
+          -16.689966729842443
+        ],
+        "lower_landmarks_xy_px": [
+          [
+            1734,
+            775
+          ],
+          [
+            1800,
+            730
+          ],
+          [
+            1870,
+            705
+          ],
+          [
+            1950,
+            680
+          ],
+          [
+            2010,
+            685
+          ],
+          [
+            2070,
+            708
+          ],
+          [
+            2150,
+            740
+          ],
+          [
+            2220,
+            775
+          ],
+          [
+            2265,
+            780
+          ]
+        ],
+        "confidence": "Individual growth-stria ends are not resolved; this is an adjustable lower appearance continuation, not a measured reverse anatomical boundary.",
+        "minimum_band_width_for_abs_nx_le1": 3.034681455373562
+      }
+    },
+    "classification": {
+      "crown": "z >= upper",
+      "transition": "lower <= z < upper",
+      "root": "z < lower"
+    },
+    "default_common_vertical_offset": 0,
+    "important": "The original fit is the UPPER colour-change boundary, not the transition-band centre. All transition thickness belongs below it.",
+    "interpolation": "Use the same front/reverse thickness blend for both upper and lower guides. Ensure lower < upper for adjustable controls and extrapolated coordinates.",
+    "source_geometry_changed": false,
+    "source_RGB_changed": false,
+    "non_claims": [
+      "No histological tissue segmentation",
+      "No micron anatomical accuracy",
+      "No verified reverse growth-stria termination"
+    ]
+  },
+  "default_transition_depth_relative_percent": 100,
+  "classification": "crown z>=upper colour-change guide; transition lower growth-ending guide <= z < upper; root z<lower; minimum positive width0.5 canonical units"
+}

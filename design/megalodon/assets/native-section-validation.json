@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "axis": 1,
+      "display_spacing_mm": 0.018,
+      "every_plane_sample_compared": 1142700,
+      "material_samples": 726691,
+      "exact_match_to_independent_original_voxel_lookup": true,
+      "mask_sha256": "7bc71f1873336cb9fb18e6eb982f0f565d0a9f604b2faf24361b5fb293d08b21"
+    },
+    {
+      "axis": 2,
+      "display_spacing_mm": 0.072,
+      "every_plane_sample_compared": 105693,
+      "material_samples": 52796,
+      "exact_match_to_independent_original_voxel_lookup": true,
+      "mask_sha256": "8f284d7c7fc22f87cd7ba45001fdd72a2c3340965140fd334ee74578308030fa"
+    },
+    {
+      "axis": 3,
+      "display_spacing_mm": 0.018,
+      "every_plane_sample_compared": 5602350,
+      "material_samples": 3239796,
+      "exact_match_to_independent_original_voxel_lookup": true,
+      "mask_sha256": "42ba69ac49b325a3e1793a3dd3705e0be32542516bf79a42f42147fb2242b44b"
+    },
+    {
+      "axis": 2,
+      "display_spacing_mm": 0.018,
+      "every_plane_sample_compared": 1683578,
+      "material_samples": 844912,
+      "exact_match_to_independent_original_voxel_lookup": true,
+      "mask_sha256": "3e3b8585870fb267edb6466f3a5b8afcd44ad34e15648bc98ca43b718544e033"
+    }
+  ],
+  "note": "Exact agreement concerns nearest-original-voxel sampling at the declared oblique plane points, not an accuracy claim beyond the 18 um acquisition grid."
+}
