@@ -1,8 +1,8 @@
 {
-  "source_commit": "315d936bc8db8c219ddd23027daf2af181f42a93",
-  "verified_at": "2026-11-25T04:56:00.258818+00:00",
+  "source_commit": "44ff57de130d913bb322ca5da77441a5c10fa778",
+  "verified_at": "2026-11-25T05:31:12.088598+00:00",
   "execution": "GitHub Actions",
-  "run_url": "https://github.com/Eliguli712/Antiterrastrae/actions/runs/45287377486",
+  "run_url": "https://github.com/Eliguli712/Antiterrastrae/actions/runs/45553683928",
   "sites": {
     "github_pages": {
       "url": "https://eliguli712.github.io/Antiterrastrae/",
@@ -10,32 +10,32 @@
       "checked_files": [
         {
           "path": "cv.html",
-          "bytes": 787485,
-          "sha256": "ab4db0d9a477ef8504d174717b694828efffa719f9afd6ac651d2ee148874edd",
+          "bytes": 1034844,
+          "sha256": "afbb73afa08eac566a46562623f532a3b225e417738bef7d4caa30a566a2e6c0",
           "matches": true
         },
         {
           "path": "publications/catalog.json",
-          "bytes": 8523,
-          "sha256": "dacb832219dba733a6548bfa0662c40b13379079d6821c80d72b59f00a6a85ea",
+          "bytes": 10000,
+          "sha256": "2a06a54157b59a479e86f7b6c7a5b67aa19dec2d2abe970ea4577e5620eddada",
           "matches": true
         },
         {
           "path": "cv.pdf",
-          "bytes": 485188,
-          "sha256": "7f895a96a40a7228db90700d6594452091408ec8fa4b633764024afcfd8a228d",
+          "bytes": 668772,
+          "sha256": "9b05ce813871f0ed82896f4e2fc698adf56ac20769c9b1ffe991cc4fb1921425",
           "matches": true
         },
         {
           "path": "cv.docx",
-          "bytes": 26756,
-          "sha256": "87129db553acfe48dcbc4994cbd314086fbf4176bffd13d03123043ad51eb129",
+          "bytes": 26916,
+          "sha256": "c05ad7c01e850e391d16cdf7503913656c256b3d5c897cf9b194b70daf99d20e",
           "matches": true
         },
         {
           "path": "cv.md",
-          "bytes": 5839,
-          "sha256": "18e196a9d032f1a92fde5210c2afd793d0f4026902d36cc133176ee4105b1b62",
+          "bytes": 5948,
+          "sha256": "688812a8d9ee5812e6c604cb13a3d2c3aa6e6b3d36416f65a18027fc02121cf8",
           "matches": true
         },
         {
@@ -190,6 +190,12 @@
         },
         {
           "path": "publications/megalodon-current-preprint.pdf",
+          "bytes": 19403314,
+          "sha256": "076be7167ffb36a490877964c1ccedfb38065925346eca08ac0a0ee7afa6e9ba",
+          "matches": true
+        },
+        {
+          "path": "publications/megalodon-2026-11-23-development.pdf",
           "bytes": 19402190,
           "sha256": "411c053d4f3b460e75f7cc118adcf6484a4269fe2bf33837de3b4dbb648c8b53",
           "matches": true
@@ -306,38 +312,38 @@
       "checked_files": [
         {
           "path": "cv.html",
-          "bytes": 787485,
-          "sha256": "ab4db0d9a477ef8504d174717b694828efffa719f9afd6ac651d2ee148874edd",
+          "bytes": 1034844,
+          "sha256": "afbb73afa08eac566a46562623f532a3b225e417738bef7d4caa30a566a2e6c0",
           "matches": true
         },
         {
           "path": "",
-          "bytes": 787485,
-          "sha256": "ab4db0d9a477ef8504d174717b694828efffa719f9afd6ac651d2ee148874edd",
+          "bytes": 1034844,
+          "sha256": "afbb73afa08eac566a46562623f532a3b225e417738bef7d4caa30a566a2e6c0",
           "matches": true
         },
         {
           "path": "publications/catalog.json",
-          "bytes": 8523,
-          "sha256": "dacb832219dba733a6548bfa0662c40b13379079d6821c80d72b59f00a6a85ea",
+          "bytes": 10000,
+          "sha256": "2a06a54157b59a479e86f7b6c7a5b67aa19dec2d2abe970ea4577e5620eddada",
           "matches": true
         },
         {
           "path": "cv.pdf",
-          "bytes": 485188,
-          "sha256": "7f895a96a40a7228db90700d6594452091408ec8fa4b633764024afcfd8a228d",
+          "bytes": 668772,
+          "sha256": "9b05ce813871f0ed82896f4e2fc698adf56ac20769c9b1ffe991cc4fb1921425",
           "matches": true
         },
         {
           "path": "cv.docx",
-          "bytes": 26756,
-          "sha256": "87129db553acfe48dcbc4994cbd314086fbf4176bffd13d03123043ad51eb129",
+          "bytes": 26916,
+          "sha256": "c05ad7c01e850e391d16cdf7503913656c256b3d5c897cf9b194b70daf99d20e",
           "matches": true
         },
         {
           "path": "cv.md",
-          "bytes": 5839,
-          "sha256": "18e196a9d032f1a92fde5210c2afd793d0f4026902d36cc133176ee4105b1b62",
+          "bytes": 5948,
+          "sha256": "688812a8d9ee5812e6c604cb13a3d2c3aa6e6b3d36416f65a18027fc02121cf8",
           "matches": true
         },
         {
@@ -492,6 +498,12 @@
         },
         {
           "path": "publications/megalodon-current-preprint.pdf",
+          "bytes": 19403314,
+          "sha256": "076be7167ffb36a490877964c1ccedfb38065925346eca08ac0a0ee7afa6e9ba",
+          "matches": true
+        },
+        {
+          "path": "publications/megalodon-2026-11-23-development.pdf",
           "bytes": 19402190,
           "sha256": "411c053d4f3b460e75f7cc118adcf6484a4269fe2bf33837de3b4dbb648c8b53",
           "matches": true
