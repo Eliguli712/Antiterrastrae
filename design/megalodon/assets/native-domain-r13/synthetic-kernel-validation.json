@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "domain": "preserved_cavity",
+      "height_mm": 50,
+      "nodes": 728,
+      "tetrahedra": 3024,
+      "boundary_triangles": 816,
+      "boundary_adjacent_tetrahedra": 768,
+      "material_volume_m3": 0.000123046875,
+      "residual": 1.8896188959890946e-14,
+      "independent_kernel_relative_gap": 7.44473788494295e-15,
+      "force_balance": 9.847849099653653e-15,
+      "energy_J": 0.02058426702205049,
+      "max_displacement_m": 1.7108729283675766e-05,
+      "stress_max_Pa": 1451475.9624305712
+    },
+    {
+      "domain": "preserved_cavity",
+      "height_mm": 100,
+      "nodes": 728,
+      "tetrahedra": 3024,
+      "boundary_triangles": 816,
+      "boundary_adjacent_tetrahedra": 768,
+      "material_volume_m3": 0.0009843750000000009,
+      "residual": 1.9137524473823347e-14,
+      "independent_kernel_relative_gap": 6.127842418589061e-15,
+      "force_balance": 5.138582012804898e-15,
+      "energy_J": 0.16467413617640325,
+      "max_displacement_m": 3.421745856735152e-05,
+      "stress_max_Pa": 1451475.9624305652
+    },
+    {
+      "domain": "filled",
+      "height_mm": 50,
+      "nodes": 729,
+      "tetrahedra": 3072,
+      "boundary_triangles": 768,
+      "boundary_adjacent_tetrahedra": 720,
+      "material_volume_m3": 0.000125,
+      "residual": 1.7494435781104686e-14,
+      "independent_kernel_relative_gap": 6.97618466687216e-15,
+      "force_balance": 9.46361773585739e-15,
+      "energy_J": 0.02005601940804885,
+      "max_displacement_m": 1.698690641140122e-05,
+      "stress_max_Pa": 1254131.364936864
+    },
+    {
+      "domain": "filled",
+      "height_mm": 100,
+      "nodes": 729,
+      "tetrahedra": 3072,
+      "boundary_triangles": 768,
+      "boundary_adjacent_tetrahedra": 720,
+      "material_volume_m3": 0.0010000000000000009,
+      "residual": 1.887728180746797e-14,
+      "independent_kernel_relative_gap": 5.994099939096896e-15,
+      "force_balance": 4.983304260624046e-15,
+      "energy_J": 0.16044815526439002,
+      "max_displacement_m": 3.397381282280241e-05,
+      "stress_max_Pa": 1254131.364936859
+    }
+  ],
+  "scope": "Four independently assembled synthetic 3D solves only; no native tetrahedra generated, no MPI execution or scalability claim",
+  "native_completed_tetrahedra": 0
+}

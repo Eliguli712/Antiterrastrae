@@ -11,8 +11,11 @@ ROOT = Path(__file__).resolve().parents[1]
 PUBLICATIONS = ROOT / 'publications'
 DOCUMENTS = [
     ('megalodon-current-preprint', 'Tooth-scale Stress Localisation in a µCT-derived Otodus megalodon Model',
-     'Computational biomechanics', 'Preprint', '23 November 2026',
+     'Computational biomechanics', 'In development', '25 November 2026',
      'Calibrated CT geometry, regional stress quantiles, P1/P2 verification, interface and attachment sensitivity, an independently verified full-objective 10 kPa neo-Hookean jaw control, conservative jaw-to-root transfer and unit-margin tensile responses. Includes public native, optimised, 200M exterior and raw numerical-field links.'),
+    ('megalodon-2026-11-23-development', 'Tooth-scale Stress Localisation: 23 November Development Edition',
+     'Research archive', 'Legacy development edition', '23 November 2026',
+     'The exact earlier 12-page development edition, preserved before the native-domain module and dual-panel geometry workbench.'),
     ('megalodon-9page-report', 'Tooth-scale Stress Localisation in a µCT-derived Otodus megalodon Model',
      'Research archive', 'Legacy 9-page edition', '31 October 2026',
      'The unchanged nine-page edition, retained alongside the current preprint and earlier reports.'),
@@ -70,7 +73,7 @@ def disclosure(paper):
     size = f"{paper['bytes'] / 1_000_000:.2f} MB" if paper['bytes'] > 1_000_000 else f"{paper['bytes'] / 1_000:.0f} KB"
     return f'''<details class="paper-entry" id="paper-{slug}">
 <summary><span><span class="paper-category">{escape(paper['category'])}</span><strong>{title}</strong><span class="paper-meta">{escape(paper['status'])} · {paper['pages']} pages · {escape(paper['date'])}</span></span><span class="paper-expand" aria-hidden="true"></span></summary>
-<div class="paper-content"><p>{escape(paper['description'])}</p><div class="paper-actions"><a href="{reader}">Read full paper ↗</a><a href="publications/{escape(paper['file'])}" download="{escape(paper['file'])}">Download PDF ↓ <small>{size}</small></a></div><iframe data-reader="{reader}&amp;embedded=1" title="Complete paper: {title}" loading="lazy"></iframe><p class="paper-return"><a href="#cv">↑ Research CV</a></p></div>
+<div class="paper-content"><p>{escape(paper['description'])}</p><div class="paper-actions"><a href="{reader}">Read full paper</a><a href="publications/{escape(paper['file'])}" download="{escape(paper['file'])}">Download PDF <small>{size}</small></a></div><iframe data-reader="{reader}&amp;embedded=1" title="Complete paper: {title}" loading="lazy"></iframe><p class="paper-return"><a href="#cv">Research CV</a></p></div>
 </details>'''
 
 

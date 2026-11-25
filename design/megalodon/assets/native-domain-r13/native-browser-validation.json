@@ -1,0 +1,97 @@
+{
+  "panels": {
+    "upper": {
+      "message": null,
+      "phase": "complete",
+      "faces": 74293846,
+      "stats": {
+        "resident_chunks": 75,
+        "source_triangles": 74293846,
+        "pose_culling": false,
+        "motion_LOD": false,
+        "completed": true,
+        "worker_cache": {
+          "decoded_hits": 150
+        },
+        "max_resident_chunks": 75,
+        "elapsed_ms": 5251.5999999940395
+      },
+      "enabled": true,
+      "GPU_render": {
+        "triangles": 153178856,
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+        "context_lost": false
+      },
+      "cache_only_mode": {
+        "resident_chunks": 75,
+        "source_triangles": 74293846,
+        "pose_culling": false,
+        "motion_LOD": false,
+        "completed": true,
+        "worker_cache": {
+          "decoded_hits": 150
+        },
+        "max_resident_chunks": 75,
+        "elapsed_ms": 5251.5999999940395
+      }
+    },
+    "lower": {
+      "message": null,
+      "phase": "complete",
+      "faces": 74293846,
+      "stats": {
+        "resident_chunks": 75,
+        "source_triangles": 74293846,
+        "pose_culling": false,
+        "motion_LOD": false,
+        "completed": true,
+        "worker_cache": {
+          "decoded_hits": 150
+        },
+        "max_resident_chunks": 75,
+        "elapsed_ms": 4000.2000000178814
+      },
+      "enabled": true,
+      "GPU_render": {
+        "triangles": 74461910,
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+        "context_lost": false
+      },
+      "cache_only_mode": {
+        "resident_chunks": 75,
+        "source_triangles": 74293846,
+        "pose_culling": false,
+        "motion_LOD": false,
+        "completed": true,
+        "worker_cache": {
+          "decoded_hits": 150
+        },
+        "max_resident_chunks": 75,
+        "elapsed_ms": 4000.2000000178814
+      }
+    }
+  },
+  "errors": [],
+  "native_volume_solved": false,
+  "precache": {
+    "precache": true,
+    "complete": true,
+    "info": {
+      "entries": 225,
+      "shared_by_both_panels": true,
+      "encoding": "uncompressed decoded typed arrays",
+      "estimate": {
+        "quota": 12536110336,
+        "usage": 1798692096,
+        "usageDetails": {
+          "caches": 1798692096
+        }
+      }
+    },
+    "cacheStats": {
+      "decoded_hits": 225
+    }
+  },
+  "blocked_source_requests": [],
+  "status": "passed"
+}

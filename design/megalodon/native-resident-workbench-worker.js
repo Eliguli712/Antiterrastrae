@@ -1,0 +1,3 @@
+import {nativeBytes,nativeArrays} from './native-source-cache-r13.js';
+const stats={};
+self.onmessage=async({data:d})=>{try{const g=d.geometry?nativeArrays(await nativeBytes(d.geometry.url,d.geometry.sha256,undefined,stats)):null;const f=nativeArrays(await nativeBytes(d.field.url,d.field.sha256,undefined,stats));if(g&&(g.header.vertices!==f.header.vertices||g.header.triangles!==d.geometry.triangles))throw Error('Native registration mismatch');const arrays={...g?.out,...f.out};postMessage({id:d.id,header:g?.header||f.header,...arrays,cacheStats:{...stats}},[...new Set(Object.values(arrays).map(a=>a.buffer))]);}catch(e){postMessage({id:d.id,error:String(e.message||e)});}};

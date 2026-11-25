@@ -1,0 +1,52 @@
+{
+  "source_variant": "verified staged release integration",
+  "updates": [
+    {
+      "panel": "upper",
+      "axis": "none",
+      "elapsed_ms": 1.5999999940395355,
+      "faces": 74293846,
+      "chunks": 75,
+      "motion_LOD": false,
+      "worker_cache_unchanged": true,
+      "clipping_planes": 0,
+      "context_lost": false
+    },
+    {
+      "panel": "upper",
+      "axis": "x",
+      "elapsed_ms": 105.09999999403954,
+      "faces": 74293846,
+      "chunks": 75,
+      "motion_LOD": false,
+      "worker_cache_unchanged": true,
+      "clipping_planes": 1,
+      "context_lost": false
+    },
+    {
+      "panel": "lower",
+      "axis": "none",
+      "elapsed_ms": 0.800000011920929,
+      "faces": 74293846,
+      "chunks": 75,
+      "motion_LOD": false,
+      "worker_cache_unchanged": true,
+      "clipping_planes": 0,
+      "context_lost": false
+    },
+    {
+      "panel": "lower",
+      "axis": "x",
+      "elapsed_ms": 34.89999997615814,
+      "faces": 74293846,
+      "chunks": 75,
+      "motion_LOD": false,
+      "worker_cache_unchanged": true,
+      "clipping_planes": 1,
+      "context_lost": false
+    }
+  ],
+  "native_source_requests": [],
+  "missing_resources": [],
+  "status": "passed"
+}

@@ -1,0 +1,1 @@
+(()=>{const select=document.getElementById('paper-version-select'),open=document.getElementById('paper-version-open');if(!select||!open)return;select.addEventListener('change',()=>{const id=select.value;if(!/^[a-z0-9-]+$/.test(id))return;open.href='publications/reader.html?paper='+encodeURIComponent(id);});})();
