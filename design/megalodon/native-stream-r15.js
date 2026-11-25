@@ -32,7 +32,7 @@ self.onmessage=({data:d})=>{
  if(d.type==='init'){config=d.config;setPersistence(config.persistent);sections=new NativeSections(config,stats,d=>postMessage(d,[d.data.buffer,...(d.overlay?[d.overlay.buffer]:[])]));allParts=[...config.geometry.chunks,config.preview.file,config.volume.file,...config.mask.slabs,...(config.extra_sources||[]),...(config.natural?.chunks||[])];load();}
  else if(d.type==='ack'){waiting.get(d.id)?.resolve();waiting.delete(d.id);}
  else if(d.type==='cancel-section')sections.cancel(d.target);
- else if(d.type==='mask'||d.type==='section')sections.request(d).catch(e=>send('mask-error',{message:e.message}));
+ else if(d.type==='mask'||d.type==='section')sections.request(d).catch(e=>send('mask-error',{message:e.message,target:d.target,request_id:d.request_id}));
  else if(d.type==='cache-only')prepareFullCache().catch(e=>send('cache-warning',{message:e.message}));
  else if(d.type==='natural')loadNatural().catch(e=>{naturalStarted=false;send('natural-error',{message:e.message});});
  else if(d.type==='cache')prepareRemaining().catch(e=>send('error',{message:e.message}));

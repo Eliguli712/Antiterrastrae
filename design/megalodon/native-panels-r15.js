@@ -5,10 +5,74 @@ export function domainMetrics(stats,extra=''){
 export function mountDomainMetrics(stats){
  document.querySelectorAll('.native-view-card,.ct-movies article,.batch-plate-fig,.batch-analysis figure,.native-filter-note').forEach(e=>{if(!e.querySelector('.native-domain-metrics'))e.insertAdjacentHTML('beforeend',domainMetrics(stats,e.matches('.native-filter-note')?'filtered intensity display 0.144 mm / 144 µm':''));});
 }
+export function createAxisMovieController({video,axisInput,directionInput,speedInput,playButton,restartButton,status,downloadLink,movies}){
+ let active=null,activeDirection='forward',pending=null,serial=0;
+ const clamp=x=>Math.max(0,Math.min(1,Number.isFinite(x)?x:0));
+ const frameSpan=()=>Math.max(0,(Number.isFinite(video.duration)?video.duration:0)-1/(Number(active?.fps)||25));
+ const sourcePosition=()=>{if(!active)return 0;const span=frameSpan(),p=span>0?clamp(video.currentTime/span):0;return activeDirection==='reverse'?1-p:p;};
+ const playing=()=>Boolean(pending?.resume)||!video.paused&&!video.ended;
+ const render=()=>{const running=playing();playButton.textContent=running?'Pause MP4':'Play MP4';playButton.setAttribute('aria-pressed',String(running));const rate=Number(video.playbackRate)||Number(speedInput.value)||1;status.textContent=`PCA axis ${axisInput.value} · ${directionInput.value==='reverse'?'Reverse':'Forward'} MP4 · ${rate.toFixed(2)}× · source position ${(sourcePosition()*100).toFixed(1)}%${pending?' · preparing selected clip':''}`;};
+ const begin=()=>{if(pending){pending.resume=true;render();return;}if(frameSpan()>0&&(video.ended||video.currentTime>=frameSpan()-.5/(Number(active?.fps)||25)))video.currentTime=0;const promise=video.play();if(promise?.catch)promise.catch(()=>{render();status.textContent='Playback paused by the browser. Use Play MP4 to start the selected clip.';});render();};
+ const switchSource=(restart=false)=>{
+  const m=movies.find(m=>Number(m.axis)===Number(axisInput.value));if(!m){status.textContent='The selected PCA clip is unavailable.';return;}
+  const resume=playing(),position=restart?(directionInput.value==='reverse'?1:0):sourcePosition(),reverseURL=m.reverse_url||m.reverse?.url,reverseOption=directionInput.querySelector('option[value="reverse"]');if(reverseOption)reverseOption.disabled=!reverseURL;
+  if(directionInput.value==='reverse'&&!reverseURL)directionInput.value='forward';
+  const direction=directionInput.value,url=direction==='reverse'?reverseURL:m.url,ticket=++serial;video.pause();active=m;activeDirection=direction;pending={ticket,position,resume};video.poster=m.poster;video.src=url;video.setAttribute('aria-label',`Native cavity walls, principal axis ${m.axis}, ${direction} playback`);downloadLink.href=url;downloadLink.textContent=`Download PCA axis ${m.axis} · ${direction} MP4`;video.load();render();
+ };
+ const metadata=()=>{if(!pending||video.currentSrc&&video.currentSrc!==video.src)return;const p=pending;video.playbackRate=Number(speedInput.value)||1;const encoded=activeDirection==='reverse'?1-p.position:p.position;video.currentTime=clamp(encoded)*frameSpan();pending=null;if(p.resume)begin();render();};
+ const update=()=>render();
+ video.addEventListener('loadedmetadata',metadata);for(const name of['play','pause','ended','timeupdate','ratechange','seeked'])video.addEventListener(name,update);
+ const error=()=>{pending=null;render();status.textContent='This MP4 could not be loaded. Its direct download remains available.';};video.addEventListener('error',error);
+ axisInput.onchange=()=>switchSource();directionInput.onchange=()=>switchSource();speedInput.onchange=()=>{video.playbackRate=Number(speedInput.value)||1;render();};
+ playButton.onclick=()=>{if(playing()){if(pending)pending.resume=false;video.pause();render();}else begin();};restartButton.onclick=()=>{if(pending){pending.position=activeDirection==='reverse'?1:0;}else video.currentTime=0;render();};switchSource();
+ return{sourcePosition,playing,refresh:render};
+}
 export function mountAxisMovies(interactive,stats){
- const host=document.createElement('section');host.className='native-axis-movies';host.id='native-pca-movies';host.innerHTML='<h3>Inside the tooth · principal-axis player</h3><p>Choose any of the three PCA axes in this shared player. Each MP4 uses all 74,293,846 source triangles to construct a 3D cavity-wall clipping sweep. 50 mm model, 1,920 × 1,080 pixels, 25 fps, 300 positions, 12 seconds.</p><article class="native-axis-movie"><h4>Three PCA axes · one player</h4><div class="native-view-tools"><label>PCA playback axis<select id="nativeMovieAxis"><option value="1">PCA axis 1</option><option value="2">PCA axis 2</option><option value="3">PCA axis 3</option></select></label></div><video controls playsinline preload="metadata" aria-label="Native cavity walls, selected principal axis"></video><div class="batch-downloads"><a class="native-current-movie" download>Download selected axis · MP4</a><a href="'+interactive.movie_record+'">Frame / source audit</a></div>'+domainMetrics(stats,'video: 300 temporal cut positions')+'</article>';
- document.querySelector('#nativeInternalMount').insertAdjacentElement('afterend',host);const video=host.querySelector('video'),link=host.querySelector('.native-current-movie');
- const select=()=>{const axis=Number(host.querySelector('#nativeMovieAxis').value),m=interactive.movies.find(m=>m.axis===axis),playing=!video.paused,position=Number.isFinite(video.duration)&&video.duration>0?video.currentTime/video.duration:0;video.pause();video.poster=m.poster;video.src=m.url;link.href=m.url;link.textContent='Download PCA axis '+axis+' · MP4';video.setAttribute('aria-label','Native cavity walls, principal axis '+axis);video.onloadedmetadata=()=>{if(position>0)video.currentTime=position*video.duration;if(playing)video.play().catch(()=>{});};video.load();};host.querySelector('#nativeMovieAxis').onchange=select;select();
+ const host=document.createElement('section');host.className='native-axis-movies';host.id='native-pca-movies';host.innerHTML='<h3>Inside the tooth · principal-axis player</h3><p>Choose any PCA axis in this shared player. MP4 direction and speed are independent of the 3D camera. Each clip uses all 74,293,846 source triangles for its cavity-wall sweep: 50 mm model, 1,920 × 1,080 pixels, 25 fps, 300 positions, 12 seconds at 1×.</p><article class="native-axis-movie"><h4>Three PCA axes · one independent player</h4><div class="native-movie-slot"><div class="native-movie-surface"><div class="native-view-tools native-movie-controls"><label>PCA playback axis<select id="nativeMovieAxis"><option value="1">PCA axis 1</option><option value="2">PCA axis 2</option><option value="3">PCA axis 3</option></select></label><label>MP4 direction<select id="nativeMovieDirection"><option value="forward">Forward</option><option value="reverse">Reverse</option></select></label><label>MP4 playback speed<select id="nativeMovieSpeed"><option value=".25">0.25×</option><option value=".5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option><option value="4">4×</option></select></label><button id="nativeMoviePlay" aria-pressed="false">Play MP4</button><button id="nativeMovieRestart">Restart MP4</button></div><div class="native-view-tools native-movie-dock-actions"><button id="nativeMovieDock" aria-pressed="false">Dock MP4</button><button id="nativeMovieFocus" hidden>Focus 3D</button><button id="nativeMovieControls" aria-expanded="true" hidden>Hide controls</button></div><video id="nativePCAVideo" controls playsinline preload="metadata" aria-label="Native cavity walls, selected principal axis"></video><p id="nativeMovieStatus" class="native-movie-status" role="status" aria-live="off"></p></div></div><div class="batch-downloads"><a class="native-current-movie" download>Download selected axis · MP4</a><a href="'+interactive.movie_record+'">Frame / source audit</a></div>'+domainMetrics(stats,'video: 300 temporal cut positions')+'</article>';
+ document.querySelector('#nativeInternalMount').insertAdjacentElement('afterend',host);const video=host.querySelector('video'),surface=host.querySelector('.native-movie-surface'),slot=host.querySelector('.native-movie-slot'),dockButton=host.querySelector('#nativeMovieDock'),focusButton=host.querySelector('#nativeMovieFocus');
+ const controller=createAxisMovieController({video,axisInput:host.querySelector('#nativeMovieAxis'),directionInput:host.querySelector('#nativeMovieDirection'),speedInput:host.querySelector('#nativeMovieSpeed'),playButton:host.querySelector('#nativeMoviePlay'),restartButton:host.querySelector('#nativeMovieRestart'),status:host.querySelector('#nativeMovieStatus'),downloadLink:host.querySelector('.native-current-movie'),movies:interactive.movies});
+ const compactButton=host.querySelector('#nativeMovieControls');
+ const controls=host.querySelector('.native-movie-controls');
+ let docked=false;
+ function setCompact(compact){
+  controls.hidden=compact;
+  compactButton.setAttribute('aria-expanded',String(!compact));
+  compactButton.textContent=compact?'MP4 controls':'Hide controls';
+ }
+ function dock(value){
+  if(value===docked)return;
+  const time=video.currentTime,resume=!video.paused&&!video.ended;
+  docked=value;
+  if(docked){
+   slot.style.height=surface.getBoundingClientRect().height+'px';
+   surface.classList.add('native-movie-docked');
+   document.body.append(surface);
+  }else{
+   surface.classList.remove('native-movie-docked');
+   slot.append(surface);
+   slot.style.height='';
+   setCompact(false);
+  }
+  dockButton.setAttribute('aria-pressed',String(docked));
+  dockButton.textContent=docked?'Undock MP4':'Dock MP4';
+  focusButton.hidden=!docked;
+  compactButton.hidden=!docked;
+  if(Math.abs(video.currentTime-time)>.05)video.currentTime=time;
+  if(resume&&video.paused)video.play().catch(()=>{});
+  controller.refresh();
+ }
+ dockButton.onclick=()=>dock(!docked);
+ compactButton.onclick=()=>setCompact(!controls.hidden);
+ focusButton.onclick=()=>{
+  setCompact(true);
+  document.querySelector('[data-native-card="internal"] .native-focus')?.click();
+ };
+ surface.addEventListener('keydown',e=>{
+  if(e.key!=='Escape'||!docked)return;
+  e.preventDefault();
+  dock(false);
+  dockButton.focus({preventScroll:true});
+ });
 }
 export function mountSlicePanels(engine,pca,stats,onLink){
  const host=document.querySelector('.ct-planes'),panels=new Map();host.innerHTML='';

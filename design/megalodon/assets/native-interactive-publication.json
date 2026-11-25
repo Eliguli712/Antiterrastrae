@@ -41,7 +41,8 @@
       ],
       "display_model_height_mm": 50,
       "coordinate_convention": "Original source position determines clipping and existing colours; model-to-screen scale does not alter the source domain.",
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_1_50mm_1080p.mp4"
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_1_50mm_1080p.mp4",
+      "reverse_url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_1_50mm_1080p_reverse.mp4"
     },
     {
       "axis": 2,
@@ -71,7 +72,8 @@
       ],
       "display_model_height_mm": 50,
       "coordinate_convention": "Original source position determines clipping and existing colours; model-to-screen scale does not alter the source domain.",
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_2_50mm_1080p.mp4"
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_2_50mm_1080p.mp4",
+      "reverse_url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_2_50mm_1080p_reverse.mp4"
     },
     {
       "axis": 3,
@@ -101,7 +103,8 @@
       ],
       "display_model_height_mm": 50,
       "coordinate_convention": "Original source position determines clipping and existing colours; model-to-screen scale does not alter the source domain.",
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_3_50mm_1080p.mp4"
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_3_50mm_1080p.mp4",
+      "reverse_url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_3_50mm_1080p_reverse.mp4"
     }
   ],
   "extra_sources": [
@@ -119,6 +122,21 @@
       "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_3_50mm_1080p.mp4",
       "bytes": 1234111,
       "sha256": "4aa58562561316378398f52e3558ee14b19a48c9314968921c5e6998f5350a3a"
+    },
+    {
+      "url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_1_50mm_1080p_reverse.mp4",
+      "bytes": 513075,
+      "sha256": "9a7175e018ccd3fd4502f6634005a68f348f2fea8c2a4b2f2be91211283108c0"
+    },
+    {
+      "url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_2_50mm_1080p_reverse.mp4",
+      "bytes": 571689,
+      "sha256": "211a6ed2d57a2d9b79beeedc929cd2b2ff5907687e35d6ccb942ac5835db0df8"
+    },
+    {
+      "url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_3_50mm_1080p_reverse.mp4",
+      "bytes": 1279666,
+      "sha256": "e4ce854257fc68fed0b795020db5fe3e612a1c8e8cef1da13f1a70333a548e0e"
     }
   ],
   "persistent": true,
