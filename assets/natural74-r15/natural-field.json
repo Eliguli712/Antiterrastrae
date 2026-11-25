@@ -1,0 +1,767 @@
+{
+  "schema": "native74-original-photo-field-v1",
+  "source_vertices": 37951699,
+  "source_triangles": 74293846,
+  "meshlet_vertex_copies": 54213483,
+  "chunks": [
+    {
+      "url": "natural-00.bin.gz",
+      "bytes": 429672,
+      "sha256": "d61c68c25b5988cc10e85970ec0cf735c9cdda59efee8c9312b514417ddcd1a5",
+      "decoded_bytes": 2058214,
+      "decoded_sha256": "72f8ddb9c1b9d93a79e150f1a86997eaabcaf5fa092c5ad96a91f135acac59a0",
+      "source_first_face": 0,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-01.bin.gz",
+      "bytes": 472813,
+      "sha256": "8b34c595623fd8c867a3b773b5e7ee141ef87b5a9389a515888b34d410e170cd",
+      "decoded_bytes": 2093732,
+      "decoded_sha256": "d7584f0c10b9fda44b98e3f8bb245090ccb77bba8191c024560997eac932c10d",
+      "source_first_face": 1000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-02.bin.gz",
+      "bytes": 513437,
+      "sha256": "dbdfbb092ab00f5b23777315356df526e593d84a6f1e4c3870efb6e4da800ef7",
+      "decoded_bytes": 2111737,
+      "decoded_sha256": "f3f4e62ff7ad0c3a422f026700cb770dac310540c578f648503a0b9f9ddf4ecd",
+      "source_first_face": 2000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-03.bin.gz",
+      "bytes": 537097,
+      "sha256": "b3d8b2217edde0290a6902b4096a676fabf52aa9a9616eaea0ac153338c27ff9",
+      "decoded_bytes": 2126176,
+      "decoded_sha256": "8194277edf98ad4ef45a78eb7160448171a6f1d9c4541703ea664a5fe087ed75",
+      "source_first_face": 3000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-04.bin.gz",
+      "bytes": 526198,
+      "sha256": "618ab46eaa2e142e4067816c9e651f3e391a9206d8a99d9f7d3060374104c77d",
+      "decoded_bytes": 2147279,
+      "decoded_sha256": "fba9f5b5e72ae8b9a9627688b5faac5ea200d7449f3bc0d85141f0e1b16e2143",
+      "source_first_face": 4000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-05.bin.gz",
+      "bytes": 540585,
+      "sha256": "6ae09babc233b7c6708bdda2e6a362714e574f6a5f661590c1e69240784e51b4",
+      "decoded_bytes": 2165027,
+      "decoded_sha256": "e87ba5d74be1b9ac4532040aaa29cefc0098fd3c3e157be6bac70046b8b4ee10",
+      "source_first_face": 5000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-06.bin.gz",
+      "bytes": 498743,
+      "sha256": "59ed3166dc156f6d1890cd9b2f388f73b6caf058fa13b291bc98021d1c73414b",
+      "decoded_bytes": 2176925,
+      "decoded_sha256": "f768ead9cf77405977884ef25bc95618e73d5f2ca4d65804fd963d942ccde99e",
+      "source_first_face": 6000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-07.bin.gz",
+      "bytes": 490883,
+      "sha256": "27422fea7043f84bc0be38b4bf64dd70a43c403972c4f11c88438cdc5182785b",
+      "decoded_bytes": 2211951,
+      "decoded_sha256": "1abf9fd2c66aaf531e78ffc135748f723f1928e204e7ea5f43146c994f4f5969",
+      "source_first_face": 7000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-08.bin.gz",
+      "bytes": 484791,
+      "sha256": "f478957c7b609db992e6cfcf5e649c1530caf48997d9a4964d99d4a8c753b869",
+      "decoded_bytes": 2226676,
+      "decoded_sha256": "4bcbef71fe5514ff5d0f539f7256b52dbdf16ca3d9df956816a9bc742e16d985",
+      "source_first_face": 8000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-09.bin.gz",
+      "bytes": 478572,
+      "sha256": "8e5e86b9d56d2aed9bf1382642a6910f27e46151f728d860ecc5c6d83f99b9a5",
+      "decoded_bytes": 2229039,
+      "decoded_sha256": "4d0cc5816d8cc709e949aa169c849244bc41b1c2204a27c6e4a092bcf20c39c6",
+      "source_first_face": 9000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-10.bin.gz",
+      "bytes": 471247,
+      "sha256": "8a956ed7184e672aa81fb5c27c790480b1d310c57d5b3039a3463e845a3c7bb7",
+      "decoded_bytes": 2288383,
+      "decoded_sha256": "1e2d1aa60d58e927fb879ae61ba76afb158ad317d7b4a3ad5e18d7a0c3c6bd95",
+      "source_first_face": 10000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-11.bin.gz",
+      "bytes": 520542,
+      "sha256": "56323bd8dd71a197c896defe2fb7cac5c2eb5cc91222a0c844d4195cefe198cd",
+      "decoded_bytes": 2313069,
+      "decoded_sha256": "eaa59add92a1dc17c4383f966b7709a89c6beb5c9f63d80b3ee95820cfe4c0f6",
+      "source_first_face": 11000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-12.bin.gz",
+      "bytes": 565026,
+      "sha256": "05381aac0338d4d487da6b68b2873f475c9d45f87df828405e986be89cda5c6b",
+      "decoded_bytes": 2345760,
+      "decoded_sha256": "a7de390365453cedb82a68297c515988c6c33ca3812d6bc8d4c38b8e555db204",
+      "source_first_face": 12000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-13.bin.gz",
+      "bytes": 559545,
+      "sha256": "b4f62d02019fba5e2d30a87f89935eba8da5f53007ad769fa6750677966c081d",
+      "decoded_bytes": 2306830,
+      "decoded_sha256": "6e0c4639db0888286df974ffdfb1e258d8fe7be7ed87f158955c8905ff36e00f",
+      "source_first_face": 13000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-14.bin.gz",
+      "bytes": 525947,
+      "sha256": "89716fae3bc3206051c07de1410e7e77df8f94038bd00739d0cace16fe40e263",
+      "decoded_bytes": 2424635,
+      "decoded_sha256": "cc2f1cef0fbf1bd7e3d2d9b2d34f5a16eeb81cca93f7f6af6a54568033cf97cd",
+      "source_first_face": 14000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-15.bin.gz",
+      "bytes": 518722,
+      "sha256": "24a94e94811a6c2aba147de333053573f8c1c773cd7830c1b52c6f69edab38fd",
+      "decoded_bytes": 2468522,
+      "decoded_sha256": "c92f6a8c5594654121cca8bac8373b189a3fe9e4b0b1ca465424a5559b859d02",
+      "source_first_face": 15000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-16.bin.gz",
+      "bytes": 519279,
+      "sha256": "bc9de993a79c3475ca9edb6bd02aa6eb30ebf017fcef8130e1329e8ab2194b63",
+      "decoded_bytes": 2493765,
+      "decoded_sha256": "79cb9a7d8838be1a5cae4fa9370a0a241f1559549940d24bca1e5fefe4120372",
+      "source_first_face": 16000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-17.bin.gz",
+      "bytes": 519757,
+      "sha256": "63a4b719e973ec724705caeb269ed447919109ba14194e26677d9b6b9724b48d",
+      "decoded_bytes": 2563566,
+      "decoded_sha256": "44658f6420d77f64436ace38308214ce420d1f572f70e2f80b2f2c238010ea5d",
+      "source_first_face": 17000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-18.bin.gz",
+      "bytes": 521424,
+      "sha256": "61988e4c76415ca10cb70fadb59646f417d7488b15ba63df22cdedda25762f93",
+      "decoded_bytes": 2610889,
+      "decoded_sha256": "38ded3f551c45935d99e13b201cf6dfd418b8b062f51f84329dc69f18283429b",
+      "source_first_face": 18000000,
+      "triangles": 1000000,
+      "meshlets": 11
+    },
+    {
+      "url": "natural-19.bin.gz",
+      "bytes": 537476,
+      "sha256": "ed10ae01225b2df22033af8d529f32522f1595425cfdafcb2185b4c39b09ba8e",
+      "decoded_bytes": 2684136,
+      "decoded_sha256": "503f32781ee9a6d20cfd71213c7f0880670f642581f2c6be08c119d364b90d56",
+      "source_first_face": 19000000,
+      "triangles": 1000000,
+      "meshlets": 11
+    },
+    {
+      "url": "natural-20.bin.gz",
+      "bytes": 570750,
+      "sha256": "3781bb15cd5f4e989738827f9255e41c059e66b980eff5d3291eddfcacf2c55a",
+      "decoded_bytes": 2423390,
+      "decoded_sha256": "27ef0686ee12de9170fd12242621475cf080233a5a9c94c4ed9e5b0609871046",
+      "source_first_face": 20000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-21.bin.gz",
+      "bytes": 502677,
+      "sha256": "b637fa88575d482d47c7bc3ae6ca787ed3c7f9d749d69a8d8da0188d3330e407",
+      "decoded_bytes": 2832154,
+      "decoded_sha256": "3b7b3760aa1934cef0abca74daed2dff85d196f2b01248069b8b3957678904fd",
+      "source_first_face": 21000000,
+      "triangles": 1000000,
+      "meshlets": 11
+    },
+    {
+      "url": "natural-22.bin.gz",
+      "bytes": 490245,
+      "sha256": "3578b9fcfb3886d7116c6fd79f83c0e28ee9879dd197c15a8504877576ed5909",
+      "decoded_bytes": 2956870,
+      "decoded_sha256": "4053c36b16c951cfe99794f197fe2caa2e62d1fa9989cbc6b107d100a8218583",
+      "source_first_face": 22000000,
+      "triangles": 1000000,
+      "meshlets": 12
+    },
+    {
+      "url": "natural-23.bin.gz",
+      "bytes": 491066,
+      "sha256": "fc0208b768f70726d681af8cbce455a1809b855cfde15e32e6a254b23392c9f1",
+      "decoded_bytes": 2936588,
+      "decoded_sha256": "5664a130174606da61bb8f6ff3ffd0f4da1f71e2935278c64b781686637a180e",
+      "source_first_face": 23000000,
+      "triangles": 1000000,
+      "meshlets": 12
+    },
+    {
+      "url": "natural-24.bin.gz",
+      "bytes": 479424,
+      "sha256": "1f1e50eab2568b6b9787ce20115e68e78c6d425dbd542eff7065a938251999d1",
+      "decoded_bytes": 3000424,
+      "decoded_sha256": "dfd03d5357c864aa92c900c3d4608cd2f49de0f49e23bae2f7ca677ebf7b719c",
+      "source_first_face": 24000000,
+      "triangles": 1000000,
+      "meshlets": 12
+    },
+    {
+      "url": "natural-25.bin.gz",
+      "bytes": 489532,
+      "sha256": "1922c28f5a94eb25ef9439196337485e5c201a7bbdca742ad1957f41c794ff30",
+      "decoded_bytes": 2948484,
+      "decoded_sha256": "3e3a9f10c28d8049102553d89440f986729a49ccd08a3aba8c323713274b51e9",
+      "source_first_face": 25000000,
+      "triangles": 1000000,
+      "meshlets": 12
+    },
+    {
+      "url": "natural-26.bin.gz",
+      "bytes": 480694,
+      "sha256": "36a5f139c4ca61e2484a195d9633542f685dd40186e098c579784aca2707e372",
+      "decoded_bytes": 3118908,
+      "decoded_sha256": "e05c2dfeac987354cc295dfb28495731137e9773f6b870fc2f8910a6d5b68eea",
+      "source_first_face": 26000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "natural-27.bin.gz",
+      "bytes": 515148,
+      "sha256": "fd56c172ce37dc429ba2a3c420d8a48f62c1d53efaf730a8bef860efb33adeab",
+      "decoded_bytes": 3159138,
+      "decoded_sha256": "247013f32def7c1bc11d2724caa3a6d3d90f91199e830e62c1c8ccdda7d36122",
+      "source_first_face": 27000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "natural-28.bin.gz",
+      "bytes": 505973,
+      "sha256": "49f7864370c0b012c7dfd4c24ae44a3759b9280e0a1caaedfe11e1cc6413cfeb",
+      "decoded_bytes": 3211726,
+      "decoded_sha256": "562861773eb373b61e824ff222345025cd5c77055170869799edff0b93e9afa1",
+      "source_first_face": 28000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "natural-29.bin.gz",
+      "bytes": 510944,
+      "sha256": "82cdb178ebfd31f8f08f21dfd0c46150900bc191930f84fb69fe350395c86f6b",
+      "decoded_bytes": 3245884,
+      "decoded_sha256": "a3fcd54f2b5ca9fae507d9ab2aaeb174c257fb55422aaff4bc75aa217c4e52ff",
+      "source_first_face": 29000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "natural-30.bin.gz",
+      "bytes": 532156,
+      "sha256": "9b8579f46a4aaa4e398ad1b3e03c41db68c4af8e534287dd32e81340c90147d3",
+      "decoded_bytes": 3269786,
+      "decoded_sha256": "4385c89dc07aa900095827fabfa7d9a29f7d4fd14a26fb85b561a7b9a4014c61",
+      "source_first_face": 30000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "natural-31.bin.gz",
+      "bytes": 550682,
+      "sha256": "780eb37822d61ee97957368c3d1857bd39557a0d554394c7532a513cd2716476",
+      "decoded_bytes": 2628696,
+      "decoded_sha256": "99fb4c304464e3ed3a8bec0db8352a8c6e06090f6a2d7fb2c7758bad8beee349",
+      "source_first_face": 31000000,
+      "triangles": 1000000,
+      "meshlets": 11
+    },
+    {
+      "url": "natural-32.bin.gz",
+      "bytes": 556724,
+      "sha256": "bbb1bdf6dff4d87b311bce5439bda31523e926fdc56de66df6c2633a90d55664",
+      "decoded_bytes": 3206194,
+      "decoded_sha256": "058b938b0bc16f61a95a37d97db3a4edb34c85b6e629da6d70b1f00fe67fd840",
+      "source_first_face": 32000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "natural-33.bin.gz",
+      "bytes": 540072,
+      "sha256": "209ec648e692519e36ddfe16370401430087115aa35c46bb35806f99b210b1d5",
+      "decoded_bytes": 3482769,
+      "decoded_sha256": "b54ff8382dff46bf0e7f176fb141c640e95b2e079339aa82354da4f2581b6891",
+      "source_first_face": 33000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-34.bin.gz",
+      "bytes": 551216,
+      "sha256": "a7f795031d6f94f327184439b69283723c18843261ea4cd96be864b613ace3c4",
+      "decoded_bytes": 3475883,
+      "decoded_sha256": "b7912df920ece51620c2d73f71625fd59c6d5e8e6ead50f9b3a0c3de4941a1d3",
+      "source_first_face": 34000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-35.bin.gz",
+      "bytes": 555267,
+      "sha256": "6ef72f61cde46069c8aef7516ded79d34a2ca65f6e2aef0612b4685f55747d28",
+      "decoded_bytes": 3454596,
+      "decoded_sha256": "2a8f55cbb2fdc962be8fd218358119f63c6ae1e9eeccfdc2f2a672143aba5ce1",
+      "source_first_face": 35000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-36.bin.gz",
+      "bytes": 585775,
+      "sha256": "62af9bc8374144e0297cf455407ded6034612860d5a76d95ff78b650728412de",
+      "decoded_bytes": 3445508,
+      "decoded_sha256": "50e21a07c6396a84bbdc5fe70bcb87c11693d0b5c890495469b94f4bb52feac4",
+      "source_first_face": 36000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-37.bin.gz",
+      "bytes": 589111,
+      "sha256": "90bfd9829ea188f50d6ae31f09b4dfaa1275ff7d413e75009eabe93dff99d526",
+      "decoded_bytes": 3444365,
+      "decoded_sha256": "863dded74ca5efdf2035c7529fd690634b68b8e2db213927cc072d659594caed",
+      "source_first_face": 37000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-38.bin.gz",
+      "bytes": 610127,
+      "sha256": "8a44e18c455a8348ce93a8ec234ea1392656b20b278c7049079597d01aa25194",
+      "decoded_bytes": 3434841,
+      "decoded_sha256": "3bb29abc25f4c28b80a21c7460d40ff8479924e4a241e9ba50218afe41b69c69",
+      "source_first_face": 38000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-39.bin.gz",
+      "bytes": 651234,
+      "sha256": "89573422b9c3f1c3395d61c127e815fd9ca6dc94376704a7812dc8f797378dbd",
+      "decoded_bytes": 3438284,
+      "decoded_sha256": "6cad92011f121954ab6b9341fe3e56f7072d0150e264c11a117c1ad92e3d2617",
+      "source_first_face": 39000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-40.bin.gz",
+      "bytes": 622301,
+      "sha256": "f7c40690217a0c5e929417c17980e706eb08858c2cc31c4d36726498561c4816",
+      "decoded_bytes": 3442624,
+      "decoded_sha256": "cd539e14c68bdec2d2e3454d77ed26f460f321a31ebb85c89d71ed8efd282c2c",
+      "source_first_face": 40000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-41.bin.gz",
+      "bytes": 605530,
+      "sha256": "24084664ef9c9222786bc714b2a36e0fcca70907c9ce276cf2ceba32dc6eaac7",
+      "decoded_bytes": 3436867,
+      "decoded_sha256": "25324d9a63f682fde558e2fc79f819653333e6543dfdfed495e48b7b42f83c02",
+      "source_first_face": 41000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-42.bin.gz",
+      "bytes": 592589,
+      "sha256": "449faa855bcf140887bbb9aea918f19d8b9d72c1e5c41d0a0535d41cbc09258b",
+      "decoded_bytes": 3442139,
+      "decoded_sha256": "b008336f6a7ddca20d8c6925d06347b4f431c439ab83b6761f565efea85e5e5f",
+      "source_first_face": 42000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-43.bin.gz",
+      "bytes": 567592,
+      "sha256": "8a08825d843c8c91ee55739c5820bb356135b8ef6ffbc8dd6ed609c350374d96",
+      "decoded_bytes": 3434568,
+      "decoded_sha256": "45e47f0f43ce09bed75ebfad4479e3cf689cb7d230456b6d22d33829dddd8b4e",
+      "source_first_face": 43000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-44.bin.gz",
+      "bytes": 572872,
+      "sha256": "d017d928794cb62ce01bcd9c5b4c69492f9c016eafa0d2ab6ab9c7af699b8ae7",
+      "decoded_bytes": 3428893,
+      "decoded_sha256": "8d5cdbeb8ed84272d0b55d3cd67267cc76bac2e0266c6b4f0f636450315d4344",
+      "source_first_face": 44000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-45.bin.gz",
+      "bytes": 570735,
+      "sha256": "9668347057acad8c5f63182ef574cb1041cb83fd0f7024ecc3213d77f6162f66",
+      "decoded_bytes": 3417665,
+      "decoded_sha256": "c2d4af7d5d67fd616acc6ffe0e37e16f52b626d5062dd316a69a34195069c4c9",
+      "source_first_face": 45000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-46.bin.gz",
+      "bytes": 576026,
+      "sha256": "0a5e23d2b5d6657768a044320b68a7653bfd26f3372ea7ea0525203e7663fbe8",
+      "decoded_bytes": 3412384,
+      "decoded_sha256": "215df5c5f2e838d24845da01847660eed2e81cc869e4f4bd2390398e16e3a944",
+      "source_first_face": 46000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-47.bin.gz",
+      "bytes": 611552,
+      "sha256": "e51ff28c65e8b63ad82705ac4d0c55e3ee15ec3d1ee41df6cacdcce4272e2af8",
+      "decoded_bytes": 3314172,
+      "decoded_sha256": "60d7cde27b7d787a34031252cae6da7e9d14c75724c44fb5e129fcf440f940e4",
+      "source_first_face": 47000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "natural-48.bin.gz",
+      "bytes": 617841,
+      "sha256": "f075b4f21d6d426d78fd069d6eae748e5d59938946f7888d462762c58a480679",
+      "decoded_bytes": 2834377,
+      "decoded_sha256": "e516fc8bf354d4a6a3f4d13904e9749be82d8130e6065217b435ea0991997933",
+      "source_first_face": 48000000,
+      "triangles": 1000000,
+      "meshlets": 11
+    },
+    {
+      "url": "natural-49.bin.gz",
+      "bytes": 601613,
+      "sha256": "9bb1b8992b0ce7836a1e94bdfd185a184eb1c5d296a9e57f507bb3cebf4bb9df",
+      "decoded_bytes": 3267603,
+      "decoded_sha256": "60b7cd92c606b9b5df84daa3c2cdd2d91d9cea813c578f088e438042eb775dc1",
+      "source_first_face": 49000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "natural-50.bin.gz",
+      "bytes": 536383,
+      "sha256": "36e9c81522527d6db196ad28b6d5e7933230d94b2c8a7c0954d1a8f1a2b63a90",
+      "decoded_bytes": 3371134,
+      "decoded_sha256": "e15cb5de1618f4b4c7729408e70fe3894a7c094bfb22c02379570ac7aedea1f8",
+      "source_first_face": 50000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-51.bin.gz",
+      "bytes": 532544,
+      "sha256": "ae715b2ef3368ff1be436a9237ba484de39033703c153b425b36337662a92b0a",
+      "decoded_bytes": 3364777,
+      "decoded_sha256": "8bc47612058e9779dbdf03160c07e09f43527127cc86167fa6b2cb5bedb51c00",
+      "source_first_face": 51000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-52.bin.gz",
+      "bytes": 550256,
+      "sha256": "efe775c69cf452bae5c1366451e573b57b837712c3f8787e93c77abefd1f5bc4",
+      "decoded_bytes": 3357756,
+      "decoded_sha256": "96c6b830e051e1fab2ee2f9182577b19df9a8c01a4aced455c685fba629f0006",
+      "source_first_face": 52000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-53.bin.gz",
+      "bytes": 551360,
+      "sha256": "06848e5b8429c29c8b3960fc0fabd5c8221da016c613fd62ab2719112b2f3ca5",
+      "decoded_bytes": 3355242,
+      "decoded_sha256": "c43734f99b012c667f1a9db500ef7bddbce37f8b38c449a2698c286ea1b3f6fd",
+      "source_first_face": 53000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-54.bin.gz",
+      "bytes": 547964,
+      "sha256": "216966faf2be023a7a08b54d834f3ae226b4bbe3ad7c01d27de8c32405ea5093",
+      "decoded_bytes": 3347143,
+      "decoded_sha256": "ceb655c558478e31566f252cf015cae566e8a19aa671f1fab9149fc46f53207e",
+      "source_first_face": 54000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-55.bin.gz",
+      "bytes": 558017,
+      "sha256": "b539d14719e0f1cb9fb6da071e757ea8336a503b268283409e1b13f87bbfc453",
+      "decoded_bytes": 3347215,
+      "decoded_sha256": "d3dcbe9e7b70d31df114e641b81234078daed8ad010520bacf0d8e265c9a6e58",
+      "source_first_face": 55000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-56.bin.gz",
+      "bytes": 572650,
+      "sha256": "f03995b42b37a76c7069f6c06365b84db0a60cf5c61fa4474f1728b3cd7d0f41",
+      "decoded_bytes": 3359553,
+      "decoded_sha256": "5c635f073ac7890d4a811fd7d8bf693786cced210740c5b722328e339aac103c",
+      "source_first_face": 56000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-57.bin.gz",
+      "bytes": 547927,
+      "sha256": "e7ed95a14fbf8cafcfd8bdcef15a6be40d88377c2eee09ed4b599995e6223994",
+      "decoded_bytes": 3346621,
+      "decoded_sha256": "50f10bb9fc5258443092b3fa9dbf75f4213a1094fa52c2f49b6d09877fd35bb4",
+      "source_first_face": 57000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-58.bin.gz",
+      "bytes": 572154,
+      "sha256": "c96bef164cfc1d725d95d0b8c164d34d9bafc7d55a2ce11cfa30f59a67bd1ff0",
+      "decoded_bytes": 3381513,
+      "decoded_sha256": "642afd3ccc26753cc686210587aadbcc5e53187529c4d29eca4e0db11ff5f7ea",
+      "source_first_face": 58000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-59.bin.gz",
+      "bytes": 525295,
+      "sha256": "f4c408b75ad58bb622a60e6ea1402aeb8b153e6d919934444e12c666cf041410",
+      "decoded_bytes": 3336211,
+      "decoded_sha256": "5ef33bd9d155a21198f836a4b2398cca16155471f6b6d36e49e37a11fdd9eb51",
+      "source_first_face": 59000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-60.bin.gz",
+      "bytes": 526947,
+      "sha256": "fbcbd62119a08c8e7a4a45019434bd682e7b73bc281f522458134651e6a3db7c",
+      "decoded_bytes": 3338334,
+      "decoded_sha256": "e2c2ab769692962df6addae39cac69e30bb61ee1bc0a1088d8ffa67dd9acbb2c",
+      "source_first_face": 60000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-61.bin.gz",
+      "bytes": 550986,
+      "sha256": "72a3fc350b5232aa153d5b557eb7d3a0a525159fa91cab5675c47b7a180cb601",
+      "decoded_bytes": 3338488,
+      "decoded_sha256": "ec4590f7a6922754228b45ff5e17d0052c7b3472e9667088a979095a7774e38a",
+      "source_first_face": 61000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-62.bin.gz",
+      "bytes": 557108,
+      "sha256": "abba4559ba25daf4e654370a64b6c1c1a60f2d221ca44a2a47e036e8f4d503cf",
+      "decoded_bytes": 3332424,
+      "decoded_sha256": "4aec9e96cb297eef3591b87d41d4d922adfc4180d12f7fb969982479015fdfb1",
+      "source_first_face": 62000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "natural-63.bin.gz",
+      "bytes": 578248,
+      "sha256": "bcebac38c83f6d5eaf4618c9b3ff4d5b791761805ec5051b5f054f045b2230e1",
+      "decoded_bytes": 3317203,
+      "decoded_sha256": "f39385881f2c2434f3900fe1f833d76dc015246a03094701523bc7dc3bb108af",
+      "source_first_face": 63000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "natural-64.bin.gz",
+      "bytes": 594694,
+      "sha256": "4053c3956b693352a92ef297f346fa3d725eb8336440eb4e8af8d98c07b71206",
+      "decoded_bytes": 3297280,
+      "decoded_sha256": "5e1e3cd0b3900512ffe4d8f3cc18247999f1eb49483a9b6d0bd6ead46bc46851",
+      "source_first_face": 64000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "natural-65.bin.gz",
+      "bytes": 597801,
+      "sha256": "328da68fdb46339ae26e75d12e6df9df0c01df2bd244297a536a532da93d8ea2",
+      "decoded_bytes": 3184384,
+      "decoded_sha256": "11ee9a323850921b25b69d1fa94a4dd039d5f1c1e8d5c130ec27c5f9bde0cf40",
+      "source_first_face": 65000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "natural-66.bin.gz",
+      "bytes": 588423,
+      "sha256": "24639751a2186c21e6482909a19b0a178ffc57b4a945b1af0cff21fe1e12fbc1",
+      "decoded_bytes": 2836702,
+      "decoded_sha256": "ff9eb9e63bf1ffbb60e06c255d2618404596e19cb11fff9691faab01225991af",
+      "source_first_face": 66000000,
+      "triangles": 1000000,
+      "meshlets": 11
+    },
+    {
+      "url": "natural-67.bin.gz",
+      "bytes": 621686,
+      "sha256": "1b1d6323eb709c0ce3d4c7946a8510fa7ae5134d78b7a07ca0d65176c4f22352",
+      "decoded_bytes": 3055784,
+      "decoded_sha256": "fddf24fe24ccfdee41f03ad4f941704f81f9ebcd0ee13358fb26cde2946926c2",
+      "source_first_face": 67000000,
+      "triangles": 1000000,
+      "meshlets": 12
+    },
+    {
+      "url": "natural-68.bin.gz",
+      "bytes": 621056,
+      "sha256": "37573199b3035be945d4ce519c6106b2836ab32ba2271e68a84e3b24eecd8b10",
+      "decoded_bytes": 3170918,
+      "decoded_sha256": "02669424ee063b7ef071e11f146f5becd87d44c7f6b7fbbb2563152386b474eb",
+      "source_first_face": 68000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "natural-69.bin.gz",
+      "bytes": 593409,
+      "sha256": "fba83bc58c65fef40da93040665b537bf78ea02636a7cefe41de5250fd0c4606",
+      "decoded_bytes": 2763719,
+      "decoded_sha256": "3d27d680b031446ae1a39097adfc8a9039dcc2b6029699dcca94681c4a737a9d",
+      "source_first_face": 69000000,
+      "triangles": 1000000,
+      "meshlets": 11
+    },
+    {
+      "url": "natural-70.bin.gz",
+      "bytes": 597645,
+      "sha256": "16d11cf985b0d3e8f4d96788b36093f3361102b5e7ff0e52ea3f6d678da05154",
+      "decoded_bytes": 2316583,
+      "decoded_sha256": "6f0efdc7668a48454b0909f04e76861a5bf8709924b307042c84d8e71dac754a",
+      "source_first_face": 70000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-71.bin.gz",
+      "bytes": 520758,
+      "sha256": "34a9c7bcd7d4a334aae86e599d6b44e5e186507fd48e912cfb73a9bcaf9c4173",
+      "decoded_bytes": 2175166,
+      "decoded_sha256": "c75924ff0ca87512a793f8006fec2c6c0e0d2ae97e82f05ac629830a63629b52",
+      "source_first_face": 71000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-72.bin.gz",
+      "bytes": 544288,
+      "sha256": "68fc879ed3d0337a71e7b3b11673d6ea61d665077f2ac5597ef98f21949dd36f",
+      "decoded_bytes": 2102651,
+      "decoded_sha256": "e52cfaa44a615308d9572d8a528c1ba0eb3ea5df53e9dbd937a6a543bf454529",
+      "source_first_face": 72000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-73.bin.gz",
+      "bytes": 489810,
+      "sha256": "1e506c09288fb846ca7475e719c873a2c69fe621a301d28b45dacc8fe98c690b",
+      "decoded_bytes": 2067001,
+      "decoded_sha256": "9b734f82f4399086899c90c4adcc4ed418d625bcabe432c52dd3f6335269bc5b",
+      "source_first_face": 73000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "natural-74.bin.gz",
+      "bytes": 102056,
+      "sha256": "3e7d2fa3179f9ebc50d8aa45edc34a24997dd42dafaec4072d11bb69b2e00da2",
+      "decoded_bytes": 597166,
+      "decoded_sha256": "0bfce9cd65be4e11d5b93b0b3beceaaab3ce179355ef2988bca0dee3b1f923b4",
+      "source_first_face": 74000000,
+      "triangles": 293846,
+      "meshlets": 3
+    }
+  ],
+  "colour_kind": "Original archived photograph-reference RGB appearance, registered onto unchanged native74 coordinates; not a stress scale.",
+  "source_original_3mf_sha256": "94cea43e98f914aef09c56504ff9c16c1b490f24124a6815c2e90a84288abeb7",
+  "original_archive_3mf": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/Megalodon_FullCT_NaturalColors_PBR.3mf",
+  "registration": "appearance-registration.json",
+  "source_geometry_unchanged": true,
+  "GPU_extra_RGB_bytes": 162640449,
+  "download_bytes": 40508689,
+  "roughness_units": ".22+.05*integer_bin",
+  "both_sizes_share_appearance": true
+}

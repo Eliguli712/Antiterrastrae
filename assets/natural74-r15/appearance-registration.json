@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "source_original_3mf": "Megalodon_FullCT_NaturalColors_PBR.3mf",
+  "source_original_3mf_sha256": "94cea43e98f914aef09c56504ff9c16c1b490f24124a6815c2e90a84288abeb7",
+  "source_original_vertices": 16272624,
+  "source_original_triangles": 32687264,
+  "target_native_vertices": 37951699,
+  "target_native_triangles": 74293846,
+  "source_geometry_changed": false,
+  "source_Z_registration": "Native source z multiplied by16/18 only for lookup into archived 16um-through-slice colour coordinate frame. Native geometry and target coordinates unchanged.",
+  "colour_registration": "Nearest original archived colour vertex, using all 16,272,624 source vertices, within0.60mm.",
+  "supported_vertices": 25877674,
+  "unsupported_vertices": 12074025,
+  "unsupported_appearance": "Median of original natural-colour palette, not a measured internal/reverse-face photograph.",
+  "mean_supported_lookup_distance_mm": 0.056555224786267226,
+  "maximum_supported_lookup_distance_mm": 0.5999999999999993,
+  "roughness": "Original source natural/stress regional gloss indices verified equal on every archive face; area-weighted source roughness assigned from the same nearest original colour vertex, 0.05 bins.",
+  "new_FEM": false,
+  "numerical_stress_field": false,
+  "scope": "Photo-reference appearance projection only. Original unseen-face colour continuation and illustrative gloss are retained as appearance hypotheses, not measured optical constants.",
+  "natural74-rgb.u8_sha256": "48f7cd564c206ee0306c15fad3a6c5d6dac8bf44355076e62521f8aafee23e7c",
+  "natural74-rough.u8_sha256": "dafd791d23f242d5e803d4673c8379ac874156b2405a3bd95f4066924ab61813"
+}

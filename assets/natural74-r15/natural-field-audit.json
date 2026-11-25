@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "every_meshlet_position_matched_to_original_native_vertex": true,
+  "all_original_source_triangles_covered": 74293846,
+  "meshlet_vertex_copies": 54213483,
+  "geometry_changed": false,
+  "RGB_bytes": 162640449,
+  "RGB_colour_bundles": 75,
+  "download_bytes": 40508689
+}
