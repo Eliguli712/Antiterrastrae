@@ -1,0 +1,78 @@
+{
+  "schema": "palaeo-cad-ruler-v1",
+  "units": "mm",
+  "measured_span_mm": 50,
+  "scale_positions_mm": [
+    0,
+    10,
+    20,
+    30,
+    40,
+    50
+  ],
+  "tick_pitch_mm": 1,
+  "half_block_mm": 5,
+  "major_block_mm": 10,
+  "board_dimensions_mm": [
+    10,
+    1.2,
+    58
+  ],
+  "marking_film_thickness_mm": 0.02,
+  "total_thickness_mm": 1.24,
+  "CAD_kernel": "OpenCASCADE through Gmsh 4.15.2",
+  "geometry": "B-rep solids; separately meshed original CAD boundaries",
+  "nominal_scale": "CAD coordinates. Printing and display require their own dimensional calibration; this is not a calibrated physical instrument.",
+  "body_volume_mm3": 695.9999999999999,
+  "number_of_marking_solids": 140,
+  "CAD_surface_triangles": 14148,
+  "end_mark_difference_mm": 50,
+  "source_script_sha256": "1f81db2dec957edb0720aac747e773d27eee025529cf842c08421e7d360e85ef",
+  "STEP_roundtrip": {
+    "status": "passed",
+    "solids": 141,
+    "board_volume_mm3": 695.9999999999999
+  },
+  "files": [
+    {
+      "name": "Palaeontological_Ruler_50mm.3mf",
+      "bytes": 141287,
+      "sha256": "ea45f12f4956ad287fe44c2db03ec7c043d50597fca06d52f9d6e3e785af7436"
+    },
+    {
+      "name": "Palaeontological_Ruler_50mm.brep",
+      "bytes": 916058,
+      "sha256": "c5a7e459d16b139fba8bfac1da2c11c93f2cc39a68e8a9582229ce04d3c10f96"
+    },
+    {
+      "name": "Palaeontological_Ruler_50mm.json",
+      "bytes": 367400,
+      "sha256": "7bdc92e60afb98338847c40ae0152584bd254379c6e12aa5e6a0f0de9d653a5a"
+    },
+    {
+      "name": "Palaeontological_Ruler_50mm.png",
+      "bytes": 10823,
+      "sha256": "4be8fa651811132a13fda2a31fd750a5782d62013c0a3d9692dd8cbf52d00a16"
+    },
+    {
+      "name": "Palaeontological_Ruler_50mm.step",
+      "bytes": 5104571,
+      "sha256": "bbb6fcae32f0d9ebfc3110e0d3583e61df1231ad263c96144b9bae21417f86eb"
+    },
+    {
+      "name": "Palaeontological_Ruler_50mm.svg",
+      "bytes": 696173,
+      "sha256": "3d6eeb5c03245bfb3085013c882bc6bee7b7d15a54f8062d95761086fd74a18c"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 557,
+      "sha256": "b29dfdcdee839449cdd4924fea094997cd6b9e90bdf5bf7eca41a72336c1253a"
+    },
+    {
+      "name": "build_paleo_ruler.py",
+      "bytes": 9899,
+      "sha256": "1f81db2dec957edb0720aac747e773d27eee025529cf842c08421e7d360e85ef"
+    }
+  ]
+}
