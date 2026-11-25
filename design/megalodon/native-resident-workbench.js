@@ -10,7 +10,7 @@ export class NativeResident{
   let first=0;for(const chunk of geometry.chunks){if(chunk.source_first_face!==first)throw Error('Native face coverage has a gap or overlap');first+=chunk.triangles;}
   if(first!==NATIVE_FACE_COUNT||fields.chunks.length!==geometry.chunks.length)throw Error('Incomplete native chunk coverage');
   this.started=performance.now();this.view=viewer;this.geometry=geometry;this.fields=fields;this.onStatus=onStatus;this.faces=0;this.drawMode='surface';this.pointSize=2;this.xray=false;this.wireMaterial=new THREE.MeshBasicMaterial({color:0x59b5f5,wireframe:true,side:THREE.DoubleSide,transparent:true,opacity:.7});this.pointMaterial=new THREE.PointsMaterial({color:0xb0e8ff,size:2,sizeAttenuation:false,transparent:true,opacity:.9});this.enabled=true;this.ready=false;this.generation=0;this.meshes=[];
-  this.group=new THREE.Group();this.group.visible=false;viewer.toothGroup.add(this.group);
+  this.fieldTicket=0;this.currentFieldKey=null;this.group=new THREE.Group();this.group.visible=false;viewer.toothGroup.add(this.group);
   this.savedVisibility=new Map((viewer.meshes||[]).map(m=>[m,m.visible]));this.previousHook=viewer.beforePreview;
   this.hook=()=>{if(this.ready){for(const m of this.savedVisibility.keys())m.visible=false;this.group.visible=viewer.state?.layers?.tooth??true;this.applyGeometryMode();}return this.previousHook?.()||false;};viewer.beforePreview=this.hook;
   this.stats={resident_chunks:0,source_triangles:NATIVE_FACE_COUNT,pose_culling:false,motion_LOD:false,completed:false};
@@ -31,17 +31,17 @@ export class NativeResident{
   const mesh=new THREE.Mesh(g,this.view.currentToothMaterial?.()||this.view.material);mesh.frustumCulled=false;mesh.userData.nativeChunk=data.id;mesh.userData.nativeFaceCount=expected.triangles;this.meshes.push(mesh);this.group.add(mesh);this.faces+=expected.triangles;this.stats.resident_chunks=this.meshes.length;this.stats.max_resident_chunks=this.meshes.length;
  }
  async load(){
-  const generation=++this.generation;
+  const generation=++this.generation,initialFields=this.fields;
   for(let id=0;id<this.geometry.chunks.length;id++){
-   if(!this.enabled||generation!==this.generation)return;const data=await this.request(this.geometry.chunks[id],this.fields.chunks[id],id);if(!this.enabled||generation!==this.generation)return;
+   if(!this.enabled||generation!==this.generation)return;const data=await this.request(this.geometry.chunks[id],initialFields.chunks[id],id);if(!this.enabled||generation!==this.generation)return;
    this.stats.worker_cache=data.cacheStats||{};this.add(data);this.onStatus({state:'refining',faces:this.faces,total:NATIVE_FACE_COUNT,stats:this.stats});await new Promise(resolve=>setTimeout(resolve,0));
   }
   if(this.faces!==NATIVE_FACE_COUNT)throw Error('Full native mesh is incomplete');this.ready=true;this.stats.completed=true;this.stats.elapsed_ms=performance.now()-this.started;this.stats.motion_LOD=false;this.applyGeometryMode();this.group.visible=true;for(const m of this.savedVisibility.keys())m.visible=false;this.view.dirty=true;
-  this.onStatus({state:'complete',faces:this.faces,total:NATIVE_FACE_COUNT,stats:this.stats});
+  this.currentFieldKey=initialFields.chunks.map(c=>c.sha256).join('|');if(this.fields!==initialFields)await this.setFields(this.fields);this.onStatus({state:'complete',faces:this.faces,total:NATIVE_FACE_COUNT,stats:this.stats});
  }
  async setFields(fields){
-  if(!this.enabled)return;await this.loadingFields;this.fields=fields;if(!this.ready)return;
-  this.loadingFields=this.updateFields(fields);try{await this.loadingFields;}finally{this.loadingFields=null;}
+  if(!this.enabled)return;this.fields=fields;const ticket=++this.fieldTicket,prior=this.loadingFields;if(prior)await prior;if(!this.enabled||ticket!==this.fieldTicket||!this.ready)return;
+  const key=fields.chunks.map(c=>c.sha256).join('|');if(key===this.currentFieldKey)return;const running=this.updateFields(fields);this.loadingFields=running;try{await running;this.currentFieldKey=key;}finally{if(this.loadingFields===running)this.loadingFields=null;}
  }
  async updateFields(fields){
   const generation=this.generation;this.ready=false;this.group.visible=false;for(const[m,visible]of this.savedVisibility)m.visible=visible;

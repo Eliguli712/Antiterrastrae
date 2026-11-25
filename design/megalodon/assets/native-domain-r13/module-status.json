@@ -75,7 +75,7 @@
     "scope": "Four independently assembled synthetic 3D solves only; no native tetrahedra generated, no MPI execution or scalability claim",
     "native_completed_tetrahedra": 0
   },
-  "package_sha256": "84b918c793ecb8fbaa219a361a973ceebd8160d9f98cc3c060f8ac799b10d002",
+  "package_sha256": "6b0950f10a51ee86d2cdb2c6d37de789064e14db9054403f63cf70cbedf7080a",
   "native_surface_GPU_verified": true,
   "renderer": "Apple M3 Pro / ANGLE Metal",
   "native_panels": {
@@ -84,5 +84,20 @@
   },
   "shared_decoded_entries": 225,
   "source_requests_after_precache": 0,
-  "cached_camera_and_interior_cut_verified": true
+  "cached_camera_and_interior_cut_verified": true,
+  "rapid_size_switch_verified": {
+    "final_size_mm": 100,
+    "rapid_requests": [
+      50,
+      100,
+      50,
+      100
+    ],
+    "checked_chunk_vertex_values": 39428327,
+    "faces": 74293846,
+    "worker_cache": {
+      "decoded_hits": 300
+    },
+    "ready": true
+  }
 }

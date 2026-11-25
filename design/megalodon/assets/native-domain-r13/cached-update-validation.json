@@ -4,7 +4,7 @@
     {
       "panel": "upper",
       "axis": "none",
-      "elapsed_ms": 1.5999999940395355,
+      "elapsed_ms": 1.5,
       "faces": 74293846,
       "chunks": 75,
       "motion_LOD": false,
@@ -15,7 +15,7 @@
     {
       "panel": "upper",
       "axis": "x",
-      "elapsed_ms": 105.09999999403954,
+      "elapsed_ms": 45.5,
       "faces": 74293846,
       "chunks": 75,
       "motion_LOD": false,
@@ -37,7 +37,7 @@
     {
       "panel": "lower",
       "axis": "x",
-      "elapsed_ms": 34.89999997615814,
+      "elapsed_ms": 18.30000001192093,
       "faces": 74293846,
       "chunks": 75,
       "motion_LOD": false,
@@ -48,5 +48,20 @@
   ],
   "native_source_requests": [],
   "missing_resources": [],
+  "rapid_field_switch": {
+    "final_size_mm": 100,
+    "rapid_requests": [
+      50,
+      100,
+      50,
+      100
+    ],
+    "checked_chunk_vertex_values": 39428327,
+    "faces": 74293846,
+    "worker_cache": {
+      "decoded_hits": 300
+    },
+    "ready": true
+  },
   "status": "passed"
 }
