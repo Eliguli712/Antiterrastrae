@@ -11,7 +11,7 @@ export async function sourceBytes(part,stats={}){
   const cache=persistent&&globalThis.caches?await caches.open(SOURCE_CACHE).catch(()=>null):null;
   const old=cache?await cache.match(key):null;
   if(old){const b=await old.arrayBuffer();if(await digest(b)===part.sha256){stats.cacheHits=(stats.cacheHits||0)+1;return b;}await cache.delete(key);}
-  const r=await fetch(part.url,{cache:'force-cache'});if(!r.ok)throw Error('Native source HTTP '+r.status);
+  const r=await fetch(part.url,{cache:cache?'no-store':'force-cache'});if(!r.ok)throw Error('Native source HTTP '+r.status);
   const b=await r.arrayBuffer();if(await digest(b)!==part.sha256)throw Error('Native source checksum mismatch');
   stats.sourceReads=(stats.sourceReads||0)+1;stats.sourceBytes=(stats.sourceBytes||0)+b.byteLength;
   if(cache){try{await cache.put(key,new Response(b,{headers:{'Content-Type':'application/octet-stream','x-native-source-sha256':part.sha256}}));stats.cacheWrites=(stats.cacheWrites||0)+1;}catch(e){stats.storageWarning=String(e.message||e);}}
