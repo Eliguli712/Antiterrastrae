@@ -1,8 +1,8 @@
 {
-  "source_commit": "707e6a284c55ea13d334aa05be38d051e8df3cb2",
-  "verified_at": "2026-11-25T11:34:23.125487+00:00",
+  "source_commit": "d070da9304206a5284a2849a09acb8fc3c525439",
+  "verified_at": "2026-11-25T11:53:12.477678+00:00",
   "execution": "GitHub Actions",
-  "run_url": "https://github.com/Eliguli712/Antiterrastrae/actions/runs/45604998982",
+  "run_url": "https://github.com/Eliguli712/Antiterrastrae/actions/runs/45607977843",
   "sites": {
     "github_pages": {
       "url": "https://eliguli712.github.io/Antiterrastrae/",
@@ -10,14 +10,14 @@
       "checked_files": [
         {
           "path": "cv.html",
-          "bytes": 1040067,
-          "sha256": "c0a9ccd72ae20ab535f0e23e2d04b5bb4658f816a4f4bea8429d79a0829ea867",
+          "bytes": 1040169,
+          "sha256": "ef94aa09c1764d160ab6ac959c53e3b19f897e648f5c59fcaf53482aaf83491f",
           "matches": true
         },
         {
           "path": "publications/catalog.json",
-          "bytes": 12435,
-          "sha256": "863da75eed3c385811ed1ae249b20f4defaa97a8644089b5e518caa3cf6932dd",
+          "bytes": 12496,
+          "sha256": "7ebe09b9a95de1f8d935f234df696d6169dc1515ff248ece6a62ffd0c31675b9",
           "matches": true
         },
         {
@@ -190,8 +190,8 @@
         },
         {
           "path": "publications/megalodon-current-preprint.pdf",
-          "bytes": 47555360,
-          "sha256": "7e6372c2d24155a4f658345e496d630f0eb8bd9cd69e732b31f99e7074193b20",
+          "bytes": 47555924,
+          "sha256": "6905920cd7796f5e113027bab1e844f98257ccbc94694b8b52d664de1022ac09",
           "matches": true
         },
         {
@@ -330,20 +330,20 @@
       "checked_files": [
         {
           "path": "cv.html",
-          "bytes": 1040067,
-          "sha256": "c0a9ccd72ae20ab535f0e23e2d04b5bb4658f816a4f4bea8429d79a0829ea867",
+          "bytes": 1040169,
+          "sha256": "ef94aa09c1764d160ab6ac959c53e3b19f897e648f5c59fcaf53482aaf83491f",
           "matches": true
         },
         {
           "path": "",
-          "bytes": 1040067,
-          "sha256": "c0a9ccd72ae20ab535f0e23e2d04b5bb4658f816a4f4bea8429d79a0829ea867",
+          "bytes": 1040169,
+          "sha256": "ef94aa09c1764d160ab6ac959c53e3b19f897e648f5c59fcaf53482aaf83491f",
           "matches": true
         },
         {
           "path": "publications/catalog.json",
-          "bytes": 12435,
-          "sha256": "863da75eed3c385811ed1ae249b20f4defaa97a8644089b5e518caa3cf6932dd",
+          "bytes": 12496,
+          "sha256": "7ebe09b9a95de1f8d935f234df696d6169dc1515ff248ece6a62ffd0c31675b9",
           "matches": true
         },
         {
@@ -516,8 +516,8 @@
         },
         {
           "path": "publications/megalodon-current-preprint.pdf",
-          "bytes": 47555360,
-          "sha256": "7e6372c2d24155a4f658345e496d630f0eb8bd9cd69e732b31f99e7074193b20",
+          "bytes": 47555924,
+          "sha256": "6905920cd7796f5e113027bab1e844f98257ccbc94694b8b52d664de1022ac09",
           "matches": true
         },
         {
