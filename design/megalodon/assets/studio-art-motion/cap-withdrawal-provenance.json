@@ -1,0 +1,25 @@
+{
+  "sources": {
+    "frame": {
+      "vertices": 12073,
+      "triangles": 24234,
+      "sha256": "821236285003895e4ef0fd538c89cc7fa3a64ac96beed0e80162e3614e5fa739"
+    },
+    "cap": {
+      "vertices": 4378,
+      "triangles": 8764,
+      "sha256": "ff3637cceeb66930b9584cbb0f74244262bb9dd68f200772b6dbc15bf8d478f5"
+    },
+    "tooth": {
+      "vertices": 20588,
+      "triangles": 41180,
+      "sha256": "93b1ebe99e66396a4ca769452fcd236121ed84dc98aba6005a27ce38e96e1c6f"
+    }
+  },
+  "movement": "Archived studio axis: cap position (0, \u2212d, 0) millimetres; 0 \u2264 d \u2264 40",
+  "render": "Orthographic view of the original stand and cap CAD and archived studio tooth preview. The original art photograph is shown independently.",
+  "seconds": 7.0,
+  "frames": 168,
+  "fps": 24,
+  "sha256": "47451802142d9ff4a9cd8b12e8d850cf10a080e5f77a9fdcc117501bfccdc863"
+}

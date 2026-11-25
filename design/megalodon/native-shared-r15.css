@@ -47,3 +47,50 @@ html[data-native-shared-r15]{scroll-behavior:auto}
 .native-movie-dock-actions{gap:.4rem;padding:.5rem .8rem}
 .native-movie-dock-actions button{padding:.35rem .5rem;font-size:.76rem;min-height:34px}
 .native-movie-docked .native-movie-dock-actions{padding:.4rem}
+
+/* Serif typography across the artwork and scan controls. */
+#art,#internal,.native-movie-docked {
+ font-family:ExhibitionSerif,Georgia,serif;
+}
+#art :is(button,select,output,summary,p,figcaption,label),
+#internal :is(button,select,output,summary,p,figcaption,label),
+.native-movie-docked :is(button,select,output,p,label) {
+ font-family:inherit;
+}
+.native-ct-processing { margin-top:1.5rem; }
+.native-ct-processing>.native-fold-content { padding-block:.6rem 1rem; }
+.native-art-studio {
+ display:block;
+ width:100%;
+ height:clamp(670px,116vw,980px);
+ border:0;
+ background:#0b151b;
+}
+.native-speed-control {
+ display:grid!important;
+ grid-template-columns:minmax(0,1fr) auto;
+ gap:.25rem .65rem!important;
+ align-items:center;
+ min-width:min(100%, 14rem);
+ max-width:100%;
+}
+.native-speed-control>span:first-child { grid-column:1/-1; }
+.native-speed-control input[type=range] {
+ width:100%;
+ min-width:0;
+ margin:0;
+ accent-color:#a7dacf;
+}
+.native-speed-readout {
+ min-width:3.5ch;
+ text-align:right;
+ font-variant-numeric:tabular-nums;
+ color:#e1efed;
+}
+.native-speed-limits {
+ grid-column:1/-1;
+ display:flex;
+ justify-content:space-between;
+ color:#a7c5ca;
+ font-size:.75em;
+}

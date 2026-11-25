@@ -6,20 +6,93 @@ export const NATIVE_FACES=74293846;
 const CENTRE=136.73910524340096;
 const VERT=`precision highp float;precision highp int;
 in vec3 position;in vec3 color;in vec3 photoColour;in float nativeRoughness;
-uniform float uPointSize;uniform mat4 projectionMatrix,modelViewMatrix;uniform mat3 uR,uInvR;uniform vec3 uT,uOffset;uniform float uSize;uniform int uGrid,uAppearance;
+uniform float uPointSize;uniform mat4 projectionMatrix,modelViewMatrix;uniform mat3 uR,uInvR;uniform vec3 uT,uOffset,uMotionOrigin,uMotionHalfExtent,uMaskU,uMaskV;uniform float uSize;uniform int uGrid,uAppearance;
 out vec3 vC,vSource,vColour,vPhoto,vView;out float vRough;
 vec3 toLinear(vec3 c){return mix(c/12.92,pow((c+.055)/1.055,vec3(2.4)),step(vec3(.04045),c));}
-void main(){vec3 d;if(uGrid==1){vSource=position*.009;d=uR*vSource+uT;}else{d=position;vSource=uInvR*(d-uT);}vC=d-vec3(0.,0.,136.73910524340096);vColour=uAppearance==0?toLinear(color):vec3(0.);vPhoto=uAppearance==9?toLinear(photoColour):vec3(0.);vRough=.22+.05*nativeRoughness;vec4 p=modelViewMatrix*vec4(vC*uSize+uOffset,1.);vView=p.xyz;gl_Position=projectionMatrix*p;gl_PointSize=uPointSize;}`;
+void main(){vec3 d;if(uGrid==1){vSource=position*.009;d=uR*vSource+uT;}else if(uGrid==2){vSource=uMotionOrigin+position.x*uMotionHalfExtent.x*uMaskU+position.y*uMotionHalfExtent.y*uMaskV;d=uR*vSource+uT;}else{d=position;vSource=uInvR*(d-uT);}vC=d-vec3(0.,0.,136.73910524340096);vColour=uAppearance==0?toLinear(color):vec3(0.);vPhoto=uAppearance==9?toLinear(photoColour):vec3(0.);vRough=.22+.05*nativeRoughness;vec4 p=modelViewMatrix*vec4(vC*uSize+uOffset,1.);vView=p.xyz;gl_Position=projectionMatrix*p;gl_PointSize=uPointSize;}`;
 const FRAG=`precision highp float;precision highp int;precision highp sampler3D;
 in vec3 vC,vSource,vColour,vPhoto,vView;in float vRough;
 uniform sampler3D uVolume;uniform sampler2D uMask,uNeckGuide;
 uniform mat4 viewMatrix;uniform mat3 uR;
 uniform vec3 uVolumeOrigin,uVolumeExtent,uTexel,uAxis,uMaskOrigin,uMaskExtent,uMaskU,uMaskV,uPCACenter;
-uniform float uClip,uSide,uRoot,uTransition,uCurvature,uMaskSpacing;uniform int uClipEnabled,uNativeClip,uPart,uAppearance,uVolumeReady,uPlane,uMaskBefore,uPoints,uContour;
+uniform float uClip,uSide,uRoot,uTransition,uCurvature,uMaskSpacing,uContourCoverage;uniform int uClipEnabled,uNativeClip,uPart,uAppearance,uVolumeReady,uPlane,uMaskBefore,uPoints,uContour;
 out vec4 result;
 vec3 toLinear(vec3 c){return mix(c/12.92,pow((c+.055)/1.055,vec3(2.4)),step(vec3(.04045),c));}
 vec3 toSRGB(vec3 c){return mix(c*12.92,1.055*pow(max(c,vec3(0.)),vec3(1./2.4))-.055,step(vec3(.0031308),c));}
 float channel(vec4 s){if(uAppearance==3)return s.g;if(uAppearance==4||uAppearance==5||uAppearance==7)return s.b;return s.r;}
+// This channel is the original mask’s material fraction per 8×8×8 block.
+float pooledMask(vec3 p){
+ vec3 uvw=(p-uVolumeOrigin)/uVolumeExtent;
+ if(any(lessThan(uvw,vec3(0.)))||any(greaterThan(uvw,vec3(1.))))return 0.;
+ return texture(uVolume,uvw).a;
+}
+float pooledCurvature(vec3 p,vec3 u,vec3 v,float f,out vec2 g){
+ float l=pooledMask(p-u),r=pooledMask(p+u),b=pooledMask(p-v),t=pooledMask(p+v);
+ g=.5*vec2(r-l,t-b);
+ float g2=dot(g,g);
+ if(g2<.0025)return 0.;
+ float fuu=r+l-2.*f,fvv=t+b-2.*f;
+ float fuv=.25*(pooledMask(p+u+v)+pooledMask(p-u-v)-pooledMask(p+u-v)-pooledMask(p-u+v));
+ return abs(fuu*g.y*g.y-2.*fuv*g.x*g.y+fvv*g.x*g.x)/(g2*sqrt(g2));
+}
+bool materialAhead(vec3 p,vec3 d){
+ // Sample farther into the slice so the exterior silhouette is excluded.
+ return pooledMask(p+3.*d)>.86||pooledMask(p+7.*d)>.86||pooledMask(p+14.*d)>.86;
+}
+const float pooledIso=.79;
+const vec4 contourBlue=vec4(.025,.30,.90,1.);
+const vec4 contourRed=vec4(.90,.025,.09,1.);
+int pooledMarker(vec3 p,float f,float lineWidth){
+ if(abs(f-pooledIso)>=lineWidth)return 0;
+ float spacing=uVolumeExtent.x*uTexel.x;
+ vec3 u=uMaskU*spacing,v=uMaskV*spacing;
+ if(!materialAhead(p,u)||!materialAhead(p,-u)||!materialAhead(p,v)||!materialAhead(p,-v))return 0;
+
+ vec2 gradient;
+ float bend=pooledCurvature(p,u,v,f,gradient);
+ // Compare along the sampled contour, in units of one pooled sample.
+ float cutoff=uContour==2?.70:.42;
+ if(bend>cutoff){
+  vec2 dir=normalize(vec2(-gradient.y,gradient.x));
+  vec3 tangent=u*dir.x+v*dir.y;
+  vec3 a=p+tangent,b=p-tangent;
+  vec2 unused;
+  float k1=pooledCurvature(a,u,v,pooledMask(a),unused);
+  float k2=pooledCurvature(b,u,v,pooledMask(b),unused);
+  if(bend>=max(k1,k2))return 2;
+ }
+ return 1;
+}
+vec3 coverageOffset(vec3 step){
+ return step*min(uContourCoverage,.155/max(length(step),.0001));
+}
+vec4 pooledSlice(vec3 p){
+ float f=pooledMask(p);
+ float lineWidth=clamp(fwidth(f)*.50,.045,.145);
+ vec3 dx=coverageOffset(dFdx(p)),dy=coverageOffset(dFdy(p));
+ if(uContour>0){
+  int marker=pooledMarker(p,f,lineWidth);
+  // A marker can cover its immediate screen neighbourhood, never fresh data.
+  for(int i=-1;i<=1;i+=2){
+   for(int j=-1;j<=1;j+=2){
+    if(marker==2)break;
+    vec3 q=p+float(i)*dx+float(j)*dy;
+    marker=max(marker,pooledMarker(q,pooledMask(q),lineWidth));
+   }
+  }
+  if(marker==2)return contourRed;
+  if(marker==1)return contourBlue;
+ }
+ if(uMaskBefore==1&&f<pooledIso)discard;
+ return vec4(vec3(smoothstep(.1,pooledIso,f)*.84),1.);
+}
+vec2 maskUV(vec3 vector){
+ return vec2(dot(vector,uMaskU),dot(vector,uMaskV))/uMaskExtent.xy;
+}
+vec2 exactMarker(vec2 uv){
+ if(any(lessThan(uv,vec2(0.)))||any(greaterThan(uv,vec2(1.))))return vec2(0.);
+ return texture(uMask,uv).gb;
+}
 void main(){
  if(uPoints==1&&length(gl_PointCoord-vec2(.5))>.5)discard;
  if(uPlane==0&&uClipEnabled==1){float c=uNativeClip==1?vSource.z:uNativeClip==2?dot(vSource-uPCACenter,uAxis):dot(vC,uAxis);if((c-uClip)*uSide>0.)discard;}
@@ -39,8 +112,32 @@ void main(){
   if(uPart==1&&vC.z<upper)discard;
   if(uPart==2&&(vC.z<lower||vC.z>=upper))discard;
  }
- float mask=1.;if(uPlane==1){vec3 planeDelta=vSource-uMaskOrigin;vec2 uv=vec2(dot(planeDelta,uMaskU),dot(planeDelta,uMaskV))/uMaskExtent.xy;if(any(lessThan(uv,vec2(0.)))||any(greaterThan(uv,vec2(1.))))discard;mask=texture(uMask,uv).r;if(uMaskBefore==1&&mask<.5)discard;}
- if(uPlane==1&&uContour==1){vec3 delta=vSource-uMaskOrigin;vec2 uv=vec2(dot(delta,uMaskU),dot(delta,uMaskV))/uMaskExtent.xy;vec4 markers=texture(uMask,uv);vec2 tx=vec2(uMaskSpacing)/uMaskExtent.xy;for(int j=-1;j<=1;j++)for(int i=-1;i<=1;i++)markers.gb=max(markers.gb,texture(uMask,uv+vec2(float(i),float(j))*tx).gb);if(markers.b>.5){result=vec4(.96,.18,.12,1.);return;}if(markers.g>.5){result=vec4(.12,.63,.98,1.);return;}}
+ if(uPlane==2){result=pooledSlice(vSource);return;}
+ float mask=1.;
+ if(uPlane==1){
+  vec2 uv=maskUV(vSource-uMaskOrigin);
+  if(uContour>0){
+   vec2 dx=maskUV(coverageOffset(dFdx(vSource)));
+   vec2 dy=maskUV(coverageOffset(dFdy(vSource)));
+   vec2 markers=exactMarker(uv);
+   vec2 texel=vec2(uMaskSpacing)/uMaskExtent.xy;
+   for(int i=-1;i<=1;i++){
+    for(int j=-1;j<=1;j++){
+     markers=max(markers,exactMarker(uv+vec2(float(i),float(j))*texel));
+    }
+   }
+   for(int i=-1;i<=1;i+=2){
+    for(int j=-1;j<=1;j+=2){
+     markers=max(markers,exactMarker(uv+float(i)*dx+float(j)*dy));
+    }
+   }
+   if(markers.y>.5){result=contourRed;return;}
+   if(markers.x>.5){result=contourBlue;return;}
+  }
+  if(any(lessThan(uv,vec2(0.)))||any(greaterThan(uv,vec2(1.))))discard;
+  mask=texture(uMask,uv).r;
+  if(uMaskBefore==1&&mask<.5)discard;
+ }
  if(uAppearance==9&&uPlane==0){result=vec4(toSRGB(vPhoto),1.);return;}
  if(uAppearance==0&&uPlane==0){result=vec4(toSRGB(vColour),1.);return;}
  if(uPlane==1&&(uAppearance==0||uAppearance==1||uAppearance==6||uAppearance==8||uAppearance==9)){vec3 c=vec3(mask);if(uAppearance==6){vec3 dd=vSource-uMaskOrigin;vec2 cell=vec2(dot(dd,uMaskU),dot(dd,uMaskV))/uMaskSpacing,edge=min(fract(cell),1.-fract(cell));vec2 pixel=max(fwidth(cell),vec2(.0001));float zoomed=1.-smoothstep(.5,1.2,max(pixel.x,pixel.y));float grid=1.-smoothstep(.02,.075,min(edge.x,edge.y));c=mix(c,vec3(.23,.46,.52),grid*zoomed*.65);}result=vec4(c,1.);return;}
@@ -71,7 +168,7 @@ export class NativeEngine{
   this.canvas=document.createElement('canvas');this.canvas.className='native-shared-canvas';this.canvas.setAttribute('aria-hidden','true');document.body.append(this.canvas);
   this.renderer=new THREE.WebGLRenderer({canvas:this.canvas,alpha:true,antialias:true,powerPreference:'high-performance'});this.renderer.autoClear=false;this.renderer.sortObjects=false;this.renderer.outputColorSpace=THREE.SRGBColorSpace;this.renderer.toneMapping=THREE.NoToneMapping;this.renderer.info.autoReset=false;
   this.renderer.debug.onShaderError=(gl,p,vs,fs)=>this.fail('Graphics shader: '+[gl.getProgramInfoLog(p),gl.getShaderInfoLog(vs),gl.getShaderInfoLog(fs)].filter(Boolean).join(' '));
-  this.pointScene=new THREE.Scene();this.pointGroups=[];this.pointCount=0;this.scene=new THREE.Scene();this.rulerScene=new THREE.Scene();this.scale=cadRuler(config.ruler);this.rulerScene.add(this.scale);this.configureWood();this.planeScene=new THREE.Scene();
+  this.pointScene=new THREE.Scene();this.pointGroups=[];this.pointCount=0;this.scene=new THREE.Scene();this.rulerScene=new THREE.Scene();this.scale=cadRuler(config.ruler);this.rulerScene.add(this.scale);this.configureWood();this.planeScene=new THREE.Scene();this.motionScene=new THREE.Scene();
   const r=new THREE.Matrix3().set(...config.geometry.display_affine_R.flat()),inverse=r.clone().invert(),v=config.volume;
   const stub=new THREE.Data3DTexture(new Uint8Array([180,180,180,255]),1,1,1);stub.format=THREE.RGBAFormat;stub.type=THREE.UnsignedByteType;stub.needsUpdate=true;
   const mask=new THREE.DataTexture(new Uint8Array([255]),1,1,THREE.RedFormat);mask.needsUpdate=true;this.stubMask=mask;
@@ -82,11 +179,12 @@ export class NativeEngine{
   );
   neckTexture.minFilter=neckTexture.magFilter=THREE.NearestFilter;
   neckTexture.needsUpdate=true;
-  this.uniforms={uNeckGuide:{value:neckTexture},uPointSize:{value:2},uPoints:{value:0},uContour:{value:0},uR:{value:r},uInvR:{value:inverse},uT:{value:new THREE.Vector3(...config.geometry.display_affine_T)},uOffset:{value:new THREE.Vector3()},uSize:{value:.5},uGrid:{value:0},uVolume:{value:stub},uMask:{value:mask},uVolumeOrigin:{value:new THREE.Vector3(...v.source_edge_origin_xyz_mm)},uVolumeExtent:{value:new THREE.Vector3(...v.shape_xyz.map(n=>n*v.display_spacing_mm))},uTexel:{value:new THREE.Vector3(...v.shape_xyz.map(n=>1/n))},uVolumeReady:{value:0},uAxis:{value:new THREE.Vector3(0,1,0)},uClip:{value:0},uSide:{value:1},uRoot:{value:1.3},uTransition:{value:10},uCurvature:{value:8},uMaskSpacing:{value:.018},uMaskU:{value:new THREE.Vector3(1,0,0)},uMaskV:{value:new THREE.Vector3(0,1,0)},uPCACenter:{value:new THREE.Vector3(...config.pca.center_scanner_mm)},uClipEnabled:{value:0},uNativeClip:{value:0},uPart:{value:0},uAppearance:{value:0},uPlane:{value:0},uMaskBefore:{value:1},uMaskOrigin:{value:new THREE.Vector3(...config.mask.scanner_origin_xyz_mm.map(x=>x-.009))},uMaskExtent:{value:new THREE.Vector3(config.mask.native_shape_zyx[2]*.018,config.mask.native_shape_zyx[1]*.018,.018)}};
+  this.uniforms={uNeckGuide:{value:neckTexture},uPointSize:{value:2},uPoints:{value:0},uContour:{value:0},uContourCoverage:{value:1},uR:{value:r},uInvR:{value:inverse},uT:{value:new THREE.Vector3(...config.geometry.display_affine_T)},uOffset:{value:new THREE.Vector3()},uMotionOrigin:{value:new THREE.Vector3()},uMotionHalfExtent:{value:new THREE.Vector3()},uSize:{value:.5},uGrid:{value:0},uVolume:{value:stub},uMask:{value:mask},uVolumeOrigin:{value:new THREE.Vector3(...v.source_edge_origin_xyz_mm)},uVolumeExtent:{value:new THREE.Vector3(...v.shape_xyz.map(n=>n*v.display_spacing_mm))},uTexel:{value:new THREE.Vector3(...v.shape_xyz.map(n=>1/n))},uVolumeReady:{value:0},uAxis:{value:new THREE.Vector3(0,1,0)},uClip:{value:0},uSide:{value:1},uRoot:{value:1.3},uTransition:{value:10},uCurvature:{value:8},uMaskSpacing:{value:.018},uMaskU:{value:new THREE.Vector3(1,0,0)},uMaskV:{value:new THREE.Vector3(0,1,0)},uPCACenter:{value:new THREE.Vector3(...config.pca.center_scanner_mm)},uClipEnabled:{value:0},uNativeClip:{value:0},uPart:{value:0},uAppearance:{value:0},uPlane:{value:0},uMaskBefore:{value:1},uMaskOrigin:{value:new THREE.Vector3(...config.mask.scanner_origin_xyz_mm.map(x=>x-.009))},uMaskExtent:{value:new THREE.Vector3(config.mask.native_shape_zyx[2]*.018,config.mask.native_shape_zyx[1]*.018,.018)}};
   this.material=new THREE.RawShaderMaterial({vertexShader:VERT,fragmentShader:FRAG,uniforms:this.uniforms,glslVersion:THREE.GLSL3,side:THREE.DoubleSide,toneMapped:false});
+  this.configureMotionPlanes();
   this.worker=new Worker(new URL('./native-stream-r15.js?v=2',import.meta.url),{type:'module'});this.worker.onmessage=e=>this.message(e.data);this.worker.onerror=e=>this.fail(e.message);
   this.canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();this.lost=true;this.worker.postMessage({type:'cache-only'});this.hooks.error?.('Graphics memory was released. Complete source data remain cached; reload to restore the full 3D view.');this.views.forEach(v=>v.fallback(true));});
-  this.resize=()=>{const w=innerWidth,h=innerHeight,dpr=Math.min(this.quality==='balanced'?devicePixelRatio:Math.max(1.5,devicePixelRatio),this.quality==='balanced'?1.25:2,4096/w,2160/h);this.renderer.setPixelRatio(dpr);this.renderer.setSize(w,h,false);this.dirty=true;};window.addEventListener('resize',this.resize);window.addEventListener('scroll',()=>{this.dirty=true;this.lastScroll=performance.now();},{passive:true});this.resize();this.tick();
+  this.resize=()=>{const w=innerWidth,h=innerHeight,dpr=Math.min(this.quality==='balanced'?devicePixelRatio:Math.max(1.5,devicePixelRatio),this.quality==='balanced'?1.25:2,4096/w,2160/h);this.renderer.setPixelRatio(dpr);this.uniforms.uContourCoverage.value=Math.min(2.5,1.1*dpr);this.renderer.setSize(w,h,false);this.dirty=true;};window.addEventListener('resize',this.resize);window.addEventListener('scroll',()=>{this.dirty=true;this.lastScroll=performance.now();},{passive:true});this.resize();this.tick();
  }
  start(){this.worker.postMessage({type:'init',config:this.config});}
  addView(element,options={}){
@@ -164,6 +262,59 @@ export class NativeEngine{
   };
   for(const event of ['pointerup','pointercancel','lostpointercapture'])hit.addEventListener(event,end,true);
  }
+ configureMotionPlanes(){
+  const u=this.uniforms;
+  const half=u.uVolumeExtent.value.clone().multiplyScalar(.5);
+  const centre=u.uVolumeOrigin.value.clone().add(half);
+  const makeFrame=(origin,normal,side,up,scale=1,canonical=false)=>{
+   const delta=centre.clone().sub(origin);
+   const extent=d=>Math.abs(delta.dot(d))+Math.abs(d.x)*half.x+Math.abs(d.y)*half.y+Math.abs(d.z)*half.z;
+   return {origin,normal,side,up,half:[extent(side),extent(up),0],scale,canonical};
+  };
+  const vector=xyz=>new THREE.Vector3(...xyz);
+  this.motionFrames={};
+  for(const frame of this.config.pca.axes){
+   this.motionFrames['pca'+frame.axis]=makeFrame(u.uPCACenter.value.clone(),vector(frame.normal),vector(frame.u),vector(frame.v));
+  }
+  const scannerZ=this.config.mask.scanner_origin_xyz_mm[2];
+  this.motionFrames.native=makeFrame(new THREE.Vector3(centre.x,centre.y,scannerZ),
+   new THREE.Vector3(0,0,1),new THREE.Vector3(1,0,0),new THREE.Vector3(0,1,0),.018);
+  // Match the canonical clip equations when a physical X/Y/Z cut is selected.
+  const inverse=u.uInvR.value;
+  const canonicalOrigin=new THREE.Vector3(0,0,CENTRE).sub(u.uT.value).applyMatrix3(inverse);
+  const scannerAxes=[[1,0,0],[0,1,0],[0,0,1]].map(d=>vector(d).applyMatrix3(inverse));
+  for(const [i,key] of ['x','y','z'].entries()){
+   const axis=scannerAxes[i],side=scannerAxes[(i+1)%3],up=scannerAxes[(i+2)%3];
+   this.motionFrames[key]=makeFrame(canonicalOrigin,axis.clone().normalize(),
+    side.clone().normalize(),up.clone().normalize(),axis.length(),true);
+  }
+  const geometry=new THREE.BufferGeometry();
+  geometry.setAttribute('position',new THREE.Float32BufferAttribute([-1,-1,0,1,-1,0,1,1,0,-1,1,0],3));
+  const colour=new THREE.Uint8BufferAttribute(new Uint8Array(12).fill(255),3,true);
+  geometry.setAttribute('color',colour);
+  geometry.setAttribute('photoColour',colour);
+  geometry.setAttribute('nativeRoughness',new THREE.Uint8BufferAttribute(new Uint8Array(4),1));
+  geometry.setIndex([0,1,2,0,2,3]);
+  const plane=new THREE.Mesh(geometry,this.material);
+  plane.frustumCulled=false;
+  this.motionScene.add(plane);
+ }
+ drawMotionPlane(view,passes){
+  const frame=this.motionFrames[view.cut],u=this.uniforms;
+  const offset=view.cutValue*frame.scale/(frame.canonical?this.size/100:1);
+  u.uMotionOrigin.value.copy(frame.origin).addScaledVector(frame.normal,offset);
+  u.uMotionHalfExtent.value.set(...frame.half);
+  for(const [part,z] of passes){
+   this.configure(view,part,z);
+   u.uMaskU.value.copy(frame.side);
+   u.uMaskV.value.copy(frame.up);
+   u.uPlane.value=2;
+   u.uPoints.value=0;
+   u.uGrid.value=2;
+   this.material.uniformsNeedUpdate=true;
+   this.renderer.render(this.motionScene,view.camera);
+  }
+ }
  configureWood(){
   const board=this.scale.children.find(m=>m.name==='Warm white scale board');this.scaleBoard=board;this.whiteMaterial=board.material;this.woodMaterial=board.material.clone();this.woodMaterial.color.set('#ffffff');
   this.woodMaterial.onBeforeCompile=shader=>{shader.vertexShader='varying vec3 vWoodP;\n'+shader.vertexShader;shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvWoodP=position;');shader.fragmentShader='varying vec3 vWoodP;\n'+shader.fragmentShader;shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
@@ -174,7 +325,7 @@ export class NativeEngine{
  ensureNatural(){if(this.photoReady)return Promise.resolve();if(!this.ready)return Promise.reject(Error('Complete native geometry is still preparing'));if(!this.photoPromise){this.photoVertices=0;this.photoPromise=new Promise((resolve,reject)=>{this.resolvePhoto=resolve;this.rejectPhoto=reject;this.worker.postMessage({type:'natural'});});}return this.photoPromise;}
  requestMask(z,view){view.maskTicket=(view.maskTicket||0)+1;this.worker.postMessage({type:'mask',axis:'native',z,target:view.element.id,peak_rule:view.peakRule,request_id:view.maskTicket});}
  requestSection(axis,offset_mm,sampling_mm,view){view.maskTicket=(view.maskTicket||0)+1;this.worker.postMessage({type:'section',axis,offset_mm,sampling_mm,target:view.element.id,peak_rule:view.peakRule,request_id:view.maskTicket});}
- configure(v,part=0,offset=0){const u=this.uniforms;u.uContour.value=v.contours?1:0;u.uPoints.value=v.mesh==='vertices'&&this.ready?1:0;u.uAppearance.value=v.mode;u.uPart.value=part;u.uRoot.value=this.rootLevel;u.uTransition.value=this.transition;u.uCurvature.value=this.curvature;const m=v.maskRecord;u.uMask.value=v.maskTexture||this.stubMask;if(m){u.uMaskOrigin.value.set(...m.plane_origin_mm);u.uMaskU.value.set(...m.u);u.uMaskV.value.set(...m.v);u.uMaskExtent.value.set(m.width*m.sampling_mm,m.height*m.sampling_mm,m.sampling_mm);u.uMaskSpacing.value=m.sampling_mm;}u.uOffset.value.set(0,0,offset);u.uPlane.value=0;u.uGrid.value=this.ready?1:0;u.uSize.value=this.size/100;u.uMaskBefore.value=v.maskBefore?1:0;u.uClipEnabled.value=v.cut==='none'?0:1;const pca=v.cut.startsWith('pca')?this.config.pca.axes[Number(v.cut.slice(3))-1]:null;u.uNativeClip.value=pca?2:v.cut==='native'?1:0;if(pca)u.uAxis.value.set(...pca.normal);else u.uAxis.value.set(v.cut==='x'?1:0,v.cut==='y'?1:0,v.cut==='z'?1:0);u.uClip.value=pca?v.cutValue:v.cut==='native'?this.config.mask.scanner_origin_xyz_mm[2]+v.cutValue*.018:v.cutValue/(this.size/100);u.uSide.value=v.flip;this.material.uniformsNeedUpdate=true;}
+ configure(v,part=0,offset=0){const u=this.uniforms;u.uContour.value=!v.contours?0:v.peakRule==='conservative6MAD'?2:1;u.uPoints.value=v.mesh==='vertices'&&this.ready?1:0;u.uAppearance.value=v.mode;u.uPart.value=part;u.uRoot.value=this.rootLevel;u.uTransition.value=this.transition;u.uCurvature.value=this.curvature;const m=v.maskRecord;u.uMask.value=v.maskTexture||this.stubMask;if(m){u.uMaskOrigin.value.set(...m.plane_origin_mm);u.uMaskU.value.set(...m.u);u.uMaskV.value.set(...m.v);u.uMaskExtent.value.set(m.width*m.sampling_mm,m.height*m.sampling_mm,m.sampling_mm);u.uMaskSpacing.value=m.sampling_mm;}u.uOffset.value.set(0,0,offset);u.uPlane.value=0;u.uGrid.value=this.ready?1:0;u.uSize.value=this.size/100;u.uMaskBefore.value=v.maskBefore?1:0;u.uClipEnabled.value=v.cut==='none'?0:1;const pca=v.cut.startsWith('pca')?this.config.pca.axes[Number(v.cut.slice(3))-1]:null;u.uNativeClip.value=pca?2:v.cut==='native'?1:0;if(pca)u.uAxis.value.set(...pca.normal);else u.uAxis.value.set(v.cut==='x'?1:0,v.cut==='y'?1:0,v.cut==='z'?1:0);u.uClip.value=pca?v.cutValue:v.cut==='native'?this.config.mask.scanner_origin_xyz_mm[2]+v.cutValue*.018:v.cutValue/(this.size/100);u.uSide.value=v.flip;this.material.uniformsNeedUpdate=true;}
  upload(group){
   const visible=this.bundles.map(g=>g.visible);this.bundles.forEach(g=>g.visible=false);const priorPreview=this.preview?.visible;if(this.preview)this.preview.visible=false;group.visible=true;
   const v=this.views[0];this.configure({...v,mode:0,cut:'none'});this.uniforms.uGrid.value=1;this.uniforms.uPart.value=0;this.uniforms.uOffset.value.set(0,0,0);this.renderer.setScissorTest(true);this.renderer.setViewport(0,0,1,1);this.renderer.setScissor(0,0,1,1);this.renderer.setClearColor(0,0);this.renderer.clear(true,true,true);this.renderer.render(this.scene,v.camera);
@@ -191,7 +342,24 @@ export class NativeEngine{
   v.element.dataset.cutPosition=String(v.cutValue);
   v.element.dataset.cutMoving=String(Boolean(v.cutMoving));
   if(this.ready){if(v.mesh==='vertices'){if(this.renderer.info.render.points!==this.pointCount*passes.length)return this.fail('Native submitted-vertex validation failed');}else if(actual!==NATIVE_FACES*passes.length)return this.fail('Native submitted-triangle validation failed');v.element.dataset.nativeSubmittedPoints=String(this.renderer.info.render.points);v.element.dataset.nativeSurfaceMode=v.mesh;v.element.dataset.nativeResidentFaces=String(NATIVE_FACES);v.element.dataset.nativeSubmittedTriangles=String(actual);v.element.dataset.nativeRenderPasses=String(passes.length);}
-  if(v.showPlane&&v.nativePlane&&!v.cutMoving&&v.maskKey===v.sectionKey){v.nativePlane.visible=true;for(const[p,z]of passes){this.configure(v,p,z);this.uniforms.uPlane.value=1;this.uniforms.uPoints.value=0;this.uniforms.uGrid.value=0;this.material.uniformsNeedUpdate=true;this.renderer.render(this.planeScene,v.camera);}v.nativePlane.visible=false;}
+  if(v.showPlane&&v.nativePlane&&!v.cutMoving&&v.maskKey===v.sectionKey){
+   v.nativePlane.visible=true;
+   for(const [part,z] of passes){
+    this.configure(v,part,z);
+    this.uniforms.uPlane.value=1;
+    this.uniforms.uPoints.value=0;
+    this.uniforms.uGrid.value=0;
+    this.material.uniformsNeedUpdate=true;
+    this.renderer.render(this.planeScene,v.camera);
+   }
+   v.nativePlane.visible=false;
+   v.element.dataset.cutContours='native-mask';
+  }else if(v.showPlane&&v.mode===8&&v.contours&&this.uniforms.uVolumeReady.value&&this.motionFrames[v.cut]){
+   this.drawMotionPlane(v,passes);
+   v.element.dataset.cutContours='pooled-144um';
+  }else{
+   v.element.dataset.cutContours='hidden';
+  }
   this.ruler(v);this.renderer.render(this.rulerScene,v.camera);
  }
  tick(){this.frame=requestAnimationFrame(()=>this.tick());const now=performance.now(),dt=Math.min(.06,(now-this.lastFrame)/1000);this.lastFrame=now;if(this.lost||this.failed||!this.active||!this.views.length)return;let changed=false;
