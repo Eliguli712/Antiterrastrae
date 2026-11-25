@@ -1,0 +1,179 @@
+{
+  "schema_version": 2,
+  "claim_id": "NATIVE74_PCA_CAVITY_AXIS_MP4_R15",
+  "repository": {
+    "commit": "40abad3dd3dfd79d25b6526a6b9e48c65feaa76d",
+    "dirty": true
+  },
+  "command": [
+    "./fea_venv/bin/python",
+    "output/native_interactive_r15_2026-11-25/scripts/build_axis_movies.py",
+    "--run-dir",
+    "output/native_interactive_r15_2026-11-25/review/movie-run001"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "runner-python",
+        "version": "3.14.3"
+      },
+      {
+        "name": "Python",
+        "version": "3.14.3"
+      },
+      {
+        "name": "NumPy",
+        "version": "2.4.3"
+      },
+      {
+        "name": "SciPy",
+        "version": "1.17.1"
+      }
+    ],
+    "hardware": "macOS-14.4-arm64-arm-64bit-Mach-O"
+  },
+  "mathematics": {
+    "assertion_tested": "Reuse exact native material-volume PCA axes; rasterize every original source face and produce three source-coordinate clipping sweeps with an independently checked monotone per-pixel depth aggregation.",
+    "coefficient_domain": "Float64 source coordinates and PCA frame; Float32 raster/depth fragments; exact source-face and voxel counts.",
+    "inputs": [
+      "All 37,951,699 original source vertices and 74,293,846 faces; published exact voxel-volume PCA; independent exact mask counts; original measured CAD ruler"
+    ],
+    "bounds": {
+      "source_vertices": 37951699,
+      "source_faces": 74293846,
+      "axes": 3,
+      "frames_per_axis": 300,
+      "video_pixels": [
+        1920,
+        1080
+      ]
+    },
+    "conventions": "PCA normals are columns of archived material-volume PCA. Clipping uses original source coordinates; 50mm model height applies only to display.",
+    "non_claims": [
+      "No native FEM",
+      "No extra acquired CT resolution",
+      "No physiological tissue identification",
+      "Source triangle count is not number of visible clipped triangles"
+    ]
+  },
+  "randomness": {
+    "used": true,
+    "generator": "NumPy PCG64 finite depth-aggregation checks only",
+    "seed": 25
+  },
+  "run": {
+    "started_at": "2026-11-25T08:20:55.383261+00:00",
+    "runtime_seconds": 30.390437,
+    "exit_status": 0,
+    "status": "completed",
+    "timeout_seconds": 1800.0,
+    "max_output_bytes": 1048576,
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": 2
+    },
+    "missing_results": [],
+    "invalid_results": []
+  },
+  "execution_artifacts": [
+    "output/native_interactive_r15_2026-11-25/scripts/build_axis_movies.py",
+    "output/native_interactive_r15_2026-11-25/scripts/raster_native_cut_movie.cpp",
+    "output/current_native74_stress_2026-11-20/cache/vertices.f64",
+    "output/current_native74_stress_2026-11-20/cache/triangles.u32",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native18-inference/native-analysis-result.json",
+    "output/native_interactive_r15_2026-11-25/prepared/raster_native_cut_movie",
+    "output/native_interactive_r15_2026-11-25/review/count-run001/result.json",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/palaeo-ruler-r14/Palaeontological_Ruler_50mm.png",
+    "output/acrylic_baskerville_v4_2026-11-20/review/font_cache/Baskerville-Italic.ttf"
+  ],
+  "input_artifacts": [
+    {
+      "path": "output/native_interactive_r15_2026-11-25/scripts/build_axis_movies.py",
+      "sha256": "50303af76a222fcb4ae2f0272802cab48d3b5f3455b6722bcbe233ebf1890269",
+      "sha256_after": "50303af76a222fcb4ae2f0272802cab48d3b5f3455b6722bcbe233ebf1890269"
+    },
+    {
+      "path": "output/native_interactive_r15_2026-11-25/scripts/raster_native_cut_movie.cpp",
+      "sha256": "8f004e3c51834e15a5d983c71726421c9185205345753d274ef58433d1e18aa4",
+      "sha256_after": "8f004e3c51834e15a5d983c71726421c9185205345753d274ef58433d1e18aa4"
+    },
+    {
+      "path": "output/current_native74_stress_2026-11-20/cache/vertices.f64",
+      "sha256": "4f13df2eccd0a730411aff5fcd1e34210882490e3a32f969a6b2748f3197153a",
+      "sha256_after": "4f13df2eccd0a730411aff5fcd1e34210882490e3a32f969a6b2748f3197153a"
+    },
+    {
+      "path": "output/current_native74_stress_2026-11-20/cache/triangles.u32",
+      "sha256": "83b7c6bf0ff12c490b1948fa27ade2550e7d7e2458b9aa2528136e1162e3ed26",
+      "sha256_after": "83b7c6bf0ff12c490b1948fa27ade2550e7d7e2458b9aa2528136e1162e3ed26"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native18-inference/native-analysis-result.json",
+      "sha256": "ef0981761dd504f411e0b14a62124d8e19cf852bc04f4012bd21d57d7da5b5c6",
+      "sha256_after": "ef0981761dd504f411e0b14a62124d8e19cf852bc04f4012bd21d57d7da5b5c6"
+    },
+    {
+      "path": "output/native_interactive_r15_2026-11-25/prepared/raster_native_cut_movie",
+      "sha256": "2fd104d6b1dc34f77d1cec1483d34c8e31d3e1f42fec936d0f485c5e526384ac",
+      "sha256_after": "2fd104d6b1dc34f77d1cec1483d34c8e31d3e1f42fec936d0f485c5e526384ac"
+    },
+    {
+      "path": "output/native_interactive_r15_2026-11-25/review/count-run001/result.json",
+      "sha256": "8c23c92f603c9151d1485784eac49d4e60d660a9638766db5f201d1ecaa3942e",
+      "sha256_after": "8c23c92f603c9151d1485784eac49d4e60d660a9638766db5f201d1ecaa3942e"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/palaeo-ruler-r14/Palaeontological_Ruler_50mm.png",
+      "sha256": "4be8fa651811132a13fda2a31fd750a5782d62013c0a3d9692dd8cbf52d00a16",
+      "sha256_after": "4be8fa651811132a13fda2a31fd750a5782d62013c0a3d9692dd8cbf52d00a16"
+    },
+    {
+      "path": "output/acrylic_baskerville_v4_2026-11-20/review/font_cache/Baskerville-Italic.ttf",
+      "sha256": "4b7c06e0223dd1c400d261f7b9e6fcdf012e9fb0c1dc74f7af966bb7805b0f72",
+      "sha256_after": "4b7c06e0223dd1c400d261f7b9e6fcdf012e9fb0c1dc74f7af966bb7805b0f72"
+    }
+  ],
+  "output_directory": "output/native_interactive_r15_2026-11-25/review/movie-run001",
+  "declared_results": [
+    "output/native_interactive_r15_2026-11-25/review/movie-run001/result.json"
+  ],
+  "outputs": [
+    {
+      "path": "output/native_interactive_r15_2026-11-25/review/movie-run001/stdout.txt",
+      "sha256": "54f0355dd15c17f33ac8bf2dbce3e1c22b0c51ba1c57252416354762ff1f0bf0",
+      "kind": "log"
+    },
+    {
+      "path": "output/native_interactive_r15_2026-11-25/review/movie-run001/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "log"
+    },
+    {
+      "path": "output/native_interactive_r15_2026-11-25/review/movie-run001/result.json",
+      "sha256": "096f86f8f4903b96ef03c6b16137ff7c8474fd61135af3e9325a0210a057ef8c",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    {
+      "check": "input hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "process exited successfully within enforced limits",
+      "passed": true
+    },
+    {
+      "check": "declared result files are present and regular",
+      "passed": true
+    }
+  ],
+  "result": "Run completed; mathematical assertion requires interpretation and review.",
+  "residual_risks": [
+    "Command success does not establish the mathematical interpretation.",
+    "Only listed input artifacts are pinned; external dependencies need recorded versions.",
+    "The thread cap uses conventional environment variables; a child program may ignore them."
+  ]
+}

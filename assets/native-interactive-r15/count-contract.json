@@ -1,0 +1,47 @@
+{
+  "claim_id": "NATIVE18_EXACT_INTERIOR_AND_CLOSED_VOID_COUNTS_R15",
+  "mathematics": {
+    "assertion_tested": "Enumerate all original mask voxels; count material interior by six-neighbour erosion and closed background via exact streaming 6-connected component union, tested against exhaustive SciPy fill/erosion on 12 synthetic grids.",
+    "coefficient_domain": "Exact UInt64 counts, UInt32 component identities",
+    "bounds": {
+      "native_shape_zyx": [
+        2886,
+        1903,
+        746
+      ],
+      "connectivity": 6
+    },
+    "conventions": "Internal material and enclosed background are distinct; background touching crop boundary is external. No domain edits.",
+    "non_claims": [
+      "No identification of nutritive anatomy",
+      "No new acquired accuracy",
+      "No native FEM"
+    ],
+    "inputs": [
+      "Every original selected native mask voxel, shape ZYX 2886 x 1903 x 746"
+    ]
+  },
+  "execution_artifacts": [
+    "output/native_interactive_r15_2026-11-25/scripts/count_native_voxels.py",
+    "output/ct_web_2026-11-19/cache/selected_native_mask.u8"
+  ],
+  "software": [
+    {
+      "name": "Python",
+      "version": "3.14.3"
+    },
+    {
+      "name": "NumPy",
+      "version": "2.4.3"
+    },
+    {
+      "name": "SciPy",
+      "version": "1.17.1"
+    }
+  ],
+  "randomness": {
+    "used": true,
+    "seed": 15,
+    "generator": "NumPy PCG64 for synthetic checks only"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "claim_id": "NATIVE74_PCA_CAVITY_AXIS_MP4_R15",
+  "mathematics": {
+    "assertion_tested": "Reuse exact native material-volume PCA axes; rasterize every original source face and produce three source-coordinate clipping sweeps with an independently checked monotone per-pixel depth aggregation.",
+    "coefficient_domain": "Float64 source coordinates and PCA frame; Float32 raster/depth fragments; exact source-face and voxel counts.",
+    "inputs": [
+      "All 37,951,699 original source vertices and 74,293,846 faces; published exact voxel-volume PCA; independent exact mask counts; original measured CAD ruler"
+    ],
+    "bounds": {
+      "source_vertices": 37951699,
+      "source_faces": 74293846,
+      "axes": 3,
+      "frames_per_axis": 300,
+      "video_pixels": [
+        1920,
+        1080
+      ]
+    },
+    "conventions": "PCA normals are columns of archived material-volume PCA. Clipping uses original source coordinates; 50mm model height applies only to display.",
+    "non_claims": [
+      "No native FEM",
+      "No extra acquired CT resolution",
+      "No physiological tissue identification",
+      "Source triangle count is not number of visible clipped triangles"
+    ]
+  },
+  "execution_artifacts": [
+    "output/native_interactive_r15_2026-11-25/scripts/build_axis_movies.py",
+    "output/native_interactive_r15_2026-11-25/scripts/raster_native_cut_movie.cpp",
+    "output/current_native74_stress_2026-11-20/cache/vertices.f64",
+    "output/current_native74_stress_2026-11-20/cache/triangles.u32",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native18-inference/native-analysis-result.json",
+    "output/native_interactive_r15_2026-11-25/prepared/raster_native_cut_movie",
+    "output/native_interactive_r15_2026-11-25/review/count-run001/result.json",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/palaeo-ruler-r14/Palaeontological_Ruler_50mm.png",
+    "output/acrylic_baskerville_v4_2026-11-20/review/font_cache/Baskerville-Italic.ttf"
+  ],
+  "software": [
+    {
+      "name": "Python",
+      "version": "3.14.3"
+    },
+    {
+      "name": "NumPy",
+      "version": "2.4.3"
+    },
+    {
+      "name": "SciPy",
+      "version": "1.17.1"
+    }
+  ],
+  "randomness": {
+    "used": true,
+    "generator": "NumPy PCG64 finite depth-aggregation checks only",
+    "seed": 25
+  }
+}

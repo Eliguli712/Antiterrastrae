@@ -1,0 +1,112 @@
+{
+  "status": "completed",
+  "videos": [
+    {
+      "axis": 1,
+      "file": "Native74_Internal_PCA_Axis_1_50mm_1080p.mp4",
+      "bytes": 525924,
+      "sha256": "a8eb985275647ef8874977cbdd705de1324e530948f6bce8540921b731bfff9c",
+      "poster": "Native74_Internal_PCA_Axis_1_poster.png",
+      "poster_sha256": "ef6dcfd6d42c089cde4409f668911da9b8b91068d720c0794145a5789e39eec2",
+      "width": 1920,
+      "height": 1080,
+      "frames": 300,
+      "fps": 25,
+      "duration_s": 12,
+      "source_triangles_examined_per_axis": 74293846,
+      "source_vertices": 37951699,
+      "surface_decimation": false,
+      "source_native_sampling_mm": 0.018,
+      "source_native_sampling_um": 18,
+      "source_coordinate_PCA_normal": [
+        -0.057078421241341264,
+        -0.09418775987466738,
+        0.9939168575481491
+      ],
+      "cut_offsets_native_mm": [
+        -27.808385848999023,
+        23.890844345092773
+      ],
+      "display_model_height_mm": 50,
+      "coordinate_convention": "Original source position determines clipping and existing colours; model-to-screen scale does not alter the source domain."
+    },
+    {
+      "axis": 2,
+      "file": "Native74_Internal_PCA_Axis_2_50mm_1080p.mp4",
+      "bytes": 576780,
+      "sha256": "ef92b6c68113d21467442f4fa7a65ed5ff475130f09dbc35247ab0bb9750278b",
+      "poster": "Native74_Internal_PCA_Axis_2_poster.png",
+      "poster_sha256": "2ffc42b341db224f506767eca36090b5fd73d803619c848586a09ade250b83d1",
+      "width": 1920,
+      "height": 1080,
+      "frames": 300,
+      "fps": 25,
+      "duration_s": 12,
+      "source_triangles_examined_per_axis": 74293846,
+      "source_vertices": 37951699,
+      "surface_decimation": false,
+      "source_native_sampling_mm": 0.018,
+      "source_native_sampling_um": 18,
+      "source_coordinate_PCA_normal": [
+        -0.2016547068614822,
+        0.9761082946778717,
+        0.08091956661813175
+      ],
+      "cut_offsets_native_mm": [
+        -18.090173721313477,
+        17.006650924682617
+      ],
+      "display_model_height_mm": 50,
+      "coordinate_convention": "Original source position determines clipping and existing colours; model-to-screen scale does not alter the source domain."
+    },
+    {
+      "axis": 3,
+      "file": "Native74_Internal_PCA_Axis_3_50mm_1080p.mp4",
+      "bytes": 1234111,
+      "sha256": "4aa58562561316378398f52e3558ee14b19a48c9314968921c5e6998f5350a3a",
+      "poster": "Native74_Internal_PCA_Axis_3_poster.png",
+      "poster_sha256": "2cb2ac55339c3ff22a12ceb48974ee16ef63f0ef0140ca5addff453a1ed0a642",
+      "width": 1920,
+      "height": 1080,
+      "frames": 300,
+      "fps": 25,
+      "duration_s": 12,
+      "source_triangles_examined_per_axis": 74293846,
+      "source_vertices": 37951699,
+      "surface_decimation": false,
+      "source_native_sampling_mm": 0.018,
+      "source_native_sampling_um": 18,
+      "source_coordinate_PCA_normal": [
+        -0.9777921215827041,
+        -0.19580925144346106,
+        -0.07470812552825656
+      ],
+      "cut_offsets_native_mm": [
+        -4.247888088226318,
+        6.295042991638184
+      ],
+      "display_model_height_mm": 50,
+      "coordinate_convention": "Original source position determines clipping and existing colours; model-to-screen scale does not alter the source domain."
+    }
+  ],
+  "whole_source_counts": {
+    "grid_voxels": 4097075268,
+    "selected_material_voxels": 967429317,
+    "strict_interior_material_voxels_6_neighbours": 943902316,
+    "boundary_material_voxels_6_neighbours": 23527001,
+    "closed_internal_background_voxels_6_connectivity": 3760962,
+    "closed_background_components_6_connectivity": 930788,
+    "exterior_connected_background_voxels_6_connectivity": 3125884989,
+    "status": "completed",
+    "native_sampling_mm": 0.018,
+    "native_sampling_um": 18,
+    "source_surface_triangles": 74293846,
+    "source_boundary_vertices": 37951699,
+    "internal_definition": "Material interior: selected voxel with all six face-neighbours selected. Closed background: 6-connected background component touching none of the six crop boundaries. This digital connectivity count is not the earlier mesh-shell component count.",
+    "native_mask_unchanged": true,
+    "synthetic_checks": 12
+  },
+  "independent_monotone_depth_checks": 31,
+  "filtering": "No image sharpening; original cavity geometry. H.264 encoding only.",
+  "method": "All 74,293,846 original faces rasterized per PCA axis; per-pixel halfspace activation and monotone depth minima, equivalent to re-rendering each discrete clipping position."
+}

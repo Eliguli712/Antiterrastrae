@@ -1,0 +1,17 @@
+{
+  "grid_voxels": 4097075268,
+  "selected_material_voxels": 967429317,
+  "strict_interior_material_voxels_6_neighbours": 943902316,
+  "boundary_material_voxels_6_neighbours": 23527001,
+  "closed_internal_background_voxels_6_connectivity": 3760962,
+  "closed_background_components_6_connectivity": 930788,
+  "exterior_connected_background_voxels_6_connectivity": 3125884989,
+  "status": "completed",
+  "native_sampling_mm": 0.018,
+  "native_sampling_um": 18,
+  "source_surface_triangles": 74293846,
+  "source_boundary_vertices": 37951699,
+  "internal_definition": "Material interior: selected voxel with all six face-neighbours selected. Closed background: 6-connected background component touching none of the six crop boundaries. This digital connectivity count is not the earlier mesh-shell component count.",
+  "native_mask_unchanged": true,
+  "synthetic_checks": 12
+}
