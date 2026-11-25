@@ -1,0 +1,317 @@
+[
+  {
+    "nodes": 13584,
+    "tetrahedra": 55852,
+    "boundary_faces": 15450,
+    "constrained_relative_residual": 3.716178243409996e-08,
+    "force_balance_relative_error": 2.965475947143705e-15,
+    "constraint_norm_m": 4.258206121549449e-22,
+    "virtual_work_relative_error": 9.96543891279569e-09,
+    "linear_K_rigid_null_relative_error": 6.555176892533662e-19,
+    "full_affine_traction_patch_relative_error": 1.3468828990418586e-14,
+    "linear_constrained_solve_relative_residual": 1.531504346519417e-11,
+    "applied_force_N": [
+      0.0,
+      0.0,
+      2.096552208024593
+    ],
+    "reaction_force_N": [
+      -1.8039260677674834e-17,
+      -6.750852589616774e-19,
+      -2.096552208024587
+    ],
+    "energy_J": 4.8834174449499615e-08,
+    "max_displacement_m": 5.887852649183799e-07,
+    "J_min": 0.9999931596977809,
+    "max_green_strain_norm": 5.25219311957069e-05,
+    "volume_m3": 4.193104416049181e-05,
+    "max_element_von_mises_Pa": 3857.394640178228,
+    "volume_weighted_Q95_Pa": 658.2364454296259,
+    "volume_weighted_Q99_Pa": 790.9138322500269,
+    "quasi_Newton_trace": [
+      {
+        "iteration": 0,
+        "constrained_relative_residual": 1.134103045003105,
+        "energy_J": 0.0,
+        "J_min": 1.0
+      },
+      {
+        "iteration": 1,
+        "constrained_relative_residual": 0.00035279389962580355,
+        "energy_J": 4.883426804972101e-08,
+        "J_min": 0.999993159595617
+      },
+      {
+        "iteration": 2,
+        "constrained_relative_residual": 3.716178243409996e-08,
+        "energy_J": 4.8834174449499615e-08,
+        "J_min": 0.9999931596977809
+      }
+    ],
+    "rigid_constraint_definition": "Zero boundary-area-weighted mean displacement and reference-centred mean rotational displacement; six constraints; no root clamps.",
+    "COMSOL_automatic_constraint_reproduced": false,
+    "level": 0,
+    "tip_roi": {
+      "volume_m3": 1.1111447269032777e-06,
+      "Q95_Pa": 548.9020042343182,
+      "Q99_Pa": 590.2523923832327,
+      "energy_J": 1.1179420119959416e-09
+    }
+  },
+  {
+    "nodes": 90728,
+    "tetrahedra": 446816,
+    "boundary_faces": 61800,
+    "constrained_relative_residual": 9.913617490741663e-08,
+    "force_balance_relative_error": 1.8216428090649433e-14,
+    "constraint_norm_m": 1.5906809431294255e-22,
+    "virtual_work_relative_error": 1.7306124048147807e-08,
+    "linear_K_rigid_null_relative_error": 2.5576203915051685e-19,
+    "full_affine_traction_patch_relative_error": 4.29475746961061e-14,
+    "linear_constrained_solve_relative_residual": 2.5020550071437588e-11,
+    "applied_force_N": [
+      0.0,
+      0.0,
+      2.0965522080245815
+    ],
+    "reaction_force_N": [
+      3.4707757348896194e-17,
+      -1.8983278897389752e-17,
+      -2.0965522080246197
+    ],
+    "energy_J": 5.0338017434328035e-08,
+    "max_displacement_m": 6.858025538311816e-07,
+    "J_min": 0.9999843105653132,
+    "max_green_strain_norm": 9.302123919677986e-05,
+    "volume_m3": 4.193104416049181e-05,
+    "max_element_von_mises_Pa": 6821.741405462359,
+    "volume_weighted_Q95_Pa": 682.3669017801683,
+    "volume_weighted_Q99_Pa": 824.7680909735477,
+    "quasi_Newton_trace": [
+      {
+        "iteration": 0,
+        "constrained_relative_residual": 1.4916856153212399,
+        "energy_J": 0.0,
+        "J_min": 1.0
+      },
+      {
+        "iteration": 1,
+        "constrained_relative_residual": 0.0007042259634623929,
+        "energy_J": 5.033841052978368e-08,
+        "J_min": 0.9999843101275652
+      },
+      {
+        "iteration": 2,
+        "constrained_relative_residual": 9.913617490741663e-08,
+        "energy_J": 5.0338017434328035e-08,
+        "J_min": 0.9999843105653132
+      }
+    ],
+    "rigid_constraint_definition": "Zero boundary-area-weighted mean displacement and reference-centred mean rotational displacement; six constraints; no root clamps.",
+    "COMSOL_automatic_constraint_reproduced": false,
+    "level": 1,
+    "tip_roi": {
+      "volume_m3": 1.1111447269032777e-06,
+      "Q95_Pa": 616.1471855877888,
+      "Q99_Pa": 680.0460965653466,
+      "energy_J": 1.1845943051412839e-09
+    },
+    "tip_last_step_change_percent": {
+      "Q95_Pa": 12.250853674195133,
+      "Q99_Pa": 15.212764122743879,
+      "energy_J": 5.962052810444366
+    }
+  },
+  {
+    "nodes": 172983,
+    "tetrahedra": 861928,
+    "boundary_faces": 78230,
+    "constrained_relative_residual": 1.1191635579456673e-07,
+    "force_balance_relative_error": 2.923100516691755e-14,
+    "constraint_norm_m": 2.169592570637649e-22,
+    "virtual_work_relative_error": 2.0574903979857116e-08,
+    "linear_K_rigid_null_relative_error": 1.9454019631067481e-19,
+    "full_affine_traction_patch_relative_error": 5.494535821793477e-14,
+    "linear_constrained_solve_relative_residual": 2.7670521723974015e-11,
+    "applied_force_N": [
+      0.0,
+      0.0,
+      2.0965522080245433
+    ],
+    "reaction_force_N": [
+      4.2756899688416996e-17,
+      -1.768197159261113e-17,
+      -2.0965522080246046
+    ],
+    "energy_J": 5.0658066567555165e-08,
+    "max_displacement_m": 7.235609679624795e-07,
+    "J_min": 0.999979640252984,
+    "max_green_strain_norm": 0.00021979210841645746,
+    "volume_m3": 4.193104416049181e-05,
+    "max_element_von_mises_Pa": 16136.928873850668,
+    "volume_weighted_Q95_Pa": 689.2007260063131,
+    "volume_weighted_Q99_Pa": 836.5077652288846,
+    "quasi_Newton_trace": [
+      {
+        "iteration": 0,
+        "constrained_relative_residual": 1.51665304745306,
+        "energy_J": 0.0,
+        "J_min": 1.0
+      },
+      {
+        "iteration": 1,
+        "constrained_relative_residual": 0.0007341064206097082,
+        "energy_J": 5.065856668344468e-08,
+        "J_min": 0.9999796400195009
+      },
+      {
+        "iteration": 2,
+        "constrained_relative_residual": 1.1191635579456673e-07,
+        "energy_J": 5.0658066567555165e-08,
+        "J_min": 0.999979640252984
+      }
+    ],
+    "rigid_constraint_definition": "Zero boundary-area-weighted mean displacement and reference-centred mean rotational displacement; six constraints; no root clamps.",
+    "COMSOL_automatic_constraint_reproduced": false,
+    "level": 2,
+    "tip_roi": {
+      "volume_m3": 1.1111447269032775e-06,
+      "Q95_Pa": 653.2366817538616,
+      "Q99_Pa": 758.14792180897,
+      "energy_J": 1.223100832067869e-09
+    },
+    "tip_last_step_change_percent": {
+      "Q95_Pa": 6.0195837997199195,
+      "Q99_Pa": 11.484783993038983,
+      "energy_J": 3.2506088168297054
+    }
+  },
+  {
+    "nodes": 308869,
+    "tetrahedra": 1565703,
+    "boundary_faces": 116496,
+    "constrained_relative_residual": 8.723699902499828e-08,
+    "force_balance_relative_error": 4.9565647122211845e-14,
+    "constraint_norm_m": 4.370368198612607e-22,
+    "virtual_work_relative_error": 2.1855683347516468e-08,
+    "linear_K_rigid_null_relative_error": 1.497960330722006e-19,
+    "full_affine_traction_patch_relative_error": 6.564940514896913e-14,
+    "linear_constrained_solve_relative_residual": 2.525344191434994e-11,
+    "applied_force_N": [
+      0.0,
+      0.0,
+      2.0965522080244683
+    ],
+    "reaction_force_N": [
+      -1.377551916734534e-16,
+      -1.0247272246984517e-17,
+      -2.096552208024572
+    ],
+    "energy_J": 5.07720121371984e-08,
+    "max_displacement_m": 7.354212782846814e-07,
+    "J_min": 0.9999728266615957,
+    "max_green_strain_norm": 0.0002680219434011658,
+    "volume_m3": 4.193104416049181e-05,
+    "max_element_von_mises_Pa": 19676.973024087038,
+    "volume_weighted_Q95_Pa": 690.7686498415361,
+    "volume_weighted_Q99_Pa": 839.4385711625765,
+    "quasi_Newton_trace": [
+      {
+        "iteration": 0,
+        "constrained_relative_residual": 1.4869299835901468,
+        "energy_J": 0.0,
+        "J_min": 1.0
+      },
+      {
+        "iteration": 1,
+        "constrained_relative_residual": 0.0005798973549202253,
+        "energy_J": 5.077254914624116e-08,
+        "J_min": 0.9999728243076234
+      },
+      {
+        "iteration": 2,
+        "constrained_relative_residual": 8.723699902499828e-08,
+        "energy_J": 5.07720121371984e-08,
+        "J_min": 0.9999728266615957
+      }
+    ],
+    "rigid_constraint_definition": "Zero boundary-area-weighted mean displacement and reference-centred mean rotational displacement; six constraints; no root clamps.",
+    "COMSOL_automatic_constraint_reproduced": false,
+    "level": 3,
+    "tip_roi": {
+      "volume_m3": 1.1111447269032777e-06,
+      "Q95_Pa": 663.6568715812722,
+      "Q99_Pa": 762.178563076383,
+      "energy_J": 1.232884817321604e-09
+    },
+    "tip_last_step_change_percent": {
+      "Q95_Pa": 1.5951629965778453,
+      "Q99_Pa": 0.5316431202232723,
+      "energy_J": 0.7999328425926594
+    }
+  },
+  {
+    "nodes": 553604,
+    "tetrahedra": 2856852,
+    "boundary_faces": 165942,
+    "constrained_relative_residual": 7.648030761827887e-08,
+    "force_balance_relative_error": 9.595392722824723e-14,
+    "constraint_norm_m": 2.8694564274312756e-22,
+    "virtual_work_relative_error": 2.269545376263246e-08,
+    "linear_K_rigid_null_relative_error": 1.1331914686525906e-19,
+    "full_affine_traction_patch_relative_error": 7.201094375078576e-14,
+    "linear_constrained_solve_relative_residual": 2.5866604572732985e-11,
+    "applied_force_N": [
+      0.0,
+      0.0,
+      2.0965522080244585
+    ],
+    "reaction_force_N": [
+      -8.767068936767826e-18,
+      -4.8081474526310636e-17,
+      -2.0965522080246597
+    ],
+    "energy_J": 5.0825245739682905e-08,
+    "max_displacement_m": 7.402775182258574e-07,
+    "J_min": 0.9999560555288224,
+    "max_green_strain_norm": 0.00042391638084860047,
+    "volume_m3": 4.193104416049181e-05,
+    "max_element_von_mises_Pa": 31100.082365287344,
+    "volume_weighted_Q95_Pa": 691.7395956585462,
+    "volume_weighted_Q99_Pa": 840.8298970942935,
+    "quasi_Newton_trace": [
+      {
+        "iteration": 0,
+        "constrained_relative_residual": 1.4660796634106146,
+        "energy_J": 0.0,
+        "J_min": 1.0
+      },
+      {
+        "iteration": 1,
+        "constrained_relative_residual": 0.0004957671283394024,
+        "energy_J": 5.082579604695368e-08,
+        "J_min": 0.999956095774632
+      },
+      {
+        "iteration": 2,
+        "constrained_relative_residual": 7.648030761827887e-08,
+        "energy_J": 5.0825245739682905e-08,
+        "J_min": 0.9999560555288224
+      }
+    ],
+    "rigid_constraint_definition": "Zero boundary-area-weighted mean displacement and reference-centred mean rotational displacement; six constraints; no root clamps.",
+    "COMSOL_automatic_constraint_reproduced": false,
+    "level": 4,
+    "tip_roi": {
+      "volume_m3": 1.1111447269032775e-06,
+      "Q95_Pa": 672.533970929272,
+      "Q99_Pa": 773.1634523184186,
+      "energy_J": 1.2400653234357316e-09
+    },
+    "tip_last_step_change_percent": {
+      "Q95_Pa": 1.3376037720891245,
+      "Q99_Pa": 1.4412487800361715,
+      "energy_J": 0.5824150004318267
+    }
+  }
+]

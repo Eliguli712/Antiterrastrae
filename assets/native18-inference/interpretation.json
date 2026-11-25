@@ -1,0 +1,312 @@
+{
+  "status": "completed",
+  "raw_run": "/Users/eliguli712/DataStructure/numerical_analysis/FEA_meg/output/native_inference_2026-11-24/review/run001",
+  "raw_result_sha256": "ef0981761dd504f411e0b14a62124d8e19cf852bc04f4012bd21d57d7da5b5c6",
+  "native_sections": [
+    {
+      "axis": 1,
+      "image": "principal_axis1_native18um.png",
+      "gif": "principal_axis1_native18um.gif",
+      "binary": "principal_axis1_binary_native18um.png",
+      "width": 2248,
+      "height": 1324,
+      "native_sampling_um": 18,
+      "interpolation": "nearest native voxel; exact original grey value at the selected voxel, no claimed new resolution",
+      "plane_normal": [
+        -0.057078421241341264,
+        -0.09418775987466738,
+        0.9939168575481491
+      ],
+      "plane_origin_scanner_mm": [
+        13.44646026466385,
+        19.130257285024697,
+        34.2914351294883
+      ]
+    },
+    {
+      "axis": 2,
+      "image": "principal_axis2_native18um.png",
+      "gif": "principal_axis2_native18um.gif",
+      "binary": "principal_axis2_binary_native18um.png",
+      "width": 1324,
+      "height": 3097,
+      "native_sampling_um": 18,
+      "interpolation": "nearest native voxel; exact original grey value at the selected voxel, no claimed new resolution",
+      "plane_normal": [
+        -0.2016547068614822,
+        0.9761082946778717,
+        0.08091956661813175
+      ],
+      "plane_origin_scanner_mm": [
+        13.090230069853558,
+        22.995194580074646,
+        28.82387189220998
+      ]
+    },
+    {
+      "axis": 3,
+      "image": "principal_axis3_native18um.png",
+      "gif": "principal_axis3_native18um.gif",
+      "binary": "principal_axis3_binary_native18um.png",
+      "width": 2248,
+      "height": 3097,
+      "native_sampling_um": 18,
+      "interpolation": "nearest native voxel; exact original grey value at the selected voxel, no claimed new resolution",
+      "plane_normal": [
+        -0.9777921215827041,
+        -0.19580925144346106,
+        -0.07470812552825656
+      ],
+      "plane_origin_scanner_mm": [
+        15.184280037675414,
+        19.95643948365911,
+        28.65616322733578
+      ]
+    }
+  ],
+  "paired_conditional_difference": {
+    "method": "Paired .72 mm spatial-block bootstrap of the same area-uniform sample before/after bounded conditional MPPCA; fixed fitted model, not repeated acquisitions.",
+    "replicates": 1500,
+    "seed": 20261125,
+    "angle_deg_point_estimate": [
+      0.0023595579011596052,
+      0.0010915625451663462,
+      0.0025413791256977646
+    ],
+    "angle_deg_Q025_Q50_Q975": [
+      [
+        0.0013764750540460476,
+        0.0002571214568749948,
+        0.0015227935504856785
+      ],
+      [
+        0.0024269771324819584,
+        0.0013026821162310323,
+        0.0026677017292893093
+      ],
+      [
+        0.0035625459912375793,
+        0.0027166124936458666,
+        0.003805728985433536
+      ]
+    ],
+    "direction_displacement_um_at_50mm_Q025_Q50_Q975": [
+      [
+        1.2012010881179747,
+        0.22438079999891014,
+        1.32888806404903
+      ],
+      [
+        2.1179370909876836,
+        1.1368046016560074,
+        2.3280089310211154
+      ],
+      [
+        3.1089078630377847,
+        2.370691624858439,
+        3.3211250592777106
+      ]
+    ],
+    "empirical_fraction_algorithm_difference_le_1um": [
+      0.008666666666666666,
+      0.42533333333333334,
+      0.004666666666666667
+    ],
+    "bootstrap_refits_MPPCA": false,
+    "accuracy_probability_claimed": false,
+    "alpha5e_7_coverage_certified": false
+  },
+  "microstructure_ROIs": [
+    {
+      "source_slice": 1500,
+      "native_crop_ROI_yx": [
+        1286,
+        1478,
+        247,
+        439
+      ],
+      "native_sampling_um": 18,
+      "sweep_frames": 101,
+      "sweep_duration_seconds": 4.04,
+      "sweep_z_step_um": 18,
+      "sweep_range_mm": 1.8,
+      "display_magnification": 4,
+      "GIF_dither": "none",
+      "gray_window_raw": [
+        -3292,
+        26623
+      ],
+      "raw_image": "micro_1500_raw_native.png",
+      "display_preview": "micro_1500_wiener_display.png",
+      "GIF": "micro_1500_native18um_sweep.gif",
+      "threshold_sensitivity": [
+        {
+          "factor": 0.95,
+          "enclosed_2D_regions": 20,
+          "enclosed_pixels": 343,
+          "largest_region_pixels": 219
+        },
+        {
+          "factor": 0.975,
+          "enclosed_2D_regions": 20,
+          "enclosed_pixels": 377,
+          "largest_region_pixels": 243
+        },
+        {
+          "factor": 1,
+          "enclosed_2D_regions": 19,
+          "enclosed_pixels": 401,
+          "largest_region_pixels": 257
+        },
+        {
+          "factor": 1.025,
+          "enclosed_2D_regions": 19,
+          "enclosed_pixels": 425,
+          "largest_region_pixels": 366
+        },
+        {
+          "factor": 1.05,
+          "enclosed_2D_regions": 24,
+          "enclosed_pixels": 462,
+          "largest_region_pixels": 391
+        }
+      ],
+      "wiener_display_threshold_classification_flip_fraction": 0.0025770399305555555,
+      "denoised_image_used_for_quantitation": false,
+      "anatomical_identification": "Candidate low-density morphology; neither vascular nor nutritive identity established."
+    },
+    {
+      "source_slice": 1900,
+      "native_crop_ROI_yx": [
+        663,
+        855,
+        99,
+        291
+      ],
+      "native_sampling_um": 18,
+      "sweep_frames": 101,
+      "sweep_duration_seconds": 4.04,
+      "sweep_z_step_um": 18,
+      "sweep_range_mm": 1.8,
+      "display_magnification": 4,
+      "GIF_dither": "none",
+      "gray_window_raw": [
+        -3292,
+        26623
+      ],
+      "raw_image": "micro_1900_raw_native.png",
+      "display_preview": "micro_1900_wiener_display.png",
+      "GIF": "micro_1900_native18um_sweep.gif",
+      "threshold_sensitivity": [
+        {
+          "factor": 0.95,
+          "enclosed_2D_regions": 127,
+          "enclosed_pixels": 1581,
+          "largest_region_pixels": 1029
+        },
+        {
+          "factor": 0.975,
+          "enclosed_2D_regions": 146,
+          "enclosed_pixels": 1690,
+          "largest_region_pixels": 1064
+        },
+        {
+          "factor": 1,
+          "enclosed_2D_regions": 154,
+          "enclosed_pixels": 1800,
+          "largest_region_pixels": 1114
+        },
+        {
+          "factor": 1.025,
+          "enclosed_2D_regions": 176,
+          "enclosed_pixels": 1910,
+          "largest_region_pixels": 1156
+        },
+        {
+          "factor": 1.05,
+          "enclosed_2D_regions": 198,
+          "enclosed_pixels": 2017,
+          "largest_region_pixels": 1190
+        }
+      ],
+      "wiener_display_threshold_classification_flip_fraction": 0.011800130208333334,
+      "denoised_image_used_for_quantitation": false,
+      "anatomical_identification": "Candidate low-density morphology; neither vascular nor nutritive identity established."
+    },
+    {
+      "source_slice": 2100,
+      "native_crop_ROI_yx": [
+        889,
+        1081,
+        100,
+        292
+      ],
+      "native_sampling_um": 18,
+      "sweep_frames": 101,
+      "sweep_duration_seconds": 4.04,
+      "sweep_z_step_um": 18,
+      "sweep_range_mm": 1.8,
+      "display_magnification": 4,
+      "GIF_dither": "none",
+      "gray_window_raw": [
+        -3292,
+        26623
+      ],
+      "raw_image": "micro_2100_raw_native.png",
+      "display_preview": "micro_2100_wiener_display.png",
+      "GIF": "micro_2100_native18um_sweep.gif",
+      "threshold_sensitivity": [
+        {
+          "factor": 0.95,
+          "enclosed_2D_regions": 94,
+          "enclosed_pixels": 617,
+          "largest_region_pixels": 295
+        },
+        {
+          "factor": 0.975,
+          "enclosed_2D_regions": 97,
+          "enclosed_pixels": 649,
+          "largest_region_pixels": 302
+        },
+        {
+          "factor": 1,
+          "enclosed_2D_regions": 110,
+          "enclosed_pixels": 699,
+          "largest_region_pixels": 315
+        },
+        {
+          "factor": 1.025,
+          "enclosed_2D_regions": 120,
+          "enclosed_pixels": 742,
+          "largest_region_pixels": 323
+        },
+        {
+          "factor": 1.05,
+          "enclosed_2D_regions": 146,
+          "enclosed_pixels": 821,
+          "largest_region_pixels": 341
+        }
+      ],
+      "wiener_display_threshold_classification_flip_fraction": 0.012668185763888888,
+      "denoised_image_used_for_quantitation": false,
+      "anatomical_identification": "Candidate low-density morphology; neither vascular nor nutritive identity established."
+    }
+  ],
+  "requested_precision_certified": false,
+  "source_native_resolution_label": "18 um acquired voxel sampling; not a measured 1 um spatial resolution",
+  "native_FEM_status": "Deferred by user; no native volume solution claimed.",
+  "sources": [
+    {
+      "title": "Tipping and Bishop: Probabilistic Principal Component Analysis",
+      "url": "https://doi.org/10.1111/1467-9868.00196"
+    },
+    {
+      "title": "Tipping and Bishop: Mixtures of Probabilistic Principal Component Analyzers",
+      "url": "https://www.microsoft.com/en-us/research/publication/mixtures-of-probabilistic-principal-component-analyzers/"
+    },
+    {
+      "title": "Bouxsein et al.: Guidelines for assessment of bone microstructure using micro-CT",
+      "url": "https://doi.org/10.1002/jbmr.141"
+    }
+  ]
+}

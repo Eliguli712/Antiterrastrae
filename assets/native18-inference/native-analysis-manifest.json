@@ -1,0 +1,181 @@
+{
+  "schema_version": 2,
+  "claim_id": "NATIVE18_FULL_MOMENTS_CONDITIONAL_MPPCA",
+  "repository": {
+    "commit": "40abad3dd3dfd79d25b6526a6b9e48c65feaa76d",
+    "dirty": true
+  },
+  "command": [
+    "/Users/eliguli712/DataStructure/numerical_analysis/FEA_meg/fea_venv/bin/python",
+    "output/native_inference_2026-11-24/scripts/analyse_native.py",
+    "--run-dir",
+    "output/native_inference_2026-11-24/review/run001"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "runner-python",
+        "version": "3.14.3"
+      },
+      {
+        "name": "Python",
+        "version": "3.14.3"
+      },
+      {
+        "name": "NumPy",
+        "version": "2.4.3"
+      },
+      {
+        "name": "SciPy",
+        "version": "1.17.1"
+      },
+      {
+        "name": "C++ compiler",
+        "version": "Apple clang version 15.0.0 (clang-1500.3.9.4)"
+      }
+    ],
+    "hardware": "macOS-14.4-arm64-arm-64bit-Mach-O"
+  },
+  "mathematics": {
+    "assertion_tested": "Integrate all selected 18um material voxels and all native surface triangles, estimate separate volume/area principal frames and spatial-block resampling stability, fit explicitly conditional sparse-responsibility MPPCA on an area-uniform sample with spatial holdout, and intersect every native triangle in three principal plane sweeps.",
+    "coefficient_domain": "Unsigned64 exact index moments/counts; Float64 geometric integrals, EM and plane intersections.",
+    "conventions": "3MF scanner-index mm frame; no scan or mesh overwritten. Surface moments are exact per-triangle area integrals. Volume moments include voxel-cell variance. PPCA isotropic global residual is not identified as scan noise.",
+    "inputs": [
+      "All 967429317 selected native material voxels",
+      "All 37951699 native vertices and 74293846 ordered triangles",
+      "Original acquired-grid signed16 CT crop"
+    ],
+    "bounds": {
+      "bootstrap_replicates_per_scale": 1500,
+      "block_edges_mm": [
+        0.72,
+        1.44,
+        2.88
+      ],
+      "MPPCA_components": [
+        8,
+        16,
+        32
+      ],
+      "surface_sample": 65000,
+      "EM_max_iterations": 40,
+      "section_plane_step_um": 18,
+      "requested_alpha": 5e-07,
+      "requested_target_direction_displacement_um": 1
+    },
+    "non_claims": [
+      "No certified 1um physical accuracy or alpha5e-7 coverage",
+      "No newly acquired resolution",
+      "No native porous-volume FEM",
+      "No biological identification of low-density candidates"
+    ]
+  },
+  "randomness": {
+    "used": true,
+    "generator": "NumPy default_rng PCG64; scipy kmeans2 with seeded NumPy generator",
+    "seed": 20261124
+  },
+  "run": {
+    "started_at": "2026-11-25T04:52:53.874335+00:00",
+    "runtime_seconds": 56.318553,
+    "exit_status": 0,
+    "status": "completed",
+    "timeout_seconds": 1800.0,
+    "max_output_bytes": 8388608,
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": 2
+    },
+    "missing_results": [],
+    "invalid_results": []
+  },
+  "execution_artifacts": [
+    "output/native_inference_2026-11-24/scripts/analyse_native.py",
+    "output/native_inference_2026-11-24/scripts/native_statistics.cpp",
+    "output/current_native74_stress_2026-11-20/cache/vertices.f64",
+    "output/current_native74_stress_2026-11-20/cache/triangles.u32",
+    "output/ct_web_2026-11-19/cache/selected_native_mask.u8",
+    "output/ct_web_2026-11-19/cache/native_specimen_crop.i16",
+    "full_3D/ct_internal_reconstruction/native_topology_report.json"
+  ],
+  "input_artifacts": [
+    {
+      "path": "output/native_inference_2026-11-24/scripts/analyse_native.py",
+      "sha256": "366f235160c4b62b56ca82ec9a87a114b53fbab0c9777877e497c9f2be096503",
+      "sha256_after": "366f235160c4b62b56ca82ec9a87a114b53fbab0c9777877e497c9f2be096503"
+    },
+    {
+      "path": "output/native_inference_2026-11-24/scripts/native_statistics.cpp",
+      "sha256": "216564ae888950d0c5111dffe9d3089981a669bd2790a1e0ebf22e9b787ddb07",
+      "sha256_after": "216564ae888950d0c5111dffe9d3089981a669bd2790a1e0ebf22e9b787ddb07"
+    },
+    {
+      "path": "output/current_native74_stress_2026-11-20/cache/vertices.f64",
+      "sha256": "4f13df2eccd0a730411aff5fcd1e34210882490e3a32f969a6b2748f3197153a",
+      "sha256_after": "4f13df2eccd0a730411aff5fcd1e34210882490e3a32f969a6b2748f3197153a"
+    },
+    {
+      "path": "output/current_native74_stress_2026-11-20/cache/triangles.u32",
+      "sha256": "83b7c6bf0ff12c490b1948fa27ade2550e7d7e2458b9aa2528136e1162e3ed26",
+      "sha256_after": "83b7c6bf0ff12c490b1948fa27ade2550e7d7e2458b9aa2528136e1162e3ed26"
+    },
+    {
+      "path": "output/ct_web_2026-11-19/cache/selected_native_mask.u8",
+      "sha256": "d8b630b35c365f861ccc46d625a28cad21395055271f9cc937d9a9211c02a543",
+      "sha256_after": "d8b630b35c365f861ccc46d625a28cad21395055271f9cc937d9a9211c02a543"
+    },
+    {
+      "path": "output/ct_web_2026-11-19/cache/native_specimen_crop.i16",
+      "sha256": "7b8105bb454474411a63e931d0fa6bf32d086c06acd4a345676a4c97a30caeb5",
+      "sha256_after": "7b8105bb454474411a63e931d0fa6bf32d086c06acd4a345676a4c97a30caeb5"
+    },
+    {
+      "path": "full_3D/ct_internal_reconstruction/native_topology_report.json",
+      "sha256": "9f70254e9b66ad7043a3115219f321925861768edf69e446a53157b0cc75367e",
+      "sha256_after": "9f70254e9b66ad7043a3115219f321925861768edf69e446a53157b0cc75367e"
+    }
+  ],
+  "output_directory": "output/native_inference_2026-11-24/review/run001",
+  "declared_results": [
+    "output/native_inference_2026-11-24/review/run001/result.json"
+  ],
+  "outputs": [
+    {
+      "path": "output/native_inference_2026-11-24/review/run001/stdout.txt",
+      "sha256": "e12dc4e783fa12447c35aaf8ac9511a4099bffbe5ab5262859a9cc1b119ba7f4",
+      "kind": "log"
+    },
+    {
+      "path": "output/native_inference_2026-11-24/review/run001/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "log"
+    },
+    {
+      "path": "output/native_inference_2026-11-24/review/run001/result.json",
+      "sha256": "ef0981761dd504f411e0b14a62124d8e19cf852bc04f4012bd21d57d7da5b5c6",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    {
+      "check": "input hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "process exited successfully within enforced limits",
+      "passed": true
+    },
+    {
+      "check": "declared result files are present and regular",
+      "passed": true
+    }
+  ],
+  "result": "Run completed; mathematical assertion requires interpretation and review.",
+  "residual_risks": [
+    "Command success does not establish the mathematical interpretation.",
+    "Only listed input artifacts are pinned; external dependencies need recorded versions.",
+    "The thread cap uses conventional environment variables; a child program may ignore them."
+  ]
+}

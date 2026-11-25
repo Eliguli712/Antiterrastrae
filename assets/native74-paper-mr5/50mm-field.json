@@ -1,0 +1,622 @@
+{
+  "size_mm": 50,
+  "kind": "paper-reference appearance",
+  "numerical_stress_field": false,
+  "legend": {
+    "normalization": "reference palette coordinate",
+    "normalized_min": 0,
+    "normalized_max": 1,
+    "units": "reference colour coordinate",
+    "numeric_Pa_inferred_from_colour": false
+  },
+  "source_3mf": "Megalodon_50mm_Native74_Paper_Reference.3mf",
+  "chunks": [
+    {
+      "url": "50mm/field-00.bin.gz",
+      "bytes": 287949,
+      "sha256": "c0d65fd9b434cc381f3261568d4bc9f0195b21524ce2546d3444d1f233748ccf",
+      "vertices": 500560,
+      "triangles": 1000000,
+      "source_first_face": 0
+    },
+    {
+      "url": "50mm/field-01.bin.gz",
+      "bytes": 347693,
+      "sha256": "065171793ac383c38183ee0e505cd7f760722bfa25e196e49ea53e03e79db558",
+      "vertices": 502350,
+      "triangles": 1000000,
+      "source_first_face": 1000000
+    },
+    {
+      "url": "50mm/field-02.bin.gz",
+      "bytes": 351056,
+      "sha256": "7f547f17ab35786e827ae8262996d4b30c24ac5d9af52a3d27f1dca879c201af",
+      "vertices": 502593,
+      "triangles": 1000000,
+      "source_first_face": 2000000
+    },
+    {
+      "url": "50mm/field-03.bin.gz",
+      "bytes": 357468,
+      "sha256": "762d36dd92c58e8315347f92055b91bd768373de2f653e0b139c6658a1a4d6e6",
+      "vertices": 502781,
+      "triangles": 1000000,
+      "source_first_face": 3000000
+    },
+    {
+      "url": "50mm/field-04.bin.gz",
+      "bytes": 355480,
+      "sha256": "716ad0624988ae99d119102c6bb8f34488a906d887b747e7cf63a8fb4c4bd90a",
+      "vertices": 503328,
+      "triangles": 1000000,
+      "source_first_face": 4000000
+    },
+    {
+      "url": "50mm/field-05.bin.gz",
+      "bytes": 357943,
+      "sha256": "ca869bab7e9b6392a645cf5d9bd67fa8ada79889ada07a951edb8e6ee177be7b",
+      "vertices": 503397,
+      "triangles": 1000000,
+      "source_first_face": 5000000
+    },
+    {
+      "url": "50mm/field-06.bin.gz",
+      "bytes": 357039,
+      "sha256": "c1971401a8cd15dec2fc10084a9c0b0f3d2787d1b2d028de317d987c05bc4dca",
+      "vertices": 504520,
+      "triangles": 1000000,
+      "source_first_face": 6000000
+    },
+    {
+      "url": "50mm/field-07.bin.gz",
+      "bytes": 343247,
+      "sha256": "c11c5dcd5c885e027870b00eb40dfb162846c4ce6a165785065a0d9ccb9c1445",
+      "vertices": 504877,
+      "triangles": 1000000,
+      "source_first_face": 7000000
+    },
+    {
+      "url": "50mm/field-08.bin.gz",
+      "bytes": 338191,
+      "sha256": "b68b47d5d8de6c43e4973ed0d58b60415655f272fefd852c95bbbd7047cf8028",
+      "vertices": 505679,
+      "triangles": 1000000,
+      "source_first_face": 8000000
+    },
+    {
+      "url": "50mm/field-09.bin.gz",
+      "bytes": 342655,
+      "sha256": "ff32e8cfc00c5a7e7c2296d313abdda411a150d0e2715cf1d26d7520149eb31d",
+      "vertices": 506404,
+      "triangles": 1000000,
+      "source_first_face": 9000000
+    },
+    {
+      "url": "50mm/field-10.bin.gz",
+      "bytes": 332288,
+      "sha256": "bb16bd9b0c82bf62c2f975513a05b4c73ff3e73f6a47856c89504a72c21cb853",
+      "vertices": 509536,
+      "triangles": 1000000,
+      "source_first_face": 10000000
+    },
+    {
+      "url": "50mm/field-11.bin.gz",
+      "bytes": 355030,
+      "sha256": "23dde1fa226bb8be286dd7156a2d2f70b884fefbe66cf74ed2da40bb18a07be1",
+      "vertices": 511621,
+      "triangles": 1000000,
+      "source_first_face": 11000000
+    },
+    {
+      "url": "50mm/field-12.bin.gz",
+      "bytes": 380044,
+      "sha256": "2d0cda95e855300792623a2a784fe202f7b790cbd3a4ad3d18b209009c2dd832",
+      "vertices": 513482,
+      "triangles": 1000000,
+      "source_first_face": 12000000
+    },
+    {
+      "url": "50mm/field-13.bin.gz",
+      "bytes": 362229,
+      "sha256": "4fdd98ca8306dad2083e509027133209943e97602ced292992616343c6c2995d",
+      "vertices": 507742,
+      "triangles": 1000000,
+      "source_first_face": 13000000
+    },
+    {
+      "url": "50mm/field-14.bin.gz",
+      "bytes": 358285,
+      "sha256": "88688ce13ef756b6df8f8b8da47657641f50a47e37624b8028fd144c16978305",
+      "vertices": 516014,
+      "triangles": 1000000,
+      "source_first_face": 14000000
+    },
+    {
+      "url": "50mm/field-15.bin.gz",
+      "bytes": 354118,
+      "sha256": "5c306fc631feff0792ee3feb4916bfd9c00d01ded3b8a5b549e66c8b6417f0e6",
+      "vertices": 519116,
+      "triangles": 1000000,
+      "source_first_face": 15000000
+    },
+    {
+      "url": "50mm/field-16.bin.gz",
+      "bytes": 356039,
+      "sha256": "67f833e2ec05ec89ce6acb4d79cc23b337a805c56662e01cc12b3f466f7628b8",
+      "vertices": 519888,
+      "triangles": 1000000,
+      "source_first_face": 16000000
+    },
+    {
+      "url": "50mm/field-17.bin.gz",
+      "bytes": 349106,
+      "sha256": "a0e00a0b1ce660ce486409ddc7fca879e98f0425a3bbe48d3269a87e0bf0943d",
+      "vertices": 523388,
+      "triangles": 1000000,
+      "source_first_face": 17000000
+    },
+    {
+      "url": "50mm/field-18.bin.gz",
+      "bytes": 349290,
+      "sha256": "5733f143d993e204cae0f8f517de2584566b22e9c2807894f4dd1e145438d8a1",
+      "vertices": 525206,
+      "triangles": 1000000,
+      "source_first_face": 18000000
+    },
+    {
+      "url": "50mm/field-19.bin.gz",
+      "bytes": 354006,
+      "sha256": "72dd84ac94393b3c4f3383cf3d057ef1c59c662549ff02cd4a26cdfc54941a76",
+      "vertices": 528062,
+      "triangles": 1000000,
+      "source_first_face": 19000000
+    },
+    {
+      "url": "50mm/field-20.bin.gz",
+      "bytes": 365428,
+      "sha256": "76fe8c389d0e8b238aa78816bc8d3b43655e9b23494c930365530637c4e7bc0b",
+      "vertices": 511335,
+      "triangles": 1000000,
+      "source_first_face": 20000000
+    },
+    {
+      "url": "50mm/field-21.bin.gz",
+      "bytes": 320815,
+      "sha256": "c726185863094ab853a3a339286010c5a95145bf3a4e875c1372d30a0f0bf580",
+      "vertices": 534523,
+      "triangles": 1000000,
+      "source_first_face": 21000000
+    },
+    {
+      "url": "50mm/field-22.bin.gz",
+      "bytes": 303822,
+      "sha256": "87e83c0868668c24a5b087dfec7ae36f385c764325376a91ef0ad01eda59a170",
+      "vertices": 537669,
+      "triangles": 1000000,
+      "source_first_face": 22000000
+    },
+    {
+      "url": "50mm/field-23.bin.gz",
+      "bytes": 295308,
+      "sha256": "44b5051ef9a2d6659ea25cb9692d8ef65510edca87d774ef06aff9f713e7bf84",
+      "vertices": 539246,
+      "triangles": 1000000,
+      "source_first_face": 23000000
+    },
+    {
+      "url": "50mm/field-24.bin.gz",
+      "bytes": 289105,
+      "sha256": "ffd6486f27bfdce754483bae7a3455a289105738655e8dbe6e7d76cfacae06ad",
+      "vertices": 540906,
+      "triangles": 1000000,
+      "source_first_face": 24000000
+    },
+    {
+      "url": "50mm/field-25.bin.gz",
+      "bytes": 294805,
+      "sha256": "9070f8beb2c2ab7e97997e2d0a8be637f303fbe7f4e463d62598def8a64ee8fc",
+      "vertices": 540519,
+      "triangles": 1000000,
+      "source_first_face": 25000000
+    },
+    {
+      "url": "50mm/field-26.bin.gz",
+      "bytes": 282093,
+      "sha256": "c24925f68d88a0fe9de864c11edfe006213feb649e5d4c5d22d63e0032dcc6df",
+      "vertices": 544974,
+      "triangles": 1000000,
+      "source_first_face": 26000000
+    },
+    {
+      "url": "50mm/field-27.bin.gz",
+      "bytes": 285275,
+      "sha256": "9bead22d7712c498395665e3f1aa7a5aec686687c27bbab88adb1d02f7ead7a4",
+      "vertices": 546647,
+      "triangles": 1000000,
+      "source_first_face": 27000000
+    },
+    {
+      "url": "50mm/field-28.bin.gz",
+      "bytes": 284890,
+      "sha256": "e3185d5a4009a62fa05e0957c717a96bf88179eb9e8e4bd21a858e064a3a1bf4",
+      "vertices": 549449,
+      "triangles": 1000000,
+      "source_first_face": 28000000
+    },
+    {
+      "url": "50mm/field-29.bin.gz",
+      "bytes": 288864,
+      "sha256": "ae420be831bf43a1b288c7aece0034a488f317494f96f21878d73f7954ccd31a",
+      "vertices": 553054,
+      "triangles": 1000000,
+      "source_first_face": 29000000
+    },
+    {
+      "url": "50mm/field-30.bin.gz",
+      "bytes": 293745,
+      "sha256": "0d13c20888451a3de7b543632951ec84c8891ebf2daf14cb0643985afb8760f7",
+      "vertices": 550303,
+      "triangles": 1000000,
+      "source_first_face": 30000000
+    },
+    {
+      "url": "50mm/field-31.bin.gz",
+      "bytes": 324481,
+      "sha256": "30b4ccebdf78fc0f132227cdc37a7c7997988bce4dc3f4f12cea734a8d14dfb2",
+      "vertices": 525490,
+      "triangles": 1000000,
+      "source_first_face": 31000000
+    },
+    {
+      "url": "50mm/field-32.bin.gz",
+      "bytes": 299481,
+      "sha256": "5cd8a8475d1b61330629fd5681537467d18c2b205c1767f660293ba83cfea61e",
+      "vertices": 544789,
+      "triangles": 1000000,
+      "source_first_face": 32000000
+    },
+    {
+      "url": "50mm/field-33.bin.gz",
+      "bytes": 287590,
+      "sha256": "b09643c59d8288775709293ba179d7561b936d5669027726257168c36799ae2d",
+      "vertices": 555005,
+      "triangles": 1000000,
+      "source_first_face": 33000000
+    },
+    {
+      "url": "50mm/field-34.bin.gz",
+      "bytes": 292937,
+      "sha256": "215fb985399df0f153505b1bcfc96e7bf6452a6d691ba2c77651cc426478be12",
+      "vertices": 555695,
+      "triangles": 1000000,
+      "source_first_face": 34000000
+    },
+    {
+      "url": "50mm/field-35.bin.gz",
+      "bytes": 290289,
+      "sha256": "fdbc17c9a015a699b9a8bfebf30a2b97a0da74245e8af7b479df9853ec701799",
+      "vertices": 553769,
+      "triangles": 1000000,
+      "source_first_face": 35000000
+    },
+    {
+      "url": "50mm/field-36.bin.gz",
+      "bytes": 290365,
+      "sha256": "57ffb00e4ba4e54f0e06cbfef39cd07fc333666f8ee06155c702524023e64799",
+      "vertices": 553051,
+      "triangles": 1000000,
+      "source_first_face": 36000000
+    },
+    {
+      "url": "50mm/field-37.bin.gz",
+      "bytes": 291503,
+      "sha256": "7bef06e0ef55182b9b4722771df68e610472adf02a92adbd9bef084d4924582b",
+      "vertices": 553087,
+      "triangles": 1000000,
+      "source_first_face": 37000000
+    },
+    {
+      "url": "50mm/field-38.bin.gz",
+      "bytes": 300381,
+      "sha256": "4e5c62b0e71685e07b48238c92f26cbb8f7501670786c4326285ca987b8b3a48",
+      "vertices": 552924,
+      "triangles": 1000000,
+      "source_first_face": 38000000
+    },
+    {
+      "url": "50mm/field-39.bin.gz",
+      "bytes": 316754,
+      "sha256": "d11711fdeea64669b70ce9079023639ab4d65a1fb8b629a96ee3776fd15eb092",
+      "vertices": 550615,
+      "triangles": 1000000,
+      "source_first_face": 39000000
+    },
+    {
+      "url": "50mm/field-40.bin.gz",
+      "bytes": 313783,
+      "sha256": "aedc1dbcf821ac20ffb14ca696fd9615a7694eca00ed0eeff1a21316064385fe",
+      "vertices": 551983,
+      "triangles": 1000000,
+      "source_first_face": 40000000
+    },
+    {
+      "url": "50mm/field-41.bin.gz",
+      "bytes": 309947,
+      "sha256": "edff5fa947e69bbf63c2b0b39173eb36bd4954e3794a55889bf64dba668398c3",
+      "vertices": 553721,
+      "triangles": 1000000,
+      "source_first_face": 41000000
+    },
+    {
+      "url": "50mm/field-42.bin.gz",
+      "bytes": 306484,
+      "sha256": "061ecc9e4ecc740b583c0f999e13ed828ab94e424f17a439846002a47a58ceb1",
+      "vertices": 554098,
+      "triangles": 1000000,
+      "source_first_face": 42000000
+    },
+    {
+      "url": "50mm/field-43.bin.gz",
+      "bytes": 313450,
+      "sha256": "aadcdd96ab3379220df0e29ed8d156209dc521d26561c1ade595dd64a3762ee8",
+      "vertices": 552639,
+      "triangles": 1000000,
+      "source_first_face": 43000000
+    },
+    {
+      "url": "50mm/field-44.bin.gz",
+      "bytes": 311581,
+      "sha256": "3dd033d0d97a67c8c9052ec59d9a6611f286a2f68bb9d5c10c0a0cbee628e0e2",
+      "vertices": 551599,
+      "triangles": 1000000,
+      "source_first_face": 44000000
+    },
+    {
+      "url": "50mm/field-45.bin.gz",
+      "bytes": 305274,
+      "sha256": "e06b529d05ad3c9fef3f3cca7dcae04c972c5ef2ad8e845b7b678f5b0f72439b",
+      "vertices": 550950,
+      "triangles": 1000000,
+      "source_first_face": 45000000
+    },
+    {
+      "url": "50mm/field-46.bin.gz",
+      "bytes": 303514,
+      "sha256": "13f35846fd7dbaf3c33beca17f8523a131851e49664106fe57082a30c2e0ca68",
+      "vertices": 550781,
+      "triangles": 1000000,
+      "source_first_face": 46000000
+    },
+    {
+      "url": "50mm/field-47.bin.gz",
+      "bytes": 315318,
+      "sha256": "733e2821e54435eeb3568e6e7f94488d07cd9aa5dea17bca995489e5191512ef",
+      "vertices": 542504,
+      "triangles": 1000000,
+      "source_first_face": 47000000
+    },
+    {
+      "url": "50mm/field-48.bin.gz",
+      "bytes": 330315,
+      "sha256": "30346e9cc7764488b643d6c93ae9959591d0562db4de034587ee50424382acb6",
+      "vertices": 525937,
+      "triangles": 1000000,
+      "source_first_face": 48000000
+    },
+    {
+      "url": "50mm/field-49.bin.gz",
+      "bytes": 304326,
+      "sha256": "de8382edb248fd9b672833f47be4c75d5fa49fc4483e25bd5c8711a776b275a6",
+      "vertices": 538863,
+      "triangles": 1000000,
+      "source_first_face": 49000000
+    },
+    {
+      "url": "50mm/field-50.bin.gz",
+      "bytes": 284872,
+      "sha256": "aacafdd780ecd2f1749562eb7a28cd40447cb824c120ec72a0e4fceebd662e92",
+      "vertices": 548350,
+      "triangles": 1000000,
+      "source_first_face": 50000000
+    },
+    {
+      "url": "50mm/field-51.bin.gz",
+      "bytes": 271434,
+      "sha256": "ef9043d73040902538a4fdeee5f8cdee0bb6dc0a0a56b716d339322b19af01e9",
+      "vertices": 547862,
+      "triangles": 1000000,
+      "source_first_face": 51000000
+    },
+    {
+      "url": "50mm/field-52.bin.gz",
+      "bytes": 274711,
+      "sha256": "fe6ffb2265db2bf13858a60cbd25738bbf8d438190f77ba828c7da1176787a3d",
+      "vertices": 547017,
+      "triangles": 1000000,
+      "source_first_face": 52000000
+    },
+    {
+      "url": "50mm/field-53.bin.gz",
+      "bytes": 269503,
+      "sha256": "c82a4e3a648530153a9a45dcd329019730179fb4989caa6fc7048b239ad7ffe3",
+      "vertices": 546350,
+      "triangles": 1000000,
+      "source_first_face": 53000000
+    },
+    {
+      "url": "50mm/field-54.bin.gz",
+      "bytes": 267936,
+      "sha256": "68f73f9dd9a3b20cc671e985be9d0b387c351ace761b5b1c4ca7832486a4fc1b",
+      "vertices": 545039,
+      "triangles": 1000000,
+      "source_first_face": 54000000
+    },
+    {
+      "url": "50mm/field-55.bin.gz",
+      "bytes": 266526,
+      "sha256": "ab640e1e56a36fdf149509851ec9d9aacd1b5861bfbb76720a14a363a4c790c1",
+      "vertices": 544426,
+      "triangles": 1000000,
+      "source_first_face": 55000000
+    },
+    {
+      "url": "50mm/field-56.bin.gz",
+      "bytes": 273490,
+      "sha256": "7a5168b22fbaa44d64c39789f2939343a58b994a12443cefafe3c21a8c76a64a",
+      "vertices": 545404,
+      "triangles": 1000000,
+      "source_first_face": 56000000
+    },
+    {
+      "url": "50mm/field-57.bin.gz",
+      "bytes": 269484,
+      "sha256": "7d0f1bb2fce294d2d079b6da4e4bd22dd3f252e34f0d14fddc22e346fc0f9122",
+      "vertices": 542327,
+      "triangles": 1000000,
+      "source_first_face": 57000000
+    },
+    {
+      "url": "50mm/field-58.bin.gz",
+      "bytes": 278693,
+      "sha256": "5bda7f63876a7abb07b541644662cc20902983fee6731e75849cdfee8c324d9c",
+      "vertices": 540773,
+      "triangles": 1000000,
+      "source_first_face": 58000000
+    },
+    {
+      "url": "50mm/field-59.bin.gz",
+      "bytes": 266664,
+      "sha256": "67c1e4f59d10fe9f4e765239dd2e7d9c608a63bf9bd2f2ad40e2f5d508acdc3e",
+      "vertices": 540777,
+      "triangles": 1000000,
+      "source_first_face": 59000000
+    },
+    {
+      "url": "50mm/field-60.bin.gz",
+      "bytes": 271420,
+      "sha256": "7d2b8551a829f902f794acc8a511f6613b4041afd54e6db006496e4f7ed40566",
+      "vertices": 539178,
+      "triangles": 1000000,
+      "source_first_face": 60000000
+    },
+    {
+      "url": "50mm/field-61.bin.gz",
+      "bytes": 276914,
+      "sha256": "3fa90cf3ca24d5bb572a76807048eab7ae11db21fa1563651d93f715fb79843d",
+      "vertices": 537564,
+      "triangles": 1000000,
+      "source_first_face": 61000000
+    },
+    {
+      "url": "50mm/field-62.bin.gz",
+      "bytes": 285038,
+      "sha256": "1a08c335d1d8c2e9af720ddfda9ef29b463c4bb8a3774a6ec3fbaee62722ef01",
+      "vertices": 535055,
+      "triangles": 1000000,
+      "source_first_face": 62000000
+    },
+    {
+      "url": "50mm/field-63.bin.gz",
+      "bytes": 283576,
+      "sha256": "6d446562c3313b34aa624aae47851ab90ce6883191f949e0eb13d706c34b73bc",
+      "vertices": 531880,
+      "triangles": 1000000,
+      "source_first_face": 63000000
+    },
+    {
+      "url": "50mm/field-64.bin.gz",
+      "bytes": 283105,
+      "sha256": "689886377b2b844da772ca0ef9d873bab522b5decf8d0c174f93b7469b3f47ea",
+      "vertices": 528582,
+      "triangles": 1000000,
+      "source_first_face": 64000000
+    },
+    {
+      "url": "50mm/field-65.bin.gz",
+      "bytes": 273559,
+      "sha256": "2a87c230ee7ec4d34173c68721656dfc4cec8178b2a2abe246aaf1d73d094223",
+      "vertices": 522214,
+      "triangles": 1000000,
+      "source_first_face": 65000000
+    },
+    {
+      "url": "50mm/field-66.bin.gz",
+      "bytes": 284728,
+      "sha256": "ae06296205390a25ae0da31bd2397e76bb750ef1e9a95f53452730fd7dbb5bee",
+      "vertices": 513356,
+      "triangles": 1000000,
+      "source_first_face": 66000000
+    },
+    {
+      "url": "50mm/field-67.bin.gz",
+      "bytes": 275927,
+      "sha256": "8e1af7e69150ce5d6955634782bb60cfb193ce4f6bf716b9c91c8b3e1c369f21",
+      "vertices": 511058,
+      "triangles": 1000000,
+      "source_first_face": 67000000
+    },
+    {
+      "url": "50mm/field-68.bin.gz",
+      "bytes": 275226,
+      "sha256": "6d833ed9c50b5d27a64faeff72759d7b2ea975c8afa2ba4975257ad8716e62c1",
+      "vertices": 513543,
+      "triangles": 1000000,
+      "source_first_face": 68000000
+    },
+    {
+      "url": "50mm/field-69.bin.gz",
+      "bytes": 292745,
+      "sha256": "a272bde35a6dc477f1dc11101f3eeaffc2f020c9a7ba9343389cd31405857d97",
+      "vertices": 507521,
+      "triangles": 1000000,
+      "source_first_face": 69000000
+    },
+    {
+      "url": "50mm/field-70.bin.gz",
+      "bytes": 332430,
+      "sha256": "b1f387e3e5c5df6176e0d04136d1b05be37cfc24112565bdf1f67bf73778c945",
+      "vertices": 506983,
+      "triangles": 1000000,
+      "source_first_face": 70000000
+    },
+    {
+      "url": "50mm/field-71.bin.gz",
+      "bytes": 320729,
+      "sha256": "13be608f771c9b12629f640e9719506d5b35016ddb17d6c3fd27429233ca3631",
+      "vertices": 504414,
+      "triangles": 1000000,
+      "source_first_face": 71000000
+    },
+    {
+      "url": "50mm/field-72.bin.gz",
+      "bytes": 312680,
+      "sha256": "56c6b20483e53ea2f44f285b676e8a98d68f8af4b3f1e9e33b30c9f36e0a4e35",
+      "vertices": 502835,
+      "triangles": 1000000,
+      "source_first_face": 72000000
+    },
+    {
+      "url": "50mm/field-73.bin.gz",
+      "bytes": 284946,
+      "sha256": "29e20830d83c2643d8d77c0b23227bf85ced50d8f3d7020e4497e92923aa7fe0",
+      "vertices": 501659,
+      "triangles": 1000000,
+      "source_first_face": 73000000
+    },
+    {
+      "url": "50mm/field-74.bin.gz",
+      "bytes": 63255,
+      "sha256": "a9d803f2e3ac8115d042b89654e45d8e0e913abbecdd66ac44fa75b3725875e0",
+      "vertices": 147491,
+      "triangles": 293846,
+      "source_first_face": 74000000
+    }
+  ],
+  "vertices": 37951699,
+  "triangles": 74293846,
+  "source_geometry_sha256": "69928fc1d776a0cb2cd3da389802e0b08d226395005bbf4a2094180e90622b73",
+  "original_vertex_order_verified": true,
+  "verified_first_chunk_Float32_roundtrip_max_mm": 1.52587890625e-05,
+  "every_ordered_face_preserved": true,
+  "source_3mf_sha256": "3c5dc305b4938b2841a823d523fffa346b77a4e3758806e4e70b3b88e3dc614d"
+}

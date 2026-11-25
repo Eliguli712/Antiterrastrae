@@ -1,0 +1,154 @@
+{
+  "schema_version": 2,
+  "claim_id": "INDEPENDENT_100MM_MR5_EXPLICIT_RMS",
+  "repository": {
+    "commit": "40abad3dd3dfd79d25b6526a6b9e48c65feaa76d",
+    "dirty": true
+  },
+  "command": [
+    "/Users/eliguli712/DataStructure/numerical_analysis/FEA_meg/fea_venv/bin/python",
+    "/Users/eliguli712/DataStructure/numerical_analysis/FEA_meg/output/paper_native74_5cm_10cm_2026-11-22/scripts/solve_mr5_10cm.py",
+    "--run-dir",
+    "output/paper_native74_5cm_10cm_2026-11-22/review/mr5_run001",
+    "--max-level",
+    "4"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "runner-python",
+        "version": "3.14.3"
+      },
+      {
+        "name": "Python",
+        "version": "3.14.3"
+      },
+      {
+        "name": "NumPy",
+        "version": "2.4.3"
+      },
+      {
+        "name": "SciPy",
+        "version": "1.17.1"
+      },
+      {
+        "name": "PyAMG",
+        "version": "5.4.1"
+      },
+      {
+        "name": "scikit-fem",
+        "version": "12.0.2"
+      }
+    ],
+    "hardware": "macOS-14.4-arm64-arm-64bit-Mach-O"
+  },
+  "mathematics": {
+    "assertion_tested": "Independently solve the physical 100 mm SI closed-solid proxy using the archived MR5 energy and 50000 N/m3 body load, with six explicit boundary-area-weighted rigid-motion constraints; verify material derivatives, objectivity, affine patch consistency, force balance and virtual work; measure frozen-tip ROI refinement changes.",
+    "coefficient_domain": "Float64 SI nonlinear hyperelastic P1 tetrahedral FEM with compressible MR5 energy, constant reference-tangent quasi-Newton, constrained AMG/CG steps.",
+    "conventions": "Native geometry calibration uses declared 18 um Z rather than legacy forced 16 um; size factor 100/51.63315333301228. C10=12e6, C01=3e6, C20=2e6, C11=1.5e6, C02=.8e6 Pa, bulk250e6 Pa. Body load (0,0,50000) N/m3. No pressure or root clamps. Constraints use boundary-area-weighted translation and rotation means.",
+    "inputs": [
+      "Archived L0 geometric mesh only; stored stresses and displacements are ignored.",
+      "Calibrated principal coordinate basis used only for the frozen geometric tip ROI."
+    ],
+    "bounds": {
+      "nominal_native_height_mm": 100,
+      "material_gradient_relative_tolerance": 2e-07,
+      "material_objectivity_relative_tolerance": 1e-10,
+      "affine_traction_patch_relative_tolerance": 1e-09,
+      "nonlinear_relative_residual_tolerance": 2e-07,
+      "force_balance_tolerance": 1e-08,
+      "virtual_work_tolerance": 1e-06,
+      "max_refinement_level": 4
+    },
+    "non_claims": [
+      "Not an exact COMSOL automatic constraint reproduction; this alternative was explicitly authorized by the user.",
+      "The legacy reference image is retained independently, not used to set numerical stress values.",
+      "The native 74M surface is a display mesh, not a 74M-element porous FEM.",
+      "Pointwise serration peak convergence is not asserted."
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-23T04:50:29.083273+00:00",
+    "runtime_seconds": 933.008256,
+    "exit_status": 0,
+    "status": "completed",
+    "timeout_seconds": 2400.0,
+    "max_output_bytes": 8388608,
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": 2
+    },
+    "missing_results": [],
+    "invalid_results": []
+  },
+  "execution_artifacts": [
+    "output/paper_native74_5cm_10cm_2026-11-22/scripts/solve_mr5_10cm.py",
+    "output/scale_acrylic_2026-11-20/inputs/solution.npz",
+    "output/scale_acrylic_2026-11-20/inputs/qf_solution.npz"
+  ],
+  "input_artifacts": [
+    {
+      "path": "output/paper_native74_5cm_10cm_2026-11-22/scripts/solve_mr5_10cm.py",
+      "sha256": "03c338a62233397be4ac658f203880b52befbd9edff2ba34da31cbf61e702ada",
+      "sha256_after": "03c338a62233397be4ac658f203880b52befbd9edff2ba34da31cbf61e702ada"
+    },
+    {
+      "path": "output/scale_acrylic_2026-11-20/inputs/solution.npz",
+      "sha256": "f816917260e5fd875134e266590120cbab9d2258546306f31b021f02c94ea27a",
+      "sha256_after": "f816917260e5fd875134e266590120cbab9d2258546306f31b021f02c94ea27a"
+    },
+    {
+      "path": "output/scale_acrylic_2026-11-20/inputs/qf_solution.npz",
+      "sha256": "78eec317bf22fc3c89cd6f79dfbf786e7a718958eea0982daf762e05f9161da6",
+      "sha256_after": "78eec317bf22fc3c89cd6f79dfbf786e7a718958eea0982daf762e05f9161da6"
+    }
+  ],
+  "output_directory": "output/paper_native74_5cm_10cm_2026-11-22/review/mr5_run001",
+  "declared_results": [
+    "output/paper_native74_5cm_10cm_2026-11-22/review/mr5_run001/result.json"
+  ],
+  "outputs": [
+    {
+      "path": "output/paper_native74_5cm_10cm_2026-11-22/review/mr5_run001/stdout.txt",
+      "sha256": "f923b7c605f5a940b771b094299d89ef9208c9aaf853db3ce55d6bf657e11afd",
+      "kind": "log"
+    },
+    {
+      "path": "output/paper_native74_5cm_10cm_2026-11-22/review/mr5_run001/stderr.txt",
+      "sha256": "4d8db268400610fcf30f702c2154dd7a9828884d911c1f75fa52b4ca8afa71dc",
+      "kind": "log"
+    },
+    {
+      "path": "output/paper_native74_5cm_10cm_2026-11-22/review/mr5_run001/result.json",
+      "sha256": "7d536c91757556d77a40cb1bed7905db583d7ec23046b67ebbcb9a9646f1e0e7",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    {
+      "check": "input hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "process exited successfully within enforced limits",
+      "passed": true
+    },
+    {
+      "check": "declared result files are present and regular",
+      "passed": true
+    }
+  ],
+  "result": "Run completed; mathematical assertion requires interpretation and review.",
+  "residual_risks": [
+    "Command success does not establish the mathematical interpretation.",
+    "Only listed input artifacts are pinned; external dependencies need recorded versions.",
+    "The thread cap uses conventional environment variables; a child program may ignore them."
+  ]
+}

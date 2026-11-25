@@ -1,0 +1,97 @@
+{
+  "status": "completed",
+  "solver": "Independent open-source P1-tetrahedral compressible MR5, constrained quasi-Newton, AMG/CG linear steps",
+  "physical_nominal_native_height_mm": 100,
+  "source_native_height_mm": 51.63315333301228,
+  "coordinate_calibration": "Archived legacy mesh Z recalibrated 16 -> declared 18 um, then SI 100 mm native principal height.",
+  "material_Pa": {
+    "C10": 12000000.0,
+    "C01": 3000000.0,
+    "C20": 2000000.0,
+    "C11": 1500000.0,
+    "C02": 800000.0,
+    "bulk": 250000000.0
+  },
+  "body_force_N_per_m3": [
+    0.0,
+    0.0,
+    50000.0
+  ],
+  "boundary_conditions": "Six boundary-area-weighted mean-displacement/rotation constraints; documented replacement for inaccessible COMSOL automatic point selection.",
+  "exact_COMSOL_reproduction_claimed": false,
+  "stress_rescaling_used": false,
+  "stored_displacement_or_stress_used_as_answer": false,
+  "constitutive_checks": {
+    "energy_gradient_relative_error": 1.8007510174080008e-09,
+    "objectivity_relative_error": 2.7144384669341755e-14,
+    "identity_and_uniform_dilatation_checks": "passed"
+  },
+  "tip_two_successive_2percent_checks_passed": true,
+  "final": {
+    "nodes": 553604,
+    "tetrahedra": 2856852,
+    "boundary_faces": 165942,
+    "constrained_relative_residual": 7.648030761827887e-08,
+    "force_balance_relative_error": 9.595392722824723e-14,
+    "constraint_norm_m": 2.8694564274312756e-22,
+    "virtual_work_relative_error": 2.269545376263246e-08,
+    "linear_K_rigid_null_relative_error": 1.1331914686525906e-19,
+    "full_affine_traction_patch_relative_error": 7.201094375078576e-14,
+    "linear_constrained_solve_relative_residual": 2.5866604572732985e-11,
+    "applied_force_N": [
+      0.0,
+      0.0,
+      2.0965522080244585
+    ],
+    "reaction_force_N": [
+      -8.767068936767826e-18,
+      -4.8081474526310636e-17,
+      -2.0965522080246597
+    ],
+    "energy_J": 5.0825245739682905e-08,
+    "max_displacement_m": 7.402775182258574e-07,
+    "J_min": 0.9999560555288224,
+    "max_green_strain_norm": 0.00042391638084860047,
+    "volume_m3": 4.193104416049181e-05,
+    "max_element_von_mises_Pa": 31100.082365287344,
+    "volume_weighted_Q95_Pa": 691.7395956585462,
+    "volume_weighted_Q99_Pa": 840.8298970942935,
+    "quasi_Newton_trace": [
+      {
+        "iteration": 0,
+        "constrained_relative_residual": 1.4660796634106146,
+        "energy_J": 0.0,
+        "J_min": 1.0
+      },
+      {
+        "iteration": 1,
+        "constrained_relative_residual": 0.0004957671283394024,
+        "energy_J": 5.082579604695368e-08,
+        "J_min": 0.999956095774632
+      },
+      {
+        "iteration": 2,
+        "constrained_relative_residual": 7.648030761827887e-08,
+        "energy_J": 5.0825245739682905e-08,
+        "J_min": 0.9999560555288224
+      }
+    ],
+    "rigid_constraint_definition": "Zero boundary-area-weighted mean displacement and reference-centred mean rotational displacement; six constraints; no root clamps.",
+    "COMSOL_automatic_constraint_reproduced": false,
+    "level": 4,
+    "tip_roi": {
+      "volume_m3": 1.1111447269032775e-06,
+      "Q95_Pa": 672.533970929272,
+      "Q99_Pa": 773.1634523184186,
+      "energy_J": 1.2400653234357316e-09
+    },
+    "tip_last_step_change_percent": {
+      "Q95_Pa": 1.3376037720891245,
+      "Q99_Pa": 1.4412487800361715,
+      "energy_J": 0.5824150004318267
+    }
+  },
+  "levels_solved": 5,
+  "scope": "Closed-solid proxy mechanics; native74 is the display surface, not a pore-resolved volume domain.",
+  "legacy_5cm_paper_reference": "Original appearance is retained separately; archived metre/mm mismatch prevents treating its stresses as a calibrated physical 50 mm validation."
+}
