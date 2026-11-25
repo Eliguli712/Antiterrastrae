@@ -1,8 +1,8 @@
 {
-  "source_commit": "d070da9304206a5284a2849a09acb8fc3c525439",
-  "verified_at": "2026-11-25T11:53:12.477678+00:00",
+  "source_commit": "12e5533bb329ebd6f4ba718155b6cae9d6235160",
+  "verified_at": "2026-11-25T13:54:54.074996+00:00",
   "execution": "GitHub Actions",
-  "run_url": "https://github.com/Eliguli712/Antiterrastrae/actions/runs/45607977843",
+  "run_url": "https://github.com/Eliguli712/Antiterrastrae/actions/runs/45627702054",
   "sites": {
     "github_pages": {
       "url": "https://eliguli712.github.io/Antiterrastrae/",
@@ -10,14 +10,14 @@
       "checked_files": [
         {
           "path": "cv.html",
-          "bytes": 1040169,
-          "sha256": "ef94aa09c1764d160ab6ac959c53e3b19f897e648f5c59fcaf53482aaf83491f",
+          "bytes": 1040723,
+          "sha256": "8322aae4ad9fe1371a4848bfeb4f4901ff78598ef473c26d3d281d114c7a3b64",
           "matches": true
         },
         {
           "path": "publications/catalog.json",
-          "bytes": 12496,
-          "sha256": "7ebe09b9a95de1f8d935f234df696d6169dc1515ff248ece6a62ffd0c31675b9",
+          "bytes": 13825,
+          "sha256": "a9205d88b5b0bac4fff387fbfcf1ccd42935ab373334b2f39aa7d970237f0f9f",
           "matches": true
         },
         {
@@ -154,14 +154,14 @@
         },
         {
           "path": "publications/reader.html",
-          "bytes": 1402,
-          "sha256": "c3b59aa54343b1688b366dcc1d1909ddcc75a8f0eeb5c05623c744903d040e0c",
+          "bytes": 1559,
+          "sha256": "7cf98de18f2553ccd622733353643d37ec42d9f67ec3b6db0dd96bb1864daaba",
           "matches": true
         },
         {
           "path": "publications/reader.js",
-          "bytes": 6969,
-          "sha256": "eb6ba5ea0820ea85ba79f3a5cef9a37f4ed6ca04aa5dbe1818331752ba9bac2c",
+          "bytes": 9054,
+          "sha256": "c6b01dc507490d38d972813e643062a8043fc8456a20b9ac0dade653a1750ac6",
           "matches": true
         },
         {
@@ -190,6 +190,12 @@
         },
         {
           "path": "publications/megalodon-current-preprint.pdf",
+          "bytes": 46927105,
+          "sha256": "ed1c88ef28c89240ac6d0f2958f0b5c440d837111a0f04be057e273818b4f690",
+          "matches": true
+        },
+        {
+          "path": "publications/megalodon-2026-11-25-qian-legacy.pdf",
           "bytes": 47555924,
           "sha256": "6905920cd7796f5e113027bab1e844f98257ccbc94694b8b52d664de1022ac09",
           "matches": true
@@ -330,20 +336,20 @@
       "checked_files": [
         {
           "path": "cv.html",
-          "bytes": 1040169,
-          "sha256": "ef94aa09c1764d160ab6ac959c53e3b19f897e648f5c59fcaf53482aaf83491f",
+          "bytes": 1040723,
+          "sha256": "8322aae4ad9fe1371a4848bfeb4f4901ff78598ef473c26d3d281d114c7a3b64",
           "matches": true
         },
         {
           "path": "",
-          "bytes": 1040169,
-          "sha256": "ef94aa09c1764d160ab6ac959c53e3b19f897e648f5c59fcaf53482aaf83491f",
+          "bytes": 1040723,
+          "sha256": "8322aae4ad9fe1371a4848bfeb4f4901ff78598ef473c26d3d281d114c7a3b64",
           "matches": true
         },
         {
           "path": "publications/catalog.json",
-          "bytes": 12496,
-          "sha256": "7ebe09b9a95de1f8d935f234df696d6169dc1515ff248ece6a62ffd0c31675b9",
+          "bytes": 13825,
+          "sha256": "a9205d88b5b0bac4fff387fbfcf1ccd42935ab373334b2f39aa7d970237f0f9f",
           "matches": true
         },
         {
@@ -480,14 +486,14 @@
         },
         {
           "path": "publications/reader.html",
-          "bytes": 1402,
-          "sha256": "c3b59aa54343b1688b366dcc1d1909ddcc75a8f0eeb5c05623c744903d040e0c",
+          "bytes": 1559,
+          "sha256": "7cf98de18f2553ccd622733353643d37ec42d9f67ec3b6db0dd96bb1864daaba",
           "matches": true
         },
         {
           "path": "publications/reader.js",
-          "bytes": 6969,
-          "sha256": "eb6ba5ea0820ea85ba79f3a5cef9a37f4ed6ca04aa5dbe1818331752ba9bac2c",
+          "bytes": 9054,
+          "sha256": "c6b01dc507490d38d972813e643062a8043fc8456a20b9ac0dade653a1750ac6",
           "matches": true
         },
         {
@@ -516,6 +522,12 @@
         },
         {
           "path": "publications/megalodon-current-preprint.pdf",
+          "bytes": 46927105,
+          "sha256": "ed1c88ef28c89240ac6d0f2958f0b5c440d837111a0f04be057e273818b4f690",
+          "matches": true
+        },
+        {
+          "path": "publications/megalodon-2026-11-25-qian-legacy.pdf",
           "bytes": 47555924,
           "sha256": "6905920cd7796f5e113027bab1e844f98257ccbc94694b8b52d664de1022ac09",
           "matches": true
