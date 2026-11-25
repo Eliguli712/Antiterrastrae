@@ -1,0 +1,57 @@
+{
+  "source": "DoubleCube_CommonPoint_Height100mm.stl",
+  "source_header": "DualCube common-apex; H=100mm; 4 triangular cuts t=1/2; one solid",
+  "sha256": "0520a5e7b449174a31883b816588c8b6383bbe81da1fe240adff2a878c09d922",
+  "bytes": 3684,
+  "units": "Millimetres, as declared by the source title and STL header",
+  "bounds_xyz_mm": [
+    [
+      -50.0,
+      50.0
+    ],
+    [
+      -50.0,
+      50.0
+    ],
+    [
+      0.0,
+      100.0
+    ]
+  ],
+  "spans_xyz_mm": [
+    100.0,
+    100.0,
+    100.0
+  ],
+  "triangles": 72,
+  "welded_vertices": 38,
+  "welded_edges": 108,
+  "edge_face_incidence_counts": {
+    "2": 108
+  },
+  "winding_consistent": true,
+  "connected_shell_triangles": [
+    72
+  ],
+  "degenerate_triangles": 0,
+  "surface_area_mm2": 34403.72014228187,
+  "closed_geometric_volume_mm3": 413346.2589343079,
+  "uniform_volume_centroid_xyz_mm": [
+    0.0,
+    0.0,
+    47.32704888107565
+  ],
+  "triangles_on_lowest_z_plane": 0,
+  "r12_support_record": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/d2b106f38bf0938fb0c5a08fc4356aac20c5d40c/assets/support-r12/support.json",
+  "r12_source_sha256_matches": true,
+  "r12_source_cube_edge_mm": 70.71067811865476,
+  "r12_derived_cube_edge_mm": 52.0,
+  "r12_source_uniform_scale": 0.7353910524340094,
+  "r12_source_translation_xyz_mm": [
+    0,
+    0,
+    7.2
+  ],
+  "r12_derived_rod_diameter_mm": 6.4,
+  "scope": "Exact original STL geometry audit. R12 transforms this source to derive a rod frame; its model loads and results do not describe stresses in the original solid STL."
+}

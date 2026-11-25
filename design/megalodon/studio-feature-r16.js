@@ -1,3 +1,5 @@
+import { mountInlineVideoControls } from './inline-video-controls-r17.js?v=1';
+
 const root = document.documentElement;
 const art = document.getElementById('studioArtDisplay');
 const translations = {
@@ -16,6 +18,7 @@ const translations = {
   studioToothFinish: ['Tooth finish', 'Zahnoberfläche', 'Φινίρισμα δοντιού'],
   studioResinFinish: ['Cobalt resin', 'Kobaltharz', 'Ρητίνη κοβαλτίου'],
   studioABSFinish: ['ABS plastic', 'ABS-Kunststoff', 'Πλαστικό ABS'],
+  studioPLAFinish: ['Matte PLA · artwork colours', 'Mattes PLA · Kunstfarben', 'Ματ PLA · χρώματα έργου'],
   studioFinishHelp: ['Changes the tooth appearance. The stand and cap keep their original materials.', 'Ändert das Aussehen des Zahns. Ständer und Kappe behalten ihre Originalmaterialien.', 'Αλλάζει την εμφάνιση του δοντιού. Η βάση και το κάλυμμα διατηρούν τα αρχικά υλικά τους.'],
   studioLiftMeasure: ['Lift cap', 'Kappe anheben', 'Ανύψωση καλύμματος'],
   studioRailMeasure: ['Withdraw cap', 'Kappe ausziehen', 'Απόσυρση καλύμματος'],
@@ -23,6 +26,25 @@ const translations = {
   studioRailHelp: ['Slide the cap 0–40 mm along the original CAD rail.', 'Kappe auf der ursprünglichen CAD-Führung um 0–40 mm verschieben.', 'Ολίσθηση του καλύμματος κατά 0–40 mm στον αρχικό οδηγό CAD.'],
   studioFreeHelp: ['Drag the cap to move it. Drag elsewhere to rotate. With the view focused, use the arrow keys to move, Page Up or Page Down to change height, or Escape to reset the cap.', 'Kappe zum Verschieben ziehen. Zum Drehen außerhalb der Kappe ziehen. In der fokussierten Ansicht Pfeiltasten zum Verschieben, Bild auf oder Bild ab für die Höhe und Esc zum Zurücksetzen verwenden.', 'Σύρετε το κάλυμμα για να το μετακινήσετε. Σύρετε αλλού για περιστροφή. Με εστιασμένη την προβολή, χρησιμοποιήστε τα βέλη για μετακίνηση, Page Up ή Page Down για το ύψος ή Esc για επαναφορά.']
 };
+mountInlineVideoControls(document);
+
+const support=document.getElementById('studioDoubleCube');
+if(support){
+  let loadingSupport=false;
+  const loadSupport=()=>{
+    if(!support.open||loadingSupport)return;
+    loadingSupport=true;
+    import('./studio-support-r17.js?v=1')
+      .then(({mountStudioSupport})=>mountStudioSupport(support))
+      .catch(()=>{
+        loadingSupport=false;
+        support.querySelector('.studio-support-status').textContent='3D preview unavailable. Download the original STL, or reopen this section to retry.';
+      });
+  };
+  support.addEventListener('toggle',loadSupport);
+  loadSupport();
+}
+
 const {applyLanguage} = await import('./i18n.js');
 window.designI18n.register(translations);
 applyLanguage();
@@ -111,7 +133,7 @@ if (root.dataset.studioDisplay === 'workbench') {
 
   function load(){
     if(mode!=='interactive'||!visible||viewer||loading||failed)return;
-    loading=import('./studio-art-view-r16.js?v=2').then(({mountStudioArt})=>
+    loading=import('./studio-art-view-r16.js?v=3').then(({mountStudioArt})=>
       mountStudioArt(canvas,{onCapMove:paintCapPosition}))
       .then(view=>{
         viewer=view;

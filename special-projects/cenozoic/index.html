@@ -2,10 +2,10 @@
 <script type="module">
 // Resolve both directory URLs and hosts that remove their trailing slash.
 function assetDirectory(path){if(path.endsWith('/'))return path;return /\.[a-z0-9]+$/i.test(path)?path.slice(0,path.lastIndexOf('/')+1):path+'/'}
-const root=new URL(assetDirectory(location.pathname),location.origin),revision='20261120b';
+const root=new URL(assetDirectory(location.pathname),location.origin),revision='20261125a';
 const icon=document.createElement('link');icon.rel='icon';icon.href=new URL('favicon.svg',root);document.head.append(icon);
 try{
- await Promise.all(['style.css','lab.css'].map(name=>new Promise((resolve,reject)=>{const link=document.createElement('link');link.rel='stylesheet';link.href=new URL(name+'?v='+revision,root);link.onload=resolve;link.onerror=reject;document.head.append(link)})));
+ await Promise.all(['style.css','lab.css','time-plot.css'].map(name=>new Promise((resolve,reject)=>{const link=document.createElement('link');link.rel='stylesheet';link.href=new URL(name+'?v='+revision,root);link.onload=resolve;link.onerror=reject;document.head.append(link)})));
  await import(new URL('app.js?v='+revision,root).href);
 }catch(error){document.getElementById('exhibition').textContent='Exhibition could not load. Please refresh. / Ausstellung konnte nicht geladen werden. Bitte neu laden.';console.error(error)}
 </script></body></html>

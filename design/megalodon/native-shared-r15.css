@@ -94,3 +94,64 @@ html[data-native-shared-r15]{scroll-behavior:auto}
  color:#a7c5ca;
  font-size:.75em;
 }
+
+/* A closed disclosure also hides its content in browsers that retain layout boxes. */
+.native-fold:not([open]) > .native-fold-content {
+ display:none !important;
+}
+
+.native-tube-tools {
+ padding: .8rem 1.1rem;
+ border-top: 1px solid #314854;
+ color: #d9ecec;
+}
+.native-tube-tools label {
+ display: inline-flex;
+ align-items: center;
+ gap: .55rem;
+ cursor: pointer;
+ margin: .25rem .8rem .25rem 0;
+}
+.native-tube-tools p {
+ margin: .32rem 0 0;
+ color: #a9c3ca;
+ font-size: .88rem;
+ line-height: 1.5;
+}
+
+.native-evidence-note {
+ margin: 1.5rem 0;
+ padding: clamp(1rem, 3vw, 2rem);
+ border: 1px solid #425e6b;
+ background: #10232d;
+ color: #d6e7e9;
+}
+.native-evidence-note p { max-width: 74ch; line-height: 1.6; }
+.native-evidence-note a { text-decoration: underline; text-underline-offset: .18em; }
+.native-evidence-note h2 { font: 400 clamp(1.65rem, 4vw, 2.8rem)/1.2 Georgia, serif; }
+.native-evidence-note figure { margin: 1.25rem 0; }
+.native-evidence-note img { display: block; width: min(100%, 56rem); height: auto; }
+.native-evidence-note figcaption { margin-top: .5rem; color: #b1cbd0; line-height: 1.5; }
+.native-legend-gradient, .batch-colourbar .batch-gradient, .stress-legends i, #colourLegend {
+ clip-path: polygon(0 50%, 2.5% 0, 97.5% 0, 100% 50%, 97.5% 100%, 2.5% 100%);
+ border-radius: 0;
+}
+.native-legend .batch-axis { margin-inline: 2.5%; }
+.native-part-key { display: flex; flex-wrap: wrap; gap: .6rem 1rem; padding: 0; list-style: none; }
+.native-part-key i { display: inline-block; width: .7em; height: .7em; margin-right: .4em; }
+@media (max-width: 560px) {
+ .print-height-card table { display: table; min-width: 0; width: 100%; table-layout: fixed; overflow: visible; }
+ .print-height-card th, .print-height-card td {
+  padding: .65rem .25rem;
+  font-size: clamp(.7rem, 2.9vw, .88rem);
+  white-space: normal;
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
+ }
+ .print-height-card th:first-child { width: 33%; }
+ .print-height-card th:not(:first-child), .print-height-card td:not(:first-child) { text-align: right; }
+ .native-view-tools input[type=range] { max-width: 100%; }
+}
+.native-shared-stage.native-poster-visible { touch-action: pan-y; }
+.native-shared-stage.native-poster-visible .native-hit-area { pointer-events: none; }
+.native-shared-canvas[hidden] { display: none !important; }

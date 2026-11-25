@@ -1,7 +1,28 @@
-import{SOURCE_CACHE,digest}from'./native-store-r15.js?v=1';
-const SHELL='megalodon-shell-r15-v6';
-const files=['./','./exhibition.css','./native-batch-r14.css?v=1','./native-shared-r15.css?v=3','./native-app-r15.js?v=4','./native-engine-r15.js?v=3','./native-content-r15.js?v=1','./native-stream-r15.js?v=2','./native-store-r15.js?v=1','./native-section-r15.js?v=1','./native-contours-r15.js?v=1','./native-panels-r15.js?v=4','./cad-palaeo-ruler-r14.js?v=1','./vendor/three.module.js','./vendor/OrbitControls.js','./assets/native74-batch-publication.json?v=1','./assets/native-interactive-publication.json?v=3','./assets/curved-zone-guide.json?v=2','./assets/native-cut-playback/Native74_Internal_PCA_Axis_1_maximum_section.png','./assets/native-cut-playback/Native74_Internal_PCA_Axis_2_maximum_section.png','./assets/native-cut-playback/Native74_Internal_PCA_Axis_3_maximum_section.png'];
-self.addEventListener('install',e=>e.waitUntil(caches.open(SHELL).then(async c=>{await Promise.allSettled(files.map(f=>c.add(f)));await self.skipWaiting();})));
+import{SOURCE_CACHE,digest}from'./native-store-r15.js?v=2';
+const SHELL='megalodon-shell-r15-v8';
+const files=['./','./native-microtubes.js?v=1','./assets/native-microtubes.json?v=1','./inline-video-controls-r17.js?v=1','./inline-video-controls-r17.css?v=1','./exhibition.css','./native-batch-r14.css?v=1','./native-shared-r15.css?v=5','./native-app-r15.js?v=6','./native-engine-r15.js?v=5','./native-packed-gpu-r18.js?v=1','./native-content-r15.js?v=1','./native-stream-r15.js?v=3','./native-store-r15.js?v=2','./native-section-r15.js?v=2','./native-contours-r15.js?v=1','./native-panels-r15.js?v=5','./cad-palaeo-ruler-r14.js?v=1','./vendor/three.module.js','./vendor/OrbitControls.js','./assets/native74-batch-publication.json?v=1','./assets/native-interactive-publication.json?v=3','./assets/curved-zone-guide.json?v=2','./assets/native-cut-playback/Native74_Internal_PCA_Axis_1_maximum_section.png','./assets/native-cut-playback/Native74_Internal_PCA_Axis_2_maximum_section.png','./assets/native-cut-playback/Native74_Internal_PCA_Axis_3_maximum_section.png'];
+async function installShell(){
+ const cache=await caches.open(SHELL);
+ await Promise.allSettled(files.map(file=>cache.add(file)));
+ // Keep both complete static cases usable when WebGL or the network is lost.
+ // Decode no images here; the browser retains their original response bytes.
+ try{
+  const batch=await (await cache.match('./assets/native74-batch-publication.json?v=1')).json();
+  const interactive=await (await cache.match('./assets/native-interactive-publication.json?v=3')).json();
+  const cases=Object.values(batch.cases);
+  const urls=[
+   batch.ruler.png,batch.ruler.mesh,batch.palette,
+   ...cases.flatMap(entry=>[entry.field,...Object.values(entry.views)]),
+   interactive.geometry,interactive.volume,interactive.mask,interactive.preview,interactive.pca,
+   interactive.counts,interactive.natural?.field
+  ].filter(Boolean);
+  // Static preparation overlaps neither a burst of image decodes nor a
+  // full geometry transfer. Individual failures remain fetchable on demand.
+  for(const url of new Set(urls))await cache.add(url).catch(()=>{});
+ }catch{}
+ await self.skipWaiting();
+}
+self.addEventListener('install',e=>e.waitUntil(installShell()));
 self.addEventListener('activate',e=>e.waitUntil(self.clients.claim()));
 const catalogueURL='./assets/native-interactive-publication.json?v=3';
 let catalogue;
@@ -39,7 +60,8 @@ self.addEventListener('fetch',e=>{
  const u=new URL(e.request.url);if(e.request.method!=='GET')return;
  const raw=u.hostname==='raw.githubusercontent.com'&&/\/Antiterrastrae\/[0-9a-f]{40}\/assets\//.test(u.pathname);
  const local=u.origin===location.origin&&u.pathname.startsWith(new URL('./',location.href).pathname);if(u.pathname.endsWith('.mp4')&&((raw&&u.pathname.includes('/native-interactive-r15/'))||(local&&u.pathname.includes('/assets/native-cut-playback/')))){e.respondWith(movieResponse(e.request));return;}
- if(!local&&!(raw&&u.pathname.endsWith('.json')))return;
+ const staticArtwork=raw&&/\/(native74-paper-mr5|palaeo-ruler-r14)\/[^/]+\.png$/.test(u.pathname);
+ if(!local&&!(raw&&u.pathname.endsWith('.json'))&&!staticArtwork)return;
  if(u.pathname.includes('/.native-source-r15/'))return;
  e.respondWith((async()=>{const cache=await caches.open(SHELL);if(raw){const old=await cache.match(e.request);if(old)return old;}try{const response=await fetch(e.request);if(response.ok&&(raw||e.request.mode==='navigate'||/\.(js|css|json|svg)$/.test(u.pathname)))await cache.put(e.request,response.clone());return response;}catch(error){const cached=await cache.match(e.request);if(cached)return cached;if(e.request.mode==='navigate'){const page=await cache.match('./');if(page)return page;}throw error;}})());
 });

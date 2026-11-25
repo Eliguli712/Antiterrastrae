@@ -1,0 +1,360 @@
+{
+  "source_mha_sha256": "8a68259cc4c079eaef5ec604e60bea2de6bf8bf4ebb7d9499347651676e19bce",
+  "native_voxel_pitch_mm": 0.018,
+  "geometry": {
+    "trace_id": 2,
+    "source_z_index": 1194,
+    "crop_start_yx": [
+      1103,
+      288
+    ],
+    "candidate_section_voxels": 12,
+    "all_ct_void_pixels": 25,
+    "shape_yx": [
+      48,
+      60
+    ]
+  },
+  "material": {
+    "E_MPa": 20000.0,
+    "nu": 0.28
+  },
+  "nominal_tensile_strain": 0.0001,
+  "plane_strain": true,
+  "precrack": {
+    "tip_xy_mm": [
+      0.612,
+      0.43199999999999994
+    ],
+    "extends_from_left_edge": true
+  },
+  "boundary": "Uniform opposite vertical displacements on horizontal edges. Horizontal slip free except one bottom corner. Remaining boundaries and crack faces traction-free.",
+  "collar": "Material cell centres within 36 \u00b5m of the chosen cavity, identical spatial selection in paired control.",
+  "crack_metric": "Initial kink direction from a near-tip displacement-jump fit and the maximum circumferential stress criterion; not a simulated crack path or measured fracture.",
+  "results": [
+    {
+      "element_pitch_mm": 0.018,
+      "ct_pores": {
+        "intact": {
+          "elements": 2855,
+          "dofs": 5970,
+          "top_reaction_N_per_mm": 2.291385628014666,
+          "relative_equilibrium_residual": 7.007321928793844e-14,
+          "collar_q95_over_nominal": 1.3227866170445912,
+          "collar_mean_over_nominal": 0.898808443615546
+        },
+        "seeded_crack": {
+          "elements": 2855,
+          "dofs": 6038,
+          "top_reaction_N_per_mm": 1.12482085031682,
+          "relative_equilibrium_residual": 1.1133188383032871e-13,
+          "face_jump_fit": [
+            {
+              "outer_mm": 0.054,
+              "fit_nodes": 2,
+              "KI_MPa_sqrt_mm": 1.352288501942643,
+              "KII_MPa_sqrt_mm": 0.013365897058614433,
+              "first_kink_deg": -1.1323545236545958
+            },
+            {
+              "outer_mm": 0.072,
+              "fit_nodes": 3,
+              "KI_MPa_sqrt_mm": 1.3750672774447537,
+              "KII_MPa_sqrt_mm": 0.014162421250520665,
+              "first_kink_deg": -1.1799367570346118
+            },
+            {
+              "outer_mm": 0.09,
+              "fit_nodes": 4,
+              "KI_MPa_sqrt_mm": 1.3885425746672202,
+              "KII_MPa_sqrt_mm": 0.014840375353471654,
+              "first_kink_deg": -1.2243979747525247
+            }
+          ]
+        }
+      },
+      "filled": {
+        "intact": {
+          "elements": 2880,
+          "dofs": 5978,
+          "top_reaction_N_per_mm": 2.343749999999936,
+          "relative_equilibrium_residual": 7.161306743348046e-14,
+          "collar_q95_over_nominal": 0.8935323161475623,
+          "collar_mean_over_nominal": 0.8935323161475487
+        },
+        "seeded_crack": {
+          "elements": 2880,
+          "dofs": 6046,
+          "top_reaction_N_per_mm": 1.1864439478538453,
+          "relative_equilibrium_residual": 1.046123173732296e-13,
+          "face_jump_fit": [
+            {
+              "outer_mm": 0.054,
+              "fit_nodes": 2,
+              "KI_MPa_sqrt_mm": 1.2810658728340583,
+              "KII_MPa_sqrt_mm": -7.109298041191183e-14,
+              "first_kink_deg": 6.359279123715156e-12
+            },
+            {
+              "outer_mm": 0.072,
+              "fit_nodes": 3,
+              "KI_MPa_sqrt_mm": 1.3048756345184098,
+              "KII_MPa_sqrt_mm": -7.425180178096033e-14,
+              "first_kink_deg": 6.5206441912928125e-12
+            },
+            {
+              "outer_mm": 0.09,
+              "fit_nodes": 4,
+              "KI_MPa_sqrt_mm": 1.3200322238960107,
+              "KII_MPa_sqrt_mm": -7.675199511678483e-14,
+              "first_kink_deg": 6.662815209800371e-12
+            }
+          ]
+        }
+      }
+    },
+    {
+      "element_pitch_mm": 0.009,
+      "ct_pores": {
+        "intact": {
+          "elements": 11420,
+          "dofs": 23370,
+          "top_reaction_N_per_mm": 2.2847684078757995,
+          "relative_equilibrium_residual": 2.235463975646603e-13,
+          "collar_q95_over_nominal": 1.4383005739761285,
+          "collar_mean_over_nominal": 0.8794971038991497
+        },
+        "seeded_crack": {
+          "elements": 11420,
+          "dofs": 23506,
+          "top_reaction_N_per_mm": 1.1115677917547697,
+          "relative_equilibrium_residual": 3.6175221251500195e-13,
+          "face_jump_fit": [
+            {
+              "outer_mm": 0.054,
+              "fit_nodes": 5,
+              "KI_MPa_sqrt_mm": 1.4176341076168404,
+              "KII_MPa_sqrt_mm": 0.02246254465480527,
+              "first_kink_deg": -1.8146514194320975
+            },
+            {
+              "outer_mm": 0.072,
+              "fit_nodes": 7,
+              "KI_MPa_sqrt_mm": 1.4324310180552886,
+              "KII_MPa_sqrt_mm": 0.023412209613120998,
+              "first_kink_deg": -1.8717629228611443
+            },
+            {
+              "outer_mm": 0.09,
+              "fit_nodes": 9,
+              "KI_MPa_sqrt_mm": 1.4412406343635218,
+              "KII_MPa_sqrt_mm": 0.024152239470459823,
+              "first_kink_deg": -1.9190629140876743
+            }
+          ]
+        }
+      },
+      "filled": {
+        "intact": {
+          "elements": 11520,
+          "dofs": 23474,
+          "top_reaction_N_per_mm": 2.3437499999997367,
+          "relative_equilibrium_residual": 2.1937566887369717e-13,
+          "collar_q95_over_nominal": 0.8935323161476261,
+          "collar_mean_over_nominal": 0.8935323161475774
+        },
+        "seeded_crack": {
+          "elements": 11520,
+          "dofs": 23610,
+          "top_reaction_N_per_mm": 1.1817939985098362,
+          "relative_equilibrium_residual": 3.503611602447422e-13,
+          "face_jump_fit": [
+            {
+              "outer_mm": 0.054,
+              "fit_nodes": 5,
+              "KI_MPa_sqrt_mm": 1.3291592311996276,
+              "KII_MPa_sqrt_mm": -2.572364649780302e-13,
+              "first_kink_deg": 2.2177273323082153e-11
+            },
+            {
+              "outer_mm": 0.072,
+              "fit_nodes": 7,
+              "KI_MPa_sqrt_mm": 1.345539505558962,
+              "KII_MPa_sqrt_mm": -2.6307367934053137e-13,
+              "first_kink_deg": 2.2404413196220198e-11
+            },
+            {
+              "outer_mm": 0.09,
+              "fit_nodes": 9,
+              "KI_MPa_sqrt_mm": 1.3565663999985604,
+              "KII_MPa_sqrt_mm": -2.6732701874011117e-13,
+              "first_kink_deg": 2.2581585278301584e-11
+            }
+          ]
+        }
+      }
+    },
+    {
+      "element_pitch_mm": 0.0045,
+      "ct_pores": {
+        "intact": {
+          "elements": 45680,
+          "dofs": 92430,
+          "top_reaction_N_per_mm": 2.281676469046835,
+          "relative_equilibrium_residual": 6.348802029736448e-13,
+          "collar_q95_over_nominal": 1.336923030199027,
+          "collar_mean_over_nominal": 0.8722057010513037
+        },
+        "seeded_crack": {
+          "elements": 45680,
+          "dofs": 92702,
+          "top_reaction_N_per_mm": 1.105049719730911,
+          "relative_equilibrium_residual": 1.0600590531937622e-12,
+          "face_jump_fit": [
+            {
+              "outer_mm": 0.054,
+              "fit_nodes": 11,
+              "KI_MPa_sqrt_mm": 1.462846934447469,
+              "KII_MPa_sqrt_mm": 0.02966708011740968,
+              "first_kink_deg": -2.321733186113103
+            },
+            {
+              "outer_mm": 0.072,
+              "fit_nodes": 15,
+              "KI_MPa_sqrt_mm": 1.472377526758479,
+              "KII_MPa_sqrt_mm": 0.030639010366543255,
+              "first_kink_deg": -2.382154820516905
+            },
+            {
+              "outer_mm": 0.09,
+              "fit_nodes": 19,
+              "KI_MPa_sqrt_mm": 1.477107054402661,
+              "KII_MPa_sqrt_mm": 0.031367093834551815,
+              "first_kink_deg": -2.4308526267271784
+            }
+          ]
+        }
+      },
+      "filled": {
+        "intact": {
+          "elements": 46080,
+          "dofs": 93026,
+          "top_reaction_N_per_mm": 2.3437499999989875,
+          "relative_equilibrium_residual": 6.264557123899109e-13,
+          "collar_q95_over_nominal": 0.8935323161477992,
+          "collar_mean_over_nominal": 0.8935323161476425
+        },
+        "seeded_crack": {
+          "elements": 46080,
+          "dofs": 93298,
+          "top_reaction_N_per_mm": 1.1794692157466549,
+          "relative_equilibrium_residual": 1.0080955645391543e-12,
+          "face_jump_fit": [
+            {
+              "outer_mm": 0.054,
+              "fit_nodes": 11,
+              "KI_MPa_sqrt_mm": 1.3641878469141804,
+              "KII_MPa_sqrt_mm": -1.131276281861851e-12,
+              "first_kink_deg": 9.502702514254809e-11
+            },
+            {
+              "outer_mm": 0.072,
+              "fit_nodes": 15,
+              "KI_MPa_sqrt_mm": 1.3757197879142924,
+              "KII_MPa_sqrt_mm": -1.149310830001415e-12,
+              "first_kink_deg": 9.573266370994619e-11
+            },
+            {
+              "outer_mm": 0.09,
+              "fit_nodes": 19,
+              "KI_MPa_sqrt_mm": 1.3831025707493743,
+              "KII_MPa_sqrt_mm": -1.1620735742677567e-12,
+              "first_kink_deg": 9.627906519348071e-11
+            }
+          ]
+        }
+      }
+    },
+    {
+      "element_pitch_mm": 0.00225,
+      "ct_pores": {
+        "intact": {
+          "elements": 182720,
+          "dofs": 367590,
+          "top_reaction_N_per_mm": 2.2801437818072943,
+          "relative_equilibrium_residual": 1.8181070971259238e-12,
+          "collar_q95_over_nominal": 1.3551818388958818,
+          "collar_mean_over_nominal": 0.8690053410862426
+        },
+        "seeded_crack": {
+          "elements": 182720,
+          "dofs": 368134,
+          "top_reaction_N_per_mm": 1.1016574432760236,
+          "relative_equilibrium_residual": 3.0983493985921532e-12,
+          "face_jump_fit": [
+            {
+              "outer_mm": 0.054,
+              "fit_nodes": 21,
+              "KI_MPa_sqrt_mm": 1.49941818206091,
+              "KII_MPa_sqrt_mm": 0.0353167543835112,
+              "first_kink_deg": -2.69556280419637
+            },
+            {
+              "outer_mm": 0.072,
+              "fit_nodes": 29,
+              "KI_MPa_sqrt_mm": 1.5020959577344961,
+              "KII_MPa_sqrt_mm": 0.03611917235378182,
+              "first_kink_deg": -2.75174318548859
+            },
+            {
+              "outer_mm": 0.09,
+              "fit_nodes": 37,
+              "KI_MPa_sqrt_mm": 1.5022323869822274,
+              "KII_MPa_sqrt_mm": 0.03672441965609308,
+              "first_kink_deg": -2.797473558741814
+            }
+          ]
+        }
+      },
+      "filled": {
+        "intact": {
+          "elements": 184320,
+          "dofs": 370370,
+          "top_reaction_N_per_mm": 2.3437499999958735,
+          "relative_equilibrium_residual": 1.7825418244361216e-12,
+          "collar_q95_over_nominal": 0.8935323161486564,
+          "collar_mean_over_nominal": 0.8935323161479208
+        },
+        "seeded_crack": {
+          "elements": 184320,
+          "dofs": 370914,
+          "top_reaction_N_per_mm": 1.1783068824621028,
+          "relative_equilibrium_residual": 2.9233564320472393e-12,
+          "face_jump_fit": [
+            {
+              "outer_mm": 0.054,
+              "fit_nodes": 21,
+              "KI_MPa_sqrt_mm": 1.3942788455269017,
+              "KII_MPa_sqrt_mm": -4.5495458420028366e-12,
+              "first_kink_deg": 3.739134051762037e-10
+            },
+            {
+              "outer_mm": 0.072,
+              "fit_nodes": 29,
+              "KI_MPa_sqrt_mm": 1.399541333419174,
+              "KII_MPa_sqrt_mm": -4.5839596003331995e-12,
+              "first_kink_deg": 3.753251615883569e-10
+            },
+            {
+              "outer_mm": 0.09,
+              "fit_nodes": 37,
+              "KI_MPa_sqrt_mm": 1.4027780778315067,
+              "KII_MPa_sqrt_mm": -4.606405068757085e-12,
+              "first_kink_deg": 3.762926913934168e-10
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

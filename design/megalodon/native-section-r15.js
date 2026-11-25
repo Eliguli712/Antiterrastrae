@@ -1,5 +1,5 @@
 import{analyzeContours}from'./native-contours-r15.js?v=1';
-import{decodedBytes,arrays}from'./native-store-r15.js?v=1';
+import{decodedBytes,arrays}from'./native-store-r15.js?v=2';
 const pause=()=>new Promise(resolve=>setTimeout(resolve,0));
 export class NativeSections{
  constructor(config,stats,emit){this.config=config;this.stats=stats;this.emit=emit;this.tickets=new Map();this.slabs=new Map();this.pending=new Map();}

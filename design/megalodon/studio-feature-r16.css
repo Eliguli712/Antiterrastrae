@@ -149,3 +149,35 @@ html[data-studio-embed] .studio-feature-section video { max-height: none; }
   white-space:nowrap;
 }
 .studio-feature-ruler span { overflow-wrap:anywhere; }
+
+.studio-support-viewport {
+  height:clamp(18rem,50vw,32rem);
+  background:radial-gradient(ellipse at center,#2d3143,#131d26 75%);
+  overflow:hidden;
+  border:1px solid #524c69;
+}
+.studio-support-viewport canvas { display:block;width:100%;height:100%;touch-action:none;cursor:grab; }
+.studio-support-viewport canvas:active { cursor:grabbing; }
+.studio-support-metrics {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,10rem),1fr));
+  gap:.7rem;
+  margin:1rem 0;
+}
+.studio-support-metrics div { padding:.65rem .85rem;border:1px solid #524c69; }
+.studio-support-metrics dt { color:#b6cbd4;font-size:.86rem; }
+.studio-support-metrics dd { margin:.18rem 0 0; }
+.studio-support-methods { padding-inline-start:1.3rem; }
+.studio-support-methods li + li { margin-top:.7rem; }
+
+/* Closed studio panels keep their canvases and media out of the layout. */
+.studio-feature-section:not([open]) > :not(summary) {
+  display: none !important;
+}
+
+.studio-asset-credit { color: #a8c4cd; font: .86rem/1.5 Georgia, serif; margin: .65rem 0; }
+.gallery .tooth-field-legend i, .studio-feature-section .stress-legends i, #colourLegend {
+ height: 10px;
+ clip-path: polygon(0 50%, 2.5% 0, 97.5% 0, 100% 50%, 97.5% 100%, 2.5% 100%);
+ border-radius: 0;
+}

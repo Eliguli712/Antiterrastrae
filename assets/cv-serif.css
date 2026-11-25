@@ -3,3 +3,23 @@ html,body,body *,button,input,select,textarea,code,pre{font-family:Georgia,'Time
 .development-track{border:1px solid #bfb0d1;padding:1rem 1.15rem;margin:1rem 0 1.5rem;background:#faf8ff;line-height:1.55}
 .development-track label{display:block;margin-bottom:.5rem;font-weight:600}.development-track select{max-width:100%;width:100%;padding:.6rem;color:#342846;background:white;border:1px solid #b5a3c9;font-size:1rem}.development-track a{display:inline-block;margin-top:.7rem}.development-track p{font-size:.95rem;margin:.6rem 0 0}
 @media print{.development-track select{display:none}.development-track{padding:.5rem;border:0;background:none}}
+
+/* Development statuses use the same NYU Violet outline throughout the CV. */
+.research-pub-status,
+.cv-development-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.5em;
+  padding: .18em .62em;
+  border: 1px solid #57068c;
+  border-radius: 999px;
+  background: #fbf5ff;
+  color: #57068c;
+  line-height: 1.25;
+  white-space: normal;
+  max-width: 100%;
+}
+.pub-state.cv-development-badge {
+  font-size: .72rem;
+  justify-self: start;
+}

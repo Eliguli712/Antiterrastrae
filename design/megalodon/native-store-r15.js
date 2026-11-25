@@ -9,7 +9,7 @@ export async function sourceBytes(part,stats={}){
  const key=cacheKey(part);if(pending.has(key))return pending.get(key);
  const run=async()=>{
   const cache=persistent&&globalThis.caches?await caches.open(SOURCE_CACHE).catch(()=>null):null;
-  const old=cache?await cache.match(key):null;
+  const old=cache?await cache.match(key).catch(()=>null):null;
   if(old){const b=await old.arrayBuffer();if(await digest(b)===part.sha256){stats.cacheHits=(stats.cacheHits||0)+1;return b;}await cache.delete(key);}
   const r=await fetch(part.url,{cache:cache?'no-store':'force-cache'});if(!r.ok)throw Error('Native source HTTP '+r.status);
   const b=await r.arrayBuffer();if(await digest(b)!==part.sha256)throw Error('Native source checksum mismatch');
@@ -35,8 +35,19 @@ export function arrays(buffer){
  }
  return{header,out};
 }
+export async function cacheInventory(parts){
+ const cache=persistent&&globalThis.caches?await caches.open(SOURCE_CACHE).catch(()=>null):null;
+ const entries=cache?await cache.keys().catch(()=>null):null;
+ const keys=new Set(entries?.map(k=>k.url));
+ const missing=[];
+ let bytes=0;
+ for(const part of parts){
+  if(keys.has(cacheKey(part)))bytes+=part.bytes;
+  else missing.push(part);
+ }
+ return {available:parts.length-missing.length,total:parts.length,supported:entries!==null,bytes,missing};
+}
 export async function cacheInfo(parts){
- if(!persistent||!globalThis.caches)return{available:0,total:parts.length,bytes:0,supported:false};
- const cache=await caches.open(SOURCE_CACHE),keys=new Set((await cache.keys()).map(k=>k.url));
- return{available:parts.filter(p=>keys.has(cacheKey(p))).length,total:parts.length,supported:true,bytes:parts.filter(p=>keys.has(cacheKey(p))).reduce((n,p)=>n+p.bytes,0)};
+ const {missing,...status}=await cacheInventory(parts);
+ return status;
 }

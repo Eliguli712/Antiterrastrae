@@ -16,10 +16,11 @@ function artTooth(finish='resin'){
   color:0xffffff,roughness:.19,metalness:.035,transmission:.12,thickness:1.2,
   ior:1.49,clearcoat:1,clearcoatRoughness:.065,envMapIntensity:1.15,side:THREE.DoubleSide
  };
- const material=new THREE.MeshPhysicalMaterial(finish==='abs'?{
-  ...resin,roughness:.49,metalness:0,transmission:0,thickness:0,
-  clearcoat:.12,clearcoatRoughness:.3,envMapIntensity:.7
- }:resin);
+ const matte=finish==='pla';
+ const material=new THREE.MeshPhysicalMaterial(finish==='resin'?resin:{
+  ...resin,roughness:matte?.7:.49,metalness:0,transmission:0,thickness:0,
+  clearcoat:matte?0:.12,clearcoatRoughness:.3,envMapIntensity:matte?.5:.7
+ });
  const colour=hex=>`vec3(${new THREE.Color(hex).toArray().map(channel=>channel.toFixed(8)).join(',')})`;
  material.onBeforeCompile=shader=>{
   shader.vertexShader=shader.vertexShader
@@ -244,7 +245,7 @@ export async function mountStudioArt(container,{onCapMove=()=>{}}={}){
   resetCap,
   setCap:setCapDistance,
   setToothFinish(finish){
-   if(!['resin','abs'].includes(finish))return;
+   if(!['resin','abs','pla'].includes(finish))return;
    toothFinishes[finish]??=artTooth(finish);
    viewer.tooth.material=toothFinishes[finish];
    container.dataset.toothFinish=finish;

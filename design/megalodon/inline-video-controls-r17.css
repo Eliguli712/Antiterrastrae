@@ -1,0 +1,31 @@
+.inline-video {
+  position: relative;
+  min-width: 0;
+}
+.inline-video[hidden] {
+  display: none !important;
+}
+.inline-video > video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.inline-video-play {
+  position: absolute;
+  z-index: 2;
+  inset-block-start: .55rem;
+  inset-inline-end: .55rem;
+  min-width: 44px;
+  min-height: 44px;
+  padding: .35rem .73rem;
+  border: 1px solid #92b5c2;
+  border-radius: 999px;
+  color: #f3f8fa;
+  background: #071923eb;
+  font: inherit;
+  cursor: pointer;
+}
+.inline-video-play:focus-visible {
+  outline: 2px solid #b9ded6;
+  outline-offset: 2px;
+}
