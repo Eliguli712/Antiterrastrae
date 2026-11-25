@@ -54,7 +54,7 @@
     }
   ],
   "analysis": {
-    "pdf": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/Native18_PCA_PPCA_MPPCA_and_Microstructure.pdf",
+    "pdf": "../../publications/megalodon-native-ppca-black-ct.pdf",
     "zip": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-paper-mr5-native74/Native18_Statistical_Analysis_and_Precise_Media.zip",
     "record": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/native-analysis-result.json",
     "principal": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/Native18_Principal_Maximum_Sections.png",

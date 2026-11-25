@@ -38,7 +38,7 @@ B.A. candidate, Mathematics & Computer Science
 
 **Han, E. (2026).** [Tooth-scale Stress Localisation in a micro-CT-derived Otodus megalodon Model: Calibrated Geometry, Numerical Verification and Regional Sensitivity.](https://eliguli712.github.io/Antiterrastrae/publications/reader.html?paper=megalodon-current-preprint)
 
-In development · 12 pages · 25 November 2026
+In progress · 12 pages · 25 November 2026
 
 Calibrated CT geometry, regional quantile stability, same-domain P1/P2 verification, material-interface and attachment sensitivity, an independently verified full-objective 10 kPa neo-Hookean jaw control, conservative jaw-to-root transfer and unit-margin tensile responses, plus a native-domain module with synthetic verification. Full native-volume execution remains pending. Includes public native, optimised, exact 200M exterior and raw numerical-field archives under stated modelling assumptions.
 
