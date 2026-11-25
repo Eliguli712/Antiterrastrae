@@ -1,0 +1,164 @@
+{
+  "schema_version": 2,
+  "claim_id": "NATIVE74_SHARED_VIEW_MASKED_ART_FILTERS_R15",
+  "repository": {
+    "commit": "40abad3dd3dfd79d25b6526a6b9e48c65feaa76d",
+    "dirty": true
+  },
+  "command": [
+    "./fea_venv/bin/python",
+    "output/native_interactive_r15_2026-11-25/scripts/build_display_data.py",
+    "--run-dir",
+    "output/native_interactive_r15_2026-11-25/review/run001"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "runner-python",
+        "version": "3.14.3"
+      },
+      {
+        "name": "Python",
+        "version": "3.14.3"
+      },
+      {
+        "name": "NumPy",
+        "version": "2.4.3"
+      },
+      {
+        "name": "SciPy",
+        "version": "1.17.1"
+      }
+    ],
+    "hardware": "macOS-14.4-arm64-arm-64bit-Mach-O"
+  },
+  "mathematics": {
+    "assertion_tested": "Pool every original CT voxel into an explicitly labelled 144um artistic intensity cache, preserve every binary native 18um voxel in lossless bit slabs, and fit conditional patch-intensity mixture PPCA with spatial holdout and bounded display changes.",
+    "coefficient_domain": "Exact UInt64 mask counts and weighted sums; Float64 mixture PPCA and Float32/U8 display arrays.",
+    "conventions": "Scanner-index XYZ in mm; array order ZYX; original mask and geometry never replaced.",
+    "inputs": [
+      "All original 18um selected-mask and signed16 CT crop voxels"
+    ],
+    "bounds": {
+      "native_shape_zyx": [
+        2886,
+        1903,
+        746
+      ],
+      "pooling": 8,
+      "sample_patches": 48000,
+      "patch_shape": [
+        3,
+        3,
+        3
+      ],
+      "MPPCA_K": 4,
+      "MPPCA_q": 4,
+      "EM_max_iterations": 30,
+      "inference_top_components": 2,
+      "display_change_limit_gray_levels": 12
+    },
+    "non_claims": [
+      "No new acquired resolution or certified 1um accuracy",
+      "No biological interpretation of low-density candidates",
+      "No native porous-volume FEM",
+      "Display residual reduction is not a ground-truth reconstruction error"
+    ]
+  },
+  "randomness": {
+    "used": true,
+    "generator": "NumPy default_rng PCG64 / scipy kmeans2",
+    "seed": 20261125
+  },
+  "run": {
+    "started_at": "2026-11-25T06:42:55.537694+00:00",
+    "runtime_seconds": 56.019426,
+    "exit_status": 0,
+    "status": "completed",
+    "timeout_seconds": 1800.0,
+    "max_output_bytes": 1048576,
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": 2
+    },
+    "missing_results": [],
+    "invalid_results": []
+  },
+  "execution_artifacts": [
+    "output/native_interactive_r15_2026-11-25/scripts/build_display_data.py",
+    "output/ct_web_2026-11-19/cache/selected_native_mask.u8",
+    "output/ct_web_2026-11-19/cache/native_specimen_crop.i16"
+  ],
+  "input_artifacts": [
+    {
+      "path": "output/native_interactive_r15_2026-11-25/scripts/build_display_data.py",
+      "sha256": "67df30c332aabdcfe21933bbef4290fb77cb365b9616fa28c95d770175b807c1",
+      "sha256_after": "67df30c332aabdcfe21933bbef4290fb77cb365b9616fa28c95d770175b807c1"
+    },
+    {
+      "path": "output/ct_web_2026-11-19/cache/selected_native_mask.u8",
+      "sha256": "d8b630b35c365f861ccc46d625a28cad21395055271f9cc937d9a9211c02a543",
+      "sha256_after": "d8b630b35c365f861ccc46d625a28cad21395055271f9cc937d9a9211c02a543"
+    },
+    {
+      "path": "output/ct_web_2026-11-19/cache/native_specimen_crop.i16",
+      "sha256": "7b8105bb454474411a63e931d0fa6bf32d086c06acd4a345676a4c97a30caeb5",
+      "sha256_after": "7b8105bb454474411a63e931d0fa6bf32d086c06acd4a345676a4c97a30caeb5"
+    }
+  ],
+  "output_directory": "output/native_interactive_r15_2026-11-25/review/run001",
+  "declared_results": [
+    "output/native_interactive_r15_2026-11-25/review/run001/result.json",
+    "output/native_interactive_r15_2026-11-25/review/run001/data/native-mask.json",
+    "output/native_interactive_r15_2026-11-25/review/run001/data/display-volume.json"
+  ],
+  "outputs": [
+    {
+      "path": "output/native_interactive_r15_2026-11-25/review/run001/stdout.txt",
+      "sha256": "a1cf1886fdfe711b4815b640915038fe9e01486da0343606e26650349c4ac3c0",
+      "kind": "log"
+    },
+    {
+      "path": "output/native_interactive_r15_2026-11-25/review/run001/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "log"
+    },
+    {
+      "path": "output/native_interactive_r15_2026-11-25/review/run001/result.json",
+      "sha256": "0347d558aca1c89e06be2bd985fff484e8e5f851f780a60dda7920b110d63a79",
+      "kind": "result"
+    },
+    {
+      "path": "output/native_interactive_r15_2026-11-25/review/run001/data/native-mask.json",
+      "sha256": "1c4a6496fa8a18a8b54bfb8c6c3a43f018a238a4136a22a9ffeceb4a922d22ae",
+      "kind": "result"
+    },
+    {
+      "path": "output/native_interactive_r15_2026-11-25/review/run001/data/display-volume.json",
+      "sha256": "de963857269daa6aa32ecdca7b90d13227e154c08f4c1ed85410180dfedf343b",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    {
+      "check": "input hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "process exited successfully within enforced limits",
+      "passed": true
+    },
+    {
+      "check": "declared result files are present and regular",
+      "passed": true
+    }
+  ],
+  "result": "Run completed; mathematical assertion requires interpretation and review.",
+  "residual_risks": [
+    "Command success does not establish the mathematical interpretation.",
+    "Only listed input artifacts are pinned; external dependencies need recorded versions.",
+    "The thread cap uses conventional environment variables; a child program may ignore them."
+  ]
+}

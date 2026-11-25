@@ -1,0 +1,468 @@
+{
+  "status": "completed",
+  "source_vertices_seen": 37951699,
+  "original_ordered_faces_checked": 74293846,
+  "source_grid_reconstruction_error_mm": 0.0,
+  "Float32_display_roundtrip_max_mm": 1.52587890625e-05,
+  "additional_coordinate_quantization": false,
+  "every_face_preserved": true,
+  "RGB_field_source": "Verified native74 r14 field chunks; both exact arrays copied for each meshlet",
+  "vertices_per_meshlet_max": 65000,
+  "indices_type": "UInt16",
+  "geometry_transport_bytes": 502704729,
+  "GPU_bytes_one_current_palette": 987897906,
+  "previous_geometry_plus_RGB_bytes": 1601236038,
+  "mask_domain_changed": false,
+  "bundles": [
+    {
+      "bundle": 0,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 1,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 2,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 3,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 4,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 5,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 6,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 7,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 8,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 9,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 10,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 11,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 12,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 13,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 14,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 15,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 16,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 17,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 18,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 19,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 20,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 21,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 22,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 23,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 24,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 25,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 26,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 27,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 28,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 29,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 30,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 31,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 32,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 33,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 34,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 35,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 36,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 37,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 38,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 39,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 40,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 41,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 42,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 43,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 44,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 45,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 46,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 47,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 48,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 49,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 50,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 51,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 52,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 53,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 54,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 55,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 56,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 57,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 58,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 59,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 60,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 61,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 62,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 63,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 64,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 65,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 66,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 67,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 68,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 69,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 70,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 71,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 72,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 73,
+      "every_original_ordered_face_checked": 1000000,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    },
+    {
+      "bundle": 74,
+      "every_original_ordered_face_checked": 293846,
+      "all_source_grid_coordinates_exact": true,
+      "both_RGB_arrays_copied_from_verified_current_3MF_fields": true
+    }
+  ]
+}

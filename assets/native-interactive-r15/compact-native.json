@@ -1,0 +1,790 @@
+{
+  "source_sha256": "69928fc1d776a0cb2cd3da389802e0b08d226395005bbf4a2094180e90622b73",
+  "vertices": 37951699,
+  "triangles": 74293846,
+  "display_affine_R": [
+    [
+      0.3916250209003652,
+      -1.8896005868512973,
+      -0.1643222107322461
+    ],
+    [
+      -1.8936263969740943,
+      -0.37991608089014606,
+      -0.1442399526063988
+    ],
+    [
+      0.10849532456107326,
+      0.18983075993161974,
+      -1.9243584309831898
+    ]
+  ],
+  "display_affine_T": [
+    35.49153583794037,
+    35.69259136159072,
+    182.60196213035087
+  ],
+  "native_longitudinal_height_mm": 51.63315333301228,
+  "schema": "native74-lossless-grid-v1",
+  "half_voxel_mm": 0.009,
+  "source_coordinate_error_mm": 0.0,
+  "Float32_display_roundtrip_max_mm": 1.52587890625e-05,
+  "meshlet_vertex_copies": 54213483,
+  "GPU_bytes_current_colour_with_roughness": 987897906,
+  "no_normals_buffer_needed": true,
+  "source_faces_preserved": true,
+  "palette50": "Exact original native74 paper-reference 3MF RGB bytes",
+  "palette100": "Exact original native74 MR5 3MF RGB bytes",
+  "chunks": [
+    {
+      "url": "native-00.bin.gz",
+      "bytes": 5894598,
+      "sha256": "3ab7438e72283d01d674d698f58fd0fc55756a60824f36aae534082c9055b297",
+      "decoded_bytes": 12686110,
+      "decoded_sha256": "1c6e2cf10791c300ea49c689b24db29e5dcaacb8f81da93b77c7d6b0b3ebd350",
+      "source_first_face": 0,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-01.bin.gz",
+      "bytes": 6113781,
+      "sha256": "d15a4fa5ff9b63063666c069e2acc26a88d2852a7195c7a5b747bd5b1fe09c58",
+      "decoded_bytes": 12801504,
+      "decoded_sha256": "5056c35ad41da31fbdf72256e66ec9050afda6bcc971ef6f320e119c9308dba0",
+      "source_first_face": 1000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-02.bin.gz",
+      "bytes": 6163462,
+      "sha256": "cfa5a467f713538e63aab05e9916e571c667c17dfcf8fb476114318748474db4",
+      "decoded_bytes": 12860009,
+      "decoded_sha256": "f23f0d8a619ac744c49c1ed6502fc70811fca34575c89f1e3d88c9014c8db297",
+      "source_first_face": 2000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-03.bin.gz",
+      "bytes": 6200603,
+      "sha256": "c718060ff955b6f5e77c253a0864177155bc0403274f797532f2054031cfad99",
+      "decoded_bytes": 12906944,
+      "decoded_sha256": "8d874dde9bddcd00223f24277037a31dd3246b2d47aaa172bcd2df799143df90",
+      "source_first_face": 3000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-04.bin.gz",
+      "bytes": 6218263,
+      "sha256": "b909a5d7f35ffaec41d045eb82079b422655116f09ebefe46c23d7ca28ed0cf0",
+      "decoded_bytes": 12975503,
+      "decoded_sha256": "63f1b0fd19adfd091ef79fe8579079e3896ade6a6993cb0796c7af645ca4f279",
+      "source_first_face": 4000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-05.bin.gz",
+      "bytes": 6250341,
+      "sha256": "39a7865e5f9905e3d668e647cb0d4fdd2dda42402688ebea2f6f0ac58def0b10",
+      "decoded_bytes": 13033199,
+      "decoded_sha256": "68750d3f5a834a44ba7cfb73ae644e9e2210298ea4fca705a3a77c067ef4aac2",
+      "source_first_face": 5000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-06.bin.gz",
+      "bytes": 6256381,
+      "sha256": "394ce23f0588beebefec76ebc3140485bdf4c6753721f6d548768f0a9b4aa0a2",
+      "decoded_bytes": 13071869,
+      "decoded_sha256": "2ab59bc494b84c2560617864c050c552320c5272aef3091a99857307fc72b2c4",
+      "source_first_face": 6000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-07.bin.gz",
+      "bytes": 6275504,
+      "sha256": "795606ab0cba4a1506e7db55383881e89a5022911aa89093bfa2dfaa5d51442b",
+      "decoded_bytes": 13185691,
+      "decoded_sha256": "94a986e9d435d84e952bb8c21641a328f86f34ba31d70f2e19770121a4a451e2",
+      "source_first_face": 7000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-08.bin.gz",
+      "bytes": 6299695,
+      "sha256": "7952cb4eff19410e7d64e94d0ea0fdb99dd9e786858148119b70bb38e2700295",
+      "decoded_bytes": 13233548,
+      "decoded_sha256": "7ae6e4f41aa140be12b6a41f8d410871600aadd880836b1d7e5ea6d7311e78c9",
+      "source_first_face": 8000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-09.bin.gz",
+      "bytes": 6302877,
+      "sha256": "8c69b02f500fc96d00a22babe50f01eccee997153c7b13b00489461e32ed0e1f",
+      "decoded_bytes": 13241251,
+      "decoded_sha256": "f64446af6d6558ae714aab9532d3b4a8eab2d79c1ea9dd9bb4825623b433f3ef",
+      "source_first_face": 9000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-10.bin.gz",
+      "bytes": 6319504,
+      "sha256": "685fe67e2c122a11285cc596215fc74cb7a958f1bd243775f769b7aa321f3aa1",
+      "decoded_bytes": 13434087,
+      "decoded_sha256": "d9c31512ac02db98701c08313d62878a5a6920a521bb1170af4897e2cec449cc",
+      "source_first_face": 10000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-11.bin.gz",
+      "bytes": 6358111,
+      "sha256": "8d5ca0963217154f96789ce4238907a322921d9f444d3fbbc502e52bdb68cac8",
+      "decoded_bytes": 13514337,
+      "decoded_sha256": "da036928b67767596fb3ba7d140fc6d6048d931f725b4bf854eb54873d1893d1",
+      "source_first_face": 11000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-12.bin.gz",
+      "bytes": 6394740,
+      "sha256": "f3a113ac82638029747d6dd9d856c167a22d419731bf56713de2c0f452e0a1d0",
+      "decoded_bytes": 13620568,
+      "decoded_sha256": "fb2a85b05b7d48500bf138dec5c6cd222736db09f03897a7cefba711375ddbe0",
+      "source_first_face": 12000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-13.bin.gz",
+      "bytes": 6350139,
+      "sha256": "133c0b5dd3d1e7247933cd235d7d3425aeb216bc23a8d2c254fa47491c69cccf",
+      "decoded_bytes": 13494054,
+      "decoded_sha256": "0cc0c0225605ca082ecae387718397f07dd43358317b740cd2c767971bbe712b",
+      "source_first_face": 13000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-14.bin.gz",
+      "bytes": 6414164,
+      "sha256": "3c2a03a8792056800420a8acb2da44aaf6499dd343acffdf0d290e753cc6eca8",
+      "decoded_bytes": 13876895,
+      "decoded_sha256": "1d24657f7366ab86fb473bb07f4d57094b049571df2600badbddad2ced93aa8a",
+      "source_first_face": 14000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-15.bin.gz",
+      "bytes": 6425507,
+      "sha256": "7a117b8a9123d85cca79142a71ee74cf4380c8e47bf0973a65dd9c936b8963a9",
+      "decoded_bytes": 14019526,
+      "decoded_sha256": "6761b21255cb3bca458bcc31823d82d3a7d80f722d8a8601252cd3c82b03cf2f",
+      "source_first_face": 15000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-16.bin.gz",
+      "bytes": 6461473,
+      "sha256": "e7bf2dc67aabefff280c26a4f89e7ff3ed37a608a703727808671f78d7bd7e9d",
+      "decoded_bytes": 14101565,
+      "decoded_sha256": "48a7af798eadc77000ba2ce284260dffe817093e9e3246ff9a5a77db3a2e8eaf",
+      "source_first_face": 16000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-17.bin.gz",
+      "bytes": 6504785,
+      "sha256": "fce85e57dff8b32511080cdfbcc445f49bb764d704295608b04198d570142a0b",
+      "decoded_bytes": 14328426,
+      "decoded_sha256": "91d8f2d23e4c2b0acd0ede916948747ced2d3b898fac43daaf594d00b093253b",
+      "source_first_face": 17000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-18.bin.gz",
+      "bytes": 6528091,
+      "sha256": "5e5f4b86047a858da666540f95e31e19f27bffd3412deaa5cf398d81fec9f40e",
+      "decoded_bytes": 14481965,
+      "decoded_sha256": "63c6445436a645d6d47f1f19cdab4b13bcc93e6a7d015bb3bcd82ff760018083",
+      "source_first_face": 18000000,
+      "triangles": 1000000,
+      "meshlets": 11
+    },
+    {
+      "url": "native-19.bin.gz",
+      "bytes": 6586038,
+      "sha256": "ab9df6adae9665aaa37dd76d2c58e2b5ce37076e67b9885ebb063e3dbdd385bc",
+      "decoded_bytes": 14720036,
+      "decoded_sha256": "95bb9d115694b2521d4928206b8c991d76bcfe1a2b58b7735ee65bdc8cb5e5ec",
+      "source_first_face": 19000000,
+      "triangles": 1000000,
+      "meshlets": 11
+    },
+    {
+      "url": "native-20.bin.gz",
+      "bytes": 6366007,
+      "sha256": "17e3c47366d0568903bae2c8ab8cfa3b751a58d796ddae8af73facc4f0888a37",
+      "decoded_bytes": 13872862,
+      "decoded_sha256": "91e4b7f6bd57a3c5957f5aeba95aa9c944b3cb3bd51d7caebe3bb7cef9b3eff0",
+      "source_first_face": 20000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-21.bin.gz",
+      "bytes": 6669446,
+      "sha256": "6f4f9327ed54f59da1ec8d7fd9b12825cec2eeb2f992a224ad0191bd406a8061",
+      "decoded_bytes": 15201102,
+      "decoded_sha256": "f3179dbd4e29a4af10d8966e0f4b7e008c39b737eb5b219481e3b3ce2488ba0e",
+      "source_first_face": 21000000,
+      "triangles": 1000000,
+      "meshlets": 11
+    },
+    {
+      "url": "native-22.bin.gz",
+      "bytes": 6740703,
+      "sha256": "de951e13ea22770ec3e1d3574a19c86caba6197dafc8f81ed41920555748882b",
+      "decoded_bytes": 15606138,
+      "decoded_sha256": "05f25862b75390463b8bcda46737a13f94c0add9f2648b95cfcfe47658df7c10",
+      "source_first_face": 22000000,
+      "triangles": 1000000,
+      "meshlets": 12
+    },
+    {
+      "url": "native-23.bin.gz",
+      "bytes": 6744359,
+      "sha256": "8c4f87badd210ad1a3663a0f33d1b61e82a8a6d46c33bbec4ca7330c2ab94813",
+      "decoded_bytes": 15540212,
+      "decoded_sha256": "24afc8f45a0e63d879d3f997d38386ceb85502bc0ca59a9fa34cba60227f8005",
+      "source_first_face": 23000000,
+      "triangles": 1000000,
+      "meshlets": 12
+    },
+    {
+      "url": "native-24.bin.gz",
+      "bytes": 6785973,
+      "sha256": "afaa156a9afbe557991cccc8d8244083799af29bf8a63203602b7277b9eb6ab0",
+      "decoded_bytes": 15747696,
+      "decoded_sha256": "0989a848072d7a7370d2e02e2081f48c16f82a6ed5c9014a0e2f2d8ca46ce486",
+      "source_first_face": 24000000,
+      "triangles": 1000000,
+      "meshlets": 12
+    },
+    {
+      "url": "native-25.bin.gz",
+      "bytes": 6782992,
+      "sha256": "ebf04fc5799cce61e3c4c95d216aa1500e4f9d1eb87d27ca99f92058c777004e",
+      "decoded_bytes": 15578852,
+      "decoded_sha256": "6ec6a8fb4cdf537ceb0ac83644913671410088a5ef59717ee703575db2ff1724",
+      "source_first_face": 25000000,
+      "triangles": 1000000,
+      "meshlets": 12
+    },
+    {
+      "url": "native-26.bin.gz",
+      "bytes": 6908147,
+      "sha256": "db6f7f3c434cf5b2c29fd7aed70012ccfd5c7cfcb4db74db66662437b656b2cc",
+      "decoded_bytes": 16132480,
+      "decoded_sha256": "a70fca29f613325e234c5d0f2baab06f5a3f0ca92821312c966cfaedd837d725",
+      "source_first_face": 26000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "native-27.bin.gz",
+      "bytes": 6958892,
+      "sha256": "45af0bc13d7da0bb29c440dd717dc8566aed97a5e97496775b5e3df71b2cf272",
+      "decoded_bytes": 16263226,
+      "decoded_sha256": "68532d9e7b19c0c8f40c03f011cf8fe9c762429d38c0e21008448ada72712bda",
+      "source_first_face": 27000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "native-28.bin.gz",
+      "bytes": 7011837,
+      "sha256": "f810777e87f9de8da9ef3f4fc63db177fb99813891bf82c4abbe01543b087f37",
+      "decoded_bytes": 16434118,
+      "decoded_sha256": "ca7e288c46aa6593af352758761610fbf7fcd7e8790727137ef83dbc9446dac2",
+      "source_first_face": 28000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "native-29.bin.gz",
+      "bytes": 7039036,
+      "sha256": "f2fc6cba1aa28992bad660784be2e07ac2515531c9aa29c4a2a6fa572ef39bcd",
+      "decoded_bytes": 16545136,
+      "decoded_sha256": "fa4349817f9c2a3fa8216e377869d25a14c15eb4599e411dfb9e010922f466dd",
+      "source_first_face": 29000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "native-30.bin.gz",
+      "bytes": 7066825,
+      "sha256": "3c6873812a1f074e4f09fafa3e0abb5500e3892be1cbaa76060c2de018a36c1e",
+      "decoded_bytes": 16622806,
+      "decoded_sha256": "0efd21da879b079b9e3e8fe349c5e43b97538b4c8d173245466dc4b9616a6112",
+      "source_first_face": 30000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "native-31.bin.gz",
+      "bytes": 6561152,
+      "sha256": "e20d3d57ce629e08a052510e0481355fbc6fd57804af1319dafd679758f93f24",
+      "decoded_bytes": 14539820,
+      "decoded_sha256": "38b8f27d4b42a82656dbca8cef870a7d2e9d9f6252ac87b87cb7858f9bb316a0",
+      "source_first_face": 31000000,
+      "triangles": 1000000,
+      "meshlets": 11
+    },
+    {
+      "url": "native-32.bin.gz",
+      "bytes": 7002788,
+      "sha256": "dc9534751f4c69eff558f8f8a500651c9fd2b5a6767a40f0aee03c79850de368",
+      "decoded_bytes": 16416146,
+      "decoded_sha256": "33f0a10bb8be2e495521355d9ef4a3f71709ea8a0dd814413c078fc2b3b4f3e1",
+      "source_first_face": 32000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "native-33.bin.gz",
+      "bytes": 7212722,
+      "sha256": "2281e6661876bd14f4553fdf95ed47f3df83780dcd75a2db859eb9983f8fa2ff",
+      "decoded_bytes": 17314725,
+      "decoded_sha256": "d529e6f7279dc87ded153c2a2137ddcd19557340ca35d1dd3cd63a9adc5aa66a",
+      "source_first_face": 33000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-34.bin.gz",
+      "bytes": 7216930,
+      "sha256": "08ef5404dbddf79bf73bd3c5c2d5c587597ba469fa22d7936f21f215b5135310",
+      "decoded_bytes": 17292339,
+      "decoded_sha256": "43f440e76eabfdd19264e3a2509cfcb19a3177d6e0cb916fd1bb86137ef7fae3",
+      "source_first_face": 34000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-35.bin.gz",
+      "bytes": 7191722,
+      "sha256": "061b2aad4cc2cf3562a090395d65a878e59f106fd66f96ec805925d273fdfaaa",
+      "decoded_bytes": 17223144,
+      "decoded_sha256": "7a2908b65443cb912a03a40d6531a7b9cc7f44a959c5087f9eec96de5dd2925f",
+      "source_first_face": 35000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-36.bin.gz",
+      "bytes": 7179809,
+      "sha256": "c88878e1fe1b6638d046381e088ebc71cf94e7488d752965568c6935ec65e692",
+      "decoded_bytes": 17193616,
+      "decoded_sha256": "5e2ca1274655a06ef468bdf60d7918451887afca26dc658bcd3acb9e92377b66",
+      "source_first_face": 36000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-37.bin.gz",
+      "bytes": 7173380,
+      "sha256": "3bcb6dede302630ffc4d0cab83fc939b184a919b4d8ea8edaf61e37d6c1b9d95",
+      "decoded_bytes": 17189909,
+      "decoded_sha256": "581d1330255ff0e0ab9f74e9d869470f2990a1d1ed3b1d6d6e07c4c4469d49ee",
+      "source_first_face": 37000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-38.bin.gz",
+      "bytes": 7183701,
+      "sha256": "85bcb4870f571df4003f8d16b57741cfa77b30fcee41a71cc5336accea21ab77",
+      "decoded_bytes": 17158945,
+      "decoded_sha256": "abcb4eb87e84a71cd89e852cc3df2156f980e6f744b383d694a1f162c3a6d15e",
+      "source_first_face": 38000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-39.bin.gz",
+      "bytes": 7289688,
+      "sha256": "10f92b259a374dfd2113fd9ca35253786b2be2bf0a75b936b9721a32d3a9138f",
+      "decoded_bytes": 17170144,
+      "decoded_sha256": "08031d6b3ad0df5a067368693e8e4ab3e5d96bf24bbf73409cdf3412d4e9eb2e",
+      "source_first_face": 39000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-40.bin.gz",
+      "bytes": 7243282,
+      "sha256": "614920d5e87eb286e98d16aab6999bf8ae9c1c565850205faf2b3485690ab927",
+      "decoded_bytes": 17184260,
+      "decoded_sha256": "b6496e06bc3547572e82c0c9fde0ee6093af7b1ca8eea0214226a826f993e5d2",
+      "source_first_face": 40000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-41.bin.gz",
+      "bytes": 7211907,
+      "sha256": "ead9c3102646efa9801efb25f55cf296ccf31ceecc7c2a3707c253e90c2225c8",
+      "decoded_bytes": 17165535,
+      "decoded_sha256": "d029ba09d3149ba39fe86ff99d6aa73fbce6600d66a97a5e4e7ad7fe9de4e4e3",
+      "source_first_face": 41000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-42.bin.gz",
+      "bytes": 7194930,
+      "sha256": "f65f66235890d4ffd0e65c626614d7b6f523f9f8634d01bbd3a7fc499307ed10",
+      "decoded_bytes": 17182671,
+      "decoded_sha256": "590b2b996e6d520273b8dc2107f501439a086ddd47c4635bd2f8e6524d614792",
+      "source_first_face": 42000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-43.bin.gz",
+      "bytes": 7204615,
+      "sha256": "6625319d669ee616937a42d3ebd484b402db5f2f09428df47c57270d1e156bde",
+      "decoded_bytes": 17158072,
+      "decoded_sha256": "1ffdac685b165d5cc8ad0a1f6d41f112edb982d60402c896ce3715931ce65e62",
+      "source_first_face": 43000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-44.bin.gz",
+      "bytes": 7203123,
+      "sha256": "3a5e9c604591ba2c15317baf465c71723db83721c3f3d7eccb01990fe23fd75c",
+      "decoded_bytes": 17139649,
+      "decoded_sha256": "773f84d6383925ca389effa74c9c1b33d3131b6ae3a81353093e27bf36d838b8",
+      "source_first_face": 44000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-45.bin.gz",
+      "bytes": 7192849,
+      "sha256": "bde0ae382a288e17a339dcb80827626e35b7fa521fc5a54455b9721ce3e93cd4",
+      "decoded_bytes": 17103137,
+      "decoded_sha256": "0e19a26c7b0c88aaae0eff16d36eab6c8732fc0d470b14fac204740d315bc5dc",
+      "source_first_face": 45000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-46.bin.gz",
+      "bytes": 7177646,
+      "sha256": "c839204c0b7b20cf8b73a237c937f59925c41ef6205e22b47c95b26caf1d3a47",
+      "decoded_bytes": 17085968,
+      "decoded_sha256": "79e295adb8a605a744b3cb1185f1504811a9818c1715efd9024246c96373308f",
+      "source_first_face": 46000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-47.bin.gz",
+      "bytes": 7124146,
+      "sha256": "097813206d4da54b76dd4fbdb704fa814a1d6f9dd9e74b0e5ee02d8e97fd2b4b",
+      "decoded_bytes": 16767092,
+      "decoded_sha256": "a16ed2e505c0f7a849baa7a621cbf2a40d9dfd216b172802532ac9da33192cff",
+      "source_first_face": 47000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "native-48.bin.gz",
+      "bytes": 6757575,
+      "sha256": "d4b922f5c408698669d2f84a2e855ecb0f4b94199227810483991a18666c4a18",
+      "decoded_bytes": 15208317,
+      "decoded_sha256": "71fef7219f0fc89e95977e75f8d69e26e2c1b00cd6e4abab6814fe6b333e3d86",
+      "source_first_face": 48000000,
+      "triangles": 1000000,
+      "meshlets": 11
+    },
+    {
+      "url": "native-49.bin.gz",
+      "bytes": 7069800,
+      "sha256": "954ad7f11353a601cbb6b9cc3b04e3e7d4df0eee2d957f3b210fed70af5cecbe",
+      "decoded_bytes": 16615715,
+      "decoded_sha256": "2ed13fb5299cfc90e7abf67540ea7c318dde2596052bdad53568884453fc09e4",
+      "source_first_face": 49000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "native-50.bin.gz",
+      "bytes": 7074822,
+      "sha256": "bb1e6153e4765c68ac538b86500c35d9a11912391e5cad588a014617433e55a3",
+      "decoded_bytes": 16951890,
+      "decoded_sha256": "d19a9edc9f587c338669fe35790ce0a458c8ee736058eb47eee78fd1fb1753f7",
+      "source_first_face": 50000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-51.bin.gz",
+      "bytes": 7048011,
+      "sha256": "1d12c1dae258e85601b7892365081b9c45021c569a9e75287b6b8cd566125a44",
+      "decoded_bytes": 16931233,
+      "decoded_sha256": "65ea5f70aa9d9ca773c71aa7b16c60e4710013768f9cfb88fd6c191351830567",
+      "source_first_face": 51000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-52.bin.gz",
+      "bytes": 7054964,
+      "sha256": "4b244b7d30bcb789b21e3a46f6018c88a9a0e9b8c317f7e95b462df932f8f00c",
+      "decoded_bytes": 16908424,
+      "decoded_sha256": "e4015596d50b492d1d3d8efae82736c8ed930652a48302802c44fb57d7372a51",
+      "source_first_face": 52000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-53.bin.gz",
+      "bytes": 7042775,
+      "sha256": "a744466f4b07e41d86ac28b9a2d0336f9120e9be2f05c694fdcddc4aeb13db3b",
+      "decoded_bytes": 16900254,
+      "decoded_sha256": "844b9dd519e28bd92d2feece29d2e542c2e2171e1e91e52bc940dbd31b7c42b5",
+      "source_first_face": 53000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-54.bin.gz",
+      "bytes": 7039926,
+      "sha256": "219dfa5e06082a946ea4096212158246839178775e29aaa8ce435d0f7e4d1889",
+      "decoded_bytes": 16873935,
+      "decoded_sha256": "b134dbf16790dfb1bd548948f5c22df1905c4caae9f94be869fac064930433bc",
+      "source_first_face": 54000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-55.bin.gz",
+      "bytes": 7047185,
+      "sha256": "7c0fcc04d33dc2c0cd1bcd5364354cb19a7529dd9dd07f06062b973df55a097f",
+      "decoded_bytes": 16874167,
+      "decoded_sha256": "2a108e596293c63ddb2d409c94f51ecc8acfcc0a1d219f3734571acfee2f221f",
+      "source_first_face": 55000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-56.bin.gz",
+      "bytes": 7093604,
+      "sha256": "0ded826a31cc7caf03e8e0b1d68f94d8fba52fec816ffac6c35d13af8f710487",
+      "decoded_bytes": 16914269,
+      "decoded_sha256": "c5e6202552ecefc02e892cf49504c3904d340f73f887090c25c37b3d4cefbd15",
+      "source_first_face": 56000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-57.bin.gz",
+      "bytes": 7077795,
+      "sha256": "49b782d633d40f835e4223b05813ee5c54f21841dad77a6ee401506c585701f0",
+      "decoded_bytes": 16872265,
+      "decoded_sha256": "eddf21fcf3ba06a4b15a09ca336d8e3cb78d246a4e9bb022b0c78bb84d0efa08",
+      "source_first_face": 57000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-58.bin.gz",
+      "bytes": 7167498,
+      "sha256": "4e213a3acad696facca5492cfcd18118623f9795d24db6825a47234d62af350b",
+      "decoded_bytes": 16985661,
+      "decoded_sha256": "c2b85d03935d8aad924cc5801a93659bd56fe8717117908f2a9377f9746b39ae",
+      "source_first_face": 58000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-59.bin.gz",
+      "bytes": 7071300,
+      "sha256": "dae929581169f6df2452d816aeb66cf60d785cf3c992b517f568a26ae5e1454b",
+      "decoded_bytes": 16838419,
+      "decoded_sha256": "f48eeafef569b873dcced186fbb514f62fe5ef9c600e8d79adf259ae8e21b613",
+      "source_first_face": 59000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-60.bin.gz",
+      "bytes": 7090971,
+      "sha256": "6c92e8ed0d51614b85c49fcacc9cd5d4341e29a22b54cf76885cd559342c9cb7",
+      "decoded_bytes": 16845298,
+      "decoded_sha256": "03904bed40dc8b31b4ce00cd329907df383e6ff14308fe1ec78c9cfc035d08c9",
+      "source_first_face": 60000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-61.bin.gz",
+      "bytes": 7109892,
+      "sha256": "81bb830a41dcb3566f0ab2f9d465166fbe9a7400e85d7321ba036c1eb23a0080",
+      "decoded_bytes": 16845812,
+      "decoded_sha256": "74b193c3130c439e1563c78e5d001f4846af951df18d86dddcb7385736b0a44e",
+      "source_first_face": 61000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-62.bin.gz",
+      "bytes": 7126179,
+      "sha256": "e09f16f25bc1f8b532a69a118f997ffbee3d5daea8c1f2692e00ab46a9a4db83",
+      "decoded_bytes": 16826096,
+      "decoded_sha256": "52e1a8a2c22d28aa76da08a73c02d58acefa530c972a1efc0921b9da6533b14f",
+      "source_first_face": 62000000,
+      "triangles": 1000000,
+      "meshlets": 14
+    },
+    {
+      "url": "native-63.bin.gz",
+      "bytes": 7084540,
+      "sha256": "363697a3145e588d6f4bac428587cc4bb550adeac1d827b94cb1abdf7b6b9782",
+      "decoded_bytes": 16776911,
+      "decoded_sha256": "d4af56410dbada541f2f806065907d68c79fa2aa199f547adcd4d8bd71a46c39",
+      "source_first_face": 63000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "native-64.bin.gz",
+      "bytes": 7054792,
+      "sha256": "79fe13630eca6a9fc9aac44c917eb2199234f43db8cc5530c73818d0ace1d103",
+      "decoded_bytes": 16712176,
+      "decoded_sha256": "df5066bd678fd57e9258c888b32ce8b5e8535c2895bcfee66152037f375ed8ee",
+      "source_first_face": 64000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "native-65.bin.gz",
+      "bytes": 6902111,
+      "sha256": "89155d5306471f6ff3a3f51ea08f91f91856a4c4eefc23468fe4c69436b83e36",
+      "decoded_bytes": 16345252,
+      "decoded_sha256": "8211c68dc6a9da82d22c3741dcfedf6aa431869dd039096e6fa27a9827052838",
+      "source_first_face": 65000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "native-66.bin.gz",
+      "bytes": 6569011,
+      "sha256": "6b3de7a143205a1f2c9780599e075e4003d0f9424dd53be77537bc03c7c79def",
+      "decoded_bytes": 15215854,
+      "decoded_sha256": "0f9b626232ed36035f94b1b65b8e5ddfc54274fc588c2f6dd4a52adced537b6e",
+      "source_first_face": 66000000,
+      "triangles": 1000000,
+      "meshlets": 11
+    },
+    {
+      "url": "native-67.bin.gz",
+      "bytes": 6697008,
+      "sha256": "726d181888f0235b7c022acf7a1ca128170e78831901358802a25c22289e2bd2",
+      "decoded_bytes": 15927604,
+      "decoded_sha256": "168d09a6d4a4192ff2542fccb7288a7b5a70e4bbee4f3b02ff8ec93cbeffdd7b",
+      "source_first_face": 67000000,
+      "triangles": 1000000,
+      "meshlets": 12
+    },
+    {
+      "url": "native-68.bin.gz",
+      "bytes": 6841311,
+      "sha256": "e01c7b034b691c96c07282e150b498ef0fe71519a1a7b4d8bcf4e7f7369dc663",
+      "decoded_bytes": 16301470,
+      "decoded_sha256": "44bc776a64ec38a0f926067480a97a882e65de2d348f4d569c5a2194b96a7148",
+      "source_first_face": 68000000,
+      "triangles": 1000000,
+      "meshlets": 13
+    },
+    {
+      "url": "native-69.bin.gz",
+      "bytes": 6565177,
+      "sha256": "414575f09e0d2826346cdff31a8095c6d345c38066826a16dc487a2cc9ef91d2",
+      "decoded_bytes": 14978675,
+      "decoded_sha256": "a92246a7da56f9c3706ba2ca2b8ea1d61974d3525e685fdfa92195653bbb9060",
+      "source_first_face": 69000000,
+      "triangles": 1000000,
+      "meshlets": 11
+    },
+    {
+      "url": "native-70.bin.gz",
+      "bytes": 6325110,
+      "sha256": "5fd6c1d4dc7cfdf27a84ab725b0adf5ae3953c408d51560e36158030692edcd7",
+      "decoded_bytes": 13525751,
+      "decoded_sha256": "8654e71925210ce6cf0d0b01a4f21f53cf0e7708de43aa35ab82b05865ac5cf0",
+      "source_first_face": 70000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-71.bin.gz",
+      "bytes": 6190233,
+      "sha256": "9a24996230b24c56889ff069579beb91e99fda5fb487546f38ead785ed2e8b40",
+      "decoded_bytes": 13066122,
+      "decoded_sha256": "7de75cbfb688b6fdda0db8104c65b090145279d11dfedaef31706ae298435eea",
+      "source_first_face": 71000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-72.bin.gz",
+      "bytes": 6067471,
+      "sha256": "46295b5043280c879dd90dc76edf71a5abe5b4bd143f6db82dbafe3a81f00c56",
+      "decoded_bytes": 12830459,
+      "decoded_sha256": "bf874348393dbf5f5d35cb3bb697d1df587adcf226f9672e259deeaebaa05a7f",
+      "source_first_face": 72000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-73.bin.gz",
+      "bytes": 5942798,
+      "sha256": "1baae6d11924a680870c5df2167e895d19007a4fc106859164e779cc6dfc5b95",
+      "decoded_bytes": 12714593,
+      "decoded_sha256": "9e854b7b2624a39ebe3cac272a87a6eb6fe2dd90dbc7547f5e844dff143aac9e",
+      "source_first_face": 73000000,
+      "triangles": 1000000,
+      "meshlets": 10
+    },
+    {
+      "url": "native-74.bin.gz",
+      "bytes": 1636206,
+      "sha256": "d4ae6133f4e7d335c8f63efd5ae6b8ebd1f8743eb90850c02ad28a4765add9f2",
+      "decoded_bytes": 3702746,
+      "decoded_sha256": "26d0bcc6022acdbb400e41a8873947d74d51c42fc8f158f3814a6f52e80f568e",
+      "source_first_face": 74000000,
+      "triangles": 293846,
+      "meshlets": 3
+    }
+  ]
+}

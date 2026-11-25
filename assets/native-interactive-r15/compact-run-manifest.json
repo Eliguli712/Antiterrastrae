@@ -1,0 +1,1050 @@
+{
+  "schema_version": 2,
+  "claim_id": "LOSSLESS_NATIVE74_ADAPTIVE_UINT16_MESHLETS",
+  "repository": {
+    "commit": "40abad3dd3dfd79d25b6526a6b9e48c65feaa76d",
+    "dirty": true
+  },
+  "command": [
+    "./fea_venv/bin/python",
+    "output/native_interactive_r15_2026-11-25/scripts/build_compact_native_v2.py",
+    "--run-dir",
+    "output/native_interactive_r15_2026-11-25/review/compact-run002"
+  ],
+  "environment": {
+    "software": [
+      {
+        "name": "runner-python",
+        "version": "3.14.3"
+      },
+      {
+        "name": "Python",
+        "version": "3.14.3"
+      },
+      {
+        "name": "NumPy",
+        "version": "2.4.3"
+      }
+    ],
+    "hardware": "macOS-14.4-arm64-arm-64bit-Mach-O"
+  },
+  "mathematics": {
+    "assertion_tested": "Check all original ordered source triangles, losslessly represent every source vertex on its original half-voxel grid and copy both exact current RGB arrays into bounded UInt16-indexed meshlets.",
+    "coefficient_domain": "Exact UInt16 native grid coordinates and indices; original Float64 source equality; Float32 GPU affine transform tolerance.",
+    "conventions": "0.009mm original native half-voxel grid; no decimation or new coordinate quantization.",
+    "inputs": [
+      "All 37,951,699 native vertices, 74,293,846 ordered faces and both current verified colour fields"
+    ],
+    "bounds": {
+      "faces_per_meshlet_upper_bound": 100000,
+      "vertices_per_meshlet_max": 65000
+    },
+    "non_claims": [
+      "No new acquired resolution",
+      "No new FEM",
+      "Float32 display arithmetic is not exact real arithmetic"
+    ]
+  },
+  "randomness": {
+    "used": false,
+    "generator": "",
+    "seed": null
+  },
+  "run": {
+    "started_at": "2026-11-25T07:01:50.543975+00:00",
+    "runtime_seconds": 72.475116,
+    "exit_status": 0,
+    "status": "completed",
+    "timeout_seconds": 1200.0,
+    "max_output_bytes": 1048576,
+    "resource_limits": {
+      "memory_bytes": null,
+      "cpu_seconds": null,
+      "max_cores": null,
+      "max_threads": 2
+    },
+    "missing_results": [],
+    "invalid_results": []
+  },
+  "execution_artifacts": [
+    "output/native_interactive_r15_2026-11-25/scripts/build_compact_native_v2.py",
+    "output/current_native74_stress_2026-11-20/cache/vertices.f64",
+    "output/current_native74_stress_2026-11-20/cache/triangles.u32",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/geometry.json",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm-field.json",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-00.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-01.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-02.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-03.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-04.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-05.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-06.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-07.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-08.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-09.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-10.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-11.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-12.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-13.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-14.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-15.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-16.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-17.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-18.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-19.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-20.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-21.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-22.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-23.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-24.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-25.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-26.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-27.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-28.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-29.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-30.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-31.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-32.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-33.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-34.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-35.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-36.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-37.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-38.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-39.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-40.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-41.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-42.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-43.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-44.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-45.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-46.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-47.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-48.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-49.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-50.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-51.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-52.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-53.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-54.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-55.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-56.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-57.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-58.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-59.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-60.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-61.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-62.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-63.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-64.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-65.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-66.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-67.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-68.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-69.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-70.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-71.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-72.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-73.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-74.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-00.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-01.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-02.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-03.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-04.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-05.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-06.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-07.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-08.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-09.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-10.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-11.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-12.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-13.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-14.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-15.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-16.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-17.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-18.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-19.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-20.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-21.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-22.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-23.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-24.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-25.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-26.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-27.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-28.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-29.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-30.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-31.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-32.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-33.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-34.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-35.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-36.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-37.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-38.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-39.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-40.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-41.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-42.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-43.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-44.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-45.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-46.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-47.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-48.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-49.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-50.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-51.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-52.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-53.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-54.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-55.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-56.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-57.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-58.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-59.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-60.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-61.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-62.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-63.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-64.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-65.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-66.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-67.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-68.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-69.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-70.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-71.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-72.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-73.bin.gz",
+    "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-74.bin.gz"
+  ],
+  "input_artifacts": [
+    {
+      "path": "output/native_interactive_r15_2026-11-25/scripts/build_compact_native_v2.py",
+      "sha256": "e6ab780188aa348d4d6e7473255ba26f2abd622395b97ad784876e152565329c",
+      "sha256_after": "e6ab780188aa348d4d6e7473255ba26f2abd622395b97ad784876e152565329c"
+    },
+    {
+      "path": "output/current_native74_stress_2026-11-20/cache/vertices.f64",
+      "sha256": "4f13df2eccd0a730411aff5fcd1e34210882490e3a32f969a6b2748f3197153a",
+      "sha256_after": "4f13df2eccd0a730411aff5fcd1e34210882490e3a32f969a6b2748f3197153a"
+    },
+    {
+      "path": "output/current_native74_stress_2026-11-20/cache/triangles.u32",
+      "sha256": "83b7c6bf0ff12c490b1948fa27ade2550e7d7e2458b9aa2528136e1162e3ed26",
+      "sha256_after": "83b7c6bf0ff12c490b1948fa27ade2550e7d7e2458b9aa2528136e1162e3ed26"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/geometry.json",
+      "sha256": "58489956862786937c3e70a05f39e97c256210e6559c601e9469d85878d21d8e",
+      "sha256_after": "58489956862786937c3e70a05f39e97c256210e6559c601e9469d85878d21d8e"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm-field.json",
+      "sha256": "94e230f2603a3bea17030a0e52c565318ded1647d05afb2c24f0630ea6c2c8a8",
+      "sha256_after": "94e230f2603a3bea17030a0e52c565318ded1647d05afb2c24f0630ea6c2c8a8"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-00.bin.gz",
+      "sha256": "c0d65fd9b434cc381f3261568d4bc9f0195b21524ce2546d3444d1f233748ccf",
+      "sha256_after": "c0d65fd9b434cc381f3261568d4bc9f0195b21524ce2546d3444d1f233748ccf"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-01.bin.gz",
+      "sha256": "065171793ac383c38183ee0e505cd7f760722bfa25e196e49ea53e03e79db558",
+      "sha256_after": "065171793ac383c38183ee0e505cd7f760722bfa25e196e49ea53e03e79db558"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-02.bin.gz",
+      "sha256": "7f547f17ab35786e827ae8262996d4b30c24ac5d9af52a3d27f1dca879c201af",
+      "sha256_after": "7f547f17ab35786e827ae8262996d4b30c24ac5d9af52a3d27f1dca879c201af"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-03.bin.gz",
+      "sha256": "762d36dd92c58e8315347f92055b91bd768373de2f653e0b139c6658a1a4d6e6",
+      "sha256_after": "762d36dd92c58e8315347f92055b91bd768373de2f653e0b139c6658a1a4d6e6"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-04.bin.gz",
+      "sha256": "716ad0624988ae99d119102c6bb8f34488a906d887b747e7cf63a8fb4c4bd90a",
+      "sha256_after": "716ad0624988ae99d119102c6bb8f34488a906d887b747e7cf63a8fb4c4bd90a"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-05.bin.gz",
+      "sha256": "ca869bab7e9b6392a645cf5d9bd67fa8ada79889ada07a951edb8e6ee177be7b",
+      "sha256_after": "ca869bab7e9b6392a645cf5d9bd67fa8ada79889ada07a951edb8e6ee177be7b"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-06.bin.gz",
+      "sha256": "c1971401a8cd15dec2fc10084a9c0b0f3d2787d1b2d028de317d987c05bc4dca",
+      "sha256_after": "c1971401a8cd15dec2fc10084a9c0b0f3d2787d1b2d028de317d987c05bc4dca"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-07.bin.gz",
+      "sha256": "c11c5dcd5c885e027870b00eb40dfb162846c4ce6a165785065a0d9ccb9c1445",
+      "sha256_after": "c11c5dcd5c885e027870b00eb40dfb162846c4ce6a165785065a0d9ccb9c1445"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-08.bin.gz",
+      "sha256": "b68b47d5d8de6c43e4973ed0d58b60415655f272fefd852c95bbbd7047cf8028",
+      "sha256_after": "b68b47d5d8de6c43e4973ed0d58b60415655f272fefd852c95bbbd7047cf8028"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-09.bin.gz",
+      "sha256": "ff32e8cfc00c5a7e7c2296d313abdda411a150d0e2715cf1d26d7520149eb31d",
+      "sha256_after": "ff32e8cfc00c5a7e7c2296d313abdda411a150d0e2715cf1d26d7520149eb31d"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-10.bin.gz",
+      "sha256": "bb16bd9b0c82bf62c2f975513a05b4c73ff3e73f6a47856c89504a72c21cb853",
+      "sha256_after": "bb16bd9b0c82bf62c2f975513a05b4c73ff3e73f6a47856c89504a72c21cb853"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-11.bin.gz",
+      "sha256": "23dde1fa226bb8be286dd7156a2d2f70b884fefbe66cf74ed2da40bb18a07be1",
+      "sha256_after": "23dde1fa226bb8be286dd7156a2d2f70b884fefbe66cf74ed2da40bb18a07be1"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-12.bin.gz",
+      "sha256": "2d0cda95e855300792623a2a784fe202f7b790cbd3a4ad3d18b209009c2dd832",
+      "sha256_after": "2d0cda95e855300792623a2a784fe202f7b790cbd3a4ad3d18b209009c2dd832"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-13.bin.gz",
+      "sha256": "4fdd98ca8306dad2083e509027133209943e97602ced292992616343c6c2995d",
+      "sha256_after": "4fdd98ca8306dad2083e509027133209943e97602ced292992616343c6c2995d"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-14.bin.gz",
+      "sha256": "88688ce13ef756b6df8f8b8da47657641f50a47e37624b8028fd144c16978305",
+      "sha256_after": "88688ce13ef756b6df8f8b8da47657641f50a47e37624b8028fd144c16978305"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-15.bin.gz",
+      "sha256": "5c306fc631feff0792ee3feb4916bfd9c00d01ded3b8a5b549e66c8b6417f0e6",
+      "sha256_after": "5c306fc631feff0792ee3feb4916bfd9c00d01ded3b8a5b549e66c8b6417f0e6"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-16.bin.gz",
+      "sha256": "67f833e2ec05ec89ce6acb4d79cc23b337a805c56662e01cc12b3f466f7628b8",
+      "sha256_after": "67f833e2ec05ec89ce6acb4d79cc23b337a805c56662e01cc12b3f466f7628b8"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-17.bin.gz",
+      "sha256": "a0e00a0b1ce660ce486409ddc7fca879e98f0425a3bbe48d3269a87e0bf0943d",
+      "sha256_after": "a0e00a0b1ce660ce486409ddc7fca879e98f0425a3bbe48d3269a87e0bf0943d"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-18.bin.gz",
+      "sha256": "5733f143d993e204cae0f8f517de2584566b22e9c2807894f4dd1e145438d8a1",
+      "sha256_after": "5733f143d993e204cae0f8f517de2584566b22e9c2807894f4dd1e145438d8a1"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-19.bin.gz",
+      "sha256": "72dd84ac94393b3c4f3383cf3d057ef1c59c662549ff02cd4a26cdfc54941a76",
+      "sha256_after": "72dd84ac94393b3c4f3383cf3d057ef1c59c662549ff02cd4a26cdfc54941a76"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-20.bin.gz",
+      "sha256": "76fe8c389d0e8b238aa78816bc8d3b43655e9b23494c930365530637c4e7bc0b",
+      "sha256_after": "76fe8c389d0e8b238aa78816bc8d3b43655e9b23494c930365530637c4e7bc0b"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-21.bin.gz",
+      "sha256": "c726185863094ab853a3a339286010c5a95145bf3a4e875c1372d30a0f0bf580",
+      "sha256_after": "c726185863094ab853a3a339286010c5a95145bf3a4e875c1372d30a0f0bf580"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-22.bin.gz",
+      "sha256": "87e83c0868668c24a5b087dfec7ae36f385c764325376a91ef0ad01eda59a170",
+      "sha256_after": "87e83c0868668c24a5b087dfec7ae36f385c764325376a91ef0ad01eda59a170"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-23.bin.gz",
+      "sha256": "44b5051ef9a2d6659ea25cb9692d8ef65510edca87d774ef06aff9f713e7bf84",
+      "sha256_after": "44b5051ef9a2d6659ea25cb9692d8ef65510edca87d774ef06aff9f713e7bf84"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-24.bin.gz",
+      "sha256": "ffd6486f27bfdce754483bae7a3455a289105738655e8dbe6e7d76cfacae06ad",
+      "sha256_after": "ffd6486f27bfdce754483bae7a3455a289105738655e8dbe6e7d76cfacae06ad"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-25.bin.gz",
+      "sha256": "9070f8beb2c2ab7e97997e2d0a8be637f303fbe7f4e463d62598def8a64ee8fc",
+      "sha256_after": "9070f8beb2c2ab7e97997e2d0a8be637f303fbe7f4e463d62598def8a64ee8fc"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-26.bin.gz",
+      "sha256": "c24925f68d88a0fe9de864c11edfe006213feb649e5d4c5d22d63e0032dcc6df",
+      "sha256_after": "c24925f68d88a0fe9de864c11edfe006213feb649e5d4c5d22d63e0032dcc6df"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-27.bin.gz",
+      "sha256": "9bead22d7712c498395665e3f1aa7a5aec686687c27bbab88adb1d02f7ead7a4",
+      "sha256_after": "9bead22d7712c498395665e3f1aa7a5aec686687c27bbab88adb1d02f7ead7a4"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-28.bin.gz",
+      "sha256": "e3185d5a4009a62fa05e0957c717a96bf88179eb9e8e4bd21a858e064a3a1bf4",
+      "sha256_after": "e3185d5a4009a62fa05e0957c717a96bf88179eb9e8e4bd21a858e064a3a1bf4"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-29.bin.gz",
+      "sha256": "ae420be831bf43a1b288c7aece0034a488f317494f96f21878d73f7954ccd31a",
+      "sha256_after": "ae420be831bf43a1b288c7aece0034a488f317494f96f21878d73f7954ccd31a"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-30.bin.gz",
+      "sha256": "0d13c20888451a3de7b543632951ec84c8891ebf2daf14cb0643985afb8760f7",
+      "sha256_after": "0d13c20888451a3de7b543632951ec84c8891ebf2daf14cb0643985afb8760f7"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-31.bin.gz",
+      "sha256": "30b4ccebdf78fc0f132227cdc37a7c7997988bce4dc3f4f12cea734a8d14dfb2",
+      "sha256_after": "30b4ccebdf78fc0f132227cdc37a7c7997988bce4dc3f4f12cea734a8d14dfb2"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-32.bin.gz",
+      "sha256": "5cd8a8475d1b61330629fd5681537467d18c2b205c1767f660293ba83cfea61e",
+      "sha256_after": "5cd8a8475d1b61330629fd5681537467d18c2b205c1767f660293ba83cfea61e"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-33.bin.gz",
+      "sha256": "b09643c59d8288775709293ba179d7561b936d5669027726257168c36799ae2d",
+      "sha256_after": "b09643c59d8288775709293ba179d7561b936d5669027726257168c36799ae2d"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-34.bin.gz",
+      "sha256": "215fb985399df0f153505b1bcfc96e7bf6452a6d691ba2c77651cc426478be12",
+      "sha256_after": "215fb985399df0f153505b1bcfc96e7bf6452a6d691ba2c77651cc426478be12"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-35.bin.gz",
+      "sha256": "fdbc17c9a015a699b9a8bfebf30a2b97a0da74245e8af7b479df9853ec701799",
+      "sha256_after": "fdbc17c9a015a699b9a8bfebf30a2b97a0da74245e8af7b479df9853ec701799"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-36.bin.gz",
+      "sha256": "57ffb00e4ba4e54f0e06cbfef39cd07fc333666f8ee06155c702524023e64799",
+      "sha256_after": "57ffb00e4ba4e54f0e06cbfef39cd07fc333666f8ee06155c702524023e64799"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-37.bin.gz",
+      "sha256": "7bef06e0ef55182b9b4722771df68e610472adf02a92adbd9bef084d4924582b",
+      "sha256_after": "7bef06e0ef55182b9b4722771df68e610472adf02a92adbd9bef084d4924582b"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-38.bin.gz",
+      "sha256": "4e5c62b0e71685e07b48238c92f26cbb8f7501670786c4326285ca987b8b3a48",
+      "sha256_after": "4e5c62b0e71685e07b48238c92f26cbb8f7501670786c4326285ca987b8b3a48"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-39.bin.gz",
+      "sha256": "d11711fdeea64669b70ce9079023639ab4d65a1fb8b629a96ee3776fd15eb092",
+      "sha256_after": "d11711fdeea64669b70ce9079023639ab4d65a1fb8b629a96ee3776fd15eb092"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-40.bin.gz",
+      "sha256": "aedc1dbcf821ac20ffb14ca696fd9615a7694eca00ed0eeff1a21316064385fe",
+      "sha256_after": "aedc1dbcf821ac20ffb14ca696fd9615a7694eca00ed0eeff1a21316064385fe"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-41.bin.gz",
+      "sha256": "edff5fa947e69bbf63c2b0b39173eb36bd4954e3794a55889bf64dba668398c3",
+      "sha256_after": "edff5fa947e69bbf63c2b0b39173eb36bd4954e3794a55889bf64dba668398c3"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-42.bin.gz",
+      "sha256": "061ecc9e4ecc740b583c0f999e13ed828ab94e424f17a439846002a47a58ceb1",
+      "sha256_after": "061ecc9e4ecc740b583c0f999e13ed828ab94e424f17a439846002a47a58ceb1"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-43.bin.gz",
+      "sha256": "aadcdd96ab3379220df0e29ed8d156209dc521d26561c1ade595dd64a3762ee8",
+      "sha256_after": "aadcdd96ab3379220df0e29ed8d156209dc521d26561c1ade595dd64a3762ee8"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-44.bin.gz",
+      "sha256": "3dd033d0d97a67c8c9052ec59d9a6611f286a2f68bb9d5c10c0a0cbee628e0e2",
+      "sha256_after": "3dd033d0d97a67c8c9052ec59d9a6611f286a2f68bb9d5c10c0a0cbee628e0e2"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-45.bin.gz",
+      "sha256": "e06b529d05ad3c9fef3f3cca7dcae04c972c5ef2ad8e845b7b678f5b0f72439b",
+      "sha256_after": "e06b529d05ad3c9fef3f3cca7dcae04c972c5ef2ad8e845b7b678f5b0f72439b"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-46.bin.gz",
+      "sha256": "13f35846fd7dbaf3c33beca17f8523a131851e49664106fe57082a30c2e0ca68",
+      "sha256_after": "13f35846fd7dbaf3c33beca17f8523a131851e49664106fe57082a30c2e0ca68"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-47.bin.gz",
+      "sha256": "733e2821e54435eeb3568e6e7f94488d07cd9aa5dea17bca995489e5191512ef",
+      "sha256_after": "733e2821e54435eeb3568e6e7f94488d07cd9aa5dea17bca995489e5191512ef"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-48.bin.gz",
+      "sha256": "30346e9cc7764488b643d6c93ae9959591d0562db4de034587ee50424382acb6",
+      "sha256_after": "30346e9cc7764488b643d6c93ae9959591d0562db4de034587ee50424382acb6"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-49.bin.gz",
+      "sha256": "de8382edb248fd9b672833f47be4c75d5fa49fc4483e25bd5c8711a776b275a6",
+      "sha256_after": "de8382edb248fd9b672833f47be4c75d5fa49fc4483e25bd5c8711a776b275a6"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-50.bin.gz",
+      "sha256": "aacafdd780ecd2f1749562eb7a28cd40447cb824c120ec72a0e4fceebd662e92",
+      "sha256_after": "aacafdd780ecd2f1749562eb7a28cd40447cb824c120ec72a0e4fceebd662e92"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-51.bin.gz",
+      "sha256": "ef9043d73040902538a4fdeee5f8cdee0bb6dc0a0a56b716d339322b19af01e9",
+      "sha256_after": "ef9043d73040902538a4fdeee5f8cdee0bb6dc0a0a56b716d339322b19af01e9"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-52.bin.gz",
+      "sha256": "fe6ffb2265db2bf13858a60cbd25738bbf8d438190f77ba828c7da1176787a3d",
+      "sha256_after": "fe6ffb2265db2bf13858a60cbd25738bbf8d438190f77ba828c7da1176787a3d"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-53.bin.gz",
+      "sha256": "c82a4e3a648530153a9a45dcd329019730179fb4989caa6fc7048b239ad7ffe3",
+      "sha256_after": "c82a4e3a648530153a9a45dcd329019730179fb4989caa6fc7048b239ad7ffe3"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-54.bin.gz",
+      "sha256": "68f73f9dd9a3b20cc671e985be9d0b387c351ace761b5b1c4ca7832486a4fc1b",
+      "sha256_after": "68f73f9dd9a3b20cc671e985be9d0b387c351ace761b5b1c4ca7832486a4fc1b"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-55.bin.gz",
+      "sha256": "ab640e1e56a36fdf149509851ec9d9aacd1b5861bfbb76720a14a363a4c790c1",
+      "sha256_after": "ab640e1e56a36fdf149509851ec9d9aacd1b5861bfbb76720a14a363a4c790c1"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-56.bin.gz",
+      "sha256": "7a5168b22fbaa44d64c39789f2939343a58b994a12443cefafe3c21a8c76a64a",
+      "sha256_after": "7a5168b22fbaa44d64c39789f2939343a58b994a12443cefafe3c21a8c76a64a"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-57.bin.gz",
+      "sha256": "7d0f1bb2fce294d2d079b6da4e4bd22dd3f252e34f0d14fddc22e346fc0f9122",
+      "sha256_after": "7d0f1bb2fce294d2d079b6da4e4bd22dd3f252e34f0d14fddc22e346fc0f9122"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-58.bin.gz",
+      "sha256": "5bda7f63876a7abb07b541644662cc20902983fee6731e75849cdfee8c324d9c",
+      "sha256_after": "5bda7f63876a7abb07b541644662cc20902983fee6731e75849cdfee8c324d9c"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-59.bin.gz",
+      "sha256": "67c1e4f59d10fe9f4e765239dd2e7d9c608a63bf9bd2f2ad40e2f5d508acdc3e",
+      "sha256_after": "67c1e4f59d10fe9f4e765239dd2e7d9c608a63bf9bd2f2ad40e2f5d508acdc3e"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-60.bin.gz",
+      "sha256": "7d2b8551a829f902f794acc8a511f6613b4041afd54e6db006496e4f7ed40566",
+      "sha256_after": "7d2b8551a829f902f794acc8a511f6613b4041afd54e6db006496e4f7ed40566"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-61.bin.gz",
+      "sha256": "3fa90cf3ca24d5bb572a76807048eab7ae11db21fa1563651d93f715fb79843d",
+      "sha256_after": "3fa90cf3ca24d5bb572a76807048eab7ae11db21fa1563651d93f715fb79843d"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-62.bin.gz",
+      "sha256": "1a08c335d1d8c2e9af720ddfda9ef29b463c4bb8a3774a6ec3fbaee62722ef01",
+      "sha256_after": "1a08c335d1d8c2e9af720ddfda9ef29b463c4bb8a3774a6ec3fbaee62722ef01"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-63.bin.gz",
+      "sha256": "6d446562c3313b34aa624aae47851ab90ce6883191f949e0eb13d706c34b73bc",
+      "sha256_after": "6d446562c3313b34aa624aae47851ab90ce6883191f949e0eb13d706c34b73bc"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-64.bin.gz",
+      "sha256": "689886377b2b844da772ca0ef9d873bab522b5decf8d0c174f93b7469b3f47ea",
+      "sha256_after": "689886377b2b844da772ca0ef9d873bab522b5decf8d0c174f93b7469b3f47ea"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-65.bin.gz",
+      "sha256": "2a87c230ee7ec4d34173c68721656dfc4cec8178b2a2abe246aaf1d73d094223",
+      "sha256_after": "2a87c230ee7ec4d34173c68721656dfc4cec8178b2a2abe246aaf1d73d094223"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-66.bin.gz",
+      "sha256": "ae06296205390a25ae0da31bd2397e76bb750ef1e9a95f53452730fd7dbb5bee",
+      "sha256_after": "ae06296205390a25ae0da31bd2397e76bb750ef1e9a95f53452730fd7dbb5bee"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-67.bin.gz",
+      "sha256": "8e1af7e69150ce5d6955634782bb60cfb193ce4f6bf716b9c91c8b3e1c369f21",
+      "sha256_after": "8e1af7e69150ce5d6955634782bb60cfb193ce4f6bf716b9c91c8b3e1c369f21"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-68.bin.gz",
+      "sha256": "6d833ed9c50b5d27a64faeff72759d7b2ea975c8afa2ba4975257ad8716e62c1",
+      "sha256_after": "6d833ed9c50b5d27a64faeff72759d7b2ea975c8afa2ba4975257ad8716e62c1"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-69.bin.gz",
+      "sha256": "a272bde35a6dc477f1dc11101f3eeaffc2f020c9a7ba9343389cd31405857d97",
+      "sha256_after": "a272bde35a6dc477f1dc11101f3eeaffc2f020c9a7ba9343389cd31405857d97"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-70.bin.gz",
+      "sha256": "b1f387e3e5c5df6176e0d04136d1b05be37cfc24112565bdf1f67bf73778c945",
+      "sha256_after": "b1f387e3e5c5df6176e0d04136d1b05be37cfc24112565bdf1f67bf73778c945"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-71.bin.gz",
+      "sha256": "13be608f771c9b12629f640e9719506d5b35016ddb17d6c3fd27429233ca3631",
+      "sha256_after": "13be608f771c9b12629f640e9719506d5b35016ddb17d6c3fd27429233ca3631"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-72.bin.gz",
+      "sha256": "56c6b20483e53ea2f44f285b676e8a98d68f8af4b3f1e9e33b30c9f36e0a4e35",
+      "sha256_after": "56c6b20483e53ea2f44f285b676e8a98d68f8af4b3f1e9e33b30c9f36e0a4e35"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-73.bin.gz",
+      "sha256": "29e20830d83c2643d8d77c0b23227bf85ced50d8f3d7020e4497e92923aa7fe0",
+      "sha256_after": "29e20830d83c2643d8d77c0b23227bf85ced50d8f3d7020e4497e92923aa7fe0"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/50mm/field-74.bin.gz",
+      "sha256": "a9d803f2e3ac8115d042b89654e45d8e0e913abbecdd66ac44fa75b3725875e0",
+      "sha256_after": "a9d803f2e3ac8115d042b89654e45d8e0e913abbecdd66ac44fa75b3725875e0"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-00.bin.gz",
+      "sha256": "67d44685b5ae64753f4df723c6e0c3ff601489afa8ff329b4b85b238e7127870",
+      "sha256_after": "67d44685b5ae64753f4df723c6e0c3ff601489afa8ff329b4b85b238e7127870"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-01.bin.gz",
+      "sha256": "e3ef5a9b355d3f89f2e368f05b6d728947334fa58f4caab86ff9025a1c67f789",
+      "sha256_after": "e3ef5a9b355d3f89f2e368f05b6d728947334fa58f4caab86ff9025a1c67f789"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-02.bin.gz",
+      "sha256": "86a1c4a0500547803d27d37958b253ab24fd513646db45cc592d1cc1c106dfbe",
+      "sha256_after": "86a1c4a0500547803d27d37958b253ab24fd513646db45cc592d1cc1c106dfbe"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-03.bin.gz",
+      "sha256": "cff0a0adfc47c8854ad294010d8f78029722996ae8e0a7e183504d484fa4a9ee",
+      "sha256_after": "cff0a0adfc47c8854ad294010d8f78029722996ae8e0a7e183504d484fa4a9ee"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-04.bin.gz",
+      "sha256": "4a816897e29acab7a0a23e7884e2a998afdc92aaf859d4ddece80e91302f73b2",
+      "sha256_after": "4a816897e29acab7a0a23e7884e2a998afdc92aaf859d4ddece80e91302f73b2"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-05.bin.gz",
+      "sha256": "d868e599964ddd8edb92ad8a4568967093b5e458d5200c1ce42c08496896969c",
+      "sha256_after": "d868e599964ddd8edb92ad8a4568967093b5e458d5200c1ce42c08496896969c"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-06.bin.gz",
+      "sha256": "865da51872389713c652ae1ef2500b1e058a51fbfbdb158f6db50c77fcdb08c4",
+      "sha256_after": "865da51872389713c652ae1ef2500b1e058a51fbfbdb158f6db50c77fcdb08c4"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-07.bin.gz",
+      "sha256": "4e58203530f77eaa8839f391a0c2d224a17e2345aa4addf45f12737c99eb6adc",
+      "sha256_after": "4e58203530f77eaa8839f391a0c2d224a17e2345aa4addf45f12737c99eb6adc"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-08.bin.gz",
+      "sha256": "8e1ca4550224685d4b43f3230905925bc8e08eddc0352cc862c1c52424aee455",
+      "sha256_after": "8e1ca4550224685d4b43f3230905925bc8e08eddc0352cc862c1c52424aee455"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-09.bin.gz",
+      "sha256": "fb232dcf1ec6b4be614ccaaea9cc115025b169f0921563e0a82b97898e47f0c3",
+      "sha256_after": "fb232dcf1ec6b4be614ccaaea9cc115025b169f0921563e0a82b97898e47f0c3"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-10.bin.gz",
+      "sha256": "6e8810999910854287ddb021b13efa7a21adad7ebb851250d2894ba2cd4050f5",
+      "sha256_after": "6e8810999910854287ddb021b13efa7a21adad7ebb851250d2894ba2cd4050f5"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-11.bin.gz",
+      "sha256": "6ef2a3dd622b3708c3faedce06c5756219f9ddb885fa923d9c59308d14d518d8",
+      "sha256_after": "6ef2a3dd622b3708c3faedce06c5756219f9ddb885fa923d9c59308d14d518d8"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-12.bin.gz",
+      "sha256": "006984b4d7ebc5744b6d090a52c7f8fa19d90a9e69d8b05673b5979524a50708",
+      "sha256_after": "006984b4d7ebc5744b6d090a52c7f8fa19d90a9e69d8b05673b5979524a50708"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-13.bin.gz",
+      "sha256": "df15e0ae3522856069de44f73977e4d09e7d2764ea7b14574243646dc0beeed3",
+      "sha256_after": "df15e0ae3522856069de44f73977e4d09e7d2764ea7b14574243646dc0beeed3"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-14.bin.gz",
+      "sha256": "bd220fe618f015bd4b1367013dd1c03899585f2f442bf90b10f0a7c440b0e707",
+      "sha256_after": "bd220fe618f015bd4b1367013dd1c03899585f2f442bf90b10f0a7c440b0e707"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-15.bin.gz",
+      "sha256": "d17f8d7a5d26e37a3698203a459f1ca96aaa382db76b139ddc9ebb4eb4fc12cd",
+      "sha256_after": "d17f8d7a5d26e37a3698203a459f1ca96aaa382db76b139ddc9ebb4eb4fc12cd"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-16.bin.gz",
+      "sha256": "694b601f293532e048d2b1d4e1de6e81e5ce1b49bba509326d8ff79b49d4148b",
+      "sha256_after": "694b601f293532e048d2b1d4e1de6e81e5ce1b49bba509326d8ff79b49d4148b"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-17.bin.gz",
+      "sha256": "4e2ad6e4e19aa95071dfa4667f252db43f4d3dc730475f956648a8582317dbf7",
+      "sha256_after": "4e2ad6e4e19aa95071dfa4667f252db43f4d3dc730475f956648a8582317dbf7"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-18.bin.gz",
+      "sha256": "5570c47677e006e5cbc02f440c39ba50a75afec9e853abca6b95cd35666e3c6a",
+      "sha256_after": "5570c47677e006e5cbc02f440c39ba50a75afec9e853abca6b95cd35666e3c6a"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-19.bin.gz",
+      "sha256": "724044aa88b5ebabf5d4db46cefb6bf0b8e565a6d278e1f3f965d0b7f33f3196",
+      "sha256_after": "724044aa88b5ebabf5d4db46cefb6bf0b8e565a6d278e1f3f965d0b7f33f3196"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-20.bin.gz",
+      "sha256": "90bb7ba73f9784098f746eb6fb9faeabea81cba390620f1969c2ff0c2aae5656",
+      "sha256_after": "90bb7ba73f9784098f746eb6fb9faeabea81cba390620f1969c2ff0c2aae5656"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-21.bin.gz",
+      "sha256": "0f61fc7d90e39db35bd0355f40427753bbceeedb675bf3bcd629a6c8dcb637ac",
+      "sha256_after": "0f61fc7d90e39db35bd0355f40427753bbceeedb675bf3bcd629a6c8dcb637ac"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-22.bin.gz",
+      "sha256": "7e77761f4fe4f26f73be240c0404210ff871d95145ff692b14b14dd973be0f2f",
+      "sha256_after": "7e77761f4fe4f26f73be240c0404210ff871d95145ff692b14b14dd973be0f2f"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-23.bin.gz",
+      "sha256": "4a816ce49dc252ae850525495bbd3e6b599e1f2a3a5479a77164bccdef2903c1",
+      "sha256_after": "4a816ce49dc252ae850525495bbd3e6b599e1f2a3a5479a77164bccdef2903c1"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-24.bin.gz",
+      "sha256": "3d72182cc00e05e0d348f9b3cc71d8a8250edaeb7078889ea6c561702f4303d3",
+      "sha256_after": "3d72182cc00e05e0d348f9b3cc71d8a8250edaeb7078889ea6c561702f4303d3"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-25.bin.gz",
+      "sha256": "4dcb9551781ada14df21256c95d5c89e165d129cac763a8855c50279a7d273c4",
+      "sha256_after": "4dcb9551781ada14df21256c95d5c89e165d129cac763a8855c50279a7d273c4"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-26.bin.gz",
+      "sha256": "9c41402d9880225958ab86873ea1439c7a0e8a7c0cb0b8e1dd7b33123cbd5a42",
+      "sha256_after": "9c41402d9880225958ab86873ea1439c7a0e8a7c0cb0b8e1dd7b33123cbd5a42"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-27.bin.gz",
+      "sha256": "35416668fa5c14cc06a03936afbf69484b80fc1a4d94e17774e9f4fef979e96f",
+      "sha256_after": "35416668fa5c14cc06a03936afbf69484b80fc1a4d94e17774e9f4fef979e96f"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-28.bin.gz",
+      "sha256": "86394042ece384d216a136d39eb760d5e22a0227efd9e1b24da89221bd048be4",
+      "sha256_after": "86394042ece384d216a136d39eb760d5e22a0227efd9e1b24da89221bd048be4"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-29.bin.gz",
+      "sha256": "2beb824b68131dd72e56cb0b2a45149522b3cde3d0e8e1eab98a0c04ae22438e",
+      "sha256_after": "2beb824b68131dd72e56cb0b2a45149522b3cde3d0e8e1eab98a0c04ae22438e"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-30.bin.gz",
+      "sha256": "ec43786e9f9be11c5e022f36c3cdd07267d6a32cb7c137b30100cf832acf66dc",
+      "sha256_after": "ec43786e9f9be11c5e022f36c3cdd07267d6a32cb7c137b30100cf832acf66dc"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-31.bin.gz",
+      "sha256": "848aa15d2583dad428a82695a940ea01fb936e9d25372a11c64c460a12a11498",
+      "sha256_after": "848aa15d2583dad428a82695a940ea01fb936e9d25372a11c64c460a12a11498"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-32.bin.gz",
+      "sha256": "3cadff0309ae3e8ab494075167ce402e45521f8dc7293917822cc9f5cf3c5208",
+      "sha256_after": "3cadff0309ae3e8ab494075167ce402e45521f8dc7293917822cc9f5cf3c5208"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-33.bin.gz",
+      "sha256": "963669c2e691e2816fdaf1feb5bb8fdb318bd05945a23118ee26294e36aa2d83",
+      "sha256_after": "963669c2e691e2816fdaf1feb5bb8fdb318bd05945a23118ee26294e36aa2d83"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-34.bin.gz",
+      "sha256": "00c58b78c81e7fa490b60eeb8f91665f6c74f39c4d9de38c2e0d1b258868dabb",
+      "sha256_after": "00c58b78c81e7fa490b60eeb8f91665f6c74f39c4d9de38c2e0d1b258868dabb"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-35.bin.gz",
+      "sha256": "520c59e73326e01080c2acda55e66273722f9507fcf1c71f6d4dc8933300b3ea",
+      "sha256_after": "520c59e73326e01080c2acda55e66273722f9507fcf1c71f6d4dc8933300b3ea"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-36.bin.gz",
+      "sha256": "63fd3eafe33b7587b1ccbe4140bb020c0320bf3971624cb8acb2b5f8ac1346cb",
+      "sha256_after": "63fd3eafe33b7587b1ccbe4140bb020c0320bf3971624cb8acb2b5f8ac1346cb"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-37.bin.gz",
+      "sha256": "a16b3d2f11665e028dcd3ce8814f186f74cc5e64011cb5b96c457a5d094d2051",
+      "sha256_after": "a16b3d2f11665e028dcd3ce8814f186f74cc5e64011cb5b96c457a5d094d2051"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-38.bin.gz",
+      "sha256": "01987413828b560a45c8bef6961ab2e4513dcc1d87e5c67987964f458393e866",
+      "sha256_after": "01987413828b560a45c8bef6961ab2e4513dcc1d87e5c67987964f458393e866"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-39.bin.gz",
+      "sha256": "3bd0c1ac7c08cfa5f9b05d89c498ec5b65853768e63515824052c88ec048ff41",
+      "sha256_after": "3bd0c1ac7c08cfa5f9b05d89c498ec5b65853768e63515824052c88ec048ff41"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-40.bin.gz",
+      "sha256": "e59cbc83c6cd9381b88deeef599ac545e05458dbb258a8f33574753b36d4734d",
+      "sha256_after": "e59cbc83c6cd9381b88deeef599ac545e05458dbb258a8f33574753b36d4734d"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-41.bin.gz",
+      "sha256": "fa5030bdf23b056be1a1221cc7736baa9ad280fb49524b12a8b965e8e1a336e2",
+      "sha256_after": "fa5030bdf23b056be1a1221cc7736baa9ad280fb49524b12a8b965e8e1a336e2"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-42.bin.gz",
+      "sha256": "2207a1c87cc770a331c0917d4bff0279177195dbf5ae1f4fa14b3c7a1f58091d",
+      "sha256_after": "2207a1c87cc770a331c0917d4bff0279177195dbf5ae1f4fa14b3c7a1f58091d"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-43.bin.gz",
+      "sha256": "0299686d9ee09be0ec57881410f343af7d76253f542e5177c6cd8137cccf1e87",
+      "sha256_after": "0299686d9ee09be0ec57881410f343af7d76253f542e5177c6cd8137cccf1e87"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-44.bin.gz",
+      "sha256": "9d8157bb0f0ee63d3daed8d7ef0e014c7cff811b0ae0058879071b707315aad9",
+      "sha256_after": "9d8157bb0f0ee63d3daed8d7ef0e014c7cff811b0ae0058879071b707315aad9"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-45.bin.gz",
+      "sha256": "bac6dd77d3a096fa9c5f26701d9995d95dd9a5b47a21d5f1882ac224c08ac3df",
+      "sha256_after": "bac6dd77d3a096fa9c5f26701d9995d95dd9a5b47a21d5f1882ac224c08ac3df"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-46.bin.gz",
+      "sha256": "3d780134334985a574eb9044108e613b78263dacb3000481b456811ebb29e358",
+      "sha256_after": "3d780134334985a574eb9044108e613b78263dacb3000481b456811ebb29e358"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-47.bin.gz",
+      "sha256": "b1378e256e7bb0de7a9ab83f88973230b7b25377569ceb0acbac990efe017c0f",
+      "sha256_after": "b1378e256e7bb0de7a9ab83f88973230b7b25377569ceb0acbac990efe017c0f"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-48.bin.gz",
+      "sha256": "920e89a889fd9ef80f0f1055ebe8f0b254ed05a256b36e175edc3f1797c11fa5",
+      "sha256_after": "920e89a889fd9ef80f0f1055ebe8f0b254ed05a256b36e175edc3f1797c11fa5"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-49.bin.gz",
+      "sha256": "fd34a90f3d291918f3e7ebfc18f186d0a73c2179cae6cd98607d121999693ced",
+      "sha256_after": "fd34a90f3d291918f3e7ebfc18f186d0a73c2179cae6cd98607d121999693ced"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-50.bin.gz",
+      "sha256": "753c810acddbd077e0d0d55fd7d9939923ed332a567922e649143835f3b7fa3f",
+      "sha256_after": "753c810acddbd077e0d0d55fd7d9939923ed332a567922e649143835f3b7fa3f"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-51.bin.gz",
+      "sha256": "33d189f4cbcd6cef7a0f663ee40c37802a259158cf878e342da0f4f86b96d38b",
+      "sha256_after": "33d189f4cbcd6cef7a0f663ee40c37802a259158cf878e342da0f4f86b96d38b"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-52.bin.gz",
+      "sha256": "d543e5225446b2b9b2545859556f972dfdb19ae494c5b010fd542a83a9eafab2",
+      "sha256_after": "d543e5225446b2b9b2545859556f972dfdb19ae494c5b010fd542a83a9eafab2"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-53.bin.gz",
+      "sha256": "7b74c4bdf9209d4e7a713b502094a1a04fd50a758dcc2ca98565c5bfa9f2410b",
+      "sha256_after": "7b74c4bdf9209d4e7a713b502094a1a04fd50a758dcc2ca98565c5bfa9f2410b"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-54.bin.gz",
+      "sha256": "eed5b9809394217c11f39bab9908dc6107abf507ae0717051ac716960155cc46",
+      "sha256_after": "eed5b9809394217c11f39bab9908dc6107abf507ae0717051ac716960155cc46"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-55.bin.gz",
+      "sha256": "5be1dd01c0f7526c05b5aa50cfeb62798d549fba461a923dc9b0235ccf79f54e",
+      "sha256_after": "5be1dd01c0f7526c05b5aa50cfeb62798d549fba461a923dc9b0235ccf79f54e"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-56.bin.gz",
+      "sha256": "caa28b8ab5f809af0b02a0ad910477a1d7bcb9c7f68412685416e14ca9061266",
+      "sha256_after": "caa28b8ab5f809af0b02a0ad910477a1d7bcb9c7f68412685416e14ca9061266"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-57.bin.gz",
+      "sha256": "5f507817ee6afe9707894f2456cffdb07e5155afeb955f9bf65ed4584b065a11",
+      "sha256_after": "5f507817ee6afe9707894f2456cffdb07e5155afeb955f9bf65ed4584b065a11"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-58.bin.gz",
+      "sha256": "114b379899c654d321d834b292c1704f697dafd10a90457c6f8e8a0b6eefb7c6",
+      "sha256_after": "114b379899c654d321d834b292c1704f697dafd10a90457c6f8e8a0b6eefb7c6"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-59.bin.gz",
+      "sha256": "8a8b31fb9d7246914c010102da6434f6d43d208f8f0576c5a39d80853711e9d0",
+      "sha256_after": "8a8b31fb9d7246914c010102da6434f6d43d208f8f0576c5a39d80853711e9d0"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-60.bin.gz",
+      "sha256": "3dc7aeb1735889e2c0ff8dcceb6fcb6264ee9b9d105d1ffc99ec6b87c672a606",
+      "sha256_after": "3dc7aeb1735889e2c0ff8dcceb6fcb6264ee9b9d105d1ffc99ec6b87c672a606"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-61.bin.gz",
+      "sha256": "7b8dcb44787fd62166931bce62affd6e1f1cf59207c27c0a86bf4362117e6797",
+      "sha256_after": "7b8dcb44787fd62166931bce62affd6e1f1cf59207c27c0a86bf4362117e6797"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-62.bin.gz",
+      "sha256": "e669165023bf127426bdc1307844d06bed6ce8ca77f9819bd0e0053774994274",
+      "sha256_after": "e669165023bf127426bdc1307844d06bed6ce8ca77f9819bd0e0053774994274"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-63.bin.gz",
+      "sha256": "df1b7e87e93d5c262846a05579b2ecd126c796d216421eb1f83e0043fa794c1d",
+      "sha256_after": "df1b7e87e93d5c262846a05579b2ecd126c796d216421eb1f83e0043fa794c1d"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-64.bin.gz",
+      "sha256": "29b4c3f05fb52271a90bb2a341c3aeed6ac4f96e151afc29cdc5b7d653fcf606",
+      "sha256_after": "29b4c3f05fb52271a90bb2a341c3aeed6ac4f96e151afc29cdc5b7d653fcf606"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-65.bin.gz",
+      "sha256": "7be17633ffe163d243752d2feea778200445f2e0a960bf550ba24cb4fb09680e",
+      "sha256_after": "7be17633ffe163d243752d2feea778200445f2e0a960bf550ba24cb4fb09680e"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-66.bin.gz",
+      "sha256": "c9b4918231b92d9c82b66c1e972debd9e853bf62a207a7a0fcf91f616ce34cfe",
+      "sha256_after": "c9b4918231b92d9c82b66c1e972debd9e853bf62a207a7a0fcf91f616ce34cfe"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-67.bin.gz",
+      "sha256": "b74fdbea6de30405080304f9dd49ef4762c6955fff500344352be62ce98eee1d",
+      "sha256_after": "b74fdbea6de30405080304f9dd49ef4762c6955fff500344352be62ce98eee1d"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-68.bin.gz",
+      "sha256": "1b665c60af74771e3e8a5da65038a1319f60993b0cadd26a5f62c4540c8102d8",
+      "sha256_after": "1b665c60af74771e3e8a5da65038a1319f60993b0cadd26a5f62c4540c8102d8"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-69.bin.gz",
+      "sha256": "94f95b0ec475d7a9c04140e26a29add5fffc94150966d985b90ca87f6b24beb7",
+      "sha256_after": "94f95b0ec475d7a9c04140e26a29add5fffc94150966d985b90ca87f6b24beb7"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-70.bin.gz",
+      "sha256": "d8f9002cf6b068ae50f2eb21b14599583dde9490e258a990bbedd16ab52a7e8b",
+      "sha256_after": "d8f9002cf6b068ae50f2eb21b14599583dde9490e258a990bbedd16ab52a7e8b"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-71.bin.gz",
+      "sha256": "0dceb2cb3af30b673d5f530bb363e8c29041891a5ebce8d83d3b18502da8aa98",
+      "sha256_after": "0dceb2cb3af30b673d5f530bb363e8c29041891a5ebce8d83d3b18502da8aa98"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-72.bin.gz",
+      "sha256": "c58d2dbbe1dbf85e18f19eb038d18b1b355bf90a6bb2882e4dd12138ddf45dfe",
+      "sha256_after": "c58d2dbbe1dbf85e18f19eb038d18b1b355bf90a6bb2882e4dd12138ddf45dfe"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-73.bin.gz",
+      "sha256": "ea8dded2253bb98bb93446290eebb8d9566b617ba8bf581a2b1218d276e68ba5",
+      "sha256_after": "ea8dded2253bb98bb93446290eebb8d9566b617ba8bf581a2b1218d276e68ba5"
+    },
+    {
+      "path": "output/web_native74_batch_2026-11-24/data-assets/assets/native74-paper-mr5/100mm/field-74.bin.gz",
+      "sha256": "1ea44993ea117d0b4409304e62617c00e1ad8208673b8f433629ad90c7d9dd75",
+      "sha256_after": "1ea44993ea117d0b4409304e62617c00e1ad8208673b8f433629ad90c7d9dd75"
+    }
+  ],
+  "output_directory": "output/native_interactive_r15_2026-11-25/review/compact-run002",
+  "declared_results": [
+    "output/native_interactive_r15_2026-11-25/review/compact-run002/result.json",
+    "output/native_interactive_r15_2026-11-25/review/compact-run002/data/compact-native.json"
+  ],
+  "outputs": [
+    {
+      "path": "output/native_interactive_r15_2026-11-25/review/compact-run002/stdout.txt",
+      "sha256": "4e81b84f31c523265eb9697b679ca76ee11e652c2face4a7d88979e1d9a740ef",
+      "kind": "log"
+    },
+    {
+      "path": "output/native_interactive_r15_2026-11-25/review/compact-run002/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "log"
+    },
+    {
+      "path": "output/native_interactive_r15_2026-11-25/review/compact-run002/result.json",
+      "sha256": "20cc2fb8a3929cc0a96132b9f7aa8494af3131a28ceb8c0e170cb434e4065fa8",
+      "kind": "result"
+    },
+    {
+      "path": "output/native_interactive_r15_2026-11-25/review/compact-run002/data/compact-native.json",
+      "sha256": "c3aec2989f89a4f431116f9482cbe0ec9d4e2a85340145aebfdcc23c9632b836",
+      "kind": "result"
+    }
+  ],
+  "checks": [
+    {
+      "check": "input hashes unchanged",
+      "passed": true
+    },
+    {
+      "check": "process exited successfully within enforced limits",
+      "passed": true
+    },
+    {
+      "check": "declared result files are present and regular",
+      "passed": true
+    }
+  ],
+  "result": "Run completed; mathematical assertion requires interpretation and review.",
+  "residual_risks": [
+    "Command success does not establish the mathematical interpretation.",
+    "Only listed input artifacts are pinned; external dependencies need recorded versions.",
+    "The thread cap uses conventional environment variables; a child program may ignore them."
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "status": "completed",
+  "native_material_voxels": 967429317,
+  "all_native_mask_voxels_retained": true,
+  "display_shape_zyx": [
+    361,
+    238,
+    94
+  ],
+  "native_spacing_um": 18,
+  "artistic_display_spacing_um": 144,
+  "native_mask_slabs": 46,
+  "filters": {
+    "basic": "mask-aware median 3x3x3 and normalized Gaussian sigma 0.65 display voxel; no mask edit",
+    "MPPCA": {
+      "observed_dimensions": 27,
+      "latent_dimensions": 4,
+      "mixtures": 4,
+      "responsibility_sparsity": "top two components at inference",
+      "training_patches": 38584,
+      "heldout_spatial_patches": 9416,
+      "seed": 20261125,
+      "EM_log_likelihood": [
+        1769946.256865377,
+        2325779.8026303817,
+        2439934.1018703645,
+        2445855.2594729424,
+        2446784.2145930454,
+        2447209.8225978008,
+        2447479.99527828,
+        2447661.336493749,
+        2447779.033590464,
+        2447854.7759503312,
+        2447906.2039097548,
+        2447943.7595736785,
+        2447972.5059071537,
+        2447995.1994015453,
+        2448012.5021077227,
+        2448024.611917763,
+        2448033.308672917,
+        2448039.4936458617,
+        2448043.8609303785
+      ],
+      "heldout_mean_log_likelihood": 62.899745463600645,
+      "posterior_mass_retained_mean": 0.9999703645706962,
+      "posterior_mass_retained_minimum": 0.7015861721169394,
+      "reconstructed_display_cells": 1958276
+    }
+  },
+  "metrics": {
+    "raw": {
+      "difference_from_raw_RMS_gray_levels": 0.0,
+      "absolute_difference_Q95_gray_levels": 0.0,
+      "display_high_frequency_RMS_gray_levels": 3.2983312606811523,
+      "maximum_change_gray_levels": 0.0
+    },
+    "basic": {
+      "difference_from_raw_RMS_gray_levels": 3.361851692199707,
+      "absolute_difference_Q95_gray_levels": 6.912513256072998,
+      "display_high_frequency_RMS_gray_levels": 1.2973827123641968,
+      "maximum_change_gray_levels": 12.000006675720215
+    },
+    "MPPCA": {
+      "difference_from_raw_RMS_gray_levels": 3.8582804203033447,
+      "absolute_difference_Q95_gray_levels": 8.034274101257324,
+      "display_high_frequency_RMS_gray_levels": 1.5451301336288452,
+      "maximum_change_gray_levels": 12.000006675720215
+    }
+  },
+  "checks": {
+    "finite_output": true,
+    "unchanged_native_mask": true,
+    "bounded_change_gray_levels": 12,
+    "known_Gaussian_centre_estimator": {
+      "raw_MSE": 0.0006210433909938306,
+      "posterior_MSE": 9.520808292871449e-05
+    }
+  },
+  "non_claims": [
+    "No new acquired resolution or 1um accuracy",
+    "No anatomical identification of voids",
+    "No full native-volume FEM",
+    "MPPCA isotropic residual is not scanner-calibrated noise",
+    "Display residual is not a measured error against anatomical ground truth"
+  ]
+}

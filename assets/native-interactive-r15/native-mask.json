@@ -1,0 +1,432 @@
+{
+  "schema": "exact-native-mask-v1",
+  "native_shape_zyx": [
+    2886,
+    1903,
+    746
+  ],
+  "native_spacing_mm": 0.018,
+  "scanner_origin_xyz_mm": [
+    7.056,
+    1.368,
+    1.368
+  ],
+  "material_voxels": 967429317,
+  "selected_material_domain_changed": false,
+  "slabs": [
+    {
+      "url": "native-mask-00.bin.gz",
+      "bytes": 51156,
+      "sha256": "4d3ff0772dc4de273204b9cb3962fe05b06715522b3c491ad7576e2ec19cd2c0",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "ccb96dc85988abb152936c0c0aecbe6bb9f9c012c661cb2786ca98b604a2ead2",
+      "first_z": 0,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-01.bin.gz",
+      "bytes": 90274,
+      "sha256": "933842d381a0bbfc9f031c8f3ea9f5e4854511fd0b1c13dce857eefeeb384fae",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "a89d20ce5cdb8086d277b09c23ab55860694d21bc781079ba54fa2236182e098",
+      "first_z": 64,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-02.bin.gz",
+      "bytes": 111031,
+      "sha256": "189374c50c4483871edceed1fdade99a77991644f483912476e4f7df90f3c2f6",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "5136d80ceadcfb25ae4c88be6c27756cadb305e4130736ef1c924b60d4fcc851",
+      "first_z": 128,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-03.bin.gz",
+      "bytes": 131909,
+      "sha256": "3089acc83c870b8bc1b2da318ceb8bf72e78f65f473e43d9233f26fc37043b49",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "efae077a207602653145dae651aa48fe71b353b6ffdde6421a50d365bf67f661",
+      "first_z": 192,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-04.bin.gz",
+      "bytes": 146927,
+      "sha256": "a77cde33cc7390258d6461d1155fe2b55562d826dfdda00a55c87bec9c3a315e",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "70696506e68f9d26a4e4034439f75fe67ed0a594eff73620d168ce8d3c5381a6",
+      "first_z": 256,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-05.bin.gz",
+      "bytes": 159956,
+      "sha256": "174056339db9a8cc3342f5a4b798796c0aecd2158a5d66e6b2d19f3ce211ba8f",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "47f42babf958ba53b7c47e1ff9dada0fb382aece4ef46861d87173fd79d4cd70",
+      "first_z": 320,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-06.bin.gz",
+      "bytes": 171173,
+      "sha256": "d44ddfae7166826a224f64367efeeacef36abac7c09ee98f3e9b1c16805fd461",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "562dfaf5ed43abe82e9d846f68bf1d6e4c2779c8deaf628ef81101fe201eba6e",
+      "first_z": 384,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-07.bin.gz",
+      "bytes": 186192,
+      "sha256": "93353eb218344c2a6706c79c5cbf384e9e4ad5a7f4599a09ee320a6cb375988c",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "553914c878cb5ee539e3741a017d258f99c3ab8d90317b72fa62f76abfb5b701",
+      "first_z": 448,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-08.bin.gz",
+      "bytes": 195278,
+      "sha256": "a902b07447d964f88561a83dd547e42e8c95169aab3d668a1f2cb05c998a5672",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "3c45b36ecbc9008119b6b4663bc2ee87af203f32fb723f50ea45833c200da643",
+      "first_z": 512,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-09.bin.gz",
+      "bytes": 207792,
+      "sha256": "5a3db1ba257ab184647ee24699c670583ab784a53d9df9b34709e4871e1bc155",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "2b376268d0ab802b1ad74172d257a6088730327c947cec3fd6891a3ffcb7f487",
+      "first_z": 576,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-10.bin.gz",
+      "bytes": 217273,
+      "sha256": "9ebfdf960fec5fb3e879291428caaaa3fc7c63e654064fde0e16b87f286833f6",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "160b1182411abed61b25c40481e958bf16c545db46c4f872a17f86670ecee2d0",
+      "first_z": 640,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-11.bin.gz",
+      "bytes": 238747,
+      "sha256": "f099e6846999f0ee02b87e747581c79b2650cdcf1973a284364f646d0c3d650b",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "999f0426c1aac6150947e3471072a953e2a7ce6bc889943124ef40c8e8e4e396",
+      "first_z": 704,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-12.bin.gz",
+      "bytes": 269826,
+      "sha256": "375a8d37ae48cfece28d477f1b71a9c98abe911e7a10e5fa167c0632ec010e34",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "d9f93630d56bb7bccebc418da384a2cda8d3a64d20e00c675a5641f520270f8a",
+      "first_z": 768,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-13.bin.gz",
+      "bytes": 280380,
+      "sha256": "4ba04fbc6047361229b2221cd7542050a59af1913745e72c16dc27c298fb636b",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "beb3ac33d14bc2916ce3fa5d415953859832d47eb16cacf5596095ecf8da2a36",
+      "first_z": 832,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-14.bin.gz",
+      "bytes": 290827,
+      "sha256": "aea0f799731aa3f8b011f3286d89404b2c22ecd95138a00a539ed469ad94af4a",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "85718ea6b8cfb2c57253a06cc2a18d7441d79c5ba0b8e7679e6c3010ffb4b175",
+      "first_z": 896,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-15.bin.gz",
+      "bytes": 326591,
+      "sha256": "3564294f951f4ab081f8ec9f1a555a64b3bddc5aabc5598bd197d10a94399a55",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "0b6b5b3a7f598e06fbdbf8ed5f95e4d747705e9b7302ab620f1956c3620fd673",
+      "first_z": 960,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-16.bin.gz",
+      "bytes": 349162,
+      "sha256": "9b2bf204035529cc579f5623894e8b4f27b35fab850ecc888b4421187dd9ea24",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "6a8c68775cb93ed97809f91a5e053be7ac2fb90f55233cea4e2b959f14d529b7",
+      "first_z": 1024,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-17.bin.gz",
+      "bytes": 355419,
+      "sha256": "681a5dc5157ab3a50b0fcb18700326521c788c43926d5731613c9f899d734a77",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "acb6ac69a92c41bc76880f144334688a20c6f2a55fab059f9384a7e3a588df16",
+      "first_z": 1088,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-18.bin.gz",
+      "bytes": 396787,
+      "sha256": "986cfc2ece82393637d77503699b04c0831dba5221938a120050d32fb71e2366",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "8973f8ac16d0543dc16276ed29fd8a5f011549d9a5bffd27d5c0eb59a08db9f8",
+      "first_z": 1152,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-19.bin.gz",
+      "bytes": 437274,
+      "sha256": "05226e846ebc85a6b600116b12e4b9a9440095b694ef8be2fe415ee310d47eda",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "e7c5b4609a67ecbe0532ef8920ca4dbde14935635bdefa342060ef65000f0985",
+      "first_z": 1216,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-20.bin.gz",
+      "bytes": 465499,
+      "sha256": "84c048a4b87a0bcd55bb13e4a164ebf9d7bd58914ba029d1f141a66a35cc6fda",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "f4811c8e14c5d8f972c91a5d6bb3d277143d6615dc2238ec90f028c3bdac1896",
+      "first_z": 1280,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-21.bin.gz",
+      "bytes": 486404,
+      "sha256": "0af43c04f6984809eff3011c3e7b08d83e3e6a24e5529d163cb0e742c6726e6c",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "3e950973b13ebf777a67d937ab71e86c07b502d8b0d0bcdc4b9f8c36caa3b29e",
+      "first_z": 1344,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-22.bin.gz",
+      "bytes": 563475,
+      "sha256": "233bdd993d00ad68e92fc74ff17c9d155020c3ace7ab807d3ac072f1c13658d3",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "93e49f8d66328bdb67d84362369b3d04be343cbd5a163d6f800bfddab653a314",
+      "first_z": 1408,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-23.bin.gz",
+      "bytes": 635250,
+      "sha256": "96b620895c8cd03ee4680c656f48e2f0921f78d911c51c956e7a13a16fd5a941",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "a3631c670abebd0ceae310af38d6199d42f4a311c7f1fe39fec80bc74a049091",
+      "first_z": 1472,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-24.bin.gz",
+      "bytes": 638937,
+      "sha256": "d2046279093d3e0036a35df5a53676ae751d91190991ee55b596a685dc49a938",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "1c5df6dfbdfe82303ff8f1f41e9192a7e00bfb537607835151491bcab0df48c8",
+      "first_z": 1536,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-25.bin.gz",
+      "bytes": 790069,
+      "sha256": "9b3b7f179ec351ac4eef08e8ee0a4ec0df9b5e3ae3d757f5667854505064ed7e",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "3c7263933f64fc8e5cc8bfdcdf03eae18d86178501299facc6f570aefbf70161",
+      "first_z": 1600,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-26.bin.gz",
+      "bytes": 883371,
+      "sha256": "e76e9c3ba6f4adcb12514f7cb21f8329138c55f21c60f223408aeed021580ba9",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "da40d4893daddefe0daa2b93c96a64e871e0ef5d4ea0d3805e9158117e5b6ca6",
+      "first_z": 1664,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-27.bin.gz",
+      "bytes": 821056,
+      "sha256": "410981910e5ed31976d93e92800fc4d3cd0d18b0f76bdc14cfc3b84bbdf0ad2b",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "5f9e84095e3f379c0e2b9cc2de01f70680b238b7b846b27dc849b62df25dd073",
+      "first_z": 1728,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-28.bin.gz",
+      "bytes": 1094360,
+      "sha256": "9a85967d27489151ace259d5e7f1e4d474a721892e9c4fa97c93c99acd36c2d1",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "8a6a00f76536c3067259d724b37937c13f54555ef180131637be5e64902faeb1",
+      "first_z": 1792,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-29.bin.gz",
+      "bytes": 1110350,
+      "sha256": "b7e8cc1a361ff2aebe69fb70e145d927f05fac549def5041b36d10bd89720ce5",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "0b0a0a4708c8dbe7cca749d1911a4be9986712f0fdb95b9fa707cb479fafcca5",
+      "first_z": 1856,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-30.bin.gz",
+      "bytes": 983577,
+      "sha256": "882806c6ef1101292c7255890411051fe0e7fd2736b38b511bc6558679cebf2e",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "72ddd4b768fff0ee71a0a81f921a6544b8bbd593243a64894ecc5fa1164e0d30",
+      "first_z": 1920,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-31.bin.gz",
+      "bytes": 1166039,
+      "sha256": "06d7d49f4c7e1105f0ec0b2c9f29e5d77a7bf344b6f281da6621173d1990126a",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "7bbacb585ef19a535c92ab5f1770aa26d08709ce52fbd1d5a057232254dc403a",
+      "first_z": 1984,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-32.bin.gz",
+      "bytes": 1032015,
+      "sha256": "156da1be2746b1d4a383be7bbe9e19201f1b20590aaffc0f4474714f8c2e5f27",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "98f6200112315c4dbf97b4717106e9954699281da5148f61cf66ad0afbc747cc",
+      "first_z": 2048,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-33.bin.gz",
+      "bytes": 853067,
+      "sha256": "4cb7637af5c9b205afc26771b5ce6a20be3dc7e58593d7daad06efd39ce6be04",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "f4d3e0c947e6b3837f81fe1463c28b5fbb85de474cc0078249d2e20a5d287865",
+      "first_z": 2112,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-34.bin.gz",
+      "bytes": 638742,
+      "sha256": "c95f77b682778aba69bcafd655bb1f633f91fef6419f4ec5cbe515659cf51134",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "87ffe7bfd75f4e2a9d957c38677452ed3998726a8083cad588806f8c5e0f3ac7",
+      "first_z": 2176,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-35.bin.gz",
+      "bytes": 292958,
+      "sha256": "25e5a199b7773e782936068be2ebd35e36080021827f83998db61dde754ed409",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "369e50dab75c13566015cda20631e0686f845fc46a3c9ff647c61df9a63c0f92",
+      "first_z": 2240,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-36.bin.gz",
+      "bytes": 223435,
+      "sha256": "91d38f3f0c6c36d152beda7dd21d1f9e4d2aac128f1db802e6dba2196734f854",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "eed51762a4bdaa5145636d4ef8fbb6b44f12542f7f894d254456462f96b5b62c",
+      "first_z": 2304,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-37.bin.gz",
+      "bytes": 151044,
+      "sha256": "f133550f531a254e7d9faa3d40b8a67788b75b4df751b91dfd0e066cfae815ec",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "0f0189c2274ed33df0124c4e0846bfa25411695ff7e9e7a273410a98c84e8979",
+      "first_z": 2368,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-38.bin.gz",
+      "bytes": 128827,
+      "sha256": "7c30748f9b154b009fcb867ec2972d3539b3d41e8400f6c07ea1498ca53d0481",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "d893186911e841454a3d4db3d0f6ed9177c8b92887732b4b803eac07146ff260",
+      "first_z": 2432,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-39.bin.gz",
+      "bytes": 111994,
+      "sha256": "bcd5f7f8eb91d466f28e89d15d4d81555fbcc109614cd668b61968a2630c2b4b",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "aefdc50063187aa53547414b3cb681128fe22f8d94d8c1d547a3f472d3d1431c",
+      "first_z": 2496,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-40.bin.gz",
+      "bytes": 100472,
+      "sha256": "74baa98a460536dcf734136ccd2250863a40f45bbccf6f9abb0697dd1bd96888",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "0661a0e92ebbbfccd0c71fd82b4161197e8d6fc056488d7533686746f9bae76a",
+      "first_z": 2560,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-41.bin.gz",
+      "bytes": 91799,
+      "sha256": "d3e765209bd477d2bbfc0a9844df69defb394cd4850a419d114728850eda4fc0",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "94ef7215583f273de2f58cfac9f8a1e099d9230896775f3a675c57d6c54a46f7",
+      "first_z": 2624,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-42.bin.gz",
+      "bytes": 77781,
+      "sha256": "868144cb9dad3c462d14639d52eef9d4c1b662a6ab36c0defcdc6c84c888d9d0",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "3e63d8e7074c7307ce80ba165b6a222a108a25aa8e554a8884d0735d91161b76",
+      "first_z": 2688,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-43.bin.gz",
+      "bytes": 58248,
+      "sha256": "0f10612ef0012fd09da17e6a3f7b47d6d6e80737aed701eb3b7b2bc8cd3ea309",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "09b4ed42aecfa018d2438ff50bd54159803d622b9a90e6b12e3f0cb096acc600",
+      "first_z": 2752,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-44.bin.gz",
+      "bytes": 34216,
+      "sha256": "e5d1611b6b920ee9f14d685615f19d806027f0916e47611d6e59eb8b0a51afeb",
+      "decoded_bytes": 11448656,
+      "decoded_sha256": "8fecd9beaa85b0eeeb2c3d0e7be1eb90fde0227072b8e1778fd59fac36b6f47c",
+      "first_z": 2816,
+      "planes": 64
+    },
+    {
+      "url": "native-mask-45.bin.gz",
+      "bytes": 1467,
+      "sha256": "8160d29e4956f8ab39bcdc9a140fde5fff94df179ba44c6de5773ea2da772033",
+      "decoded_bytes": 1073500,
+      "decoded_sha256": "e15d158a1b69a52cdee75cd3970b2ea51157ba2c35dad07dedd39c02911480d0",
+      "first_z": 2880,
+      "planes": 6
+    }
+  ]
+}

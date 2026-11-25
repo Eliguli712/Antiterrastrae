@@ -1,0 +1,16 @@
+{
+  "file": {
+    "url": "immediate-preview.bin.gz",
+    "bytes": 2460100,
+    "sha256": "6b2af2cdca100e586dc376a596c82e005fc8ca1856bda7e68d1efa8369c230a0",
+    "decoded_sha256": "61e960420178e0b0cdc44eafec696d18f7d1489c64738f538317faa313b1c842",
+    "decoded_bytes": 4057168
+  },
+  "vertices": 82615,
+  "triangles": 165942,
+  "source": "Existing 100mm closed-solid MR5 boundary; immediate navigation proxy only",
+  "paper_appearance_lookup": "Every 32nd native source vertex, only for the labelled temporary preview",
+  "appearance_lookup_distance_mm_max": 0.42233550966171773,
+  "native_source_faces": 74293846,
+  "full_native_geometry_reduced": false
+}

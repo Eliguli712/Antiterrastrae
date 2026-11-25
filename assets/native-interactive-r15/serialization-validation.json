@@ -1,0 +1,8 @@
+{
+  "native_mask_binary_voxels_compared": 4097075268,
+  "every_native_bit_position_roundtrips": true,
+  "source_mask_unchanged": true,
+  "serialized_MPPCA_max_change_gray_levels": 12,
+  "GPU_filter_change_limit_gray_levels": 12,
+  "note": "The shader applies its declared 12-level cap again after U8 texture serialization."
+}

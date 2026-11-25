@@ -1,0 +1,31 @@
+{
+  "schema": "masked-ct-art-display-v1",
+  "shape_xyz": [
+    94,
+    238,
+    361
+  ],
+  "source_edge_origin_xyz_mm": [
+    7.047,
+    1.3590000000000002,
+    1.3590000000000002
+  ],
+  "display_spacing_mm": 0.144,
+  "native_sampling_mm": 0.018,
+  "source_voxels_integrated": 4097075268,
+  "selected_material_voxels": 967429317,
+  "file": {
+    "url": "masked-ct-display.bin.gz",
+    "bytes": 5415945,
+    "sha256": "f65b8be7266fc8d08bd2fd489fe8060e1b3455d74fd458cd9ed6e2399fe316c9",
+    "decoded_bytes": 32305492,
+    "decoded_sha256": "429b44315cd16cad69b525b95ed617ce640a31ce51c4e32816bfbbe75af516b5"
+  },
+  "source_gray_window": [
+    -3292.0,
+    26623.0
+  ],
+  "display_only": true,
+  "native_geometry_changed": false,
+  "native_mask_changed": false
+}

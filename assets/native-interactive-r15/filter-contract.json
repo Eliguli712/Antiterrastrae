@@ -1,0 +1,60 @@
+{
+  "claim_id": "NATIVE74_SHARED_VIEW_MASKED_ART_FILTERS_R15",
+  "mathematics": {
+    "assertion_tested": "Pool every original CT voxel into an explicitly labelled 144um artistic intensity cache, preserve every binary native 18um voxel in lossless bit slabs, and fit conditional patch-intensity mixture PPCA with spatial holdout and bounded display changes.",
+    "coefficient_domain": "Exact UInt64 mask counts and weighted sums; Float64 mixture PPCA and Float32/U8 display arrays.",
+    "conventions": "Scanner-index XYZ in mm; array order ZYX; original mask and geometry never replaced.",
+    "inputs": [
+      "All original 18um selected-mask and signed16 CT crop voxels"
+    ],
+    "bounds": {
+      "native_shape_zyx": [
+        2886,
+        1903,
+        746
+      ],
+      "pooling": 8,
+      "sample_patches": 48000,
+      "patch_shape": [
+        3,
+        3,
+        3
+      ],
+      "MPPCA_K": 4,
+      "MPPCA_q": 4,
+      "EM_max_iterations": 30,
+      "inference_top_components": 2,
+      "display_change_limit_gray_levels": 12
+    },
+    "non_claims": [
+      "No new acquired resolution or certified 1um accuracy",
+      "No biological interpretation of low-density candidates",
+      "No native porous-volume FEM",
+      "Display residual reduction is not a ground-truth reconstruction error"
+    ]
+  },
+  "execution_artifacts": [
+    "output/native_interactive_r15_2026-11-25/scripts/build_display_data.py",
+    "output/ct_web_2026-11-19/cache/selected_native_mask.u8",
+    "output/ct_web_2026-11-19/cache/native_specimen_crop.i16"
+  ],
+  "software": [
+    {
+      "name": "Python",
+      "version": "3.14.3"
+    },
+    {
+      "name": "NumPy",
+      "version": "2.4.3"
+    },
+    {
+      "name": "SciPy",
+      "version": "1.17.1"
+    }
+  ],
+  "randomness": {
+    "used": true,
+    "generator": "NumPy default_rng PCG64 / scipy kmeans2",
+    "seed": 20261125
+  }
+}
