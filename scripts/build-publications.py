@@ -11,8 +11,11 @@ ROOT = Path(__file__).resolve().parents[1]
 PUBLICATIONS = ROOT / 'publications'
 DOCUMENTS = [
     ('megalodon-current-preprint', 'Tooth-scale Stress Localisation in a µCT-derived Otodus megalodon Model',
-     'Computational biomechanics', 'In progress', '25 November 2026',
-     'Calibrated CT geometry, regional stress quantiles, P1/P2 verification, interface and attachment sensitivity, an independently verified full-objective 10 kPa neo-Hookean jaw control, conservative jaw-to-root transfer and unit-margin tensile responses. Includes public native, optimised, 200M exterior and raw numerical-field links.'),
+     'Computational biomechanics', 'Work in progress', '25 November 2026',
+     'Calibrated CT geometry, regional stress quantiles, and same-domain P1/P2 verification. Twelve fitted tooth–jaw finite-element cases test how attachment stiffness and loading direction redistribute principal tensile stress at the cutting margins. Includes native-surface figures, material and attachment sensitivity, and links to public geometry and numerical data.'),
+    ('megalodon-2026-11-25-ct-mechanics', 'Tooth-scale Stress Localisation: 25 November CT and Mechanics Edition',
+     'Research archive', 'Legacy development edition', '25 November 2026',
+     'Preserved twelve-page draft preceding the fitted tooth–jaw connection study.'),
     ('megalodon-2026-11-25-crown-root', 'Tooth-scale Stress Localisation: Crown–root and 100 mm Edition',
      'Research archive', 'Legacy development edition', '25 November 2026',
      'Preserved twelve-page draft before the CT and mechanics figure revision.'),
@@ -26,13 +29,13 @@ DOCUMENTS = [
      'Research archive', 'Legacy 9-page edition', '31 October 2026',
      'The unchanged nine-page edition, retained alongside the current preprint and earlier reports.'),
     ('massa-corporis', 'Massa Corporis et Densitas Architecturae',
-     'Comparative palaeobiology', 'Working draft', 'October 2026',
+     'Comparative palaeobiology', 'Work in progress', 'October 2026',
      'Body-mass estimation in cetaceans and Mesozoic marine reptiles, with explicit scaling assumptions and alternative estimates.'),
     ('song-before-civilisation', 'The Song Before Civilisation / Das Lied vor der Zivilisation',
      'Theoretical ecology', 'Theoretical manuscript', 'July 2026',
      'Energetic, cognitive and medium constraints on marine megafaunal intelligence, cultural transmission and information persistence.'),
     ('ancient-greek-semantic-dags', 'Compiling Ancient Greek Semantic DAGs with Phoneme, Morpheme, and Lexeme Layers',
-     'Computational linguistics', 'Course-project manuscript', 'May 2026',
+     'Computational linguistics', 'Work in progress', 'May 2026',
      'Inspectable semantic graphs compiled from Ancient Greek Universal Dependencies, with corpus evaluation and explicit intermediate layers.'),
     ('brownian-motion-notes', 'From Random Walks to Brownian Motion',
      'Probability theory', 'Mathematical notes', 'September 2026',
@@ -75,11 +78,17 @@ def disclosure(paper):
     escape = html.escape
     slug = paper['id']
     title = escape(paper['title'])
+    status = escape(paper['status'])
+    if paper['status'] == 'Work in progress':
+        status = f'<b>{status}</b>'
     reader = 'publications/reader.html?paper=' + slug
     size = f"{paper['bytes'] / 1_000_000:.2f} MB" if paper['bytes'] > 1_000_000 else f"{paper['bytes'] / 1_000:.0f} KB"
+    source_link = ''
+    if paper.get('source_file'):
+        source_link = f'<a href="publications/{escape(paper["source_file"])}" download>LaTeX source for this edition</a>'
     return f'''<details class="paper-entry" id="paper-{slug}">
-<summary><span><span class="paper-category">{escape(paper['category'])}</span><strong>{title}</strong><span class="paper-meta">{escape(paper['status'])} · {paper['pages']} pages · {escape(paper['date'])}</span></span><span class="paper-expand" aria-hidden="true"></span></summary>
-<div class="paper-content"><p>{escape(paper['description'])}</p><div class="paper-actions"><a href="{reader}">Read full paper</a><a href="publications/{escape(paper['file'])}" download="{escape(paper['file'])}">Download PDF <small>{size}</small></a></div><iframe data-reader="{reader}&amp;embedded=1" title="Complete paper: {title}" loading="lazy"></iframe><p class="paper-return"><a href="#cv">Research CV</a></p></div>
+<summary><span><span class="paper-category">{escape(paper['category'])}</span><strong>{title}</strong><span class="paper-meta">{status} · {paper['pages']} pages · {escape(paper['date'])}</span></span><span class="paper-expand" aria-hidden="true"></span></summary>
+<div class="paper-content"><p>{escape(paper['description'])}</p><div class="paper-actions"><a href="{reader}">Read full paper</a><a href="publications/{escape(paper['file'])}" download="{escape(paper['file'])}">Download PDF <small>{size}</small></a>{source_link}</div><iframe data-reader="{reader}&amp;embedded=1" title="Complete paper: {title}" loading="lazy"></iframe><p class="paper-return"><a href="#cv">Research CV</a></p></div>
 </details>'''
 
 
@@ -94,8 +103,15 @@ def main():
         documents.append(document)
     else:
         print('Still required from the author:', LAST_FILE)
+    catalog_path = PUBLICATIONS / 'catalog.json'
+    if catalog_path.is_file():
+        existing = {paper['id']: paper for paper in json.loads(catalog_path.read_text())['documents']}
+        for paper in documents:
+            for key, value in existing.get(paper['id'], {}).items():
+                if key.endswith(('_file', '_url')):
+                    paper[key] = value
     catalog = {'documents': documents}
-    (PUBLICATIONS / 'catalog.json').write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + '\n')
+    catalog_path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + '\n')
     source = (ROOT / 'cv.html').read_text()
     section = f'''<section class="manuscripts" id="manuscripts" aria-labelledby="manuscripts-title">
 <header class="manuscripts-header"><div><p class="manuscripts-kicker">Research / Mathematics / Selected writing</p><h2 id="manuscripts-title">Works &amp; reading directory.</h2><p class="manuscripts-intro">Browse the complete supplied research index in English, or expand a hosted paper below to read its full text and download the original PDF.</p></div><span class="manuscripts-count">{len(documents):02d} <small>HOSTED PDFS</small></span></header>

@@ -14,7 +14,7 @@ Mathematics and computer science undergraduate developing computational approach
 
 **Work in progress — current projects and working manuscripts in development**
 
-- **Megalodon tooth-scale mechanics:** Calibrated CT geometry, numerical verification and regional stress sensitivity. Working technical report.
+- **Megalodon tooth-scale mechanics:** Calibrated CT geometry, numerical verification and regional stress sensitivity. Work in progress.
 - **Cynthiacetus digital cranial anatomy:** Cranial models, comparative anatomy and print-support visualisation. Project in development.
 - **Antiterrastrae biosonar simulation:** Interactive geometry, acoustic propagation and finite-element experiments. Prototype in development.
 - **Mathematics and computational models:** Probability, algebra, recurrences and geometric visualisation. Working manuscripts.
@@ -38,11 +38,11 @@ B.A. candidate, Mathematics & Computer Science
 
 **Han, E. (2026).** [Tooth-scale Stress Localisation in a micro-CT-derived Otodus megalodon Model: Calibrated Geometry, Numerical Verification and Regional Sensitivity.](https://eliguli712.github.io/Antiterrastrae/publications/reader.html?paper=megalodon-current-preprint)
 
-In progress · 12 pages · 25 November 2026
+**Work in progress** · 12 pages · 25 November 2026
 
-Calibrated CT geometry, regional quantile stability, same-domain P1/P2 verification, material-interface and attachment sensitivity, an independently verified full-objective 10 kPa neo-Hookean jaw control, conservative jaw-to-root transfer and unit-margin tensile responses, plus a native-domain module with synthetic verification. Full native-volume execution remains pending. Includes public native, optimised, exact 200M exterior and raw numerical-field archives under stated modelling assumptions.
+Calibrated CT geometry, regional stress quantiles, and same-domain P1/P2 verification. Twelve fitted tooth–jaw finite-element cases test how attachment stiffness and loading direction redistribute principal tensile stress at the cutting margins. Includes native-surface figures, material and attachment sensitivity, and links to public geometry and numerical data.
 
-[LaTeX source package](https://eliguli712.github.io/Antiterrastrae/publications/megalodon-current-preprint-source.zip) · [10 kPa objective jaw data](https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/DebunkMeg_Jaw_Objective_10kPa_NH_2026-11-23.zip) · [Jaw–tooth edge-transfer data](https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/DebunkMeg_Jaw_Tooth_Edge_Transfer_2026-11-23.zip) · [Raw A2/A3 fields](https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/DebunkMeg_Regional_Fields_A2_A3_2026-11-22.zip) · [Preserved 9-page edition](https://eliguli712.github.io/Antiterrastrae/publications/reader.html?paper=megalodon-9page-report)
+[LaTeX source for the previous edition](https://eliguli712.github.io/Antiterrastrae/publications/megalodon-current-preprint-source.zip) · [10 kPa objective jaw data](https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/DebunkMeg_Jaw_Objective_10kPa_NH_2026-11-23.zip) · [Jaw–tooth edge-transfer data](https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/DebunkMeg_Jaw_Tooth_Edge_Transfer_2026-11-23.zip) · [Raw A2/A3 fields](https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-ct-18um/DebunkMeg_Regional_Fields_A2_A3_2026-11-22.zip) · [Preserved 9-page edition](https://eliguli712.github.io/Antiterrastrae/publications/reader.html?paper=megalodon-9page-report)
 
 ## Selected Research & Computational Projects
 
