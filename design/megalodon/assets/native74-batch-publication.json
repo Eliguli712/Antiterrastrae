@@ -1,0 +1,135 @@
+{
+  "revision": "native74-paper-mr5-r14",
+  "data_commit": "37ea516b75facd7dacbaacb332c4b5c522d15ad1",
+  "source_faces": 74293846,
+  "source_vertices": 37951699,
+  "geometry": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native74-paper-mr5/geometry.json",
+  "palette": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native74-paper-mr5/palette.json",
+  "field_base": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native74-paper-mr5/",
+  "cases": {
+    "50": {
+      "label": "5 cm · preserved paper-reference appearance",
+      "model": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-paper-mr5-native74/Megalodon_50mm_Native74_Paper_Reference.3mf",
+      "field": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native74-paper-mr5/50mm-field.json",
+      "plate": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native74-paper-mr5/50mm-normalized-three-views.png",
+      "views": {
+        "front": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native74-paper-mr5/50mm-front.png",
+        "oblique": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native74-paper-mr5/50mm-oblique.png",
+        "reverse": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native74-paper-mr5/50mm-reverse.png"
+      }
+    },
+    "100": {
+      "label": "10 cm · independently calculated MR5",
+      "model": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-paper-mr5-native74/Megalodon_100mm_Native74_MR5_Computed.3mf",
+      "field": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native74-paper-mr5/100mm-field.json",
+      "plate": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native74-paper-mr5/100mm-normalized-three-views.png",
+      "views": {
+        "front": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native74-paper-mr5/100mm-front.png",
+        "oblique": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native74-paper-mr5/100mm-oblique.png",
+        "reverse": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native74-paper-mr5/100mm-reverse.png"
+      }
+    }
+  },
+  "native_porous_volume_FEM": "pending; explicitly deferred by user",
+  "downloads": [
+    {
+      "label": "Normalized plates · PDF",
+      "url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-paper-mr5-native74/Native74_5cm_10cm_Normalized_Colourbars.pdf"
+    },
+    {
+      "label": "Current plots, FEM data & code · ZIP",
+      "url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-paper-mr5-native74/Native74_Current_5cm_Paper_10cm_MR5_Normalized_Plots_and_Data.zip"
+    },
+    {
+      "label": "Native scan statistics & samples · ZIP",
+      "url": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-paper-mr5-native74/Native18_Statistical_Analysis_and_Precise_Media.zip"
+    },
+    {
+      "label": "All native faces · mapping audit",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native74-paper-mr5/geometry-transport-audit.json"
+    },
+    {
+      "label": "Source files & checksums · JSON",
+      "url": "./assets/native74-publication-integrity.json"
+    }
+  ],
+  "analysis": {
+    "pdf": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/Native18_PCA_PPCA_MPPCA_and_Microstructure.pdf",
+    "zip": "https://github.com/Eliguli712/Antiterrastrae/releases/download/megalodon-paper-mr5-native74/Native18_Statistical_Analysis_and_Precise_Media.zip",
+    "record": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/native-analysis-result.json",
+    "principal": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/Native18_Principal_Maximum_Sections.png",
+    "bootstrap": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/Native18_Spatial_Bootstrap_Stability.png",
+    "mppca": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/Native18_Conditional_MPPCA.png",
+    "sections": [
+      {
+        "axis": 1,
+        "png": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/principal_axis1_native18um.png",
+        "gif": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/principal_axis1_native18um.gif",
+        "data": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/principal_axis1_native_samples.npz"
+      },
+      {
+        "axis": 2,
+        "png": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/principal_axis2_native18um.png",
+        "gif": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/principal_axis2_native18um.gif",
+        "data": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/principal_axis2_native_samples.npz"
+      },
+      {
+        "axis": 3,
+        "png": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/principal_axis3_native18um.png",
+        "gif": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/principal_axis3_native18um.gif",
+        "data": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/principal_axis3_native_samples.npz"
+      }
+    ],
+    "micro": [
+      {
+        "slice": 1500,
+        "gif": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/micro_1500_native18um_sweep.gif",
+        "data": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/micro_1500_original_ROI.npz"
+      },
+      {
+        "slice": 1900,
+        "gif": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/micro_1900_native18um_sweep.gif",
+        "data": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/micro_1900_original_ROI.npz"
+      },
+      {
+        "slice": 2100,
+        "gif": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/micro_2100_native18um_sweep.gif",
+        "data": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/micro_2100_original_ROI.npz"
+      }
+    ],
+    "weights": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/Native18_PCA_Weights_and_Areas.png",
+    "microComparison": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/native18-inference/Native18_Microstructure_Candidates.png"
+  },
+  "media": {
+    "slices": {
+      "native_mask_middle_z1443": {
+        "gif": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/ct-native-r14/native_mask_middle_z1443.gif"
+      },
+      "native_mask_near_root_z2600": {
+        "gif": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/ct-native-r14/native_mask_near_root_z2600.gif"
+      }
+    },
+    "manifest": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/ct-native-r14/media_manifest.json",
+    "broadface": {
+      "mp4": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/ct-native-r14/CT_broadface_longitudinal_3050_10x_1080p.mp4",
+      "gif": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/ct-native-r14/CT_broadface_longitudinal_3050_10x_1080p.gif",
+      "originalGif": "https://eliguli712.github.io/Antiterrastrae/design/megalodon/assets/ct-r10/CT_broadface_longitudinal_3050.gif"
+    },
+    "axes": {
+      "mp4": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/ct-native-r14/CT_specimen_three_axes_3050_10x_1080p.mp4",
+      "gif": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/ct-native-r14/CT_specimen_three_axes_3050_10x_1080p.gif",
+      "originalGif": "https://eliguli712.github.io/Antiterrastrae/design/megalodon/assets/ct-r10/CT_specimen_three_axes_3050.gif"
+    }
+  },
+  "ruler": {
+    "mesh": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/palaeo-ruler-r14/Palaeontological_Ruler_50mm.json",
+    "png": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/palaeo-ruler-r14/Palaeontological_Ruler_50mm.png",
+    "svg": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/palaeo-ruler-r14/Palaeontological_Ruler_50mm.svg",
+    "step": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/palaeo-ruler-r14/Palaeontological_Ruler_50mm.step",
+    "model": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/palaeo-ruler-r14/Palaeontological_Ruler_50mm.3mf",
+    "zip": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/palaeo-ruler-r14/Palaeontological_Ruler_50mm_CAD.zip",
+    "audit": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/palaeo-ruler-r14/CAD_Ruler_Audit.json",
+    "span_mm": 50,
+    "tick_pitch_mm": 1
+  }
+}
