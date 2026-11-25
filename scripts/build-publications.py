@@ -12,7 +12,10 @@ PUBLICATIONS = ROOT / 'publications'
 DOCUMENTS = [
     ('megalodon-current-preprint', 'Tooth-scale Stress Localisation in a µCT-derived Otodus megalodon Model',
      'Computational biomechanics', 'In progress', '25 November 2026',
-     'Calibrated CT geometry, regional stress quantiles, P1/P2 verification, interface and attachment sensitivity, an independently verified full-objective 10 kPa neo-Hookean jaw control, conservative jaw-to-root transfer and unit-margin tensile responses. Includes public native, optimised, 200M exterior and raw numerical-field links.'),
+     'Calibrated micro-CT geometry and regional stress verification, with native 18 µm cross-sections, probabilistic principal-component analysis, and an independent 100 mm MR5 calculation. The updated manuscript documents the tooth–jaw connection analysis and its attachment assumptions.'),
+    ('megalodon-2026-11-25-figure-review', 'Tooth-scale Stress Localisation: 25 November Figure Revision',
+     'Research archive', 'Legacy development edition', '25 November 2026',
+     'The previous 25 November figure revision, preserved with its original source package.'),
     ('megalodon-2026-11-25-crown-root', 'Tooth-scale Stress Localisation: Crown–root and 100 mm Edition',
      'Research archive', 'Legacy development edition', '25 November 2026',
      'Preserved twelve-page draft before the CT and mechanics figure revision.'),
