@@ -1,0 +1,8 @@
+{
+  "source": "User-supplied glass/cobalt artwork",
+  "sha256": "0dd5b5e05181de25dbd20e15f156b7bd32088ee7fc5f05e76e145402e8f6b87a",
+  "image_transformation": "none; exact original bytes",
+  "scope": "studio Art display only",
+  "quantitative_stress_field": false,
+  "interactive_material": "Separate WebGL physical-material approximation of the reference artwork; original geometry and stress values are unchanged."
+}
