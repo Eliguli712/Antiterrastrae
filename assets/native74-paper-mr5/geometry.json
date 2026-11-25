@@ -63,11 +63,11 @@
     35.69259136159072,
     182.60196213035087
   ],
-  "geometry_bytes": 751034897,
+  "geometry_bytes": 751034944,
   "gpu_buffer_bytes": 1482951057,
   "chunks": [
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-00.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-00.bin.gz",
       "bytes": 9096084,
       "sha256": "0e1683947ffaa86198b4f18f5769b666e03fd6c17daceae65e657dd57ce1891c",
       "vertices": 500560,
@@ -75,7 +75,7 @@
       "source_first_face": 0
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-01.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-01.bin.gz",
       "bytes": 9217400,
       "sha256": "9e6cff8485d7bcfb350032fd6c16f440dd7068ee6ab785e998d969c2507fc157",
       "vertices": 502350,
@@ -83,7 +83,7 @@
       "source_first_face": 1000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-02.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-02.bin.gz",
       "bytes": 9283000,
       "sha256": "c836eb11430494078a1c6ea1fb70c7d70a4d496da735e33ac9e15532b7d1d59c",
       "vertices": 502593,
@@ -91,7 +91,7 @@
       "source_first_face": 2000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-03.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-03.bin.gz",
       "bytes": 9389472,
       "sha256": "d560f8bb227fdc6b74a9fb71a4de2077706a6d1f7ec4a856dbdb330ea76d49d4",
       "vertices": 502781,
@@ -99,7 +99,7 @@
       "source_first_face": 3000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-04.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-04.bin.gz",
       "bytes": 9423314,
       "sha256": "be1677c6cc50b14b3cdd23bf77c8a47c929e329b0093694e761c18b99bceb27c",
       "vertices": 503328,
@@ -107,7 +107,7 @@
       "source_first_face": 4000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-05.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-05.bin.gz",
       "bytes": 9471776,
       "sha256": "3cd4f4b1534bab4325259a2e06dd8aa455d14df0f5f2bea580b51e0c742b0009",
       "vertices": 503397,
@@ -115,7 +115,7 @@
       "source_first_face": 5000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-06.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-06.bin.gz",
       "bytes": 9492287,
       "sha256": "3953667da306ac512f29c29e23a9b5de5fe74373034f59776e91ce9b8bbb182b",
       "vertices": 504520,
@@ -123,7 +123,7 @@
       "source_first_face": 6000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-07.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-07.bin.gz",
       "bytes": 9604279,
       "sha256": "e975003c2f0e2fc19b876fdc64a3a3e3fda490c57099939a948e8df884722d79",
       "vertices": 504877,
@@ -131,7 +131,7 @@
       "source_first_face": 7000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-08.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-08.bin.gz",
       "bytes": 9636091,
       "sha256": "3ef7886d8642c94e5543d7fce987bde904fce6b9fe953f765d975f45f4548a5c",
       "vertices": 505679,
@@ -139,15 +139,15 @@
       "source_first_face": 8000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-09.bin.gz",
-      "bytes": 9614698,
-      "sha256": "85246087e752832ff89790c22d34619b139561980a941a4cf7772abf3d232efd",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-09.bin.gz",
+      "bytes": 9614697,
+      "sha256": "52a4f6c2b2ef60e4cdb929001fca39e0348c21df241435ec0445e4f47a6e7a50",
       "vertices": 506404,
       "triangles": 1000000,
       "source_first_face": 9000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-10.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-10.bin.gz",
       "bytes": 9731514,
       "sha256": "ed4f0c8e1a6312ff5f9b8e7b4b1109347199538fe891b8a222d3a4b9a97562fe",
       "vertices": 509536,
@@ -155,7 +155,7 @@
       "source_first_face": 10000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-11.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-11.bin.gz",
       "bytes": 9760003,
       "sha256": "dd4e1ae22defe1eff6d5a8dcb2d3c13b3bacf1f87a725268f5b64946cdd23ac8",
       "vertices": 511621,
@@ -163,7 +163,7 @@
       "source_first_face": 11000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-12.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-12.bin.gz",
       "bytes": 9802065,
       "sha256": "8dc53be703ac34fb4bf3d00d66aa4b4c797bbb6be244785383413e5d3282eaec",
       "vertices": 513482,
@@ -171,47 +171,47 @@
       "source_first_face": 12000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-13.bin.gz",
-      "bytes": 9711513,
-      "sha256": "9eb47b5ebf7959dc20015435532078f8d01fea2993259d92c9c2f2da8fd4cd5b",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-13.bin.gz",
+      "bytes": 9711523,
+      "sha256": "aec8dac1e48254639e259e6f98f6b23cccedfe9abddba045d59524ad229635d9",
       "vertices": 507742,
       "triangles": 1000000,
       "source_first_face": 13000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-14.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-14.bin.gz",
       "bytes": 9880371,
-      "sha256": "b0bc28238cd5b8f482c3b5656ebcee3e0dee4986386204dcaf71c0940678a661",
+      "sha256": "17ff99bb1a525610fe443981f817435d13dcf92162675d11df76994d9a08de69",
       "vertices": 516014,
       "triangles": 1000000,
       "source_first_face": 14000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-15.bin.gz",
-      "bytes": 9934877,
-      "sha256": "85ef2337ab5a156fc298e52003cd6e81fddad8a87f3ac471225534f45f75767d",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-15.bin.gz",
+      "bytes": 9934879,
+      "sha256": "02a8f231dabe4dc01fbb7ec57f56a0b945c335bea655f07ffc28ac8010b8e3c1",
       "vertices": 519116,
       "triangles": 1000000,
       "source_first_face": 15000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-16.bin.gz",
-      "bytes": 9953536,
-      "sha256": "8d608ddf4b59ee66868c1a91d005ef46ab38c8873f961d27b2f765b115408f2c",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-16.bin.gz",
+      "bytes": 9953538,
+      "sha256": "0c525ecfb101d3f018e47d973187fbde1b018d3f377745f65d34fd9cfe31d7ca",
       "vertices": 519888,
       "triangles": 1000000,
       "source_first_face": 16000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-17.bin.gz",
-      "bytes": 10010359,
-      "sha256": "b14a34ae6463d9da419e3663969c49eb1ee4b11986836d1461f7bb3109bf4b41",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-17.bin.gz",
+      "bytes": 10010366,
+      "sha256": "5ce63cbcfb45574ba25ef1561c2c26b11ef6932a69d318fd736640fc23a42cab",
       "vertices": 523388,
       "triangles": 1000000,
       "source_first_face": 17000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-18.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-18.bin.gz",
       "bytes": 10030993,
       "sha256": "c29ba180c15a2835ae16ef5e38fd5552e814f0e8a8085cb3fe6880f4728ea8da",
       "vertices": 525206,
@@ -219,15 +219,15 @@
       "source_first_face": 18000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-19.bin.gz",
-      "bytes": 10068193,
-      "sha256": "3054a6677f3afec6fa581eb8a22cb5bb1696820e9fc5e9d6f4690ad00236cb24",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-19.bin.gz",
+      "bytes": 10068207,
+      "sha256": "4279d9fcd90de75f6ea0369848966d9791331294d82d5b1030f6e254df912dc3",
       "vertices": 528062,
       "triangles": 1000000,
       "source_first_face": 19000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-20.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-20.bin.gz",
       "bytes": 9812522,
       "sha256": "4292d6d5d4144ebf34213bbe64c18464176b0876a779b18ec10589bdabe86678",
       "vertices": 511335,
@@ -235,7 +235,7 @@
       "source_first_face": 20000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-21.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-21.bin.gz",
       "bytes": 10164930,
       "sha256": "15bf0238f4b22345d20b7338eefe9d98bf86bc00e9425568468e5cf408ff7a0d",
       "vertices": 534523,
@@ -243,7 +243,7 @@
       "source_first_face": 21000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-22.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-22.bin.gz",
       "bytes": 10216357,
       "sha256": "57b62200aea095eebda4c9e22dfb9a643cc01695b3f0d2754d0aa1d66479de05",
       "vertices": 537669,
@@ -251,7 +251,7 @@
       "source_first_face": 22000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-23.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-23.bin.gz",
       "bytes": 10236020,
       "sha256": "a8c86353737fd0e30ebea3716f2b3a7dc164e925e38e6b00cd353848b111d9c3",
       "vertices": 539246,
@@ -259,7 +259,7 @@
       "source_first_face": 23000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-24.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-24.bin.gz",
       "bytes": 10283272,
       "sha256": "288204880538be84728c8e47f3111d2902c2d3a72e7b9a583318c887fe967dd5",
       "vertices": 540906,
@@ -267,7 +267,7 @@
       "source_first_face": 24000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-25.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-25.bin.gz",
       "bytes": 10312897,
       "sha256": "19cb8a7d1b26de7adc292370629190e5501862021263b4acf56a41439cf2e3e8",
       "vertices": 540519,
@@ -275,23 +275,23 @@
       "source_first_face": 25000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-26.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-26.bin.gz",
       "bytes": 10401521,
-      "sha256": "8222d435faf081844313bf7d972b78784b1961e33c931672fa7057f54312064a",
+      "sha256": "966bb4244eaf18d51af8bc8a570a832ef88c16353d5a36ee1b8341bc3489976f",
       "vertices": 544974,
       "triangles": 1000000,
       "source_first_face": 26000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-27.bin.gz",
-      "bytes": 10431714,
-      "sha256": "877de382bb8bd520b8d1a594c7a27d335e902cdd20500d2d99952422546aede8",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-27.bin.gz",
+      "bytes": 10431718,
+      "sha256": "24d7f422a72931b22bd000d5778a6bc58fd2af8233e438862464492e111dfa52",
       "vertices": 546647,
       "triangles": 1000000,
       "source_first_face": 27000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-28.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-28.bin.gz",
       "bytes": 10477725,
       "sha256": "733d9dda6f7f7e25f7067ad1b71eaf3609f984e330007b43e3c1086e2dd4af73",
       "vertices": 549449,
@@ -299,7 +299,7 @@
       "source_first_face": 28000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-29.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-29.bin.gz",
       "bytes": 10529114,
       "sha256": "0718212fd394e4b4fc290c36ea42125823ddfe1cb5edc3a9502b59fb54aeb3ba",
       "vertices": 553054,
@@ -307,7 +307,7 @@
       "source_first_face": 29000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-30.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-30.bin.gz",
       "bytes": 10489729,
       "sha256": "337f94497c625658d5275be51e34ce8ad8c0e557a37d23d0c328b95f83288f98",
       "vertices": 550303,
@@ -315,7 +315,7 @@
       "source_first_face": 30000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-31.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-31.bin.gz",
       "bytes": 10125087,
       "sha256": "65fbdae4f91c8b73912f5ad19d53216a3a1d2eda4786183b8cd071e654dc790d",
       "vertices": 525490,
@@ -323,7 +323,7 @@
       "source_first_face": 31000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-32.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-32.bin.gz",
       "bytes": 10404508,
       "sha256": "eae8c54370321368bd730a90752fa581600c6ca9fd247044a56c914f6347114a",
       "vertices": 544789,
@@ -331,7 +331,7 @@
       "source_first_face": 32000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-33.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-33.bin.gz",
       "bytes": 10554693,
       "sha256": "bdd1bc2112ea2a65f7b6a07e1426f415e7e5c8ef8d42d6995f9adb0549018a55",
       "vertices": 555005,
@@ -339,7 +339,7 @@
       "source_first_face": 33000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-34.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-34.bin.gz",
       "bytes": 10570241,
       "sha256": "b5ed5e4025bb2f2dac3d3af08c8f09355c5f5c9a02521a7f93e72722273158ba",
       "vertices": 555695,
@@ -347,7 +347,7 @@
       "source_first_face": 34000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-35.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-35.bin.gz",
       "bytes": 10550804,
       "sha256": "18436ad6fddd6476900ac0c9d26de6eec62aecd8455feb3c10cb2937db278eb5",
       "vertices": 553769,
@@ -355,7 +355,7 @@
       "source_first_face": 35000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-36.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-36.bin.gz",
       "bytes": 10546395,
       "sha256": "58205896f4c120e1a32e84e944d1b674e1dd598ccb3b075ee156f384d1b56457",
       "vertices": 553051,
@@ -363,7 +363,7 @@
       "source_first_face": 36000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-37.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-37.bin.gz",
       "bytes": 10539972,
       "sha256": "dbd5d87a6d27ead8ee6d9fdfec9694a1642ea633024f088e0ce51ffe12a5c749",
       "vertices": 553087,
@@ -371,15 +371,15 @@
       "source_first_face": 37000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-38.bin.gz",
-      "bytes": 10544550,
-      "sha256": "c69b8b4468c9b5a73aa86063becfd4dcbaaaab7b7f5dc0b3c42cf4c23c615701",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-38.bin.gz",
+      "bytes": 10544560,
+      "sha256": "070e640f6b09965f36d9a2503ecbbfa66a8e429f5a888b29c32f2d46285efb99",
       "vertices": 552924,
       "triangles": 1000000,
       "source_first_face": 38000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-39.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-39.bin.gz",
       "bytes": 10518190,
       "sha256": "bd52cfd4a28c16a425556eeaf5dc5bf862ba89f5d2175a27c6b07dfbed916065",
       "vertices": 550615,
@@ -387,23 +387,23 @@
       "source_first_face": 39000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-40.bin.gz",
-      "bytes": 10527478,
-      "sha256": "76eb20ab310308d6b3ac6122b16e7bd6b6dc81959ead8eca8aa8a52146ec72f9",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-40.bin.gz",
+      "bytes": 10527482,
+      "sha256": "791dfa9a7afdf2680d71441383c027c5bc9f43259b37484594f748ce8bd0f2b2",
       "vertices": 551983,
       "triangles": 1000000,
       "source_first_face": 40000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-41.bin.gz",
-      "bytes": 10554820,
-      "sha256": "55861820eed950b113b9ad52ebe578a88d703215bada313ee46cd6fad0a9bdc6",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-41.bin.gz",
+      "bytes": 10554815,
+      "sha256": "16d4dc75b7d7489a3ba7b45c7708d4566d1924e3dc6c51ed9c756c70a2139acf",
       "vertices": 553721,
       "triangles": 1000000,
       "source_first_face": 41000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-42.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-42.bin.gz",
       "bytes": 10559784,
       "sha256": "6e76addd57f50d57a8bf8d26faa5d6753252247694c3fbe3731fb793874b2d1f",
       "vertices": 554098,
@@ -411,7 +411,7 @@
       "source_first_face": 42000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-43.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-43.bin.gz",
       "bytes": 10538771,
       "sha256": "966fa508b73a07492456b2bd0331b9fe61bc8b978f828afdce6d91b06d763bab",
       "vertices": 552639,
@@ -419,7 +419,7 @@
       "source_first_face": 43000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-44.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-44.bin.gz",
       "bytes": 10526150,
       "sha256": "884f67205eb59fea0f59a099b996e46a7811503c1de4b0216e350fbd2cfa63a3",
       "vertices": 551599,
@@ -427,7 +427,7 @@
       "source_first_face": 44000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-45.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-45.bin.gz",
       "bytes": 10523326,
       "sha256": "d13a0d516d08511111b4459bb8ff413c4c9326a82bb70e4576614861e8b990e1",
       "vertices": 550950,
@@ -435,7 +435,7 @@
       "source_first_face": 45000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-46.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-46.bin.gz",
       "bytes": 10515599,
       "sha256": "bc2a5966f37b970b5c597dfd457b9357a17106378d56f1396d5db30d804ec312",
       "vertices": 550781,
@@ -443,7 +443,7 @@
       "source_first_face": 46000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-47.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-47.bin.gz",
       "bytes": 10388052,
       "sha256": "4e3edf85cec76affed08e8166b9f0788ba6ed6fb8ce474780e7c6b780d096593",
       "vertices": 542504,
@@ -451,7 +451,7 @@
       "source_first_face": 47000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-48.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-48.bin.gz",
       "bytes": 10140895,
       "sha256": "816714b05fc77e5d558556b584b553b681d07b43cd3f4fb0cb4a948c042d74c5",
       "vertices": 525937,
@@ -459,7 +459,7 @@
       "source_first_face": 48000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-49.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-49.bin.gz",
       "bytes": 10319084,
       "sha256": "471eb0d2cf983f2f59b68da5348e2c025fe3dd92fdd0c9d4544d10c721e5d7eb",
       "vertices": 538863,
@@ -467,7 +467,7 @@
       "source_first_face": 49000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-50.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-50.bin.gz",
       "bytes": 10457867,
       "sha256": "dba01adf7803e1fbe7648c7cd49ce2583b97670e520f6ac09c8ba2ad3eef4b94",
       "vertices": 548350,
@@ -475,7 +475,7 @@
       "source_first_face": 50000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-51.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-51.bin.gz",
       "bytes": 10449968,
       "sha256": "87c8ae793da952db7204ac79539b9f244af64a1bf57f64811b49e61f4495a7e2",
       "vertices": 547862,
@@ -483,7 +483,7 @@
       "source_first_face": 51000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-52.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-52.bin.gz",
       "bytes": 10431806,
       "sha256": "8a5f96e3979dbe7e9737531eaf1e294594689279e560827bcba56c5589f36f4c",
       "vertices": 547017,
@@ -491,7 +491,7 @@
       "source_first_face": 52000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-53.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-53.bin.gz",
       "bytes": 10430275,
       "sha256": "a73f032525eeec8a4c928e2f37e5d9110480bd0ab0a0a7290256b67de5f6a25f",
       "vertices": 546350,
@@ -499,7 +499,7 @@
       "source_first_face": 53000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-54.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-54.bin.gz",
       "bytes": 10402452,
       "sha256": "960e95e0b34e6f6392e9bdc9fbc18f1b72d8b2dbf91b50bd4a935ac0b12dbde2",
       "vertices": 545039,
@@ -507,7 +507,7 @@
       "source_first_face": 54000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-55.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-55.bin.gz",
       "bytes": 10391672,
       "sha256": "49c913870facd1c3bec657d73a4aa38bdb7b32779476190dc21550dcf89e253f",
       "vertices": 544426,
@@ -515,7 +515,7 @@
       "source_first_face": 55000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-56.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-56.bin.gz",
       "bytes": 10381398,
       "sha256": "3d65a9a9b5dd22ed05ba91c9ba3e6fe7672c6fa488a07c3ce894611ac411e96d",
       "vertices": 545404,
@@ -523,7 +523,7 @@
       "source_first_face": 56000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-57.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-57.bin.gz",
       "bytes": 10337634,
       "sha256": "0c13fd80671de71b3ec1ca55ee6e3e06bccd4f09220bfe636971d33ed2ad5ae6",
       "vertices": 542327,
@@ -531,7 +531,7 @@
       "source_first_face": 57000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-58.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-58.bin.gz",
       "bytes": 10314621,
       "sha256": "3266a58726f206b03ed0dea18e0d77ea60c14be2fd59c94c2df90bfe10cd93d6",
       "vertices": 540773,
@@ -539,7 +539,7 @@
       "source_first_face": 58000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-59.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-59.bin.gz",
       "bytes": 10312381,
       "sha256": "c1825bedb1e2a5db3fc39500bd603545d1204f71aa3423995f3b72b58fc01d56",
       "vertices": 540777,
@@ -547,7 +547,7 @@
       "source_first_face": 59000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-60.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-60.bin.gz",
       "bytes": 10284049,
       "sha256": "f5859ac0886a67c82c63cf813a25f3f4ed1c8ddd733b5f0f5a5170bb27d5cbe9",
       "vertices": 539178,
@@ -555,7 +555,7 @@
       "source_first_face": 60000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-61.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-61.bin.gz",
       "bytes": 10253868,
       "sha256": "2b7887dbbbe3af80a3bab4befb2ccc57ac496f6ca7a16d9016f9b6a29a21ce0d",
       "vertices": 537564,
@@ -563,7 +563,7 @@
       "source_first_face": 61000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-62.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-62.bin.gz",
       "bytes": 10221012,
       "sha256": "f428b97b042c273ce14b1cd52cf2d79f102b63c8438ac5ee805122de831c8d00",
       "vertices": 535055,
@@ -571,7 +571,7 @@
       "source_first_face": 62000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-63.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-63.bin.gz",
       "bytes": 10180228,
       "sha256": "5f6aa7c81a61dae8a3f4216c2a748edfaa3e8077e8ff6f1fc3fe0ef29fb4329d",
       "vertices": 531880,
@@ -579,7 +579,7 @@
       "source_first_face": 63000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-64.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-64.bin.gz",
       "bytes": 10138150,
       "sha256": "eae21da4d36ab8a6df9324bc25211d97b4743a1b196abe319097bc7851ba8985",
       "vertices": 528582,
@@ -587,7 +587,7 @@
       "source_first_face": 64000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-65.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-65.bin.gz",
       "bytes": 10063668,
       "sha256": "58403a4ed2d8ca4f3486b2c56f74d2fc8b73171b2ba98a9458c6d595f05d97ed",
       "vertices": 522214,
@@ -595,7 +595,7 @@
       "source_first_face": 65000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-66.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-66.bin.gz",
       "bytes": 9931817,
       "sha256": "69f460089d7867ee3b00cd417fdcc95615e61dcac26a427829b35c5115a3b6a4",
       "vertices": 513356,
@@ -603,7 +603,7 @@
       "source_first_face": 66000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-67.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-67.bin.gz",
       "bytes": 9897262,
       "sha256": "dc2a54dbc54c008f489e8c8ecfe26b0277e30c864691188697cd70bb8807b92d",
       "vertices": 511058,
@@ -611,7 +611,7 @@
       "source_first_face": 67000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-68.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-68.bin.gz",
       "bytes": 9938039,
       "sha256": "5fd90e7760cfa46335a4c11de4eab47325d89359675b71dde6bac7a642eb252a",
       "vertices": 513543,
@@ -619,7 +619,7 @@
       "source_first_face": 68000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-69.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-69.bin.gz",
       "bytes": 9847380,
       "sha256": "43453d3b66a91414f9f2560bd60a244a84dcea4db064aeeedffabe24e6a776a1",
       "vertices": 507521,
@@ -627,7 +627,7 @@
       "source_first_face": 69000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-70.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-70.bin.gz",
       "bytes": 9728639,
       "sha256": "063e308acd100a796e989c6b7762fd0a5e812423d8f94ec20928bc791bf12cbb",
       "vertices": 506983,
@@ -635,7 +635,7 @@
       "source_first_face": 70000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-71.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-71.bin.gz",
       "bytes": 9611362,
       "sha256": "57c9fa7f2d22cfe4f3a4e29d8d081e053e01f219d0ec7bf7133fe31329589018",
       "vertices": 504414,
@@ -643,7 +643,7 @@
       "source_first_face": 71000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-72.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-72.bin.gz",
       "bytes": 9512911,
       "sha256": "4ad88fdf121b6602e31caf2eed76918e8dde781405ca13a76545b65b468f39f0",
       "vertices": 502835,
@@ -651,7 +651,7 @@
       "source_first_face": 72000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-73.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-73.bin.gz",
       "bytes": 9405966,
       "sha256": "0a4696c5a2625ca2f6426b71bb538bcc34c111c71b376e62eca9ad6bb4740d2a",
       "vertices": 501659,
@@ -659,12 +659,14 @@
       "source_first_face": 73000000
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/native74-r5-data/data/geometry-74.bin.gz",
+      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/9d79fb1b36078fa2d1cea133b6699abbb5743f98/data/geometry-74.bin.gz",
       "bytes": 2694447,
       "sha256": "c03cf602bd1f133f4e68766c4f71d2d0d1f34a2cbf1c741d1238760f0a31db4a",
       "vertices": 147491,
       "triangles": 293846,
       "source_first_face": 74000000
     }
-  ]
+  ],
+  "transport_revision": "9d79fb1b36078fa2d1cea133b6699abbb5743f98",
+  "all_chunks_source_index_and_coordinate_audit": "geometry-transport-audit.json"
 }
