@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 
-const MINIMUM_DISPLAY_DIAMETER_MM = 0.16;
-const ASSET = new URL('./assets/native-microtubes.json?v=1', import.meta.url);
+const MINIMUM_DISPLAY_DIAMETER_MM = 0.036;
+const ASSET = new URL('./assets/native-microtubes-fine.json?v=1', import.meta.url);
 
 function makeTube(trace, forward, translation) {
   const points = trace.points_registered_native_xyz_mm.map(point => new THREE.Vector3(...point));

@@ -3,7 +3,7 @@ import{OrbitControls}from'./vendor/OrbitControls.js';
 import{arrays,setPersistence}from'./native-store-r15.js?v=2';
 import{packNativeGrid}from'./native-packed-gpu-r18.js?v=1';
 import{cadRuler}from'./cad-palaeo-ruler-r14.js?v=1';
-import{loadMicrotubes}from'./native-microtubes.js?v=1';
+import{loadMicrotubes}from'./native-microtubes.js?v=2';
 export const NATIVE_FACES=74293846;
 const CENTRE=136.73910524340096;
 const GRAPHICS_CHECKPOINT='megalodon-native-graphics-r18';

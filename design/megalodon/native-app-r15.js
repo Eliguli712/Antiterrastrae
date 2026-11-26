@@ -1,6 +1,6 @@
 import{mountInlineVideoControls}from'./inline-video-controls-r17.js?v=1';
 import{mountSlicePanels,mountDomainMetrics,mountAxisMovies,foldSections,speedControl,syncSpeedLabel}from'./native-panels-r15.js?v=5';
-import{NativeEngine,NATIVE_FACES}from'./native-engine-r15.js?v=5';
+import{NativeEngine,NATIVE_FACES}from'./native-engine-r15.js?v=6';
 import{renderAnalysis,hydrateOtherContent}from'./native-content-r15.js?v=1';
 import{layoutCadScale}from'./cad-palaeo-ruler-r14.js?v=1';
 const get=async u=>{const r=await fetch(u);if(!r.ok)throw Error('HTTP '+r.status);return r.json();};
@@ -23,10 +23,10 @@ q('#nativeArtMount').innerHTML=card('art','Artistic CT · mask, filtration and M
 q('#nativeInternalMount').innerHTML=card('internal','Inside the tooth · complete native cavity walls',8,'none');
 q('#nativeInternalMount .native-shared-stage').insertAdjacentHTML('afterend',`
  <div class="native-tube-tools">
-   <label><input type="checkbox" id="nativeMicrotubes"> Show CT microtube candidates</label>
+   <label><input type="checkbox" id="nativeMicrotubes"> Show coarse and fine CT cavity traces</label>
    <label><input type="checkbox" id="nativeMicrotubesOnly" disabled> Isolate tubes</label>
-   <p id="nativeMicrotubeStatus" role="status">Traces of elongated internal voids from the original CT mask.</p>
-   <a href="./assets/native-microtubes.json" download>Download tube trace data and methods (JSON)</a>
+   <p id="nativeMicrotubeStatus" role="status">2,317 cavity traces from the native 18 µm mask, including 2,253 finer candidates. Zoom in to inspect the smallest paths.</p>
+   <a href="./assets/native-microtubes-fine.json" download>Download all 2,317 traced cavities (JSON)</a>
  </div>`);
 
 const studio=q('.native-art-studio');
@@ -269,8 +269,8 @@ function activateUI(){
     const staticToggle=internal.card.querySelector('.native-photo');
     staticToggle.setAttribute('aria-pressed','false');
     sourceState();
-    const {traces_displayed,traces_qualified}=record.survey;
-    tubeStatus.textContent=`${count(traces_displayed)} of ${count(traces_qualified)} tubular CT void candidates. The amber overlay has a 0.16 mm minimum display diameter at native scale. The source traces preserve their measured sizes; the voids are not anatomically identified.`;
+    const {traces_displayed,additional_fine_candidates}=record.survey;
+    tubeStatus.textContent=`${count(traces_displayed)} cavity traces, including ${count(additional_fine_candidates)} finer candidates. Amber traces use the measured median diameter with a 36 µm display floor at native scale. Anatomical identities are unverified.`;
    }
   }catch{
    if(tubes.checked!==visible)return;
@@ -401,6 +401,6 @@ try{
  engine.start();slicePanels=mountSlicePanels(engine,pca,stats,linkPlane);mountAxisMovies(interactive,stats);mountInlineVideoControls(document);mountDomainMetrics(stats);const internalEntry=viewList.find(e=>e.key==='internal');internalEntry.card.querySelector('.native-cut').value='pca3';internalEntry.card.querySelector('.native-pca-sampling').value='.018';cutSetup(internalEntry);viewList.filter(e=>e.key!=='internal').forEach(e=>cutSetup(e));foldSections(engine);navigator.storage?.persist?.().then(kept=>{const status=q('#nativeStorageStatus');if(!status.textContent)status.textContent=kept?'Persistent storage granted.':'Local cache enabled; retention follows browser storage limits.';}).catch(()=>{});
  window.addEventListener('native-shared-state',sourceState);
 
- if('serviceWorker'in navigator)navigator.serviceWorker.register('./native-precache-r15-sw.js?v=6',{scope:'./',type:'module'}).catch(e=>console.info('Offline shell',e.message));
+ if('serviceWorker'in navigator)navigator.serviceWorker.register('./native-precache-r15-sw.js?v=7',{scope:'./',type:'module'}).catch(e=>console.info('Offline shell',e.message));
  window.__nativeSharedR15={engine,state,publication:interactive};
 }catch(e){note('The shared native visualizer could not start: '+e.message);console.error(e);}
