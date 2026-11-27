@@ -3,7 +3,7 @@ import{OrbitControls}from'./vendor/OrbitControls.js';
 import{arrays,setPersistence}from'./native-store-r15.js?v=2';
 import{packNativeGrid}from'./native-packed-gpu-r18.js?v=1';
 import{cadRuler}from'./cad-palaeo-ruler-r14.js?v=1';
-import{loadMicrotubes}from'./native-microtubes.js?v=3';
+import{loadMicrotubes}from'./native-microtubes.js?v=4';
 export const NATIVE_FACES=74293846;
 const CENTRE=136.73910524340096;
 const GRAPHICS_CHECKPOINT='megalodon-native-graphics-r18';
@@ -217,7 +217,7 @@ export class NativeEngine{
   this.material=new THREE.RawShaderMaterial({vertexShader:VERT,fragmentShader:FRAG,uniforms:this.uniforms,glslVersion:THREE.GLSL3,side:THREE.DoubleSide,toneMapped:false});
   this.configureMotionPlanes();
   try{
-   this.worker=new Worker(new URL('./native-stream-r15.js?v=6',import.meta.url),{type:'module'});
+   this.worker=new Worker(new URL('./native-stream-r15.js?v=7',import.meta.url),{type:'module'});
    this.worker.onmessage=e=>{try{this.message(e.data);}catch(error){this.fail(error.message);}};
    this.worker.onerror=()=>this.fail('The native data worker stopped. Static renders and cavity videos remain available.');
   }catch{
@@ -393,7 +393,7 @@ export class NativeEngine{
   else if(d.type==='mask-error'){this.hooks.maskError?.(d);}
   else if(d.type==='progress')this.hooks.progress?.(d);
   else if(d.type==='geometry-complete'){if(this.faces!==NATIVE_FACES)return this.fail('Complete native face count mismatch');this.ready=true;this.fullLoading=false;this.bundles.forEach(g=>g.visible=true);this.pointGroups.forEach(g=>g.visible=true);if(this.preview){this.scene.remove(this.preview);this.preview.geometry.dispose();this.preview=null;}graphicsCheckpoint('active');this.hooks.graphicsState?.('ready');this.hooks.ready?.(d);this.dirty=true;}
-  else if(d.type==='cache-progress'||d.type==='cache-ready')this.hooks.cache?.(d);
+  else if(d.type==='cache-progress'||d.type==='cache-ready'){this.cacheReport=d;this.hooks.cache?.(d);}
   else if(d.type==='cache-warning')this.hooks.cacheWarning?.(d.message);
   else if(d.type==='natural-error'){this.rejectPhoto?.(Error(d.message));this.photoPromise=null;this.hooks.note?.('Natural colour source unavailable: '+d.message);}
   else if(d.type==='error')this.fail(d.message);else if(d.type.endsWith('-error'))this.hooks.note?.(d.message);

@@ -1,7 +1,12 @@
 import * as THREE from 'three';
+import {sourceBytes} from './native-store-r15.js?v=2';
 
 const MINIMUM_DISPLAY_DIAMETER_MM = 0.036;
-const ASSET = new URL('./assets/native-microtubes-fine.json?v=1', import.meta.url);
+export const NATIVE_TUBE_SOURCE = {
+  url: new URL('./assets/native-microtubes-fine.json?v=1', import.meta.url).href,
+  sha256: '2d1f48fcb70f771ec6fbf9027ae6eaaf4965ac946dda746226ee6c2e1f4b158d',
+  bytes: 1324249,
+};
 
 function makeTube(trace, forward, translation) {
   const points = trace.points_registered_native_xyz_mm.map(point => new THREE.Vector3(...point));
@@ -23,9 +28,8 @@ function makeTube(trace, forward, translation) {
 }
 
 export async function loadMicrotubes(forward,translation,material) {
-  const response = await fetch(ASSET);
-  if (!response.ok) throw Error(`CT cavity traces could not load (${response.status})`);
-  const record = await response.json();
+  const bytes = await sourceBytes(NATIVE_TUBE_SOURCE);
+  const record = JSON.parse(new TextDecoder().decode(bytes));
   if (record.schema !== 'native-ct-tubular-cavity-traces-v1' ||
       !Array.isArray(record.traces) ||
       record.traces.length !== record.survey?.traces_displayed) {

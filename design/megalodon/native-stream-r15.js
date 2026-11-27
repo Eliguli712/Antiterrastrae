@@ -1,4 +1,4 @@
-import{NativeSections}from'./native-section-r15.js?v=2';
+import{NativeSections}from'./native-section-r15.js?v=3';
 import{decodedBytes,decodeBuffer,sourceBytes,cacheInventory,setPersistence}from'./native-store-r15.js?v=2';
 const NATIVE_FACES=74293846;
 let config,sections,allParts=[],geometryStarted=false,geometryActive=false,stopped=false,naturalActive=false,naturalComplete=false,cacheRun;

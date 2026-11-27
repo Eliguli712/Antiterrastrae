@@ -1,12 +1,34 @@
 import{analyzeContours}from'./native-contours-r15.js?v=1';
 import{decodedBytes,arrays}from'./native-store-r15.js?v=2';
 const pause=()=>new Promise(resolve=>setTimeout(resolve,0));
+const MEBIBYTE=1024*1024;
 export class NativeSections{
- constructor(config,stats,emit){this.config=config;this.stats=stats;this.emit=emit;this.tickets=new Map();this.slabs=new Map();this.pending=new Map();}
+ constructor(config,stats,emit){
+  this.config=config;this.stats=stats;this.emit=emit;
+  this.tickets=new Map();this.slabs=new Map();this.pending=new Map();
+  this.slabSizes=new Map();
+  this.slabBytes=0;
+  this.slabLimit=(config.constrained?40:128)*MEBIBYTE;
+ }
  async slab(part){
   if(this.slabs.has(part.sha256)){const a=this.slabs.get(part.sha256);this.slabs.delete(part.sha256);this.slabs.set(part.sha256,a);return a;}
   if(this.pending.has(part.sha256))return this.pending.get(part.sha256);
-  const p=decodedBytes(part,this.stats).then(b=>{const a=arrays(b);this.slabs.set(part.sha256,a);while(this.slabs.size>2)this.slabs.delete(this.slabs.keys().next().value);return a;}).finally(()=>this.pending.delete(part.sha256));this.pending.set(part.sha256,p);return p;
+  const p=decodedBytes(part,this.stats).then(buffer=>{
+   const decoded=arrays(buffer);
+   if(buffer.byteLength>this.slabLimit)return decoded;
+   while(this.slabBytes+buffer.byteLength>this.slabLimit){
+    const oldest=this.slabs.keys().next().value;
+    this.slabBytes-=this.slabSizes.get(oldest);
+    this.slabs.delete(oldest);
+    this.slabSizes.delete(oldest);
+   }
+   this.slabs.set(part.sha256,decoded);
+   this.slabSizes.set(part.sha256,buffer.byteLength);
+   this.slabBytes+=buffer.byteLength;
+   return decoded;
+  }).finally(()=>this.pending.delete(part.sha256));
+  this.pending.set(part.sha256,p);
+  return p;
  }
  cancel(target){this.tickets.set(target,(this.tickets.get(target)||0)+1);}
  async request(d){
