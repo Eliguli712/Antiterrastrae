@@ -18,7 +18,7 @@ function needsStaticFirst(){
  const mobile=Boolean(navigator.userAgentData?.mobile)||/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
  const handheld=matchMedia('(pointer: coarse) and (max-width: 900px)').matches;
  const appleTablet=navigator.maxTouchPoints>1&&navigator.platform==='MacIntel';
- return mobile||handheld||appleTablet||(navigator.deviceMemory>0&&navigator.deviceMemory<8);
+ return mobile||handheld||appleTablet||navigator.connection?.saveData||(navigator.deviceMemory>0&&navigator.deviceMemory<8);
 }
 const VERT=`precision highp float;precision highp int;
 in vec3 position;in vec3 color;in vec3 photoColour;
@@ -215,10 +215,22 @@ export class NativeEngine{
   this.uniforms={uNeckGuide:{value:neckTexture},uPointSize:{value:2},uPoints:{value:0},uContour:{value:0},uTubeOverlay:{value:0},uContourCoverage:{value:1},uR:{value:r},uInvR:{value:inverse},uT:{value:new THREE.Vector3(...config.geometry.display_affine_T)},uOffset:{value:new THREE.Vector3()},uMotionOrigin:{value:new THREE.Vector3()},uMotionHalfExtent:{value:new THREE.Vector3()},uSize:{value:.5},uGrid:{value:0},uPackOrigin:{value:new THREE.Vector3()},uPackShift:{value:new THREE.Vector3()},uVolume:{value:stub},uMask:{value:mask},uVolumeOrigin:{value:new THREE.Vector3(...v.source_edge_origin_xyz_mm)},uVolumeExtent:{value:new THREE.Vector3(...v.shape_xyz.map(n=>n*v.display_spacing_mm))},uTexel:{value:new THREE.Vector3(...v.shape_xyz.map(n=>1/n))},uVolumeReady:{value:0},uAxis:{value:new THREE.Vector3(0,1,0)},uClip:{value:0},uSide:{value:1},uRoot:{value:1.3},uTransition:{value:10},uCurvature:{value:8},uMaskSpacing:{value:.018},uMaskU:{value:new THREE.Vector3(1,0,0)},uMaskV:{value:new THREE.Vector3(0,1,0)},uPCACenter:{value:new THREE.Vector3(...config.pca.center_scanner_mm)},uClipEnabled:{value:0},uNativeClip:{value:0},uPart:{value:0},uAppearance:{value:0},uPlane:{value:0},uMaskBefore:{value:1},uMaskOrigin:{value:new THREE.Vector3(...config.mask.scanner_origin_xyz_mm.map(x=>x-.009))},uMaskExtent:{value:new THREE.Vector3(config.mask.native_shape_zyx[2]*.018,config.mask.native_shape_zyx[1]*.018,.018)}};
   this.material=new THREE.RawShaderMaterial({vertexShader:VERT,fragmentShader:FRAG,uniforms:this.uniforms,glslVersion:THREE.GLSL3,side:THREE.DoubleSide,toneMapped:false});
   this.configureMotionPlanes();
-  this.worker=new Worker(new URL('./native-stream-r15.js?v=3',import.meta.url),{type:'module'});
-  this.worker.onmessage=e=>{try{this.message(e.data);}catch(error){this.fail(error.message);}};
-  this.worker.onerror=e=>this.fail(e.message||'Native source worker unavailable');
+  try{
+   this.worker=new Worker(new URL('./native-stream-r15.js?v=4',import.meta.url),{type:'module'});
+   this.worker.onmessage=e=>{try{this.message(e.data);}catch(error){this.fail(error.message);}};
+   this.worker.onerror=()=>this.fail('The native data worker stopped. Static renders and cavity videos remain available.');
+  }catch{
+   this.worker=null;
+  }
+  if(!this.worker||typeof DecompressionStream!=='function'||!globalThis.crypto?.subtle){
+   this.unavailable='The browser lacks a required native data feature. Static renders and cavity videos remain available.';
+  }else if(typeof WebGL2RenderingContext==='undefined'){
+   this.unavailable='The browser lacks WebGL 2. Static renders and cavity videos remain available.';
+  }else if(navigator.deviceMemory>0&&navigator.deviceMemory<=4){
+   this.unavailable='This browser reports at most 4 GB of device memory. Static renders and cavity videos remain available.';
+  }
   this.canvas.addEventListener('webglcontextlost',e=>{
+   if(this.unavailable)return;
    e.preventDefault();
    this.lost=true;
    this.fail('Graphics memory was released. The complete static images and CT videos remain available. A fresh 3D attempt can reuse the local source cache.');
@@ -235,24 +247,47 @@ export class NativeEngine{
   };
   window.addEventListener('resize',this.resize);
   window.addEventListener('scroll',()=>{this.dirty=true;},{passive:true});
+  document.addEventListener('visibilitychange',()=>{
+   this.active=!document.hidden;
+   if(this.active){this.lastFrame=performance.now();this.dirty=true;}
+  });
   window.addEventListener('pagehide',event=>{if(!event.persisted&&this.graphicsStarted&&!this.failed&&!this.restartingStatic)graphicsCheckpoint(null);});
  }
  start(){
-  this.worker.postMessage({type:'init',config:{...this.config,constrained:this.constrained}});
-  if(this.constrained||this.recovering){
+  this.worker?.postMessage({type:'init',config:{...this.config,constrained:this.constrained}});
+  this.worker?.postMessage({type:'cache-status'});
+  if(this.unavailable){
+   this.hooks.graphicsState?.('unavailable');
+   this.hooks.note?.(this.unavailable);
+  }else{
    this.hooks.graphicsState?.('static');
-   if(navigator.connection?.saveData)this.worker.postMessage({type:'cache-status'});
-   else this.prepareCache();
-  }else this.loadFull3D();
+  }
  }
- prepareCache(){this.worker.postMessage({type:'cache-only'});}
+ prepareCache(){this.worker?.postMessage({type:'cache-only'});}
  returnToStatic(){this.restartingStatic=true;graphicsCheckpoint('static-requested');location.reload();}
  loadFull3D(){
   if(this.failed||this.lost){this.returnToStatic();return;}
-  if(this.graphicsStarted)return;
+  if(this.graphicsStarted||this.unavailable)return;
   graphicsCheckpoint('allocating');
   try{
-   this.renderer=new THREE.WebGLRenderer({canvas:this.canvas,alpha:true,antialias:!this.constrained,powerPreference:this.constrained?'default':'high-performance'});
+   const options={alpha:true,antialias:!this.constrained,powerPreference:this.constrained?'default':'high-performance',failIfMajorPerformanceCaveat:true};
+   const gl=this.canvas.getContext('webgl2',options);
+   if(!gl){
+    graphicsCheckpoint(null);
+    this.unavailable='Hardware-accelerated WebGL 2 is unavailable. Static renders and cavity videos remain available.';
+    this.hooks.graphicsState?.('unavailable');
+    this.hooks.note?.(this.unavailable);
+    return;
+   }
+   if(gl.getParameter(gl.MAX_3D_TEXTURE_SIZE)<Math.max(...this.config.volume.shape_xyz)){
+    this.unavailable='This graphics device cannot hold the 3D volume texture. Static renders and cavity videos remain available.';
+    gl.getExtension('WEBGL_lose_context')?.loseContext();
+    graphicsCheckpoint(null);
+    this.hooks.graphicsState?.('unavailable');
+    this.hooks.note?.(this.unavailable);
+    return;
+   }
+   this.renderer=new THREE.WebGLRenderer({canvas:this.canvas,context:gl,...options});
    this.renderer.autoClear=false;this.renderer.sortObjects=false;
    this.renderer.outputColorSpace=THREE.SRGBColorSpace;this.renderer.toneMapping=THREE.NoToneMapping;this.renderer.info.autoReset=false;
    this.renderer.debug.onShaderError=(gl,p,vs,fs)=>this.fail('Graphics shader: '+[gl.getProgramInfoLog(p),gl.getShaderInfoLog(vs),gl.getShaderInfoLog(fs)].filter(Boolean).join(' '));
@@ -267,14 +302,25 @@ export class NativeEngine{
  addView(element,options={}){
   const view={element,mode:options.mode??0,cut:options.cut??'none',cutValue:0,flip:1,showPlane:false,maskBefore:true,contours:true,peakRule:'tail99',mesh:'surface',static:false};
   view.camera=new THREE.OrthographicCamera(-60,60,60,-60,.01,3000);view.camera.up.set(0,0,1);
-  view.controls=new OrbitControls(view.camera,element.querySelector('.native-hit-area'));view.controls.enableDamping=true;view.controls.dampingFactor=.14;view.controls.screenSpacePanning=true;view.controls.minZoom=.4;view.controls.maxZoom=128;view.controls.touches.TWO=THREE.TOUCH.DOLLY_PAN;
+  const hit=element.querySelector('.native-hit-area');
+  view.controls=new OrbitControls(view.camera,hit);view.controls.enableDamping=true;view.controls.dampingFactor=.14;view.controls.screenSpacePanning=true;view.controls.minZoom=.4;view.controls.maxZoom=128;view.controls.touches.TWO=THREE.TOUCH.DOLLY_PAN;
   view.controls.addEventListener('change',()=>{this.dirty=true;if(this.sync&&!this.syncing)this.synchronize(view);});
   view.fallback=on=>{
    const showing=on||!this.graphicsStarted||this.failed||this.lost;
    element.classList.toggle('native-poster-visible',showing);
+   hit.tabIndex=showing?-1:0;
    view.controls.enabled=!showing&&this.nav!=='slice';
   };
-  view.observer=new ResizeObserver(()=>{this.fit(view);this.dirty=true;});view.observer.observe(element);this.views.push(view);this.navigation(this.nav);view.fallback(true);this.camera(view,'front');this.bindRulerDrag(view);this.bindSliceDrag(view);view.intersection=new IntersectionObserver(()=>this.dirty=true);view.intersection.observe(element);return view;
+  if(typeof ResizeObserver==='function'){
+   view.observer=new ResizeObserver(()=>{this.fit(view);this.dirty=true;});
+   view.observer.observe(element);
+  }
+  this.views.push(view);this.navigation(this.nav);view.fallback(true);this.camera(view,'front');this.bindRulerDrag(view);this.bindSliceDrag(view);
+  if(typeof IntersectionObserver==='function'){
+   view.intersection=new IntersectionObserver(()=>this.dirty=true);
+   view.intersection.observe(element);
+  }
+  return view;
  }
  fit(v){const r=v.element.getBoundingClientRect();if(r.width<1||r.height<1)return;const s=this.size,H=Math.max(s*1.26+(this.part==='split'?2*this.gap:0),(s*.9+20)/(r.width/r.height));v.camera.left=-H*r.width/r.height/2;v.camera.right=-v.camera.left;v.camera.top=H/2;v.camera.bottom=-H/2;v.camera.updateProjectionMatrix();}
  camera(v,pose){const yaw=pose==='front'?Math.PI:pose==='reverse'?0:Math.PI-.49,pitch=pose==='oblique'?.2:0;v.controls.target.set(0,0,0);v.camera.position.set(Math.sin(yaw)*Math.cos(pitch)*350,-Math.cos(yaw)*Math.cos(pitch)*350,Math.sin(pitch)*350);v.camera.zoom=1;v.controls.update();this.fit(v);this.dirty=true;}
@@ -518,7 +564,16 @@ export class NativeEngine{
    try{this.upload(q.group);q.resolve();}catch(error){q.reject(error);this.fail(error.message);}
    changed=true;
   }
-  if(!this.failed&&(changed||this.dirty)){this.renderer.setScissorTest(false);this.renderer.setClearColor(0,0);this.renderer.clear(true,true,true);if(this.preview||this.ready)this.views.forEach(v=>this.render(v));this.dirty=false;}
+  if(this.failed||(!changed&&!this.dirty))return;
+  try{
+   this.renderer.setScissorTest(false);
+   this.renderer.setClearColor(0,0);
+   this.renderer.clear(true,true,true);
+   if(this.preview||this.ready)this.views.forEach(v=>this.render(v));
+   this.dirty=false;
+  }catch(error){
+   this.fail('The 3D frame could not be drawn. '+error.message);
+  }
  }
  fail(message){
   if(this.failed)return;
@@ -535,6 +590,7 @@ export class NativeEngine{
    for(const key of ['nativeResidentFaces','nativeSubmittedTriangles','nativeSubmittedPoints','nativeRenderPasses'])delete v.element.dataset[key];
   });
   this.canvas.hidden=true;
+  cancelAnimationFrame(this.frame);
   this.hooks.graphicsState?.('error');
   this.hooks.error?.(String(message));
   // Attributes are released after upload. Discard this context and keep the

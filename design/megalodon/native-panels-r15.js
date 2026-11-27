@@ -17,7 +17,7 @@ export function syncSpeedLabel(input){
  return value;
 }
 
-export function createAxisMovieController({video,axisInput,directionInput,speedInput,playButton,restartButton,status,downloadLink,movies}){
+export function createAxisMovieController({video,axisInput,directionInput,speedInput,playButton,restartButton,status,downloadLink,downloadGif,scrubber,movies}){
  let active=null,activeDirection='forward',pending=null;
  const clamp=x=>Math.max(0,Math.min(1,Number.isFinite(x)?x:0));
  const frameSpan=()=>Math.max(0,(Number.isFinite(video.duration)?video.duration:0)-1/(Number(active?.fps)||25));
@@ -50,15 +50,21 @@ export function createAxisMovieController({video,axisInput,directionInput,speedI
  }
  function render(){
   const running=playing(),position=sourcePosition(),largest=largestPosition(active);
-  playButton.textContent=running?'Pause MP4':'Play MP4';
-  playButton.setAttribute('aria-pressed',String(running));
+  playButton.dataset.state=running?'playing':'paused';
+  playButton.setAttribute('aria-label',running?'Pause MP4':'Play MP4');
+  playButton.title=running?'Pause MP4':'Play MP4';
+  if(scrubber){
+   const frame=Math.round(position*Number(scrubber.max));
+   scrubber.value=String(frame);
+   scrubber.setAttribute('aria-valuetext',`Frame ${frame+1} of ${Number(scrubber.max)+1}`);
+  }
   const rate=Number(video.playbackRate)||Number(speedInput.value)||1;
   const marker=largest!==null&&Math.abs(largest-position)<1e-6?' · largest section':'';
   status.textContent=`PCA axis ${axisInput.value} · ${directionInput.value==='reverse'?'Reverse':'Forward'} MP4 · ${rate.toFixed(2)}× · source position ${(position*100).toFixed(1)}%${marker}${pending?' · preparing selected clip':''}`;
  }
  function begin(){
-  if(pending){pending.resume=true;render();return;}
-  if(frameSpan()>0&&(video.ended||video.currentTime>=frameSpan()-.5/(Number(active?.fps)||25)))seekSource(firstPosition());
+  if(pending)pending.resume=true;
+  else if(frameSpan()>0&&(video.ended||video.currentTime>=frameSpan()-.5/(Number(active?.fps)||25)))seekSource(firstPosition());
   const promise=video.play();
   if(promise?.catch)promise.catch(()=>{render();status.textContent='Playback paused by the browser. Use Play MP4 to start the selected clip.';});
   render();
@@ -81,7 +87,17 @@ export function createAxisMovieController({video,axisInput,directionInput,speedI
   video.setAttribute('aria-label',`Native cavity walls, principal axis ${movie.axis}, ${direction} playback`);
   downloadLink.href=url;
   downloadLink.textContent=`Download PCA axis ${movie.axis} · ${direction} MP4`;
+  const gifURL=direction==='reverse'?movie.reverse_gif_url:movie.gif_url;
+  if(downloadGif){
+   downloadGif.hidden=!gifURL;
+   if(gifURL){
+    downloadGif.href=gifURL;
+    downloadGif.textContent=`Download PCA axis ${movie.axis} · ${direction} GIF`;
+   }
+  }
+  if(scrubber)scrubber.max=String(movie.frames-1);
   video.load();
+  if(resume)begin();
   render();
  }
  const changeSpeed=()=>{
@@ -100,7 +116,7 @@ export function createAxisMovieController({video,axisInput,directionInput,speedI
   changeSpeed();
   seekSource(position);
   pending=null;
-  if(resume)begin();
+  if(resume&&video.paused)begin();
   render();
  });
  for(const name of ['play','pause','ended','timeupdate','ratechange','seeked'])video.addEventListener(name,render);
@@ -113,9 +129,20 @@ export function createAxisMovieController({video,axisInput,directionInput,speedI
  directionInput.onchange=switchSource;
  speedInput.oninput=changeSpeed;
  speedInput.onchange=changeSpeed;
- playButton.onclick=()=>{
-  if(playing()){if(pending)pending.resume=false;video.pause();render();}
-  else begin();
+ function pause(){
+  if(pending)pending.resume=false;
+  video.pause();
+  render();
+ }
+ function toggle(){if(playing())pause();else begin();}
+ playButton.onclick=toggle;
+ if(scrubber)scrubber.oninput=()=>{
+  const position=Number(scrubber.value)/Number(scrubber.max);
+  if(pending){
+   pending.position=position;
+   if(video.preload==='none'){video.preload='metadata';video.load();}
+  }else seekSource(position);
+  render();
  };
  restartButton.onclick=()=>{
   const position=firstPosition();
@@ -124,70 +151,124 @@ export function createAxisMovieController({video,axisInput,directionInput,speedI
   render();
  };
  switchSource();
- return{sourcePosition,playing,refresh:render};
+ return{sourcePosition,playing,refresh:render,pause,toggle};
 }
 
 export function mountAxisMovies(interactive,stats){
- const host=document.createElement('section');host.className='native-axis-movies';host.id='native-pca-movies';host.innerHTML='<h3>Inside the tooth · principal-axis player</h3><p>Choose any PCA axis in this shared player. Each axis opens at the largest measured section of its 300 frames. MP4 direction and speed are independent of the 3D camera. Each clip uses all 74,293,846 source triangles for its cavity-wall sweep: 50 mm model, 1,920 × 1,080 pixels, 25 fps, 300 positions, 12 seconds at 1×.</p><article class="native-axis-movie"><h4>Three PCA axes · one independent player</h4><div class="native-movie-slot"><div class="native-movie-surface"><div class="native-view-tools native-movie-controls"><label>PCA playback axis<select id="nativeMovieAxis"><option value="1">PCA axis 1</option><option value="2">PCA axis 2</option><option value="3">PCA axis 3</option></select></label><label>MP4 direction<select id="nativeMovieDirection"><option value="forward">Forward</option><option value="reverse">Reverse</option></select></label>' + speedControl('MP4 playback speed','native-movie-speed','nativeMovieSpeed') + '<button id="nativeMoviePlay" aria-pressed="false">Play MP4</button><button id="nativeMovieRestart">Largest section</button></div><div class="native-view-tools native-movie-dock-actions"><button id="nativeMovieDock" aria-pressed="false">Dock MP4</button><button id="nativeMovieFocus" hidden>Focus 3D</button><button id="nativeMovieControls" aria-expanded="true" hidden>Hide controls</button></div><video id="nativePCAVideo" controls playsinline preload="metadata" aria-label="Native cavity walls, selected principal axis"></video><p id="nativeMovieStatus" class="native-movie-status" role="status" aria-live="off"></p></div></div><div class="batch-downloads"><a class="native-current-movie" download>Download selected axis · MP4</a><a href="'+interactive.movie_record+'">Frame / source audit</a></div>'+domainMetrics(stats,'video: 300 temporal cut positions')+'</article>';
- document.querySelector('#nativeInternalMount').insertAdjacentElement('afterend',host);const video=host.querySelector('video'),surface=host.querySelector('.native-movie-surface'),slot=host.querySelector('.native-movie-slot'),dockButton=host.querySelector('#nativeMovieDock'),focusButton=host.querySelector('#nativeMovieFocus');
- const controller=createAxisMovieController({video,axisInput:host.querySelector('#nativeMovieAxis'),directionInput:host.querySelector('#nativeMovieDirection'),speedInput:host.querySelector('#nativeMovieSpeed'),playButton:host.querySelector('#nativeMoviePlay'),restartButton:host.querySelector('#nativeMovieRestart'),status:host.querySelector('#nativeMovieStatus'),downloadLink:host.querySelector('.native-current-movie'),movies:interactive.movies});
+ const host=document.createElement('section');
+ host.className='native-axis-movies';
+ host.id='native-pca-movies';
+ host.innerHTML=`
+  <h3>Inside the tooth · principal-axis player</h3>
+  <p>Each clip sweeps through the complete native surface at 300 positions. The source contains 74,293,846 triangles. Each MP4 is 1,920 × 1,080 pixels and runs for 12 seconds at 1×. The player opens on the largest measured section.</p>
+  <article class="native-axis-movie">
+   <h4>Three PCA axes</h4>
+   <div class="native-movie-slot">
+    <div class="native-movie-surface">
+     <div class="native-view-tools native-movie-controls">
+      <label>PCA playback axis
+       <select id="nativeMovieAxis"><option value="1">PCA axis 1</option><option value="2">PCA axis 2</option><option value="3" selected>PCA axis 3</option></select>
+      </label>
+      <label>Playback direction
+       <select id="nativeMovieDirection"><option value="forward">Forward</option><option value="reverse">Reverse</option></select>
+      </label>
+      ${speedControl('MP4 playback speed','native-movie-speed','nativeMovieSpeed')}
+      <button id="nativeMovieRestart" type="button">Largest section</button>
+     </div>
+     <div class="native-view-tools native-movie-dock-actions">
+      <button id="nativeMovieDock" type="button" aria-pressed="false">Dock MP4</button>
+      <button id="nativeMovieFocus" type="button" hidden>Focus 3D</button>
+      <button id="nativeMovieControls" type="button" aria-expanded="true" hidden>Hide controls</button>
+     </div>
+     <div class="inline-video">
+      <video id="nativePCAVideo" data-inline-play controls playsinline preload="none" aria-label="Native cavity walls, selected principal axis"></video>
+      <button id="nativeMoviePlay" class="inline-video-play" type="button" aria-label="Play MP4" aria-controls="nativePCAVideo"><span aria-hidden="true"></span></button>
+     </div>
+     <label class="native-speed-control"><span>Source frame</span><input id="nativeMovieScrubber" type="range" min="0" max="299" value="80"></label>
+     <p id="nativeMovieStatus" class="native-movie-status" role="status" aria-live="off"></p>
+    </div>
+   </div>
+   <div class="batch-downloads">
+    <a class="native-current-movie" download>Download selected axis · MP4</a>
+    <a class="native-current-gif" download>Download selected axis · GIF</a>
+    <a href="${interactive.movie_record}">Frame and source audit</a>
+   </div>
+   <div class="native-pca-metrics"></div>
+  </article>`;
+ document.querySelector('#nativeInternalMount').insertAdjacentElement('afterend',host);
+ const video=host.querySelector('video'),surface=host.querySelector('.native-movie-surface'),slot=host.querySelector('.native-movie-slot'),dockButton=host.querySelector('#nativeMovieDock'),focusButton=host.querySelector('#nativeMovieFocus');
+ const controller=createAxisMovieController({
+  video,axisInput:host.querySelector('#nativeMovieAxis'),directionInput:host.querySelector('#nativeMovieDirection'),
+  speedInput:host.querySelector('#nativeMovieSpeed'),playButton:host.querySelector('#nativeMoviePlay'),
+  restartButton:host.querySelector('#nativeMovieRestart'),scrubber:host.querySelector('#nativeMovieScrubber'),
+  status:host.querySelector('#nativeMovieStatus'),downloadLink:host.querySelector('.native-current-movie'),
+  downloadGif:host.querySelector('.native-current-gif'),movies:interactive.movies
+ });
  const compactButton=host.querySelector('#nativeMovieControls');
  const controls=host.querySelector('.native-movie-controls');
- let docked=false;
+ const mountStats=counts=>{if(counts)host.querySelector('.native-pca-metrics').innerHTML=domainMetrics(counts,'video: 300 temporal cut positions');};
+ let placement='inline';
  function setCompact(compact){
   controls.hidden=compact;
   compactButton.setAttribute('aria-expanded',String(!compact));
   compactButton.textContent=compact?'MP4 controls':'Hide controls';
  }
- function dock(value){
-  if(value===docked)return;
-  const time=video.currentTime,resume=!video.paused&&!video.ended;
-  docked=value;
-  if(docked){
-   slot.style.height=surface.getBoundingClientRect().height+'px';
-   surface.classList.add('native-movie-docked');
-   document.body.append(surface);
-  }else{
-   surface.classList.remove('native-movie-docked');
-   slot.append(surface);
-   slot.style.height='';
-   setCompact(false);
-  }
-  dockButton.setAttribute('aria-pressed',String(docked));
-  dockButton.textContent=docked?'Undock MP4':'Dock MP4';
-  focusButton.hidden=!docked;
-  compactButton.hidden=!docked;
-  if(Math.abs(video.currentTime-time)>.05)video.currentTime=time;
+ function move(target,kind){
+  if(surface.parentElement===target)return;
+  const time=video.currentTime,resume=controller.playing();
+  if(placement==='inline')slot.style.height=surface.getBoundingClientRect().height+'px';
+  placement=kind;
+  surface.classList.toggle('native-movie-docked',kind==='docked');
+  surface.classList.toggle('native-movie-in-preview',kind==='preview');
+  target.append(surface);
+  if(kind==='inline')slot.style.height='';
+  dockButton.hidden=kind==='preview';
+  dockButton.setAttribute('aria-pressed',String(kind==='docked'));
+  dockButton.textContent=kind==='docked'?'Undock MP4':'Dock MP4';
+  focusButton.hidden=kind!=='docked';
+  compactButton.hidden=kind!=='docked';
+  setCompact(false);
+  if(video.readyState>=1&&Math.abs(video.currentTime-time)>.05)video.currentTime=time;
   if(resume&&video.paused)video.play().catch(()=>{});
   controller.refresh();
  }
- dockButton.onclick=()=>dock(!docked);
+ const restore=()=>move(slot,'inline');
+ dockButton.onclick=()=>placement==='docked'?restore():move(document.body,'docked');
  compactButton.onclick=()=>setCompact(!controls.hidden);
  document.addEventListener('toggle',event=>{
   const fold=event.target;
-  if(fold.tagName!=='DETAILS'||fold.open||!fold.contains(slot))return;
-  if(docked)dock(false);
-  video.pause();
+  if(fold.tagName!=='DETAILS'||fold.open)return;
+  if(placement==='docked'&&fold.contains(slot)){controller.pause();restore();}
+  else if(fold.contains(surface))controller.pause();
  },true);
  focusButton.onclick=()=>{
   setCompact(true);
   document.querySelector('[data-native-card="internal"] .native-focus')?.click();
  };
  surface.addEventListener('keydown',e=>{
-  if(e.key!=='Escape'||!docked)return;
+  if(e.key!=='Escape'||placement!=='docked')return;
   e.preventDefault();
-  dock(false);
+  restore();
   dockButton.focus({preventScroll:true});
  });
+ mountStats(stats);
+ return{showIn:container=>move(container,'preview'),restore,toggle:controller.toggle,playing:controller.playing,pause:controller.pause,video,mountStats};
 }
 export function mountSlicePanels(engine,pca,stats,onLink){
- const host=document.querySelector('.ct-planes'),panels=new Map();host.innerHTML='';
+ const host=document.querySelector('.ct-planes'),panels=new Map();
+ const sourceImages=Array.from(host.querySelectorAll('img'),image=>image.src);
+ host.innerHTML='';
  const root='https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/37ea516b75facd7dacbaacb332c4b5c522d15ad1/assets/ct-native-r14/';
  for(const [index,z]of[[0,1443],[1,2600]]){
-  const target='native-mask-panel-'+index,figure=document.createElement('figure');figure.className='native-slice-panel';figure.innerHTML=`<h4>${index?'Near-root section':'Middle section'} · movable original mask</h4><div class="native-panel-tools"><label>Section axis<select class="native-panel-axis"><option value="native">Original axial Z</option><option value="1">PCA axis 1</option><option value="2">PCA axis 2</option><option value="3">PCA axis 3</option></select></label><label>Plane sampling<select class="native-panel-sampling"><option value=".072">0.072 mm / 72 µm · quick</option><option value=".018" selected>0.018 mm / 18 µm</option></select></label><label>Move section<input type="range" class="native-panel-offset" min="0" max="2885" step="1" value="${z}"></label><label>Peak rule<select class="native-panel-peak-rule"><option value="tail99" selected>99th-percentile curvature tail</option><option value="conservative6MAD">Conservative 6 MAD</option></select></label><label><input class="native-panel-contours" type="checkbox" checked>Blue gaps / red curvature peaks</label><label><input class="native-panel-link" type="checkbox" ${''}>Link active plane to 3D</label>${speedControl('2D section speed','native-panel-speed')}<div><button class="native-panel-play" aria-pressed="false">Play section sweep</button><button class="native-panel-maximum">Maximum-area PCA plane</button></div></div><canvas class="native-slice-canvas" width="746" height="1903" tabindex="0" aria-label="${index?'Near-root':'Middle'} binary section; drag to move through the selected axis"></canvas><figcaption class="native-panel-readout">Preparing original binary mask…</figcaption><div class="batch-downloads"><a href="${root+(index?'native_mask_near_root_z2600.gif':'native_mask_middle_z1443.gif')}" download>Original pixel-exact GIF</a></div>${domainMetrics(stats)}`;host.append(figure);
+  const target='native-mask-panel-'+index,figure=document.createElement('figure');figure.className='native-slice-panel';figure.innerHTML=`<h4>${index?'Near-root section':'Middle section'} · movable original mask</h4><div class="native-panel-tools"><label>Section axis<select class="native-panel-axis"><option value="native">Original axial Z</option><option value="1">PCA axis 1</option><option value="2">PCA axis 2</option><option value="3">PCA axis 3</option></select></label><label>Plane sampling<select class="native-panel-sampling"><option value=".072">0.072 mm / 72 µm · quick</option><option value=".018" selected>0.018 mm / 18 µm</option></select></label><label>Move section<input type="range" class="native-panel-offset" min="0" max="2885" step="1" value="${z}"></label><label>Peak rule<select class="native-panel-peak-rule"><option value="tail99" selected>99th-percentile curvature tail</option><option value="conservative6MAD">Conservative 6 MAD</option></select></label><label><input class="native-panel-contours" type="checkbox" checked>Blue gaps / red curvature peaks</label><label><input class="native-panel-link" type="checkbox" ${''}>Link active plane to 3D</label>${speedControl('2D section speed','native-panel-speed')}<div><button class="native-panel-load">Load native section</button><button class="native-panel-play" aria-pressed="false">Play section sweep</button><button class="native-panel-maximum">Maximum-area PCA plane</button></div></div><canvas class="native-slice-canvas" width="746" height="1903" tabindex="0" hidden aria-label="${index?'Near-root':'Middle'} binary section; drag to move through the selected axis"></canvas><img class="native-slice-still" alt="Original 18 µm binary section" loading="lazy" width="746" height="1903"><figcaption class="native-panel-readout">Original 18 µm binary section. Select Load native section to adjust the plane.</figcaption><div class="batch-downloads"><a href="${root+(index?'native_mask_near_root_z2600.gif':'native_mask_middle_z1443.gif')}" download>Original pixel-exact GIF</a></div>${domainMetrics(stats)}`;host.append(figure);
+  const still=figure.querySelector('.native-slice-still');
+  if(sourceImages[index])still.src=sourceImages[index];
+  else still.hidden=true;
+  const load=figure.querySelector('.native-panel-load');
   const panel={target,figure,z,playing:false,timer:null};panels.set(target,panel);const axis=figure.querySelector('.native-panel-axis'),offset=figure.querySelector('.native-panel-offset'),sampling=figure.querySelector('.native-panel-sampling');
   const request=()=>{panel.timer=null;const value=Number(offset.value);figure.querySelector('.native-panel-readout').textContent=axis.value==='native'?`Preparing native plane ${Math.round(value)}…`:`Constructing PCA ${axis.value} at ${value.toFixed(6)} mm from original voxels…`;engine.worker.postMessage({type:'section',target,axis:axis.value,z:value,offset_mm:value,sampling_mm:Number(sampling.value),peak_rule:figure.querySelector('.native-panel-peak-rule').value});};
   panel.request=request;
+  load.onclick=request;
   const speed=figure.querySelector('.native-panel-speed');
   speed.oninput=()=>syncSpeedLabel(speed);
   const setup=()=>{if(axis.value==='native'){offset.min=0;offset.max=2885;offset.step=1;offset.value=z;}else{const a=pca.axes[Number(axis.value)-1];offset.min=Math.floor(a.offset_range_mm[0]/.018)*.018;offset.max=Math.ceil(a.offset_range_mm[1]/.018)*.018;offset.step=.018;offset.value=a.maximum_area_offset_mm;}request();};axis.onchange=setup;sampling.onchange=request;figure.querySelector('.native-panel-peak-rule').onchange=request;offset.oninput=()=>{clearTimeout(panel.timer);panel.timer=setTimeout(request,100);};
@@ -205,14 +286,21 @@ export function mountSlicePanels(engine,pca,stats,onLink){
    };
    panel.advance();};
   const canvas=figure.querySelector('canvas');let drag=null;canvas.onpointerdown=e=>{stop();drag={x:e.clientX,start:Number(offset.value)};canvas.setPointerCapture(e.pointerId);};canvas.onpointermove=e=>{if(!drag)return;const range=Number(offset.max)-Number(offset.min);offset.value=Math.max(Number(offset.min),Math.min(Number(offset.max),drag.start+(e.clientX-drag.x)/Math.max(1,canvas.clientWidth)*range));clearTimeout(panel.timer);panel.timer=setTimeout(request,120);};canvas.onpointerup=()=>{drag=null;clearTimeout(panel.timer);request();};canvas.onpointercancel=()=>drag=null;
-  figure.querySelector('.native-panel-contours').onchange=()=>{if(panel.last)panel.paint(panel.last);};figure.querySelector('.native-panel-link').onchange=e=>{if(e.target.checked){panels.forEach(p=>{if(p!==panel)p.figure.querySelector('.native-panel-link').checked=false;});if(panel.last)onLink(panel.last);}};panel.link=()=>figure.querySelector('.native-panel-link').checked;panel.stop=stop;request();
+  figure.querySelector('.native-panel-contours').onchange=()=>{if(panel.last)panel.paint(panel.last);};figure.querySelector('.native-panel-link').onchange=e=>{if(e.target.checked){panels.forEach(p=>{if(p!==panel)p.figure.querySelector('.native-panel-link').checked=false;});if(panel.last)onLink(panel.last);}};panel.link=()=>figure.querySelector('.native-panel-link').checked;panel.stop=stop;
  }
  document.addEventListener('toggle',event=>{
   const fold=event.target;
   if(fold.tagName!=='DETAILS'||fold.open)return;
   for(const panel of panels.values())if(fold.contains(panel.figure))panel.stop();
  },true);
- return{receive(d){const panel=panels.get(d.target);if(!panel)return false;const canvas=panel.figure.querySelector('canvas');canvas.width=d.width;canvas.height=d.height;const ctx=canvas.getContext('2d'),image=ctx.createImageData(d.width,d.height);const enabled=panel.figure.querySelector('.native-panel-contours').checked;for(let i=0;i<d.data.length;i++){const j=i*4,flags=enabled?(d.overlay?.[i]||0):0,value=d.data[i];image.data[j]=flags&4?245:flags&2?31:flags&1?5:value;image.data[j+1]=flags&4?46:flags&2?161:flags&1?25:value;image.data[j+2]=flags&4?31:flags&2?250:flags&1?52:value;image.data[j+3]=255;}ctx.putImageData(image,0,0);canvas.dataset.selectedSamples=String(d.selected_samples);canvas.dataset.samplingMm=String(d.sampling_mm);panel.figure.querySelector('.native-panel-readout').textContent=d.axis==='native'?`Original axial grid ${d.z} · z = ${d.offset_mm.toFixed(6)} mm · ${count(d.selected_samples)} material pixels · 0.018 mm / 18 µm`:`PCA ${d.axis} · offset ${d.offset_mm.toFixed(6)} mm · ${count(d.selected_samples)} selected samples · display grid ${d.sampling_mm.toFixed(3)} mm / ${(d.sampling_mm*1000).toFixed(0)} µm. Nearest original 18 µm voxels; no interpolated detail.`;panel.last=d;panel.paint=value=>{const toggle=panel.figure.querySelector('.native-panel-link'),old=toggle.checked;toggle.checked=false;this.receive(value);toggle.checked=old;};if(panel.link())onLink(d);if(d.contour_summary)panel.figure.querySelector('.native-panel-readout').textContent+=` Blue gap contours: ${count(d.contour_summary.closed_components)} components; red peak candidates: ${count(d.contour_summary.red_pixels)}. Curvature excess kurtosis: ${d.contour_summary.curvature_excess_kurtosis==null?'undefined':d.contour_summary.curvature_excess_kurtosis.toFixed(3)}.`;if(panel.playing)panel.playTimer=setTimeout(()=>panel.advance?.(),100);return true;},stop(){panels.forEach(p=>p.stop());}};
+ return{receive(d){const panel=panels.get(d.target);if(!panel)return false;const canvas=panel.figure.querySelector('canvas');panel.figure.querySelector('.native-slice-still').hidden=true;panel.figure.querySelector('.native-panel-load').hidden=true;canvas.hidden=false;canvas.width=d.width;canvas.height=d.height;const ctx=canvas.getContext('2d'),image=ctx.createImageData(d.width,d.height);const enabled=panel.figure.querySelector('.native-panel-contours').checked;for(let i=0;i<d.data.length;i++){const j=i*4,flags=enabled?(d.overlay?.[i]||0):0,value=d.data[i];image.data[j]=flags&4?245:flags&2?31:flags&1?5:value;image.data[j+1]=flags&4?46:flags&2?161:flags&1?25:value;image.data[j+2]=flags&4?31:flags&2?250:flags&1?52:value;image.data[j+3]=255;}ctx.putImageData(image,0,0);canvas.dataset.selectedSamples=String(d.selected_samples);canvas.dataset.samplingMm=String(d.sampling_mm);panel.figure.querySelector('.native-panel-readout').textContent=d.axis==='native'?`Original axial grid ${d.z} · z = ${d.offset_mm.toFixed(6)} mm · ${count(d.selected_samples)} material pixels · 0.018 mm / 18 µm`:`PCA ${d.axis} · offset ${d.offset_mm.toFixed(6)} mm · ${count(d.selected_samples)} selected samples · display grid ${d.sampling_mm.toFixed(3)} mm / ${(d.sampling_mm*1000).toFixed(0)} µm. Nearest original 18 µm voxels; no interpolated detail.`;panel.last=d;panel.paint=value=>{const toggle=panel.figure.querySelector('.native-panel-link'),old=toggle.checked;toggle.checked=false;this.receive(value);toggle.checked=old;};if(panel.link())onLink(d);if(d.contour_summary)panel.figure.querySelector('.native-panel-readout').textContent+=` Blue gap contours: ${count(d.contour_summary.closed_components)} components; red peak candidates: ${count(d.contour_summary.red_pixels)}. Curvature excess kurtosis: ${d.contour_summary.curvature_excess_kurtosis==null?'undefined':d.contour_summary.curvature_excess_kurtosis.toFixed(3)}.`;if(panel.playing)panel.playTimer=setTimeout(()=>panel.advance?.(),100);return true;},fail(d){
+  const panel=panels.get(d.target);
+  if(!panel)return false;
+  panel.stop();
+  panel.figure.querySelector('.native-panel-load').hidden=false;
+  panel.figure.querySelector('.native-panel-readout').textContent='The requested section could not load. Use Load native section to retry or download the original GIF.';
+  return true;
+ },stop(){panels.forEach(p=>p.stop());}};
 }
 
 export function revealSection(element){for(let p=element.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;element.scrollIntoView({behavior:'auto',block:'start'});}

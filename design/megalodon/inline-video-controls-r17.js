@@ -1,4 +1,4 @@
-const controlsByVideo = new WeakMap();
+const controlsByVideo = new WeakSet();
 const foldListeners = new WeakSet();
 let nextId = 1;
 
@@ -26,7 +26,7 @@ function observeFolds(doc) {
 export function mountInlineVideoControls(root = document) {
   const doc = root.ownerDocument ?? root;
   observeFolds(doc);
-  for (const video of root.querySelectorAll('video')) {
+  for (const video of root.querySelectorAll('video:not([data-inline-play])')) {
     if (controlsByVideo.has(video)) continue;
     const frame = doc.createElement('div');
     frame.className = 'inline-video';
@@ -38,11 +38,23 @@ export function mountInlineVideoControls(root = document) {
     play.className = 'inline-video-play';
     if (!video.id) video.id = `inline-video-${nextId++}`;
     play.setAttribute('aria-controls', video.id);
+    const icon = doc.createElement('span');
+    icon.setAttribute('aria-hidden', 'true');
+    play.append(icon);
     frame.append(play);
 
+    const status = doc.createElement('p');
+    status.className = 'inline-video-status';
+    status.setAttribute('role', 'status');
+    status.hidden = true;
+    frame.append(status);
+
     function update() {
+      const paused = video.paused || video.ended;
       frame.hidden = video.hidden;
-      play.textContent = video.paused || video.ended ? 'Play' : 'Pause';
+      play.dataset.state = paused ? 'paused' : 'playing';
+      play.setAttribute('aria-label', paused ? 'Play video' : 'Pause video');
+      play.title = paused ? 'Play video' : 'Pause video';
     }
     play.addEventListener('click', async () => {
       if (video.closest('details:not([open])')) return;
@@ -50,16 +62,19 @@ export function mountInlineVideoControls(root = document) {
         try {
           await video.play();
           if (video.closest('details:not([open])')) video.pause();
-        } catch {
-          // Keep the button and the video's native controls available.
+          status.hidden = true;
+        } catch (error) {
+          if (error.name !== 'AbortError') {
+            status.textContent = 'Playback is unavailable here. Use the MP4 download.';
+            status.hidden = false;
+          }
         }
       } else video.pause();
       update();
     });
     for (const event of ['play', 'pause', 'ended', 'emptied']) video.addEventListener(event, update);
-    const hiddenChange = new MutationObserver(update);
-    hiddenChange.observe(video, { attributes: true, attributeFilter: ['hidden'] });
-    controlsByVideo.set(video, hiddenChange);
+    new MutationObserver(update).observe(video, { attributes: true, attributeFilter: ['hidden'] });
+    controlsByVideo.add(video);
     update();
   }
 }

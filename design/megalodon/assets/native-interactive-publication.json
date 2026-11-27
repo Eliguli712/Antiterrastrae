@@ -41,8 +41,10 @@
       ],
       "display_model_height_mm": 50,
       "coordinate_convention": "Original source position determines clipping and existing colours; model-to-screen scale does not alter the source domain.",
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_1_50mm_1080p.mp4",
+      "url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_1_50mm_1080p.mp4",
       "reverse_url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_1_50mm_1080p_reverse.mp4",
+      "gif_url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_1_50mm_1080p.gif",
+      "reverse_gif_url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_1_50mm_1080p_reverse.gif",
       "maximum_section": {
         "source_frame_index": 194,
         "forward_time_s": 7.76,
@@ -82,8 +84,10 @@
       ],
       "display_model_height_mm": 50,
       "coordinate_convention": "Original source position determines clipping and existing colours; model-to-screen scale does not alter the source domain.",
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_2_50mm_1080p.mp4",
+      "url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_2_50mm_1080p.mp4",
       "reverse_url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_2_50mm_1080p_reverse.mp4",
+      "gif_url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_2_50mm_1080p.gif",
+      "reverse_gif_url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_2_50mm_1080p_reverse.gif",
       "maximum_section": {
         "source_frame_index": 183,
         "forward_time_s": 7.32,
@@ -123,8 +127,10 @@
       ],
       "display_model_height_mm": 50,
       "coordinate_convention": "Original source position determines clipping and existing colours; model-to-screen scale does not alter the source domain.",
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_3_50mm_1080p.mp4",
+      "url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_3_50mm_1080p.mp4",
       "reverse_url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_3_50mm_1080p_reverse.mp4",
+      "gif_url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_3_50mm_1080p.gif",
+      "reverse_gif_url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_3_50mm_1080p_reverse.gif",
       "maximum_section": {
         "source_frame_index": 80,
         "forward_time_s": 3.2,
@@ -139,17 +145,17 @@
   ],
   "extra_sources": [
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_1_50mm_1080p.mp4",
+      "url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_1_50mm_1080p.mp4",
       "bytes": 525924,
       "sha256": "a8eb985275647ef8874977cbdd705de1324e530948f6bce8540921b731bfff9c"
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_2_50mm_1080p.mp4",
+      "url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_2_50mm_1080p.mp4",
       "bytes": 576780,
       "sha256": "ef92b6c68113d21467442f4fa7a65ed5ff475130f09dbc35247ab0bb9750278b"
     },
     {
-      "url": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/Native74_Internal_PCA_Axis_3_50mm_1080p.mp4",
+      "url": "./assets/native-cut-playback/Native74_Internal_PCA_Axis_3_50mm_1080p.mp4",
       "bytes": 1234111,
       "sha256": "4aa58562561316378398f52e3558ee14b19a48c9314968921c5e6998f5350a3a"
     },

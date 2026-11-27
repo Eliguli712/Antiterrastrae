@@ -59,7 +59,7 @@ async function loadGeometry(){
    if(!stopped)postMessage({type:'volume',buffer:volume},[volume]);
   }catch(e){send('volume-error',{message:e.message});}
  }catch(e){if(!stopped)send('error',{message:String(e.message||e)});}
- finally{geometryActive=false;prepareCache();}
+ finally{geometryActive=false;reportCache('cache-progress').catch(()=>{});}
 }
 async function loadNatural(){
  if(naturalActive||naturalComplete||stopped)return;
@@ -73,7 +73,7 @@ async function loadNatural(){
   }
   if(!stopped){naturalComplete=true;send('photo-complete');}
  }catch(e){if(!stopped)send('natural-error',{message:String(e.message||e)});}
- finally{naturalActive=false;prepareCache();}
+ finally{naturalActive=false;reportCache('cache-progress').catch(()=>{});}
 }
 function prepareCache(){
  if(cacheRun||geometryActive||naturalActive)return;
@@ -104,7 +104,6 @@ self.onmessage=({data:d})=>{
   stopped=true;
   for(const job of waiting.values())job.reject(Error('Interactive 3D stopped'));
   waiting.clear();
-  prepareCache();
  }else if(d.type==='ack'){
   waiting.get(d.id)?.resolve();
   waiting.delete(d.id);

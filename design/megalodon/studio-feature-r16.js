@@ -1,4 +1,3 @@
-import { mountInlineVideoControls } from './inline-video-controls-r17.js?v=1';
 
 const root = document.documentElement;
 const art = document.getElementById('studioArtDisplay');
@@ -26,7 +25,6 @@ const translations = {
   studioRailHelp: ['Slide the cap 0–40 mm along the original CAD rail.', 'Kappe auf der ursprünglichen CAD-Führung um 0–40 mm verschieben.', 'Ολίσθηση του καλύμματος κατά 0–40 mm στον αρχικό οδηγό CAD.'],
   studioFreeHelp: ['Drag the cap to move it. Drag elsewhere to rotate. With the view focused, use the arrow keys to move, Page Up or Page Down to change height, or Escape to reset the cap.', 'Kappe zum Verschieben ziehen. Zum Drehen außerhalb der Kappe ziehen. In der fokussierten Ansicht Pfeiltasten zum Verschieben, Bild auf oder Bild ab für die Höhe und Esc zum Zurücksetzen verwenden.', 'Σύρετε το κάλυμμα για να το μετακινήσετε. Σύρετε αλλού για περιστροφή. Με εστιασμένη την προβολή, χρησιμοποιήστε τα βέλη για μετακίνηση, Page Up ή Page Down για το ύψος ή Esc για επαναφορά.']
 };
-mountInlineVideoControls(document);
 
 const support=document.getElementById('studioDoubleCube');
 if(support){
