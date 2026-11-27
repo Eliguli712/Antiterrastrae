@@ -32,7 +32,7 @@ if(support){
   const loadSupport=()=>{
     if(!support.open||loadingSupport)return;
     loadingSupport=true;
-    import('./studio-support-r17.js?v=1')
+    import('./studio-support-r17.js?v=2')
       .then(({mountStudioSupport})=>mountStudioSupport(support))
       .catch(()=>{
         loadingSupport=false;
@@ -78,7 +78,7 @@ if (root.dataset.studioDisplay === 'workbench') {
   const capPosition=element('studioArtCapPosition'),capHelp=element('studioArtCapHelp');
   const toothFinish=element('studioArtToothFinish');
   let capOffset=[0,0,0];
-  let mode='interactive',visible=false,viewer=null,loading=null,failed=false;
+  let mode='interactive',visible=false,viewer=null,loading=null,failed=false,compatibility=false;
 
   function paintCapPosition(offset){
     capOffset=offset;
@@ -122,22 +122,37 @@ if (root.dataset.studioDisplay === 'workbench') {
     capControls.hidden=!live;
     interactive.setAttribute('aria-pressed',String(mode==='interactive'));
     reference.setAttribute('aria-pressed',String(mode==='reference'));
-    status.textContent=live?'Drag to rotate. Right-drag or use two fingers to pan. Scroll or pinch to zoom.':
+    status.textContent=live?`Drag to rotate. Right-drag or use two fingers to pan. Scroll or pinch to zoom.${compatibility?' Using the lightweight 3D preview.':''}`:
       mode==='reference'?'Original artist render.':
       failed?'The 3D artwork could not load. The original render is shown. Select Interactive 3D to retry.':'Preparing the 3D artwork…';
     viewer?.setVisible(live&&visible&&!document.hidden);
     updateRuler();
   }
 
-  function load(){
+  function load(fallbackOnly=false){
     if(mode!=='interactive'||!visible||viewer||loading||failed)return;
-    loading=import('./studio-art-view-r16.js?v=3').then(({mountStudioArt})=>
-      mountStudioArt(canvas,{onCapMove:paintCapPosition}))
+    const options={onCapMove:paintCapPosition};
+    const fallback=async()=>{
+      canvas.replaceChildren();
+      const {mountStudioMeshPreview}=await import('./studio-mesh-preview.js?v=1');
+      const view=await mountStudioMeshPreview(canvas,options);
+      compatibility=true;
+      return view;
+    };
+    loading=(fallbackOnly?fallback():import('./studio-art-view-r16.js?v=3')
+      .then(({mountStudioArt})=>mountStudioArt(canvas,options)).catch(fallback))
       .then(view=>{
         viewer=view;
         viewer.setCapMode(capMode.value);
         viewer.setToothFinish(toothFinish.value);
         stage.dataset.art3d='ready';
+        canvas.dataset.renderMode=compatibility?'canvas':'webgl';
+        if(!compatibility)canvas.querySelector('canvas').addEventListener('webglcontextlost',()=>{
+          viewer.setVisible(false);
+          viewer=null;
+          paint();
+          load(true);
+        },{once:true});
         paint();
       }).catch(()=>{
         failed=true;

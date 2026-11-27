@@ -1,4 +1,4 @@
-import {mountInlineVideoControls} from './inline-video-controls-r17.js?v=2';
+import {mountInlineVideoControls} from './inline-video-controls-r17.js?v=3';
 import {words} from './exhibition-i18n-r12.js?v=r12-1';
 // Measured on the displayed mask, using only the frames in each playback speed.
 const peakFrames={
@@ -37,14 +37,18 @@ if(response?.ok){
   for(const[b,label]of [[bFast,'10× preview'],[bOriginal,'Original speed'],[bVideo,'Video'],[bGif,'GIF'],[bPeak,'Largest frame']]){
    b.type='button';b.textContent=label;tools.append(b);
   }
-  const gif=document.createElement('img');gif.className='ct-gif-display';gif.hidden=true;gif.alt='Full-HD 10× CT sweep; native acquisition sampling 18 micrometres';video.after(gif);gif.after(tools);
+  const gif=document.createElement('img');gif.className='ct-gif-display';gif.hidden=true;gif.alt='Full-HD 10× CT sweep; native acquisition sampling 18 micrometres';(video.closest('.inline-video')??video).after(gif);gif.after(tools);
   const note=document.createElement('p');note.className='caption';tools.after(note);
   const selected=()=>peakFrames[key][fast?'fast':'original'];
+  let seekPeak=false;
   function seekLargest(){
-   if(video.readyState>=1&&video.currentSrc===source.src)video.currentTime=selected().time_s;
+   if(!seekPeak||video.readyState<1||video.currentSrc!==source.src)return;
+   video.currentTime=Math.min(video.duration,selected().time_s);
+   seekPeak=false;
   }
   video.addEventListener('loadedmetadata',seekLargest);
   function update({play=false,peak=false}={}){
+   seekPeak=peak;
    bFast.setAttribute('aria-pressed',String(fast));bOriginal.setAttribute('aria-pressed',String(!fast));
    bVideo.setAttribute('aria-pressed',String(format==='video'));bGif.setAttribute('aria-pressed',String(format==='gif'));
    video.hidden=format==='gif';gif.hidden=format!=='gif';
@@ -66,11 +70,11 @@ if(response?.ok){
     if(play)video.play().catch(()=>{});
    }
    const playback=fast?'10× preview · 12.2 seconds · 1920 × 1080 · 25 output fps.':'Original playback · 122 seconds · 3,050 frames at 25 fps.';
-   const opening=key==='axes'?' Video opens at the frame with the largest combined material area in its three displayed sections.':' Video opens at the largest longitudinal section in the selected clip.';
+   const opening=key==='axes'?' Largest frame jumps to the greatest combined material area in the three sections.':' Largest frame jumps to the greatest longitudinal section in the selected clip.';
    note.textContent=playback+opening;
   }
-  bFast.onclick=()=>{fast=true;update({play:true});};
-  bOriginal.onclick=()=>{fast=false;update({play:true});};
+  bFast.onclick=()=>{fast=true;format='video';update({play:true});};
+  bOriginal.onclick=()=>{fast=false;format='video';update({play:true});};
   bVideo.onclick=()=>{format='video';update({play:true});};
   bGif.onclick=()=>{format='gif';update();};
   bPeak.onclick=()=>{format='video';video.pause();video.preload='metadata';update({peak:true});};

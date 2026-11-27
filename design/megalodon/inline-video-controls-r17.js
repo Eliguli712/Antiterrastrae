@@ -39,8 +39,11 @@ export function mountInlineVideoControls(root = document) {
     if (!video.id) video.id = `inline-video-${nextId++}`;
     play.setAttribute('aria-controls', video.id);
     const icon = doc.createElement('span');
+    icon.className = 'inline-video-icon';
     icon.setAttribute('aria-hidden', 'true');
-    play.append(icon);
+    const label = doc.createElement('span');
+    label.className = 'inline-video-label';
+    play.append(icon, label);
     frame.append(play);
 
     const status = doc.createElement('p');
@@ -55,11 +58,13 @@ export function mountInlineVideoControls(root = document) {
       play.dataset.state = paused ? 'paused' : 'playing';
       play.setAttribute('aria-label', paused ? 'Play video' : 'Pause video');
       play.title = paused ? 'Play video' : 'Pause video';
+      label.textContent = paused ? 'Play video' : 'Pause';
     }
     play.addEventListener('click', async () => {
       if (video.closest('details:not([open])')) return;
       if (video.paused || video.ended) {
         try {
+          if (video.error) video.load();
           await video.play();
           if (video.closest('details:not([open])')) video.pause();
           status.hidden = true;
@@ -73,6 +78,13 @@ export function mountInlineVideoControls(root = document) {
       update();
     });
     for (const event of ['play', 'pause', 'ended', 'emptied']) video.addEventListener(event, update);
+    video.addEventListener('playing', () => { status.hidden = true; });
+    video.addEventListener('error', () => {
+      if (video.hidden) return;
+      status.textContent = 'Playback could not start. Try Play video or use the MP4 download.';
+      status.hidden = false;
+      update();
+    });
     new MutationObserver(update).observe(video, { attributes: true, attributeFilter: ['hidden'] });
     controlsByVideo.add(video);
     update();

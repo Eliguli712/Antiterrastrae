@@ -2,6 +2,7 @@ import{NativeSections}from'./native-section-r15.js?v=2';
 import{decodedBytes,decodeBuffer,sourceBytes,cacheInventory,setPersistence}from'./native-store-r15.js?v=2';
 const NATIVE_FACES=74293846;
 let config,sections,allParts=[],geometryStarted=false,geometryActive=false,stopped=false,naturalActive=false,naturalComplete=false,cacheRun;
+let previewTask;
 const waiting=new Map();
 const stats={cacheHits:0,cacheWrites:0,sourceReads:0,sourceBytes:0};
 const send=(type,data={})=>postMessage({type,...data,stats:{...stats}});
@@ -19,14 +20,24 @@ async function reportCache(type){
  send(type,{...info,geometryTotal,geometryAvailable});
  return {missing,...info};
 }
+function loadPreview(){
+ if(!previewTask){
+  previewTask=decodedBytes(config.preview.file,stats).then(buffer=>{
+   if(!stopped)postMessage({type:'preview',buffer},[buffer]);
+  }).catch(error=>{
+   previewTask=null;
+   throw error;
+  });
+ }
+ return previewTask;
+}
 async function loadGeometry(){
  if(geometryStarted||stopped)return;
  geometryStarted=true;
  geometryActive=true;
  try{
-  const preview=await decodedBytes(config.preview.file,stats);
+  await loadPreview().catch(()=>{});
   if(stopped)return;
-  postMessage({type:'preview',buffer:preview},[preview]);
   const chunks=config.geometry.chunks,inflight=new Map();
   const concurrency=config.constrained?1:2;
   const prepare=i=>{
@@ -99,7 +110,8 @@ self.onmessage=({data:d})=>{
   setPersistence(config.persistent);
   sections=new NativeSections(config,stats,p=>postMessage(p,[p.data.buffer,...(p.overlay?[p.overlay.buffer]:[])]));
   allParts=[...config.geometry.chunks,config.preview.file,config.volume.file,...config.mask.slabs,...(config.extra_sources||[]),...(config.natural?.chunks||[])];
- }else if(d.type==='load-geometry')loadGeometry();
+ }else if(d.type==='load-preview')loadPreview().catch(error=>send('preview-error',{message:String(error.message||error)}));
+ else if(d.type==='load-geometry')loadGeometry();
  else if(d.type==='stop-geometry'){
   stopped=true;
   for(const job of waiting.values())job.reject(Error('Interactive 3D stopped'));

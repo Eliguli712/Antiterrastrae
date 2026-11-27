@@ -14,7 +14,7 @@ function graphicsCheckpoint(value){
   else sessionStorage.setItem(GRAPHICS_CHECKPOINT,value);
  }catch{}
 }
-function needsStaticFirst(){
+function isConstrainedDevice(){
  const mobile=Boolean(navigator.userAgentData?.mobile)||/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
  const handheld=matchMedia('(pointer: coarse) and (max-width: 900px)').matches;
  const appleTablet=navigator.maxTouchPoints>1&&navigator.platform==='MacIntel';
@@ -198,8 +198,9 @@ export class NativeEngine{
  constructor(config,hooks={}){
   this.config=config;setPersistence(config.persistent);this.hooks=hooks;this.size=50;this.rootLevel=1.3;this.transition=10;this.curvature=8;this.part='whole';this.gap=6;this.nav='rotate';this.sync=true;this.rulerFixed=true;this.rulerOffset={x:0,z:0};this.views=[];this.bundles=[];this.faces=0;this.ready=false;this.active=true;this.uploadQueue=[];this.colourQueue=[];this.photoQueue=[];this.photoReady=false;this.photoVertices=0;this.caseTicket=0;this.playing=false;this.dirty=true;this.lastFrame=performance.now();
   this.recovering=Boolean(graphicsCheckpoint());
-  this.constrained=needsStaticFirst();
+  this.constrained=isConstrainedDevice();
   this.graphicsStarted=false;
+  this.fullLoading=false;
   this.canvas=document.createElement('canvas');this.canvas.className='native-shared-canvas';this.canvas.hidden=true;this.canvas.setAttribute('aria-hidden','true');document.body.append(this.canvas);
   this.pointScene=new THREE.Scene();this.pointGroups=[];this.pointCount=0;this.scene=new THREE.Scene();this.rulerScene=new THREE.Scene();this.scale=cadRuler(config.ruler);this.rulerScene.add(this.scale);this.configureWood();this.planeScene=new THREE.Scene();this.motionScene=new THREE.Scene();
   const r=new THREE.Matrix3().set(...config.geometry.display_affine_R.flat()),inverse=r.clone().invert(),v=config.volume;
@@ -216,7 +217,7 @@ export class NativeEngine{
   this.material=new THREE.RawShaderMaterial({vertexShader:VERT,fragmentShader:FRAG,uniforms:this.uniforms,glslVersion:THREE.GLSL3,side:THREE.DoubleSide,toneMapped:false});
   this.configureMotionPlanes();
   try{
-   this.worker=new Worker(new URL('./native-stream-r15.js?v=4',import.meta.url),{type:'module'});
+   this.worker=new Worker(new URL('./native-stream-r15.js?v=5',import.meta.url),{type:'module'});
    this.worker.onmessage=e=>{try{this.message(e.data);}catch(error){this.fail(error.message);}};
    this.worker.onerror=()=>this.fail('The native data worker stopped. Static renders and cavity videos remain available.');
   }catch{
@@ -227,7 +228,7 @@ export class NativeEngine{
   }else if(typeof WebGL2RenderingContext==='undefined'){
    this.unavailable='The browser lacks WebGL 2. Static renders and cavity videos remain available.';
   }else if(navigator.deviceMemory>0&&navigator.deviceMemory<=4){
-   this.unavailable='This browser reports at most 4 GB of device memory. Static renders and cavity videos remain available.';
+   this.fullUnavailable='The complete mesh exceeds this device’s reported memory. The lighter 3D preview and CT videos remain available.';
   }
   this.canvas.addEventListener('webglcontextlost',e=>{
    if(this.unavailable)return;
@@ -251,7 +252,7 @@ export class NativeEngine{
    this.active=!document.hidden;
    if(this.active){this.lastFrame=performance.now();this.dirty=true;}
   });
-  window.addEventListener('pagehide',event=>{if(!event.persisted&&this.graphicsStarted&&!this.failed&&!this.restartingStatic)graphicsCheckpoint(null);});
+  window.addEventListener('pagehide',event=>{if(!event.persisted&&(this.fullLoading||this.ready)&&!this.failed&&!this.restartingStatic)graphicsCheckpoint(null);});
  }
  start(){
   this.worker?.postMessage({type:'init',config:{...this.config,constrained:this.constrained}});
@@ -259,33 +260,37 @@ export class NativeEngine{
   if(this.unavailable){
    this.hooks.graphicsState?.('unavailable');
    this.hooks.note?.(this.unavailable);
+   return;
+  }
+  this.hooks.graphicsState?.('waiting');
+  if(typeof IntersectionObserver==='function'){
+   this.previewObserver=new IntersectionObserver(entries=>{
+    if(entries.some(entry=>entry.isIntersecting))this.loadPreview();
+   },{rootMargin:'400px'});
+   this.views.forEach(v=>this.previewObserver.observe(v.element));
   }else{
-   this.hooks.graphicsState?.('static');
+   this.loadPreview();
   }
  }
  prepareCache(){this.worker?.postMessage({type:'cache-only'});}
- returnToStatic(){this.restartingStatic=true;graphicsCheckpoint('static-requested');location.reload();}
- loadFull3D(){
-  if(this.failed||this.lost){this.returnToStatic();return;}
-  if(this.graphicsStarted||this.unavailable)return;
-  graphicsCheckpoint('allocating');
+ returnToStatic(){this.restartingStatic=true;graphicsCheckpoint(null);location.reload();}
+ startGraphics(){
+  if(this.graphicsStarted)return true;
+  if(this.failed||this.lost||this.unavailable)return false;
   try{
-   const options={alpha:true,antialias:!this.constrained,powerPreference:this.constrained?'default':'high-performance',failIfMajorPerformanceCaveat:true};
+   const options={alpha:true,antialias:!this.constrained,powerPreference:'default'};
    const gl=this.canvas.getContext('webgl2',options);
    if(!gl){
-    graphicsCheckpoint(null);
-    this.unavailable='Hardware-accelerated WebGL 2 is unavailable. Static renders and cavity videos remain available.';
+    this.unavailable='WebGL 2 is unavailable. Reference images and CT videos can still be used.';
     this.hooks.graphicsState?.('unavailable');
     this.hooks.note?.(this.unavailable);
-    return;
+    return false;
    }
+   const debugInfo=gl.getExtension('WEBGL_debug_renderer_info');
+   const rendererName=debugInfo?gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL):'';
+   if(/swiftshader|llvmpipe|software rasterizer/i.test(rendererName))this.fullUnavailable='This browser uses software 3D rendering. Use the lighter preview to rotate the tooth.';
    if(gl.getParameter(gl.MAX_3D_TEXTURE_SIZE)<Math.max(...this.config.volume.shape_xyz)){
-    this.unavailable='This graphics device cannot hold the 3D volume texture. Static renders and cavity videos remain available.';
-    gl.getExtension('WEBGL_lose_context')?.loseContext();
-    graphicsCheckpoint(null);
-    this.hooks.graphicsState?.('unavailable');
-    this.hooks.note?.(this.unavailable);
-    return;
+    this.fullUnavailable='The complete volume texture exceeds this graphics device’s limit.';
    }
    this.renderer=new THREE.WebGLRenderer({canvas:this.canvas,context:gl,...options});
    this.renderer.autoClear=false;this.renderer.sortObjects=false;
@@ -294,10 +299,33 @@ export class NativeEngine{
    this.graphicsStarted=true;
    this.canvas.hidden=false;
    this.resize();
-   this.hooks.graphicsState?.('loading');
-   this.worker.postMessage({type:'load-geometry'});
    this.tick();
-  }catch(e){this.fail(e.message);}
+   return true;
+  }catch(error){
+   this.fail(error.message);
+   return false;
+  }
+ }
+ loadPreview(){
+  this.previewObserver?.disconnect();
+  if(this.preview||this.previewLoading||this.fullLoading||this.ready||!this.startGraphics())return;
+  this.previewLoading=true;
+  this.hooks.graphicsState?.('preview-loading');
+  this.worker.postMessage({type:'load-preview'});
+ }
+ loadFull3D(){
+  if(this.failed||this.lost){this.returnToStatic();return;}
+  if(this.ready||this.fullLoading||!this.startGraphics())return;
+  if(this.fullUnavailable){
+   this.loadPreview();
+   this.hooks.note?.(this.fullUnavailable);
+   return;
+  }
+  this.previewObserver?.disconnect();
+  this.fullLoading=true;
+  graphicsCheckpoint('allocating');
+  this.hooks.graphicsState?.('loading');
+  this.worker.postMessage({type:'load-geometry'});
  }
  addView(element,options={}){
   const view={element,mode:options.mode??0,cut:options.cut??'none',cutValue:0,flip:1,showPlane:false,maskBefore:true,contours:true,peakRule:'tail99',mesh:'surface',static:false};
@@ -306,7 +334,7 @@ export class NativeEngine{
   view.controls=new OrbitControls(view.camera,hit);view.controls.enableDamping=true;view.controls.dampingFactor=.14;view.controls.screenSpacePanning=true;view.controls.minZoom=.4;view.controls.maxZoom=128;view.controls.touches.TWO=THREE.TOUCH.DOLLY_PAN;
   view.controls.addEventListener('change',()=>{this.dirty=true;if(this.sync&&!this.syncing)this.synchronize(view);});
   view.fallback=on=>{
-   const showing=on||!this.graphicsStarted||this.failed||this.lost;
+   const showing=on||(!this.preview&&!this.ready)||this.failed||this.lost;
    element.classList.toggle('native-poster-visible',showing);
    hit.tabIndex=showing?-1:0;
    view.controls.enabled=!showing&&this.nav!=='slice';
@@ -346,7 +374,15 @@ export class NativeEngine{
  replaceColour(mesh,bytes){const a=mesh.geometry.getAttribute('color');a.array=new Uint8Array(bytes);a.needsUpdate=true;}
  message(d){
   if(this.failed&&['preview','bundle','photo-bundle','photo-complete','volume','progress','geometry-complete'].includes(d.type))return;
-  if(d.type==='preview')this.makePreview(d.buffer);
+  if(d.type==='preview'){
+   this.previewLoading=false;
+   if(!this.ready&&!this.preview)this.makePreview(d.buffer);
+  }
+  else if(d.type==='preview-error'){
+   this.previewLoading=false;
+   if(!this.fullLoading&&!this.ready)this.hooks.graphicsState?.('preview-error');
+   this.hooks.note?.('The light 3D preview could not be loaded. Reload to try again.');
+  }
   else if(d.type==='bundle'){const p=arrays(d.buffer),group=new THREE.Group();group.visible=false;let count=0;
    for(const m of p.header.meshlets){const prefix=m.prefix,position=p.out[prefix+'_grid'],index=p.out[prefix+'_index'],colour=p.out[prefix+(this.size===50?'_c50':'_c100')],rough=p.out[prefix+'_rough'];if(position.length!==m.vertices*3||index.length!==m.triangles*3||m.source_first_face!==p.header.source_first_face+count)throw Error('Native meshlet coverage mismatch');if(colour.length!==m.vertices*3||rough.length!==m.vertices)throw Error('Native meshlet attribute length mismatch');const grid=packNativeGrid(position,rough),geometry=readonlyGeometry(grid.packed,index,colour,2),mesh=new THREE.Mesh(geometry,this.material);this.bindPackedGrid(mesh,grid);mesh.frustumCulled=false;mesh.userData.nativeFaceCount=m.triangles;group.add(mesh);count+=m.triangles;}
    if(count!==p.header.triangles)throw Error('Native bundle face count mismatch');this.scene.add(group);const points=new THREE.Group();points.visible=false;for(const mesh of group.children){const g=new THREE.BufferGeometry();for(const name of['position','color','photoColour'])g.setAttribute(name,mesh.geometry.getAttribute(name));g.boundingSphere=mesh.geometry.boundingSphere;const point=new THREE.Points(g,this.material);point.onBeforeRender=mesh.onBeforeRender;point.frustumCulled=false;points.add(point);this.pointCount+=mesh.geometry.getAttribute('position').count;}this.pointGroups[d.id]=points;this.pointScene.add(points);this.bundles[d.id]=group;this.uploadQueue.push({group,id:d.id,faces:count});this.dirty=true;
@@ -356,7 +392,7 @@ export class NativeEngine{
   else if(d.type==='mask')this.setMask(d);
   else if(d.type==='mask-error'){this.hooks.maskError?.(d);}
   else if(d.type==='progress')this.hooks.progress?.(d);
-  else if(d.type==='geometry-complete'){if(this.faces!==NATIVE_FACES)return this.fail('Complete native face count mismatch');this.ready=true;this.bundles.forEach(g=>g.visible=true);this.pointGroups.forEach(g=>g.visible=true);if(this.preview){this.scene.remove(this.preview);this.preview.geometry.dispose();this.preview=null;}graphicsCheckpoint('active');this.hooks.graphicsState?.('ready');this.hooks.ready?.(d);this.dirty=true;}
+  else if(d.type==='geometry-complete'){if(this.faces!==NATIVE_FACES)return this.fail('Complete native face count mismatch');this.ready=true;this.fullLoading=false;this.bundles.forEach(g=>g.visible=true);this.pointGroups.forEach(g=>g.visible=true);if(this.preview){this.scene.remove(this.preview);this.preview.geometry.dispose();this.preview=null;}graphicsCheckpoint('active');this.hooks.graphicsState?.('ready');this.hooks.ready?.(d);this.dirty=true;}
   else if(d.type==='cache-progress'||d.type==='cache-ready')this.hooks.cache?.(d);
   else if(d.type==='cache-warning')this.hooks.cacheWarning?.(d.message);
   else if(d.type==='natural-error'){this.rejectPhoto?.(Error(d.message));this.photoPromise=null;this.hooks.note?.('Natural colour source unavailable: '+d.message);}
@@ -369,7 +405,7 @@ export class NativeEngine{
    this.material.uniformsNeedUpdate=true;
   };
  }
- makePreview(buffer){const{header,out}=arrays(buffer),c=out[this.size===50?'colors50':'colors100'];this.preview=new THREE.Mesh(readonlyGeometry(new Float32Array(out.positions),new Uint32Array(out.indices),new Uint8Array(c)),this.material);this.preview.frustumCulled=false;this.preview.userData.colours={50:new Uint8Array(out.colors50),100:new Uint8Array(out.colors100)};this.preview.userData.faces=header.triangles;this.scene.add(this.preview);this.views.forEach(v=>v.fallback(v.static));this.hooks.preview?.(header.triangles);this.dirty=true;}
+ makePreview(buffer){const{header,out}=arrays(buffer),c=out[this.size===50?'colors50':'colors100'];this.preview=new THREE.Mesh(readonlyGeometry(new Float32Array(out.positions),new Uint32Array(out.indices),new Uint8Array(c)),this.material);this.preview.frustumCulled=false;this.preview.userData.colours={50:new Uint8Array(out.colors50),100:new Uint8Array(out.colors100)};this.preview.userData.faces=header.triangles;this.scene.add(this.preview);this.views.forEach(v=>v.fallback(v.static));if(!this.fullLoading)this.hooks.graphicsState?.('preview');this.hooks.preview?.(header.triangles);this.dirty=true;}
  setVolume(buffer){const p=arrays(buffer),s=this.config.volume.shape_xyz,data=p.out.rgba,texture=new THREE.Data3DTexture(data,s[0],s[1],s[2]);texture.format=THREE.RGBAFormat;texture.type=THREE.UnsignedByteType;texture.minFilter=texture.magFilter=THREE.LinearFilter;texture.unpackAlignment=1;texture.needsUpdate=true;texture.onUpdate=()=>{texture.image.data=null;};this.uniforms.uVolume.value.dispose();this.uniforms.uVolume.value=texture;this.uniforms.uVolumeReady.value=1;this.dirty=true;}
  setMask(d){
   const view=this.views.find(v=>v.element.id===d.target);if(!view||!this.graphicsStarted||this.failed){this.hooks.mask?.(d);return;}if(d.request_id!==undefined&&d.request_id!==view.maskTicket)return;
@@ -504,6 +540,7 @@ export class NativeEngine{
   }
   const actual=this.renderer.info.render.triangles;
   const points=this.renderer.info.render.points;
+  v.element.dataset.previewSubmittedTriangles=String(this.ready?0:actual);
   v.element.dataset.cutAxis=v.cut;
   v.element.dataset.cutPosition=String(v.cutValue);
   v.element.dataset.cutMoving=String(Boolean(v.cutMoving));
@@ -556,7 +593,16 @@ export class NativeEngine{
  tick(){if(this.lost||this.failed)return;this.frame=requestAnimationFrame(()=>this.tick());const now=performance.now(),dt=Math.min(.06,(now-this.lastFrame)/1000);this.lastFrame=now;if(!this.renderer||this.lost||this.failed||!this.active||!this.views.length)return;let changed=false;
   this.hooks.beforeFrame?.(now);
   for(const v of this.views)if(v.controls.update())changed=true;
-  if(this.playing&&this.views.some(v=>{const r=v.element.getBoundingClientRect();return r.bottom>0&&r.top<innerHeight;})){const v=this.views[0],p=v.camera.position.clone().sub(v.controls.target),theta=dt*.22,c=Math.cos(theta),s=Math.sin(theta);v.camera.position.copy(v.controls.target).add(new THREE.Vector3(p.x*c-p.y*s,p.x*s+p.y*c,p.z));v.controls.update();changed=true;}
+  if(this.playing){
+   const visible=v=>!v.static&&!v.element.closest('details:not([open])')&&v.element.getBoundingClientRect().bottom>0&&v.element.getBoundingClientRect().top<innerHeight;
+   const v=this.sync?this.views.find(visible):this.playingView;
+   if(v&&visible(v)){
+    const p=v.camera.position.clone().sub(v.controls.target),theta=dt*.22,c=Math.cos(theta),s=Math.sin(theta);
+    v.camera.position.copy(v.controls.target).add(new THREE.Vector3(p.x*c-p.y*s,p.x*s+p.y*c,p.z));
+    v.controls.update();
+    changed=true;
+   }
+  }
   if(this.uploadQueue.length){const q=this.uploadQueue.shift();try{this.upload(q.group);this.faces+=q.faces;this.worker.postMessage({type:'ack',id:q.id});}catch(e){this.fail(e.message);}changed=true;}
   if(this.photoQueue.length){const q=this.photoQueue.shift();try{this.upload(q.group);this.worker.postMessage({type:'ack',id:1000+q.id});}catch(e){this.fail(e.message);}changed=true;}
   if(this.colourQueue.length&&!this.failed){
@@ -577,10 +623,12 @@ export class NativeEngine{
  }
  fail(message){
   if(this.failed)return;
+  const exact=Boolean(this.fullLoading||this.ready);
   this.failed=true;
   this.ready=false;
+  this.fullLoading=false;
   this.playing=false;
-  graphicsCheckpoint('interrupted');
+  graphicsCheckpoint(exact?'interrupted':null);
   this.worker?.postMessage({type:'stop-geometry'});
   for(const q of this.colourQueue)q.reject(Error(message));
   this.colourQueue=[];this.uploadQueue=[];this.photoQueue=[];

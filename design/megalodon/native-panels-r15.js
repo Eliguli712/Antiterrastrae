@@ -17,8 +17,8 @@ export function syncSpeedLabel(input){
  return value;
 }
 
-export function createAxisMovieController({video,axisInput,directionInput,speedInput,playButton,restartButton,status,downloadLink,downloadGif,scrubber,movies}){
- let active=null,activeDirection='forward',pending=null;
+export function createAxisMovieController({video,axisInput,directionInput,speedInput,playButton,restartButton,status,downloadLink,downloadGif,scrubber,sweepButton,traceNote,movies}){
+ let active=null,activeDirection='forward',pending=null,playAttempt=0;
  const clamp=x=>Math.max(0,Math.min(1,Number.isFinite(x)?x:0));
  const frameSpan=()=>Math.max(0,(Number.isFinite(video.duration)?video.duration:0)-1/(Number(active?.fps)||25));
  function largestPosition(movie){
@@ -38,7 +38,8 @@ export function createAxisMovieController({video,axisInput,directionInput,speedI
   return activeDirection==='reverse'?1-position:position;
  }
  const playing=()=>Boolean(pending?.resume)||!video.paused&&!video.ended;
- const firstPosition=()=>largestPosition(active)??(activeDirection==='reverse'?1:0);
+ const startPosition=()=>activeDirection==='reverse'?1:0;
+ const firstPosition=()=>largestPosition(active)??startPosition();
  function seekSource(position){
   if(!Number.isFinite(video.duration)||video.duration<=0)return;
   const encoded=activeDirection==='reverse'?1-clamp(position):clamp(position);
@@ -60,13 +61,37 @@ export function createAxisMovieController({video,axisInput,directionInput,speedI
   }
   const rate=Number(video.playbackRate)||Number(speedInput.value)||1;
   const marker=largest!==null&&Math.abs(largest-position)<1e-6?' · largest section':'';
-  status.textContent=`PCA axis ${axisInput.value} · ${directionInput.value==='reverse'?'Reverse':'Forward'} MP4 · ${rate.toFixed(2)}× · source position ${(position*100).toFixed(1)}%${marker}${pending?' · preparing selected clip':''}`;
+  const frame=Math.round(position*(Number(active?.frames||1)-1));
+  const bounds=active?.cut_offsets_native_mm;
+  const offset=Array.isArray(bounds)&&bounds.length===2&&bounds.every(Number.isFinite)
+   ?` · offset ${(bounds[0]+position*(bounds[1]-bounds[0])).toFixed(3)} mm`:'';
+  const traces=active?.trace_intersections_by_source_frame;
+  const intersections=active?.trace_overlay===true&&Array.isArray(traces)&&traces.length===active.frames&&Number.isInteger(traces[frame])
+   ?` · ${traces[frame]} candidate cavity centerline crossings`:'';
+  const playback=pending?(pending.resume?' · loading clip':''):(video.seeking?' · seeking':'');
+  status.textContent=`PCA axis ${axisInput.value} · ${directionInput.value==='reverse'?'Reverse':'Forward'} MP4 · ${rate.toFixed(2)}× · frame ${frame+1} of ${active?.frames||1}${offset}${intersections}${marker}${playback}`;
  }
  function begin(){
+  const attempt=++playAttempt;
+  if(video.error){video.load();}
   if(pending)pending.resume=true;
-  else if(frameSpan()>0&&(video.ended||video.currentTime>=frameSpan()-.5/(Number(active?.fps)||25)))seekSource(firstPosition());
+  else if(frameSpan()>0&&(video.ended||video.currentTime>=frameSpan()-.5/(Number(active?.fps)||25)))seekSource(startPosition());
   const promise=video.play();
-  if(promise?.catch)promise.catch(()=>{render();status.textContent='Playback paused by the browser. Use Play MP4 to start the selected clip.';});
+  if(promise?.catch)promise.catch(error=>{
+   if(attempt!==playAttempt)return;
+   if(pending)pending.resume=false;
+   render();
+   if(error.name!=='AbortError')status.textContent=video.error
+    ?'This MP4 could not be loaded. Its direct download remains available.'
+    :'Playback paused by the browser. Select Play MP4 to try again.';
+  });
+  render();
+ }
+ function seekPosition(position){
+  if(pending){
+   pending.position=position;
+   if(video.preload==='none'){video.preload='metadata';video.load();}
+  }else seekSource(position);
   render();
  }
  function switchSource(){
@@ -78,6 +103,7 @@ export function createAxisMovieController({video,axisInput,directionInput,speedI
   if(reverseOption)reverseOption.disabled=!reverseURL;
   if(directionInput.value==='reverse'&&!reverseURL)directionInput.value='forward';
   const direction=directionInput.value,url=direction==='reverse'?reverseURL:movie.url;
+  ++playAttempt;
   video.pause();
   active=movie;
   activeDirection=direction;
@@ -96,6 +122,7 @@ export function createAxisMovieController({video,axisInput,directionInput,speedI
    }
   }
   if(scrubber)scrubber.max=String(movie.frames-1);
+  if(traceNote)traceNote.hidden=movie.trace_overlay!==true;
   video.load();
   if(resume)begin();
   render();
@@ -130,26 +157,16 @@ export function createAxisMovieController({video,axisInput,directionInput,speedI
  speedInput.oninput=changeSpeed;
  speedInput.onchange=changeSpeed;
  function pause(){
+  ++playAttempt;
   if(pending)pending.resume=false;
   video.pause();
   render();
  }
  function toggle(){if(playing())pause();else begin();}
  playButton.onclick=toggle;
- if(scrubber)scrubber.oninput=()=>{
-  const position=Number(scrubber.value)/Number(scrubber.max);
-  if(pending){
-   pending.position=position;
-   if(video.preload==='none'){video.preload='metadata';video.load();}
-  }else seekSource(position);
-  render();
- };
- restartButton.onclick=()=>{
-  const position=firstPosition();
-  if(pending)pending.position=position;
-  else seekSource(position);
-  render();
- };
+ if(scrubber)scrubber.oninput=()=>seekPosition(Number(scrubber.value)/Number(scrubber.max));
+ restartButton.onclick=()=>{pause();seekPosition(firstPosition());};
+ if(sweepButton)sweepButton.onclick=()=>{seekPosition(startPosition());begin();};
  switchSource();
  return{sourcePosition,playing,refresh:render,pause,toggle};
 }
@@ -160,7 +177,7 @@ export function mountAxisMovies(interactive,stats){
  host.id='native-pca-movies';
  host.innerHTML=`
   <h3>Inside the tooth · principal-axis player</h3>
-  <p>Each clip sweeps through the complete native surface at 300 positions. The source contains 74,293,846 triangles. Each MP4 is 1,920 × 1,080 pixels and runs for 12 seconds at 1×. The player opens on the largest measured section.</p>
+  <p>Each video faces its cut plane directly. The plane moves perpendicular to the selected PCA axis through 300 positions on the 74,293,846-triangle source mesh. Each MP4 is 1,920 × 1,080 pixels and runs for 12 seconds at 1×. The still frame shows the largest measured section. Play full sweep to see the entire direction, or drag the source-frame slider to inspect an individual plane.</p>
   <article class="native-axis-movie">
    <h4>Three PCA axes</h4>
    <div class="native-movie-slot">
@@ -173,6 +190,7 @@ export function mountAxisMovies(interactive,stats){
        <select id="nativeMovieDirection"><option value="forward">Forward</option><option value="reverse">Reverse</option></select>
       </label>
       ${speedControl('MP4 playback speed','native-movie-speed','nativeMovieSpeed')}
+      <button id="nativeMovieSweep" type="button">Play full sweep</button>
       <button id="nativeMovieRestart" type="button">Largest section</button>
      </div>
      <div class="native-view-tools native-movie-dock-actions">
@@ -186,6 +204,7 @@ export function mountAxisMovies(interactive,stats){
      </div>
      <label class="native-speed-control"><span>Source frame</span><input id="nativeMovieScrubber" type="range" min="0" max="299" value="80"></label>
      <p id="nativeMovieStatus" class="native-movie-status" role="status" aria-live="off"></p>
+     <p class="native-movie-trace-note" hidden>Markers locate crossings of registered CT-derived candidate cavity centerlines with the selected principal-axis plane. The cyan symbols are enlarged for visibility. Tissue identity remains unverified.</p>
     </div>
    </div>
    <div class="batch-downloads">
@@ -200,9 +219,9 @@ export function mountAxisMovies(interactive,stats){
  const controller=createAxisMovieController({
   video,axisInput:host.querySelector('#nativeMovieAxis'),directionInput:host.querySelector('#nativeMovieDirection'),
   speedInput:host.querySelector('#nativeMovieSpeed'),playButton:host.querySelector('#nativeMoviePlay'),
-  restartButton:host.querySelector('#nativeMovieRestart'),scrubber:host.querySelector('#nativeMovieScrubber'),
+  restartButton:host.querySelector('#nativeMovieRestart'),sweepButton:host.querySelector('#nativeMovieSweep'),scrubber:host.querySelector('#nativeMovieScrubber'),
   status:host.querySelector('#nativeMovieStatus'),downloadLink:host.querySelector('.native-current-movie'),
-  downloadGif:host.querySelector('.native-current-gif'),movies:interactive.movies
+  downloadGif:host.querySelector('.native-current-gif'),traceNote:host.querySelector('.native-movie-trace-note'),movies:interactive.movies
  });
  const compactButton=host.querySelector('#nativeMovieControls');
  const controls=host.querySelector('.native-movie-controls');

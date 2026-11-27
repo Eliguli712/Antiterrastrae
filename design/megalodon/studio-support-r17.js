@@ -31,7 +31,29 @@ export async function mountStudioSupport(section) {
   const status = section.querySelector('.studio-support-status');
   const reset = section.querySelector('.studio-support-reset');
   const wire = section.querySelector('.studio-support-wireframe');
-  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'low-power' });
+  let renderer;
+  try {
+    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'low-power' });
+  } catch {
+    const { mountStudioSupportPreview } = await import('./studio-mesh-preview.js?v=1');
+    const preview = mountStudioSupportPreview(host, positions);
+    host.dataset.viewerReady = 'true';
+    host.dataset.triangles = String(positions.length / 9);
+    reset.disabled = false;
+    wire.disabled = false;
+    status.textContent = 'Drag the lightweight 3D view to rotate. Pinch or scroll to zoom.';
+    reset.addEventListener('click', preview.reset);
+    wire.addEventListener('change', () => preview.setWireframe(wire.checked));
+    let onScreen = false;
+    const visibility = () => preview.setVisible(section.open && onScreen && !document.hidden);
+    new IntersectionObserver(([entry]) => {
+      onScreen = entry.isIntersecting;
+      visibility();
+    }).observe(host);
+    section.addEventListener('toggle', visibility);
+    document.addEventListener('visibilitychange', visibility);
+    return;
+  }
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.65));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.domElement.setAttribute('aria-label', 'Interactive 3D view of the original DoubleCube STL');
