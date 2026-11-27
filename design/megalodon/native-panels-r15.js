@@ -193,18 +193,13 @@ export function mountAxisMovies(interactive,stats){
       <button id="nativeMovieSweep" type="button">Play full sweep</button>
       <button id="nativeMovieRestart" type="button">Largest section</button>
      </div>
-     <div class="native-view-tools native-movie-dock-actions">
-      <button id="nativeMovieDock" type="button" aria-pressed="false">Dock MP4</button>
-      <button id="nativeMovieFocus" type="button" hidden>Focus 3D</button>
-      <button id="nativeMovieControls" type="button" aria-expanded="true" hidden>Hide controls</button>
-     </div>
      <div class="inline-video">
-      <video id="nativePCAVideo" data-inline-play controls playsinline preload="none" aria-label="Native cavity walls, selected principal axis"></video>
+      <video id="nativePCAVideo" data-inline-play controls playsinline preload="none" width="1920" height="1080" aria-label="Native cavity walls, selected principal axis"></video>
       <button id="nativeMoviePlay" class="inline-video-play" type="button" aria-label="Play MP4" aria-controls="nativePCAVideo"><span aria-hidden="true"></span></button>
      </div>
      <label class="native-speed-control"><span>Source frame</span><input id="nativeMovieScrubber" type="range" min="0" max="299" value="80"></label>
      <p id="nativeMovieStatus" class="native-movie-status" role="status" aria-live="off"></p>
-     <p class="native-movie-trace-note" hidden>Markers locate crossings of registered CT-derived candidate cavity centerlines with the selected principal-axis plane. The cyan symbols are enlarged for visibility. Tissue identity remains unverified.</p>
+     <p class="native-movie-trace-note" hidden>Markers locate crossings of registered CT-derived candidate cavity centerlines with the selected principal-axis plane. Red rings mark the original trace subset. Blue squares mark the fine-envelope extension. Both symbols are enlarged for visibility. Tissue identity remains unverified.</p>
     </div>
    </div>
    <div class="batch-downloads">
@@ -214,8 +209,10 @@ export function mountAxisMovies(interactive,stats){
    </div>
    <div class="native-pca-metrics"></div>
   </article>`;
- document.querySelector('#nativeInternalMount').insertAdjacentElement('afterend',host);
- const video=host.querySelector('video'),surface=host.querySelector('.native-movie-surface'),slot=host.querySelector('.native-movie-slot'),dockButton=host.querySelector('#nativeMovieDock'),focusButton=host.querySelector('#nativeMovieFocus');
+ const fallback=document.querySelector('#nativePCAFallback');
+ if(fallback)fallback.replaceWith(host);
+ else document.querySelector('#nativeInternalMount').insertAdjacentElement('afterend',host);
+ const video=host.querySelector('video');
  const controller=createAxisMovieController({
   video,axisInput:host.querySelector('#nativeMovieAxis'),directionInput:host.querySelector('#nativeMovieDirection'),
   speedInput:host.querySelector('#nativeMovieSpeed'),playButton:host.querySelector('#nativeMoviePlay'),
@@ -223,55 +220,13 @@ export function mountAxisMovies(interactive,stats){
   status:host.querySelector('#nativeMovieStatus'),downloadLink:host.querySelector('.native-current-movie'),
   downloadGif:host.querySelector('.native-current-gif'),traceNote:host.querySelector('.native-movie-trace-note'),movies:interactive.movies
  });
- const compactButton=host.querySelector('#nativeMovieControls');
- const controls=host.querySelector('.native-movie-controls');
  const mountStats=counts=>{if(counts)host.querySelector('.native-pca-metrics').innerHTML=domainMetrics(counts,'video: 300 temporal cut positions');};
- let placement='inline';
- function setCompact(compact){
-  controls.hidden=compact;
-  compactButton.setAttribute('aria-expanded',String(!compact));
-  compactButton.textContent=compact?'MP4 controls':'Hide controls';
- }
- function move(target,kind){
-  if(surface.parentElement===target)return;
-  const time=video.currentTime,resume=controller.playing();
-  if(placement==='inline')slot.style.height=surface.getBoundingClientRect().height+'px';
-  placement=kind;
-  surface.classList.toggle('native-movie-docked',kind==='docked');
-  surface.classList.toggle('native-movie-in-preview',kind==='preview');
-  target.append(surface);
-  if(kind==='inline')slot.style.height='';
-  dockButton.hidden=kind==='preview';
-  dockButton.setAttribute('aria-pressed',String(kind==='docked'));
-  dockButton.textContent=kind==='docked'?'Undock MP4':'Dock MP4';
-  focusButton.hidden=kind!=='docked';
-  compactButton.hidden=kind!=='docked';
-  setCompact(false);
-  if(video.readyState>=1&&Math.abs(video.currentTime-time)>.05)video.currentTime=time;
-  if(resume&&video.paused)video.play().catch(()=>{});
-  controller.refresh();
- }
- const restore=()=>move(slot,'inline');
- dockButton.onclick=()=>placement==='docked'?restore():move(document.body,'docked');
- compactButton.onclick=()=>setCompact(!controls.hidden);
  document.addEventListener('toggle',event=>{
   const fold=event.target;
-  if(fold.tagName!=='DETAILS'||fold.open)return;
-  if(placement==='docked'&&fold.contains(slot)){controller.pause();restore();}
-  else if(fold.contains(surface))controller.pause();
+  if(fold.tagName==='DETAILS'&&!fold.open&&fold.contains(host))controller.pause();
  },true);
- focusButton.onclick=()=>{
-  setCompact(true);
-  document.querySelector('[data-native-card="internal"] .native-focus')?.click();
- };
- surface.addEventListener('keydown',e=>{
-  if(e.key!=='Escape'||placement!=='docked')return;
-  e.preventDefault();
-  restore();
-  dockButton.focus({preventScroll:true});
- });
  mountStats(stats);
- return{showIn:container=>move(container,'preview'),restore,toggle:controller.toggle,playing:controller.playing,pause:controller.pause,video,mountStats};
+ return{host,toggle:controller.toggle,playing:controller.playing,pause:controller.pause,video,mountStats};
 }
 export function mountSlicePanels(engine,pca,stats,onLink){
  const host=document.querySelector('.ct-planes'),panels=new Map();

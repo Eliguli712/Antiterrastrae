@@ -3,7 +3,7 @@ import{OrbitControls}from'./vendor/OrbitControls.js';
 import{arrays,setPersistence}from'./native-store-r15.js?v=2';
 import{packNativeGrid}from'./native-packed-gpu-r18.js?v=1';
 import{cadRuler}from'./cad-palaeo-ruler-r14.js?v=1';
-import{loadMicrotubes}from'./native-microtubes.js?v=2';
+import{loadMicrotubes}from'./native-microtubes.js?v=3';
 export const NATIVE_FACES=74293846;
 const CENTRE=136.73910524340096;
 const GRAPHICS_CHECKPOINT='megalodon-native-graphics-r18';
@@ -21,8 +21,8 @@ function isConstrainedDevice(){
  return mobile||handheld||appleTablet||navigator.connection?.saveData||(navigator.deviceMemory>0&&navigator.deviceMemory<8);
 }
 const VERT=`precision highp float;precision highp int;
-in vec3 position;in vec3 color;in vec3 photoColour;
-uniform float uPointSize;uniform mat4 projectionMatrix,modelViewMatrix;uniform mat3 uR,uInvR;uniform vec3 uT,uOffset,uMotionOrigin,uMotionHalfExtent,uMaskU,uMaskV;uniform float uSize;uniform int uGrid,uAppearance;uniform vec3 uPackOrigin,uPackShift;
+in vec3 position;in vec3 color;in vec3 photoColour;in vec3 color100;
+uniform float uPointSize;uniform mat4 projectionMatrix,modelViewMatrix;uniform mat3 uR,uInvR;uniform vec3 uT,uOffset,uMotionOrigin,uMotionHalfExtent,uMaskU,uMaskV;uniform float uSize;uniform int uGrid,uAppearance,uPalette100,uTubeOverlay;uniform vec3 uPackOrigin,uPackShift;
 out vec3 vC,vSource,vColour,vPhoto,vView;out float vRough;
 vec3 toLinear(vec3 c){return mix(c/12.92,pow((c+.055)/1.055,vec3(2.4)),step(vec3(.04045),c));}
 void main(){vec3 d;float rough=0.;if(uGrid==1){
@@ -31,7 +31,7 @@ void main(){vec3 d;float rough=0.;if(uGrid==1){
  uint yBits=shift.y-shift.x,zBits=shift.z-shift.y;
  vec3 local=vec3(word&((1u<<shift.x)-1u),(word>>shift.x)&((1u<<yBits)-1u),(word>>shift.y)&((1u<<zBits)-1u));
  rough=float(word>>shift.z);
- vSource=(local+uPackOrigin)*.009;d=uR*vSource+uT;}else if(uGrid==2){vSource=uMotionOrigin+position.x*uMotionHalfExtent.x*uMaskU+position.y*uMotionHalfExtent.y*uMaskV;d=uR*vSource+uT;}else{d=position;vSource=uInvR*(d-uT);}vC=d-vec3(0.,0.,136.73910524340096);vColour=uAppearance==0?toLinear(color):vec3(0.);vPhoto=uAppearance==9?toLinear(photoColour):vec3(0.);vRough=.22+.05*rough;vec4 p=modelViewMatrix*vec4(vC*uSize+uOffset,1.);vView=p.xyz;gl_Position=projectionMatrix*p;gl_PointSize=uPointSize;}`;
+ vSource=(local+uPackOrigin)*.009;d=uR*vSource+uT;}else if(uGrid==2){vSource=uMotionOrigin+position.x*uMotionHalfExtent.x*uMaskU+position.y*uMotionHalfExtent.y*uMaskV;d=uR*vSource+uT;}else{d=position;vSource=uInvR*(d-uT);}vC=d-vec3(0.,0.,136.73910524340096);vColour=uTubeOverlay==1?toLinear(color):(uAppearance==0?toLinear(uPalette100==1?color100:color):vec3(0.));vPhoto=uAppearance==9?toLinear(photoColour):vec3(0.);vRough=.22+.05*rough;vec4 p=modelViewMatrix*vec4(vC*uSize+uOffset,1.);vView=p.xyz;gl_Position=projectionMatrix*p;gl_PointSize=uPointSize;}`;
 const FRAG=`precision highp float;precision highp int;precision highp sampler3D;
 in vec3 vC,vSource,vColour,vPhoto,vView;in float vRough;
 uniform sampler3D uVolume;uniform sampler2D uMask,uNeckGuide;
@@ -137,7 +137,7 @@ void main(){
  if(uTubeOverlay==1){
   vec3 n=normalize(cross(dFdx(vView),dFdy(vView)));
   float light=abs(dot(n,normalize(vec3(-.35,.5,1.))));
-  result=vec4(mix(vec3(.92,.39,.06),vec3(1.,.95,.59),light),1.);
+  result=vec4(toSRGB(vColour*(.7+.3*light)),1.);
   return;
  }
  if(uPlane==2){result=pooledSlice(vSource);return;}
@@ -196,7 +196,7 @@ function readonlyGeometry(position,index,colour,positionSize=3){
 
 export class NativeEngine{
  constructor(config,hooks={}){
-  this.config=config;setPersistence(config.persistent);this.hooks=hooks;this.size=50;this.rootLevel=1.3;this.transition=10;this.curvature=8;this.part='whole';this.gap=6;this.nav='rotate';this.sync=true;this.rulerFixed=true;this.rulerOffset={x:0,z:0};this.views=[];this.bundles=[];this.faces=0;this.ready=false;this.active=true;this.uploadQueue=[];this.colourQueue=[];this.photoQueue=[];this.photoReady=false;this.photoVertices=0;this.caseTicket=0;this.playing=false;this.dirty=true;this.lastFrame=performance.now();
+  this.config=config;setPersistence(config.persistent);this.hooks=hooks;this.size=50;this.rootLevel=1.3;this.transition=10;this.curvature=8;this.part='whole';this.gap=6;this.nav='rotate';this.sync=true;this.rulerFixed=true;this.rulerOffset={x:0,z:0};this.views=[];this.bundles=[];this.faces=0;this.ready=false;this.active=true;this.uploadQueue=[];this.photoQueue=[];this.photoReady=false;this.photoVertices=0;this.playing=false;this.dirty=true;this.lastFrame=performance.now();
   this.recovering=Boolean(graphicsCheckpoint());
   this.constrained=isConstrainedDevice();
   this.graphicsStarted=false;
@@ -213,11 +213,11 @@ export class NativeEngine{
   );
   neckTexture.minFilter=neckTexture.magFilter=THREE.NearestFilter;
   neckTexture.needsUpdate=true;
-  this.uniforms={uNeckGuide:{value:neckTexture},uPointSize:{value:2},uPoints:{value:0},uContour:{value:0},uTubeOverlay:{value:0},uContourCoverage:{value:1},uR:{value:r},uInvR:{value:inverse},uT:{value:new THREE.Vector3(...config.geometry.display_affine_T)},uOffset:{value:new THREE.Vector3()},uMotionOrigin:{value:new THREE.Vector3()},uMotionHalfExtent:{value:new THREE.Vector3()},uSize:{value:.5},uGrid:{value:0},uPackOrigin:{value:new THREE.Vector3()},uPackShift:{value:new THREE.Vector3()},uVolume:{value:stub},uMask:{value:mask},uVolumeOrigin:{value:new THREE.Vector3(...v.source_edge_origin_xyz_mm)},uVolumeExtent:{value:new THREE.Vector3(...v.shape_xyz.map(n=>n*v.display_spacing_mm))},uTexel:{value:new THREE.Vector3(...v.shape_xyz.map(n=>1/n))},uVolumeReady:{value:0},uAxis:{value:new THREE.Vector3(0,1,0)},uClip:{value:0},uSide:{value:1},uRoot:{value:1.3},uTransition:{value:10},uCurvature:{value:8},uMaskSpacing:{value:.018},uMaskU:{value:new THREE.Vector3(1,0,0)},uMaskV:{value:new THREE.Vector3(0,1,0)},uPCACenter:{value:new THREE.Vector3(...config.pca.center_scanner_mm)},uClipEnabled:{value:0},uNativeClip:{value:0},uPart:{value:0},uAppearance:{value:0},uPlane:{value:0},uMaskBefore:{value:1},uMaskOrigin:{value:new THREE.Vector3(...config.mask.scanner_origin_xyz_mm.map(x=>x-.009))},uMaskExtent:{value:new THREE.Vector3(config.mask.native_shape_zyx[2]*.018,config.mask.native_shape_zyx[1]*.018,.018)}};
+  this.uniforms={uNeckGuide:{value:neckTexture},uPointSize:{value:2},uPoints:{value:0},uContour:{value:0},uTubeOverlay:{value:0},uPalette100:{value:0},uContourCoverage:{value:1},uR:{value:r},uInvR:{value:inverse},uT:{value:new THREE.Vector3(...config.geometry.display_affine_T)},uOffset:{value:new THREE.Vector3()},uMotionOrigin:{value:new THREE.Vector3()},uMotionHalfExtent:{value:new THREE.Vector3()},uSize:{value:.5},uGrid:{value:0},uPackOrigin:{value:new THREE.Vector3()},uPackShift:{value:new THREE.Vector3()},uVolume:{value:stub},uMask:{value:mask},uVolumeOrigin:{value:new THREE.Vector3(...v.source_edge_origin_xyz_mm)},uVolumeExtent:{value:new THREE.Vector3(...v.shape_xyz.map(n=>n*v.display_spacing_mm))},uTexel:{value:new THREE.Vector3(...v.shape_xyz.map(n=>1/n))},uVolumeReady:{value:0},uAxis:{value:new THREE.Vector3(0,1,0)},uClip:{value:0},uSide:{value:1},uRoot:{value:1.3},uTransition:{value:10},uCurvature:{value:8},uMaskSpacing:{value:.018},uMaskU:{value:new THREE.Vector3(1,0,0)},uMaskV:{value:new THREE.Vector3(0,1,0)},uPCACenter:{value:new THREE.Vector3(...config.pca.center_scanner_mm)},uClipEnabled:{value:0},uNativeClip:{value:0},uPart:{value:0},uAppearance:{value:0},uPlane:{value:0},uMaskBefore:{value:1},uMaskOrigin:{value:new THREE.Vector3(...config.mask.scanner_origin_xyz_mm.map(x=>x-.009))},uMaskExtent:{value:new THREE.Vector3(config.mask.native_shape_zyx[2]*.018,config.mask.native_shape_zyx[1]*.018,.018)}};
   this.material=new THREE.RawShaderMaterial({vertexShader:VERT,fragmentShader:FRAG,uniforms:this.uniforms,glslVersion:THREE.GLSL3,side:THREE.DoubleSide,toneMapped:false});
   this.configureMotionPlanes();
   try{
-   this.worker=new Worker(new URL('./native-stream-r15.js?v=5',import.meta.url),{type:'module'});
+   this.worker=new Worker(new URL('./native-stream-r15.js?v=6',import.meta.url),{type:'module'});
    this.worker.onmessage=e=>{try{this.message(e.data);}catch(error){this.fail(error.message);}};
    this.worker.onerror=()=>this.fail('The native data worker stopped. Static renders and cavity videos remain available.');
   }catch{
@@ -363,15 +363,15 @@ export class NativeEngine{
   const end=e=>{if(!drag)return;drag=null;v.controls.enabled=this.nav!=='slice';e.stopImmediatePropagation();};hit.addEventListener('pointerup',end,true);hit.addEventListener('pointercancel',end,true);
  }
  setPart(part,level=this.rootLevel,gap=this.gap,transition=this.transition,curvature=this.curvature){this.part=part;this.rootLevel=level;this.gap=gap;this.transition=transition;this.curvature=curvature;this.views.forEach(v=>this.fit(v));this.dirty=true;}
- async setSize(size){
-  if(size===this.size)return;this.size=size;this.uniforms.uSize.value=size/100;this.views.forEach(v=>this.fit(v));this.dirty=true;
-  if(!this.ready){if(this.preview){const a=this.preview.userData.colours[size];this.replaceColour(this.preview,a);}return;}
-  const ticket=++this.caseTicket;this.caseChanging=true;this.hooks.colourProgress?.(0);
-  this.renderer.setScissorTest(false);this.renderer.setClearColor(0,0);this.renderer.clear(true,true,true);
-  let completed=false;try{for(const bundle of this.config.geometry.chunks){const{decodedBytes}=await import('./native-store-r15.js?v=2'),buffer=await decodedBytes(bundle),p=arrays(buffer);if(ticket!==this.caseTicket)return;const group=this.bundles[bundle.source_first_face/1000000];for(let j=0;j<p.header.meshlets.length;j++){const m=p.header.meshlets[j];this.replaceColour(group.children[j],p.out[m.prefix+(size===50?'_c50':'_c100')]);}await new Promise((resolve,reject)=>{this.colourQueue.push({group,resolve,reject});this.dirty=true;});this.hooks.colourProgress?.(bundle.source_first_face+bundle.triangles);}completed=true;}catch(e){this.fail('Original-colour restoration failed: '+e.message);}
-  finally{if(ticket===this.caseTicket){this.caseChanging=false;if(completed)this.hooks.colourComplete?.();this.dirty=true;}}
+ setSize(size){
+  if(size===this.size)return;
+  this.size=size;
+  this.uniforms.uSize.value=size/100;
+  this.uniforms.uPalette100.value=size===100?1:0;
+  this.views.forEach(view=>this.fit(view));
+  this.dirty=true;
+  if(this.ready)this.hooks.colourComplete?.();
  }
- replaceColour(mesh,bytes){const a=mesh.geometry.getAttribute('color');a.array=new Uint8Array(bytes);a.needsUpdate=true;}
  message(d){
   if(this.failed&&['preview','bundle','photo-bundle','photo-complete','volume','progress','geometry-complete'].includes(d.type))return;
   if(d.type==='preview'){
@@ -384,8 +384,8 @@ export class NativeEngine{
    this.hooks.note?.('The light 3D preview could not be loaded. Reload to try again.');
   }
   else if(d.type==='bundle'){const p=arrays(d.buffer),group=new THREE.Group();group.visible=false;let count=0;
-   for(const m of p.header.meshlets){const prefix=m.prefix,position=p.out[prefix+'_grid'],index=p.out[prefix+'_index'],colour=p.out[prefix+(this.size===50?'_c50':'_c100')],rough=p.out[prefix+'_rough'];if(position.length!==m.vertices*3||index.length!==m.triangles*3||m.source_first_face!==p.header.source_first_face+count)throw Error('Native meshlet coverage mismatch');if(colour.length!==m.vertices*3||rough.length!==m.vertices)throw Error('Native meshlet attribute length mismatch');const grid=packNativeGrid(position,rough),geometry=readonlyGeometry(grid.packed,index,colour,2),mesh=new THREE.Mesh(geometry,this.material);this.bindPackedGrid(mesh,grid);mesh.frustumCulled=false;mesh.userData.nativeFaceCount=m.triangles;group.add(mesh);count+=m.triangles;}
-   if(count!==p.header.triangles)throw Error('Native bundle face count mismatch');this.scene.add(group);const points=new THREE.Group();points.visible=false;for(const mesh of group.children){const g=new THREE.BufferGeometry();for(const name of['position','color','photoColour'])g.setAttribute(name,mesh.geometry.getAttribute(name));g.boundingSphere=mesh.geometry.boundingSphere;const point=new THREE.Points(g,this.material);point.onBeforeRender=mesh.onBeforeRender;point.frustumCulled=false;points.add(point);this.pointCount+=mesh.geometry.getAttribute('position').count;}this.pointGroups[d.id]=points;this.pointScene.add(points);this.bundles[d.id]=group;this.uploadQueue.push({group,id:d.id,faces:count});this.dirty=true;
+   for(const m of p.header.meshlets){const prefix=m.prefix,position=p.out[prefix+'_grid'],index=p.out[prefix+'_index'],colour=p.out[prefix+'_c50'],colour100=p.out[prefix+'_c100'],rough=p.out[prefix+'_rough'];if(position.length!==m.vertices*3||index.length!==m.triangles*3||m.source_first_face!==p.header.source_first_face+count)throw Error('Native meshlet coverage mismatch');if(colour.length!==m.vertices*3||colour100.length!==m.vertices*3||rough.length!==m.vertices)throw Error('Native meshlet attribute length mismatch');const grid=packNativeGrid(position,rough),geometry=readonlyGeometry(grid.packed,index,colour,2),mesh=new THREE.Mesh(geometry,this.material);geometry.setAttribute('color100',released(new Uint8Array(colour100),3,true));this.bindPackedGrid(mesh,grid);mesh.frustumCulled=false;mesh.userData.nativeFaceCount=m.triangles;group.add(mesh);count+=m.triangles;}
+   if(count!==p.header.triangles)throw Error('Native bundle face count mismatch');this.scene.add(group);const points=new THREE.Group();points.visible=false;for(const mesh of group.children){const g=new THREE.BufferGeometry();for(const name of['position','color','photoColour','color100'])g.setAttribute(name,mesh.geometry.getAttribute(name));g.boundingSphere=mesh.geometry.boundingSphere;const point=new THREE.Points(g,this.material);point.onBeforeRender=mesh.onBeforeRender;point.frustumCulled=false;points.add(point);this.pointCount+=mesh.geometry.getAttribute('position').count;}this.pointGroups[d.id]=points;this.pointScene.add(points);this.bundles[d.id]=group;this.uploadQueue.push({group,id:d.id,faces:count});this.dirty=true;
   }else if(d.type==='photo-bundle'){const p=arrays(d.buffer),group=this.bundles[d.id],points=this.pointGroups[d.id];if(!group)throw Error('Photo field has no native geometry');for(let j=0;j<p.header.meshlets.length;j++){const m=p.header.meshlets[j],rgb=p.out[m.prefix+'_cnatural'];if(!rgb||rgb.length!==group.children[j].geometry.getAttribute('position').count*3)throw Error('Photo colour correspondence mismatch');let a=group.children[j].geometry.getAttribute('photoColour');if(a===group.children[j].geometry.getAttribute('color'))a=released(new Uint8Array(rgb),3,true);else{a.array=new Uint8Array(rgb);a.needsUpdate=true;}group.children[j].geometry.setAttribute('photoColour',a);points.children[j].geometry.setAttribute('photoColour',a);this.photoVertices+=a.count;}this.photoQueue.push({group,id:d.id});this.dirty=true;}
   else if(d.type==='photo-complete'){if(this.photoVertices!==this.pointCount)return this.fail('Photo vertex coverage mismatch');this.photoReady=true;this.resolvePhoto?.();this.hooks.photoReady?.();this.dirty=true;}
   else if(d.type==='volume')this.setVolume(d.buffer);
@@ -405,7 +405,19 @@ export class NativeEngine{
    this.material.uniformsNeedUpdate=true;
   };
  }
- makePreview(buffer){const{header,out}=arrays(buffer),c=out[this.size===50?'colors50':'colors100'];this.preview=new THREE.Mesh(readonlyGeometry(new Float32Array(out.positions),new Uint32Array(out.indices),new Uint8Array(c)),this.material);this.preview.frustumCulled=false;this.preview.userData.colours={50:new Uint8Array(out.colors50),100:new Uint8Array(out.colors100)};this.preview.userData.faces=header.triangles;this.scene.add(this.preview);this.views.forEach(v=>v.fallback(v.static));if(!this.fullLoading)this.hooks.graphicsState?.('preview');this.hooks.preview?.(header.triangles);this.dirty=true;}
+ makePreview(buffer){
+  const {header,out}=arrays(buffer);
+  const geometry=readonlyGeometry(new Float32Array(out.positions),new Uint32Array(out.indices),new Uint8Array(out.colors50));
+  geometry.setAttribute('color100',released(new Uint8Array(out.colors100),3,true));
+  this.preview=new THREE.Mesh(geometry,this.material);
+  this.preview.frustumCulled=false;
+  this.preview.userData.faces=header.triangles;
+  this.scene.add(this.preview);
+  this.views.forEach(view=>view.fallback(view.static));
+  if(!this.fullLoading)this.hooks.graphicsState?.('preview');
+  this.hooks.preview?.(header.triangles);
+  this.dirty=true;
+ }
  setVolume(buffer){const p=arrays(buffer),s=this.config.volume.shape_xyz,data=p.out.rgba,texture=new THREE.Data3DTexture(data,s[0],s[1],s[2]);texture.format=THREE.RGBAFormat;texture.type=THREE.UnsignedByteType;texture.minFilter=texture.magFilter=THREE.LinearFilter;texture.unpackAlignment=1;texture.needsUpdate=true;texture.onUpdate=()=>{texture.image.data=null;};this.uniforms.uVolume.value.dispose();this.uniforms.uVolume.value=texture;this.uniforms.uVolumeReady.value=1;this.dirty=true;}
  setMask(d){
   const view=this.views.find(v=>v.element.id===d.target);if(!view||!this.graphicsStarted||this.failed){this.hooks.mask?.(d);return;}if(d.request_id!==undefined&&d.request_id!==view.maskTicket)return;
@@ -605,11 +617,6 @@ export class NativeEngine{
   }
   if(this.uploadQueue.length){const q=this.uploadQueue.shift();try{this.upload(q.group);this.faces+=q.faces;this.worker.postMessage({type:'ack',id:q.id});}catch(e){this.fail(e.message);}changed=true;}
   if(this.photoQueue.length){const q=this.photoQueue.shift();try{this.upload(q.group);this.worker.postMessage({type:'ack',id:1000+q.id});}catch(e){this.fail(e.message);}changed=true;}
-  if(this.colourQueue.length&&!this.failed){
-   const q=this.colourQueue.shift();
-   try{this.upload(q.group);q.resolve();}catch(error){q.reject(error);this.fail(error.message);}
-   changed=true;
-  }
   if(this.failed||(!changed&&!this.dirty))return;
   try{
    this.renderer.setScissorTest(false);
@@ -630,8 +637,8 @@ export class NativeEngine{
   this.playing=false;
   graphicsCheckpoint(exact?'interrupted':null);
   this.worker?.postMessage({type:'stop-geometry'});
-  for(const q of this.colourQueue)q.reject(Error(message));
-  this.colourQueue=[];this.uploadQueue=[];this.photoQueue=[];
+
+  this.uploadQueue=[];this.photoQueue=[];
   this.rejectPhoto?.(Error(message));
   this.views.forEach(v=>{
    v.fallback(true);

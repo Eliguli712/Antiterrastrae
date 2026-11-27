@@ -1,6 +1,6 @@
 import{SOURCE_CACHE,digest}from'./native-store-r15.js?v=2';
-const SHELL='megalodon-shell-r15-v11';
-const files=['./','./studio.html?lang=en&appearance=art&embed=1&motion=1','./studio-feature-r16.js?v=7','./studio-support-r17.js?v=2','./studio-mesh-preview.js?v=1','./native-microtubes.js?v=2','./assets/native-microtubes-fine.json?v=1','./inline-video-controls-r17.js?v=3','./inline-video-controls-r17.css?v=3','./exhibition.css','./native-batch-r14.css?v=1','./native-shared-r15.css?v=7','./native-app-r15.js?v=9','./native-media-r14.js?v=4','./native-engine-r15.js?v=8','./native-packed-gpu-r18.js?v=1','./native-content-r15.js?v=1','./native-stream-r15.js?v=5','./native-store-r15.js?v=2','./native-section-r15.js?v=2','./native-contours-r15.js?v=1','./native-panels-r15.js?v=7','./cad-palaeo-ruler-r14.js?v=1','./vendor/three.module.js','./vendor/OrbitControls.js','./assets/native74-batch-publication.json?v=1','./assets/native-interactive-publication.json?v=5','./assets/curved-zone-guide.json?v=2','./assets/native-cut-playback/Native74_oriented_PCA_axis_1_largest.png','./assets/native-cut-playback/Native74_oriented_PCA_axis_2_largest.png','./assets/native-cut-playback/Native74_oriented_PCA_axis_3_largest.png'];
+const SHELL='megalodon-shell-r15-v12';
+const files=['./','./studio.html?lang=en&appearance=art&embed=1&motion=1','./studio-feature-r16.js?v=7','./studio-support-r17.js?v=2','./studio-mesh-preview.js?v=1','./native-microtubes.js?v=3','./assets/native-microtubes-fine.json?v=1','./inline-video-controls-r17.js?v=3','./inline-video-controls-r17.css?v=3','./exhibition.css','./native-batch-r14.css?v=1','./native-shared-r15.css?v=7','./native-app-r15.js?v=10','./native-media-r14.js?v=4','./native-engine-r15.js?v=9','./native-packed-gpu-r18.js?v=1','./native-content-r15.js?v=1','./native-stream-r15.js?v=6','./native-store-r15.js?v=2','./native-section-r15.js?v=2','./native-contours-r15.js?v=1','./native-panels-r15.js?v=8','./cad-palaeo-ruler-r14.js?v=1','./vendor/three.module.js','./vendor/OrbitControls.js','./assets/native74-batch-publication.json?v=1','./assets/native-interactive-publication.json?v=6','./assets/curved-zone-guide.json?v=2','./assets/native-cut-playback/Native74_twocolour_PCA_axis_1_largest.png','./assets/native-cut-playback/Native74_twocolour_PCA_axis_2_largest.png','./assets/native-cut-playback/Native74_twocolour_PCA_axis_3_largest.png'];
 async function installShell(){
  const cache=await caches.open(SHELL);
  await Promise.allSettled(files.map(file=>cache.add(file)));
@@ -8,7 +8,7 @@ async function installShell(){
  // Decode no images here; the browser retains their original response bytes.
  try{
   const batch=await (await cache.match('./assets/native74-batch-publication.json?v=1')).json();
-  const interactive=await (await cache.match('./assets/native-interactive-publication.json?v=5')).json();
+  const interactive=await (await cache.match('./assets/native-interactive-publication.json?v=6')).json();
   const cases=Object.values(batch.cases);
   const urls=[
    batch.ruler.png,batch.ruler.mesh,batch.palette,
@@ -27,7 +27,7 @@ self.addEventListener('activate',e=>e.waitUntil((async()=>{
  await Promise.all((await caches.keys()).filter(key=>/^megalodon-shell-r15-v\d+$/.test(key)&&key!==SHELL).map(key=>caches.delete(key)));
  await self.clients.claim();
 })()));
-const catalogueURL='./assets/native-interactive-publication.json?v=5';
+const catalogueURL='./assets/native-interactive-publication.json?v=6';
 let catalogue;
 async function loadMovieCatalogue(){
  const cache=await caches.open(SHELL);

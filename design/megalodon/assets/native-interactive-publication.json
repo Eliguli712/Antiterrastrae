@@ -11,15 +11,15 @@
   "compact_audit": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/compact-result.json",
   "pca": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/pca-sections.json",
   "counts": "https://raw.githubusercontent.com/Eliguli712/Antiterrastrae/6b67de5136e47d080e7828d1d8d70e13c2e41181/assets/native-interactive-r15/native-voxel-counts.json",
-  "movie_record": "./assets/native-cut-playback/oriented_pca_audit.json",
+  "movie_record": "./assets/native-cut-playback/twocolour_pca_audit.json",
   "movies": [
     {
       "axis": 1,
-      "file": "Native74_oriented_PCA_axis_1.mp4",
-      "bytes": 2240500,
-      "sha256": "1374b76975a2e9aee787af72b198f41f4373f9dbd2d54bd293cae556f5f12e49",
-      "poster": "./assets/native-cut-playback/Native74_oriented_PCA_axis_1_largest.png",
-      "poster_sha256": "37fc87bb70eb622a0338e63dd18a6172845d4b1aa951ca61d440b92b3e5f2735",
+      "file": "Native74_twocolour_PCA_axis_1.mp4",
+      "bytes": 2251792,
+      "sha256": "6cf1678ed6ef0029d56260104fcbf1091b0f9fc66e2994fd8d900cb5a2965c41",
+      "poster": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_1_largest.png",
+      "poster_sha256": "1577ecd73b257653eddaf3d8a93182b798123f5c2b657684f6fcd5e2adf9a721",
       "width": 1920,
       "height": 1080,
       "frames": 300,
@@ -40,10 +40,10 @@
         23.890844345092773
       ],
       "coordinate_convention": "Native physical millimetres. The plane is perpendicular to the PCA normal and the in-plane image axes are u and v. The video legend and scale are in source units.",
-      "url": "./assets/native-cut-playback/Native74_oriented_PCA_axis_1.mp4",
-      "reverse_url": "./assets/native-cut-playback/Native74_oriented_PCA_axis_1_reverse.mp4",
-      "gif_url": "./assets/native-cut-playback/Native74_oriented_PCA_axis_1.gif",
-      "reverse_gif_url": "./assets/native-cut-playback/Native74_oriented_PCA_axis_1_reverse.gif",
+      "url": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_1.mp4",
+      "reverse_url": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_1_reverse.mp4",
+      "gif_url": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_1.gif",
+      "reverse_gif_url": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_1_reverse.gif",
       "maximum_section": {
         "source_frame_index": 194,
         "forward_time_s": 7.76,
@@ -373,11 +373,11 @@
     },
     {
       "axis": 2,
-      "file": "Native74_oriented_PCA_axis_2.mp4",
-      "bytes": 1152711,
-      "sha256": "fcadd2d384544e6bb0b98dc9e616b94386b7247f2753bc6ad95a3b9f688c8998",
-      "poster": "./assets/native-cut-playback/Native74_oriented_PCA_axis_2_largest.png",
-      "poster_sha256": "2975f62cce7f4e4df8b37340ae37f4fb46905670a5fb8a7a4c253ed899a2d294",
+      "file": "Native74_twocolour_PCA_axis_2.mp4",
+      "bytes": 1192420,
+      "sha256": "e4de50ef1f5bc397ea4cced0f5e569e2fe656af6885c4bebc0457815c76fb9cd",
+      "poster": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_2_largest.png",
+      "poster_sha256": "f4e0888a03cd68b3374ce1cce98f5f5c9e969485bb2564360ee866f304457825",
       "width": 1920,
       "height": 1080,
       "frames": 300,
@@ -398,10 +398,10 @@
         17.006650924682617
       ],
       "coordinate_convention": "Native physical millimetres. The plane is perpendicular to the PCA normal and the in-plane image axes are u and v. The video legend and scale are in source units.",
-      "url": "./assets/native-cut-playback/Native74_oriented_PCA_axis_2.mp4",
-      "reverse_url": "./assets/native-cut-playback/Native74_oriented_PCA_axis_2_reverse.mp4",
-      "gif_url": "./assets/native-cut-playback/Native74_oriented_PCA_axis_2.gif",
-      "reverse_gif_url": "./assets/native-cut-playback/Native74_oriented_PCA_axis_2_reverse.gif",
+      "url": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_2.mp4",
+      "reverse_url": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_2_reverse.mp4",
+      "gif_url": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_2.gif",
+      "reverse_gif_url": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_2_reverse.gif",
       "maximum_section": {
         "source_frame_index": 183,
         "forward_time_s": 7.32,
@@ -731,11 +731,11 @@
     },
     {
       "axis": 3,
-      "file": "Native74_oriented_PCA_axis_3.mp4",
-      "bytes": 2092775,
-      "sha256": "420d9169de0cbc51192a0593787cd6a5ee3246745b57137d7fd66f30b75ec6ea",
-      "poster": "./assets/native-cut-playback/Native74_oriented_PCA_axis_3_largest.png",
-      "poster_sha256": "4950f1c86e6f746258686930e50e1d4e9d40c9fb382d9ba0ce266c9d8ef5ca90",
+      "file": "Native74_twocolour_PCA_axis_3.mp4",
+      "bytes": 2154563,
+      "sha256": "9aa869a20e3cde7acbeaddeb6ae14f2214773da97cda76c17e9d23d21a2a345a",
+      "poster": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_3_largest.png",
+      "poster_sha256": "7ae47bd388c480d01004d6da3656ae7de8cabfca7dc8f5b1edcf53616937fb7b",
       "width": 1920,
       "height": 1080,
       "frames": 300,
@@ -756,10 +756,10 @@
         6.295042991638184
       ],
       "coordinate_convention": "Native physical millimetres. The plane is perpendicular to the PCA normal and the in-plane image axes are u and v. The video legend and scale are in source units.",
-      "url": "./assets/native-cut-playback/Native74_oriented_PCA_axis_3.mp4",
-      "reverse_url": "./assets/native-cut-playback/Native74_oriented_PCA_axis_3_reverse.mp4",
-      "gif_url": "./assets/native-cut-playback/Native74_oriented_PCA_axis_3.gif",
-      "reverse_gif_url": "./assets/native-cut-playback/Native74_oriented_PCA_axis_3_reverse.gif",
+      "url": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_3.mp4",
+      "reverse_url": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_3_reverse.mp4",
+      "gif_url": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_3.gif",
+      "reverse_gif_url": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_3_reverse.gif",
       "maximum_section": {
         "source_frame_index": 80,
         "forward_time_s": 3.2,
@@ -1090,34 +1090,34 @@
   ],
   "extra_sources": [
     {
-      "url": "./assets/native-cut-playback/Native74_oriented_PCA_axis_1.mp4",
-      "sha256": "1374b76975a2e9aee787af72b198f41f4373f9dbd2d54bd293cae556f5f12e49",
-      "bytes": 2240500
+      "url": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_1.mp4",
+      "sha256": "6cf1678ed6ef0029d56260104fcbf1091b0f9fc66e2994fd8d900cb5a2965c41",
+      "bytes": 2251792
     },
     {
-      "url": "./assets/native-cut-playback/Native74_oriented_PCA_axis_1_reverse.mp4",
-      "sha256": "91dd1dfed38c225b94a206d106346349efe6116d729d09c0becd368592f1992b",
-      "bytes": 2333312
+      "url": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_1_reverse.mp4",
+      "sha256": "c03f2d2d91349401f49943ae80ef547ba3fda072a62aa8128d88dfff8076fc9f",
+      "bytes": 2347053
     },
     {
-      "url": "./assets/native-cut-playback/Native74_oriented_PCA_axis_2.mp4",
-      "sha256": "fcadd2d384544e6bb0b98dc9e616b94386b7247f2753bc6ad95a3b9f688c8998",
-      "bytes": 1152711
+      "url": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_2.mp4",
+      "sha256": "e4de50ef1f5bc397ea4cced0f5e569e2fe656af6885c4bebc0457815c76fb9cd",
+      "bytes": 1192420
     },
     {
-      "url": "./assets/native-cut-playback/Native74_oriented_PCA_axis_2_reverse.mp4",
-      "sha256": "f3ca98e8f0c953929ebe384932dd85047cd4fb9215110319762c3c187b21fdfb",
-      "bytes": 1200520
+      "url": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_2_reverse.mp4",
+      "sha256": "c47725722eadacb2747c609b834c6953ba0dc1ce5f9b33ead7bcc9852622151e",
+      "bytes": 1238117
     },
     {
-      "url": "./assets/native-cut-playback/Native74_oriented_PCA_axis_3.mp4",
-      "sha256": "420d9169de0cbc51192a0593787cd6a5ee3246745b57137d7fd66f30b75ec6ea",
-      "bytes": 2092775
+      "url": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_3.mp4",
+      "sha256": "9aa869a20e3cde7acbeaddeb6ae14f2214773da97cda76c17e9d23d21a2a345a",
+      "bytes": 2154563
     },
     {
-      "url": "./assets/native-cut-playback/Native74_oriented_PCA_axis_3_reverse.mp4",
-      "sha256": "9a692beb8651de7151fd5f9b1b27649f7ee209e42f042d8dc03fc09bb31e28f4",
-      "bytes": 2119312
+      "url": "./assets/native-cut-playback/Native74_twocolour_PCA_axis_3_reverse.mp4",
+      "sha256": "8c547d3badc8078bfd86404d48102e004b4d8771dea8f1a114b466bfcf885660",
+      "bytes": 2247000
     }
   ],
   "persistent": true,

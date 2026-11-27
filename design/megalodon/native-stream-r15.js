@@ -36,7 +36,8 @@ async function loadGeometry(){
  geometryStarted=true;
  geometryActive=true;
  try{
-  await loadPreview().catch(()=>{});
+  // An explicitly requested complete load never waits on the independent light preview.
+  loadPreview().catch(()=>{});
   if(stopped)return;
   const chunks=config.geometry.chunks,inflight=new Map();
   const concurrency=config.constrained?1:2;
@@ -59,7 +60,6 @@ async function loadGeometry(){
    await upload('bundle',i,buffer);
    submitted+=chunks[i].triangles;
    send('progress',{faces:submitted,total:NATIVE_FACES});
-   if(i%5===4)await reportCache('cache-progress');
    if(config.constrained)prepare(i+concurrency);
   }
   if(stopped)return;

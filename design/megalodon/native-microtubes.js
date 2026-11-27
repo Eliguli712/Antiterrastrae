@@ -19,7 +19,7 @@ function makeTube(trace, forward, translation) {
     point.fromBufferAttribute(positions,i).applyMatrix3(forward).add(translation);
     positions.setXYZ(i,point.x,point.y,point.z);
   }
-  return geometry;
+  return {geometry, rgb: "envelope_diagonal_mm" in trace ? [20,122,202] : [213,45,55]};
 }
 
 export async function loadMicrotubes(forward,translation,material) {
@@ -32,14 +32,16 @@ export async function loadMicrotubes(forward,translation,material) {
     throw Error('The CT cavity trace catalogue is incomplete');
   }
   const pieces = record.traces.map(trace => makeTube(trace,forward,translation));
-  const vertexCount = pieces.reduce((sum,geometry)=>sum+geometry.getAttribute('position').count,0);
-  const indexCount = pieces.reduce((sum,geometry)=>sum+geometry.index.count,0);
+  const vertexCount = pieces.reduce((sum,{geometry})=>sum+geometry.getAttribute('position').count,0);
+  const indexCount = pieces.reduce((sum,{geometry})=>sum+geometry.index.count,0);
   const points = new Float32Array(vertexCount*3);
+  const rgb = new Uint8Array(points.length);
   const indices = new Uint32Array(indexCount);
   let vertexOffset=0,indexOffset=0;
-  for (const piece of pieces) {
+  for (const {geometry: piece, rgb: colour} of pieces) {
     const source=piece.getAttribute('position');
     points.set(source.array,vertexOffset*3);
+    for(let i=0;i<source.count;i++)rgb.set(colour,3*(vertexOffset+i));
     for(let i=0;i<piece.index.count;i++) indices[indexOffset++]=piece.index.array[i]+vertexOffset;
     vertexOffset+=source.count;
     piece.dispose();
@@ -47,7 +49,7 @@ export async function loadMicrotubes(forward,translation,material) {
   const geometry = new THREE.BufferGeometry();
   geometry.setAttribute('position',new THREE.BufferAttribute(points,3));
   geometry.setIndex(new THREE.BufferAttribute(indices,1));
-  const colours=new THREE.Uint8BufferAttribute(new Uint8Array(points.length),3,true);
+  const colours=new THREE.Uint8BufferAttribute(rgb,3,true);
   geometry.setAttribute('color',colours);
   geometry.setAttribute('photoColour',colours);
   geometry.setAttribute('nativeRoughness',new THREE.Uint8BufferAttribute(new Uint8Array(vertexCount),1));
