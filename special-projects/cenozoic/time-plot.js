@@ -12,7 +12,7 @@ export const timeModels = [
   {id:'rank',name:t('Rank interpolation','Ranginterpolation'),desc:t('Equal ages averaged for the line','Gleiche Alter für die Linie gemittelt'),color:'#627f82',dash:'2 4'}
 ];
 
-const domains={all:[66,5.333],'古新世':[66,56],'始新世':[56,33.9],'渐新世':[33.9,23.03],'中新世':[23.03,5.333]};
+export const domains={all:[66,5.333],'古新世':[66,56],'始新世':[56,33.9],'渐新世':[33.9,23.03],'中新世':[23.03,5.333]};
 const baselineLabels={
   fixed:t('Fixed ratio','Fester Maßstab'),
   linear:t('Linear fit','Lineare Anpassung'),
@@ -40,10 +40,14 @@ function rowsFor(s,visible,older,younger) {
   });
 }
 
-function recordPoint(row,x,y,radius=3) {
+function recordPoint(row,x,y,radius=3,comparison=null) {
   const {pair,age,history}=row;
   const coordinates=`${fmt(age,3)} Ma · ${year(history)}`;
-  return `<circle data-goto="${esc(pair.id)}" class="chart-point temporal-reference-point" tabindex="0" role="button" aria-label="${esc(pair.geo.title+' · '+coordinates)}" cx="${x}" cy="${y}" r="${radius}"><title>${esc(pair.id+' · '+pair.geo.title+' / '+pair.history.title+' · '+coordinates)}</title></circle>`;
+  const attrs=comparison
+    ? `data-fit-point="${esc(pair.id)}" aria-pressed="${pair.id===comparison.selected}"`
+    : `data-goto="${esc(pair.id)}"`;
+  const action=comparison ? t('Compare fits for ','Anpassungen vergleichen für ') : '';
+  return `<circle ${attrs} class="chart-point temporal-reference-point" tabindex="0" role="button" aria-label="${esc(action+pair.geo.title+' · '+coordinates)}" cx="${x}" cy="${y}" r="${radius}"><title>${esc(pair.id+' · '+pair.geo.title+' / '+pair.history.title+' · '+coordinates)}</title></circle>`;
 }
 
 function mappingChart(s,visible,older,younger) {
@@ -110,7 +114,8 @@ function mappingChart(s,visible,older,younger) {
       }
     }
   }
-  for(const row of visible)markup+=recordPoint(row,...pixels(row.age,row.history),s.enabled.has('reference')?3:2);
+  const comparison={selected:s.fitInput==='pair'?s.fitPair:null};
+  for(const row of visible)markup+=recordPoint(row,...pixels(row.age,row.history),s.enabled.has('reference')?3:2,comparison);
   const chart=$('#model-chart');
   chart.innerHTML=markup;
   chart.setAttribute('aria-label',historicX
@@ -119,8 +124,8 @@ function mappingChart(s,visible,older,younger) {
 }
 
 function comparisonInfo(s,visible) {
-  const heading=t('Root-mean-square error in historical years within the selected window.','Mittlerer quadratischer Fehler in historischen Jahren im gewählten Fenster.');
-  $('#fit-scope').textContent=t(`${heading} Both curves use all ${s.fits.count} pairs.`,`${heading} Beide Kurven verwenden alle ${s.fits.count} Paare.`);
+  const heading=t('Root-mean-square error in historical years within the selected window.','Wurzel des mittleren quadratischen Fehlers in historischen Jahren im gewählten Fenster.');
+  $('#fit-scope').textContent=t(`${heading} Both curves are fitted to all ${s.fits.count} catalogue pairs.`,`${heading} Beide Kurven werden an alle ${s.fits.count} Katalogpaare angepasst.`);
   const cards=['linear','log'].map(id=>{
     const metric=residualMetrics(visible.map(({age,history})=>history-modelValue(s,id,age)));
     const name=baselineLabels[id];

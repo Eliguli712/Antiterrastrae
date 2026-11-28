@@ -6,11 +6,37 @@ export function shell(){document.documentElement.lang=lang;document.title=t('Cen
 <section id="method" class="wrap method"><span class="eyebrow">${t('Reading the exhibition','Die Ausstellung lesen')}</span><p>${t('<strong>A metric axis and a web of correspondences.</strong> τ = 100(66 − age in Ma). The absolute narrative epoch is open. Main pairings preserve chronology; established civilisation motifs form independent cross-links.','<strong>Eine metrische Achse und ein Netz von Zuordnungen.</strong> τ = 100(66 − Alter in Ma). Die absolute Erzählepoche ist offen. Hauptzuordnungen erhalten die Chronologie; etablierte Zivilisationsmotive bilden eigenständige Querverbindungen.')}</p><a class="text-link" href="#evidence">${t('Methods & evidence','Methoden & Evidenz')}</a></section>
 <section id="atlas" class="section wrap"><div class="section-heading"><div><div class="eyebrow">${t('Paired events / stratigraphy & narrative','Ereignispaare / Stratigraphie & Erzählung')}</div><h2>${t('Evolution meets civilisation.','Evolution begegnet Zivilisation.')}</h2></div><p class="section-meta" id="result-count"></p></div><div class="filters"><div id="epoch-filters"></div><div class="filter-controls"><label><span class="sr-only">${t('Environment','Umwelt')}</span><select id="habitat"><option value="">${t('All environments','Alle Umwelten')}</option><option value="海洋">${t('Marine','Marin')}</option><option value="陆地">${t('Terrestrial','Terrestrisch')}</option><option value="全球">Global</option></select></label><label class="search-label"><span aria-hidden="true">⌕</span><span class="sr-only">${t('Search events','Ereignisse suchen')}</span><input id="search" type="search" placeholder="${t('Taxon, civilisation, event…','Taxon, Zivilisation, Ereignis…')}"></label></div></div><div id="active-filters"></div><div class="column-labels"><span><i class="geo-dot"></i>${t('Evolution / scientific record','Evolution / wissenschaftlicher Befund')}</span><span>${t('Pair','Paar')}</span><span><i class="hist-dot"></i>${t('Civilisation / historical record','Zivilisation / historischer Befund')}</span></div><div id="timeline"></div><div class="pagination"><button class="button" id="prev-page">${t('Previous','Zurück')}</button><span id="page-info"></span><button class="button" id="next-page">${t('Next','Weiter')}</button></div></section>
 <section id="characters" class="section feature-section"><div class="wrap"><div class="section-heading"><div><div class="eyebrow">${t('Track / calibrate / infer','Verfolgen / kalibrieren / erschließen')}</div><h2>${t('An open evolution workspace.','Ein offener Evolutionsraum.')}</h2></div><a href="#inference" class="button">${t('Build an inference branch','Inferenzzweig entwickeln')}</a></div><p class="feature-intro">${t('Follow character sequences vertically. Compare calibrated features horizontally. Keep evidence, coding decisions and speculative continuations connected to their original event IDs.','Merkmalsfolgen vertikal verfolgen. Kalibrierte Merkmale horizontal vergleichen. Evidenz, Kodierungsentscheidungen und spekulative Fortsetzungen bleiben mit ihren ursprünglichen Ereignis-IDs verbunden.')}</p><div id="feature-lab"></div></div></section>
-<section id="topology" class="section dark"><div class="wrap"><div class="section-heading"><div><div class="eyebrow">${t('Order / continuity / cross-links','Reihenfolge / Kontinuität / Querverbindungen')}</div><h2>${t('Ordered in time. Connected by theme.','Zeitlich geordnet. Thematisch verbunden.')}</h2></div><p class="section-meta">160 × 160</p></div><div class="topology-controls"><div class="segmented"><button data-mode="base" class="active">${t('Main correspondence','Hauptzuordnung')}</button><button data-mode="theme">${t('Civilisation motifs','Zivilisationsmotive')}</button></div><label>${t('Window','Fenster')} <input id="window-range" type="range" min="0" max="144" value="0"><span id="window-label"></span></label></div><div class="graph-scroll"><svg id="topology-chart" viewBox="0 0 1060 650" aria-label="${t('Event correspondence topology','Topologie der Ereigniszuordnungen')}"></svg></div><div class="topology-stats" id="topology-stats"></div><div class="theme-cards" id="theme-cards"></div><p class="note">${t('Vertical edges show display adjacency. Complete interval separation defines certain precedence; overlapping fossil ages remain partly ordered. Creative links can cross and converge.','Vertikale Kanten zeigen Darstellungsnachbarschaft. Vollständig getrennte Intervalle bestimmen gesicherte Abfolgen; überlappende Fossilalter bleiben partiell geordnet. Gestalterische Verbindungen dürfen sich kreuzen und zusammenlaufen.')}</p></div></section>
+<section id="topology" class="section dark"><div class="wrap">
+<div class="section-heading"><div><div class="eyebrow">${t('Order / continuity / cross-links','Reihenfolge / Kontinuität / Querverbindungen')}</div><h2>${t('Ordered in time. Connected by theme.','Zeitlich geordnet. Thematisch verbunden.')}</h2></div><p class="section-meta">160 × 160</p></div>
+<div class="chron-topology-toolbar">
+  <div class="segmented" role="group" aria-label="${t('Axis layout','Achsenanordnung')}">
+    <button type="button" data-topology-axis="horizontal" class="active" aria-pressed="true">${t('Horizontal time axes','Horizontale Zeitachsen')}</button>
+    <button type="button" data-topology-axis="vertical" aria-pressed="false">${t('Vertical order','Vertikale Abfolge')}</button>
+  </div>
+  <div class="segmented" role="group" aria-label="${t('Link type','Verknüpfungstyp')}"><button type="button" data-mode="base" class="active">${t('Main correspondence','Hauptzuordnung')}</button><button type="button" data-mode="theme">${t('Civilisation motifs','Zivilisationsmotive')}</button></div>
+  <label class="chron-topology-window">${t('Window','Fenster')} <input id="window-range" type="range" min="0" max="144" value="0"><span id="window-label"></span></label>
+</div>
+<div id="topology-horizontal-view">
+  <div class="graph-scroll chron-horizontal-scroll" tabindex="0" role="region" aria-label="${t('Scrollable horizontal time axes','Scrollbare horizontale Zeitachsen')}"><svg id="horizontal-topology-chart" viewBox="0 0 1060 368" role="group" aria-label="${t('Geological and historical timelines with selectable catalogue connections','Geologische und historische Zeitachsen mit auswählbaren Katalogzuordnungen')}"></svg></div>
+  <div class="chron-topology-detail">
+    <div class="chron-topology-row">
+      <label>${t('Paired record','Eintragspaar')}<select id="topology-pair-select"></select></label>
+      <button id="topology-open-record" type="button" class="button">${t('Open record','Eintrag öffnen')}</button>
+      <button id="compare-topology-fit" type="button" class="button chron-inverse">${t('Compare fits','Anpassungen vergleichen')}</button>
+    </div>
+    <div id="topology-pair-summary" aria-live="polite"></div>
+  </div>
+  <p class="note chron-topology-note">${t('Each row has its own linear time axis. The pink link marks the selected catalogue pair. Gold shows a creative cross-link when available. Differences between the two scales do not change the fixed narrative ratio.','Jede Zeile hat eine eigene lineare Zeitachse. Die rosa Verbindung markiert das ausgewählte Katalogpaar. Gold zeigt einen verfügbaren gestalterischen Querverweis. Die unterschiedlichen Skalen ändern den festen Erzählmaßstab nicht.')}</p>
+</div>
+<div id="topology-vertical-view" hidden>
+  <div class="graph-scroll"><svg id="topology-chart" viewBox="0 0 1060 650" aria-label="${t('Event correspondence topology','Topologie der Ereigniszuordnungen')}" role="group"></svg></div>
+  <p class="note">${t('Vertical edges show display adjacency. Complete interval separation defines certain precedence; overlapping fossil ages remain partly ordered. Creative links can cross and converge.','Vertikale Kanten zeigen Darstellungsnachbarschaft. Vollständig getrennte Intervalle bestimmen gesicherte Abfolgen; überlappende Fossilalter bleiben partiell geordnet. Gestalterische Verbindungen dürfen sich kreuzen und zusammenlaufen.')}</p>
+</div>
+<div class="topology-stats" id="topology-stats"></div><div class="theme-cards" id="theme-cards"></div></div></section>
 <section id="models" class="section wrap"><div class="section-heading"><div><div class="eyebrow">${t('Phases / methods / curves','Phasen / Methoden / Kurven')}</div><h2>${t('One chronicle. Several time projections.','Eine Chronik. Mehrere Zeitprojektionen.')}</h2></div><button id="export-svg" class="button">${t('Export curves','Kurven exportieren')} SVG</button></div><div class="model-layout"><aside>
 <div class="temporal-controls">
   <label>${t('Horizontal axis','Horizontale Achse')}
-    <select id="time-x-axis"><option value="age">${t('Geological age (Ma)','Geologisches Alter (Ma)')}</option><option value="history">${t('Historical year (BCE / CE)','Historisches Jahr (v. Chr. / n. Chr.)')}</option></select>
+    <select id="time-x-axis"><option value="age">${t('Geological age (Ma)','Geologisches Alter (Ma)')}</option><option value="history" selected>${t('Historical year (BCE / CE)','Historisches Jahr (v. Chr. / n. Chr.)')}</option></select>
   </label>
   <label>${t('Compare offsets against','Versatz vergleichen mit')}
     <select id="offset-baseline"><option value="fixed">${t('Fixed ratio','Fester Maßstab')}</option><option value="linear">${t('Linear fit','Lineare Anpassung')}</option><option value="log" selected>${t('Logarithmic fit','Logarithmische Anpassung')}</option></select>
@@ -21,14 +47,40 @@ export function shell(){document.documentElement.lang=lang;document.title=t('Cen
 <p class="note" id="fit-scope"></p>
 <p class="note">${t('The pink line joins the paired dates at geological age midpoints. Tied ages use a line average; each date keeps its own point. The fine bars show the source age intervals.','Die rosafarbene Linie verbindet die gepaarten Daten an geologischen Altersmittelpunkten. Bei gleichem Alter verbindet sie die Mittelwerte; jedes Datum behält seinen Punkt. Feine Balken zeigen die Altersintervalle der Quelle.')}</p>
 </div></div>
+<section id="horizontal-fit" class="chron-fit-panel" aria-labelledby="horizontal-fit-title">
+  <div class="chron-fit-heading">
+    <div><div class="eyebrow">${t('One geological age · one historical x-axis','Ein geologisches Alter · eine historische x-Achse')}</div>
+      <h3 id="horizontal-fit-title">${t('Horizontal fit comparison','Horizontaler Anpassungsvergleich')}</h3></div>
+    <button id="fit-export" class="button" type="button">${t('Export fit data as CSV','Anpassungsdaten als CSV')}</button>
+  </div>
+  <div class="segmented chron-fit-mode" role="group" aria-label="${t('Compare by','Vergleich nach')}">
+    <button type="button" data-fit-input="pair" class="active" aria-pressed="true">${t('Paired event','Eintragspaar')}</button>
+    <button type="button" data-fit-input="age" aria-pressed="false">${t('Simulated age','Simuliertes Alter')}</button>
+  </div>
+  <p id="fit-empty" class="note" hidden>${t('This time window contains no catalogue pairs.','Dieses Zeitfenster enthält keine Katalogpaare.')}</p>
+  <div id="fit-content">
+    <div id="fit-record-controls" class="chron-fit-controls">
+      <label>${t('Catalogue pair','Katalogpaar')}<select id="fit-record"></select></label>
+      <button id="fit-open-record" type="button" class="button">${t('Open record','Eintrag öffnen')}</button>
+    </div>
+    <div id="fit-probe-controls" class="chron-fit-controls" hidden>
+      <label>${t('Explore geological age','Geologisches Alter erkunden')}<input id="fit-probe-range" type="range" step="0.01"></label>
+      <label>${t('Age (Ma)','Alter (Ma)')}<input id="fit-probe-age" type="number" step="any" inputmode="decimal"></label>
+    </div>
+    <p id="fit-target" class="note chron-fit-target"></p>
+    <svg id="horizontal-fit-chart" viewBox="0 0 900 174" role="img"></svg>
+    <div id="fit-marker-values" class="chron-fit-values" aria-live="polite"></div>
+    <p class="note chron-fit-note">${t('Each horizontal segment measures Δ = pink reference year − fitted year. Positive values place the catalogue date later than the model. Both models fit the same catalogue pairs; simulated ages use the pink line between pair midpoints. These curves describe the exhibition’s pairing.','Jede horizontale Strecke misst Δ = rosa Referenzjahr − angepasstes Jahr. Positive Werte bedeuten ein späteres Katalogdatum. Beide Modelle verwenden dieselben Katalogpaare; simulierte Alter nutzen die rosa Linie zwischen den Paarmittelpunkten. Die Kurven beschreiben die Zuordnung der Ausstellung.')}</p>
+  </div>
+</section>
 <div class="residual"><div class="chart-caption"><strong>${t('Mapping residual Δ','Zuordnungsresiduum Δ')}</strong><small id="residual-description"></small></div><div class="curve-scroll"><svg id="residual-chart" viewBox="0 0 1100 220" role="group" aria-label="${t('Mapping residual','Zuordnungsresiduum')}"></svg></div><p class="note" id="residual-scope"></p></div>
 <details class="formula temporal-comparison"><summary>${t('Compare paired dates in both directions','Datierungspaare in beiden Richtungen vergleichen')}</summary>
   <div class="temporal-table-scroll" tabindex="0">
     <table>
       <thead><tr>
         <th scope="col">${t('Record','Eintrag')}</th>
-        <th scope="col">${t('Observed age (Ma)','Beobachtetes Alter (Ma)')}</th>
-        <th scope="col">${t('Observed year','Beobachtetes Jahr')}</th>
+        <th scope="col">${t('Age midpoint (Ma)','Altersmittelpunkt (Ma)')}</th>
+        <th scope="col">${t('Paired year','Zugeordnetes Jahr')}</th>
         <th scope="col">${t('Fitted year','Modelliertes Jahr')}</th>
         <th scope="col">Δ ${t('years','Jahre')}</th>
         <th scope="col">${t('Inferred age (Ma)','Abgeleitetes Alter (Ma)')}</th>

@@ -49,3 +49,123 @@
   .temporal-controls { padding-top:0; }
   #model-stats { grid-template-columns:repeat(3,minmax(0,1fr)); }
 }
+
+.chron-topology-toolbar,.chron-topology-row,.chron-fit-heading,.chron-fit-controls {
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:.7rem 1rem;
+}
+.chron-topology-toolbar { margin:1rem 0; }
+.chron-topology-toolbar .segmented { min-width:0; flex-wrap:wrap; }
+.chron-topology-window {
+  display:flex;
+  align-items:center;
+  gap:.55rem;
+  color:#dce8d7;
+  font-size:.875rem;
+}
+.chron-topology-window input { width:clamp(6rem,14vw,12rem); accent-color:#ef9cbd; }
+.chron-topology-window span { min-width:4.7ch; font-variant-numeric:tabular-nums; }
+.chron-horizontal-scroll { border-radius:3px; }
+.chron-horizontal-scroll:focus-visible { outline:2px solid #ef9cbd; outline-offset:3px; }
+#horizontal-topology-chart {
+  min-width:740px;
+  font-family:var(--sans);
+  background:#142f2e;
+}
+.chron-axis-title { fill:#edf5e7; font-size:17px; font-weight:650; }
+.chron-axis-note { fill:#acc4b8; font-size:14px; }
+.chron-tick { fill:#ccdcd0; font-size:15px; font-variant-numeric:tabular-nums; }
+.chron-ruler { stroke:#76968a; stroke-width:1; }
+.chron-connector { fill:none; stroke:#75a7a5; opacity:.40; stroke-width:1.35; pointer-events:none; }
+.chron-connector.is-selected { stroke:#f59fc3; stroke-width:2.7; opacity:1; }
+.chron-thematic { stroke:#e6cf87; stroke-dasharray:5 4; opacity:.65; }
+.chron-thematic.is-selected { stroke:#f4d988; stroke-width:2.15; opacity:1; }
+.chron-theme-point { fill:#f4d988; }
+.chron-geo-dot { fill:#9aceca; }
+.chron-history-dot { fill:#c8d5a2; }
+.chron-geology-interval { stroke:#9aceca; opacity:.40; stroke-width:4; }
+.chron-pair-node { cursor:pointer; }
+.chron-pair-node.is-selected :is(.chron-history-dot,.chron-geo-dot) { fill:#ffd6e8; stroke:#f59fc3; stroke-width:2; }
+.chron-pair-node.is-selected .chron-geology-interval { stroke:#f59fc3; opacity:.7; }
+.chron-pair-node:is(:hover,:focus-visible) :is(.chron-history-dot,.chron-geo-dot) { stroke:#fff6e8; stroke-width:2.5; }
+.chron-hit { fill:transparent; stroke:none; }
+.chron-topology-detail {
+  padding:1rem 1.15rem;
+  margin-top:.7rem;
+  border:1px solid #44665a;
+  border-radius:3px;
+  background:#203d39;
+}
+.chron-topology-row,.chron-fit-controls { align-items:end; }
+.chron-topology-row label,.chron-fit-controls label { display:grid; min-width:0; gap:.25rem; font-size:.875rem; }
+.chron-topology-row label { flex:1 1 17rem; }
+.chron-topology-row select {
+  width:100%; min-width:0; min-height:44px; background:#193331; color:#edf5e7;
+  border:1px solid #72958a; border-radius:2px; padding:.42rem .65rem;
+}
+.chron-topology-row .button { color:#edf5e7; border-color:#72958a; }
+.chron-topology-row .button:hover { color:#192e29; }
+.chron-topology-row .chron-inverse { color:#112c25; background:#dce5cc; border-color:#dce5cc; }
+#topology-pair-summary {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.75rem 1.35rem;
+  margin:.8rem 0 0;
+}
+#topology-pair-summary div { display:grid; align-content:start; gap:.12rem; }
+#topology-pair-summary small { color:#accabc; font-size:.81rem; }
+#topology-pair-summary strong { font:600 1.1rem/1.22 var(--serif); overflow-wrap:anywhere; }
+#topology-pair-summary span { color:#d7e5da; font-size:.85rem; }
+.chron-theme-note { grid-column:1/-1; margin:0; color:#f4d988; font-size:.875rem; }
+.chron-topology-note { margin:.6rem 0 1rem; }
+
+.chron-fit-panel {
+  margin:2rem 0 1.5rem;
+  padding:clamp(.85rem,2.4vw,1.7rem);
+  border:1px solid var(--line);
+  border-radius:4px;
+  background:#f9faf6;
+  scroll-margin-top:1.2rem;
+}
+.chron-fit-heading { justify-content:space-between; align-items:end; margin-bottom:1rem; }
+.chron-fit-heading h3 { font:500 clamp(1.45rem,3vw,2.1rem)/1.17 var(--serif); margin:.35rem 0 0; }
+.chron-fit-mode { display:inline-flex; border-color:#a9b9ac; margin-bottom:.75rem; }
+.chron-fit-mode button { color:#446055; font-size:.875rem; }
+.chron-fit-mode button.active { background:#dce8db; color:#163c31; }
+.chron-fit-controls label:first-child { flex:1 1 13rem; }
+.chron-fit-controls select,.chron-fit-controls input[type="number"] {
+  width:100%; min-width:0; min-height:44px; color:var(--ink); background:white;
+  border:1px solid #9faf9f; border-radius:2px; padding:.42rem .62rem; font:inherit;
+}
+.chron-fit-controls input[type="range"] { width:100%; margin:0; min-height:44px; accent-color:#673a8c; }
+.chron-fit-controls input[type="number"] { width:7.1rem; }
+.chron-fit-target { margin:.65rem 0 .4rem; min-height:1.55em; }
+#horizontal-fit-chart { display:block; width:100%; height:174px; margin:.6rem 0 .75rem; overflow:visible; }
+#horizontal-fit-chart text { font-family:var(--sans); }
+.chron-fit-grid,.chron-fit-lane { stroke:#d3ddd2; stroke-width:1; }
+.chron-fit-axis { stroke:#76897b; stroke-width:1; }
+.chron-fit-axis-label,.chron-fit-tick { fill:#506859; font-size:12px; }
+.chron-fit-axis-label { font-size:13px; font-weight:650; }
+.chron-fit-lane-label { fill:#304c42; font-size:14px; font-weight:650; }
+.chron-fit-span { stroke-width:2.4; }
+.chron-fit-reference { stroke:#b93f73; stroke-width:1.4; stroke-dasharray:4 4; }
+.chron-fit-dot { stroke:#fff; stroke-width:1.4; }
+.chron-fit-values { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.55rem; }
+.chron-fit-values div { display:grid; align-content:start; gap:.14rem; min-width:0; padding:.55rem .7rem; border:1px solid var(--line); background:#fff; }
+.chron-fit-values span { display:flex; align-items:baseline; gap:.45rem; font-size:.86rem; }
+.chron-fit-values i { background:var(--series); flex:none; width:.6rem; height:.6rem; border-radius:50%; }
+.chron-fit-values strong { font-variant-numeric:tabular-nums; font-weight:620; font-size:1.04rem; }
+.chron-fit-values small { color:var(--muted); font-size:.82rem; }
+.chron-fit-note { margin:.65rem 0 0; }
+.temporal-reference-point[data-fit-point] { cursor:pointer; }
+.temporal-reference-point[data-fit-point][aria-pressed="true"] { fill:#b93f73; stroke:#73415d; stroke-width:2; }
+@media(max-width:620px) {
+  .chron-fit-values { grid-template-columns:1fr; }
+  .chron-fit-values div { grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); align-items:baseline; }
+  .chron-fit-values small { grid-column:2; }
+  #topology-pair-summary { grid-template-columns:1fr; }
+  .chron-fit-mode button { padding-inline:.65rem; }
+  .pair-summary .record p { overflow-wrap:anywhere; }
+}
