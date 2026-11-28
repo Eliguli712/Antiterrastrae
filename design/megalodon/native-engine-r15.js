@@ -37,7 +37,7 @@ in vec3 vC,vSource,vColour,vPhoto,vView;in float vRough;
 uniform sampler3D uVolume;uniform sampler2D uMask,uNeckGuide;
 uniform mat4 viewMatrix;uniform mat3 uR;
 uniform vec3 uVolumeOrigin,uVolumeExtent,uTexel,uAxis,uMaskOrigin,uMaskExtent,uMaskU,uMaskV,uPCACenter;
-uniform float uClip,uSide,uRoot,uTransition,uCurvature,uMaskSpacing,uContourCoverage;uniform int uClipEnabled,uNativeClip,uPart,uAppearance,uVolumeReady,uPlane,uMaskBefore,uPoints,uContour,uTubeOverlay;
+uniform float uClip,uSide,uRoot,uTransition,uCurvature,uMaskSpacing,uContourCoverage,uTubeSlab;uniform int uClipEnabled,uNativeClip,uPart,uAppearance,uVolumeReady,uPlane,uMaskBefore,uPoints,uContour,uTubeOverlay;
 out vec4 result;
 vec3 toLinear(vec3 c){return mix(c/12.92,pow((c+.055)/1.055,vec3(2.4)),step(vec3(.04045),c));}
 vec3 toSRGB(vec3 c){return mix(c*12.92,1.055*pow(max(c,vec3(0.)),vec3(1./2.4))-.055,step(vec3(.0031308),c));}
@@ -48,65 +48,12 @@ float pooledMask(vec3 p){
  if(any(lessThan(uvw,vec3(0.)))||any(greaterThan(uvw,vec3(1.))))return 0.;
  return texture(uVolume,uvw).a;
 }
-float pooledCurvature(vec3 p,vec3 u,vec3 v,float f,out vec2 g){
- float l=pooledMask(p-u),r=pooledMask(p+u),b=pooledMask(p-v),t=pooledMask(p+v);
- g=.5*vec2(r-l,t-b);
- float g2=dot(g,g);
- if(g2<.0025)return 0.;
- float fuu=r+l-2.*f,fvv=t+b-2.*f;
- float fuv=.25*(pooledMask(p+u+v)+pooledMask(p-u-v)-pooledMask(p+u-v)-pooledMask(p-u+v));
- return abs(fuu*g.y*g.y-2.*fuv*g.x*g.y+fvv*g.x*g.x)/(g2*sqrt(g2));
-}
-bool materialAhead(vec3 p,vec3 d){
- // Sample farther into the slice so the exterior silhouette is excluded.
- return pooledMask(p+3.*d)>.86||pooledMask(p+7.*d)>.86||pooledMask(p+14.*d)>.86;
-}
 const float pooledIso=.79;
-const vec4 contourBlue=vec4(.025,.30,.90,1.);
-const vec4 contourRed=vec4(.90,.025,.09,1.);
-int pooledMarker(vec3 p,float f,float lineWidth){
- if(abs(f-pooledIso)>=lineWidth)return 0;
- float spacing=uVolumeExtent.x*uTexel.x;
- vec3 u=uMaskU*spacing,v=uMaskV*spacing;
- if(!materialAhead(p,u)||!materialAhead(p,-u)||!materialAhead(p,v)||!materialAhead(p,-v))return 0;
-
- vec2 gradient;
- float bend=pooledCurvature(p,u,v,f,gradient);
- // Compare along the sampled contour, in units of one pooled sample.
- float cutoff=uContour==2?.70:.42;
- if(bend>cutoff){
-  vec2 dir=normalize(vec2(-gradient.y,gradient.x));
-  vec3 tangent=u*dir.x+v*dir.y;
-  vec3 a=p+tangent,b=p-tangent;
-  vec2 unused;
-  float k1=pooledCurvature(a,u,v,pooledMask(a),unused);
-  float k2=pooledCurvature(b,u,v,pooledMask(b),unused);
-  if(bend>=max(k1,k2))return 2;
- }
- return 1;
-}
-vec3 coverageOffset(vec3 step){
- return step*min(uContourCoverage,.155/max(length(step),.0001));
-}
 vec4 pooledSlice(vec3 p){
  float f=pooledMask(p);
- float lineWidth=clamp(fwidth(f)*.50,.045,.145);
- vec3 dx=coverageOffset(dFdx(p)),dy=coverageOffset(dFdy(p));
- if(uContour>0){
-  int marker=pooledMarker(p,f,lineWidth);
-  // A marker can cover its immediate screen neighbourhood, never fresh data.
-  for(int i=-1;i<=1;i+=2){
-   for(int j=-1;j<=1;j+=2){
-    if(marker==2)break;
-    vec3 q=p+float(i)*dx+float(j)*dy;
-    marker=max(marker,pooledMarker(q,pooledMask(q),lineWidth));
-   }
-  }
-  if(marker==2)return contourRed;
-  if(marker==1)return contourBlue;
- }
- if(uMaskBefore==1&&f<pooledIso)discard;
- return vec4(vec3(smoothstep(.1,pooledIso,f)*.84),1.);
+ if(uMaskBefore==1&&f<.16)discard;
+ // Smooth in-flight mask only. The exact native contour replaces it at rest.
+ return vec4(vec3(smoothstep(.18,pooledIso,f)*.85),1.);
 }
 vec2 maskUV(vec3 vector){
  return vec2(dot(vector,uMaskU),dot(vector,uMaskV))/uMaskExtent.xy;
@@ -117,7 +64,8 @@ vec2 exactMarker(vec2 uv){
 }
 void main(){
  if(uPoints==1&&length(gl_PointCoord-vec2(.5))>.5)discard;
- if(uPlane==0&&uClipEnabled==1){float c=uNativeClip==1?vSource.z:uNativeClip==2?dot(vSource-uPCACenter,uAxis):dot(vC,uAxis);if((c-uClip)*uSide>0.)discard;}
+ float coordinate=uNativeClip==1?vSource.z:uNativeClip==2?dot(vSource-uPCACenter,uAxis):dot(vC,uAxis);
+ if(uPlane==0&&uClipEnabled==1&&(coordinate-uClip)*uSide>0.)discard;
  int region=0;
  if(uPart!=0||(uAppearance==10&&uPlane==0)){
   // The two rows hold contact heights / band widths and front / reverse contact depths.
@@ -135,33 +83,17 @@ void main(){
   if(uPart!=0&&uPart!=region)discard;
  }
  if(uTubeOverlay==1){
+  if(uTubeSlab>0.&&abs(coordinate-uClip)>uTubeSlab)discard;
   vec3 n=normalize(cross(dFdx(vView),dFdy(vView)));
   float light=abs(dot(n,normalize(vec3(-.35,.5,1.))));
-  result=vec4(toSRGB(vColour*(.7+.3*light)),1.);
+  result=vec4(uTubeSlab>0.?vec3(.88,.72,.43):toSRGB(vColour*(.7+.3*light)),1.);
   return;
  }
  if(uPlane==2){result=pooledSlice(vSource);return;}
  float mask=1.;
  if(uPlane==1){
   vec2 uv=maskUV(vSource-uMaskOrigin);
-  if(uContour>0){
-   vec2 dx=maskUV(coverageOffset(dFdx(vSource)));
-   vec2 dy=maskUV(coverageOffset(dFdy(vSource)));
-   vec2 markers=exactMarker(uv);
-   vec2 texel=vec2(uMaskSpacing)/uMaskExtent.xy;
-   for(int i=-1;i<=1;i++){
-    for(int j=-1;j<=1;j++){
-     markers=max(markers,exactMarker(uv+vec2(float(i),float(j))*texel));
-    }
-   }
-   for(int i=-1;i<=1;i+=2){
-    for(int j=-1;j<=1;j+=2){
-     markers=max(markers,exactMarker(uv+float(i)*dx+float(j)*dy));
-    }
-   }
-   if(markers.y>.5){result=contourRed;return;}
-   if(markers.x>.5){result=contourBlue;return;}
-  }
+  if(uContour>0&&exactMarker(uv).x>.5){result=vec4(.30,.32,.33,1.);return;}
   if(any(lessThan(uv,vec2(0.)))||any(greaterThan(uv,vec2(1.))))discard;
   mask=texture(uMask,uv).r;
   if(uMaskBefore==1&&mask<.5)discard;
@@ -213,11 +145,11 @@ export class NativeEngine{
   );
   neckTexture.minFilter=neckTexture.magFilter=THREE.NearestFilter;
   neckTexture.needsUpdate=true;
-  this.uniforms={uNeckGuide:{value:neckTexture},uPointSize:{value:2},uPoints:{value:0},uContour:{value:0},uTubeOverlay:{value:0},uPalette100:{value:0},uContourCoverage:{value:1},uR:{value:r},uInvR:{value:inverse},uT:{value:new THREE.Vector3(...config.geometry.display_affine_T)},uOffset:{value:new THREE.Vector3()},uMotionOrigin:{value:new THREE.Vector3()},uMotionHalfExtent:{value:new THREE.Vector3()},uSize:{value:.5},uGrid:{value:0},uPackOrigin:{value:new THREE.Vector3()},uPackShift:{value:new THREE.Vector3()},uVolume:{value:stub},uMask:{value:mask},uVolumeOrigin:{value:new THREE.Vector3(...v.source_edge_origin_xyz_mm)},uVolumeExtent:{value:new THREE.Vector3(...v.shape_xyz.map(n=>n*v.display_spacing_mm))},uTexel:{value:new THREE.Vector3(...v.shape_xyz.map(n=>1/n))},uVolumeReady:{value:0},uAxis:{value:new THREE.Vector3(0,1,0)},uClip:{value:0},uSide:{value:1},uRoot:{value:1.3},uTransition:{value:10},uCurvature:{value:8},uMaskSpacing:{value:.018},uMaskU:{value:new THREE.Vector3(1,0,0)},uMaskV:{value:new THREE.Vector3(0,1,0)},uPCACenter:{value:new THREE.Vector3(...config.pca.center_scanner_mm)},uClipEnabled:{value:0},uNativeClip:{value:0},uPart:{value:0},uAppearance:{value:0},uPlane:{value:0},uMaskBefore:{value:1},uMaskOrigin:{value:new THREE.Vector3(...config.mask.scanner_origin_xyz_mm.map(x=>x-.009))},uMaskExtent:{value:new THREE.Vector3(config.mask.native_shape_zyx[2]*.018,config.mask.native_shape_zyx[1]*.018,.018)}};
+  this.uniforms={uNeckGuide:{value:neckTexture},uPointSize:{value:2},uPoints:{value:0},uContour:{value:0},uTubeOverlay:{value:0},uTubeSlab:{value:0},uPalette100:{value:0},uContourCoverage:{value:1},uR:{value:r},uInvR:{value:inverse},uT:{value:new THREE.Vector3(...config.geometry.display_affine_T)},uOffset:{value:new THREE.Vector3()},uMotionOrigin:{value:new THREE.Vector3()},uMotionHalfExtent:{value:new THREE.Vector3()},uSize:{value:.5},uGrid:{value:0},uPackOrigin:{value:new THREE.Vector3()},uPackShift:{value:new THREE.Vector3()},uVolume:{value:stub},uMask:{value:mask},uVolumeOrigin:{value:new THREE.Vector3(...v.source_edge_origin_xyz_mm)},uVolumeExtent:{value:new THREE.Vector3(...v.shape_xyz.map(n=>n*v.display_spacing_mm))},uTexel:{value:new THREE.Vector3(...v.shape_xyz.map(n=>1/n))},uVolumeReady:{value:0},uAxis:{value:new THREE.Vector3(0,1,0)},uClip:{value:0},uSide:{value:1},uRoot:{value:1.3},uTransition:{value:10},uCurvature:{value:8},uMaskSpacing:{value:.018},uMaskU:{value:new THREE.Vector3(1,0,0)},uMaskV:{value:new THREE.Vector3(0,1,0)},uPCACenter:{value:new THREE.Vector3(...config.pca.center_scanner_mm)},uClipEnabled:{value:0},uNativeClip:{value:0},uPart:{value:0},uAppearance:{value:0},uPlane:{value:0},uMaskBefore:{value:1},uMaskOrigin:{value:new THREE.Vector3(...config.mask.scanner_origin_xyz_mm.map(x=>x-.009))},uMaskExtent:{value:new THREE.Vector3(config.mask.native_shape_zyx[2]*.018,config.mask.native_shape_zyx[1]*.018,.018)}};
   this.material=new THREE.RawShaderMaterial({vertexShader:VERT,fragmentShader:FRAG,uniforms:this.uniforms,glslVersion:THREE.GLSL3,side:THREE.DoubleSide,toneMapped:false});
   this.configureMotionPlanes();
   try{
-   this.worker=new Worker(new URL('./native-stream-r15.js?v=7',import.meta.url),{type:'module'});
+   this.worker=new Worker(new URL('./native-stream-r15.js?v=8',import.meta.url),{type:'module'});
    this.worker.onmessage=e=>{try{this.message(e.data);}catch(error){this.fail(error.message);}};
    this.worker.onerror=()=>this.fail('The native data worker stopped. Static renders and cavity videos remain available.');
   }catch{
@@ -332,10 +264,15 @@ export class NativeEngine{
   view.camera=new THREE.OrthographicCamera(-60,60,60,-60,.01,3000);view.camera.up.set(0,0,1);
   const hit=element.querySelector('.native-hit-area');
   view.controls=new OrbitControls(view.camera,hit);view.controls.enableDamping=true;view.controls.dampingFactor=.14;view.controls.screenSpacePanning=true;view.controls.minZoom=.4;view.controls.maxZoom=128;view.controls.touches.TWO=THREE.TOUCH.DOLLY_PAN;
-  view.controls.addEventListener('change',()=>{this.dirty=true;if(this.sync&&!this.syncing)this.synchronize(view);});
+  view.controls.addEventListener('change',()=>{this.dirty=true;if(this.sync&&!this.syncing&&!view.sectionOnly)this.synchronize(view);});
   view.fallback=on=>{
    const showing=on||(!this.preview&&!this.ready)||this.failed||this.lost;
+   view.posterVisible=showing;
    element.classList.toggle('native-poster-visible',showing);
+   for(const layer of element.querySelectorAll('.native-stage-poster,.native-stage-ruler')){
+    if(showing)layer.style.removeProperty('display');
+    else layer.style.setProperty('display','none','important');
+   }
    hit.tabIndex=showing?-1:0;
    view.controls.enabled=!showing&&this.nav!=='slice';
   };
@@ -350,15 +287,55 @@ export class NativeEngine{
   }
   return view;
  }
- fit(v){const r=v.element.getBoundingClientRect();if(r.width<1||r.height<1)return;const s=this.size,H=Math.max(s*1.26+(this.part==='split'?2*this.gap:0),(s*.9+20)/(r.width/r.height));v.camera.left=-H*r.width/r.height/2;v.camera.right=-v.camera.left;v.camera.top=H/2;v.camera.bottom=-H/2;v.camera.updateProjectionMatrix();}
- camera(v,pose){const yaw=pose==='front'?Math.PI:pose==='reverse'?0:Math.PI-.49,pitch=pose==='oblique'?.2:0;v.controls.target.set(0,0,0);v.camera.position.set(Math.sin(yaw)*Math.cos(pitch)*350,-Math.cos(yaw)*Math.cos(pitch)*350,Math.sin(pitch)*350);v.camera.zoom=1;v.controls.update();this.fit(v);this.dirty=true;}
- synchronize(v){this.syncing=true;for(const o of this.views){if(o===v)continue;o.camera.position.copy(v.camera.position);o.camera.quaternion.copy(v.camera.quaternion);o.camera.zoom=v.camera.zoom;o.controls.target.copy(v.controls.target);o.camera.updateProjectionMatrix();o.controls.update();}this.syncing=false;}
+ alignSection(v){
+  const frame=this.motionFrames[v.cut];
+  if(!frame)return;
+  const {uR,uT}=this.uniforms;
+  const center=frame.origin.clone().applyMatrix3(uR.value).add(uT.value);
+  center.z-=CENTRE;
+  center.multiplyScalar(this.size/100);
+  const normal=frame.normal.clone().applyMatrix3(uR.value).normalize();
+  v.camera.up.copy(frame.up).applyMatrix3(uR.value).normalize();
+  v.controls.target.copy(center);
+  v.camera.position.copy(center).addScaledVector(normal,350);
+  v.camera.zoom=1;
+  v.controls.update();
+  this.fit(v);
+  this.dirty=true;
+ }
+ setObliqueFrame(frame){
+  const vector=values=>new THREE.Vector3(...values);
+  this.motionFrames.oblique={origin:this.uniforms.uPCACenter.value.clone(),
+      normal:vector(frame.normal),side:vector(frame.u),up:vector(frame.v),
+      half:[Math.max(...frame.u_range_mm.map(Math.abs)),Math.max(...frame.v_range_mm.map(Math.abs)),0],scale:1,canonical:false};
+ }
+ fit(v){
+  const bounds=v.element.getBoundingClientRect();
+  if(bounds.width<1||bounds.height<1)return;
+  const aspect=bounds.width/bounds.height;
+  const size=this.size;
+  const frame=v.sectionOnly&&this.motionFrames[v.cut];
+  let height=Math.max(size*1.26+(this.part==='split'?2*this.gap:0),(size*.9+20)/aspect);
+  if(frame){
+   const transform=this.uniforms.uR.value;
+   const side=frame.side.clone().applyMatrix3(transform).length()*frame.half[0];
+   const up=frame.up.clone().applyMatrix3(transform).length()*frame.half[1];
+   height=Math.max(size*.61,2.18*(size/100)*Math.max(side/aspect,up));
+  }
+  v.camera.left=-height*aspect/2;
+  v.camera.right=-v.camera.left;
+  v.camera.top=height/2;
+  v.camera.bottom=-height/2;
+  v.camera.updateProjectionMatrix();
+ }
+ camera(v,pose){if(v.sectionOnly&&this.motionFrames[v.cut]){this.alignSection(v);return;}v.camera.up.set(0,0,1);const yaw=pose==='front'?Math.PI:pose==='reverse'?0:Math.PI-.49,pitch=pose==='oblique'?.2:0;v.controls.target.set(0,0,0);v.camera.position.set(Math.sin(yaw)*Math.cos(pitch)*350,-Math.cos(yaw)*Math.cos(pitch)*350,Math.sin(pitch)*350);v.camera.zoom=1;v.controls.update();this.fit(v);this.dirty=true;}
+ synchronize(v){this.syncing=true;for(const o of this.views){if(o===v||o.sectionOnly)continue;o.camera.position.copy(v.camera.position);o.camera.quaternion.copy(v.camera.quaternion);o.camera.zoom=v.camera.zoom;o.controls.target.copy(v.controls.target);o.camera.updateProjectionMatrix();o.controls.update();}this.syncing=false;}
  navigation(mode){this.nav=mode;for(const v of this.views){v.controls.enabled=mode!=='slice'&&!v.element.classList.contains('native-poster-visible');v.controls.mouseButtons.LEFT=mode==='pan'?THREE.MOUSE.PAN:THREE.MOUSE.ROTATE;v.controls.touches.ONE=mode==='pan'?THREE.TOUCH.PAN:THREE.TOUCH.ROTATE;}}
  ruler(v){const right=new THREE.Vector3().setFromMatrixColumn(v.camera.matrixWorld,0),up=new THREE.Vector3().setFromMatrixColumn(v.camera.matrixWorld,1);this.scale.position.copy(v.controls.target).addScaledVector(right,this.size*.36+7+this.rulerOffset.x).addScaledVector(up,-this.size/2+this.rulerOffset.z);this.scale.quaternion.copy(v.camera.quaternion).multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1,0,0),-Math.PI/2));this.scale.updateMatrixWorld(true);}
  bindRulerDrag(v){
   const hit=v.element.querySelector('.native-hit-area'),ray=new THREE.Raycaster();let drag=null;
   const cast=e=>{const r=hit.getBoundingClientRect();ray.setFromCamera(new THREE.Vector2((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1),v.camera);};
-  hit.addEventListener('pointerdown',e=>{if(this.rulerFixed||e.button!==0)return;this.ruler(v);cast(e);if(!ray.intersectObject(this.scale,true).length)return;const plane=new THREE.Plane().setFromNormalAndCoplanarPoint(v.camera.getWorldDirection(new THREE.Vector3()),this.scale.position),point=ray.ray.intersectPlane(plane,new THREE.Vector3());if(!point)return;drag={plane,point,offset:{...this.rulerOffset},right:new THREE.Vector3().setFromMatrixColumn(v.camera.matrixWorld,0),up:new THREE.Vector3().setFromMatrixColumn(v.camera.matrixWorld,1)};v.controls.enabled=false;hit.setPointerCapture(e.pointerId);e.preventDefault();e.stopImmediatePropagation();},true);
+  hit.addEventListener('pointerdown',e=>{if(v.sectionOnly||this.rulerFixed||e.button!==0)return;this.ruler(v);cast(e);if(!ray.intersectObject(this.scale,true).length)return;const plane=new THREE.Plane().setFromNormalAndCoplanarPoint(v.camera.getWorldDirection(new THREE.Vector3()),this.scale.position),point=ray.ray.intersectPlane(plane,new THREE.Vector3());if(!point)return;drag={plane,point,offset:{...this.rulerOffset},right:new THREE.Vector3().setFromMatrixColumn(v.camera.matrixWorld,0),up:new THREE.Vector3().setFromMatrixColumn(v.camera.matrixWorld,1)};v.controls.enabled=false;hit.setPointerCapture(e.pointerId);e.preventDefault();e.stopImmediatePropagation();},true);
   hit.addEventListener('pointermove',e=>{if(!drag)return;cast(e);const q=ray.ray.intersectPlane(drag.plane,new THREE.Vector3());if(q){q.sub(drag.point);this.rulerOffset.x=drag.offset.x+q.dot(drag.right);this.rulerOffset.z=drag.offset.z+q.dot(drag.up);this.hooks.rulerMoved?.({...this.rulerOffset});this.dirty=true;}e.preventDefault();e.stopImmediatePropagation();},true);
   const end=e=>{if(!drag)return;drag=null;v.controls.enabled=this.nav!=='slice';e.stopImmediatePropagation();};hit.addEventListener('pointerup',end,true);hit.addEventListener('pointercancel',end,true);
  }
@@ -508,8 +485,8 @@ export class NativeEngine{
  zoom(v,level){v.camera.zoom=level;v.camera.updateProjectionMatrix();v.controls.update();if(this.sync)this.synchronize(v);this.dirty=true;}
  ensureNatural(){if(this.photoReady)return Promise.resolve();if(!this.ready)return Promise.reject(Error('Complete native geometry is still preparing'));if(!this.photoPromise){this.photoVertices=0;this.photoPromise=new Promise((resolve,reject)=>{this.resolvePhoto=resolve;this.rejectPhoto=reject;this.worker.postMessage({type:'natural'});});}return this.photoPromise;}
  requestMask(z,view){view.maskTicket=(view.maskTicket||0)+1;this.worker.postMessage({type:'mask',axis:'native',z,target:view.element.id,peak_rule:view.peakRule,request_id:view.maskTicket});}
- requestSection(axis,offset_mm,sampling_mm,view){view.maskTicket=(view.maskTicket||0)+1;this.worker.postMessage({type:'section',axis,offset_mm,sampling_mm,target:view.element.id,peak_rule:view.peakRule,request_id:view.maskTicket});}
- configure(v,part=0,offset=0){const u=this.uniforms;u.uTubeOverlay.value=0;u.uContour.value=!v.contours?0:v.peakRule==='conservative6MAD'?2:1;u.uPoints.value=v.mesh==='vertices'&&this.ready?1:0;u.uAppearance.value=v.mode;u.uPart.value=part;u.uRoot.value=this.rootLevel;u.uTransition.value=this.transition;u.uCurvature.value=this.curvature;const m=v.maskRecord;u.uMask.value=v.maskTexture||this.stubMask;if(m){u.uMaskOrigin.value.set(...m.plane_origin_mm);u.uMaskU.value.set(...m.u);u.uMaskV.value.set(...m.v);u.uMaskExtent.value.set(m.width*m.sampling_mm,m.height*m.sampling_mm,m.sampling_mm);u.uMaskSpacing.value=m.sampling_mm;}u.uOffset.value.set(0,0,offset);u.uPlane.value=0;u.uGrid.value=this.ready?1:0;u.uSize.value=this.size/100;u.uMaskBefore.value=v.maskBefore?1:0;u.uClipEnabled.value=v.cut==='none'?0:1;const pca=v.cut.startsWith('pca')?this.config.pca.axes[Number(v.cut.slice(3))-1]:null;u.uNativeClip.value=pca?2:v.cut==='native'?1:0;if(pca)u.uAxis.value.set(...pca.normal);else u.uAxis.value.set(v.cut==='x'?1:0,v.cut==='y'?1:0,v.cut==='z'?1:0);u.uClip.value=pca?v.cutValue:v.cut==='native'?this.config.mask.scanner_origin_xyz_mm[2]+v.cutValue*.018:v.cutValue/(this.size/100);u.uSide.value=v.flip;this.material.uniformsNeedUpdate=true;}
+ requestSection(axis,offset_mm,sampling_mm,view,frame){view.maskTicket=(view.maskTicket||0)+1;this.worker.postMessage({type:'section',axis,offset_mm,sampling_mm,frame,target:view.element.id,peak_rule:view.peakRule,request_id:view.maskTicket});}
+ configure(v,part=0,offset=0){const u=this.uniforms;u.uTubeOverlay.value=0;u.uTubeSlab.value=0;u.uContour.value=!v.contours?0:v.peakRule==='conservative6MAD'?2:1;u.uPoints.value=v.mesh==='vertices'&&this.ready?1:0;u.uAppearance.value=v.mode;u.uPart.value=part;u.uRoot.value=this.rootLevel;u.uTransition.value=this.transition;u.uCurvature.value=this.curvature;const m=v.maskRecord;u.uMask.value=v.maskTexture||this.stubMask;if(m){u.uMaskOrigin.value.set(...m.plane_origin_mm);u.uMaskU.value.set(...m.u);u.uMaskV.value.set(...m.v);u.uMaskExtent.value.set(m.width*m.sampling_mm,m.height*m.sampling_mm,m.sampling_mm);u.uMaskSpacing.value=m.sampling_mm;}u.uOffset.value.set(0,0,offset);u.uPlane.value=0;u.uGrid.value=this.ready?1:0;u.uSize.value=this.size/100;u.uMaskBefore.value=v.maskBefore?1:0;u.uClipEnabled.value=v.cut==='none'?0:1;const pca=v.cut==='oblique'?v.userFrame:v.cut.startsWith('pca')?this.config.pca.axes[Number(v.cut.slice(3))-1]:null;u.uNativeClip.value=pca?2:v.cut==='native'?1:0;if(pca)u.uAxis.value.set(...pca.normal);else u.uAxis.value.set(v.cut==='x'?1:0,v.cut==='y'?1:0,v.cut==='z'?1:0);u.uClip.value=pca?v.cutValue:v.cut==='native'?this.config.mask.scanner_origin_xyz_mm[2]+v.cutValue*.018:v.cutValue/(this.size/100);u.uSide.value=v.flip;this.material.uniformsNeedUpdate=true;}
  upload(group){
   const visible=this.bundles.map(g=>g.visible);this.bundles.forEach(g=>g.visible=false);const priorPreview=this.preview?.visible;if(this.preview)this.preview.visible=false;group.visible=true;
   const v=this.views[0];this.configure({...v,mode:0,cut:'none'});this.uniforms.uGrid.value=1;this.uniforms.uPart.value=0;this.uniforms.uOffset.value.set(0,0,0);this.renderer.setScissorTest(true);this.renderer.setViewport(0,0,1,1);this.renderer.setScissor(0,0,1,1);this.renderer.setClearColor(0,0);this.renderer.clear(true,true,true);this.renderer.render(this.scene,v.camera);
@@ -538,13 +515,16 @@ export class NativeEngine{
  }
  render(v){
   if(v.element.closest('details:not([open])'))return;
-  const r=v.element.getBoundingClientRect();if(this.caseChanging||v.static||(v.mode===9&&!this.photoReady)||r.width<1||r.height<1||r.bottom<=0||r.top>=innerHeight||r.right<=0||r.left>=innerWidth)return;
-  this.renderer.setViewport(r.left,innerHeight-r.bottom,r.width,r.height);this.renderer.setScissor(Math.max(0,r.left),Math.max(0,innerHeight-r.bottom),Math.min(r.right,innerWidth)-Math.max(0,r.left),Math.min(r.bottom,innerHeight)-Math.max(0,r.top));this.renderer.setScissorTest(true);this.renderer.setClearColor(0,0);this.renderer.clear(true,true,true);this.renderer.info.reset();
-  const split=this.part==='split',passes=split?[[-1,-this.gap],[2,0],[1,this.gap]]:[[this.part==='root'?-1:this.part==='crown'?1:this.part==='transition'?2:0,0]];
+  const r=v.element.getBoundingClientRect();if(this.caseChanging||v.posterVisible||(v.mode===9&&!this.photoReady)||r.width<1||r.height<1||r.bottom<=0||r.top>=innerHeight||r.right<=0||r.left>=innerWidth)return;
+  this.renderer.setViewport(r.left,innerHeight-r.bottom,r.width,r.height);this.renderer.setScissor(Math.max(0,r.left),Math.max(0,innerHeight-r.bottom),Math.min(r.right,innerWidth)-Math.max(0,r.left),Math.min(r.bottom,innerHeight)-Math.max(0,r.top));this.renderer.setScissorTest(true);this.renderer.setClearColor(v.sectionOnly?0x0b1921:0,v.sectionOnly?1:0);
+  this.renderer.clear(true,true,true);this.renderer.info.reset();
+  v.element.dataset.nativeLayer=v.sectionOnly?'section':'surface';
+  const split=this.part==='split',passes=v.sectionOnly?[[0,0]]:split?[[-1,-this.gap],[2,0],[1,this.gap]]:[[this.part==='root'?-1:this.part==='crown'?1:this.part==='transition'?2:0,0]];
   const tubes=Boolean(v.microtubes&&this.microtubeScene);
   const isolated=tubes&&v.microtubesOnly===true;
-  const nativePasses=isolated?0:passes.length;
-  if(!isolated){
+  const planeOnly=v.sectionOnly&&!isolated;
+  const nativePasses=isolated||planeOnly?0:passes.length;
+  if(nativePasses){
    for(const [part,offset] of passes){
     this.configure(v,part,offset);
     this.renderer.render(v.mesh==='vertices'&&this.ready?this.pointScene:this.scene,v.camera);
@@ -563,15 +543,15 @@ export class NativeEngine{
    if(actual!==expectedTriangles)return this.fail('Native submitted-triangle validation failed');
    if(points!==expectedPoints)return this.fail('Native submitted-vertex validation failed');
    v.element.dataset.nativeSubmittedPoints=String(points);
-   v.element.dataset.nativeSurfaceMode=isolated?'hidden':v.mesh;
+   v.element.dataset.nativeSurfaceMode=planeOnly?'section':isolated?'hidden':v.mesh;
    v.element.dataset.nativeResidentFaces=String(NATIVE_FACES);
    v.element.dataset.nativeSubmittedTriangles=String(actual);
    v.element.dataset.nativeRenderPasses=String(nativePasses);
   }
-  if(!isolated&&v.showPlane&&v.nativePlane&&!v.cutMoving&&v.maskKey===v.sectionKey){
+  if(!isolated&&(planeOnly||v.showPlane)&&v.nativePlane&&!v.cutMoving&&v.maskKey===v.sectionKey){
    v.nativePlane.visible=true;
    for(const [part,z] of passes){
-    this.configure(v,part,z);
+    this.configure(planeOnly?{...v,mode:8}:v,part,z);
     this.uniforms.uPlane.value=1;
     this.uniforms.uPoints.value=0;
     this.uniforms.uGrid.value=0;
@@ -580,7 +560,7 @@ export class NativeEngine{
    }
    v.nativePlane.visible=false;
    v.element.dataset.cutContours='native-mask';
-  }else if(!isolated&&v.showPlane&&v.mode===8&&v.contours&&this.uniforms.uVolumeReady.value&&this.motionFrames[v.cut]){
+  }else if(!isolated&&(planeOnly||v.showPlane&&v.mode===8)&&this.uniforms.uVolumeReady.value&&this.motionFrames[v.cut]){
    this.drawMotionPlane(v,passes);
    v.element.dataset.cutContours='pooled-144um';
   }else{
@@ -596,17 +576,18 @@ export class NativeEngine{
     this.uniforms.uPoints.value=0;
     this.uniforms.uGrid.value=0;
     this.uniforms.uTubeOverlay.value=1;
+    this.uniforms.uTubeSlab.value=planeOnly?(v.cutMoving?.08:.009):0;
     this.material.uniformsNeedUpdate=true;
     this.renderer.render(this.microtubeScene,v.camera);
    }
   }
-  this.ruler(v);this.renderer.render(this.rulerScene,v.camera);
+  if(!v.sectionOnly){this.ruler(v);this.renderer.render(this.rulerScene,v.camera);}
  }
  tick(){if(this.lost||this.failed)return;this.frame=requestAnimationFrame(()=>this.tick());const now=performance.now(),dt=Math.min(.06,(now-this.lastFrame)/1000);this.lastFrame=now;if(!this.renderer||this.lost||this.failed||!this.active||!this.views.length)return;let changed=false;
   this.hooks.beforeFrame?.(now);
   for(const v of this.views)if(v.controls.update())changed=true;
   if(this.playing){
-   const visible=v=>!v.static&&!v.element.closest('details:not([open])')&&v.element.getBoundingClientRect().bottom>0&&v.element.getBoundingClientRect().top<innerHeight;
+   const visible=v=>!v.sectionOnly&&!v.static&&!v.element.closest('details:not([open])')&&v.element.getBoundingClientRect().bottom>0&&v.element.getBoundingClientRect().top<innerHeight;
    const v=this.sync?this.views.find(visible):this.playingView;
    if(v&&visible(v)){
     const p=v.camera.position.clone().sub(v.controls.target),theta=dt*.22,c=Math.cos(theta),s=Math.sin(theta);
@@ -623,6 +604,7 @@ export class NativeEngine{
    this.renderer.setClearColor(0,0);
    this.renderer.clear(true,true,true);
    if(this.preview||this.ready)this.views.forEach(v=>this.render(v));
+   this.hooks.afterFrame?.(this);
    this.dirty=false;
   }catch(error){
    this.fail('The 3D frame could not be drawn. '+error.message);

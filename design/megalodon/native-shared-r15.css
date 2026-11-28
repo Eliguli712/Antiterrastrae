@@ -226,3 +226,32 @@ html[data-native-shared-r15]{scroll-behavior:auto}
 .native-shared-stage:not(.native-poster-visible) .native-hit-area { cursor:grab; }
 .native-shared-stage:not(.native-poster-visible) .native-hit-area:active { cursor:grabbing; }
 .native-shared-stage:has(.native-cavity-preview:not([hidden])) .native-motion-hint { display:none; }
+
+/* The toolbar sits outside the scissored viewport. The live renderer owns
+   the section or surface layer and poster elements only belong to fallback. */
+.native-cavity-transport{
+ position:relative;inset:auto;display:flex;flex-wrap:wrap;align-items:center;
+ gap:.65rem;padding:.75rem 1rem;background:#10242d;max-width:none;
+}
+.native-cavity-transport label,.native-oblique-controls label{
+ display:flex;align-items:center;gap:.55rem;flex-wrap:wrap;
+}
+.native-cavity-range{position:static;flex:1 1 160px;min-width:120px;max-width:420px;width:auto}
+.native-cavity-transport a{color:#d4e9e2;text-decoration:underline;text-underline-offset:.24em}
+.native-record-status:empty{display:none}
+.native-record-status{flex:1 0 100%;font-size:.85rem;color:#c4dbd9}
+.native-shared-stage:not(.native-poster-visible) :is(.native-stage-poster,.native-stage-ruler){display:none!important}
+.native-shared-stage[data-native-presentation="section"]:not(.native-poster-visible){background:#0b1921}
+.native-oblique-controls[hidden],.native-cavity-transport a[hidden]{display:none!important}
+.native-paper-ct{margin:2rem 0}
+.native-paper-ct img{display:block;width:100%;height:auto;background:#000}
+.native-paper-ct-links{display:flex;flex-wrap:wrap;gap:.6rem 1.35rem;margin:.85rem 0 0}
+
+.native-live-cut:not([hidden])::before{
+ content:"";display:inline-block;width:.68em;height:.76em;margin-inline-end:.5em;
+ background:currentColor;clip-path:polygon(0 0,100% 50%,0 100%);vertical-align:-.01em
+}
+.native-live-cut[aria-pressed=true]:not([hidden])::before{
+ clip-path:polygon(0 0,33% 0,33% 100%,0 100%,0 0,67% 0,100% 0,100% 100%,67% 100%,67% 0)
+}
+.native-shared-stage[data-native-presentation="section"] .native-motion-hint{display:none}

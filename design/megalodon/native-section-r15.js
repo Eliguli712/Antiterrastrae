@@ -40,7 +40,8 @@ export class NativeSections{
    for(let y=0;y<H;y++)for(let x=0;x<W;x++){const v=(out.packedMask[start+y*stride+(x>>3)]>>(x&7)&1)*255;values[y*W+x]=v;if(v)selected++;}
    const derived=await analyzeContours(values,W,H,.018,{current,peak_rule:d.peak_rule||'tail99'});if(!current()||!derived)return;this.emit({overlay:derived.overlay,contour_summary:derived.summary,type:'mask',request_id:d.request_id,target,axis:'native',z,width:W,height:H,data:values,selected_samples:selected,sampling_mm:.018,plane_origin_mm:[origin[0]-.009,origin[1]-.009,origin[2]+z*.018],u:[1,0,0],v:[0,1,0],normal:[0,0,1],offset_mm:origin[2]+z*.018});return;
   }
-  const axis=Number(d.axis),frame=this.config.pca.axes[axis-1];if(!frame)throw Error('Unknown principal section axis');const step=d.sampling_mm===.018?.018:.072,offset=Math.max(frame.offset_range_mm[0],Math.min(frame.offset_range_mm[1],Number(d.offset_mm)||0));
+  const axis=d.axis==='oblique'?'oblique':Number(d.axis);
+  const frame=axis==='oblique'?d.frame:this.config.pca.axes[axis-1];if(!frame)throw Error('Unknown principal section axis');const step=d.sampling_mm===.018?.018:.072,offset=Math.max(frame.offset_range_mm[0],Math.min(frame.offset_range_mm[1],Number(d.offset_mm)||0));
   const width=Math.ceil((frame.u_range_mm[1]-frame.u_range_mm[0])/step),height=Math.ceil((frame.v_range_mm[1]-frame.v_range_mm[0])/step),N=width*height;if(N>12000000)throw Error('Section grid exceeds declared bounds');
   const center=this.config.pca.center_scanner_mm,u=frame.u,v=frame.v,normal=frame.normal,edge=center.map((c,i)=>c+normal[i]*offset+u[i]*frame.u_range_mm[0]+v[i]*frame.v_range_mm[0]);
   const addresses=new Uint32Array(N);addresses.fill(0xffffffff);const counts=new Uint32Array(this.config.mask.slabs.length),planeSize=H*W;

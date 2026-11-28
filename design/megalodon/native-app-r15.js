@@ -1,20 +1,21 @@
 import{mountInlineVideoControls}from'./inline-video-controls-r17.js?v=3';
-import{mountSlicePanels,mountDomainMetrics,mountAxisMovies,foldSections,speedControl,syncSpeedLabel}from'./native-panels-r15.js?v=8';
-import{NativeEngine,NATIVE_FACES}from'./native-engine-r15.js?v=10';
+import{mountSlicePanels,mountDomainMetrics,mountAxisMovies,foldSections,speedControl,syncSpeedLabel}from'./native-panels-r15.js?v=9';
+import{NativeEngine,NATIVE_FACES}from'./native-engine-r15.js?v=11';
 import{NATIVE_TUBE_SOURCE}from'./native-microtubes.js?v=4';
+import{obliqueFrame,createCutRecorder}from'./native-live-plane.js?v=1';
 import{renderAnalysis,hydrateOtherContent}from'./native-content-r15.js?v=1';
 import{layoutCadScale}from'./cad-palaeo-ruler-r14.js?v=1';
 const get=async u=>{const r=await fetch(u);if(!r.ok)throw Error('HTTP '+r.status);return r.json();};
 const count=n=>Number(n).toLocaleString('en-US'),q=s=>document.querySelector(s),qa=s=>document.querySelectorAll(s);
 const state={size:50,part:'whole',root:51.3,gap:6,transition:10,curvature:8,pose:'front',rulerFixed:true,rulerX:0,rulerZ:0,sync:true};
-const modes=[['0','Original 3MF colours'],['1','Voxel mask · before colour'],['2','Original masked CT intensity'],['3','Art · basic filtration'],['4','Art · matte MPPCA'],['5','MPPCA display residual'],['6','Native voxels · exact 18 µm plane'],['7','MPPCA reconstructed CT intensity'],['8','Cavities · blue contours / red peaks'],['9','Natural fossil colours · resin option'],['10','Region colours · matte PLA']];
+const modes=[['0','Original 3MF colours'],['1','Voxel mask · before colour'],['2','Original masked CT intensity'],['3','Art · basic filtration'],['4','Art · matte MPPCA'],['5','MPPCA display residual'],['6','Native voxels · exact 18 µm plane'],['7','MPPCA reconstructed CT intensity'],['8','Cavities · native void contours'],['9','Natural fossil colours · resin option'],['10','Region colours · matte PLA']];
 let pub,interactive,engine,geometry,palette,fields,pca,stats,slicePanels,cavityMovie,viewList=[];
 let restoreTubes=async()=>null;
 const main=q('#native74-batch');
 mountInlineVideoControls(document);
 main.innerHTML=`<div class="batch-heading"><p class="eyebrow">CURRENT COLOUR FILES / SHARED NATIVE CT</p><h2>Astraeus Krystallisia</h2><p>Drag to rotate the light preview. Load complete 3D once to use the same 74,293,846 triangles across all views and both sizes.</p></div><div class="batch-statistics" id="native-statistics"><article><strong>32,687,264</strong><span>Archive surface triangles</span></article><article><strong>74,293,846</strong><span>Full native internal + external CT triangles</span></article><article><strong>37,951,699</strong><span>Native surface vertices · geometry</span></article><article><strong>18 µm</strong><span>Native CT specimen-mask sampling</span></article></div><div class="native-global-tools"><div class="batch-actions"><button data-native-size="50" aria-pressed="true">5 cm · paper reference</button><button data-native-size="100" aria-pressed="false">10 cm · closed-solid MR5 projection</button><button id="nativeFull3D" type="button">Load complete 3D</button></div><label><input type="checkbox" id="nativeSync" checked>Synchronize views</label><label><input type="checkbox" id="nativeRulerFixed" checked>Ruler fixed to view</label><label><input type="checkbox" id="nativeWoodRuler">Uneven wood-grain ruler</label><label>Display resolution<select id="nativeResolution"><option value="smooth" selected>High resolution · smooth colour</option><option value="balanced">Balanced · lower fill cost</option></select></label><div class="native-ruler-adjust" hidden><p>Drag the CAD ruler, or adjust its position. Its measured span stays 50 mm.</p><label>Horizontal / mm<input id="nativeRulerX" type="range" min="-60" max="40" step=".25" value="0"></label><label>Vertical / mm<input id="nativeRulerZ" type="range" min="-60" max="60" step=".25" value="0"></label><button id="nativeRulerReset">Reset ruler</button></div></div><div id="nativeExteriorMount"></div><div class="native-cache-panel"><p id="nativeCacheStatus" role="status">Preparing shared native catalogue…</p><progress id="nativeLoadProgress" aria-label="Triangles loaded for interactive 3D" max="74293846" value="0" hidden></progress><p id="nativeLoadingStatus" role="status">Static views are available first. Interactive 3D reuses any verified local data.</p><button id="nativePrepareCache">Check / complete local cache</button><span id="nativeStorageStatus"></span></div><div class="batch-captions"><article><h3>5 cm · preserved reference colours</h3><p>The current paper-reference 3MF RGB values remain unchanged. Its normalized colour coordinate is 0–1; no new Pa field is inferred from the colours.</p><div class="batch-downloads" id="batchDownloads50"></div></article><article><h3>10 cm · projected MR5 calculation</h3><p>The independently calculated nonlinear field uses a closed-solid mechanical proxy and documented RMS constraints. Its colours are projected onto the native CT surface, including any cavity walls revealed by a cut.</p><div class="batch-downloads" id="batchDownloads100"></div></article></div><div class="batch-downloads" id="batchCommonDownloads"></div><div id="batchStaticPlates"></div><div id="batchScientificAnalysis"></div>`;
 function card(key,title,mode,cut){
- return `<section class="native-view-card" data-native-card="${key}"><div class="native-view-heading"><h3>${title}</h3><p class="native-pipeline">Original 18 µm voxel mask → full native surface → optional intensity filter → colour</p></div><div class="native-view-tools"><div class="batch-cameras"><button data-native-pose="front" aria-pressed="true">Front</button><button data-native-pose="oblique" aria-pressed="false">Oblique</button><button data-native-pose="reverse" aria-pressed="false">Reverse</button></div><div class="batch-cameras"><button data-native-nav="rotate" aria-pressed="true">Rotate</button><button data-native-nav="pan" aria-pressed="false">Pan</button><button data-native-nav="slice" aria-pressed="false">Move cut</button></div>${key==='internal'?'<a href="#native-pca-movies">PCA videos</a>':''}<label>Appearance<select class="native-appearance">${modes.map(([v,label])=>`<option value="${v}"${Number(v)===9?' disabled':''}${Number(v)===mode?' selected':''}>${label}</option>`).join('')}</select></label><label>Mesh display<select class="native-mesh"><option value="surface">Complete surface</option><option value="vertices">Native mesh vertices</option></select></label></div><div class="native-shared-stage native-poster-visible" id="native-${key}-viewport"><img class="native-stage-poster" loading="lazy" decoding="async" alt="Complete original native tooth render"/><div class="native-hit-area" tabindex="0" aria-label="${title}; drag to rotate, two fingers to pan, pinch to zoom"></div><span class="native-motion-hint" aria-hidden="true">Drag to rotate · pinch or scroll to zoom</span><div class="native-view-count" role="status">Complete static reference · 74,293,846 source triangles</div></div><div class="native-legend"><div class="native-legend-gradient"></div><div class="batch-axis"><span>0</span><span>0.2</span><span>0.4</span><span>0.6</span><span>0.8</span><span>1</span></div><p class="native-legend-label"></p></div><div class="native-view-tools native-parts"><label>Tooth part<select class="native-part"><option value="whole">Whole tooth</option><option value="crown">Crown</option><option value="root">Root</option><option value="transition">Transitional zone</option><option value="split">Separate crown + transition + root</option></select></label><label>Curved neck height<input class="native-root" type="range" min="5" max="60" step=".1" value="51.3"><span class="native-root-label">51.3% of height</span></label><label>Transition depth / relative %<input class="native-transition" type="range" min="1" max="25" step=".5" value="10"><span class="native-transition-label">100%</span></label><label>Neck profile strength<input class="native-curvature" type="range" min="2" max="16" step=".5" value="8"><span class="native-curvature-label">1.00×</span></label><label class="native-gap-label" hidden>Separation / mm<input class="native-gap" type="range" min="0" max="20" step=".5" value="6"></label></div><details class="native-cut-tools"${key==='internal'?' id="native-interior-cut" open':''}><summary>Internal cut and native voxel mask</summary><div class="native-view-tools"><label>Cut<select class="native-cut"><option value="none"${cut==='none'?' selected':''}>Off</option><option value="x">Transverse X</option><option value="y"${cut==='y'?' selected':''}>Thickness Y</option><option value="z">Longitudinal Z</option><option value="native">Original native axial plane · 18 µm mask</option><option value="pca1">PCA axis 1 · source voxel frame</option><option value="pca2">PCA axis 2 · source voxel frame</option><option value="pca3">PCA axis 3 · source voxel frame</option></select></label><label class="native-cut-range-label">Position / mm<input class="native-cut-range" type="range" min="-6" max="6" step=".05" value="0"><span class="native-cut-value">0.00 mm</span></label><label><input type="checkbox" class="native-cut-flip">Reverse cut</label><label>Curvature peak rule<select class="native-peak-rule"><option value="tail99" selected>High-curvature tail · 99th percentile</option><option value="conservative6MAD">Conservative · median + 6 MAD</option></select></label><label><input type="checkbox" class="native-contours" checked>Blue void contours / red curvature peaks</label><label><input type="checkbox" class="native-mask-first" checked>Apply original voxel mask before colour</label><label class="native-pca-sampling-label" hidden>Plane sampling<select class="native-pca-sampling"><option value=".018" selected>0.018 mm / 18 µm · native</option><option value=".072">0.072 mm / 72 µm · quicker sampling</option></select></label><label class="native-plane-label" hidden><input type="checkbox" class="native-plane-show" checked>Show section and contours</label></div>${key==='internal'? `<div class="native-view-tools native-sweep-controls" role="group" aria-label="Live 3D section playback">
+ return `<section class="native-view-card" data-native-card="${key}"><div class="native-view-heading"><h3>${title}</h3><p class="native-pipeline">Original 18 µm voxel mask → full native surface → optional intensity filter → colour</p></div><div class="native-view-tools"><div class="batch-cameras"><button data-native-pose="front" aria-pressed="true">Front</button><button data-native-pose="oblique" aria-pressed="false">Oblique</button><button data-native-pose="reverse" aria-pressed="false">Reverse</button></div><div class="batch-cameras"><button data-native-nav="rotate" aria-pressed="true">Rotate</button><button data-native-nav="pan" aria-pressed="false">Pan</button><button data-native-nav="slice" aria-pressed="false">Move cut</button></div>${key==='internal'?'<a href="#native-pca-movies">PCA videos</a>':''}<label>Appearance<select class="native-appearance">${modes.map(([v,label])=>`<option value="${v}"${Number(v)===9?' disabled':''}${Number(v)===mode?' selected':''}>${label}</option>`).join('')}</select></label><label>Mesh display<select class="native-mesh"><option value="surface">Complete surface</option><option value="vertices">Native mesh vertices</option></select></label></div><div class="native-shared-stage native-poster-visible" id="native-${key}-viewport"><img class="native-stage-poster" loading="lazy" decoding="async" alt="Complete original native tooth render"/><div class="native-hit-area" tabindex="0" aria-label="${title}; drag to rotate, two fingers to pan, pinch to zoom"></div><span class="native-motion-hint" aria-hidden="true">Drag to rotate · pinch or scroll to zoom</span><div class="native-view-count" role="status">Complete static reference · 74,293,846 source triangles</div></div><div class="native-legend"><div class="native-legend-gradient"></div><div class="batch-axis"><span>0</span><span>0.2</span><span>0.4</span><span>0.6</span><span>0.8</span><span>1</span></div><p class="native-legend-label"></p></div><div class="native-view-tools native-parts"><label>Tooth part<select class="native-part"><option value="whole">Whole tooth</option><option value="crown">Crown</option><option value="root">Root</option><option value="transition">Transitional zone</option><option value="split">Separate crown + transition + root</option></select></label><label>Curved neck height<input class="native-root" type="range" min="5" max="60" step=".1" value="51.3"><span class="native-root-label">51.3% of height</span></label><label>Transition depth / relative %<input class="native-transition" type="range" min="1" max="25" step=".5" value="10"><span class="native-transition-label">100%</span></label><label>Neck profile strength<input class="native-curvature" type="range" min="2" max="16" step=".5" value="8"><span class="native-curvature-label">1.00×</span></label><label class="native-gap-label" hidden>Separation / mm<input class="native-gap" type="range" min="0" max="20" step=".5" value="6"></label></div><details class="native-cut-tools"${key==='internal'?' id="native-interior-cut" open':''}><summary>Internal cut and native voxel mask</summary><div class="native-view-tools"><label>Cut<select class="native-cut"><option value="none"${cut==='none'?' selected':''}>Off</option><option value="x">Transverse X</option><option value="y"${cut==='y'?' selected':''}>Thickness Y</option><option value="z">Longitudinal Z</option><option value="native">Original native axial plane · 18 µm mask</option><option value="pca1">PCA axis 1 · source voxel frame</option><option value="pca2">PCA axis 2 · source voxel frame</option><option value="pca3">PCA axis 3 · source voxel frame</option>${key==='internal'?'<option value="oblique">Custom oblique · bearing and tilt</option>':''}</select></label><label class="native-cut-range-label">Position / mm<input class="native-cut-range" type="range" min="-6" max="6" step=".05" value="0"><span class="native-cut-value">0.00 mm</span></label><label><input type="checkbox" class="native-cut-flip">Reverse cut</label><label>Curvature peak rule<select class="native-peak-rule"><option value="tail99" selected>High-curvature tail · 99th percentile</option><option value="conservative6MAD">Conservative · median + 6 MAD</option></select></label><label><input type="checkbox" class="native-contours" checked>Neutral enclosed-void outlines</label><label><input type="checkbox" class="native-mask-first" checked>Apply original voxel mask before colour</label><label class="native-pca-sampling-label" hidden>Plane sampling<select class="native-pca-sampling"><option value=".018" selected>0.018 mm / 18 µm · native</option><option value=".072">0.072 mm / 72 µm · quicker sampling</option></select></label><label class="native-plane-label" hidden><input type="checkbox" class="native-plane-show" checked>Show section and contours</label></div>${key==='internal'? `<div class="native-view-tools native-sweep-controls" role="group" aria-label="Live 3D section playback">
  ${speedControl('3D cut speed','native-sweep-speed')}
  <label>3D cut direction<select class="native-sweep-direction"><option value="forward">Increasing position</option><option value="reverse">Decreasing position</option><option value="bounce">Back and forth</option></select></label>
  </div>`:''}<p class="native-mask-readout">The complete native mesh retains every original cavity wall. Select a native axial plane for the exact 18 µm binary mask.</p></details><div class="native-view-tools native-view-footer"><button class="native-spin" aria-pressed="false">Play rotation</button><button class="native-reset">Reset view</button><button class="native-focus">Focus view</button><button class="native-paper-colours">Paper reference colours</button><button class="native-part-colour">Separate 3 regions · matte PLA</button><button class="native-zoom" data-zoom="16">Voxel zoom ×16</button><button class="native-zoom" data-zoom="64">Voxel zoom ×64</button><button class="native-photo" aria-pressed="false">Static reference</button><a href="#nativeRulerFixed">Lock / move ruler</a></div><p class="native-source-note">Complete 3D keeps every native triangle resident. The three-region display classifies the crown, transition and root in original coordinates before applying display offsets and colours. The upper guide follows the colour and gloss boundary of the archived natural 3MF. The lower guide follows the visible growth-line endings on the front. The reverse lower guide is estimated. <a href="./assets/curved-zone-guide.json?v=2">Boundary measurements</a>.</p></section>`;
@@ -22,17 +23,19 @@ function card(key,title,mode,cut){
 q('#nativeExteriorMount').innerHTML=card('exterior','Exterior · current 3MF colours',0,'none');
 q('#nativeArtMount').innerHTML=card('art','Artistic CT · mask, filtration and MPPCA',4,'none');
 q('#nativeInternalMount').innerHTML=card('internal','Inside the tooth · complete native cavity walls',8,'none');
-q('#nativeInternalMount .native-shared-stage').insertAdjacentHTML('beforeend',`
+q('#nativeInternalMount .native-shared-stage').insertAdjacentHTML('beforebegin',`
  <div class="native-cavity-transport" role="group" aria-label="Cavity playback">
-  <button type="button" class="native-sweep-play" aria-pressed="false" disabled>
-   <svg class="native-play-icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
-    <path class="native-play-triangle" fill="currentColor" d="M6 3l11 7-11 7z"/>
-    <path class="native-pause-bars" fill="currentColor" d="M5 4h3v12H5zm7 0h3v12h-3z"/>
-   </svg>
-   <span class="native-play-label">Play cavity video</span>
-  </button>
-  <button type="button" class="native-live-cut" aria-pressed="false" hidden>Play 3D cut</button>
-  <input type="range" class="native-cavity-range" aria-label="Live 3D cavity cut position" hidden>
+  <label>View <select class="native-cut-presentation"><option value="section">Live CT mask section</option><option value="walls">3D cavity walls</option></select></label>
+  <button type="button" class="native-live-cut" aria-pressed="false" hidden>Play live sweep</button>
+  <input type="range" class="native-cavity-range" aria-label="Live CT cut position" hidden>
+  <button type="button" class="native-cut-record" disabled>Record this view</button>
+  <a class="native-live-export" hidden>Download live recording</a>
+  <a href="#native-pca-movies" class="native-archive-link">Fixed-axis MP4 / GIF</a>
+  <span class="native-record-status" role="status"></span>
+ </div>
+ <div class="native-view-tools native-oblique-controls" hidden>
+  <label>Bearing <input class="native-cut-bearing" type="range" min="-90" max="90" step="1" value="0"><output>0°</output></label>
+  <label>Tilt <input class="native-cut-tilt" type="range" min="-89" max="89" step="1" value="0"><output>0°</output></label>
  </div>`);
 q('#nativeInternalMount .native-shared-stage').insertAdjacentHTML('afterend',`
  <div class="native-tube-tools">
@@ -55,7 +58,7 @@ function legends(){
   if(mode===0){gradient.style.background='linear-gradient(90deg,'+palette.map((c,i)=>`rgb(${c.join(',')}) ${i*100/255}%`).join(',')+')';const l=fields[state.size].legend;label.textContent=state.size===50?'Normalized reference colour coordinate · 0–1. Paper appearance; no Pa values inferred from colours.':`Normalized display coordinate · 0–1 = ${l.display_min_Pa.toFixed(3)}–${l.display_max_Pa.toFixed(3)} Pa. Closed-solid MR5 field projected onto native geometry. The 2nd/98th-percentile limits apply to display; raw values remain downloadable.`;}
   else if(mode===9){gradient.style.background='linear-gradient(90deg,#3e3427,#6b6451,#414b48)';label.textContent='Resin colour reference from the registered natural fossil photographs. The view preserves the archived RGB values on the complete native surface.';}
   else if(mode===10){gradient.style.background='linear-gradient(90deg,#527c82 0% 33.33%,#c7ae76 33.33% 66.67%,#e9e0c9 66.67% 100%)';label.textContent='Matte PLA region colours · slate root, ochre transition, ivory crown.';}
-  else if(mode===8){gradient.style.background='linear-gradient(90deg,#1fa1fa 0%,#1fa1fa 48%,#f52e1f 52%,#f52e1f 100%)';label.textContent='Blue marks gaps, and red marks local curvature peaks. The moving plane uses a 144 µm pooled CT preview. Paused native planes report enclosed gaps and kurtosis.';}
+  else if(mode===8){gradient.style.background='linear-gradient(90deg,#4d5254 0% 49%,#dadbd5 51% 100%)';label.textContent='Charcoal outlines trace enclosed gaps in the paused 18 µm mask. The continuous sweep uses a 144 µm movement texture.';}
   else if(mode===4){gradient.style.background='#3391b3';label.textContent='Matte MPPCA surface · restrained contrast, no specular bloom or intensity-gradient normal warping. Choose reconstructed CT intensity for the quantitative 0–1 display.';}
   else if(mode===1||mode===6){gradient.style.background='linear-gradient(90deg,#02080c,#f2efdf)';label.textContent='Binary material mask · 0 background / void · 1 selected material. Original native cavity geometry; no colour-derived stress.';}
   else if(mode===5){gradient.style.background='linear-gradient(90deg,#245ed4,#f7f7f7,#e0381e)';label.textContent='MPPCA display change relative to original intensity · −12 to +12 grey levels. This residual is not an error against anatomical ground truth.';}
@@ -69,22 +72,30 @@ function updateDomain(){
  const status=q('#domainStatus');if(status)status.textContent='Awaiting solution · whole native porous tooth. Completed native tetrahedra: 0. Boundary displacement DOF lower bound: 113,855,097. Current stress colours are projections from the closed-solid proxy.';
  const dl=q('#nativeDomainNumbers');if(dl)dl.innerHTML=[['Selected height',state.size+' mm'],['Native faces','74,293,846'],['Native boundary vertices','37,951,699'],['Original material voxels','967,429,317'],['Retained void components','803,442'],['Boundary displacement DOFs · lower bound','≥113,855,097'],['Completed native tets','0']].map(([k,v])=>`<div><dt>${k}</dt><dd>${v}</dd></div>`).join('');
 }
-const hasVoxelPlane=axis=>axis==='native'||axis.startsWith('pca');
+const hasVoxelPlane=axis=>axis==='native'||axis==='oblique'||axis.startsWith('pca');
 function updatePlaneToggle(entry){
  const {card,view}=entry;
- const available=hasVoxelPlane(view.cut)||(view.mode===8&&view.cut!=='none');
+ const available=entry.key!=='internal'&&(hasVoxelPlane(view.cut)||(view.mode===8&&view.cut!=='none'));
  card.querySelector('.native-plane-label').hidden=!available;
  view.showPlane=available&&card.querySelector('.native-plane-show').checked;
 }
 function cutSetup(entry, sample=true){
  const {card,view,input}=entry,axis=card.querySelector('.native-cut').value;
- const native=axis==='native',principal=axis.startsWith('pca');
- const frame=principal?pca.axes[Number(axis.slice(3))-1]:null;
+ const native=axis==='native',custom=axis==='oblique',principal=axis.startsWith('pca');
+ if(custom){
+  view.userFrame=obliqueFrame(pca,Number(bearing.value),Number(tilt.value));
+  engine.setObliqueFrame(view.userFrame);
+ }
+ const frame=custom?view.userFrame:principal?pca.axes[Number(axis.slice(3))-1]:null;
  view.cut=axis;
+ if(entry.key==='internal'){
+  obliqueTools.hidden=!custom;
+  updatePresentation(entry);
+ }
  updatePlaneToggle(entry);
- card.querySelector('.native-pca-sampling-label').hidden=!principal;
- input.min=native?0:principal?frame.offset_range_mm[0]:-state.size*(axis==='y'?.13:axis==='x'?.42:.5);
- input.max=native?2885:principal?frame.offset_range_mm[1]:-Number(input.min);
+ card.querySelector('.native-pca-sampling-label').hidden=!(principal||custom);
+ input.min=native?0:frame?frame.offset_range_mm[0]:-state.size*(axis==='y'?.13:axis==='x'?.42:.5);
+ input.max=native?2885:frame?frame.offset_range_mm[1]:-Number(input.min);
  input.step=native?1:'any';
  input.disabled=axis==='none';
  if(entry.sweepInput){
@@ -95,12 +106,13 @@ function cutSetup(entry, sample=true){
  entry.lastSweepTime=null;
  entry.sweepPosition=null;
  positionCut(entry,native?1443:principal?frame.maximum_area_offset_mm:0,Boolean(entry.sweeping));
+ if(view.sectionOnly)engine.alignSection(view);
  if(sample&&!entry.sweeping)requestCut(entry);
 }
 function cutKey(entry){
  const {view,sampling}=entry;
  if(!hasVoxelPlane(view.cut))return null;
- return [view.cut,view.cutValue,view.cut==='native'?.018:Number(sampling.value),view.peakRule].join(':');
+ return [view.cut,view.cut==='oblique'?view.userFrame.normal.join(','):'',view.cutValue,view.cut==='native'?.018:Number(sampling.value),view.peakRule].join(':');
 }
 function cancelCutRequest(entry){
  if(!entry.pendingMask)return;
@@ -116,8 +128,8 @@ function setCutMotion(entry,moving){
  if(moving){
   clearTimeout(entry.cutTimer);
   cancelCutRequest(entry);
-  entry.readout.textContent=view.mode===8&&view.cut!=='none'&&view.showPlane
-   ?'Live contours on the 0.144 mm / 144 µm CT preview. Pause for the selected native voxel plane.'
+  entry.readout.textContent=(view.sectionOnly||view.mode===8&&view.showPlane)&&view.cut!=='none'
+   ?'Live 144 µm sweep. Pause for the original 18 µm mask and neutral contours.'
    :'Live cut. Pause to show the selected native voxel plane.';
  }
  engine.dirty=true;
@@ -132,7 +144,7 @@ function positionCut(entry,position,moving){
  view.sectionKey=cutKey(entry);
  if(entry.pendingMask!==view.sectionKey)cancelCutRequest(entry);
  valueLabel.textContent=view.cut==='native'? 'Native grid '+value:
-  view.cut.startsWith('pca')?value.toFixed(3)+' mm · source frame':value.toFixed(2)+' mm';
+  (view.cut.startsWith('pca')||view.cut==='oblique')?value.toFixed(3)+' mm · source frame':value.toFixed(2)+' mm';
  if(entry.sweepInput){
   entry.sweepInput.value=String(value);
   entry.sweepInput.setAttribute('aria-valuetext',valueLabel.textContent);
@@ -158,7 +170,7 @@ function requestCut(entry){
  entry.pendingMask=view.sectionKey;
  readout.textContent='Sampling the selected position from the original CT mask…';
  if(view.cut==='native')engine.requestMask(view.cutValue,view);
- else engine.requestSection(Number(view.cut.slice(3)),view.cutValue,Number(sampling.value),view);
+ else engine.requestSection(view.cut==='oblique'?'oblique':Number(view.cut.slice(3)),view.cutValue,Number(sampling.value),view,view.userFrame);
 }
 function changeCut(entry){
  positionCut(entry,Number(entry.input.value),Boolean(entry.sweeping||entry.manualCut));
@@ -194,7 +206,7 @@ function sweepFrame(now){
   return;
  }
  const previous=entry.lastSweepTime??now;
- if(now-previous<(engine.constrained?167:83)){
+ if(now-previous<(view.sectionOnly?33:engine.constrained?167:83)){
   entry.lastSweepTime=previous;
   return;
  }
@@ -238,28 +250,63 @@ async function changeSize(size){
  if(!engine||size===state.size)return;qa('[data-native-size]').forEach(b=>b.disabled=true);state.size=size;qa('[data-native-size]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.nativeSize)===size)));posters();legends();rootControls();updateDomain();for(const e of viewList)if(['none','x','y','z'].includes(e.view.cut))cutSetup(e);try{await engine.setSize(size);}finally{qa('[data-native-size]').forEach(b=>b.disabled=engine.graphicsStarted&&!engine.ready&&!engine.failed);}
 }
 const cavityStage=q('#native-internal-viewport');
-const cavityButton=cavityStage.querySelector('.native-sweep-play');
-const liveCut=cavityStage.querySelector('.native-live-cut');
-const cavityScrub=cavityStage.querySelector('.native-cavity-range');
+const liveToolbar=q('#nativeInternalMount .native-cavity-transport');
+const liveCut=liveToolbar.querySelector('.native-live-cut');
+const cavityScrub=liveToolbar.querySelector('.native-cavity-range');
+const presentation=liveToolbar.querySelector('.native-cut-presentation');
+const recordButton=liveToolbar.querySelector('.native-cut-record');
+const obliqueTools=q('#nativeInternalMount .native-oblique-controls');
+const bearing=obliqueTools.querySelector('.native-cut-bearing');
+const tilt=obliqueTools.querySelector('.native-cut-tilt');
+const recorder=createCutRecorder(liveToolbar.querySelector('.native-record-status'),liveToolbar.querySelector('.native-live-export'));
+function updatePresentation(entry){
+ const {view}=entry;
+ view.sectionOnly=presentation.value==='section'&&hasVoxelPlane(view.cut);
+ view.controls.enableRotate=!view.sectionOnly;
+ view.element.dataset.nativePresentation=view.sectionOnly?'section':'walls';
+ if(!view.sectionOnly)recorder.end();
+ if(view.sectionOnly)engine.alignSection(view);
+}
 function updateCavityPlayback(){
  const entry=viewList.find(view=>view.key==='internal');
  const live=Boolean(engine?.ready&&!engine.failed&&!entry?.view.static);
  const moving=Boolean(live&&entry?.sweeping);
- cavityButton.disabled=!cavityMovie;
- cavityButton.setAttribute('aria-pressed',String(Boolean(cavityMovie?.playing())));
- cavityButton.querySelector('.native-play-label').textContent=cavityMovie?.playing()?'Pause cavity video':'Play cavity video';
  liveCut.hidden=!live;
  liveCut.disabled=!live||entry?.view.cut==='none';
- liveCut.textContent=moving?'Pause 3D cut':'Play 3D cut';
+ liveCut.textContent=moving?'Pause live sweep':'Play live sweep';
  liveCut.setAttribute('aria-pressed',String(moving));
  cavityScrub.hidden=!live;
  cavityScrub.disabled=liveCut.disabled;
+ recordButton.disabled=!live||!entry?.view.sectionOnly||entry?.view.microtubesOnly;
+ recordButton.textContent=recorder.recording?'Stop recording':'Record this view';
 }
-cavityButton.onclick=()=>{
- if(!cavityMovie)return;
- cavityMovie.host.scrollIntoView({block:'start'});
- cavityMovie.toggle();
+presentation.onchange=()=>{
+ const entry=viewList.find(e=>e.key==='internal');
+ if(!entry)return;
+ updatePresentation(entry);
+ if(!entry.view.sectionOnly)engine.camera(entry.view,state.pose);
+ updateCavityPlayback();
+ sourceState();
 };
+recordButton.onclick=()=>{
+ const entry=viewList.find(e=>e.key==='internal');
+ if(!entry||recordButton.disabled)return;
+ if(recorder.recording)recorder.end();
+ else recorder.begin(engine,entry.view);
+ updateCavityPlayback();
+};
+for(const angle of[bearing,tilt]){
+ angle.oninput=()=>{
+  angle.nextElementSibling.value=angle.value+'°';
+  const entry=viewList.find(e=>e.key==='internal');
+  if(!entry||entry.view.cut!=='oblique')return;
+  const old=entry.view.cutValue;
+  cutSetup(entry,false);
+  clearTimeout(entry.angleTimer);
+  positionCut(entry,old,true);
+  entry.angleTimer=setTimeout(()=>{if(!entry.sweeping){setCutMotion(entry,false);requestCut(entry);}},160);
+ };
+}
 liveCut.onclick=()=>{
  const entry=viewList.find(view=>view.key==='internal');
  if(!entry||liveCut.disabled)return;
@@ -276,6 +323,7 @@ liveCut.onclick=()=>{
   if(!document.hidden)return;
   for(const entry of viewList)if(entry.sweeping)setSweep(entry,false);
   cavityMovie?.pause();
+  recorder.end();
   slicePanels?.stop();
  });
 function graphicsUI(status){
@@ -333,6 +381,7 @@ function activateUI(){
  const internal=viewList.find(entry=>entry.key==='internal');
  tubesOnly.onchange=()=>{
   internal.view.microtubesOnly=tubesOnly.checked;
+  updateCavityPlayback();
   sourceState();
   engine.dirty=true;
  };
@@ -426,12 +475,11 @@ function activateUI(){
  q('#downloadNativeJob').onclick=()=>{const job={size_mm:state.size,domain:q('#domainMode').value,source_faces:74293846,source_vertices:37951699,selected_material_voxels:967429317,retained_closed_void_components:803442,completed_native_tetrahedra:0,status:'deferred by user',native_mask_unchanged_by_display_filters:true};const url=URL.createObjectURL(new Blob([JSON.stringify(job,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='native-domain-'+state.size+'mm.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};q('#domainMode').onchange=updateDomain;
 }
 function sourceState(){
- for(const{card,view}of viewList){const el=card.querySelector('.native-view-count');if(view.static||(!engine.preview&&!engine.ready)||engine.failed||engine.lost){el.textContent='74,293,846 source triangles · complete static reference';}else if(view.microtubes&&view.microtubesOnly){el.textContent='CT microtube candidates · native surface hidden';}else if(engine.ready&&view.mode===9&&!engine.photoReady){el.textContent='74,293,846 source faces resident · preparing original natural photograph colours';}else if(engine.ready){el.textContent=`74,293,846 original source triangles · ${view.mesh==='vertices'?'complete native mesh vertices':'complete shared 3D'}${state.part==='whole'?'':state.part==='split'?' · crown / transition / root in three display passes':' · '+state.part+' visible'}`;}else if(engine.preview){el.textContent=`${count(engine.preview.userData.faces)}-face rotatable preview${engine.fullLoading? ` · loading ${count(engine.faces)} / 74,293,846 native faces`:''}`;}view.element.dataset.sharedGpu=String(Boolean(engine.ready));}
+ for(const{card,view}of viewList){const el=card.querySelector('.native-view-count');if(view.static||(!engine.preview&&!engine.ready)||engine.failed||engine.lost){el.textContent='74,293,846 source triangles · complete static reference';}else if(view.microtubes&&view.microtubesOnly){el.textContent='CT microtube candidates · native surface hidden';}else if(engine.ready&&view.sectionOnly){el.textContent='Live native CT section · 74,293,846 source triangles resident';}else if(engine.ready&&view.mode===9&&!engine.photoReady){el.textContent='74,293,846 source faces resident · preparing original natural photograph colours';}else if(engine.ready){el.textContent=`74,293,846 original source triangles · ${view.mesh==='vertices'?'complete native mesh vertices':'complete shared 3D'}${state.part==='whole'?'':state.part==='split'?' · crown / transition / root in three display passes':' · '+state.part+' visible'}`;}else if(engine.preview){el.textContent=`${count(engine.preview.userData.faces)}-face rotatable preview${engine.fullLoading? ` · loading ${count(engine.faces)} / 74,293,846 native faces`:''}`;}view.element.dataset.sharedGpu=String(Boolean(engine.ready));}
 }
 try{
  interactive=await get('./assets/native-interactive-publication.json?v=6');
  cavityMovie=mountAxisMovies(interactive);
- for(const event of ['play','pause','ended','error'])cavityMovie.video.addEventListener(event,updateCavityPlayback);
  updateCavityPlayback();
  pub=await get('./assets/native74-batch-publication.json?v=1');
  hydrateOtherContent(pub,interactive);
@@ -466,12 +514,12 @@ try{
    if(!entry)return;
    entry.pendingMask=null;
    const position=d.axis==='native'? `Native grid ${d.z} · scanner z = ${d.offset_mm.toFixed(3)} mm`:
-    `PCA ${d.axis} plane · offset ${d.offset_mm.toFixed(3)} mm from voxel centroid`;
+    `${d.axis==='oblique'?'Custom oblique':'PCA '+d.axis} plane · offset ${d.offset_mm.toFixed(3)} mm from voxel centroid`;
    const contour=d.contour_summary;
    entry.maskText=`${position} · ${count(d.selected_samples)} selected samples · plane grid ${d.sampling_mm.toFixed(3)} mm / ${(d.sampling_mm*1000).toFixed(0)} µm. Original CT sampling 18 µm.`;
    if(contour){
     const kurtosis=contour.curvature_excess_kurtosis;
-    entry.maskText+=` Enclosed layer gaps ${count(contour.closed_components)} · red peak candidates ${count(contour.red_pixels)} · curvature excess kurtosis ${kurtosis==null?'undefined':kurtosis.toFixed(3)}.`;
+    entry.maskText+=` Enclosed layer gaps ${count(contour.closed_components)} · curvature excess kurtosis ${kurtosis==null?'undefined':kurtosis.toFixed(3)}.`;
    }
    entry.readout.textContent=entry.maskText;
   },
@@ -492,6 +540,7 @@ try{
   },
   cutEnd:view=>endManualCut(viewList.find(e=>e.view===view)),
   beforeFrame:sweepFrame,
+  afterFrame:eng=>{recorder.frame(eng);if(recordButton.textContent==='Stop recording'&&!recorder.recording)updateCavityPlayback();},
   photoReady:()=>{sourceState();note('Original natural photographic colours ready. All native geometry is reused.');},
   rulerMoved:p=>{q('#nativeRulerX').value=p.x;q('#nativeRulerZ').value=p.z;},note,
   error:t=>{note(t);sourceState();}
@@ -520,7 +569,7 @@ try{
  foldSections(engine);
  window.addEventListener('native-shared-state',sourceState);
 
- if('serviceWorker'in navigator)navigator.serviceWorker.register('./native-precache-r15-sw.js?v=11',{scope:'./',type:'module'}).catch(e=>console.info('Offline shell',e.message));
+ if('serviceWorker'in navigator)navigator.serviceWorker.register('./native-precache-r15-sw.js?v=12',{scope:'./',type:'module'}).catch(e=>console.info('Offline shell',e.message));
  window.__nativeSharedR15={engine,state,publication:interactive,prepareTubeOverlay:restoreTubes};
  window.dispatchEvent(new Event('native-study-ready'));
 }catch(e){q('#nativeFull3D').disabled=true;q('#nativePrepareCache').disabled=true;note('The shared 3D visualizer could not start. Available static material and cavity videos remain accessible.');window.dispatchEvent(new Event('native-study-unavailable'));console.error(e);}

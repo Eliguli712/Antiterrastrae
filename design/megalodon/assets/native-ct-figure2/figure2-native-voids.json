@@ -1,0 +1,121 @@
+{
+  "section_background": "black",
+  "profile_background": "black",
+  "raw_window": [
+    -3292,
+    26623
+  ],
+  "greyscale": "higher attenuation is brighter",
+  "views": [
+    {
+      "axis": "Z",
+      "index": 1849,
+      "section_shape": [
+        2028,
+        1676
+      ],
+      "enclosed_components_4connected": 1185,
+      "enclosed_pixels": 3484,
+      "contour_pixels": 7023,
+      "verified_gold_pixels": 7,
+      "candidate_paths": 4,
+      "candidate_segments": 8,
+      "sampling_mm": 0.018,
+      "file": "ct-section-z.png",
+      "width": 792,
+      "height": 1851,
+      "display_bounds_lps_mm": [
+        10.701,
+        24.957,
+        1.287,
+        34.605
+      ],
+      "plane_axes": [
+        "X",
+        "Y"
+      ],
+      "raw_window": [
+        -3292,
+        26623
+      ],
+      "area_mm2": 234.878616,
+      "r": -0.8399914300108989,
+      "rho": -0.8521451682304667,
+      "n": 2836
+    },
+    {
+      "axis": "Y",
+      "index": 1368,
+      "section_shape": [
+        3050,
+        1676
+      ],
+      "enclosed_components_4connected": 491,
+      "enclosed_pixels": 1901,
+      "contour_pixels": 2940,
+      "verified_gold_pixels": 9,
+      "candidate_paths": 3,
+      "candidate_segments": 8,
+      "sampling_mm": 0.018,
+      "file": "ct-section-y.png",
+      "width": 679,
+      "height": 2774,
+      "display_bounds_lps_mm": [
+        11.204999999999998,
+        23.427,
+        17.745,
+        67.67699999999999
+      ],
+      "plane_axes": [
+        "X",
+        "Z"
+      ],
+      "raw_window": [
+        -3292,
+        26623
+      ],
+      "area_mm2": 283.08106799999996,
+      "r": 0.3046960823378532,
+      "rho": 0.3130841908859147,
+      "n": 1878
+    },
+    {
+      "axis": "X",
+      "index": 749,
+      "section_shape": [
+        3050,
+        2028
+      ],
+      "enclosed_components_4connected": 5551,
+      "enclosed_pixels": 19327,
+      "contour_pixels": 36709,
+      "verified_gold_pixels": 164,
+      "candidate_paths": 42,
+      "candidate_segments": 158,
+      "sampling_mm": 0.018,
+      "file": "ct-section-x.png",
+      "width": 1689,
+      "height": 2632,
+      "display_bounds_lps_mm": [
+        4.689,
+        35.090999999999994,
+        22.713,
+        70.089
+      ],
+      "plane_axes": [
+        "Y",
+        "Z"
+      ],
+      "raw_window": [
+        -3292,
+        26623
+      ],
+      "area_mm2": 778.11678,
+      "r": 0.14059818520862144,
+      "rho": 0.029352840994207152,
+      "n": 723
+    }
+  ],
+  "display_envelope": "Hole-filled selected specimen cross-section for display only. Original intensities in the envelope and original profiles.",
+  "method": "Four-connected background confined by the section silhouette. Charcoal marks the immediately adjacent material-pixel rim, including around one-pixel voids. Gold segments come from the archived 3D CT skeletons, clipped to one 18 \u00b5m acquired slab and masked to enclosed void pixels after lattice registration."
+}
